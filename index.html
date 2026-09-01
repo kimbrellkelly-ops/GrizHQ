@@ -4,163 +4,171 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Griz HQ | Montana Football</title>
-  <meta name="description" content="A fan-built Montana Grizzlies football information hub. News, media, schedule, depth chart, transfers, and game analysis.">
+  <meta name="description" content="Griz HQ — a fan-built Montana Grizzlies football information hub.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="#">
-        <span class="brand-mark">🐻</span>
-        <span><strong>GRIZ HQ</strong><small>Montana Football • Fan Hub</small></span>
-      </a>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#schedule">Schedule</a>
-        <a href="#depth">Depth Chart</a>
-        <a href="#media">Media</a>
-        <a href="#sources">Sources</a>
-      </nav>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="wordmark" href="#home" aria-label="Griz HQ home">
+      <span class="griz-script">Griz</span>
+      <span class="hq-lockup"><b>GRIZ HQ</b><small>MONTANA FOOTBALL FAN HUB</small></span>
+    </a>
+    <div class="motto">FIGHT. UNITE. WIN.</div>
+    <div class="paw" aria-label="Griz paw">
+      <i></i><i></i><i></i><i></i><em></em>
     </div>
-  </header>
+  </div>
+  <nav class="nav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#roster">Roster</a>
+    <a href="#stats">Stats</a>
+    <a href="#rankings">Rankings</a>
+    <a href="#media">Media</a>
+    <a href="#insider">Insider</a>
+    <a href="#history">History</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
 
-  <main id="home">
-    <section class="hero">
-      <div>
-        <div class="eyebrow">2026 MONTANA GRIZZLIES</div>
-        <h1>Everything Griz.<br><em>One place.</em></h1>
-        <p class="hero-copy">A fan-built headquarters for Montana football: news, media, schedules, roster movement, depth-chart battles, game analysis and the links worth checking every day.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#schedule">View 2026 Schedule</a>
-          <a class="button secondary" href="#media">Griz Media</a>
-        </div>
+<main id="home">
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow light">MONTANA GRIZZLIES • 2026</div>
+      <h1>THE STANDARD.<br>THE TRADITION.<br><span>THE TEAM.</span></h1>
+      <p>A fan-built headquarters for Montana football — news, media, roster movement, rankings, game analysis and everything Griz.</p>
+      <div class="hero-buttons">
+        <a class="btn white" href="#news">Latest News</a>
+        <a class="btn outline" href="#schedule">Full Schedule</a>
       </div>
-      <div class="record-card">
-        <div class="record-label">CURRENT RECORD</div>
-        <div class="record">1–0</div>
-        <div class="rank">#2 FCS</div>
-        <div class="next-game">
-          <span>NEXT GAME</span>
-          <strong>Drake</strong>
-          <small>Sept. 5 • 1:00 PM • Washington-Grizzly Stadium</small>
-        </div>
+    </div>
+    <div class="next-game">
+      <div class="next-label">NEXT GAME</div>
+      <div class="next-date">SAT • SEP 5 • 1:00 PM MT</div>
+      <div class="stadium">WASHINGTON-GRIZZLY STADIUM</div>
+      <div class="matchup">
+        <div><span class="mini-griz">Griz</span><b>MONTANA</b></div>
+        <strong>VS</strong>
+        <div><div class="opponent-mark">D</div><b>DRAKE</b></div>
       </div>
-    </section>
+      <a class="btn white full" href="#drake">Game Preview</a>
+    </div>
+  </section>
 
-    <section class="ticker">
-      <div class="ticker-label">GRIZ NOW</div>
-      <div>Montana opened 2026 with a 28–21 win over Southern Utah.</div>
-      <a href="https://gogriz.com/sports/football/schedule/text" target="_blank" rel="noopener">Official schedule →</a>
-    </section>
+  <section class="content-grid">
+    <div class="panel" id="news">
+      <div class="panel-head"><h2>LATEST NEWS</h2><a href="#media">VIEW ALL NEWS →</a></div>
+      <article class="news-item">
+        <div class="news-thumb">GRIZ<br>28–21</div>
+        <div><h3>Griz Open 2026 With Win Over Southern Utah</h3><small>Aug. 29, 2026</small><p>Montana survived a physical opener and starts the Bobby Kennedy era 1–0.</p></div>
+      </article>
+      <article class="news-item">
+        <div class="news-thumb">MEDIA</div>
+        <div><h3>Weekly Press Conference &amp; Player Interviews</h3><small>Aug. 31, 2026</small><p>Coach and player availability heading into Drake week.</p></div>
+      </article>
+      <article class="news-item">
+        <div class="news-thumb">GRIZ HQ</div>
+        <div><h3>Drake Scouting Report</h3><small>Aug. 31, 2026</small><p>What matters most against a fast, aggressive Drake offense.</p></div>
+      </article>
+    </div>
 
-    <section class="section" id="schedule">
-      <div class="section-heading">
-        <div><span class="eyebrow">THE ROAD AHEAD</span><h2>2026 Schedule</h2></div>
-        <span class="section-note">Updated from official UM schedule</span>
+    <div class="panel season-panel">
+      <div class="panel-head"><h2>2026 SEASON AT A GLANCE</h2></div>
+      <div class="stat-strip">
+        <div><b>1–0</b><span>RECORD</span></div>
+        <div><b>1–0</b><span>BIG SKY</span></div>
+        <div><b>28.0</b><span>PPG</span></div>
+        <div><b>21.0</b><span>OPP PPG</span></div>
       </div>
-      <div class="schedule-grid">
-        <article class="game completed"><span>W • 28–21</span><strong>Southern Utah</strong><small>Aug. 29 • Home</small></article>
-        <article class="game next"><span>NEXT • 1:00 PM</span><strong>Drake</strong><small>Sept. 5 • Home</small></article>
-        <article class="game"><span>SEPT. 12</span><strong>Utah Tech</strong><small>Home • 1:00 PM</small></article>
-        <article class="game"><span>SEPT. 19</span><strong>@ Oregon State</strong><small>Corvallis • 9:00 PM MT</small></article>
-        <article class="game"><span>SEPT. 26</span><strong>@ UC Davis</strong><small>Davis • 8:00 PM MT</small></article>
-        <article class="game"><span>OCT. 3</span><strong>Northern Colorado</strong><small>Home • 2:00 PM</small></article>
-        <article class="game"><span>OCT. 10</span><strong>@ Northern Arizona</strong><small>Flagstaff • 3:00 PM MT</small></article>
-        <article class="game"><span>OCT. 17</span><strong>Idaho</strong><small>Home • 1:00 PM</small></article>
-        <article class="game"><span>OCT. 31</span><strong>@ Eastern Washington</strong><small>Cheney • 2:00 PM MT</small></article>
-        <article class="game"><span>NOV. 7</span><strong>Portland State</strong><small>Home • 1:00 PM</small></article>
-        <article class="game"><span>NOV. 14</span><strong>Idaho State</strong><small>Home • 8:30 PM • ESPN</small></article>
-        <article class="game rivalry"><span>NOV. 21</span><strong>@ Montana State</strong><small>Bozeman • Noon • Brawl of the Wild</small></article>
+      <div class="schedule-mini">
+        <div class="row head"><span>DATE</span><span>OPPONENT</span><span>RESULT / TIME</span></div>
+        <div class="row"><span>AUG 29</span><b>SOUTHERN UTAH</b><strong>W 28–21</strong></div>
+        <div class="row next-row"><span>SEP 5</span><b>DRAKE</b><strong>1:00 PM MT</strong></div>
+        <div class="row"><span>SEP 12</span><b>UTAH TECH</b><strong>1:00 PM MT</strong></div>
+        <div class="row"><span>SEP 19</span><b>@ OREGON STATE</b><strong>9:00 PM MT</strong></div>
+        <div class="row"><span>SEP 26</span><b>@ UC DAVIS</b><strong>8:00 PM MT</strong></div>
+        <div class="row"><span>OCT 3</span><b>NORTHERN COLORADO</b><strong>2:00 PM</strong></div>
       </div>
-    </section>
+      <a class="btn maroon full" href="#schedule">FULL SCHEDULE →</a>
+    </div>
 
-    <section class="section" id="depth">
-      <div class="section-heading">
-        <div><span class="eyebrow">WHO'S PLAYING</span><h2>2026 Depth Chart</h2></div>
-        <span class="section-note">Opening two-deep • fan analysis layer coming next</span>
+    <aside class="panel ranking-panel" id="rankings">
+      <div class="ranking-title">RANKINGS</div>
+      <div class="poll-tabs"><b>COACHES POLL<br><small>AFCA FCS TOP 25</small></b><b>MEDIA POLL<br><small>STATS PERFORM</small></b></div>
+      <div class="poll-columns">
+        <ol>
+          <li>Montana State</li><li>South Dakota State</li><li class="griz-row">Montana</li><li>Illinois State</li><li>Tarleton State</li><li>UC Davis</li><li>Youngstown State</li><li>Rhode Island</li><li>North Dakota</li><li>Lehigh</li><li>Stephen F. Austin</li><li>South Dakota</li><li>Tennessee Tech</li><li>Austin Peay</li><li>Mercer</li><li>Lamar</li><li>Villanova</li><li>Yale</li><li>William &amp; Mary</li><li>Northern Arizona</li>
+        </ol>
+        <ol>
+          <li>Montana State</li><li>South Dakota State</li><li class="griz-row">Montana</li><li>Illinois State</li><li>Tarleton State</li><li>Rhode Island</li><li>UC Davis</li><li>North Dakota</li><li>Youngstown State</li><li>Lehigh</li><li>South Dakota</li><li>Tennessee Tech</li><li>Stephen F. Austin</li><li>Lamar</li><li>Austin Peay</li><li>Yale</li><li>William &amp; Mary</li><li>Villanova</li><li>Mercer</li><li>Abilene Christian</li>
+        </ol>
       </div>
-      <div class="position-grid">
-        <div class="unit"><h3>OFFENSE</h3>
-          <div class="player"><b>QB</b><span>Keali'i Ah Yat</span><small>Luke Flowers</small></div>
-          <div class="player"><b>RB</b><span>Eli Gillman</span><small>Dylan Paine</small></div>
-          <div class="player"><b>WR</b><span>Landon Ransom-Goelz</span><small>Legend Lyons</small></div>
-          <div class="player"><b>WR</b><span>Brooks Davis</span><small>Ian Finch</small></div>
-          <div class="player"><b>WR</b><span>Lekeldrick Bridges</span><small>—</small></div>
-          <div class="player"><b>TE</b><span>Tanner Baldwin</span><small>Mariano Birdno</small></div>
-          <div class="player"><b>LT</b><span>Torin Jeske</span><small>Wyatt Sandford</small></div>
-          <div class="player"><b>LG</b><span>Lucas Freitas</span><small>Kaikoa Kanakaole</small></div>
-          <div class="player"><b>C</b><span>Jack D'Ambra</span><small>Carter Bowen</small></div>
-          <div class="player"><b>RG</b><span>Dyllan Drummond</span><small>—</small></div>
-          <div class="player"><b>RT</b><span>Austin Buehler</span><small>Carter Bowen</small></div>
-        </div>
-        <div class="unit"><h3>DEFENSE</h3>
-          <div class="player"><b>NT</b><span>Cooper Buffington</span><small>Zekiel Seumalo</small></div>
-          <div class="player"><b>DT</b><span>Jake Mason</span><small>Braydon Bailey</small></div>
-          <div class="player"><b>DE</b><span>Solomon Tuliaupupu</span><small>Nui Tovey</small></div>
-          <div class="player"><b>LB</b><span>Peyton Wing</span><small>Justin Eklund</small></div>
-          <div class="player"><b>LB</b><span>Clay Oven</span><small>Tanner Williams</small></div>
-          <div class="player"><b>LB</b><span>Solomon Tuliaupupu</span><small>Naiteitei Mose</small></div>
-          <div class="player"><b>CB</b><span>Chris Johnson II</span><small>Gabe Stroud</small></div>
-          <div class="player"><b>CB</b><span>Brady Beaner</span><small>Sage Salopek</small></div>
-          <div class="player"><b>S</b><span>Kade Boyd</span><small>Ashton Paine</small></div>
-          <div class="player"><b>S</b><span>Kade Cutler</span><small>Braeden Orlandi</small></div>
-          <div class="player"><b>S</b><span>Tanner Huff</span><small>Hunter Haines</small></div>
-        </div>
-      </div>
-    </section>
+      <a class="btn maroon full" href="#rankings-full">FULL RANKINGS &amp; HISTORY →</a>
+      <small class="asof">Rankings as of Aug. 31, 2026</small>
+    </aside>
+  </section>
 
-    <section class="section split" id="media">
-      <div>
-        <span class="eyebrow">YOUR WEEKLY GRIZ FIX</span>
-        <h2>Media Center</h2>
-        <div class="media-list">
-          <a href="https://gogriz.com/" target="_blank" rel="noopener"><b>GoGriz</b><span>Official news, roster, schedule, stats</span>↗</a>
-          <a href="https://www.montanasports.com/college/montana-grizzlies" target="_blank" rel="noopener"><b>Montana Sports</b><span>Local reporting, video, interviews</span>↗</a>
-          <a href="https://skylinesportsmt.com/" target="_blank" rel="noopener"><b>Skyline Sports</b><span>Griz and FCS reporting, pressers</span>↗</a>
-          <a href="https://www.youtube.com/@MontanaSports" target="_blank" rel="noopener"><b>Montana Sports YouTube</b><span>Video coverage and shows</span>↗</a>
-          <a href="https://www.youtube.com/results?search_query=Montana+Grizzlies+football" target="_blank" rel="noopener"><b>YouTube Griz Search</b><span>Press conferences, interviews, podcasts</span>↗</a>
-        </div>
-      </div>
-      <div class="weekly-card">
-        <span class="eyebrow">WEEKLY RHYTHM</span>
-        <div class="day"><b>MON</b><span>QB Club</span><small>Member meeting / insider access</small></div>
-        <div class="day"><b>WED</b><span>Grizzly Insider</span><small>TV / video coverage</small></div>
-        <div class="day"><b>WED</b><span>Bobby Kennedy Show</span><small>Coach's weekly radio show</small></div>
-        <div class="day"><b>SAT</b><span>GAME DAY</span><small>Live score + postgame hub</small></div>
-      </div>
-    </section>
+  <section class="section" id="drake">
+    <div class="section-head"><div><div class="eyebrow">GAME CENTER</div><h2>Montana vs. Drake</h2></div><span>Sept. 5 • Washington-Grizzly Stadium</span></div>
+    <div class="feature-grid">
+      <div class="feature"><strong>SCOUTING REPORT</strong><h3>Can Montana make Drake run?</h3><p>Drake's new-look offense threw for 535 yards in its opener. Montana's priority: eliminate explosives without giving up the middle of the field.</p><a href="#insider">Read Analysis →</a></div>
+      <div class="feature"><strong>KEY MATCHUP</strong><h3>Griz front vs. Drake QB</h3><p>Warzynski is comfortable throwing the ball. Montana's pass rush has a chance to dictate this game if the Griz stop Drake's ground game.</p><a href="#stats">View Matchup Stats →</a></div>
+      <div class="feature"><strong>WATCH</strong><h3>Press conferences &amp; shows</h3><p>QB Club, Grizzly Insider, Bobby Kennedy's show and postgame availability — organized in one place.</p><a href="#media">Open Media Center →</a></div>
+    </div>
+  </section>
 
-    <section class="section intelligence">
-      <div class="section-heading">
-        <div><span class="eyebrow">FAN INTELLIGENCE</span><h2>What We're Watching</h2></div>
-      </div>
-      <div class="watch-grid">
-        <article><span>01</span><h3>Offensive Line</h3><p>Every 2025 OL starter is gone. The rebuilt unit is one of the biggest season-long questions.</p></article>
-        <article><span>02</span><h3>New Defense</h3><p>Eric Sanders is installing a new system with very little returning starting experience.</p></article>
-        <article><span>03</span><h3>Explosive Offense</h3><p>Ah Yat, Gillman, Davis and Bridges give Montana a high-end big-play ceiling.</p></article>
-        <article><span>04</span><h3>Transfer Tracker</h3><p>Track where former Griz players landed — and whether they are actually playing.</p></article>
-      </div>
-    </section>
+  <section class="section" id="media">
+    <div class="section-head"><div><div class="eyebrow">GRIZ MEDIA</div><h2>Never Miss the Good Stuff</h2></div></div>
+    <div class="media-grid">
+      <a href="https://gogriz.com/" target="_blank" rel="noopener"><b>GoGriz</b><span>Official UM Athletics</span>↗</a>
+      <a href="https://www.montanasports.com/college/montana-grizzlies" target="_blank" rel="noopener"><b>Montana Sports</b><span>Local reporting &amp; video</span>↗</a>
+      <a href="https://skylinesportsmt.com/" target="_blank" rel="noopener"><b>Skyline Sports</b><span>Griz &amp; FCS coverage</span>↗</a>
+      <a href="https://www.youtube.com/@MontanaSports" target="_blank" rel="noopener"><b>Montana Sports YouTube</b><span>Shows &amp; interviews</span>↗</a>
+    </div>
+  </section>
 
-    <section class="section" id="sources">
-      <div class="section-heading">
-        <div><span class="eyebrow">THE DAILY CHECKLIST</span><h2>Griz Sources</h2></div>
-      </div>
-      <div class="source-grid">
-        <a href="https://gogriz.com/" target="_blank" rel="noopener"><b>University of Montana Athletics</b><small>Official source</small></a>
-        <a href="https://www.montanasports.com/college/montana-grizzlies" target="_blank" rel="noopener"><b>Montana Sports</b><small>Local sports coverage</small></a>
-        <a href="https://skylinesportsmt.com/" target="_blank" rel="noopener"><b>Skyline Sports</b><small>Montana / FCS coverage</small></a>
-        <a href="https://www.missoulian.com/sports/college/big-sky-conference/university-of-montana/" target="_blank" rel="noopener"><b>Missoulian</b><small>Missoula coverage</small></a>
-        <a href="https://www.espn.com/college-football/team/_/id/149/montana-grizzlies" target="_blank" rel="noopener"><b>ESPN</b><small>Scores, stats, national coverage</small></a>
-        <a href="https://www.ncaa.com/sports/football/fcs" target="_blank" rel="noopener"><b>NCAA FCS</b><small>National FCS hub</small></a>
-      </div>
-    </section>
-  </main>
+  <section class="section" id="roster">
+    <div class="section-head"><div><div class="eyebrow">THE TEAM</div><h2>Roster &amp; Depth Chart</h2></div><span>2026 season</span></div>
+    <div class="depth">
+      <div><h3>OFFENSE</h3><p><b>QB</b> Keali'i Ah Yat</p><p><b>RB</b> Eli Gillman / Dylan Paine</p><p><b>WR</b> Landon Ransom-Goelz / Brooks Davis / Lekeldrick Bridges</p><p><b>TE</b> Tanner Baldwin</p></div>
+      <div><h3>DEFENSE</h3><p><b>NT</b> Cooper Buffington</p><p><b>DL</b> Jake Mason / Solomon Tuliaupupu</p><p><b>LB</b> Peyton Wing / Clay Oven / Tanner Williams</p><p><b>DB</b> Chris Johnson II / Brady Beaner / Tanner Huff</p></div>
+    </div>
+  </section>
 
-  <footer>
-    <div><strong>GRIZ HQ</strong> • A fan-built Montana Football information hub.</div>
-    <div>Not affiliated with or endorsed by the University of Montana.</div>
-  </footer>
-  <script src="script.js"></script>
+  <section class="section dark-section" id="insider">
+    <div class="section-head"><div><div class="eyebrow light">FAN INTELLIGENCE</div><h2>Griz Insider</h2></div></div>
+    <div class="insider-grid">
+      <div><span>MONDAY</span><b>QB Club</b><p>Member meeting, coach comments and the week's insider information.</p></div>
+      <div><span>WEDNESDAY</span><b>Grizzly Insider</b><p>TV interviews, features and the broader weekly storylines.</p></div>
+      <div><span>WEDNESDAY</span><b>Bobby Kennedy Show</b><p>Game review, opponent preview and the head coach's perspective.</p></div>
+      <div><span>GAME DAY</span><b>Griz HQ Analysis</b><p>Keys to victory, matchup grades, postgame takeaways and media reaction.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="stats">
+    <div class="section-head"><div><div class="eyebrow">NUMBERS</div><h2>Stats &amp; Matchups</h2></div></div>
+    <div class="stat-cards">
+      <div><b>28</b><span>POINTS SCORED</span><small>vs. Southern Utah</small></div>
+      <div><b>510</b><span>YARDS ALLOWED</span><small>Week 1</small></div>
+      <div><b>+1</b><span>TURNOVER MARGIN</span><small>Week 1</small></div>
+      <div><b>1–0</b><span>RECORD</span><small>2026</small></div>
+    </div>
+  </section>
+
+  <section class="section" id="history">
+    <div class="section-head"><div><div class="eyebrow">TRADITION</div><h2>Griz History</h2></div></div>
+    <div class="history-box"><b>National championships • Big Sky titles • Brawl of the Wild • Washington-Grizzly Stadium</b><p>Build this into the definitive searchable archive of Montana football — seasons, coaches, players, records, rivalries and playoff runs.</p></div>
+  </section>
+</main>
+
+<footer id="about">
+  <div class="footer-brand"><span class="griz-script">Griz</span><div><b>GRIZ HQ</b><small>MONTANA FOOTBALL FAN HUB</small></div></div>
+  <div class="footer-motto"><span>FIGHT</span><span>UNITE</span><span>WIN</span></div>
+  <div class="footer-note">Fan-built and independent. Not affiliated with or endorsed by the University of Montana.</div>
+</footer>
+
 </body>
 </html>
