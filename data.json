@@ -1,0 +1,322 @@
+{
+  "updated": "2026-08-31T00:00:00Z",
+  "source": "Initial snapshot; GitHub Actions will refresh this automatically.",
+  "team": {
+    "record": "1-0",
+    "conference_record": "1-0",
+    "streak": "W1"
+  },
+  "next_game": {
+    "opponent": "Drake",
+    "date": "Sep 5",
+    "time": "1 PM MT",
+    "venue": "Washington-Grizzly Stadium, Missoula, Mont.",
+    "url": "https://godrakebulldogs.com/sports/football"
+  },
+  "schedule": [
+    {
+      "date": "Aug 29",
+      "opponent": "Southern Utah",
+      "location": "Home",
+      "result": "W 28-21",
+      "time": "7 PM",
+      "conference": true
+    },
+    {
+      "date": "Sep 5",
+      "opponent": "Drake",
+      "location": "Home",
+      "result": "",
+      "time": "1 PM",
+      "conference": false
+    },
+    {
+      "date": "Sep 12",
+      "opponent": "Utah Tech",
+      "location": "Home",
+      "result": "",
+      "time": "1 PM",
+      "conference": false
+    },
+    {
+      "date": "Sep 19",
+      "opponent": "Oregon State",
+      "location": "Away",
+      "result": "",
+      "time": "9 PM MT",
+      "conference": false
+    },
+    {
+      "date": "Sep 26",
+      "opponent": "UC Davis",
+      "location": "Away",
+      "result": "",
+      "time": "8 PM MT",
+      "conference": true
+    },
+    {
+      "date": "Oct 3",
+      "opponent": "Northern Colorado",
+      "location": "Home",
+      "result": "",
+      "time": "2 PM",
+      "conference": true
+    },
+    {
+      "date": "Oct 10",
+      "opponent": "Northern Arizona",
+      "location": "Away",
+      "result": "",
+      "time": "3 PM MT",
+      "conference": true
+    },
+    {
+      "date": "Oct 17",
+      "opponent": "Idaho",
+      "location": "Home",
+      "result": "",
+      "time": "1 PM",
+      "conference": true
+    },
+    {
+      "date": "Oct 31",
+      "opponent": "Eastern Washington",
+      "location": "Away",
+      "result": "",
+      "time": "2 PM MT",
+      "conference": true
+    },
+    {
+      "date": "Nov 7",
+      "opponent": "Portland State",
+      "location": "Home",
+      "result": "",
+      "time": "1 PM",
+      "conference": true
+    },
+    {
+      "date": "Nov 14",
+      "opponent": "Idaho State",
+      "location": "Home",
+      "result": "",
+      "time": "8:30 PM",
+      "conference": true
+    },
+    {
+      "date": "Nov 21",
+      "opponent": "Montana State",
+      "location": "Away",
+      "result": "",
+      "time": "Noon",
+      "conference": true
+    }
+  ],
+  "coaches_poll": [
+    "Montana State",
+    "South Dakota State",
+    "Montana",
+    "Illinois State",
+    "Tarleton State",
+    "UC Davis",
+    "Youngstown State",
+    "Rhode Island",
+    "North Dakota",
+    "Lehigh",
+    "Stephen F. Austin",
+    "South Dakota",
+    "Tennessee Tech",
+    "Austin Peay",
+    "Mercer",
+    "Lamar",
+    "Villanova",
+    "Yale",
+    "William & Mary",
+    "Northern Arizona"
+  ],
+  "media_poll": [
+    "Montana State",
+    "South Dakota State",
+    "Montana",
+    "Illinois State",
+    "Tarleton State",
+    "Rhode Island",
+    "UC Davis",
+    "North Dakota",
+    "Youngstown State",
+    "Lehigh",
+    "South Dakota",
+    "Tennessee Tech",
+    "Stephen F. Austin",
+    "Lamar",
+    "Austin Peay",
+    "Yale",
+    "William & Mary",
+    "Villanova",
+    "Mercer",
+    "Abilene Christian"
+  ],
+  "news": [],
+  "depth_chart": {
+    "source": "Montana Sports — first 2026 two-deep roster",
+    "source_url": "https://www.montanasports.com/college/montana-grizzlies/montana-grizzlies-release-1st-2-deep-roster-ahead-of-season-opener",
+    "published": "2026-08-25",
+    "note": "Latest published two-deep available to Griz HQ; update when Montana releases a revised depth chart.",
+    "offense": [
+      {
+        "position": "QB",
+        "first": "Keali'i Ah Yat",
+        "second": "Luke Flowers"
+      },
+      {
+        "position": "RB",
+        "first": "Eli Gillman",
+        "second": "Dylan Paine",
+        "also": "Hashim Jones"
+      },
+      {
+        "position": "WR-X",
+        "first": "Landon Ransom-Goelz",
+        "second": "Weston Adams"
+      },
+      {
+        "position": "WR-Z",
+        "first": "Brooks Davis",
+        "second": "Jordan Dever"
+      },
+      {
+        "position": "WR-F",
+        "first": "Lekeldrick Bridges",
+        "second": "Korbin Hendrix"
+      },
+      {
+        "position": "WR",
+        "first": "Ian Finch",
+        "second": "—"
+      },
+      {
+        "position": "TE",
+        "first": "Titus Rohrer",
+        "second": "Mariano Birdno / Reese Brooks"
+      },
+      {
+        "position": "LT",
+        "first": "Torin Jeske",
+        "second": "Wyatt Sandford / Kaikoa Kanakaole"
+      },
+      {
+        "position": "LG",
+        "first": "Lucas Freitas",
+        "second": "Wyatt Sandford / Kaikoa Kanakaole"
+      },
+      {
+        "position": "C",
+        "first": "Jack D'Ambra",
+        "second": "Matt Hilden / Dylan Jemtegaard"
+      },
+      {
+        "position": "RG",
+        "first": "Dyllan Drummond",
+        "second": "Jack D'Ambra"
+      },
+      {
+        "position": "RT",
+        "first": "Austin Buehler",
+        "second": "Carter Bowen"
+      }
+    ],
+    "defense": [
+      {
+        "position": "DL",
+        "first": "Tyler King",
+        "second": "Manase Tupou"
+      },
+      {
+        "position": "NT",
+        "first": "Cooper Buffington",
+        "second": "Zekiel Seumalo"
+      },
+      {
+        "position": "DE",
+        "first": "Jake Mason",
+        "second": "Hayden Schwartz"
+      },
+      {
+        "position": "BUCK",
+        "first": "Solomon Tuliaupulu",
+        "second": "Justin Eklund"
+      },
+      {
+        "position": "LB-WILL",
+        "first": "Peyton Wing",
+        "second": "Nai Mose"
+      },
+      {
+        "position": "LB-MIKE",
+        "first": "Clay Oven",
+        "second": "Justin Eklund"
+      },
+      {
+        "position": "LB-SAM",
+        "first": "Tanner Williams",
+        "second": "Nai Mose"
+      },
+      {
+        "position": "S",
+        "first": "Kade Boyd",
+        "second": "Ashton Paine / Braeden Orlandi"
+      },
+      {
+        "position": "S",
+        "first": "Kade Cutler",
+        "second": "Brock Beaner"
+      },
+      {
+        "position": "S",
+        "first": "Tanner Huff",
+        "second": "—"
+      },
+      {
+        "position": "CB",
+        "first": "Brady Beaner",
+        "second": "Gabe Stroud"
+      },
+      {
+        "position": "CB",
+        "first": "Chris Johnson II",
+        "second": "Sage Salopek"
+      }
+    ],
+    "special_teams": [
+      {
+        "position": "K",
+        "first": "Jo Silver",
+        "second": "Ryder Barinowski"
+      },
+      {
+        "position": "P",
+        "first": "Everett O'Donnell",
+        "second": "—"
+      },
+      {
+        "position": "LS",
+        "first": "Jace Eastlick",
+        "second": "—"
+      },
+      {
+        "position": "PR",
+        "first": "Brooks Davis",
+        "second": "—"
+      },
+      {
+        "position": "KR",
+        "first": "Landon Ransom-Goelz / Monte Gillman",
+        "second": "—"
+      },
+      {
+        "position": "H",
+        "first": "Brooks Davis",
+        "second": "—"
+      }
+    ]
+  }
+}
