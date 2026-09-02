@@ -1,0 +1,869 @@
+{
+  "updated": "2026-08-31T00:00:00Z",
+  "source": "Initial snapshot; GitHub Actions will refresh this automatically.",
+  "team": {
+    "record": "1-0",
+    "conference_record": "1-0",
+    "streak": "W1"
+  },
+  "next_game": {
+    "opponent": "Drake",
+    "date": "Sep 5",
+    "time": "1 PM MT",
+    "venue": "Washington-Grizzly Stadium, Missoula, Mont.",
+    "url": "https://godrakebulldogs.com/sports/football"
+  },
+  "schedule": [
+    {
+      "date": "Aug 29",
+      "opponent": "Southern Utah",
+      "location": "Home",
+      "result": "W 28-21",
+      "time": "7 PM",
+      "conference": true
+    },
+    {
+      "date": "Sep 5",
+      "opponent": "Drake",
+      "location": "Home",
+      "result": "",
+      "time": "1 PM",
+      "conference": false
+    },
+    {
+      "date": "Sep 12",
+      "opponent": "Utah Tech",
+      "location": "Home",
+      "result": "",
+      "time": "1 PM",
+      "conference": false
+    },
+    {
+      "date": "Sep 19",
+      "opponent": "Oregon State",
+      "location": "Away",
+      "result": "",
+      "time": "9 PM MT",
+      "conference": false
+    },
+    {
+      "date": "Sep 26",
+      "opponent": "UC Davis",
+      "location": "Away",
+      "result": "",
+      "time": "8 PM MT",
+      "conference": true
+    },
+    {
+      "date": "Oct 3",
+      "opponent": "Northern Colorado",
+      "location": "Home",
+      "result": "",
+      "time": "2 PM",
+      "conference": true
+    },
+    {
+      "date": "Oct 10",
+      "opponent": "Northern Arizona",
+      "location": "Away",
+      "result": "",
+      "time": "3 PM MT",
+      "conference": true
+    },
+    {
+      "date": "Oct 17",
+      "opponent": "Idaho",
+      "location": "Home",
+      "result": "",
+      "time": "1 PM",
+      "conference": true
+    },
+    {
+      "date": "Oct 31",
+      "opponent": "Eastern Washington",
+      "location": "Away",
+      "result": "",
+      "time": "2 PM MT",
+      "conference": true
+    },
+    {
+      "date": "Nov 7",
+      "opponent": "Portland State",
+      "location": "Home",
+      "result": "",
+      "time": "1 PM",
+      "conference": true
+    },
+    {
+      "date": "Nov 14",
+      "opponent": "Idaho State",
+      "location": "Home",
+      "result": "",
+      "time": "8:30 PM",
+      "conference": true
+    },
+    {
+      "date": "Nov 21",
+      "opponent": "Montana State",
+      "location": "Away",
+      "result": "",
+      "time": "Noon",
+      "conference": true
+    }
+  ],
+  "coaches_poll": [
+    "Montana State",
+    "South Dakota State",
+    "Montana",
+    "Illinois State",
+    "Tarleton State",
+    "UC Davis",
+    "Youngstown State",
+    "Rhode Island",
+    "North Dakota",
+    "Lehigh",
+    "Stephen F. Austin",
+    "South Dakota",
+    "Tennessee Tech",
+    "Austin Peay",
+    "Mercer",
+    "Lamar",
+    "Villanova",
+    "Yale",
+    "William & Mary",
+    "Northern Arizona"
+  ],
+  "media_poll": [
+    "Montana State",
+    "South Dakota State",
+    "Montana",
+    "Illinois State",
+    "Tarleton State",
+    "Rhode Island",
+    "UC Davis",
+    "North Dakota",
+    "Youngstown State",
+    "Lehigh",
+    "South Dakota",
+    "Tennessee Tech",
+    "Stephen F. Austin",
+    "Lamar",
+    "Austin Peay",
+    "Yale",
+    "William & Mary",
+    "Villanova",
+    "Mercer",
+    "Abilene Christian"
+  ],
+  "news": [],
+  "depth_chart": {
+    "source": "Montana Sports — first 2026 two-deep roster",
+    "source_url": "https://www.montanasports.com/college/montana-grizzlies/montana-grizzlies-release-1st-2-deep-roster-ahead-of-season-opener",
+    "published": "2026-08-25",
+    "note": "Latest published two-deep available to Griz HQ; update when Montana releases a revised depth chart.",
+    "offense": [
+      {
+        "position": "QB",
+        "first": "Keali'i Ah Yat",
+        "second": "Luke Flowers"
+      },
+      {
+        "position": "RB",
+        "first": "Eli Gillman",
+        "second": "Dylan Paine",
+        "also": "Hashim Jones"
+      },
+      {
+        "position": "WR-X",
+        "first": "Landon Ransom-Goelz",
+        "second": "Weston Adams"
+      },
+      {
+        "position": "WR-Z",
+        "first": "Brooks Davis",
+        "second": "Jordan Dever"
+      },
+      {
+        "position": "WR-F",
+        "first": "Lekeldrick Bridges",
+        "second": "Korbin Hendrix"
+      },
+      {
+        "position": "WR",
+        "first": "Ian Finch",
+        "second": "—"
+      },
+      {
+        "position": "TE",
+        "first": "Titus Rohrer",
+        "second": "Mariano Birdno / Reese Brooks"
+      },
+      {
+        "position": "LT",
+        "first": "Torin Jeske",
+        "second": "Wyatt Sandford / Kaikoa Kanakaole"
+      },
+      {
+        "position": "LG",
+        "first": "Lucas Freitas",
+        "second": "Wyatt Sandford / Kaikoa Kanakaole"
+      },
+      {
+        "position": "C",
+        "first": "Jack D'Ambra",
+        "second": "Matt Hilden / Dylan Jemtegaard"
+      },
+      {
+        "position": "RG",
+        "first": "Dyllan Drummond",
+        "second": "Jack D'Ambra"
+      },
+      {
+        "position": "RT",
+        "first": "Austin Buehler",
+        "second": "Carter Bowen"
+      }
+    ],
+    "defense": [
+      {
+        "position": "DL",
+        "first": "Tyler King",
+        "second": "Manase Tupou"
+      },
+      {
+        "position": "NT",
+        "first": "Cooper Buffington",
+        "second": "Zekiel Seumalo"
+      },
+      {
+        "position": "DE",
+        "first": "Jake Mason",
+        "second": "Hayden Schwartz"
+      },
+      {
+        "position": "BUCK",
+        "first": "Solomon Tuliaupulu",
+        "second": "Justin Eklund"
+      },
+      {
+        "position": "LB-WILL",
+        "first": "Peyton Wing",
+        "second": "Nai Mose"
+      },
+      {
+        "position": "LB-MIKE",
+        "first": "Clay Oven",
+        "second": "Justin Eklund"
+      },
+      {
+        "position": "LB-SAM",
+        "first": "Tanner Williams",
+        "second": "Nai Mose"
+      },
+      {
+        "position": "S",
+        "first": "Kade Boyd",
+        "second": "Ashton Paine / Braeden Orlandi"
+      },
+      {
+        "position": "S",
+        "first": "Kade Cutler",
+        "second": "Brock Beaner"
+      },
+      {
+        "position": "S",
+        "first": "Tanner Huff",
+        "second": "—"
+      },
+      {
+        "position": "CB",
+        "first": "Brady Beaner",
+        "second": "Gabe Stroud"
+      },
+      {
+        "position": "CB",
+        "first": "Chris Johnson II",
+        "second": "Sage Salopek"
+      }
+    ],
+    "special_teams": [
+      {
+        "position": "K",
+        "first": "Jo Silver",
+        "second": "Ryder Barinowski"
+      },
+      {
+        "position": "P",
+        "first": "Everett O'Donnell",
+        "second": "—"
+      },
+      {
+        "position": "LS",
+        "first": "Jace Eastlick",
+        "second": "—"
+      },
+      {
+        "position": "PR",
+        "first": "Brooks Davis",
+        "second": "—"
+      },
+      {
+        "position": "KR",
+        "first": "Landon Ransom-Goelz / Monte Gillman",
+        "second": "—"
+      },
+      {
+        "position": "H",
+        "first": "Brooks Davis",
+        "second": "—"
+      }
+    ]
+  },
+  "resources": [
+    {
+      "name": "eGriz",
+      "category": "Fan Forum",
+      "url": "https://egriz.com/",
+      "description": "Montana Grizzlies fan forums, football discussion, recruiting and community reaction."
+    },
+    {
+      "name": "Griz Fan Pod",
+      "category": "Podcast",
+      "url": "https://www.montana-mint.com/",
+      "description": "Griz Fan Podcast from Montana Mint."
+    },
+    {
+      "name": "Grizzly Sports Radio / Varsity Network",
+      "category": "Radio & Audio",
+      "url": "https://thevarsitynetwork.com/feed/source/oas-1039?audioPlayer=umt%3Apodcast-episode-93eb394b587471db5cee3a14566318b4",
+      "description": "Montana's Grizzly Sports Radio Network and audio."
+    },
+    {
+      "name": "GoGriz",
+      "category": "Official",
+      "url": "https://gogriz.com/",
+      "description": "Official Montana Grizzlies athletics."
+    },
+    {
+      "name": "Montana Sports",
+      "category": "Local Media",
+      "url": "https://www.montanasports.com/college/montana-grizzlies",
+      "description": "Local Montana Grizzlies coverage."
+    },
+    {
+      "name": "Skyline Sports",
+      "category": "FCS Media",
+      "url": "https://skylinesportsmt.com/",
+      "description": "Montana and FCS coverage."
+    },
+    {
+      "name": "GrizTV",
+      "category": "Video",
+      "url": "https://www.youtube.com/@GrizTV",
+      "description": "Montana Grizzlies video coverage, interviews, highlights and more."
+    }
+  ],
+  "big_sky_schedule": [
+    {
+      "date": "Aug 28",
+      "away": "Weber State",
+      "home": "Northern Colorado",
+      "time": "7:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Aug 28",
+      "away": "Idaho",
+      "home": "Cal Poly",
+      "time": "8:00 PM MT",
+      "tv": "ESPN"
+    },
+    {
+      "date": "Aug 29",
+      "away": "UC Davis",
+      "home": "Portland State",
+      "time": "1:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Aug 29",
+      "away": "Eastern Washington",
+      "home": "Northern Arizona",
+      "time": "3:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Aug 29",
+      "away": "Southern Utah",
+      "home": "Montana",
+      "time": "7:00 PM MT",
+      "tv": "ESPN+ / Scripps"
+    },
+    {
+      "date": "Aug 29",
+      "away": "Montana State",
+      "home": "Utah Tech",
+      "time": "8:00 PM MT",
+      "tv": "ESPN+ / Scripps"
+    },
+    {
+      "date": "Sep 26",
+      "away": "Cal Poly",
+      "home": "Eastern Washington",
+      "time": "5:00 PM MT",
+      "tv": "ESPN+ / SWX"
+    },
+    {
+      "date": "Sep 26",
+      "away": "Utah Tech",
+      "home": "Northern Colorado",
+      "time": "6:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Sep 26",
+      "away": "Idaho State",
+      "home": "Southern Utah",
+      "time": "6:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Sep 26",
+      "away": "Portland State",
+      "home": "Weber State",
+      "time": "6:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Sep 26",
+      "away": "Montana",
+      "home": "UC Davis",
+      "time": "8:00 PM MT",
+      "tv": "ESPN+ / Scripps"
+    },
+    {
+      "date": "Sep 26",
+      "away": "Northern Arizona",
+      "home": "Montana State",
+      "time": "8:30 PM MT",
+      "tv": "ESPN2"
+    },
+    {
+      "date": "Oct 2",
+      "away": "Montana State",
+      "home": "Idaho",
+      "time": "8:30 PM MT",
+      "tv": "ESPN"
+    },
+    {
+      "date": "Oct 3",
+      "away": "Northern Colorado",
+      "home": "Montana",
+      "time": "2:00 PM MT",
+      "tv": "ESPN+ / Scripps"
+    },
+    {
+      "date": "Oct 3",
+      "away": "Weber State",
+      "home": "Cal Poly",
+      "time": "6:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Oct 3",
+      "away": "Northern Arizona",
+      "home": "Idaho State",
+      "time": "6:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Oct 3",
+      "away": "Southern Utah",
+      "home": "Utah Tech",
+      "time": "6:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Oct 3",
+      "away": "Eastern Washington",
+      "home": "UC Davis",
+      "time": "8:30 PM MT",
+      "tv": "ESPN2"
+    },
+    {
+      "date": "Oct 10",
+      "away": "Idaho",
+      "home": "Weber State",
+      "time": "1:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Oct 10",
+      "away": "Utah Tech",
+      "home": "Portland State",
+      "time": "2:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Oct 10",
+      "away": "Montana",
+      "home": "Northern Arizona",
+      "time": "3:00 PM MT",
+      "tv": "ESPN+ / Scripps"
+    },
+    {
+      "date": "Oct 10",
+      "away": "Cal Poly",
+      "home": "Idaho State",
+      "time": "4:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Oct 10",
+      "away": "Northern Colorado",
+      "home": "Eastern Washington",
+      "time": "5:00 PM MT",
+      "tv": "ESPN+ / SWX"
+    },
+    {
+      "date": "Oct 17",
+      "away": "Idaho",
+      "home": "Montana",
+      "time": "1:00 PM MT",
+      "tv": "ESPN+ / Scripps"
+    },
+    {
+      "date": "Oct 17",
+      "away": "Idaho State",
+      "home": "Weber State",
+      "time": "1:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Oct 17",
+      "away": "Montana State",
+      "home": "Eastern Washington",
+      "time": "5:00 PM MT",
+      "tv": "ESPN+ / Scripps"
+    },
+    {
+      "date": "Oct 17",
+      "away": "Portland State",
+      "home": "Northern Arizona",
+      "time": "5:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Oct 17",
+      "away": "Cal Poly",
+      "home": "Northern Colorado",
+      "time": "6:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Oct 17",
+      "away": "UC Davis",
+      "home": "Southern Utah",
+      "time": "6:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Oct 24",
+      "away": "Weber State",
+      "home": "Montana State",
+      "time": "1:00 PM MT",
+      "tv": "ESPN+ / Scripps"
+    },
+    {
+      "date": "Oct 24",
+      "away": "Utah Tech",
+      "home": "Cal Poly",
+      "time": "3:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Oct 24",
+      "away": "Southern Utah",
+      "home": "Idaho",
+      "time": "3:00 PM MT",
+      "tv": "ESPN+ / SWX"
+    },
+    {
+      "date": "Oct 24",
+      "away": "Portland State",
+      "home": "Idaho State",
+      "time": "4:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Oct 24",
+      "away": "Northern Colorado",
+      "home": "UC Davis",
+      "time": "5:00 PM MT",
+      "tv": "ESPN+ / KQCA"
+    },
+    {
+      "date": "Oct 31",
+      "away": "Cal Poly",
+      "home": "Montana State",
+      "time": "1:00 PM MT",
+      "tv": "ESPN+ / Scripps"
+    },
+    {
+      "date": "Oct 31",
+      "away": "Northern Arizona",
+      "home": "Southern Utah",
+      "time": "1:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Oct 31",
+      "away": "Idaho State",
+      "home": "Utah Tech",
+      "time": "1:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Oct 31",
+      "away": "UC Davis",
+      "home": "Weber State",
+      "time": "1:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Oct 31",
+      "away": "Montana",
+      "home": "Eastern Washington",
+      "time": "2:00 PM MT",
+      "tv": "ESPN+ / Scripps"
+    },
+    {
+      "date": "Oct 31",
+      "away": "Idaho",
+      "home": "Portland State",
+      "time": "2:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Nov 7",
+      "away": "Portland State",
+      "home": "Montana",
+      "time": "1:00 PM MT",
+      "tv": "ESPN+ / Scripps"
+    },
+    {
+      "date": "Nov 7",
+      "away": "Northern Colorado",
+      "home": "Southern Utah",
+      "time": "1:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Nov 7",
+      "away": "Northern Arizona",
+      "home": "Cal Poly",
+      "time": "3:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Nov 7",
+      "away": "Eastern Washington",
+      "home": "Idaho",
+      "time": "3:00 PM MT",
+      "tv": "ESPN+ / SWX"
+    },
+    {
+      "date": "Nov 7",
+      "away": "Montana State",
+      "home": "Idaho State",
+      "time": "4:00 PM MT",
+      "tv": "ESPN+ / Scripps"
+    },
+    {
+      "date": "Nov 7",
+      "away": "Utah Tech",
+      "home": "UC Davis",
+      "time": "5:00 PM MT",
+      "tv": "ESPN+ / KQCA"
+    },
+    {
+      "date": "Nov 13",
+      "away": "Southern Utah",
+      "home": "Portland State",
+      "time": "8:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Nov 14",
+      "away": "Montana State",
+      "home": "Northern Colorado",
+      "time": "12:00 PM MT",
+      "tv": "ESPN+ / Scripps"
+    },
+    {
+      "date": "Nov 14",
+      "away": "UC Davis",
+      "home": "Idaho",
+      "time": "2:00 PM MT",
+      "tv": "ESPN+ / SWX"
+    },
+    {
+      "date": "Nov 14",
+      "away": "Weber State",
+      "home": "Northern Arizona",
+      "time": "2:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Nov 14",
+      "away": "Eastern Washington",
+      "home": "Utah Tech",
+      "time": "2:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Nov 14",
+      "away": "Idaho State",
+      "home": "Montana",
+      "time": "8:30 PM MT",
+      "tv": "ESPN TBD"
+    },
+    {
+      "date": "Nov 21",
+      "away": "Montana",
+      "home": "Montana State",
+      "time": "12:00 PM MT",
+      "tv": "ESPN+ / Scripps"
+    },
+    {
+      "date": "Nov 21",
+      "away": "Utah Tech",
+      "home": "Weber State",
+      "time": "1:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Nov 21",
+      "away": "Portland State",
+      "home": "Eastern Washington",
+      "time": "2:00 PM MT",
+      "tv": "ESPN+ / SWX"
+    },
+    {
+      "date": "Nov 21",
+      "away": "Northern Colorado",
+      "home": "Northern Arizona",
+      "time": "2:00 PM MT",
+      "tv": "ESPN+"
+    },
+    {
+      "date": "Nov 21",
+      "away": "Cal Poly",
+      "home": "UC Davis",
+      "time": "2:00 PM MT",
+      "tv": "ESPN+ / KQCA"
+    },
+    {
+      "date": "Nov 21",
+      "away": "Idaho",
+      "home": "Idaho State",
+      "time": "4:00 PM MT",
+      "tv": "ESPN+"
+    }
+  ],
+  "big_sky_teams": [
+    "Cal Poly",
+    "Eastern Washington",
+    "Idaho",
+    "Idaho State",
+    "Montana",
+    "Montana State",
+    "Northern Arizona",
+    "Northern Colorado",
+    "Portland State",
+    "Southern Utah",
+    "UC Davis",
+    "Utah Tech",
+    "Weber State"
+  ],
+  "opponent_resources": {
+    "Drake": {
+      "official": "https://godrakebulldogs.com/sports/football",
+      "forum": "https://www.drakenation.com/Specific-Sports-Topic-Forums/Bulldog-Football",
+      "media": "https://godrakebulldogs.com/",
+      "label": "Drake Nation"
+    },
+    "Southern Utah": {
+      "official": "https://suutbirds.com/sports/football",
+      "forum": "https://bigskyfans.com/",
+      "media": "https://suutbirds.com/",
+      "label": "Big Sky Fans"
+    },
+    "Utah Tech": {
+      "official": "https://utahtechtrailblazers.com/sports/football",
+      "forum": "https://bigskyfans.com/",
+      "media": "https://utahtechtrailblazers.com/",
+      "label": "Big Sky Fans"
+    },
+    "UC Davis": {
+      "official": "https://ucdavisaggies.com/sports/football",
+      "forum": "https://www.aggiesportstalk.com/",
+      "media": "https://ucdavisaggies.com/",
+      "label": "Aggie Sports Talk"
+    },
+    "Northern Colorado": {
+      "official": "https://uncbears.com/sports/football",
+      "forum": "https://bigskyfans.com/forums/bears-football.37/",
+      "media": "https://uncbears.com/",
+      "label": "Big Sky Fans"
+    },
+    "Northern Arizona": {
+      "official": "https://nauathletics.com/sports/football",
+      "forum": "https://www.zoneinhq.com/t/college-northern-arizona",
+      "media": "https://nauathletics.com/",
+      "label": "NAU ZoneIN"
+    },
+    "Idaho": {
+      "official": "https://govandals.com/sports/football",
+      "forum": "https://247sports.com/college/idaho/board/vandal-football-103901/",
+      "media": "https://govandals.com/",
+      "label": "247Sports"
+    },
+    "Eastern Washington": {
+      "official": "https://goeags.com/sports/football",
+      "forum": "https://bigskyfans.com/categories/eastern-washington-eagles.61/",
+      "media": "https://goeags.com/",
+      "label": "Big Sky Fans"
+    },
+    "Portland State": {
+      "official": "https://goviks.com/sports/football",
+      "forum": "https://bigskyfans.com/categories/portland-state-vikings.63/",
+      "media": "https://goviks.com/",
+      "label": "Big Sky Fans"
+    },
+    "Idaho State": {
+      "official": "https://isubengals.com/sports/football",
+      "forum": "https://bigskyfans.com/forums/idaho-state-bengals.25/",
+      "media": "https://isubengals.com/",
+      "label": "Big Sky Fans"
+    },
+    "Montana State": {
+      "official": "https://msubobcats.com/sports/football",
+      "forum": "https://bobcatnation.com/bobcatbb/",
+      "media": "https://msubobcats.com/",
+      "label": "BobcatNation"
+    },
+    "Weber State": {
+      "official": "https://weberstatesports.com/sports/football",
+      "forum": "https://bigskyfans.com/",
+      "media": "https://weberstatesports.com/",
+      "label": "Big Sky Fans"
+    },
+    "Cal Poly": {
+      "official": "https://gopoly.com/sports/football",
+      "forum": "https://www.tapatalk.com/groups/calpolystangs/cal-poly-mustangs-sports-message-board-f66/",
+      "media": "https://gopoly.com/",
+      "label": "Cal Poly Stangs"
+    }
+  }
+}
