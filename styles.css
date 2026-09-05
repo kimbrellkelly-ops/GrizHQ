@@ -86,3 +86,15 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .header-paw-image img{width:36px;height:36px;object-fit:contain;display:block}
 @media(max-width:900px){.brand-row{grid-template-columns:200px 1fr auto;gap:16px}.griz-hq-logo{width:190px}.header-gamebar{padding-left:18px}.header-gamebar-main strong{font-size:24px}.header-gamebar-meta{font-size:9px}}
 @media(max-width:700px){.brand-row{height:auto;min-height:90px;padding:10px 18px;grid-template-columns:1fr auto;gap:12px}.griz-hq-logo{width:175px;height:64px}.header-gamebar{display:none}.header-paw-image{display:none}}
+
+/* Griz HQ tabbed navigation */
+.tab-panel{display:none!important}
+.tab-panel.is-active{display:block!important}
+.hero.tab-panel.is-active{display:grid!important}
+.lower-grid{display:none}
+.lower-grid:has(.tab-panel.is-active){display:grid}
+.nav{gap:24px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{cursor:pointer}
+@media(max-width:1100px){.nav{gap:18px}.nav a{font-size:13px}}
+@media(max-width:700px){.nav{gap:18px}.nav a{font-size:12px}}

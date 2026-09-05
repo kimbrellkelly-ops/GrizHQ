@@ -306,3 +306,53 @@ async function renderFCSScoreboard(){
   setInterval(()=>{const d=new Date(); if(d.getDay()>=4) draw();},60000);
 }
 renderFCSScoreboard();
+
+/* Griz HQ tab navigation */
+(function initTabs(){
+  const panels=[...document.querySelectorAll('.tab-panel')];
+  const links=[...document.querySelectorAll('[data-tab-link]')];
+  if(!panels.length || !links.length) return;
+
+  const aliases={
+    home:'home', news:'news', schedule:'schedule', scores:'scores', rankings:'rankings',
+    roster:'roster', stats:'stats', media:'media', insider:'insider', history:'history', game:'game'
+  };
+
+  function activate(tab, updateHash=true){
+    tab=aliases[tab] || 'home';
+    panels.forEach(p=>p.classList.toggle('is-active', p.dataset.tab===tab));
+    links.forEach(a=>{
+      const active=a.dataset.tabLink===tab;
+      a.classList.toggle('active',active);
+      if(active) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+    });
+    if(updateHash){
+      const target=tab==='home' ? '#home' : (links.find(a=>a.dataset.tabLink===tab)?.getAttribute('href') || '#home');
+      history.replaceState(null,'',target);
+    }
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  links.forEach(a=>{
+    if(!a.dataset.tabLink) return;
+    a.addEventListener('click',e=>{
+      e.preventDefault();
+      activate(a.dataset.tabLink);
+    });
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    if(a.dataset.tabLink) return;
+    a.addEventListener('click',e=>{
+      const id=a.getAttribute('href')?.slice(1);
+      const panel=document.getElementById(id);
+      if(!panel?.dataset.tab) return;
+      e.preventDefault();
+      activate(panel.dataset.tab);
+    });
+  });
+
+  const hash=location.hash.slice(1);
+  const hashPanel=document.getElementById(hash);
+  activate(hashPanel?.dataset.tab || (hash ? hash : 'home'), false);
+})();
