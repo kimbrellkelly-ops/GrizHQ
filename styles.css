@@ -562,3 +562,45 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 @media(max-width:850px){
   .header-go-block{display:none !important}
 }
+
+/* ===== FINAL GO GRIZ / LOGO POLISH ===== */
+.brand-row{
+  background-size:cover !important;
+  background-position:center 42% !important;
+}
+.griz-hq-logo{
+  width:min(610px,100%) !important;
+  height:292px !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+  filter:drop-shadow(0 6px 9px rgba(0,0,0,.60)) !important;
+}
+.header-go-block{
+  position:relative !important;
+  background:linear-gradient(112deg,rgba(107,0,56,.15),rgba(107,0,56,.62)) !important;
+  overflow:hidden !important;
+}
+.header-go-block::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:linear-gradient(125deg,transparent 0 18%,rgba(107,0,56,.76) 19%,rgba(107,0,56,.92) 100%) !important;
+  clip-path:polygon(25% 0,100% 0,100% 100%,0 100%,14% 50%) !important;
+  z-index:0 !important;
+}
+.header-pride{position:relative !important;z-index:3 !important;}
+.header-go-griz{
+  position:relative !important;
+  z-index:3 !important;
+  height:245px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+.header-go-griz img{
+  width:350px !important;
+  height:240px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  filter:drop-shadow(0 5px 8px rgba(0,0,0,.42)) !important;
+}
