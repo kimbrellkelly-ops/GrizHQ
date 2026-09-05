@@ -5,18 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Griz HQ | Montana Football</title>
   <meta name="description" content="Griz HQ — a fan-built Montana Grizzlies football information hub.">
-  <link rel="stylesheet" href="styles.css?v=20260905-tabs2">
-  <script src="app.js?v=20260905-tabs2" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260905-header3">
+  <script src="app.js?v=20260905-header3" defer></script>
 
 <style id="griz-tabs-critical">
 .tab-panel{display:none!important}
 .tab-panel.is-active{display:block!important}
-.hero.tab-panel.is-active{display:grid!important}
-.header-gamebar{position:relative;padding-right:175px}
-.header-go-griz{position:absolute;right:20px;top:50%;transform:translateY(-50%);font:900 42px/0.9 "Barlow Condensed",sans-serif;letter-spacing:1px;color:#6b0038;text-decoration:none;white-space:nowrap}
+.header-go-griz{position:absolute;right:20px;top:50%;transform:translateY(-50%);font:900 48px/0.9 "Barlow Condensed",sans-serif;letter-spacing:1.5px;color:#fff;text-decoration:none;white-space:nowrap;text-shadow:0 3px 8px rgba(0,0,0,.35)}
 .header-go-griz:hover{text-decoration:underline}
-@media(max-width:900px){.header-gamebar{padding-right:145px}.header-go-griz{right:12px;font-size:34px}}
-@media(max-width:700px){.header-gamebar{padding-right:0}.header-go-griz{display:none}}
+@media(max-width:900px){.header-go-griz{right:10px;font-size:36px}}
+@media(max-width:700px){.header-go-griz{display:none}}
 </style>
 </head>
 <body>
@@ -26,7 +24,7 @@
     <a class="brand" href="#home" aria-label="Griz HQ home">
       <img class="griz-hq-logo" src="griz-hq-logo.png" alt="Griz HQ">
     </a>
-    <div class="header-gamebar" aria-label="Montana football game status">
+    <div class="header-gamebar" aria-label="Montana football game status"><div class="header-gamebar-line"></div>
       <div class="header-gamebar-kicker" id="header-gamebar-kicker">NEXT GAME</div>
       <div class="header-gamebar-main">
         <strong id="header-gamebar-opponent">DRAKE</strong>

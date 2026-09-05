@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
 :root{--maroon:#660033;--maroon2:#7a0635;--ink:#171719;--paper:#f4f3f1;--line:#d6d4d1;--muted:#747474;--white:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif}a{color:inherit;text-decoration:none}
-.site-header{background:#fff}.brand-row{height:108px;max-width:1500px;margin:auto;padding:20px 28px;display:flex;align-items:center;justify-content:space-between}.brand-title{font:800 44px/1 "Barlow Condensed";letter-spacing:.5px;color:#171719}.brand-sub{font:800 12px/1.2 Inter;letter-spacing:1.8px;margin-top:6px;color:#222}.brand-tagline{font:800 9px/1.2 Inter;letter-spacing:2.2px;color:var(--maroon);margin-top:6px}.brand-right{display:flex;align-items:center;gap:28px}.motto{font:800 italic 13px "Barlow Condensed";letter-spacing:2px;color:var(--maroon);display:flex;align-items:center;gap:15px}.motto b{font:800 18px "Barlow Condensed";font-style:normal;letter-spacing:2px;border-left:1px solid #bbb;padding-left:15px}
+.site-header{background:#151519;position:relative;overflow:hidden}.brand-row{height:148px;max-width:1600px;margin:auto;padding:16px 34px;display:grid;grid-template-columns:320px 1fr 92px;align-items:center;gap:30px;position:relative;background:linear-gradient(90deg,rgba(20,20,24,.98) 0%,rgba(35,22,29,.96) 42%,rgba(78,0,40,.93) 100%),url("hero.jpg") center/cover no-repeat}.brand-title{font:800 44px/1 "Barlow Condensed";letter-spacing:.5px;color:#171719}.brand-sub{font:800 12px/1.2 Inter;letter-spacing:1.8px;margin-top:6px;color:#222}.brand-tagline{font:800 9px/1.2 Inter;letter-spacing:2.2px;color:var(--maroon);margin-top:6px}.brand-right{display:flex;align-items:center;justify-content:center;gap:28px;height:100%;border-left:1px solid rgba(255,255,255,.25);padding-left:22px}.brand{display:flex;align-items:center;height:100%;z-index:2}.motto{font:800 italic 13px "Barlow Condensed";letter-spacing:2px;color:var(--maroon);display:flex;align-items:center;gap:15px}.motto b{font:800 18px "Barlow Condensed";font-style:normal;letter-spacing:2px;border-left:1px solid #bbb;padding-left:15px}
 .header-paw-image{height:52px;width:54px;border-left:1px solid #bbb;display:flex;align-items:center;justify-content:center;padding-left:10px}.header-paw-image img{width:36px;height:36px;object-fit:contain;display:block}
 .nav{height:48px;background:var(--maroon);color:#fff;display:flex;align-items:center;padding:0 max(28px,calc((100% - 1500px)/2));gap:31px}.nav a{font:800 14px "Barlow Condensed";letter-spacing:.6px;padding:16px 0 13px;border-bottom:4px solid transparent}.nav a.active{border-color:#fff}.nav a:hover{border-color:#fff}.nav small{font-size:11px}.social{margin-left:auto;font:800 14px Inter;white-space:nowrap}
 .hero{max-width:1500px;margin:auto;display:grid;grid-template-columns:minmax(0,1fr) 260px 330px;min-height:405px}.hero-photo{position:relative;overflow:hidden}.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.76) 0%,rgba(66,0,29,.48) 43%,rgba(0,0,0,.05) 75%)}.hero-copy{position:absolute;left:25px;bottom:34px;color:#fff}.eyebrow{font:800 12px "Inter";letter-spacing:2px;color:var(--maroon)}.eyebrow.light{color:#fff}.hero h1{font:800 51px/.96 "Barlow Condensed";letter-spacing:.8px;margin:15px 0 25px}.hero-buttons{display:flex;gap:12px}.button{display:inline-block;padding:12px 22px;font:800 12px "Barlow Condensed";letter-spacing:1px;text-align:center}.button.maroon{background:var(--maroon);color:#fff}.button.outline{border:1px solid #fff;color:#fff}.button.light-button{background:#fff;color:var(--maroon);width:100%;margin-top:15px}.button.full{width:100%;margin-top:12px}
@@ -72,20 +72,21 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 @media(max-width:560px){.fcs-top20{grid-template-columns:1fr}.fcs-game{grid-template-columns:1fr 80px}.fcs-time{font-size:10px}.fcs-game .fcs-tv{display:none}}
 
 
-/* Dynamic Griz HQ game bar */
-.brand-row{height:108px;max-width:1500px;margin:auto;padding:12px 28px;display:grid;grid-template-columns:250px 1fr auto;align-items:center;gap:28px;box-sizing:border-box}
-.griz-hq-logo{display:block;width:220px;height:82px;max-width:220px;max-height:82px;object-fit:contain;object-position:left center}
-.header-gamebar{min-width:0;display:flex;flex-direction:column;justify-content:center;border-left:1px solid #d0d0d0;padding-left:28px}
-.header-gamebar-kicker{font:900 12px/1 "Barlow Condensed";letter-spacing:2px;color:var(--maroon);margin-bottom:5px}
+/* Dynamic Griz HQ game bar — premium header */
+.brand-row{height:148px;max-width:1600px;margin:auto;padding:16px 34px;display:grid;grid-template-columns:330px minmax(0,1fr) 86px;align-items:center;gap:28px;box-sizing:border-box;background:linear-gradient(90deg,rgba(16,17,20,.97),rgba(42,20,31,.94) 55%,rgba(105,0,55,.92)),url("hero.jpg") center 44%/cover no-repeat;position:relative}
+.brand-row:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.22),transparent 48%,rgba(107,0,56,.18));pointer-events:none}
+.griz-hq-logo{display:block;width:310px;height:124px;max-width:310px;max-height:124px;object-fit:contain;object-position:center;filter:drop-shadow(0 6px 10px rgba(0,0,0,.5))}
+.header-gamebar{min-width:0;min-height:98px;display:flex;flex-direction:column;justify-content:center;position:relative;border-left:1px solid rgba(255,255,255,.28);padding:8px 0 8px 34px;color:#fff}.header-gamebar-line{position:absolute;left:34px;top:0;width:54px;height:3px;background:#fff}
+.header-gamebar-kicker{font:900 12px/1 "Barlow Condensed";letter-spacing:3px;color:#d9d9d9;margin-bottom:8px}
 .header-gamebar-main{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
-.header-gamebar-main strong{font:900 28px/1 "Barlow Condensed";letter-spacing:1px;color:#171719}
-.header-gamebar-main span{font:800 13px/1.2 Inter;color:#444;letter-spacing:.6px}
-.header-gamebar-meta{display:flex;align-items:center;gap:22px;margin-top:7px;font:700 10px/1.2 Inter;color:#666;letter-spacing:1px}
+.header-gamebar-main strong{font:900 34px/1 "Barlow Condensed";letter-spacing:1.5px;color:#fff}
+.header-gamebar-main span{font:800 13px/1.2 Inter;color:#e5e5e5;letter-spacing:.8px}
+.header-gamebar-meta{display:flex;align-items:center;gap:22px;margin-top:9px;font:700 10px/1.2 Inter;color:#cfcfcf;letter-spacing:1.2px}
 .header-gamebar-meta a{font:900 12px/1 "Barlow Condensed";letter-spacing:1px;color:var(--maroon)}
 .header-paw-image{height:52px;width:54px;border-left:1px solid #bbb;display:flex;align-items:center;justify-content:center;padding-left:10px}
 .header-paw-image img{width:36px;height:36px;object-fit:contain;display:block}
-@media(max-width:900px){.brand-row{grid-template-columns:200px 1fr auto;gap:16px}.griz-hq-logo{width:190px}.header-gamebar{padding-left:18px}.header-gamebar-main strong{font-size:24px}.header-gamebar-meta{font-size:9px}}
-@media(max-width:700px){.brand-row{height:auto;min-height:90px;padding:10px 18px;grid-template-columns:1fr auto;gap:12px}.griz-hq-logo{width:175px;height:64px}.header-gamebar{display:none}.header-paw-image{display:none}}
+@media(max-width:900px){.brand-row{height:128px;grid-template-columns:240px minmax(0,1fr) 68px;gap:16px;padding:14px 22px}.griz-hq-logo{width:225px;height:96px}.header-gamebar{padding-left:22px}.header-gamebar-line{left:22px}.header-gamebar-main strong{font-size:24px}.header-gamebar-meta{font-size:9px}}
+@media(max-width:700px){.brand-row{height:96px;min-height:96px;padding:8px 16px;grid-template-columns:1fr auto;gap:10px}.griz-hq-logo{width:205px;height:76px}.header-gamebar{display:none}.brand-right{border-left:0;padding-left:0}.header-paw-image{display:none}}
 
 /* Griz HQ tabbed navigation */
 .tab-panel{display:none!important}
