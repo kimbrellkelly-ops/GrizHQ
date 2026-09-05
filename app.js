@@ -211,11 +211,14 @@ renderBigSkyAndOpponent();
 async function renderFCSScoreboard(){
   const topEl=document.getElementById('fcs-top20');
   const gamesEl=document.getElementById('fcs-games');
+  const bigSkyEl=document.getElementById('bigsky-score-games');
+  const bigSkyLabelEl=document.getElementById('bigsky-score-label');
   const weekEl=document.getElementById('fcs-week-filter');
   const statusEl=document.getElementById('fcs-status');
   const labelEl=document.getElementById('fcs-all-label');
   const refreshEl=document.getElementById('fcs-refresh');
   if(!topEl || !gamesEl || !weekEl) return;
+  const bigSkyTeams=['Montana','Montana State','Idaho','Weber State','Eastern Washington','Northern Arizona','Northern Colorado','Idaho State','Cal Poly','Southern Utah','Utah Tech','UC Davis','Portland State'];
 
   const weeks=[
     ['2026-08-27','2026-08-30','WEEK 0 • AUG 27–30'],
@@ -251,6 +254,14 @@ async function renderFCSScoreboard(){
   function findTeam(name,events){
     const n=norm(name); return events.find(ev=>ev.competitions?.[0]?.competitors?.some(c=>norm(c.team?.displayName).includes(n)||n.includes(norm(c.team?.displayName)))) || null;
   }
+  function findTeamEvent(name,events){
+    const n=norm(name);
+    return events.find(ev=>ev.competitions?.[0]?.competitors?.some(c=>{const tn=norm(c.team?.displayName||c.team?.shortDisplayName); return tn.includes(n)||n.includes(tn);} )) || null;
+  }
+  function isBigSkyGame(ev){
+    const teams=(ev?.competitions?.[0]?.competitors||[]).map(c=>c.team?.displayName||'');
+    return teams.filter(t=>bigSkyTeams.some(bs=>norm(t).includes(norm(bs))||norm(bs).includes(norm(t)))).length>=2;
+  }
   function statusText(ev){const c=ev.competitions?.[0]; const st=c?.status?.type; if(st?.completed) return 'FINAL'; if(st?.state==='in') return c.status?.type?.shortDetail||'LIVE'; return c?.date?new Date(c.date).toLocaleTimeString([], {hour:'numeric',minute:'2-digit'}):'TBA';}
   function scoreLine(ev,name){
     if(!ev) return '<small>NO GAME</small>';
@@ -268,6 +279,8 @@ async function renderFCSScoreboard(){
     const w=weeks[Number(weekEl.value)||0];
     statusEl.textContent='Loading FCS scores…';
     gamesEl.innerHTML='<div class="fcs-loading">Loading FCS games…</div>';
+    if(bigSkyEl) bigSkyEl.innerHTML='<div class="fcs-loading">Loading Big Sky games…</div>';
+    if(bigSkyLabelEl) bigSkyLabelEl.textContent=w[2]+' • All 13 teams';
     try{
       const startDate=w[0].replace(/-/g,''); const endDate=w[1].replace(/-/g,'');
       const urls=[
@@ -298,7 +311,30 @@ async function renderFCSScoreboard(){
         return `<div class="fcs-rank-card ${cardClass}"><span class="fcs-rank">${t.rank}</span><div class="fcs-rank-team"><b>${escapeHtml(t.team)}</b><small>${escapeHtml(t.record||'')} ${matchup?'• '+matchup:''}</small></div><span class="fcs-rank-score">${scoreLine(ev,t.team)}</span></div>`;
       }).join('');
 
-      if(!events.length){gamesEl.innerHTML='<div class="fcs-empty"><b>No FCS games found for this week.</b><br>Try another week from the dropdown.</div>';return;}
+      if(!events.length){
+        gamesEl.innerHTML='<div class="fcs-empty"><b>No FCS games found for this week.</b><br>Try another week from the dropdown.</div>';
+        if(bigSkyEl) bigSkyEl.innerHTML=bigSkyTeams.map(team=>`<div class="fcs-game scheduled bigsky-row"><div class="fcs-time">—</div><div class="fcs-matchup"><b>${escapeHtml(team)}</b><small>NO GAME / FEED UNAVAILABLE</small></div><div class="fcs-score"></div><div class="fcs-tv"></div></div>`).join('');
+        return;
+      }
+
+      if(bigSkyEl){
+        bigSkyEl.innerHTML=bigSkyTeams.map(team=>{
+          const ev=findTeamEvent(team,events);
+          if(!ev){
+            return `<div class="fcs-game scheduled bigsky-row bye"><div class="fcs-time">BYE</div><div class="fcs-matchup"><b>${escapeHtml(team)}</b><small>NO GAME THIS WEEK</small></div><div class="fcs-score">BYE</div><div class="fcs-tv"></div></div>`;
+          }
+          const d=gameLabel(ev);
+          const c=ev.competitions?.[0];
+          const st=c?.status?.type;
+          const state=st?.state==='in'?'live':(st?.completed?'final':'scheduled');
+          const isConference=!((team==='Weber State' && (d.away==='Southern Utah' || d.home==='Southern Utah')) || (team==='Southern Utah' && (d.away==='Weber State' || d.home==='Weber State')) || (team==='Utah Tech' && (d.away==='Montana' || d.home==='Montana')) || (team==='Montana' && (d.away==='Utah Tech' || d.home==='Utah Tech')) || (team==='Northern Arizona' && (d.away==='Utah Tech' || d.home==='Utah Tech')) || (team==='Utah Tech' && (d.away==='Northern Arizona' || d.home==='Northern Arizona')));
+          const label=isConference?'BIG SKY':'NON-CONFERENCE';
+          const scores=(c?.competitors||[]).map(x=>`${escapeHtml(x.team?.shortDisplayName||x.team?.displayName||'')} ${escapeHtml(x.score??'')}`).join(' • ');
+          const tv=(c?.broadcasts||[]).flatMap(b=>b.names||[]).slice(0,2).join(', ');
+          return `<div class="fcs-game ${state} bigsky-row"><div class="fcs-time">${escapeHtml(d.time)}</div><div class="fcs-matchup"><b>${escapeHtml(d.away)} @ ${escapeHtml(d.home)}</b><small>${scores} <span class="bigsky-game-tag">${label}</span></small></div><div class="fcs-score">${escapeHtml(st?.completed?'FINAL':st?.state==='in'?(st.shortDetail||'LIVE'):'')}</div><div class="fcs-tv">${escapeHtml(tv)}</div></div>`;
+        }).join('');
+      }
+
       const rows=events.map(ev=>{
         const d=gameLabel(ev); const c=ev.competitions?.[0]; const st=c?.status?.type; const state=st?.state==='in'?'live':(st?.completed?'final':'scheduled');
         const scores=(c?.competitors||[]).map(x=>`${escapeHtml(x.team?.shortDisplayName||x.team?.displayName||'')} ${escapeHtml(x.score??'')}`).join(' • ');

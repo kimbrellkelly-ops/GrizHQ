@@ -98,3 +98,10 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .nav a{cursor:pointer}
 @media(max-width:1100px){.nav{gap:18px}.nav a{font-size:13px}}
 @media(max-width:700px){.nav{gap:18px}.nav a{font-size:12px}}
+
+.bigsky-score-head{margin-top:26px}
+.bigsky-score-games .bigsky-row .fcs-matchup small{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.bigsky-game-tag{display:inline-block;padding:3px 7px;border:1px solid #d5d5d5;font-size:9px;letter-spacing:.08em;font-weight:800;color:#666}
+.bigsky-row.bye{background:#fafafa}
+.bigsky-row.bye .fcs-score{font-weight:900;color:#777}
+@media(max-width:560px){.bigsky-game-tag{font-size:8px}}
