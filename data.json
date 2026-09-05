@@ -2749,5 +2749,317 @@
       "team": "Abilene Christian",
       "record": "0-1"
     }
-  ]
+  ],
+  "fcs_top25": [
+    {
+      "rank": 1,
+      "team": "Montana State",
+      "record": "1-0"
+    },
+    {
+      "rank": 2,
+      "team": "South Dakota State",
+      "record": "1-0"
+    },
+    {
+      "rank": 3,
+      "team": "Montana",
+      "record": "1-0"
+    },
+    {
+      "rank": 4,
+      "team": "Illinois State",
+      "record": "1-0"
+    },
+    {
+      "rank": 5,
+      "team": "Tarleton State",
+      "record": "1-0"
+    },
+    {
+      "rank": 6,
+      "team": "Rhode Island",
+      "record": "1-0"
+    },
+    {
+      "rank": 7,
+      "team": "UC Davis",
+      "record": "1-0"
+    },
+    {
+      "rank": 8,
+      "team": "North Dakota",
+      "record": "1-0"
+    },
+    {
+      "rank": 9,
+      "team": "Youngstown State",
+      "record": "1-0"
+    },
+    {
+      "rank": 10,
+      "team": "Lehigh",
+      "record": "1-0"
+    },
+    {
+      "rank": 11,
+      "team": "South Dakota",
+      "record": "1-0"
+    },
+    {
+      "rank": 12,
+      "team": "Tennessee Tech",
+      "record": "1-0"
+    },
+    {
+      "rank": 13,
+      "team": "Stephen F. Austin",
+      "record": "1-0"
+    },
+    {
+      "rank": 14,
+      "team": "Lamar",
+      "record": "1-0"
+    },
+    {
+      "rank": 15,
+      "team": "Austin Peay",
+      "record": "1-0"
+    },
+    {
+      "rank": 16,
+      "team": "Yale",
+      "record": "0-0"
+    },
+    {
+      "rank": 17,
+      "team": "William & Mary",
+      "record": "1-0"
+    },
+    {
+      "rank": 18,
+      "team": "Villanova",
+      "record": "0-1"
+    },
+    {
+      "rank": 19,
+      "team": "Mercer",
+      "record": "1-0"
+    },
+    {
+      "rank": 20,
+      "team": "Abilene Christian",
+      "record": "0-1"
+    },
+    {
+      "rank": 21,
+      "team": "South Carolina State",
+      "record": "1-0"
+    },
+    {
+      "rank": 22,
+      "team": "Northern Arizona",
+      "record": "1-0"
+    },
+    {
+      "rank": 23,
+      "team": "Idaho State",
+      "record": "1-0"
+    },
+    {
+      "rank": 24,
+      "team": "Western Carolina",
+      "record": "1-0"
+    },
+    {
+      "rank": 25,
+      "team": "West Florida",
+      "record": "1-0"
+    }
+  ],
+  "stats": {
+    "through": "Week 1 \u2022 vs Southern Utah",
+    "team_summary": [
+      {
+        "value": "1\u20130",
+        "label": "RECORD",
+        "note": "2026"
+      },
+      {
+        "value": "28.0",
+        "label": "POINTS / GAME",
+        "note": "28 points"
+      },
+      {
+        "value": "338",
+        "label": "TOTAL OFFENSE",
+        "note": "338 yards"
+      },
+      {
+        "value": "510",
+        "label": "TOTAL DEFENSE",
+        "note": "510 yards allowed"
+      }
+    ],
+    "offense": [
+      [
+        "Points",
+        "28"
+      ],
+      [
+        "Total Yards",
+        "338"
+      ],
+      [
+        "Yards / Play",
+        "7.3"
+      ],
+      [
+        "Passing",
+        "265"
+      ],
+      [
+        "Rushing",
+        "73"
+      ],
+      [
+        "3rd Down",
+        "6/11 (54.5%)"
+      ],
+      [
+        "Red Zone",
+        "1/2 (50.0%)"
+      ],
+      [
+        "Turnovers",
+        "2"
+      ]
+    ],
+    "defense": [
+      [
+        "Points Allowed",
+        "21"
+      ],
+      [
+        "Yards Allowed",
+        "510"
+      ],
+      [
+        "Yards / Play",
+        "6.1"
+      ],
+      [
+        "Pass Yards Allowed",
+        "251"
+      ],
+      [
+        "Rush Yards Allowed",
+        "259"
+      ],
+      [
+        "3rd Down Allowed",
+        "8/17 (47.1%)"
+      ],
+      [
+        "Red Zone Allowed",
+        "2/3 (66.7%)"
+      ],
+      [
+        "Takeaways",
+        "1"
+      ]
+    ],
+    "situational": [
+      [
+        "4th Down",
+        "0/0",
+        "Perfect so far"
+      ],
+      [
+        "Time of Possession",
+        "16:26",
+        ""
+      ],
+      [
+        "Turnover Margin",
+        "\u22121",
+        "2 Montana turnovers, 1 takeaway"
+      ],
+      [
+        "Penalties",
+        "3\u201332",
+        ""
+      ],
+      [
+        "Punts",
+        "3\u2013136",
+        "45.3 avg"
+      ],
+      [
+        "Sacks",
+        "0",
+        "Montana did not record a sack"
+      ]
+    ],
+    "leaders": {
+      "passing": [
+        {
+          "player": "Keali'i Ah Yat",
+          "line": "15\u201328 \u2022 265 YDS \u2022 2 TD \u2022 1 INT",
+          "extra": "Long: 85"
+        }
+      ],
+      "rushing": [
+        {
+          "player": "Eli Gillman",
+          "line": "13 CAR \u2022 76 YDS \u2022 1 TD",
+          "extra": "Long: 29"
+        }
+      ],
+      "receiving": [
+        {
+          "player": "Eli Gillman",
+          "line": "2 REC \u2022 93 YDS \u2022 1 TD",
+          "extra": "Long: 85"
+        },
+        {
+          "player": "Lekeldrick Bridges",
+          "line": "5 REC \u2022 91 YDS \u2022 1 TD",
+          "extra": "Long: 53"
+        }
+      ],
+      "defense": [
+        {
+          "player": "Braeden Orlandi",
+          "line": "8 TKL",
+          "extra": "0.5 TFL"
+        },
+        {
+          "player": "Sage Salopek",
+          "line": "7 TKL",
+          "extra": "6 solo"
+        },
+        {
+          "player": "Tanner Huff",
+          "line": "7 TKL",
+          "extra": "5 assists"
+        },
+        {
+          "player": "Kade Cutler",
+          "line": "7 TKL",
+          "extra": "1 TFL"
+        }
+      ]
+    },
+    "game_log": [
+      {
+        "week": "Wk 1",
+        "opponent": "Southern Utah",
+        "result": "W 28\u201321",
+        "yards": "338\u2013510",
+        "turnovers": "\u22121",
+        "notes": "Gillman 93 receiving yards; Bridges 91 receiving yards"
+      }
+    ]
+  }
 }

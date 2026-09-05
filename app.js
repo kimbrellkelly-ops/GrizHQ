@@ -46,6 +46,8 @@ async function loadGrizData() {
         }).join("");
     }
 
+    renderStatsDashboard(d.stats);
+
     renderPoll("coaches-poll", d.coaches_poll);
     renderPoll("media-poll", d.media_poll);
     renderMiniPolls(d.coaches_poll, d.media_poll);
@@ -296,3 +298,46 @@ renderFCSScoreboard();
   const hashPanel=document.getElementById(hash);
   activate(hashPanel?.dataset.tab || (hash ? hash : 'home'), false);
 })();
+
+function renderStatsDashboard(stats) {
+  if (!stats) return;
+  const through = document.getElementById("stats-through");
+  if (through) through.textContent = stats.through || "Current season";
+
+  const summary = document.getElementById("stats-summary");
+  if (summary && Array.isArray(stats.team_summary)) {
+    summary.innerHTML = stats.team_summary.map(x => `<div><b>${escapeHtml(x.value)}</b><span>${escapeHtml(x.label)}</span><small>${escapeHtml(x.note || "")}</small></div>`).join("");
+  }
+
+  renderStatList("stats-offense", stats.offense);
+  renderStatList("stats-defense", stats.defense);
+  renderStatList("stats-situational", stats.situational, true);
+
+  const leaders = document.getElementById("stats-leaders");
+  if (leaders && stats.leaders) {
+    const groups = [
+      ["PASSING", stats.leaders.passing || []],
+      ["RUSHING", stats.leaders.rushing || []],
+      ["RECEIVING", stats.leaders.receiving || []],
+      ["DEFENSE", stats.leaders.defense || []]
+    ];
+    leaders.innerHTML = groups.map(([label,items]) => {
+      const top = items[0] || {player:"—",line:"No stats yet",extra:""};
+      return `<div class="leader-card"><div class="eyebrow">${label}</div><h4>${escapeHtml(top.player)}</h4><p>${escapeHtml(top.line)}</p><small>${escapeHtml(top.extra || "")}</small>${items.length>1 ? items.slice(1).map(i=>`<div class="leader-more"><b>${escapeHtml(i.player)}</b><span>${escapeHtml(i.line)}</span></div>`).join("") : ""}</div>`;
+    }).join("");
+  }
+
+  const log = document.getElementById("stats-game-log");
+  if (log && Array.isArray(stats.game_log)) {
+    log.innerHTML = stats.game_log.map(g => `<div class="game-log-row"><span class="week">${escapeHtml(g.week || "")}</span><span class="opp">${escapeHtml(g.opponent || "")}</span><span class="result ${String(g.result||"").startsWith("W") ? "win" : ""}">${escapeHtml(g.result || "")}</span><span class="yards">YDS ${escapeHtml(g.yards || "—")}</span><span class="to">TO ${escapeHtml(g.turnovers || "—")}</span></div><div class="game-log-note">${escapeHtml(g.notes || "")}</div>`).join("");
+  }
+}
+
+function renderStatList(id, rows, situational=false) {
+  const el = document.getElementById(id);
+  if (!el || !Array.isArray(rows)) return;
+  el.innerHTML = rows.map(row => {
+    const label=row[0] || "", value=row[1] || "", note=row[2] || "";
+    return `<div><span>${escapeHtml(label)}${note ? `<small>${escapeHtml(note)}</small>` : ""}</span><b class="stat-value">${escapeHtml(value)}</b></div>`;
+  }).join("");
+}

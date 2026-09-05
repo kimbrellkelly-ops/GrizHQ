@@ -247,13 +247,37 @@
   </section>
 
   <section class="section tab-panel" id="stats" data-tab="stats">
-    <div class="section-head"><div class="eyebrow">NUMBERS</div><h2>Stats & Matchups</h2></div>
-    <div class="stat-cards">
-      <div><b>28</b><span>POINTS SCORED</span><small>vs. Southern Utah</small></div>
-      <div><b>510</b><span>YARDS ALLOWED</span><small>Week 1</small></div>
-      <div><b>+1</b><span>TURNOVER MARGIN</span><small>Week 1</small></div>
-      <div><b>1–0</b><span>RECORD</span><small>2026</small></div>
+    <div class="section-head"><div class="eyebrow">NUMBERS</div><h2>Stats & Matchups</h2><span id="stats-through">Through Week 1</span></div>
+    <div class="stat-cards" id="stats-summary"></div>
+
+    <div class="stats-two-col">
+      <div class="stats-panel">
+        <div class="stats-panel-head"><div><div class="eyebrow">ATTACK</div><h3>Griz Offense</h3></div><span>WEEK 1</span></div>
+        <div class="stats-list" id="stats-offense"></div>
+      </div>
+      <div class="stats-panel">
+        <div class="stats-panel-head"><div><div class="eyebrow">STOP UNIT</div><h3>Griz Defense</h3></div><span>WEEK 1</span></div>
+        <div class="stats-list" id="stats-defense"></div>
+      </div>
     </div>
+
+    <div class="stats-panel stats-leaders-panel">
+      <div class="stats-panel-head"><div><div class="eyebrow">PLAYER LEADERS</div><h3>Who's Producing?</h3></div><span>2026</span></div>
+      <div class="leader-grid" id="stats-leaders"></div>
+    </div>
+
+    <div class="stats-two-col">
+      <div class="stats-panel">
+        <div class="stats-panel-head"><div><div class="eyebrow">SITUATIONAL</div><h3>By the Numbers</h3></div></div>
+        <div class="stats-list" id="stats-situational"></div>
+      </div>
+      <div class="stats-panel">
+        <div class="stats-panel-head"><div><div class="eyebrow">GAME LOG</div><h3>2026 Results</h3></div></div>
+        <div class="game-log" id="stats-game-log"></div>
+      </div>
+    </div>
+
+    <div class="stats-note"><b>Built to update.</b> As new box scores are added, this dashboard can roll the numbers forward automatically instead of rebuilding the page.</div>
   </section>
 
   <section class="section tab-panel" id="media" data-tab="media"><div class="section-head"><div class="eyebrow">MEDIA & RESOURCES</div><h2>Griz Media Center</h2><span>Official • Media • Fan</span></div><div class="media-grid">
