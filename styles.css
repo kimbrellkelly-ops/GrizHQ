@@ -72,21 +72,56 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 @media(max-width:560px){.fcs-top20{grid-template-columns:1fr}.fcs-game{grid-template-columns:1fr 80px}.fcs-time{font-size:10px}.fcs-game .fcs-tv{display:none}}
 
 
-/* Dynamic Griz HQ game bar — premium header */
-.brand-row{height:148px;max-width:1600px;margin:auto;padding:16px 34px;display:grid;grid-template-columns:330px minmax(0,1fr) 86px;align-items:center;gap:28px;box-sizing:border-box;background:linear-gradient(90deg,rgba(16,17,20,.97),rgba(42,20,31,.94) 55%,rgba(105,0,55,.92)),url("hero.jpg") center 44%/cover no-repeat;position:relative}
-.brand-row:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.22),transparent 48%,rgba(107,0,56,.18));pointer-events:none}
-.griz-hq-logo{display:block;width:310px;height:124px;max-width:310px;max-height:124px;object-fit:contain;object-position:center;filter:drop-shadow(0 6px 10px rgba(0,0,0,.5))}
-.header-gamebar{min-width:0;min-height:98px;display:flex;flex-direction:column;justify-content:center;position:relative;border-left:1px solid rgba(255,255,255,.28);padding:8px 0 8px 34px;color:#fff}.header-gamebar-line{position:absolute;left:34px;top:0;width:54px;height:3px;background:#fff}
-.header-gamebar-kicker{font:900 12px/1 "Barlow Condensed";letter-spacing:3px;color:#d9d9d9;margin-bottom:8px}
-.header-gamebar-main{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
-.header-gamebar-main strong{font:900 34px/1 "Barlow Condensed";letter-spacing:1.5px;color:#fff}
-.header-gamebar-main span{font:800 13px/1.2 Inter;color:#e5e5e5;letter-spacing:.8px}
-.header-gamebar-meta{display:flex;align-items:center;gap:22px;margin-top:9px;font:700 10px/1.2 Inter;color:#cfcfcf;letter-spacing:1.2px}
-.header-gamebar-meta a{font:900 12px/1 "Barlow Condensed";letter-spacing:1px;color:var(--maroon)}
-.header-paw-image{height:52px;width:54px;border-left:1px solid #bbb;display:flex;align-items:center;justify-content:center;padding-left:10px}
-.header-paw-image img{width:36px;height:36px;object-fit:contain;display:block}
-@media(max-width:900px){.brand-row{height:128px;grid-template-columns:240px minmax(0,1fr) 68px;gap:16px;padding:14px 22px}.griz-hq-logo{width:225px;height:96px}.header-gamebar{padding-left:22px}.header-gamebar-line{left:22px}.header-gamebar-main strong{font-size:24px}.header-gamebar-meta{font-size:9px}}
-@media(max-width:700px){.brand-row{height:96px;min-height:96px;padding:8px 16px;grid-template-columns:1fr auto;gap:10px}.griz-hq-logo{width:205px;height:76px}.header-gamebar{display:none}.brand-right{border-left:0;padding-left:0}.header-paw-image{display:none}}
+/* Dynamic Griz HQ game bar — premium sports-site header */
+.brand-row{
+  height:218px;max-width:none;margin:0;padding:18px 40px;box-sizing:border-box;
+  display:grid;grid-template-columns:minmax(330px,1.05fr) minmax(430px,1.35fr) minmax(250px,.8fr);
+  align-items:center;gap:24px;position:relative;overflow:hidden;color:#fff;
+  background-image:linear-gradient(90deg,rgba(10,12,15,.97) 0%,rgba(22,18,22,.88) 38%,rgba(54,17,35,.78) 70%,rgba(107,0,56,.95) 100%),url("hero.jpg");
+  background-position:center 42%;background-size:cover;
+  border-bottom:4px solid #73003b;
+}
+.brand-row:before{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 0 42%,rgba(255,255,255,.08) 42.2%,transparent 42.7%),linear-gradient(90deg,transparent 62%,rgba(107,0,56,.25) 100%);pointer-events:none}
+.brand-row:after{content:"";position:absolute;right:-100px;top:-120px;width:520px;height:420px;background:rgba(107,0,56,.28);transform:rotate(13deg);pointer-events:none}
+.header-brand-block,.header-matchup,.header-go-block{position:relative;z-index:2}
+.header-brand-block{height:100%;display:flex;align-items:center}
+.griz-hq-logo{display:block;width:min(390px,100%);height:170px;max-width:390px;max-height:170px;object-fit:contain;object-position:left center;filter:drop-shadow(0 8px 12px rgba(0,0,0,.62))}
+.header-matchup{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border-left:1px solid rgba(255,255,255,.28);border-right:1px solid rgba(255,255,255,.2);min-height:170px;padding:0 24px}
+.header-matchup-kicker{display:flex;align-items:center;gap:12px;font:900 12px/1 "Barlow Condensed";letter-spacing:3px;color:#fff;margin-bottom:8px}
+.header-matchup-kicker span{display:block;width:42px;height:2px;background:#a64d72}
+.header-matchup-teams{display:flex;align-items:center;justify-content:center;gap:24px;width:100%}
+.header-team{display:flex;align-items:center;gap:10px;min-width:150px}
+.header-team-home{justify-content:flex-end}
+.header-team-away{justify-content:flex-start}
+.header-team img{width:58px;height:58px;object-fit:contain;filter:drop-shadow(0 3px 5px rgba(0,0,0,.55))}
+.header-team strong{font:900 25px/1 "Barlow Condensed";letter-spacing:1.2px;color:#fff}
+.header-vs{font:900 17px/1 "Barlow Condensed";letter-spacing:2px;color:#ddd}
+.header-gamebar-date{font:900 14px/1 "Barlow Condensed";letter-spacing:1.8px;color:#fff;margin-top:9px}
+.header-gamebar-venue{font:700 9px/1.2 Inter,sans-serif;letter-spacing:1.4px;color:#d6d6d8;margin-top:6px}
+.header-go-block{height:100%;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;position:relative}
+.header-pride{font:900 10px/1.45 Inter,sans-serif;letter-spacing:3px;text-align:right;color:#fff;margin-bottom:10px;opacity:.9}
+.header-go-griz{font:900 62px/.82 "Barlow Condensed",sans-serif;letter-spacing:1px;color:#fff;text-decoration:none;white-space:nowrap;text-shadow:0 4px 8px rgba(0,0,0,.35);font-style:italic}
+.header-go-griz:hover{text-decoration:underline}
+.header-paw-image{position:absolute;right:-2px;bottom:0;height:42px;width:48px;display:flex;align-items:center;justify-content:center;opacity:.95}
+.header-paw-image img{width:34px;height:34px;object-fit:contain;display:block;filter:brightness(0) invert(1)}
+@media(max-width:1100px){
+  .brand-row{height:190px;padding:15px 24px;grid-template-columns:270px minmax(390px,1fr) 190px;gap:16px}
+  .griz-hq-logo{width:265px;height:140px}
+  .header-team{min-width:125px}.header-team strong{font-size:21px}.header-team img{width:50px;height:50px}
+  .header-go-griz{font-size:52px}.header-pride{font-size:8px;letter-spacing:2px}
+}
+@media(max-width:800px){
+  .brand-row{height:150px;padding:10px 16px;grid-template-columns:220px 1fr;gap:10px}
+  .header-brand-block{grid-row:1}.griz-hq-logo{width:215px;height:120px}
+  .header-matchup{border-right:0;min-height:125px;padding:0 10px}
+  .header-team{min-width:0;gap:6px}.header-team strong{font-size:17px}.header-team img{width:40px;height:40px}.header-vs{font-size:13px}.header-matchup-kicker{font-size:10px;letter-spacing:2px}.header-matchup-kicker span{width:24px}
+  .header-gamebar-date{font-size:11px}.header-gamebar-venue{font-size:7px}
+  .header-go-block{display:none}
+}
+@media(max-width:520px){
+  .brand-row{height:112px;grid-template-columns:145px 1fr;padding:7px 12px}.griz-hq-logo{width:145px;height:94px}
+  .header-matchup{min-height:96px;padding:0 5px}.header-matchup-teams{gap:8px}.header-team strong{font-size:14px}.header-team img{width:30px;height:30px}.header-vs{font-size:10px}.header-matchup-kicker{margin-bottom:4px;font-size:8px}.header-matchup-kicker span{width:16px}.header-gamebar-date{font-size:9px;margin-top:5px}.header-gamebar-venue{font-size:6px;margin-top:3px;letter-spacing:.8px}
+}
 
 /* Griz HQ tabbed navigation */
 .tab-panel{display:none!important}
