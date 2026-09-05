@@ -633,3 +633,25 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   z-index:6 !important;
   text-shadow:0 2px 4px rgba(0,0,0,.55) !important;
 }
+
+/* ===== GO GRIZ: TRUE TRANSPARENT ART ===== */
+.header-go-block{
+  background:transparent !important;
+  overflow:hidden !important;
+}
+.header-go-block::before{
+  background:linear-gradient(125deg,transparent 0 8%,rgba(107,0,56,.34) 35%,rgba(107,0,56,.68) 100%) !important;
+}
+.header-go-griz{
+  height:245px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+.header-go-griz img{
+  width:340px !important;
+  height:235px !important;
+  object-fit:contain !important;
+  background:transparent !important;
+  filter:drop-shadow(0 4px 5px rgba(0,0,0,.32)) !important;
+}
