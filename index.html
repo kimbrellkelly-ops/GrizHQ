@@ -12,6 +12,11 @@
 .tab-panel{display:none!important}
 .tab-panel.is-active{display:block!important}
 .hero.tab-panel.is-active{display:grid!important}
+.header-gamebar{position:relative;padding-right:175px}
+.header-go-griz{position:absolute;right:20px;top:50%;transform:translateY(-50%);font:900 42px/0.9 "Barlow Condensed",sans-serif;letter-spacing:1px;color:#6b0038;text-decoration:none;white-space:nowrap}
+.header-go-griz:hover{text-decoration:underline}
+@media(max-width:900px){.header-gamebar{padding-right:145px}.header-go-griz{right:12px;font-size:34px}}
+@media(max-width:700px){.header-gamebar{padding-right:0}.header-go-griz{display:none}}
 </style>
 </head>
 <body>
@@ -27,7 +32,8 @@
         <strong id="header-gamebar-opponent">DRAKE</strong>
         <span id="header-gamebar-date">SAT • SEP 5 • 1:00 PM MT</span>
       </div>
-      <div class="header-gamebar-meta"><span id="header-gamebar-venue">WASHINGTON-GRIZZLY STADIUM</span><a href="https://gogriz.com/" target="_blank" rel="noopener">GO GRIZ ↗</a></div>
+      <div class="header-gamebar-meta"><span id="header-gamebar-venue">WASHINGTON-GRIZZLY STADIUM</span></div>
+      <a class="header-go-griz" href="https://gogriz.com/" target="_blank" rel="noopener" aria-label="Go Griz">GO GRIZ</a>
     </div>
     <div class="brand-right">
       <div class="header-paw-image" aria-hidden="true">
