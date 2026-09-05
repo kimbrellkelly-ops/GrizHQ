@@ -173,3 +173,81 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .leader-more{margin-top:12px;padding-top:10px;border-top:1px solid #eee;display:grid;gap:2px}.leader-more b{font-size:12px}.leader-more span{font-size:11px;color:#777;line-height:1.3}
 .game-log-row{grid-template-columns:60px 1fr 95px 120px 70px}
 @media(max-width:700px){.game-log-row{grid-template-columns:50px 1fr 78px}.game-log-row .yards{display:none}.game-log-row .to{display:none}}
+
+
+/* Final header polish — closely matches the Griz HQ visual mockup */
+.brand-row{
+  height:330px;
+  padding:22px 42px 18px;
+  grid-template-columns:minmax(390px,1.15fr) minmax(500px,1.25fr) minmax(300px,.75fr);
+  gap:0;
+  background-position:center 48%;
+  background-size:cover;
+}
+.brand-row:after{
+  right:-40px;top:-80px;width:620px;height:520px;
+  background:linear-gradient(135deg,rgba(107,0,56,.05),rgba(107,0,56,.55));
+}
+.header-brand-block{padding-right:18px}
+.griz-hq-logo{
+  width:min(500px,100%);height:255px;max-width:500px;max-height:255px;
+  object-fit:contain;object-position:left center;
+  filter:drop-shadow(0 9px 12px rgba(0,0,0,.7));
+}
+.header-matchup{
+  min-height:255px;padding:0 34px;
+  border-left:1px solid rgba(255,255,255,.35);
+  border-right:1px solid rgba(255,255,255,.28);
+}
+.header-matchup-kicker{font-size:14px;letter-spacing:4px;margin-bottom:14px}
+.header-matchup-kicker span{width:58px;height:2px}
+.header-matchup-teams{gap:22px}
+.header-team{min-width:175px;gap:12px}
+.header-team img{width:72px;height:72px}
+.header-team strong{font-size:31px;letter-spacing:1.5px}
+.header-vs{font-size:19px}
+.header-gamebar-date{font-size:17px;letter-spacing:2px;margin-top:13px}
+.header-gamebar-venue{font-size:10px;letter-spacing:1.8px;margin-top:8px}
+.header-go-block{
+  align-items:center;justify-content:center;padding-left:28px;
+}
+.header-pride{font-size:11px;letter-spacing:3.5px;text-align:center;margin-bottom:16px}
+.header-go-griz{
+  position:static;transform:none;
+  font-size:78px;line-height:.8;letter-spacing:1px;
+  color:#fff;
+  text-align:center;
+  text-shadow:0 5px 10px rgba(0,0,0,.45);
+}
+.header-paw-image{right:0;bottom:-2px;width:52px;height:50px}
+.header-paw-image img{width:40px;height:40px}
+.nav{height:62px;padding:0 max(34px,calc((100% - 1500px)/2));gap:34px}
+.nav a{font-size:15px;padding:21px 0 16px}
+.social,.go-griz-nav{display:none!important}
+@media(max-width:1200px){
+  .brand-row{height:285px;padding:18px 28px;grid-template-columns:minmax(315px,1fr) minmax(440px,1.35fr) minmax(230px,.7fr)}
+  .griz-hq-logo{width:400px;height:220px}
+  .header-matchup{min-height:220px;padding:0 20px}
+  .header-team{min-width:145px}.header-team strong{font-size:25px}.header-team img{width:62px;height:62px}
+  .header-go-griz{font-size:64px}.header-pride{font-size:9px}
+  .nav{gap:25px}
+}
+@media(max-width:850px){
+  .brand-row{height:215px;padding:14px 18px;grid-template-columns:250px 1fr;gap:12px}
+  .griz-hq-logo{width:245px;height:180px}
+  .header-matchup{min-height:185px;padding:0 10px}
+  .header-matchup-kicker{font-size:10px;letter-spacing:2.5px}.header-matchup-kicker span{width:30px}
+  .header-team{min-width:0;gap:7px}.header-team strong{font-size:19px}.header-team img{width:48px;height:48px}
+  .header-gamebar-date{font-size:12px}.header-gamebar-venue{font-size:8px}
+  .header-go-block{display:none}
+  .nav{height:54px;gap:20px;padding:0 18px}.nav a{font-size:13px;padding:18px 0 14px}
+}
+@media(max-width:520px){
+  .brand-row{height:135px;grid-template-columns:150px 1fr;padding:8px 12px;gap:5px}
+  .griz-hq-logo{width:148px;height:116px}
+  .header-matchup{min-height:115px;padding:0 3px}
+  .header-matchup-teams{gap:5px}.header-team strong{font-size:13px}.header-team img{width:30px;height:30px}.header-vs{font-size:9px}
+  .header-matchup-kicker{font-size:7px;letter-spacing:1.5px;margin-bottom:3px}.header-matchup-kicker span{width:14px}
+  .header-gamebar-date{font-size:8px;margin-top:4px}.header-gamebar-venue{font-size:6px;margin-top:2px}
+  .nav{height:48px;gap:18px}.nav a{font-size:11px;padding:16px 0 12px}
+}
