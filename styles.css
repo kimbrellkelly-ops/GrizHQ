@@ -935,3 +935,15 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
     padding-top: 16px !important;
   }
 }
+
+
+/* GO GRIZ artwork already includes the slogan */
+.header-pride {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+  .header-pride {
+    display: none !important;
+  }
+}
