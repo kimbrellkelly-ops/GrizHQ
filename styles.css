@@ -1719,3 +1719,7 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
     min-width: 390px !important;
   }
 }
+
+
+/* Final duplicate-slogan fix: the Go Griz artwork already contains the slogan. */
+.header-pride{display:none !important;}
