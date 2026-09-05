@@ -251,3 +251,73 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   .header-gamebar-date{font-size:8px;margin-top:4px}.header-gamebar-venue{font-size:6px;margin-top:2px}
   .nav{height:48px;gap:18px}.nav a{font-size:11px;padding:16px 0 12px}
 }
+
+
+/* Final mockup-match header polish */
+.brand-row{
+  height:335px;
+  max-width:none;
+  padding:18px 42px 14px;
+  grid-template-columns:minmax(500px,1.02fr) minmax(520px,1.04fr) minmax(360px,.78fr);
+  gap:18px;
+  background-image:
+    linear-gradient(90deg,rgba(7,10,14,.90) 0%,rgba(12,18,24,.76) 37%,rgba(28,20,28,.72) 63%,rgba(107,0,56,.91) 100%),
+    url("mountain-bg.jpg");
+  background-position:center;
+  background-size:cover;
+}
+.brand-row:before{background:linear-gradient(105deg,transparent 0 38%,rgba(255,255,255,.08) 38.2%,transparent 38.7%),linear-gradient(90deg,transparent 62%,rgba(107,0,56,.20) 100%)}
+.brand-row:after{right:-40px;top:-80px;width:620px;height:460px;background:rgba(107,0,56,.20)}
+.header-brand-block{justify-content:center}
+.griz-hq-logo{
+  width:min(610px,100%);
+  height:275px;
+  max-width:610px;
+  max-height:275px;
+  object-position:center;
+  filter:drop-shadow(0 10px 13px rgba(0,0,0,.70));
+}
+.header-matchup{min-height:285px;padding:0 20px;border-left:1px solid rgba(255,255,255,.32);border-right:1px solid rgba(255,255,255,.26)}
+.header-matchup-kicker{font-size:15px;letter-spacing:4px;gap:16px;margin-bottom:12px}
+.header-matchup-kicker span{width:62px;height:2px}
+.header-matchup-teams{gap:20px}
+.header-team{min-width:185px;gap:13px}
+.header-team img{width:82px;height:82px}
+.header-team strong{font-size:32px;letter-spacing:1.5px}
+.header-vs{font-size:18px;letter-spacing:3px}
+.header-gamebar-date{font-size:18px;letter-spacing:2.4px;margin-top:13px}
+.header-gamebar-venue{font-size:11px;letter-spacing:2px;margin-top:8px}
+.header-go-block{padding-right:26px}
+.header-pride{font-size:13px;line-height:1.55;letter-spacing:3.5px;margin-bottom:18px}
+.header-go-griz{font-size:98px;line-height:.78;letter-spacing:0;text-shadow:0 5px 10px rgba(0,0,0,.45);transform:rotate(-2deg)}
+.header-paw-image{right:2px;bottom:0;width:62px;height:58px}
+.header-paw-image img{width:46px;height:46px}
+.nav{height:78px;padding:0 max(34px,calc((100% - 1940px)/2));gap:43px}
+.nav a{font-size:18px;padding:27px 0 21px}
+.social,.go-griz-nav{display:none!important}
+@media(max-width:1250px){
+ .brand-row{height:305px;padding:16px 28px;grid-template-columns:minmax(390px,1fr) minmax(470px,1.15fr) minmax(260px,.7fr)}
+ .griz-hq-logo{width:470px;height:245px}
+ .header-matchup{min-height:255px}.header-team{min-width:155px}.header-team strong{font-size:27px}.header-team img{width:68px;height:68px}.header-go-griz{font-size:78px}.header-pride{font-size:10px}
+ .nav{gap:28px}.nav a{font-size:16px}
+}
+@media(max-width:850px){
+ .brand-row{height:215px;padding:14px 18px;grid-template-columns:250px 1fr;gap:12px;background-position:center}
+ .griz-hq-logo{width:245px;height:180px}.header-matchup{min-height:185px;padding:0 10px}
+ .header-matchup-kicker{font-size:10px;letter-spacing:2.5px}.header-matchup-kicker span{width:30px}.header-team{min-width:0;gap:7px}.header-team strong{font-size:19px}.header-team img{width:48px;height:48px}.header-gamebar-date{font-size:12px}.header-gamebar-venue{font-size:8px}.header-go-block{display:none}
+ .nav{height:54px;gap:20px;padding:0 18px}.nav a{font-size:13px;padding:18px 0 14px}
+}
+@media(max-width:520px){
+ .brand-row{height:135px;grid-template-columns:150px 1fr;padding:8px 12px;gap:5px}.griz-hq-logo{width:148px;height:116px}.header-matchup{min-height:115px;padding:0 3px}.header-matchup-teams{gap:5px}.header-team strong{font-size:13px}.header-team img{width:30px;height:30px}.header-vs{font-size:9px}.header-matchup-kicker{font-size:7px;letter-spacing:1.5px;margin-bottom:3px}.header-matchup-kicker span{width:14px}.header-gamebar-date{font-size:8px;margin-top:4px}.header-gamebar-venue{font-size:6px;margin-top:2px;letter-spacing:.8px}.nav{height:48px;gap:18px}.nav a{font-size:11px;padding:16px 0 12px}
+}
+
+
+/* GO GRIZ graphic — final mockup treatment */
+.header-go-block{position:relative;overflow:hidden;padding:10px 0 34px 28px;}
+.header-pride{position:relative;z-index:2;margin-bottom:8px;}
+.header-go-griz{display:flex;align-items:center;justify-content:center;width:100%;height:205px;text-decoration:none!important;}
+.header-go-griz img{display:block;width:min(300px,100%);height:205px;object-fit:contain;object-position:center;filter:drop-shadow(0 5px 8px rgba(0,0,0,.35));}
+.header-go-griz:hover img{transform:scale(1.025);}
+.header-paw-image{display:none!important;}
+@media(max-width:1200px){.header-go-griz{height:170px}.header-go-griz img{height:170px;width:240px}}
+@media(max-width:850px){.header-go-block{display:none}}
