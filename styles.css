@@ -1019,3 +1019,703 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
     padding-top: 17px !important;
   }
 }
+
+
+/* =========================================================
+   GRIZ HQ — COMPLETE MOBILE TAB POLISH
+   Desktop remains unchanged.
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* Global phone spacing */
+  main {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .section {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 28px 14px 36px !important;
+    margin: 0 !important;
+  }
+
+  .section-head {
+    display: block !important;
+    margin-bottom: 18px !important;
+  }
+
+  .section-head .eyebrow {
+    margin-bottom: 6px !important;
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+  }
+
+  .section-head h2 {
+    font-size: clamp(30px, 8.5vw, 42px) !important;
+    line-height: .95 !important;
+    margin: 0 0 7px !important;
+  }
+
+  .section-head > span {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+    color: #777 !important;
+  }
+
+  /* Buttons become full-width or comfortable tap targets */
+  .button {
+    min-height: 46px !important;
+    box-sizing: border-box !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 12px 16px !important;
+    font-size: 12px !important;
+    letter-spacing: 1px !important;
+  }
+
+  /* ---------------- HOME ---------------- */
+  .hero {
+    display: block !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+  .hero-photo {
+    min-height: 520px !important;
+    height: 72vh !important;
+    max-height: 640px !important;
+    background-position: 58% center !important;
+    background-size: cover !important;
+  }
+
+  .hero-copy {
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    padding: 28px 22px 22px !important;
+  }
+
+  .hero-copy .eyebrow {
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(42px, 12vw, 64px) !important;
+    line-height: .88 !important;
+    margin: 0 0 22px !important;
+    max-width: 100% !important;
+  }
+
+  .hero-buttons {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 9px !important;
+    align-items: stretch !important;
+  }
+
+  .hero-buttons .button {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .hero-buttons .go-griz-button {
+    grid-column: 1 / -1 !important;
+  }
+
+  /* Home's next game/rankings panels */
+  .next-game,
+  .rankings {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+  }
+
+  .next-game {
+    padding: 28px 18px !important;
+    text-align: center !important;
+  }
+
+  .next-game .matchup {
+    gap: 16px !important;
+    margin: 20px 0 !important;
+  }
+
+  .next-game .team img {
+    width: 55px !important;
+    height: 55px !important;
+  }
+
+  .next-game .team b {
+    font-size: 12px !important;
+  }
+
+  .rankings {
+    padding: 24px 14px !important;
+    overflow: hidden !important;
+  }
+
+  .rank-columns {
+    grid-template-columns: 1fr 1fr !important;
+    min-width: 0 !important;
+  }
+
+  .rank-columns ol {
+    min-width: 0 !important;
+    padding-left: 25px !important;
+  }
+
+  .rank-columns li {
+    font-size: 11px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* ---------------- GAME ---------------- */
+  .opponent-card,
+  .game-grid {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .opponent-card {
+    padding: 20px !important;
+  }
+
+  .opponent-card h3 {
+    font-size: 28px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .opponent-card p {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  .opponent-links {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    margin-top: 18px !important;
+  }
+
+  .opponent-links a {
+    min-height: 60px !important;
+    padding: 13px 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  .game-grid > * {
+    min-width: 0 !important;
+  }
+
+  /* ---------------- SCORES ---------------- */
+  .fcs-tools {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 9px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .fcs-tools label,
+  .bigsky-tools label {
+    width: 100% !important;
+  }
+
+  .fcs-tools select,
+  .bigsky-tools select {
+    width: 100% !important;
+    min-height: 46px !important;
+    box-sizing: border-box !important;
+    font-size: 13px !important;
+  }
+
+  .fcs-tools .button {
+    width: 100% !important;
+  }
+
+  .fcs-status {
+    display: block !important;
+    font-size: 10px !important;
+    line-height: 1.35 !important;
+  }
+
+  .fcs-topbar,
+  .fcs-all-head {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 7px !important;
+    padding: 15px 14px !important;
+    margin-top: 18px !important;
+  }
+
+  .fcs-topbar a {
+    font-size: 10px !important;
+  }
+
+  .fcs-top20 {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  .fcs-rank-card {
+    min-width: 0 !important;
+    grid-template-columns: 34px 1fr auto !important;
+    padding: 13px 12px !important;
+  }
+
+  .fcs-rank-team {
+    min-width: 0 !important;
+  }
+
+  .fcs-rank-team b {
+    font-size: 12px !important;
+  }
+
+  .fcs-rank-team small {
+    display: block !important;
+    font-size: 9px !important;
+    line-height: 1.3 !important;
+    white-space: normal !important;
+  }
+
+  .fcs-rank-score {
+    font-size: 11px !important;
+    text-align: right !important;
+  }
+
+  .fcs-games {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .fcs-game {
+    grid-template-columns: 54px minmax(0,1fr) 62px !important;
+    gap: 8px !important;
+    padding: 13px 10px !important;
+  }
+
+  .fcs-time {
+    font-size: 9px !important;
+    line-height: 1.2 !important;
+  }
+
+  .fcs-matchup {
+    min-width: 0 !important;
+  }
+
+  .fcs-matchup b {
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    display: block !important;
+  }
+
+  .fcs-matchup small {
+    font-size: 9px !important;
+    line-height: 1.3 !important;
+  }
+
+  .fcs-score {
+    font-size: 10px !important;
+  }
+
+  .fcs-tv {
+    display: none !important;
+  }
+
+  /* ---------------- SCHEDULE ---------------- */
+  .bigsky-tools {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 9px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .bigsky-table {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-radius: 0 !important;
+  }
+
+  .bigsky-row {
+    min-width: 560px !important;
+  }
+
+  .schedule {
+    width: 100% !important;
+  }
+
+  .schedule-row {
+    grid-template-columns: 68px minmax(130px,1fr) 92px !important;
+    gap: 7px !important;
+    padding: 13px 9px !important;
+  }
+
+  .schedule-row span,
+  .schedule-row b,
+  .schedule-row strong {
+    font-size: 10px !important;
+  }
+
+  .schedule-source {
+    font-size: 10px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* ---------------- RANKINGS ---------------- */
+  .full-polls {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .full-polls > div {
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .full-polls h3 {
+    font-size: 12px !important;
+    padding: 13px 12px !important;
+  }
+
+  .full-polls ol {
+    padding: 7px 10px 7px 32px !important;
+    margin: 0 !important;
+  }
+
+  .full-polls li {
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    padding: 8px 3px !important;
+  }
+
+  /* ---------------- ROSTER ---------------- */
+  .roster-actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 9px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .roster-actions .button {
+    width: 100% !important;
+  }
+
+  .depth-note {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    padding: 14px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .depth-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .depth-card {
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .depth-title {
+    font-size: 13px !important;
+    padding: 12px 13px !important;
+  }
+
+  .depth-table {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .depth-head,
+  .depth-row {
+    min-width: 410px !important;
+    grid-template-columns: 48px 1fr 1fr !important;
+    gap: 8px !important;
+    padding: 9px 10px !important;
+  }
+
+  .depth-head {
+    font-size: 8px !important;
+  }
+
+  .depth-row {
+    font-size: 10px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* ---------------- STATS ---------------- */
+  .stat-cards {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  .stat-card {
+    min-width: 0 !important;
+    padding: 15px 12px !important;
+  }
+
+  .stat-card b {
+    font-size: 32px !important;
+  }
+
+  .stat-card span {
+    font-size: 9px !important;
+  }
+
+  .stats-two-col {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .stats-panel {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin-top: 12px !important;
+  }
+
+  .stats-panel-head {
+    padding: 15px !important;
+  }
+
+  .stats-panel-head h3 {
+    font-size: 21px !important;
+  }
+
+  .stats-panel-head > span {
+    font-size: 9px !important;
+  }
+
+  .stats-list {
+    padding: 2px 14px 8px !important;
+  }
+
+  .stats-list > div {
+    grid-template-columns: minmax(0,1fr) auto !important;
+    gap: 10px !important;
+    padding: 11px 0 !important;
+  }
+
+  .stats-list b,
+  .stats-list strong,
+  .stats-list .stat-value {
+    font-size: 14px !important;
+  }
+
+  .stats-list span {
+    font-size: 11px !important;
+  }
+
+  .stats-list small {
+    font-size: 9px !important;
+  }
+
+  .leader-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .leader-card {
+    min-height: 0 !important;
+    padding: 16px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid #ddd !important;
+  }
+
+  .leader-card:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .leader-card h4 {
+    font-size: 18px !important;
+  }
+
+  .game-log {
+    padding: 0 14px 8px !important;
+    overflow-x: auto !important;
+  }
+
+  .game-log-row {
+    min-width: 360px !important;
+    grid-template-columns: 48px minmax(120px,1fr) 72px !important;
+    gap: 8px !important;
+    padding: 12px 0 !important;
+  }
+
+  .game-log-row .yards,
+  .game-log-row .to {
+    display: none !important;
+  }
+
+  .stats-note {
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+    padding: 13px 14px !important;
+  }
+
+  /* ---------------- MEDIA ---------------- */
+  .media-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .media-grid > * {
+    min-width: 0 !important;
+  }
+
+  .media-card,
+  .media-item {
+    min-height: 0 !important;
+    padding: 16px !important;
+  }
+
+  .media-card h3,
+  .media-item h3 {
+    font-size: 18px !important;
+  }
+
+  .media-card p,
+  .media-item p {
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+  }
+
+  iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* ---------------- NEWS ---------------- */
+  .news-row {
+    display: grid !important;
+    grid-template-columns: 70px minmax(0,1fr) !important;
+    gap: 12px !important;
+    padding: 14px 0 !important;
+  }
+
+  .news-row .thumb {
+    width: 70px !important;
+    height: 54px !important;
+  }
+
+  .news-row h3,
+  .news-row b {
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+  }
+
+  .news-row p,
+  .news-row span {
+    font-size: 10px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* ---------------- HISTORY ---------------- */
+  .history-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  .history-stat {
+    min-width: 0 !important;
+    padding: 16px 11px !important;
+  }
+
+  .history-stat b {
+    font-size: 34px !important;
+  }
+
+  .history-stat span {
+    font-size: 9px !important;
+    line-height: 1.25 !important;
+  }
+
+  .history-stat small {
+    font-size: 9px !important;
+  }
+
+  .history {
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+  }
+
+}
+
+/* Extra-small phones */
+@media (max-width: 430px) {
+
+  .section {
+    padding: 24px 11px 32px !important;
+  }
+
+  .section-head h2 {
+    font-size: 30px !important;
+  }
+
+  .hero-photo {
+    min-height: 480px !important;
+    height: 68vh !important;
+  }
+
+  .hero-copy {
+    padding: 22px 16px 17px !important;
+  }
+
+  .hero-copy h1 {
+    font-size: 41px !important;
+  }
+
+  .hero-buttons {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-buttons .go-griz-button {
+    grid-column: auto !important;
+  }
+
+  .stat-cards {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .history-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .fcs-game {
+    grid-template-columns: 49px minmax(0,1fr) 57px !important;
+    gap: 6px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .fcs-matchup b {
+    font-size: 10px !important;
+  }
+
+  .fcs-rank-card {
+    grid-template-columns: 30px minmax(0,1fr) auto !important;
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+  }
+
+  .depth-head,
+  .depth-row {
+    min-width: 390px !important;
+  }
+}
