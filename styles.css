@@ -604,3 +604,31 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   object-position:center !important;
   filter:drop-shadow(0 5px 8px rgba(0,0,0,.42)) !important;
 }
+
+/* ===== GO GRIZ TRANSPARENT ARTWORK ===== */
+.header-go-block{
+  background:transparent !important;
+  overflow:hidden !important;
+}
+.header-go-block::before{
+  background:linear-gradient(125deg,transparent 0 12%,rgba(107,0,56,.62) 32%,rgba(107,0,56,.76) 100%) !important;
+  clip-path:polygon(24% 0,100% 0,100% 100%,0 100%,13% 50%) !important;
+}
+.header-go-griz{
+  height:250px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+.header-go-griz img{
+  width:350px !important;
+  height:235px !important;
+  object-fit:contain !important;
+  background:transparent !important;
+  mix-blend-mode:normal !important;
+  filter:drop-shadow(0 5px 7px rgba(0,0,0,.40)) !important;
+}
+.header-pride{
+  color:#fff !important;
+  text-shadow:0 2px 4px rgba(0,0,0,.45) !important;
+}
