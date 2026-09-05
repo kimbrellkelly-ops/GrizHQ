@@ -341,3 +341,17 @@ function renderStatList(id, rows, situational=false) {
     return `<div><span>${escapeHtml(label)}${note ? `<small>${escapeHtml(note)}</small>` : ""}</span><b class="stat-value">${escapeHtml(value)}</b></div>`;
   }).join("");
 }
+
+
+// Griz HQ automatic data refresh: GitHub Actions updates data.json, and the
+// browser checks the site data periodically so game results/next opponent/etc.
+// appear without requiring the visitor to manually reload the page.
+setInterval(async () => {
+  try {
+    await loadGrizData();
+    await renderBigSkyAndOpponent();
+    await renderFCSScoreboard();
+  } catch (e) {
+    console.warn("Automatic Griz HQ refresh failed", e);
+  }
+}, 5 * 60 * 1000);
