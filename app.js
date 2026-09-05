@@ -270,9 +270,21 @@ async function renderFCSScoreboard(){
     gamesEl.innerHTML='<div class="fcs-loading">Loading FCS games…</div>';
     try{
       const startDate=w[0].replace(/-/g,''); const endDate=w[1].replace(/-/g,'');
-      const url=`https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${startDate}-${endDate}&groups=81&limit=500`;
-      const res=await fetch(url,{cache:'no-store'}); if(!res.ok) throw new Error('ESPN '+res.status);
-      const payload=await res.json(); const events=Array.isArray(payload.events)?payload.events:[];
+      const urls=[
+        `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${startDate}-${endDate}&groups=81&limit=500`,
+        `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${startDate}-${endDate}&groups=81&limit=500`
+      ];
+      let payload=null, lastError=null;
+      for(const url of urls){
+        try{
+          const res=await fetch(url,{cache:'no-store',mode:'cors'});
+          if(!res.ok) throw new Error('ESPN '+res.status);
+          payload=await res.json();
+          if(payload) break;
+        }catch(err){ lastError=err; }
+      }
+      if(!payload) throw lastError || new Error('ESPN scoreboard unavailable');
+      const events=Array.isArray(payload.events)?payload.events:[];
       statusEl.textContent=`${events.length} FCS games • live data`;
       labelEl.textContent=w[2];
 

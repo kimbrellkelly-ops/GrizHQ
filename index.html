@@ -5,8 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Griz HQ | Montana Football</title>
   <meta name="description" content="Griz HQ — a fan-built Montana Grizzlies football information hub.">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260905-tabs2">
+  <script src="app.js?v=20260905-tabs2" defer></script>
+
+<style id="griz-tabs-critical">
+.tab-panel{display:none!important}
+.tab-panel.is-active{display:block!important}
+.hero.tab-panel.is-active{display:grid!important}
+</style>
 </head>
 <body>
 
@@ -280,5 +286,28 @@
   <small>Fan-built and independent. Not affiliated with or endorsed by the University of Montana.</small>
 </footer>
 
+
+<script>
+(function(){
+  function initGrizTabs(){
+    const panels=[...document.querySelectorAll('.tab-panel')];
+    const links=[...document.querySelectorAll('[data-tab-link]')];
+    if(!panels.length||!links.length)return;
+    const activate=(tab,hash=true)=>{
+      const valid=links.some(a=>a.dataset.tabLink===tab)?tab:'home';
+      panels.forEach(p=>p.classList.toggle('is-active',p.dataset.tab===valid));
+      links.forEach(a=>{const on=a.dataset.tabLink===valid;a.classList.toggle('active',on);on?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current');});
+      if(hash) history.replaceState(null,'','#'+(valid==='scores'?'fcs-scores':valid==='game'?'drake':valid));
+      window.scrollTo(0,0);
+    };
+    links.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();activate(a.dataset.tabLink,true);}));
+    const raw=location.hash.slice(1);
+    const first=links.find(a=>a.getAttribute('href')==='#'+raw||a.dataset.tabLink===raw);
+    activate(first?first.dataset.tabLink:'home',false);
+    window.addEventListener('hashchange',()=>{const h=location.hash.slice(1);const a=links.find(x=>x.getAttribute('href')==='#'+h||x.dataset.tabLink===h);activate(a?a.dataset.tabLink:'home',false);});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initGrizTabs);else initGrizTabs();
+})();
+</script>
 </body>
 </html>
