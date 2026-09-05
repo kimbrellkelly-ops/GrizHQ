@@ -269,7 +269,8 @@ async function renderFCSScoreboard(){
     statusEl.textContent='Loading FCS scores…';
     gamesEl.innerHTML='<div class="fcs-loading">Loading FCS games…</div>';
     try{
-      const url=`https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=500`;
+      const startDate=w[0].replace(/-/g,''); const endDate=w[1].replace(/-/g,'');
+      const url=`https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${startDate}-${endDate}&groups=81&limit=500`;
       const res=await fetch(url,{cache:'no-store'}); if(!res.ok) throw new Error('ESPN '+res.status);
       const payload=await res.json(); const events=Array.isArray(payload.events)?payload.events:[];
       statusEl.textContent=`${events.length} FCS games • live data`;
@@ -294,8 +295,8 @@ async function renderFCSScoreboard(){
       }).join('');
       gamesEl.innerHTML=rows;
     }catch(e){
-      statusEl.textContent='Live score feed unavailable';
-      gamesEl.innerHTML='<div class="fcs-empty"><b>Could not load live FCS scores right now.</b><br>The Top 20 is still available. Use Refresh Scores to try again.</div>';
+      statusEl.textContent='Score feed temporarily unavailable';
+      gamesEl.innerHTML='<div class="fcs-empty"><b>Could not load FCS scores right now.</b><br>The Top 20 is still available. Use Refresh Scores to try again.</div>';
       console.warn('FCS scoreboard error',e);
     }
   }
