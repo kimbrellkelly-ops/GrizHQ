@@ -321,3 +321,118 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .header-paw-image{display:none!important;}
 @media(max-width:1200px){.header-go-griz{height:170px}.header-go-griz img{height:170px;width:240px}}
 @media(max-width:850px){.header-go-block{display:none}}
+
+
+/* Final header correction — match the approved mockup more closely */
+.brand-row{
+  height:335px !important;
+  padding:18px 38px 14px !important;
+  grid-template-columns:minmax(520px,1.08fr) minmax(520px,1.08fr) minmax(330px,.72fr) !important;
+  gap:22px !important;
+  background-image:
+    linear-gradient(90deg,rgba(5,8,12,.72) 0%,rgba(9,13,18,.56) 36%,rgba(26,20,27,.48) 62%,rgba(107,0,56,.72) 100%),
+    url("mountain-bg.jpg") !important;
+  background-size:cover !important;
+  background-position:center center !important;
+}
+.header-brand-block{
+  justify-content:flex-start !important;
+  padding-left:8px !important;
+}
+.griz-hq-logo{
+  width:min(650px,100%) !important;
+  height:auto !important;
+  max-width:650px !important;
+  max-height:none !important;
+  display:block !important;
+  filter:drop-shadow(0 8px 10px rgba(0,0,0,.55)) !important;
+}
+.header-matchup{
+  min-height:285px !important;
+  padding:0 14px !important;
+}
+.header-team{
+  min-width:175px !important;
+}
+.header-team img{
+  width:78px !important;
+  height:78px !important;
+}
+.header-team strong{
+  font-size:31px !important;
+}
+.header-go-block{
+  min-width:0 !important;
+  padding:8px 4px 20px 18px !important;
+  overflow:visible !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+.header-go-block::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  right:-55px;
+  bottom:4px;
+  width:380px;
+  height:245px;
+  background:#6b0038;
+  clip-path:polygon(18% 7%,100% 0,94% 84%,66% 100%,0 82%);
+  transform:rotate(-2deg);
+  opacity:.94;
+}
+.header-pride{
+  position:relative !important;
+  z-index:2 !important;
+  align-self:flex-end !important;
+  margin:0 18px 2px 0 !important;
+  font-size:11px !important;
+  letter-spacing:3.2px !important;
+  text-align:right !important;
+  color:#fff !important;
+}
+.header-go-griz{
+  position:relative !important;
+  z-index:2 !important;
+  width:100% !important;
+  height:225px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  transform:none !important;
+}
+.header-go-griz img{
+  width:330px !important;
+  height:225px !important;
+  max-width:100% !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  filter:drop-shadow(0 5px 8px rgba(0,0,0,.38)) !important;
+}
+.header-paw-image{display:none !important;}
+
+@media(max-width:1250px){
+  .brand-row{
+    grid-template-columns:minmax(410px,1fr) minmax(480px,1.1fr) minmax(290px,.72fr) !important;
+    padding:16px 26px !important;
+  }
+  .griz-hq-logo{width:min(520px,100%) !important;}
+  .header-go-griz img{width:285px !important;}
+}
+@media(max-width:850px){
+  .brand-row{
+    height:215px !important;
+    grid-template-columns:250px 1fr !important;
+    padding:14px 18px !important;
+  }
+  .header-go-block{display:none !important;}
+  .griz-hq-logo{width:245px !important;}
+}
+@media(max-width:520px){
+  .brand-row{
+    height:135px !important;
+    grid-template-columns:150px 1fr !important;
+    padding:8px 12px !important;
+  }
+  .griz-hq-logo{width:148px !important;}
+}
