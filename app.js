@@ -229,7 +229,39 @@ async function renderFCSScoreboard(){
   const top25=Array.isArray(localData.fcs_top25)?localData.fcs_top25:(Array.isArray(localData.fcs_top20)?localData.fcs_top20:[]);
   const rankDate=document.getElementById('fcs-rankings-date'); if(rankDate&&localData.fcs_rankings_date) rankDate.textContent='Stats Perform • '+localData.fcs_rankings_date;
   function norm(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');}
-  function findTeamEvent(name,events){const n=norm(name);return events.find(ev=>ev.competitions?.[0]?.competitors?.some(c=>{const tn=norm(c.team?.displayName||c.team?.shortDisplayName);return tn.includes(n)||n.includes(tn);} ))||null;}
+  const teamAliases={
+    'montanastate':['montanastate','montanast'],
+    'easternwashington':['easternwashington','ewashington','easternwash'],
+    'northernarizona':['northernarizona','narizona','northernaz'],
+    'northerncolorado':['northerncolorado','ncolorado'],
+    'idahostate':['idahostate','idst'],
+    'portlandstate':['portlandstate','portlandst'],
+    'southernutah':['southernutah','southeasternutah','soutah','soututah'],
+    'utahtech':['utahtech','utahtechuniversity'],
+    'ucdavis':['ucdavis'],
+    'calpoly':['calpoly','calpolytechnic'],
+    'weberstate':['weberstate','weberst'],
+    'montana':['montana'],
+    'idaho':['idaho']
+  };
+  function teamMatches(name,team){
+    const n=norm(name), tn=norm(team);
+    if(n===tn) return true;
+    const aliases=teamAliases[n]||[n];
+    return aliases.includes(tn);
+  }
+  function findTeamEvent(name,events){
+    // Exact/alias matching first. This prevents Idaho from matching Idaho State
+    // and Montana from matching Montana State.
+    const exact=events.find(ev=>ev.competitions?.[0]?.competitors?.some(c=>teamMatches(name,c.team?.displayName||c.team?.shortDisplayName)));
+    if(exact) return exact;
+    // Conservative fallback for ESPN naming variations.
+    const n=norm(name);
+    return events.find(ev=>ev.competitions?.[0]?.competitors?.some(c=>{
+      const tn=norm(c.team?.displayName||c.team?.shortDisplayName);
+      return tn.includes(n)&&tn.length<=n.length+4;
+    }))||null;
+  }
   function statusText(ev){const c=ev?.competitions?.[0];const st=c?.status?.type;if(st?.completed)return 'FINAL';if(st?.state==='in')return c.status?.type?.shortDetail||'LIVE';return c?.date?new Date(c.date).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'}):'TBA';}
   function gameLabel(ev){const c=ev?.competitions?.[0];const teams=c?.competitors||[];const away=teams.find(x=>x.homeAway==='away');const home=teams.find(x=>x.homeAway==='home');return {away:away?.team?.shortDisplayName||away?.team?.displayName||'Away',home:home?.team?.shortDisplayName||home?.team?.displayName||'Home',time:statusText(ev)};}
   function scoreLine(ev,name){if(!ev)return '<small>NO GAME</small>';const c=ev.competitions?.[0],teams=c?.competitors||[],me=teams.find(x=>norm(x.team?.displayName).includes(norm(name))||norm(name).includes(norm(x.team?.displayName)));if(!me)return '<small>'+escapeHtml(statusText(ev))+'</small>';const other=teams.find(x=>x!==me);if(c?.status?.type?.completed||c?.status?.type?.state==='in')return `${me.score??'0'}–${other?.score??'0'}<small>${escapeHtml(statusText(ev))}</small>`;return `<small>${escapeHtml(statusText(ev))}</small>`;}
