@@ -257,7 +257,7 @@ renderFCSScoreboard();
 
   const aliases={
     home:'home', news:'news', schedule:'schedule', scores:'scores', rankings:'rankings',
-    roster:'roster', stats:'stats', media:'media', insider:'insider', history:'history', game:'game'
+    roster:'roster', stats:'stats', media:'media', history:'history', game:'game'
   };
 
   function activate(tab, updateHash=true){
