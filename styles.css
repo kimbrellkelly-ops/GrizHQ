@@ -510,3 +510,55 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   .nav{height:48px !important;gap:18px !important}
   .nav a{font-size:11px !important;padding:16px 0 12px !important}
 }
+
+
+/* GO GRIZ graphic fix */
+.header-go-block{
+  position:relative !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  background:#6b0038 !important;
+}
+.header-go-block::before,
+.header-go-block::after{
+  display:none !important;
+}
+.header-pride{
+  position:absolute !important;
+  top:24px !important;
+  right:28px !important;
+  z-index:3 !important;
+  margin:0 !important;
+  color:#fff !important;
+  font-size:11px !important;
+  line-height:1.55 !important;
+  letter-spacing:3px !important;
+  text-align:right !important;
+}
+.header-go-griz{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  display:block !important;
+  transform:none !important;
+  z-index:2 !important;
+  overflow:hidden !important;
+  text-decoration:none !important;
+}
+.header-go-griz img{
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  max-height:none !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  display:block !important;
+  filter:none !important;
+}
+@media(max-width:1250px){
+  .header-pride{top:18px !important;right:20px !important;font-size:9px !important}
+}
+@media(max-width:850px){
+  .header-go-block{display:none !important}
+}
