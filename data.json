@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-31T00:00:00Z",
-  "source": "Initial snapshot; GitHub Actions will refresh this automatically.",
+  "updated": "2026-09-05T22:33:41.821178+00:00",
+  "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "1-0",
     "conference_record": "1-0",
@@ -8,14 +8,14 @@
   },
   "next_game": {
     "opponent": "Drake",
-    "date": "Sep 5",
-    "time": "1 PM MT",
+    "date": "Sep 5 (Sat)",
+    "time": "1 PM",
     "venue": "Washington-Grizzly Stadium, Missoula, Mont.",
-    "url": "https://godrakebulldogs.com/sports/football"
+    "url": "https://gogriz.com/sports/football/schedule"
   },
   "schedule": [
     {
-      "date": "Aug 29",
+      "date": "Aug 29 (Sat)",
       "opponent": "Southern Utah",
       "location": "Home",
       "result": "W 28-21",
@@ -23,7 +23,7 @@
       "conference": true
     },
     {
-      "date": "Sep 5",
+      "date": "Sep 5 (Sat)",
       "opponent": "Drake",
       "location": "Home",
       "result": "",
@@ -31,7 +31,7 @@
       "conference": false
     },
     {
-      "date": "Sep 12",
+      "date": "Sep 12 (Sat)",
       "opponent": "Utah Tech",
       "location": "Home",
       "result": "",
@@ -39,23 +39,23 @@
       "conference": false
     },
     {
-      "date": "Sep 19",
+      "date": "Sep 19 (Sat)",
       "opponent": "Oregon State",
       "location": "Away",
       "result": "",
-      "time": "9 PM MT",
+      "time": "9 PM (MT)",
       "conference": false
     },
     {
-      "date": "Sep 26",
+      "date": "Sep 26 (Sat)",
       "opponent": "UC Davis",
       "location": "Away",
       "result": "",
-      "time": "8 PM MT",
+      "time": "8 PM (MT)",
       "conference": true
     },
     {
-      "date": "Oct 3",
+      "date": "Oct 3 (Sat)",
       "opponent": "Northern Colorado",
       "location": "Home",
       "result": "",
@@ -63,15 +63,15 @@
       "conference": true
     },
     {
-      "date": "Oct 10",
+      "date": "Oct 10 (Sat)",
       "opponent": "Northern Arizona",
       "location": "Away",
       "result": "",
-      "time": "3 PM MT",
+      "time": "3 PM (MT)",
       "conference": true
     },
     {
-      "date": "Oct 17",
+      "date": "Oct 17 (Sat)",
       "opponent": "Idaho",
       "location": "Home",
       "result": "",
@@ -79,15 +79,15 @@
       "conference": true
     },
     {
-      "date": "Oct 31",
+      "date": "Oct 31 (Sat)",
       "opponent": "Eastern Washington",
       "location": "Away",
       "result": "",
-      "time": "2 PM MT",
+      "time": "2 PM (MT)",
       "conference": true
     },
     {
-      "date": "Nov 7",
+      "date": "Nov 7 (Sat)",
       "opponent": "Portland State",
       "location": "Home",
       "result": "",
@@ -95,7 +95,7 @@
       "conference": true
     },
     {
-      "date": "Nov 14",
+      "date": "Nov 14 (Sat)",
       "opponent": "Idaho State",
       "location": "Home",
       "result": "",
@@ -103,7 +103,7 @@
       "conference": true
     },
     {
-      "date": "Nov 21",
+      "date": "Nov 21 (Sat)",
       "opponent": "Montana State",
       "location": "Away",
       "result": "",
@@ -112,13 +112,13 @@
     }
   ],
   "coaches_poll": [
-    "Montana State",
-    "South Dakota State",
+    "Montana St. (26)",
+    "South Dakota St.",
     "Montana",
-    "Illinois State",
-    "Tarleton State",
+    "Illinois St.",
+    "Tarleton St.",
     "UC Davis",
-    "Youngstown State",
+    "Youngstown St.",
     "Rhode Island",
     "North Dakota",
     "Lehigh",
@@ -131,7 +131,12 @@
     "Villanova",
     "Yale",
     "William & Mary",
-    "Northern Arizona"
+    "Northern Arizona",
+    "ACU",
+    "South Carolina St.",
+    "Richmond",
+    "Central Arkansas",
+    "Southern Illinois"
   ],
   "media_poll": [
     "Montana State",
@@ -153,11 +158,65 @@
     "William & Mary",
     "Villanova",
     "Mercer",
-    "Abilene Christian"
+    "Abilene Christian",
+    "South Carolina State",
+    "Northern Arizona",
+    "Idaho State",
+    "Western Carolina",
+    "West Florida"
   ],
-  "news": [],
+  "news": [
+    {
+      "title": "Stripe the Stadium - What you should wear",
+      "url": "https://gogriz.com/news/2026/9/4/football-stripe-the-stadium-what-you-should-wear",
+      "date": "Fri, 4 Sep 2026 14:32:00 MST",
+      "description": "Need to know what color you should wear to stripe Washington-Grizzly Stadium against Drake?"
+    },
+    {
+      "title": "Griz look to build momentum against Drake",
+      "url": "https://gogriz.com/news/2026/9/1/football-griz-look-to-build-momentum-against-drake",
+      "date": "Tue, 1 Sep 2026 16:53:00 MST",
+      "description": "After starting the Bobby Kennedy era 1-0, the Montana Grizzlies return to action this week for the first nonconference game of the year at Washington-Grizzy Stadium as the Drake Bu"
+    },
+    {
+      "title": "Mason named Big Sky Special Teams Player of the Week",
+      "url": "https://gogriz.com/news/2026/8/31/football-mason-named-big-sky-special-teams-player-of-the-week",
+      "date": "Mon, 31 Aug 2026 09:21:00 MST",
+      "description": "They call it special teams for a reason… but Grizzly defensive end Jake Mason was a catalyst in the standout day by Montana's third unit on Saturday in UM's 28-21 Big Sky Conferenc"
+    },
+    {
+      "title": "Griz outlast T-Birds in Kennedy’s debut",
+      "url": "https://gogriz.com/news/2026/8/30/football-griz-outlast-t-birds-in-kennedys-debut",
+      "date": "Sun, 30 Aug 2026 01:08:00 MST",
+      "description": "MISSOULA - Bobby Kennedy improved to 1-0 as Montana's 38th head coach on Saturday night as the Grizzlies used a late touchdown and big special teams plays to fend off an up-for-it "
+    },
+    {
+      "title": "Grizzly Insider returns in 2026",
+      "url": "https://gogriz.com/news/2026/8/26/football-grizzly-insider-returns-in-2026",
+      "date": "Wed, 26 Aug 2026 18:05:00 MST",
+      "description": "MISSOULA - The Grizzly Insider returns for its fourth season beginning on Wednesday, Aug. 26 for another year of breaking down all things Montana Athletics."
+    },
+    {
+      "title": "Missoula Named ‘Best College Sports Town’ in USA TODAY Poll",
+      "url": "https://gogriz.com/news/2026/8/26/football-missoula-named-best-college-sports-town-in-usa-today-poll",
+      "date": "Wed, 26 Aug 2026 13:00:00 MST",
+      "description": "MISSOULA – Missoula, the home of the University of Montana Grizzlies, recently came out on top in the USA TODAY Sports Readers' Choice 2026 for 'Best College Sports Town."
+    },
+    {
+      "title": "Coach Kennedy Radio Show premieres Wednesday, live from The Den",
+      "url": "https://gogriz.com/news/2026/8/26/football-coach-kennedy-radio-show-premieres-wednesday-live-from-the-den",
+      "date": "Wed, 26 Aug 2026 08:22:00 MST",
+      "description": "MISSOULA - The Montana Grizzly Coaches Radio Show returns to The Den each Wednesday at 7 p.m. in 2026, giving fans an exclusive inside look at Griz football with first year head co"
+    },
+    {
+      "title": "Kennedy era opens as Griz host T-Birds",
+      "url": "https://gogriz.com/news/2026/8/25/football-kennedy-era-opens-as-griz-host-t-birds",
+      "date": "Tue, 25 Aug 2026 16:49:00 MST",
+      "description": "The dawn of a new era rises over Washington-Grizzly Stadium on Saturday as Bobby Kennedy leads Montana onto the field for the first time as UM's 38th head football coach."
+    }
+  ],
   "depth_chart": {
-    "source": "Montana Sports \u2014 first 2026 two-deep roster",
+    "source": "Montana Sports — first 2026 two-deep roster",
     "source_url": "https://www.montanasports.com/college/montana-grizzlies/montana-grizzlies-release-1st-2-deep-roster-ahead-of-season-opener",
     "published": "2026-08-25",
     "note": "Latest published two-deep available to Griz HQ; update when Montana releases a revised depth chart.",
@@ -191,7 +250,7 @@
       {
         "position": "WR",
         "first": "Ian Finch",
-        "second": "\u2014"
+        "second": "—"
       },
       {
         "position": "TE",
@@ -273,7 +332,7 @@
       {
         "position": "S",
         "first": "Tanner Huff",
-        "second": "\u2014"
+        "second": "—"
       },
       {
         "position": "CB",
@@ -295,27 +354,27 @@
       {
         "position": "P",
         "first": "Everett O'Donnell",
-        "second": "\u2014"
+        "second": "—"
       },
       {
         "position": "LS",
         "first": "Jace Eastlick",
-        "second": "\u2014"
+        "second": "—"
       },
       {
         "position": "PR",
         "first": "Brooks Davis",
-        "second": "\u2014"
+        "second": "—"
       },
       {
         "position": "KR",
         "first": "Landon Ransom-Goelz / Monte Gillman",
-        "second": "\u2014"
+        "second": "—"
       },
       {
         "position": "H",
         "first": "Brooks Davis",
-        "second": "\u2014"
+        "second": "—"
       }
     ]
   },
@@ -2646,8 +2705,8 @@
       "big_sky_game": true
     }
   ],
-  "fcs_rankings_source": "Stats Perform FCS Top 25 \u2014 Aug. 31, 2026",
-  "fcs_rankings_date": "Aug. 31, 2026",
+  "fcs_rankings_source": "Stats Perform FCS Top 25 — Aug. 31, 2026",
+  "fcs_rankings_date": "Sep 5, 2026",
   "fcs_top20": [
     {
       "rank": 1,
@@ -2878,27 +2937,27 @@
     }
   ],
   "stats": {
-    "through": "Week 1 \u2022 vs Southern Utah",
+    "through": "Current 2026 cumulative stats",
     "team_summary": [
       {
-        "value": "1\u20130",
+        "value": "1-0–1-0",
         "label": "RECORD",
         "note": "2026"
       },
       {
-        "value": "28.0",
+        "value": "28.00",
         "label": "POINTS / GAME",
-        "note": "28 points"
+        "note": "Official cumulative stats"
       },
       {
         "value": "338",
         "label": "TOTAL OFFENSE",
-        "note": "338 yards"
+        "note": "Per game"
       },
       {
-        "value": "510",
+        "value": "—",
         "label": "TOTAL DEFENSE",
-        "note": "510 yards allowed"
+        "note": "Yards allowed"
       }
     ],
     "offense": [
@@ -2982,17 +3041,17 @@
       ],
       [
         "Turnover Margin",
-        "\u22121",
+        "−1",
         "2 Montana turnovers, 1 takeaway"
       ],
       [
         "Penalties",
-        "3\u201332",
+        "3–32",
         ""
       ],
       [
         "Punts",
-        "3\u2013136",
+        "3–136",
         "45.3 avg"
       ],
       [
@@ -3005,26 +3064,26 @@
       "passing": [
         {
           "player": "Keali'i Ah Yat",
-          "line": "15\u201328 \u2022 265 YDS \u2022 2 TD \u2022 1 INT",
+          "line": "15–28 • 265 YDS • 2 TD • 1 INT",
           "extra": "Long: 85"
         }
       ],
       "rushing": [
         {
           "player": "Eli Gillman",
-          "line": "13 CAR \u2022 76 YDS \u2022 1 TD",
+          "line": "13 CAR • 76 YDS • 1 TD",
           "extra": "Long: 29"
         }
       ],
       "receiving": [
         {
           "player": "Eli Gillman",
-          "line": "2 REC \u2022 93 YDS \u2022 1 TD",
+          "line": "2 REC • 93 YDS • 1 TD",
           "extra": "Long: 85"
         },
         {
           "player": "Lekeldrick Bridges",
-          "line": "5 REC \u2022 91 YDS \u2022 1 TD",
+          "line": "5 REC • 91 YDS • 1 TD",
           "extra": "Long: 53"
         }
       ],
@@ -3055,11 +3114,12 @@
       {
         "week": "Wk 1",
         "opponent": "Southern Utah",
-        "result": "W 28\u201321",
-        "yards": "338\u2013510",
-        "turnovers": "\u22121",
+        "result": "W 28–21",
+        "yards": "338–510",
+        "turnovers": "−1",
         "notes": "Gillman 93 receiving yards; Bridges 91 receiving yards"
       }
     ]
-  }
+  },
+  "rankings_date": "Sep 5, 2026"
 }
