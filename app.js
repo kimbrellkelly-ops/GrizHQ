@@ -11,6 +11,33 @@ async function loadGrizData() {
     if (dateEl) dateEl.textContent = [next.date, next.time].filter(Boolean).join(" • ").toUpperCase();
     if (venueEl) venueEl.innerHTML = (next.venue || "Washington-Grizzly Stadium, Missoula, Mont.").replace(", ", "<br>");
     if (oppEl) oppEl.textContent = (next.opponent || "Opponent").toUpperCase();
+
+    // Keep opponent logos synchronized with the same automatically updated next-game data.
+    // The old header had Drake hard-coded, so the text changed while the logo stayed Drake.
+    const opponentLogoMap = {
+      "Drake": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Drake_Bulldogs_%22D%22_logo.svg",
+      "Utah Tech": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Utah_tech_alt_logo_2022.png",
+      "Southern Utah": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Southern_Utah_Thunderbirds_logo.svg",
+      "Oregon State": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Oregon_State_Beavers_logo.svg",
+      "UC Davis": "https://commons.wikimedia.org/wiki/Special:Redirect/file/UC_Davis_Aggies_logo.svg",
+      "Northern Colorado": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Northern_Colorado_Bears_logo.svg",
+      "Northern Arizona": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Northern_Arizona_Lumberjacks_logo.svg",
+      "Idaho": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Idaho_Vandals_logo.svg",
+      "Eastern Washington": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Eastern_Washington_Eagles_logo.svg",
+      "Portland State": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Portland_State_Vikings_logo.svg",
+      "Idaho State": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Idaho_State_Bengals_logo.svg",
+      "Montana State": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Montana_State_Bobcats_logo.svg"
+    };
+    const opponentKey = String(next.opponent || "").trim();
+    const opponentLogo = opponentLogoMap[opponentKey];
+    if (opponentLogo) {
+      document.querySelectorAll(".header-team-away img, .next-game .team:last-child img").forEach(img => {
+        img.src = opponentLogo;
+        img.alt = `${opponentKey} logo`;
+        img.classList.remove("drake-logo");
+      });
+    }
+
     if (srcEl && next.url) { srcEl.href = next.url; srcEl.textContent = "Opponent information ↗"; }
 
     // Keep the compact header game bar synchronized with the same next-game data.
