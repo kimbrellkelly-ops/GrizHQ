@@ -6,10 +6,6 @@
   <title>Griz HQ | Montana Football</title>
   <meta name="description" content="Griz HQ — a fan-built Montana Grizzlies football information hub.">
   <link rel="stylesheet" href="styles.css?v=20260905-tabs2">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=20260906-paw">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=20260906-paw">
-  <link rel="manifest" href="site.webmanifest?v=20260906-paw">
-  <meta name="theme-color" content="#6b0038">
   <script src="app.js?v=20260906-scorecache2" defer></script>
 
 <style id="griz-tabs-critical">
@@ -253,37 +249,48 @@
   </section>
 
   <section class="section tab-panel" id="stats" data-tab="stats">
-    <div class="section-head"><div class="eyebrow">NUMBERS</div><h2>Stats & Matchups</h2><span id="stats-through">Through Week 1</span></div>
-    <div class="stat-cards" id="stats-summary"></div>
+    <div class="section-head"><div class="eyebrow">NUMBERS</div><h2>Griz Stats Central</h2><span id="stats-through">Through Week 1</span></div>
+    <div class="stats-intro"><b>THE FULL PICTURE.</b> Team efficiency, player production, special teams and game-by-game trends — automatically refreshed from the official Montana statistics.</div>
+    <div class="stat-cards stats-summary-large" id="stats-summary"></div>
+
+    <div class="stats-panel stats-compare-panel">
+      <div class="stats-panel-head"><div><div class="eyebrow">MONTANA VS. THE FIELD</div><h3>Team Statistical Profile</h3></div><span>SEASON TO DATE</span></div>
+      <div class="stats-compare" id="stats-compare"></div>
+    </div>
 
     <div class="stats-two-col">
       <div class="stats-panel">
-        <div class="stats-panel-head"><div><div class="eyebrow">ATTACK</div><h3>Griz Offense</h3></div><span>WEEK 1</span></div>
+        <div class="stats-panel-head"><div><div class="eyebrow">ATTACK</div><h3>Griz Offense</h3></div><span>SEASON</span></div>
         <div class="stats-list" id="stats-offense"></div>
       </div>
       <div class="stats-panel">
-        <div class="stats-panel-head"><div><div class="eyebrow">STOP UNIT</div><h3>Griz Defense</h3></div><span>WEEK 1</span></div>
+        <div class="stats-panel-head"><div><div class="eyebrow">STOP UNIT</div><h3>Griz Defense</h3></div><span>SEASON</span></div>
         <div class="stats-list" id="stats-defense"></div>
       </div>
     </div>
 
     <div class="stats-panel stats-leaders-panel">
       <div class="stats-panel-head"><div><div class="eyebrow">PLAYER LEADERS</div><h3>Who's Producing?</h3></div><span>2026</span></div>
-      <div class="leader-grid" id="stats-leaders"></div>
+      <div class="leader-grid leader-grid-expanded" id="stats-leaders"></div>
     </div>
 
     <div class="stats-two-col">
       <div class="stats-panel">
-        <div class="stats-panel-head"><div><div class="eyebrow">SITUATIONAL</div><h3>By the Numbers</h3></div></div>
-        <div class="stats-list" id="stats-situational"></div>
+        <div class="stats-panel-head"><div><div class="eyebrow">GAME TRENDS</div><h3>Yards by Game</h3></div><span>MT vs OPP</span></div>
+        <div class="stats-trends" id="stats-trends"></div>
       </div>
       <div class="stats-panel">
-        <div class="stats-panel-head"><div><div class="eyebrow">GAME LOG</div><h3>2026 Results</h3></div></div>
-        <div class="game-log" id="stats-game-log"></div>
+        <div class="stats-panel-head"><div><div class="eyebrow">SITUATIONAL</div><h3>By the Numbers</h3></div><span>EFFICIENCY</span></div>
+        <div class="stats-list" id="stats-situational"></div>
       </div>
     </div>
 
-    <div class="stats-note"><b>Built to update.</b> As new box scores are added, this dashboard can roll the numbers forward automatically instead of rebuilding the page.</div>
+    <div class="stats-panel">
+      <div class="stats-panel-head"><div><div class="eyebrow">GAME LOG</div><h3>2026 Results</h3></div><span>BOX SCORE SNAPSHOT</span></div>
+      <div class="game-log" id="stats-game-log"></div>
+    </div>
+
+    <div class="stats-note"><b>Built to update.</b> As each official box score is posted, Griz HQ can roll the cumulative player leaders, team profile, game log and trends forward automatically.</div>
   </section>
 
   <section class="section tab-panel" id="media" data-tab="media">

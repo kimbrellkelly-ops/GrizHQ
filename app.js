@@ -505,23 +505,40 @@ function renderStatsDashboard(stats) {
   renderStatList("stats-defense", stats.defense);
   renderStatList("stats-situational", stats.situational, true);
 
+  const compare = document.getElementById("stats-compare");
+  if (compare && Array.isArray(stats.compare)) {
+    compare.innerHTML = `<div class="stats-compare-head"><span>TEAM STAT</span><b>MONTANA</b><b>OPPONENTS</b><strong>DIFF</strong></div>` +
+      stats.compare.map(r => `<div class="stats-compare-row"><span>${escapeHtml(r.label)}</span><b>${escapeHtml(r.montana)}</b><b>${escapeHtml(r.opponents)}</b><strong class="${String(r.diff||'').startsWith('+') ? 'positive' : String(r.diff||'').startsWith('-') ? 'negative' : ''}">${escapeHtml(r.diff || '—')}</strong></div>`).join("");
+  }
+
   const leaders = document.getElementById("stats-leaders");
   if (leaders && stats.leaders) {
     const groups = [
       ["PASSING", stats.leaders.passing || []],
       ["RUSHING", stats.leaders.rushing || []],
       ["RECEIVING", stats.leaders.receiving || []],
-      ["DEFENSE", stats.leaders.defense || []]
+      ["TACKLES", stats.leaders.tackles || stats.leaders.defense || []],
+      ["TFL / SACKS", stats.leaders.pressure || []],
+      ["SPECIAL TEAMS", stats.leaders.special || []]
     ];
     leaders.innerHTML = groups.map(([label,items]) => {
       const top = items[0] || {player:"—",line:"No stats yet",extra:""};
-      return `<div class="leader-card"><div class="eyebrow">${label}</div><h4>${escapeHtml(top.player)}</h4><p>${escapeHtml(top.line)}</p><small>${escapeHtml(top.extra || "")}</small>${items.length>1 ? items.slice(1).map(i=>`<div class="leader-more"><b>${escapeHtml(i.player)}</b><span>${escapeHtml(i.line)}</span></div>`).join("") : ""}</div>`;
+      return `<div class="leader-card"><div class="eyebrow">${label}</div><h4>${escapeHtml(top.player)}</h4><p>${escapeHtml(top.line)}</p><small>${escapeHtml(top.extra || "")}</small>${items.length>1 ? items.slice(1,5).map(i=>`<div class="leader-more"><b>${escapeHtml(i.player)}</b><span>${escapeHtml(i.line)}</span></div>`).join("") : ""}</div>`;
+    }).join("");
+  }
+
+  const trends = document.getElementById("stats-trends");
+  if (trends && Array.isArray(stats.game_log)) {
+    const maxY = Math.max(1, ...stats.game_log.map(g => Number(g.montana_yards || 0)), ...stats.game_log.map(g => Number(g.opponent_yards || 0)));
+    trends.innerHTML = stats.game_log.map(g => {
+      const my = Number(g.montana_yards || 0), oy = Number(g.opponent_yards || 0);
+      return `<div class="trend-row"><div class="trend-meta"><b>${escapeHtml(g.week || "")}</b><span>${escapeHtml(g.opponent || "")}</span><strong>${escapeHtml(g.result || "")}</strong></div><div class="trend-bars"><div><span>MT</span><i style="width:${Math.round(my/maxY*100)}%"></i><b>${my}</b></div><div><span>OPP</span><i style="width:${Math.round(oy/maxY*100)}%"></i><b>${oy}</b></div></div></div>`;
     }).join("");
   }
 
   const log = document.getElementById("stats-game-log");
   if (log && Array.isArray(stats.game_log)) {
-    log.innerHTML = stats.game_log.map(g => `<div class="game-log-row"><span class="week">${escapeHtml(g.week || "")}</span><span class="opp">${escapeHtml(g.opponent || "")}</span><span class="result ${String(g.result||"").startsWith("W") ? "win" : ""}">${escapeHtml(g.result || "")}</span><span class="yards">YDS ${escapeHtml(g.yards || "—")}</span><span class="to">TO ${escapeHtml(g.turnovers || "—")}</span></div><div class="game-log-note">${escapeHtml(g.notes || "")}</div>`).join("");
+    log.innerHTML = stats.game_log.map(g => `<div class="game-log-row"><span class="week">${escapeHtml(g.week || "")}</span><span class="opp">${escapeHtml(g.opponent || "")}</span><span class="result ${String(g.result||"").startsWith("W") ? "win" : ""}">${escapeHtml(g.result || "")}</span><span class="yards">${escapeHtml(g.montana_yards || "—")}–${escapeHtml(g.opponent_yards || "—")}</span><span class="to">${escapeHtml(g.turnovers || "—")}</span></div><div class="game-log-note">${escapeHtml(g.notes || "")}</div>`).join("");
   }
 }
 

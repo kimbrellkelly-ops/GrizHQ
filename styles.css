@@ -317,7 +317,7 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   height:335px !important;
   padding:16px 34px 14px !important;
   display:grid !important;
-  grid-template-columns:44% 36% 20% !important;
+  grid-template-columns:36% 38% 26% !important;
   gap:0 !important;
   overflow:hidden !important;
   background-color:#151519 !important;
@@ -354,10 +354,10 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   justify-content:flex-start !important;
 }
 .griz-hq-logo{
-  width:min(760px,100%) !important;
-  height:320px !important;
-  max-width:760px !important;
-  max-height:320px !important;
+  width:min(620px,100%) !important;
+  height:300px !important;
+  max-width:620px !important;
+  max-height:300px !important;
   object-fit:contain !important;
   object-position:left center !important;
   filter:drop-shadow(0 8px 12px rgba(0,0,0,.68)) !important;
@@ -467,10 +467,10 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 @media(max-width:1250px){
   .brand-row{
     height:305px !important;
-    grid-template-columns:40% 39% 21% !important;
+    grid-template-columns:35% 40% 25% !important;
     padding:14px 24px !important;
   }
-  .griz-hq-logo{width:560px !important;height:280px !important}
+  .griz-hq-logo{width:500px !important;height:270px !important}
   .header-matchup{padding:0 10px !important}
   .header-team img{width:68px !important;height:68px !important;flex-basis:68px !important}
   .header-team strong{font-size:25px !important}
@@ -2191,3 +2191,36 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
     text-align: right !important;
   }
 }
+
+/* Expanded Griz Stats Central */
+.stats-intro{margin-top:10px;padding:16px 20px;background:#f0edf0;border-left:5px solid #73003b;color:#4b4b50;font-size:14px;line-height:1.5}
+.stats-intro b{color:#73003b;letter-spacing:.7px}
+.stats-summary-large{grid-template-columns:repeat(6,1fr)}
+.stats-compare-panel{margin-top:18px}
+.stats-compare{padding:0 24px 10px}
+.stats-compare-head,.stats-compare-row{display:grid;grid-template-columns:1.6fr .75fr .85fr .65fr;gap:14px;align-items:center}
+.stats-compare-head{padding:13px 0;border-bottom:2px solid #19191b;color:#777;font-size:10px;font-weight:900;letter-spacing:1.4px}
+.stats-compare-head b,.stats-compare-head strong{text-align:right}
+.stats-compare-row{padding:12px 0;border-bottom:1px solid #e6e6e6}
+.stats-compare-row:last-child{border-bottom:0}
+.stats-compare-row span{font-weight:750;color:#242428}
+.stats-compare-row b,.stats-compare-row strong{text-align:right;font-size:16px}
+.stats-compare-row strong{color:#73003b}
+.stats-compare-row strong.positive{color:#167342}
+.stats-compare-row strong.negative{color:#9b1c1c}
+.leader-grid-expanded{grid-template-columns:repeat(3,1fr)}
+.leader-grid-expanded .leader-card:nth-child(3n){border-right:0}
+.stats-trends{padding:10px 24px 18px}
+.trend-row{padding:14px 0;border-bottom:1px solid #e6e6e6}
+.trend-row:last-child{border-bottom:0}
+.trend-meta{display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;margin-bottom:8px}
+.trend-meta b{font-size:11px;color:#73003b;letter-spacing:1px}
+.trend-meta span{font-weight:800}
+.trend-meta strong{font-size:12px;color:#167342}
+.trend-bars>div{display:grid;grid-template-columns:32px 1fr 42px;gap:8px;align-items:center;margin:5px 0}
+.trend-bars span{font-size:9px;font-weight:900;letter-spacing:1px;color:#777}
+.trend-bars i{height:7px;background:#73003b;display:block;min-width:2px}
+.trend-bars>div:nth-child(2) i{background:#999}
+.trend-bars b{font-size:11px;text-align:right}
+@media(max-width:1100px){.stats-summary-large{grid-template-columns:repeat(3,1fr)}.leader-grid-expanded{grid-template-columns:1fr 1fr}.leader-grid-expanded .leader-card:nth-child(3n){border-right:1px solid #ddd}.leader-grid-expanded .leader-card:nth-child(2n){border-right:0}}
+@media(max-width:600px){.stats-summary-large{grid-template-columns:1fr 1fr}.stats-compare{padding-left:16px;padding-right:16px}.stats-compare-head,.stats-compare-row{grid-template-columns:1.3fr .7fr .8fr .55fr;gap:8px}.stats-compare-row b,.stats-compare-row strong{font-size:13px}.leader-grid-expanded{grid-template-columns:1fr}.leader-grid-expanded .leader-card{border-right:0!important}.trend-meta{grid-template-columns:45px 1fr auto}}
