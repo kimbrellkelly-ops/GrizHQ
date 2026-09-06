@@ -100,16 +100,7 @@
         </div>
         <div class="ghq-news-live"><span></span>AUTO-UPDATED</div>
       </div>
-      <div class="ghq-home-news-grid">
-        <a class="ghq-news-lead" id="home-news-lead" href="#news">
-          <div class="ghq-news-art"><img id="home-news-lead-image" src="hero.jpg" alt="Montana Grizzlies football news"><span class="ghq-news-art-mark">GRIZ HQ</span><span class="ghq-news-art-type" id="home-news-lead-type">LATEST</span></div>
-          <div class="ghq-news-lead-copy">
-            <div class="ghq-news-meta" id="home-news-lead-meta">LATEST • MONTANA FOOTBALL</div>
-            <h3 id="home-news-lead-title">Loading the latest Griz news…</h3>
-            <p id="home-news-lead-desc">Checking the latest Montana football headlines.</p>
-            <span class="ghq-news-read">READ STORY ↗</span>
-          </div>
-        </a>
+      <div class="ghq-home-news-grid ghq-home-news-grid-simple">
         <div class="ghq-home-news-side" id="home-news-side">
           <a class="ghq-news-card" href="#news"><div class="ghq-card-art"><img src="hero.jpg" alt="Montana Grizzlies football news"><span class="ghq-card-type">LATEST</span></div><div class="ghq-card-copy"><h3>Loading…</h3><p>Latest Montana football coverage.</p><small>GRIZ HQ</small></div></a>
           <a class="ghq-news-card" href="#news"><div class="ghq-card-art"><img src="hero.jpg" alt="Montana Grizzlies football news"><span class="ghq-card-type">LATEST</span></div><div class="ghq-card-copy"><h3>Loading…</h3><p>Latest Montana football coverage.</p><small>GRIZ HQ</small></div></a>
@@ -429,15 +420,8 @@
     renderVideos();
   };
   const renderHome=()=>{
-    const lead=stories[0]; if(!lead)return;
-    const a=document.getElementById('home-news-lead'); a.href=lead.url||'#';a.target='_blank';a.rel='noopener';
-    document.getElementById('home-news-lead-type').textContent=shortType(lead.badge);
-    document.getElementById('home-news-lead-meta').textContent=`${cleanType(lead.badge)} • ${sourceLabel(lead.source)} • ${lead.date||''}`;
-    document.getElementById('home-news-lead-title').textContent=lead.title||'';
-    document.getElementById('home-news-lead-desc').textContent=lead.description||'Latest Montana football coverage.';
-    setImg(document.getElementById('home-news-lead-image'),lead.image,lead.title);
     const cards=[...document.querySelectorAll('#home-news-side .ghq-news-card')];
-    stories.slice(1,5).forEach((item,i)=>{const card=cards[i];if(!card)return;card.href=item.url||'#';card.target='_blank';card.rel='noopener';card.querySelector('.ghq-card-type').textContent=shortType(item.badge);setImg(card.querySelector('.ghq-card-art img'),item.image,item.title);card.querySelector('h3').textContent=item.title||'';card.querySelector('p').textContent=item.description||'Latest Montana football coverage.';card.querySelector('small').textContent=`${item.date||''} • ${sourceLabel(item.source)}`;});
+    stories.slice(0,4).forEach((item,i)=>{const card=cards[i];if(!card)return;card.href=item.url||'#';card.target='_blank';card.rel='noopener';card.querySelector('.ghq-card-type').textContent=shortType(item.badge);setImg(card.querySelector('.ghq-card-art img'),item.image,item.title);card.querySelector('h3').textContent=item.title||'';card.querySelector('p').textContent=item.description||'Latest Montana football coverage.';card.querySelector('small').textContent=`${item.date||''} • ${sourceLabel(item.source)}`;});
     const count=document.getElementById('home-news-count');if(count)count.textContent=stories.length;
   };
   const bind=()=>document.querySelectorAll('[data-news-filter]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-news-filter]').forEach(x=>x.classList.remove('is-active'));btn.classList.add('is-active');render(btn.dataset.newsFilter);}));
