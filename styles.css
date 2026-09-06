@@ -1807,99 +1807,23 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   .fcs-game .fcs-tv { display: none !important; }
 }
 
-/* FINAL MOBILE BIG SKY SCOREBOARD LAYOUT — keep score visible at right in portrait */
-@media (max-width: 560px) {
-  .fcs-games {
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  .fcs-game.bigsky-row {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) 92px !important;
-    grid-template-areas:
-      "matchup score"
-      "time score" !important;
-    align-items: center !important;
-    column-gap: 8px !important;
-    row-gap: 2px !important;
-    min-width: 0 !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    padding: 12px 10px !important;
-  }
-
-  .fcs-game.bigsky-row .fcs-matchup {
-    grid-area: matchup !important;
-    min-width: 0 !important;
-    overflow: hidden !important;
-  }
-
-  .fcs-game.bigsky-row .fcs-matchup b {
-    display: block !important;
-    font-size: 12px !important;
-    line-height: 1.2 !important;
-    white-space: normal !important;
-    overflow-wrap: anywhere !important;
-  }
-
-  .fcs-game.bigsky-row .fcs-matchup small {
-    display: block !important;
-    margin-top: 3px !important;
-    font-size: 9px !important;
-  }
-
-  .fcs-game.bigsky-row .fcs-time {
-    grid-area: time !important;
-    display: block !important;
-    font-size: 9px !important;
-    line-height: 1.2 !important;
-    text-align: left !important;
-  }
-
-  .fcs-game.bigsky-row .fcs-score,
-  .fcs-game.bigsky-row .prominent-score {
-    grid-area: score !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: flex-end !important;
-    width: 92px !important;
-    min-width: 92px !important;
-    max-width: 92px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: right !important;
-    overflow: visible !important;
-  }
-
-  .fcs-game.bigsky-row .fcs-score .score-big,
-  .fcs-game.bigsky-row .prominent-score .score-big {
-    display: block !important;
-    font-size: 29px !important;
-    line-height: .95 !important;
-    font-weight: 900 !important;
-    letter-spacing: -.02em !important;
-    white-space: nowrap !important;
-  }
-
-  .fcs-game.bigsky-row.final .fcs-score .score-big,
-  .fcs-game.bigsky-row.live .fcs-score .score-big {
-    font-size: 30px !important;
-  }
-
-  .fcs-game.bigsky-row .fcs-score small,
-  .fcs-game.bigsky-row .prominent-score small {
-    display: block !important;
-    margin-top: 4px !important;
-    font-size: 8px !important;
-    line-height: 1 !important;
-    font-weight: 900 !important;
-    letter-spacing: .08em !important;
-    white-space: nowrap !important;
-  }
-
-  .fcs-game.bigsky-row .fcs-tv {
-    display: none !important;
-  }
+/* ===== WHITE GO GRIZ / NO MAROON BLOCK ===== */
+/* Let the mountain header photo show through behind the white artwork. */
+.header-go-block{
+  background:transparent !important;
+  background-color:transparent !important;
+}
+.header-go-block::before,
+.header-go-block::after{
+  display:none !important;
+  background:none !important;
+  content:none !important;
+}
+.header-pride{
+  color:#fff !important;
+  text-shadow:0 2px 5px rgba(0,0,0,.65) !important;
+}
+.header-go-griz img{
+  background:transparent !important;
+  filter:drop-shadow(0 4px 6px rgba(0,0,0,.45)) !important;
 }
