@@ -1,235 +1,79 @@
 {
-  "updated": "2026-09-06T17:35:44.910551+00:00",
-  "source": "Automated Griz HQ news hub",
+  "updated": "2026-09-06T20:00:00Z",
+  "source": "Griz HQ multi-source football news hub",
   "stories": [
     {
-      "title": "Grizzly Insider returns in 2026",
-      "url": "https://gogriz.com/news/2026/8/26/football-grizzly-insider-returns-in-2026",
-      "date": "Aug. 26, 2026",
-      "description": "The weekly Grizzly Insider returns with football breakdowns, interviews and stories from around Grizzly Athletics.",
-      "badge": "INSIDER",
-      "short": "INS"
-    },
-    {
-      "title": "AKEM’S ANALYSIS: RUCKER OUT FOR NORTH DAKOTA, GRIZ PICK 26 CAPTAINS, MCQUAIDE NOT ELIGIBLE (AGAIN)",
-      "url": "https://skylinesportsmt.com/akems-analysis-rucker-out-for-north-dakota-griz-pick-26-captains-mcquaide-not-eligible-again/",
+      "title": "Give Gillman the crown: Griz ride RBs 4 touchdowns to win over Drake",
+      "url": "https://dailyinterlake.com/news/2026/sep/06/give-gillman-the-crown-griz-ride-rbs-4-touchdowns-to-win-pver-drake/",
       "date": "Sep. 6, 2026",
-      "published_at": "2026-09-06T17:30:16.511265+00:00",
-      "description": "AKEM’S ANALYSIS: RUCKER OUT FOR NORTH DAKOTA, GRIZ PICK 26 CAPTAINS, MCQUAIDE NOT ELIGIBLE (AGAIN)",
-      "source": "Skyline Sports",
+      "published_at": "2026-09-06T00:00:00Z",
+      "description": "Daily Inter Lake breaks down Eli Gillman's four-touchdown performance, his career records and Montana's 45-10 win over Drake.",
       "badge": "ANALYSIS",
       "short": "ANAL"
-    },
-    {
-      "title": "Sanders hired as new Montana DC; Johnson hired as new DL coach for Griz",
-      "url": "https://skylinesportsmt.com/sanders-hired-as-new-montana-dc-johnson-hired-as-new-dl-coach-for-griz/",
-      "date": "Sep. 6, 2026",
-      "published_at": "2026-09-06T17:30:16.511524+00:00",
-      "description": "Sanders hired as new Montana DC; Johnson hired as new DL coach for Griz",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ"
-    },
-    {
-      "title": "Hauck retires as Griz head football coach",
-      "url": "https://skylinesportsmt.com/breaking-hauck-expected-to-resign-as-griz-head-coach-on-wednesday/",
-      "date": "Sep. 6, 2026",
-      "published_at": "2026-09-06T17:30:16.511647+00:00",
-      "description": "Hauck retires as Griz head football coach",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ"
-    },
-    {
-      "title": "Lady Griz head coach Holsinger put on administrative leave",
-      "url": "https://skylinesportsmt.com/breaking-lady-griz-head-coach-holsinger-put-on-administrative-leavel/",
-      "date": "Sep. 6, 2026",
-      "published_at": "2026-09-06T17:30:16.511742+00:00",
-      "description": "Lady Griz head coach Holsinger put on administrative leave",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ"
-    },
-    {
-      "title": "‘NOT ON MY WATCH’ – Sawyer evolves into stalwart veteran leader for Griz",
-      "url": "https://skylinesportsmt.com/not-on-my-watch-sawyer-evolves-into-stalwart-veteran-leader-for-griz/",
-      "date": "Sep. 6, 2026",
-      "published_at": "2026-09-06T17:30:16.587171+00:00",
-      "description": "‘NOT ON MY WATCH’ – Sawyer evolves into stalwart veteran leader for Griz March 9, 2026",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ"
-    },
-    {
-      "title": "Griz outlast T-Birds in Kennedy’s debut",
-      "url": "https://gogriz.com/news/2026/8/30/football-griz-outlast-t-birds-in-kennedys-debut",
-      "date": "Aug. 30, 2026",
-      "description": "Bobby Kennedy won his Montana debut as the Griz held off Southern Utah 28-21 in the 2026 opener.",
-      "badge": "GAME STORY",
-      "short": "W"
-    },
-    {
-      "title": "Mason named Big Sky Special Teams Player of the Week",
-      "url": "https://gogriz.com/news/2026/8/31/football-mason-named-big-sky-special-teams-player-of-the-week",
-      "date": "Aug. 31, 2026",
-      "description": "Jake Mason was named co-Special Teams Player of the Week after a standout performance against Southern Utah.",
-      "badge": "HONOR",
-      "short": "ST"
-    },
-    {
-      "title": "Griz look to build momentum against Drake",
-      "url": "https://gogriz.com/news/2026/9/1/football-griz-look-to-build-momentum-against-drake",
-      "date": "Sep. 1, 2026",
-      "description": "Montana entered Drake week 1-0, looking to build momentum before a challenging late-September road swing.",
-      "badge": "GAME PREVIEW",
-      "short": "PREV"
-    },
-    {
-      "title": "Stripe the Stadium - What you should wear",
-      "url": "https://gogriz.com/news/2026/9/4/football-stripe-the-stadium-what-you-should-wear",
-      "date": "Sep. 4, 2026",
-      "description": "Find your section's color and get ready to stripe Washington-Grizzly Stadium for Drake week.",
-      "badge": "GAME DAY",
-      "short": "STR"
     },
     {
       "title": "Gillman sets records as Griz roll past Bulldogs, 45-10",
       "url": "https://gogriz.com/news/2026/9/5/football-gillman-sets-records-as-griz-roll-past-bulldogs-45-10",
       "date": "Sep. 5, 2026",
-      "description": "Eli Gillman set a Montana record for career rushing touchdowns as the Griz rolled past Drake 45-10 and improved to 2-0.",
-      "badge": "TOP STORY",
+      "published_at": "2026-09-05T19:45:00Z",
+      "description": "Eli Gillman set Montana's career rushing touchdown record as the Griz rolled past Drake 45-10 and improved to 2-0.",
+      "badge": "GAME STORY",
       "score": "45–10",
-      "short": "45–10"
+      "short": "GAME"
     },
     {
-      "title": "Grizzly Replay: No. 3 Montana vs. Drake",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOdENEWEg3eW1EVkNzTE5QVUp2NnNMMkhqYmszNVFOYnNkU3RkU052cnRQbkNOWHQxcjRIT0xkUjFRT0llU0lqRk1lQkl6Mm1jblNfMW9OZGM3bmRLNG9nMnp0OFRab2xnRlFzTzJkRXlvdUF6ZlpRbmZxRV9aT2NJNVU3R2ZyQXN2am9vUndETTRLQkZsT044?oc=5",
-      "date": "Sep. 6, 2026",
-      "published_at": "2026-09-06T15:36:57+00:00",
-      "description": "Grizzly Replay: No. 3 Montana vs. Drake MontanaSports.com",
-      "source": "MontanaSports.com",
+      "title": "Gillman breaks record as Griz overcome penalties to cruise past Drake",
+      "url": "https://skylinesportsmt.com/gillman-breaks-record-as-griz-overcome-penalties-to-cruise-past-drake-for-second-straight-win/",
+      "date": "Sep. 5, 2026",
+      "published_at": "2026-09-05T23:00:00Z",
+      "description": "Skyline Sports examines Montana's second straight win, Eli Gillman's record-setting day and the Griz's 16 penalties for 138 yards.",
+      "badge": "ANALYSIS",
+      "short": "ANAL"
+    },
+    {
+      "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake's Matt Walker",
+      "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/",
+      "date": "Sep. 5, 2026",
+      "published_at": "2026-09-05T23:00:00Z",
+      "description": "Postgame comments from Bobby Kennedy, Eli Gillman, Tyler King and Drake coach Matt Walker following Montana's 45-10 win.",
+      "badge": "INSIDER",
+      "short": "LIVE"
+    },
+    {
+      "title": "Trailblazers Drop In-State Duel at BYU on Saturday Night",
+      "url": "https://utahtechtrailblazers.com/news/2026/9/5/football-trailblazers-drop-in-state-duel-at-byu-on-saturday-night.aspx",
+      "date": "Sep. 5, 2026",
+      "published_at": "2026-09-05T22:46:00Z",
+      "description": "Utah Tech fell 63-7 at BYU and now travels to Washington-Grizzly Stadium to face Montana on Sept. 12.",
+      "badge": "OPPONENT",
+      "short": "OPP"
+    },
+    {
+      "title": "Stripe the Stadium - What you should wear",
+      "url": "https://gogriz.com/news/2026/9/4/football-stripe-the-stadium-what-you-should-wear",
+      "date": "Sep. 4, 2026",
+      "published_at": "2026-09-04T00:00:00Z",
+      "description": "Montana fans were encouraged to stripe Washington-Grizzly Stadium for the Drake game.",
       "badge": "GAME DAY",
       "short": "GAME"
     },
     {
-      "title": "Eli Gillman's big day in win over Drake cements place in Grizzlies record book",
-      "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxQdXVPN011SHI2Nlo0aEtFbmlYbXZxZVliaHhsdWdTUFBkUWlxV1drWnFIaXRDbFBBa1djQlEyQnhEME92SUpkT2ZKNHJkMmcyd3JmaXJvZ1JrdFl4T0w4LVAyTC1xc1hHcU9XekZQdFZTLUU0MVVEWUJTZEJxbWhaeVBXNmF1b05XeUtycnduV1ZvMlRiX05pNi1QbDRJcWg3S1o2T2JaVUtTUzJXclhRdS01R2Y4bTI3NXJDU3VtU3ZZc1BHdTM2ek1PTE95SGZaZzM3NjZDX3VqUDh4OXFIZjlTaUZncjBVQXBYSG1rTlg4NXZnaXh3R29tekw5dnF6WkNDUVlFSDQ3eTJjWHBya0hUWks2M3hDZHg4UWIybnhZMERCNGxz0gGsAkFVX3lxTE5vNGFJaHZqZmFsb080U3pEcjlkZE15anRLbjRsNFVXRjMwV0JMWmtQeXp0MXBKWEZ4V2NVdGZSaXd3aEl2Rk1BV1RpaDVQbDBDaWttbjExVkdWWGU5ejhxWDJfX3hGV0RPUklKQnlPWkl2MnItSFBQVW9uX044X1pNSmdNSXlOTjNCR2xjUmgwcHVtbUYzck8ycGdNQkI0anZCRlNYckxJQnloSjVOVUFSclJwMVF0TTFKbHNxdkhMMWIxaVMtbnIxWkNGeGNpbEk1U3lzamR3WmFSdUxvb1dvTHBqUlZId3FRcE9wOVJOdHYta3Y2bnM4NDRKLTRGTUYxZVBYeDFDLUI0UldWcWppOFpfT1luWjZ6OU13Y3p4a0hEaWxnOGZVaktjNA?oc=5",
-      "date": "Sep. 6, 2026",
-      "published_at": "2026-09-06T01:00:00+00:00",
-      "description": "Eli Gillman's big day in win over Drake cements place in Grizzlies record book 406 Sports",
-      "source": "406 Sports",
-      "badge": "GAME STORY",
-      "short": "GAME"
-    },
-    {
-      "title": "No. 3 Montana blows past Drake as Eli Gillman rewrites rushing TD record",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPVWUzTmI4RzcyNW1RX01ocW9oRTlXTnZQSVNRenhKdXIzOFVlUkR2UnhfTUIxTXZ0NFZpNHVXWWR2MU1MQ0htaFVxbkUzOFVyR1Y1MWJsd2cyMkgxRG9pQkxOR3c5QUlSTVdZai1WRlZYSDE5Um05ckZSNC1XUlZtazlnV2pqbU5ZX05vbWlvTjJPZlpPUHhDYmRKZmVkNjlRenhXMDFVblNmREhDS2EyYjk0YXFaYVVWM2VTNmhVd20xV2w4U1E?oc=5",
-      "date": "Sep. 5, 2026",
-      "published_at": "2026-09-05T22:35:37+00:00",
-      "description": "No. 3 Montana blows past Drake as Eli Gillman rewrites rushing TD record MontanaSports.com",
-      "source": "MontanaSports.com",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ"
-    },
-    {
-      "title": "HALF: Griz lead Drake 21-3",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOcVp5Ni0zT1NaZG9CNTNNdzd2RnVoTkQtMDBHQlFmQmNZR2JRbmhfT3NGd0xnZmFtb0k5Ym9rekd5cHVhbEd1bk51eU1jdXJYSVhGM1JPUTVfb09KdmZsOW5WLVlWWEtwdS03ZE1wZnVyN09TbGdZUHdSenUzcWRpQzNWNDdCdnJMb19ldjJ4VGlTYmhhSG9XN1lXSG8tZzlqMk5UWXZ5dUxsTGhlOGVTZGZ5NDh1dHBIZkYxeGdZNm9RdjAzQXktWkhIeHQ?oc=5",
-      "date": "Sep. 5, 2026",
-      "published_at": "2026-09-05T20:38:51+00:00",
-      "description": "HALF: Griz lead Drake 21-3 SWX Local Sports",
-      "source": "SWX Local Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ"
-    },
-    {
-      "title": "Recap: No. 3 Montana Grizzlies blow out Drake Bulldogs, move to 2-0",
-      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPUHhVWmNuMUx3NDB1NC04ejRyX3NOOFQyU1g5cGZhblBLRUR0YmJMUHlDX0dUcDZxaF9BdTVVSzhvS203V2UxTUVocFZrbmVnN2RDQ1lTQ2tROV84T3ZfaC0tZHVIYXhLZVplelFBTTA4OV9JOFFaQUUxYjFweHB4MzJtaEdWOF96ZzVzSWRiSzF2WmlvbmF6MkhYUGVITWIxMFVPS0JWcTRmTEsyTS03U2dna1ZMTV9mNU9SODZxZmNSTXR4Q2lSVE11TmNOQWRfa3I5ZHFSazJCWG9kS2xGaUVjQWxuazhnNUIzVEJfaFJVanVTbmNSRHJmTHc5ZkdDXzJz0gGIAkFVX3lxTE1CYmFtOEtvS2lNWnJXQmEtNm45OW1VQUpWMjBocTVnLXNqT2FfNkptbEtxbTFOSkpVbEpfeWxOMjlsbW9MQ2dJY2RpMmRvMGk1TTE4aEJDa3BFVkNKZV9yS3M2eTN6Vl9TM1IxbjJZLXdUdVRKdUE1UEFaTmx4cGZBXzU4RHFLa0FtTlpCRFlndWpqQmtaTTBwZ2pXdlFPSEVmeEZfQS1VM3JsZ3U3Y0NEMmk1ZVR1TmtKaDZCeG0zcXR0STdPVGRtOWhES2J0WERfS1FBWU13elFlN3Rjc291M19mZzZsVTZDYXYwTHlsUW1kZzZxWVRXTjZic3pfU0tTRVpQQTBSNA?oc=5",
-      "date": "Sep. 5, 2026",
-      "published_at": "2026-09-05T18:45:00+00:00",
-      "description": "Recap: No. 3 Montana Grizzlies blow out Drake Bulldogs, move to 2-0 406 Sports",
-      "source": "406 Sports",
-      "badge": "GAME STORY",
-      "short": "GAME"
-    },
-    {
-      "title": "Season of change: Griz football kicks off under new UM president",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOQ2NVR095ZE1Hckk4cUluRjV6LU13M3lOZWZvNThKd0NYMFcyckRiZF85UDdoN0Z4NzVFSlZWbDAzd2lKVlVodW9ZRUFYczBJR05wa203VlI1MVdCOHFqRFBGQWFzODBRRnMwckprc1M4R2RhZmtKRTI1TnpQQnhCQkRVSkx5LXZTb19TOFFISzVSTEVJVUpULVpQOEk2X2ZLekZDTEd2WEE5Q2xtNmlZ?oc=5",
-      "date": "Sep. 4, 2026",
-      "published_at": "2026-09-04T09:28:09+00:00",
-      "description": "Season of change: Griz football kicks off under new UM president KPAX News",
-      "source": "KPAX News",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ"
-    },
-    {
-      "title": "New coach, new energy as Griz enter second week of spring",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPa3AyNl84NU4xVXQtQzFLSXBxeEt1UUJnRFBGOFJJMVhUZnQtZy1kMWc5LVV2TEN6Z3VITXd1eElWeWJGeHl1Um1rVEtlbjRNUnlvUVptRWtZYWZuNWNfYlVjZGYzak1Bb2g0RVduRTBuXzBuYW5SWkhzTFhoZzUtYWxGNnFIVFRYdmcweTRCTXRPdEFCSC1nVHF0Ulh4Sms?oc=5",
-      "date": "Sep. 3, 2026",
-      "published_at": "2026-09-03T07:00:00+00:00",
-      "description": "New coach, new energy as Griz enter second week of spring University of Montana Athletics",
-      "source": "University of Montana Athletics",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ"
-    },
-    {
-      "title": "Former Montana football player, coach Bruce Wallwork dies",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUTVHX1NZNmdSeGRRQ3lIcjBjNnJCUUhTbTNWYU9SRGRaeUdzUW1jSGs3dG9mc1FMdnA3eFBYekNDVFc2VzBvLURpS0NfblI2LTJzWmtmVjBHUDNfc0Vpb0c5WW9ZMUlPUUhNU2pDRTgzOTUyQU5jS2RZcEdBN2FORzg4QW41a25maHFSNWVLaXkwZEtQMUpMc05jX3c?oc=5",
+      "title": "Mason named Big Sky Special Teams Player of the Week",
+      "url": "https://gogriz.com/news/2026/8/31/football-mason-named-big-sky-special-teams-player-of-the-week",
       "date": "Aug. 31, 2026",
-      "published_at": "2026-08-31T20:51:05+00:00",
-      "description": "Former Montana football player, coach Bruce Wallwork dies NBC Montana",
-      "source": "NBC Montana",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ"
+      "published_at": "2026-08-31T00:00:00Z",
+      "description": "Jake Mason earned Big Sky Special Teams Player of the Week recognition after Montana's opener against Southern Utah.",
+      "badge": "HONOR",
+      "short": "HON"
     },
     {
-      "title": "How to watch, stream and listen to the Montana Grizzlies’ football games in 2026",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPUm0wNGpWa2xmMjVrVS1mNjREeEYtTzI5eVZzeU9VanJOcURWTUlzX2hUVy05LWNlU2lTTDdMY19zenZ4bkQ4YzZGVFdTenBMUmdCNDRXNDY4VExETXJuVzN5RllDeGpDLXotQ0VidW5BWXVvODYyYzlxNVdFd29FN1o5UVkxSld6eE95eGprOG5FTXlBTUdqaXBHNTkzR2dMQk9ydDg0Q25tNFRYMGhXZVlONnk1OW9RN1RZakRKMHVIVXFLcVdwY1N6dFhVUQ?oc=5",
-      "date": "Aug. 29, 2026",
-      "published_at": "2026-08-29T18:06:59+00:00",
-      "description": "How to watch, stream and listen to the Montana Grizzlies’ football games in 2026 Billings Gazette",
-      "source": "Billings Gazette",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ"
-    },
-    {
-      "title": "How to watch, stream and listen to the Montana Grizzlies’ football games in 2026",
-      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNdDRUeGRtT2QtaDVFbk50OEl3cWxSWmRDdEgybEtRVDM4TUppOXl5ZXI1OFZONWM4cHBFc0NmYmlBTk5LS05aZHJjNDRQci1fblR0aFlQMXk5XzJTU3hlNlplVXdtRGowU1hSTmV4NDFVQnFxOFpLZmc0SEtPcTlCZzVHYlVwa2VGT0lpYmVucndRUEhWZlg0Q1plUlhrM0JacDFRd0kwS24yNnJucU5ZSUxSTjc0WGlyYTdNbm9qaTlRQ1ZZNGMxYnFPZTY3UjhOcnRYZnNXTS04LTducHFDeHVUZzRXWUJCaldoaGVGOE5DVXRTZnNNMUIxMl9qQWJueUxmYw?oc=5",
-      "date": "Aug. 29, 2026",
-      "published_at": "2026-08-29T18:00:00+00:00",
-      "description": "How to watch, stream and listen to the Montana Grizzlies’ football games in 2026 406 Sports",
-      "source": "406 Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ"
-    },
-    {
-      "title": "Recap: No. 2 Montana Grizzlies hold off Southern Utah to win season opener",
-      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOUTJId004UEFZT0RmVlMwQjVJeEJUWWlhVHU2S0Z1Q3NGRGp1YTlEYld6VlJHOGtGY0t2NXJOckN5X0hYQTIzbFEzSXBuQXduUXNGSlpyQWZUZ2pVZTVpSTlnWl9fb01QYm5wTng5MFB4LU5uZnVHdEdlRl9iTUU4Z0lkWjhDM2Q2TzdaLWZiVzBjaU5oWXM1R1ZoVFZUbGhlaVdad1RPS1VITTZYaHhPTmRVcC0yMlNMZGFXQW5FTHAtRWlqWkhnbUo2MGZOQUFwbDFnSU0wZUV5R1Jndi12Nnpxa1JoRG5KYjRlQVctOXNPYmNmbzczOXdpeVhUdFZSaU1BV1J3NFp1NTkzRHfSAZMCQVVfeXFMT0ppMVNhMG00RTluNlR1QThtcXoyek9zdkRIRHBYa2Fwdkd1TEdrbmF2MERRZFlzV3cwMFRicFRIM0V4cWlQN3NXY1VqUE9wMkZPbXh0TjBia1h3UWRNNmt2NGIwbjNrUTNTTllydVRkdEgxMlNPMEFSWDU1cHhIbDZJWWFYZWtfZm1hNzg0U1BGSU5uZGhpYXlEdGtWVWNxaFllMlVYVTFuZHphN3lQeHNOMWw0cXJwbzJWOUtMc0d4QTFtV1hyQXFkVzRGazFDWnllaFFWWkNIdEhwTHA4TmpZNTlhR2t6OFBuSHZmZXZERTRXRlNkbGV2cnpGcldGYmowclJFY053V2h5OVRBc1U1blU?oc=5",
-      "date": "Aug. 29, 2026",
-      "published_at": "2026-08-29T07:00:00+00:00",
-      "description": "Recap: No. 2 Montana Grizzlies hold off Southern Utah to win season opener 406 Sports",
-      "source": "406 Sports",
+      "title": "Griz outlast T-Birds in Kennedy's debut",
+      "url": "https://gogriz.com/news/2026/8/30/football-griz-outlast-t-birds-in-kennedys-debut",
+      "date": "Aug. 30, 2026",
+      "published_at": "2026-08-30T00:00:00Z",
+      "description": "Bobby Kennedy won his Montana debut as the Griz held off Southern Utah 28-21 in the 2026 opener.",
       "badge": "GAME STORY",
       "short": "GAME"
-    },
-    {
-      "title": "Missoula Named ‘Best College Sports Town’ in USA TODAY Poll",
-      "url": "https://gogriz.com/news/2026/8/26/football-missoula-named-best-college-sports-town-in-usa-today-poll",
-      "date": "Aug. 26, 2026",
-      "published_at": "2026-08-26T20:00:00+00:00",
-      "description": "MISSOULA – Missoula, the home of the University of Montana Grizzlies, recently came out on top in the USA TODAY Sports Readers' Choice 2026 for 'Best College Sports Town.",
-      "source": "GoGriz",
-      "badge": "HONOR",
-      "short": "HONO"
-    },
-    {
-      "title": "Coach Kennedy Radio Show premieres Wednesday, live from The Den",
-      "url": "https://gogriz.com/news/2026/8/26/football-coach-kennedy-radio-show-premieres-wednesday-live-from-the-den",
-      "date": "Aug. 26, 2026",
-      "published_at": "2026-08-26T15:22:00+00:00",
-      "description": "MISSOULA - The Montana Grizzly Coaches Radio Show returns to The Den each Wednesday at 7 p.m. in 2026, giving fans an exclusive inside look at Griz football with first year head coach Bobby Kennedy paired with unbeatable",
-      "source": "GoGriz",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ"
     }
   ]
 }
