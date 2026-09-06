@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T04:47:22.736078+00:00",
+  "updated": "2026-09-06T04:55:43.122684+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -5131,35 +5131,6 @@
         ]
       },
       {
-        "id": "401870790",
-        "date": "2026-09-06T01:00Z",
-        "name": "Mercyhurst Lakers at New Mexico State Aggies",
-        "teams": [
-          {
-            "id": "166",
-            "name": "New Mexico State Aggies",
-            "short": "New Mexico St",
-            "abbrev": "NMSU",
-            "homeAway": "home",
-            "score": "51"
-          },
-          {
-            "id": "2385",
-            "name": "Mercyhurst Lakers",
-            "short": "Mercyhurst",
-            "abbrev": "MERC",
-            "homeAway": "away",
-            "score": "14"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
         "id": "401856773",
         "date": "2026-09-06T01:30Z",
         "name": "Northern Arizona Lumberjacks at Arizona Wildcats",
@@ -5181,9 +5152,9 @@
             "score": "7"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "1:19 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5207,12 +5178,12 @@
             "short": "Portland St",
             "abbrev": "PRST",
             "homeAway": "away",
-            "score": "13"
+            "score": "20"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:36 - 4th",
+        "detail": "4:49 - 4th",
         "broadcasts": [
           "USA Net"
         ]
@@ -5241,7 +5212,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:35 - 3rd",
+        "detail": "9:45 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5270,7 +5241,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:18 - 3rd",
+        "detail": "13:41 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7590,6 +7561,35 @@
         "broadcasts": [
           "ESPN+",
           "Scripps Sports"
+        ]
+      },
+      {
+        "id": "401870790",
+        "date": "2026-09-06T01:00Z",
+        "name": "Mercyhurst Lakers at New Mexico State Aggies",
+        "teams": [
+          {
+            "id": "166",
+            "name": "New Mexico State Aggies",
+            "short": "New Mexico St",
+            "abbrev": "NMSU",
+            "homeAway": "home",
+            "score": "51"
+          },
+          {
+            "id": "2385",
+            "name": "Mercyhurst Lakers",
+            "short": "Mercyhurst",
+            "abbrev": "MERC",
+            "homeAway": "away",
+            "score": "14"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
         ]
       },
       {
@@ -27285,7 +27285,7 @@
       }
     ]
   },
-  "fcs_scores_updated": "2026-09-06T04:47:30.205406+00:00",
+  "fcs_scores_updated": "2026-09-06T04:55:52.878670+00:00",
   "latest_press_conference": {
     "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker",
     "date": "Sun, 06 Sep 2026 02:23:32 +0000",
