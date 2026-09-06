@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T03:37:36.370784+00:00",
+  "updated": "2026-09-06T03:47:55.327534+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -5129,35 +5129,6 @@
         "broadcasts": []
       },
       {
-        "id": "401868958",
-        "date": "2026-09-05T23:30Z",
-        "name": "Edward Waters Tigers at Jackson State Tigers",
-        "teams": [
-          {
-            "id": "2296",
-            "name": "Jackson State Tigers",
-            "short": "Jackson St",
-            "abbrev": "JKST",
-            "homeAway": "home",
-            "score": "66"
-          },
-          {
-            "id": "2206",
-            "name": "Edward Waters Tigers",
-            "short": "Edward Waters",
-            "abbrev": "EAU",
-            "homeAway": "away",
-            "score": "14"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "HBCU Go"
-        ]
-      },
-      {
         "id": "401867866",
         "date": "2026-09-05T23:45Z",
         "name": "Murray State Racers at Middle Tennessee Blue Raiders",
@@ -5182,35 +5153,6 @@
         "state": "in",
         "completed": false,
         "detail": "Delayed",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401856775",
-        "date": "2026-09-06T00:00Z",
-        "name": "Utah Tech Trailblazers at BYU Cougars",
-        "teams": [
-          {
-            "id": "252",
-            "name": "BYU Cougars",
-            "short": "BYU",
-            "abbrev": "BYU",
-            "homeAway": "home",
-            "score": "63"
-          },
-          {
-            "id": "3101",
-            "name": "Utah Tech Trailblazers",
-            "short": "Utah Tech",
-            "abbrev": "UTU",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5272,122 +5214,6 @@
         ]
       },
       {
-        "id": "401858431",
-        "date": "2026-09-06T00:00Z",
-        "name": "South Dakota State Jackrabbits at Northwestern Wildcats",
-        "teams": [
-          {
-            "id": "77",
-            "name": "Northwestern Wildcats",
-            "short": "Northwestern",
-            "abbrev": "NU",
-            "homeAway": "home",
-            "score": "34"
-          },
-          {
-            "id": "2571",
-            "name": "South Dakota State Jackrabbits",
-            "short": "S Dakota St",
-            "abbrev": "SDST",
-            "homeAway": "away",
-            "score": "18"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "BTN"
-        ]
-      },
-      {
-        "id": "401867845",
-        "date": "2026-09-06T00:00Z",
-        "name": "Illinois State Redbirds at Western Illinois Leathernecks",
-        "teams": [
-          {
-            "id": "2710",
-            "name": "Western Illinois Leathernecks",
-            "short": "W Illinois",
-            "abbrev": "WIU",
-            "homeAway": "home",
-            "score": "10"
-          },
-          {
-            "id": "2287",
-            "name": "Illinois State Redbirds",
-            "short": "Illinois St",
-            "abbrev": "ILST",
-            "homeAway": "away",
-            "score": "41"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401867883",
-        "date": "2026-09-06T00:00Z",
-        "name": "South Dakota Coyotes at Northern Colorado Bears",
-        "teams": [
-          {
-            "id": "2458",
-            "name": "Northern Colorado Bears",
-            "short": "N Colorado",
-            "abbrev": "UNCO",
-            "homeAway": "home",
-            "score": "23"
-          },
-          {
-            "id": "233",
-            "name": "South Dakota Coyotes",
-            "short": "South Dakota",
-            "abbrev": "SDAK",
-            "homeAway": "away",
-            "score": "38"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868074",
-        "date": "2026-09-06T00:00Z",
-        "name": "Central Washington Wildcats at Cal Poly Mustangs",
-        "teams": [
-          {
-            "id": "13",
-            "name": "Cal Poly Mustangs",
-            "short": "Cal Poly",
-            "abbrev": "CP",
-            "homeAway": "home",
-            "score": "24"
-          },
-          {
-            "id": "2120",
-            "name": "Central Washington Wildcats",
-            "short": "C Washington",
-            "abbrev": "CEN",
-            "homeAway": "away",
-            "score": "17"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
         "id": "401868158",
         "date": "2026-09-06T00:00Z",
         "name": "Weber State Wildcats at Southern Utah Thunderbirds",
@@ -5407,64 +5233,6 @@
             "abbrev": "WEB",
             "homeAway": "away",
             "score": "42"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868306",
-        "date": "2026-09-06T00:00Z",
-        "name": "East Texas A&M Lions at Stephen F. Austin Lumberjacks",
-        "teams": [
-          {
-            "id": "2617",
-            "name": "Stephen F. Austin Lumberjacks",
-            "short": "SF Austin",
-            "abbrev": "SFA",
-            "homeAway": "home",
-            "score": "44"
-          },
-          {
-            "id": "2837",
-            "name": "East Texas A&M Lions",
-            "short": "East Texas A&M",
-            "abbrev": "ETAM",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401869142",
-        "date": "2026-09-06T00:00Z",
-        "name": "Lamar Cardinals at Louisiana Ragin' Cajuns",
-        "teams": [
-          {
-            "id": "309",
-            "name": "Louisiana Ragin' Cajuns",
-            "short": "Louisiana",
-            "abbrev": "UL",
-            "homeAway": "home",
-            "score": "38"
-          },
-          {
-            "id": "2320",
-            "name": "Lamar Cardinals",
-            "short": "Lamar",
-            "abbrev": "LAM",
-            "homeAway": "away",
-            "score": "7"
           }
         ],
         "state": "post",
@@ -5496,9 +5264,9 @@
             "score": "24"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "0:37 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+",
           "Scripps Sports"
@@ -5528,7 +5296,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:39 - 3rd",
+        "detail": "End of 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5544,7 +5312,7 @@
             "short": "Arizona",
             "abbrev": "ARIZ",
             "homeAway": "home",
-            "score": "21"
+            "score": "28"
           },
           {
             "id": "2464",
@@ -5557,7 +5325,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:40 - 3rd",
+        "detail": "5:01 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5573,7 +5341,7 @@
             "short": "San Diego St",
             "abbrev": "SDSU",
             "homeAway": "home",
-            "score": "29"
+            "score": "36"
           },
           {
             "id": "2502",
@@ -5581,12 +5349,12 @@
             "short": "Portland St",
             "abbrev": "PRST",
             "homeAway": "away",
-            "score": "6"
+            "score": "13"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:45 - 3rd",
+        "detail": "11:31 - 3rd",
         "broadcasts": [
           "USA Net"
         ]
@@ -5602,7 +5370,7 @@
             "short": "Arizona St",
             "abbrev": "ASU",
             "homeAway": "home",
-            "score": "48"
+            "score": "49"
           },
           {
             "id": "2415",
@@ -5615,7 +5383,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:55 - 2nd",
+        "detail": "End of 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5631,7 +5399,7 @@
             "short": "Sacramento St",
             "abbrev": "SAC",
             "homeAway": "home",
-            "score": "24"
+            "score": "31"
           },
           {
             "id": "2400",
@@ -5644,7 +5412,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:00 - 2nd",
+        "detail": "0:23 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5673,7 +5441,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 3rd",
+        "detail": "15:00 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5734,6 +5502,35 @@
         "detail": "Final",
         "broadcasts": [
           "FS1"
+        ]
+      },
+      {
+        "id": "401856775",
+        "date": "2026-09-06T00:00Z",
+        "name": "Utah Tech Trailblazers at BYU Cougars",
+        "teams": [
+          {
+            "id": "252",
+            "name": "BYU Cougars",
+            "short": "BYU",
+            "abbrev": "BYU",
+            "homeAway": "home",
+            "score": "63"
+          },
+          {
+            "id": "3101",
+            "name": "Utah Tech Trailblazers",
+            "short": "Utah Tech",
+            "abbrev": "UTU",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
         ]
       },
       {
@@ -7127,6 +6924,35 @@
         ]
       },
       {
+        "id": "401868958",
+        "date": "2026-09-05T23:30Z",
+        "name": "Edward Waters Tigers at Jackson State Tigers",
+        "teams": [
+          {
+            "id": "2296",
+            "name": "Jackson State Tigers",
+            "short": "Jackson St",
+            "abbrev": "JKST",
+            "homeAway": "home",
+            "score": "66"
+          },
+          {
+            "id": "2206",
+            "name": "Edward Waters Tigers",
+            "short": "Edward Waters",
+            "abbrev": "EAU",
+            "homeAway": "away",
+            "score": "14"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "HBCU Go"
+        ]
+      },
+      {
         "id": "401858211",
         "date": "2026-09-05T23:30Z",
         "name": "VMI Keydets at Virginia Tech Hokies",
@@ -7176,6 +7002,180 @@
             "abbrev": "NWST",
             "homeAway": "away",
             "score": "6"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401858431",
+        "date": "2026-09-06T00:00Z",
+        "name": "South Dakota State Jackrabbits at Northwestern Wildcats",
+        "teams": [
+          {
+            "id": "77",
+            "name": "Northwestern Wildcats",
+            "short": "Northwestern",
+            "abbrev": "NU",
+            "homeAway": "home",
+            "score": "34"
+          },
+          {
+            "id": "2571",
+            "name": "South Dakota State Jackrabbits",
+            "short": "S Dakota St",
+            "abbrev": "SDST",
+            "homeAway": "away",
+            "score": "18"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "BTN"
+        ]
+      },
+      {
+        "id": "401867845",
+        "date": "2026-09-06T00:00Z",
+        "name": "Illinois State Redbirds at Western Illinois Leathernecks",
+        "teams": [
+          {
+            "id": "2710",
+            "name": "Western Illinois Leathernecks",
+            "short": "W Illinois",
+            "abbrev": "WIU",
+            "homeAway": "home",
+            "score": "10"
+          },
+          {
+            "id": "2287",
+            "name": "Illinois State Redbirds",
+            "short": "Illinois St",
+            "abbrev": "ILST",
+            "homeAway": "away",
+            "score": "41"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401867883",
+        "date": "2026-09-06T00:00Z",
+        "name": "South Dakota Coyotes at Northern Colorado Bears",
+        "teams": [
+          {
+            "id": "2458",
+            "name": "Northern Colorado Bears",
+            "short": "N Colorado",
+            "abbrev": "UNCO",
+            "homeAway": "home",
+            "score": "23"
+          },
+          {
+            "id": "233",
+            "name": "South Dakota Coyotes",
+            "short": "South Dakota",
+            "abbrev": "SDAK",
+            "homeAway": "away",
+            "score": "38"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868074",
+        "date": "2026-09-06T00:00Z",
+        "name": "Central Washington Wildcats at Cal Poly Mustangs",
+        "teams": [
+          {
+            "id": "13",
+            "name": "Cal Poly Mustangs",
+            "short": "Cal Poly",
+            "abbrev": "CP",
+            "homeAway": "home",
+            "score": "24"
+          },
+          {
+            "id": "2120",
+            "name": "Central Washington Wildcats",
+            "short": "C Washington",
+            "abbrev": "CEN",
+            "homeAway": "away",
+            "score": "17"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868306",
+        "date": "2026-09-06T00:00Z",
+        "name": "East Texas A&M Lions at Stephen F. Austin Lumberjacks",
+        "teams": [
+          {
+            "id": "2617",
+            "name": "Stephen F. Austin Lumberjacks",
+            "short": "SF Austin",
+            "abbrev": "SFA",
+            "homeAway": "home",
+            "score": "44"
+          },
+          {
+            "id": "2837",
+            "name": "East Texas A&M Lions",
+            "short": "East Texas A&M",
+            "abbrev": "ETAM",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401869142",
+        "date": "2026-09-06T00:00Z",
+        "name": "Lamar Cardinals at Louisiana Ragin' Cajuns",
+        "teams": [
+          {
+            "id": "309",
+            "name": "Louisiana Ragin' Cajuns",
+            "short": "Louisiana",
+            "abbrev": "UL",
+            "homeAway": "home",
+            "score": "38"
+          },
+          {
+            "id": "2320",
+            "name": "Lamar Cardinals",
+            "short": "Lamar",
+            "abbrev": "LAM",
+            "homeAway": "away",
+            "score": "7"
           }
         ],
         "state": "post",
@@ -27285,5 +27285,5 @@
       }
     ]
   },
-  "fcs_scores_updated": "2026-09-06T03:37:42.610246+00:00"
+  "fcs_scores_updated": "2026-09-06T03:48:02.790767+00:00"
 }
