@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T00:48:16.437555+00:00",
+  "updated": "2026-09-06T00:57:06.126224+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -5123,67 +5123,9 @@
             "score": "43"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "3OT",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868356",
-        "date": "2026-09-05T21:00Z",
-        "name": "Alcorn State Braves at Southern Miss Golden Eagles",
-        "teams": [
-          {
-            "id": "2572",
-            "name": "Southern Miss Golden Eagles",
-            "short": "Southern Miss",
-            "abbrev": "USM",
-            "homeAway": "home",
-            "score": "49"
-          },
-          {
-            "id": "2016",
-            "name": "Alcorn State Braves",
-            "short": "Alcorn St",
-            "abbrev": "ALCN",
-            "homeAway": "away",
-            "score": "3"
-          }
-        ],
         "state": "post",
         "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868345",
-        "date": "2026-09-05T21:30Z",
-        "name": "Tusculum Pioneers at East Tennessee State Buccaneers",
-        "teams": [
-          {
-            "id": "2193",
-            "name": "East Tennessee State Buccaneers",
-            "short": "ETSU",
-            "abbrev": "ETSU",
-            "homeAway": "home",
-            "score": "48"
-          },
-          {
-            "id": "2839",
-            "name": "Tusculum Pioneers",
-            "short": "Tusculum",
-            "abbrev": "TUSC",
-            "homeAway": "away",
-            "score": "14"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
+        "detail": "Final/3OT",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5212,7 +5154,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:27 - 4th",
+        "detail": "5:38 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5241,7 +5183,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:32 - 3rd",
+        "detail": "15:00 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5270,7 +5212,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:13 - 3rd",
+        "detail": "14:48 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5299,7 +5241,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:36 - 4th",
+        "detail": "9:36 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5315,7 +5257,7 @@
             "short": "NC Central",
             "abbrev": "NCCU",
             "homeAway": "home",
-            "score": "24"
+            "score": "27"
           },
           {
             "id": "2207",
@@ -5328,7 +5270,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 4th",
+        "detail": "10:26 - 4th",
         "broadcasts": [
           "CIAA Network"
         ]
@@ -5373,7 +5315,7 @@
             "short": "Mercer",
             "abbrev": "MER",
             "homeAway": "home",
-            "score": "55"
+            "score": "62"
           },
           {
             "id": "2506",
@@ -5386,7 +5328,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:09 - 4th",
+        "detail": "7:38 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5402,7 +5344,7 @@
             "short": "Alabama St",
             "abbrev": "ALST",
             "homeAway": "home",
-            "score": "27"
+            "score": "34"
           },
           {
             "id": "2323",
@@ -5415,7 +5357,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:09 - 4th",
+        "detail": "3:26 - 4th",
         "broadcasts": []
       },
       {
@@ -5429,7 +5371,7 @@
             "short": "Chattanooga",
             "abbrev": "UTC",
             "homeAway": "home",
-            "score": "6"
+            "score": "9"
           },
           {
             "id": "2635",
@@ -5442,7 +5384,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:32 - 4th",
+        "detail": "8:32 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5471,7 +5413,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 4th",
+        "detail": "12:22 - 4th",
         "broadcasts": [
           "MEAC Network"
         ]
@@ -5529,7 +5471,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "11:21 - 3rd",
         "broadcasts": [
           "SECN+"
         ]
@@ -5558,7 +5500,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5574,7 +5516,7 @@
             "short": "Utah State",
             "abbrev": "USU",
             "homeAway": "home",
-            "score": "7"
+            "score": "10"
           },
           {
             "id": "304",
@@ -5587,7 +5529,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:08 - 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "CBSSN"
         ]
@@ -5732,7 +5674,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:24 - 2nd",
+        "detail": "End of 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5761,7 +5703,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5902,7 +5844,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:23 - 2nd",
+        "detail": "12:16 - 2nd",
         "broadcasts": [
           "HBCU Go"
         ]
@@ -5931,7 +5873,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:14 - 2nd",
+        "detail": "2:55 - 2nd",
         "broadcasts": [
           "ACC Network",
           "ACCNX"
@@ -5948,7 +5890,7 @@
             "short": "Louisiana Tech",
             "abbrev": "LT",
             "homeAway": "home",
-            "score": "42"
+            "score": "49"
           },
           {
             "id": "2466",
@@ -5961,7 +5903,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:51 - 2nd",
+        "detail": "6:17 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6006,7 +5948,7 @@
             "short": "BYU",
             "abbrev": "BYU",
             "homeAway": "home",
-            "score": "14"
+            "score": "21"
           },
           {
             "id": "3101",
@@ -6019,10 +5961,37 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 1st",
+        "detail": "13:48 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
+      },
+      {
+        "id": "401868970",
+        "date": "2026-09-06T00:00Z",
+        "name": "Kentucky State Thorobreds at Southern Jaguars",
+        "teams": [
+          {
+            "id": "2582",
+            "name": "Southern Jaguars",
+            "short": "Southern",
+            "abbrev": "SOU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2310",
+            "name": "Kentucky State Thorobreds",
+            "short": "Kentucky St",
+            "abbrev": "KYST",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "End of 1st",
+        "broadcasts": []
       },
       {
         "id": "401858427",
@@ -6048,7 +6017,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:21 - 1st",
+        "detail": "14:48 - 2nd",
         "broadcasts": [
           "BTN"
         ]
@@ -6077,7 +6046,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 2nd",
+        "detail": "12:01 - 2nd",
         "broadcasts": [
           "BTN"
         ]
@@ -6101,12 +6070,12 @@
             "short": "Illinois St",
             "abbrev": "ILST",
             "homeAway": "away",
-            "score": "10"
+            "score": "17"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:55 - 1st",
+        "detail": "End of 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6130,12 +6099,12 @@
             "short": "South Dakota",
             "abbrev": "SDAK",
             "homeAway": "away",
-            "score": "7"
+            "score": "14"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 1st",
+        "detail": "14:00 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6151,7 +6120,7 @@
             "short": "Cal Poly",
             "abbrev": "CP",
             "homeAway": "home",
-            "score": "0"
+            "score": "7"
           },
           {
             "id": "2120",
@@ -6164,7 +6133,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:05 - 2nd",
+        "detail": "10:58 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6180,7 +6149,7 @@
             "short": "Southern Utah",
             "abbrev": "SUU",
             "homeAway": "home",
-            "score": "7"
+            "score": "13"
           },
           {
             "id": "2692",
@@ -6188,12 +6157,12 @@
             "short": "Weber St",
             "abbrev": "WEB",
             "homeAway": "away",
-            "score": "7"
+            "score": "15"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 2nd",
+        "detail": "13:18 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6209,7 +6178,7 @@
             "short": "SF Austin",
             "abbrev": "SFA",
             "homeAway": "home",
-            "score": "7"
+            "score": "14"
           },
           {
             "id": "2837",
@@ -6222,7 +6191,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 1st",
+        "detail": "14:14 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6238,7 +6207,7 @@
             "short": "Louisiana",
             "abbrev": "UL",
             "homeAway": "home",
-            "score": "7"
+            "score": "14"
           },
           {
             "id": "2320",
@@ -6251,9 +6220,39 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:43 - 2nd",
+        "detail": "13:17 - 2nd",
         "broadcasts": [
           "ESPN+"
+        ]
+      },
+      {
+        "id": "401868119",
+        "date": "2026-09-06T00:30Z",
+        "name": "Butler Bulldogs at Montana State Bobcats",
+        "teams": [
+          {
+            "id": "147",
+            "name": "Montana State Bobcats",
+            "short": "Montana St",
+            "abbrev": "MTST",
+            "homeAway": "home",
+            "score": "3"
+          },
+          {
+            "id": "2086",
+            "name": "Butler Bulldogs",
+            "short": "Butler",
+            "abbrev": "BTLR",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "6:05 - 1st",
+        "broadcasts": [
+          "ESPN+",
+          "Scripps Sports"
         ]
       },
       {
@@ -6955,60 +6954,61 @@
         ]
       },
       {
-        "id": "401868970",
-        "date": "2026-09-06T00:00Z",
-        "name": "Kentucky State Thorobreds at Southern Jaguars",
+        "id": "401868356",
+        "date": "2026-09-05T21:00Z",
+        "name": "Alcorn State Braves at Southern Miss Golden Eagles",
         "teams": [
           {
-            "id": "2582",
-            "name": "Southern Jaguars",
-            "short": "Southern",
-            "abbrev": "SOU",
+            "id": "2572",
+            "name": "Southern Miss Golden Eagles",
+            "short": "Southern Miss",
+            "abbrev": "USM",
             "homeAway": "home",
-            "score": "0"
+            "score": "49"
           },
           {
-            "id": "2310",
-            "name": "Kentucky State Thorobreds",
-            "short": "Kentucky St",
-            "abbrev": "KYST",
+            "id": "2016",
+            "name": "Alcorn State Braves",
+            "short": "Alcorn St",
+            "abbrev": "ALCN",
             "homeAway": "away",
-            "score": "0"
+            "score": "3"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "3:38 - 1st",
-        "broadcasts": []
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
       },
       {
-        "id": "401868119",
-        "date": "2026-09-06T00:30Z",
-        "name": "Butler Bulldogs at Montana State Bobcats",
+        "id": "401868345",
+        "date": "2026-09-05T21:30Z",
+        "name": "Tusculum Pioneers at East Tennessee State Buccaneers",
         "teams": [
           {
-            "id": "147",
-            "name": "Montana State Bobcats",
-            "short": "Montana St",
-            "abbrev": "MTST",
+            "id": "2193",
+            "name": "East Tennessee State Buccaneers",
+            "short": "ETSU",
+            "abbrev": "ETSU",
             "homeAway": "home",
-            "score": "0"
+            "score": "48"
           },
           {
-            "id": "2086",
-            "name": "Butler Bulldogs",
-            "short": "Butler",
-            "abbrev": "BTLR",
+            "id": "2839",
+            "name": "Tusculum Pioneers",
+            "short": "Tusculum",
+            "abbrev": "TUSC",
             "homeAway": "away",
-            "score": "0"
+            "score": "14"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "10:33 - 1st",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
-          "ESPN+",
-          "Scripps Sports"
+          "ESPN+"
         ]
       },
       {
