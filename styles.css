@@ -317,7 +317,7 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   height:335px !important;
   padding:16px 34px 14px !important;
   display:grid !important;
-  grid-template-columns:36% 38% 26% !important;
+  grid-template-columns:44% 36% 20% !important;
   gap:0 !important;
   overflow:hidden !important;
   background-color:#151519 !important;
@@ -354,10 +354,10 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   justify-content:flex-start !important;
 }
 .griz-hq-logo{
-  width:min(620px,100%) !important;
-  height:300px !important;
-  max-width:620px !important;
-  max-height:300px !important;
+  width:min(760px,100%) !important;
+  height:320px !important;
+  max-width:760px !important;
+  max-height:320px !important;
   object-fit:contain !important;
   object-position:left center !important;
   filter:drop-shadow(0 8px 12px rgba(0,0,0,.68)) !important;
@@ -467,10 +467,10 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 @media(max-width:1250px){
   .brand-row{
     height:305px !important;
-    grid-template-columns:35% 40% 25% !important;
+    grid-template-columns:40% 39% 21% !important;
     padding:14px 24px !important;
   }
-  .griz-hq-logo{width:500px !important;height:270px !important}
+  .griz-hq-logo{width:560px !important;height:280px !important}
   .header-matchup{padding:0 10px !important}
   .header-team img{width:68px !important;height:68px !important;flex-basis:68px !important}
   .header-team strong{font-size:25px !important}
