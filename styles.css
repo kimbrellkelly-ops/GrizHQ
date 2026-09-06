@@ -2414,6 +2414,7 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 @media(max-width:800px){.ghistory-hero{grid-template-columns:1fr}.ghistory-hero-number{min-height:220px}.ghistory-feature-grid,.ghistory-champ-grid{grid-template-columns:1fr}.ghistory-stat-grid{grid-template-columns:repeat(2,1fr)}.ghistory-timeline:before{left:55px}.ghistory-timeline-item{grid-template-columns:80px 1fr;gap:18px}.ghistory-timeline-item:before{left:48px}.ghistory-year{font-size:25px}.ghistory-hero-copy{padding:28px 22px}.ghistory-feature{padding:23px}.ghistory-section-title{align-items:flex-start;gap:10px;flex-direction:column}}
 @media(max-width:520px){.ghistory-stat-grid{grid-template-columns:1fr 1fr}.ghistory-hero-number strong{font-size:95px}.ghistory-era-row{grid-template-columns:1fr}.ghistory-timeline:before{left:47px}.ghistory-timeline-item{grid-template-columns:67px 1fr;gap:16px}.ghistory-timeline-item:before{left:40px;width:15px;height:15px}.ghistory-year{font-size:21px}.ghistory-timeline-item h4{font-size:19px}.ghistory-timeline-item p{font-size:10px}}
 
+
 /* NEXT UP — opponent hub upgrade */
 .opponent-card{background:linear-gradient(135deg,#171719 0%,#202023 100%);padding:0;display:grid;grid-template-columns:minmax(300px,.95fr) 1.65fr;gap:0;overflow:hidden;border:1px solid #303034;box-shadow:0 18px 45px rgba(0,0,0,.08)}
 .opponent-identity{display:flex;align-items:center;gap:24px;padding:30px 30px 30px 28px;position:relative;min-height:220px;background:linear-gradient(135deg,#1b1b1d 0%,#242428 100%)}
@@ -2433,23 +2434,5 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .opponent-links b{font:900 20px/1 "Barlow Condensed",sans-serif;color:#fff;margin-top:24px}
 .opponent-links span{font-size:9px;line-height:1.45;color:#aaa;margin-top:6px;min-height:25px}
 .opponent-links em{font:900 8px/1 Inter,sans-serif;letter-spacing:1.2px;color:#fff;font-style:normal;margin-top:18px}
-@media(max-width:900px){
-  .opponent-card{grid-template-columns:1fr}
-  .opponent-identity{min-height:0;padding:24px}
-  .opponent-identity:after{display:none}
-  .opponent-links a{min-height:160px}
-}
-@media(max-width:700px){
-  .opponent-identity{gap:16px;padding:20px}
-  .opponent-logo-wrap{width:88px;height:88px;flex-basis:88px;border-width:4px}
-  .opponent-logo-wrap img{width:68px;height:68px}
-  .opponent-card h3{font-size:34px}
-  .opponent-kicker{font-size:8px;letter-spacing:1.2px}
-  .opponent-venue{font-size:8px;letter-spacing:.9px}
-  .opponent-card p{font-size:9px}
-  .opponent-links{grid-template-columns:1fr}
-  .opponent-links a{min-height:110px;padding:18px 20px;border-left:0;border-top:1px solid #35353a}
-  .opponent-links b{margin-top:8px;font-size:18px}
-  .opponent-links span{min-height:0}
-  .opponent-links em{margin-top:10px}
-}
+@media(max-width:900px){.opponent-card{grid-template-columns:1fr}.opponent-identity{min-height:0;padding:24px}.opponent-identity:after{display:none}.opponent-links a{min-height:160px}}
+@media(max-width:700px){.opponent-identity{gap:16px;padding:20px}.opponent-logo-wrap{width:88px;height:88px;flex-basis:88px;border-width:4px}.opponent-logo-wrap img{width:68px;height:68px}.opponent-card h3{font-size:34px}.opponent-kicker{font-size:8px;letter-spacing:1.2px}.opponent-venue{font-size:8px;letter-spacing:.9px}.opponent-card p{font-size:9px}.opponent-links{grid-template-columns:1fr}.opponent-links a{min-height:110px;padding:18px 20px;border-left:0;border-top:1px solid #35353a}.opponent-links b{margin-top:8px;font-size:18px}.opponent-links span{min-height:0}.opponent-links em{margin-top:10px}}
