@@ -1,0 +1,55 @@
+{
+  "updated": "2026-09-06T16:50:00Z",
+  "source": "Montana football news feed",
+  "stories": [
+    {
+      "title": "Gillman sets records as Griz roll past Bulldogs, 45-10",
+      "url": "https://gogriz.com/news/2026/9/5/football-gillman-sets-records-as-griz-roll-past-bulldogs-45-10",
+      "date": "Sep. 5, 2026",
+      "description": "Eli Gillman set a Montana record for career rushing touchdowns as the Griz rolled past Drake 45-10 and improved to 2-0.",
+      "badge": "TOP STORY",
+      "score": "45–10",
+      "short": "45–10"
+    },
+    {
+      "title": "Stripe the Stadium - What you should wear",
+      "url": "https://gogriz.com/news/2026/9/4/football-stripe-the-stadium-what-you-should-wear",
+      "date": "Sep. 4, 2026",
+      "description": "Find your section's color and get ready to stripe Washington-Grizzly Stadium for Drake week.",
+      "badge": "GAME DAY",
+      "short": "STR"
+    },
+    {
+      "title": "Griz look to build momentum against Drake",
+      "url": "https://gogriz.com/news/2026/9/1/football-griz-look-to-build-momentum-against-drake",
+      "date": "Sep. 1, 2026",
+      "description": "Montana entered Drake week 1-0, looking to build momentum before a challenging late-September road swing.",
+      "badge": "GAME PREVIEW",
+      "short": "PREV"
+    },
+    {
+      "title": "Mason named Big Sky Special Teams Player of the Week",
+      "url": "https://gogriz.com/news/2026/8/31/football-mason-named-big-sky-special-teams-player-of-the-week",
+      "date": "Aug. 31, 2026",
+      "description": "Jake Mason was named co-Special Teams Player of the Week after a standout performance against Southern Utah.",
+      "badge": "HONOR",
+      "short": "ST"
+    },
+    {
+      "title": "Griz outlast T-Birds in Kennedy’s debut",
+      "url": "https://gogriz.com/news/2026/8/30/football-griz-outlast-t-birds-in-kennedys-debut",
+      "date": "Aug. 30, 2026",
+      "description": "Bobby Kennedy won his Montana debut as the Griz held off Southern Utah 28-21 in the 2026 opener.",
+      "badge": "GAME STORY",
+      "short": "W"
+    },
+    {
+      "title": "Grizzly Insider returns in 2026",
+      "url": "https://gogriz.com/news/2026/8/26/football-grizzly-insider-returns-in-2026",
+      "date": "Aug. 26, 2026",
+      "description": "The weekly Grizzly Insider returns with football breakdowns, interviews and stories from around Grizzly Athletics.",
+      "badge": "INSIDER",
+      "short": "INS"
+    }
+  ]
+}

@@ -99,15 +99,18 @@ async function loadGrizData() {
     const updated = document.getElementById("data-updated");
     if (updated) updated.textContent = d.updated ? "DATA UPDATED " + new Date(d.updated).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}) : "";
 
-    if (Array.isArray(d.news) && d.news.length) {
-      const news = document.querySelectorAll("#news .auto-news");
-      d.news.slice(0, 3).forEach((item, i) => {
-        if (!news[i]) return;
-        const title = news[i].querySelector("h3"), small = news[i].querySelector("small"), p = news[i].querySelector("p");
-        if (title) title.innerHTML = `<a href="${item.url}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a>`;
-        if (small) small.textContent = item.date || "";
-        if (p) p.textContent = item.description || "Latest Montana football news.";
-      });
+    // News is intentionally separated from the core data layer. If news.json is unavailable, use the embedded fallback.
+    try {
+      const newsRes = await fetch("news.json?ts=" + Date.now(), {cache: "no-store"});
+      if (newsRes.ok) {
+        const newsData = await newsRes.json();
+        renderNewsroom(newsData.stories || newsData.news || d.news);
+      } else {
+        renderNewsroom(d.news);
+      }
+    } catch (newsErr) {
+      console.warn("Standalone news feed unavailable; using embedded fallback.", newsErr);
+      renderNewsroom(d.news);
     }
   } catch (e) {
     console.warn("Griz HQ data layer unavailable; using page fallback.", e);
@@ -130,6 +133,36 @@ function renderMiniPolls(coaches, media) {
   const wrap = document.getElementById("rankings-mini");
   if (!wrap || !Array.isArray(coaches) || !Array.isArray(media)) return;
   wrap.innerHTML = [coaches, media].map(poll => `<ol>${poll.slice(0,10).map(t => `<li class="${isMontanaGrizzlies(t) ? "griz" : ""}">${escapeHtml(t)}</li>`).join("")}</ol>`).join("");
+}
+
+function renderNewsroom(items) {
+  if (!Array.isArray(items) || !items.length) return;
+  const cards = [...document.querySelectorAll("#news .auto-news")];
+  items.slice(0, cards.length).forEach((item, i) => {
+    const card = cards[i];
+    const url = escapeHtml(item.url || "#");
+    const title = escapeHtml(item.title || "Latest Montana football news");
+    const desc = escapeHtml(item.description || "Latest Montana football coverage from Griz HQ.");
+    const date = escapeHtml(item.date || "");
+    const h3 = card.querySelector("h3");
+    const small = card.querySelector("small");
+    const p = card.querySelector("p");
+    const links = card.querySelectorAll("a");
+    if (h3) h3.textContent = item.title || "Latest Montana football news";
+    if (small) small.textContent = date;
+    if (p) p.textContent = item.description || "Latest Montana football coverage from Griz HQ.";
+    links.forEach(a => { a.href = item.url || "#"; a.textContent = a.classList.contains("news-feature-link") ? "READ THE STORY ↗" : a.textContent; });
+    if (card.dataset.newsIndex === "0") {
+      const em = card.querySelector(".news-feature-art em");
+      if (em && item.score) em.textContent = item.score;
+      const badge = card.querySelector(".news-feature-art span");
+      if (badge) badge.textContent = item.badge || "TOP STORY";
+    }
+    const tag = card.querySelector(".news-card-tag");
+    if (tag) tag.textContent = item.badge || tag.textContent;
+    const mark = card.querySelector(".news-list-mark");
+    if (mark) mark.textContent = item.short || mark.textContent;
+  });
 }
 function escapeHtml(s) { return String(s ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c])); }
 
@@ -328,41 +361,6 @@ async function renderFCSScoreboard(){
 
   const top25=Array.isArray(localData.fcs_top25)?localData.fcs_top25:(Array.isArray(localData.fcs_top20)?localData.fcs_top20:[]);
   const cachedScores=localData.fcs_scores || {};
-
-  // Live ESPN FCS feed with cached-data fallback. This keeps the scoreboard
-  // working even if the scheduled Python updater has not refreshed data.json.
-  async function fetchLiveFcsScores(w){
-    const urls=[
-      `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=500`,
-      `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=500`
-    ];
-    for(const url of urls){
-      try{
-        const r=await fetch(url,{cache:'no-store'});
-        if(!r.ok) continue;
-        const j=await r.json();
-        const events=(j.events||[]).map(ev=>{
-          const comps=ev.competitions||[];
-          const c=comps[0]||{};
-          const teams=(c.competitors||[]).map(x=>({
-            id:x.team?.id ? String(x.team.id) : '',
-            name:x.team?.displayName||x.team?.name||'',
-            short:x.team?.shortDisplayName||x.team?.abbreviation||'',
-            abbrev:x.team?.abbreviation||'',
-            homeAway:x.homeAway,
-            score:x.score==null?'':String(x.score)
-          }));
-          const state=c.status?.type?.state||ev.status?.type?.state||'pre';
-          const completed=!!(c.status?.type?.completed || ev.status?.type?.completed);
-          const detail=c.status?.type?.shortDetail||c.status?.type?.detail||ev.status?.type?.shortDetail||'';
-          const broadcasts=(c.broadcasts||[]).flatMap(b=>b.names||[]);
-          return {id:String(ev.id),date:ev.date,teams,state,completed,detail,broadcasts};
-        });
-        if(events.length) return events;
-      }catch(e){}
-    }
-    return null;
-  }
   const rankDate=document.getElementById('fcs-rankings-date');
   if(rankDate&&localData.fcs_rankings_date) rankDate.textContent='Stats Perform • '+localData.fcs_rankings_date;
 
@@ -379,24 +377,6 @@ async function renderFCSScoreboard(){
     const keys=new Set([norm(s),norm(tokens.join(' ')),norm(expanded.join(' '))]);
     return [...keys].filter(Boolean);
   }
-  // ESPN's names are not consistent across endpoints (e.g. Montana State,
-  // Montana St., Montana State Bobcats). Prefer ESPN team IDs, then fall back
-  // to normalized names/aliases so a naming change cannot hide a game.
-  const teamIds={
-    'montana':'149',
-    'montanastate':'147',
-    'idaho':'70',
-    'weberstate':'2692',
-    'easternwashington':'331',
-    'northernarizona':'2464',
-    'northerncolorado':'2458',
-    'idahostate':'304',
-    'calpoly':'13',
-    'southernutah':'253',
-    'utahtech':'3101',
-    'ucdavis':'302',
-    'portlandstate':'2502'
-  };
   const teamAliases={
     'montana':['montana','montanagrizzlies'],
     'montanastate':['montanastate','montanast','montanastatebobcats'],
@@ -410,56 +390,19 @@ async function renderFCSScoreboard(){
     'southernutah':['southernutah','southeasternutah','soutah','soututah','southernutahthunderbirds'],
     'utahtech':['utahtech','utahtechuniversity','utahtechtrailblazers'],
     'ucdavis':['ucdavis','ucdavisaggies'],
-    'portlandstate':['portlandstate','portlandst','portlandstatevikings'],
-    'westerncarolina':['westerncarolina','westerncarolinacatamounts'],
-    'abilenechristian':['abilenechristian','abilenechrstn','abilenechristianwildcats','acu'],
-    'stephenfaustin':['stephenfaustin','sfaustin','sfaustinlumberjacks','sfa','sfjacks','sf']
+    'portlandstate':['portlandstate','portlandst','portlandstatevikings']
   };
-  function canonicalTeamKey(s){
-    const keys=teamKeys(s);
-    for(const [key,variants] of Object.entries(teamAliases)){
-      const v=variants.map(norm);
-      if(keys.some(k=>v.includes(k))) return key;
-    }
-    return null;
-  }
-  function looseTeamMatch(a,b){
-    const ak=teamKeys(a), bk=teamKeys(b);
-    if(ak.some(k=>bk.includes(k))) return true;
-    const ca=canonicalTeamKey(a), cb=canonicalTeamKey(b);
-    if(ca && cb && ca===cb) return true;
-    // Handle common ESPN short forms for non-Big-Sky FCS teams.
-    const compact=x=>norm(x);
-    const special={
-      'abilenechrstn':'abilenechristian','acuwildcats':'abilenechristian',
-      'sfAustin':'stephenfaustin','sfaustin':'stephenfaustin','sfa':'stephenfaustin',
-      'westerncarolinacatamounts':'westerncarolina'
-    };
-    const aa=ak.map(k=>special[k]||k), bb=bk.map(k=>special[k]||k);
-    return aa.some(k=>bb.includes(k));
-  }
   function teamMatches(name,team){
-    if(!name || !team) return false;
-    // If either side is an ESPN team object, IDs are the most reliable match.
-    if(typeof name==='object' || typeof team==='object'){
-      const a=typeof name==='object'?name:null, b=typeof team==='object'?team:null;
-      if(a?.id && b?.id && String(a.id)===String(b.id)) return true;
-      const ak=canonicalTeamKey(a?.name||a?.short||a?.abbrev||'');
-      const bk=canonicalTeamKey(b?.name||b?.short||b?.abbrev||'');
-      return !!ak && ak===bk;
+    const nameKeys=teamKeys(name), teamKeysList=teamKeys(team);
+    if(nameKeys.some(k=>teamKeysList.includes(k))) return true;
+    for(const variants of Object.values(teamAliases)){
+      const v=variants.map(norm);
+      if(nameKeys.some(k=>v.includes(k)) && teamKeysList.some(k=>v.includes(k))) return true;
     }
-    if(looseTeamMatch(name,team)) return true;
-    const a=canonicalTeamKey(name), b=canonicalTeamKey(team);
-    return !!a && a===b;
-  }
-  function teamObjectMatches(canonical,team){
-    if(!team) return false;
-    const key=canonicalTeamKey(canonical) || norm(canonical);
-    if(team.id && teamIds[key] && String(team.id)===String(teamIds[key])) return true;
-    return teamMatches(canonical,team.name) || teamMatches(canonical,team.short) || teamMatches(canonical,team.abbrev);
+    return false;
   }
   function findTeamEvent(name,events){
-    return events.find(ev=>(ev.teams||[]).some(t=>teamObjectMatches(name,t)))||null;
+    return events.find(ev=>(ev.teams||[]).some(t=>teamMatches(name,t.name)||teamMatches(name,t.short)))||null;
   }
   function statusText(ev){
     if(!ev)return 'NO GAME';
@@ -474,7 +417,7 @@ async function renderFCSScoreboard(){
   }
   function scoreLine(ev,name){
     if(!ev)return '<small>NO GAME</small>';
-    const me=(ev.teams||[]).find(x=>teamObjectMatches(name,x));
+    const me=(ev.teams||[]).find(x=>teamMatches(name,x.name)||teamMatches(name,x.short));
     if(!me)return '<small>'+escapeHtml(statusText(ev))+'</small>';
     const other=(ev.teams||[]).find(x=>x!==me);
     if(ev.completed||ev.state==='in'){const other=(ev.teams||[]).find(x=>x!==me);return `<span class="score-big">${escapeHtml(me.score??'0')}–${escapeHtml(other?.score??'0')}</span><small>${escapeHtml(statusText(ev))}</small>`;}
@@ -496,22 +439,16 @@ async function renderFCSScoreboard(){
     topEl.innerHTML='<div class="fcs-loading">Loading Top 25…</div>';
     if(bigSkyEl)bigSkyEl.innerHTML='<div class="fcs-loading">Loading Big Sky games…</div>';
     if(bigSkyLabelEl)bigSkyLabelEl.textContent=w[2]+' • All 13 teams';
-    let events=eventsForWeek(w);
-    const liveEvents=await fetchLiveFcsScores(w);
-    if(liveEvents){
-      events=liveEvents;
-      statusEl.textContent=`${events.length} FCS games • live ESPN feed`;
-    }else{
-      statusEl.textContent=`${events.length} FCS games • cached feed`;
-    }
+    const events=eventsForWeek(w);
+    statusEl.textContent=`${events.length} FCS games • cached feed`;
 
     topEl.innerHTML=top25.slice(0,25).map(t=>{
       const ev=findTeamEvent(t.team,events);
       const isGriz=teamMatches('Montana',t.team);
-      const isBigSky=bigSkyTeams.some(x=>teamMatches(x,t.team));
       const detail=ev?gameLabel(ev):null;
       const matchup=detail?`${escapeHtml(detail.away)} @ ${escapeHtml(detail.home)}`:'No game this week';
-      const cardClass=isGriz?'griz':(isBigSky?'bigsky':'');
+      // In the FCS Top 25, highlight Montana only — not other Big Sky teams.
+      const cardClass=isGriz?'griz':'';
       return `<div class="fcs-rank-card ${cardClass}"><span class="fcs-rank">${escapeHtml(t.rank)}</span><div class="fcs-rank-team"><b>${escapeHtml(t.team)}</b><small>${escapeHtml(t.record||'')} • ${matchup}</small></div><span class="fcs-rank-score">${scoreLine(ev,t.team)}</span></div>`;
     }).join('');
 
