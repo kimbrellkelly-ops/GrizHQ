@@ -113,23 +113,15 @@ async function loadGrizData() {
     console.warn("Griz HQ data layer unavailable; using page fallback.", e);
   }
 }
-function isMontanaGrizzlies(t) {
-  const s = String(t || "").toLowerCase().trim();
-  // Highlight Montana only. Do not match Montana State/Bobcats, including abbreviations like "Montana St.".
-  if (!s.includes("montana")) return false;
-  if (/\bmontana\s+(?:state|st\.?)(?:\b|\.)/i.test(s)) return false;
-  if (s.includes("bobcats")) return false;
-  return true;
-}
 function renderPoll(id, teams) {
   const el = document.getElementById(id);
   if (!el || !Array.isArray(teams)) return;
-  el.innerHTML = teams.slice(0,20).map(t => `<li class="${isMontanaGrizzlies(t) ? "griz" : ""}">${escapeHtml(t)}</li>`).join("");
+  el.innerHTML = teams.slice(0,20).map(t => `<li class="${String(t).toLowerCase().includes("montana") && !String(t).toLowerCase().includes("state") ? "griz" : ""}">${escapeHtml(t)}</li>`).join("");
 }
 function renderMiniPolls(coaches, media) {
   const wrap = document.getElementById("rankings-mini");
   if (!wrap || !Array.isArray(coaches) || !Array.isArray(media)) return;
-  wrap.innerHTML = [coaches, media].map(poll => `<ol>${poll.slice(0,10).map(t => `<li class="${isMontanaGrizzlies(t) ? "griz" : ""}">${escapeHtml(t)}</li>`).join("")}</ol>`).join("");
+  wrap.innerHTML = [coaches, media].map(poll => `<ol>${poll.slice(0,10).map(t => `<li class="${String(t).toLowerCase().includes("montana") && !String(t).toLowerCase().includes("state") ? "griz" : ""}">${escapeHtml(t)}</li>`).join("")}</ol>`).join("");
 }
 function escapeHtml(s) { return String(s ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c])); }
 
@@ -140,9 +132,6 @@ async function renderLatestPressConference(){
     const d=await (await fetch("data.json?ts="+Date.now(),{cache:"no-store"})).json();
     const m=d.latest_press_conference;
     if(!m)return;
-    // Never display Montana State/Bobcats press conferences in the Griz HQ slot.
-    const pressTitle=String(m.title||'').toLowerCase();
-    if(pressTitle.includes('montana state') || pressTitle.includes('bobcats')) return;
     const title=document.getElementById("latest-press-title");
     const date=document.getElementById("latest-press-date");
     const link=document.getElementById("latest-press-link");
@@ -344,6 +333,24 @@ async function renderFCSScoreboard(){
     const keys=new Set([norm(s),norm(tokens.join(' ')),norm(expanded.join(' '))]);
     return [...keys].filter(Boolean);
   }
+  // ESPN's names are not consistent across endpoints (e.g. Montana State,
+  // Montana St., Montana State Bobcats). Prefer ESPN team IDs, then fall back
+  // to normalized names/aliases so a naming change cannot hide a game.
+  const teamIds={
+    'montana':'149',
+    'montanastate':'147',
+    'idaho':'70',
+    'weberstate':'2692',
+    'easternwashington':'331',
+    'northernarizona':'2464',
+    'northerncolorado':'2458',
+    'idahostate':'304',
+    'calpoly':'13',
+    'southernutah':'253',
+    'utahtech':'3101',
+    'ucdavis':'302',
+    'portlandstate':'2502'
+  };
   const teamAliases={
     'montana':['montana','montanagrizzlies'],
     'montanastate':['montanastate','montanast','montanastatebobcats'],
@@ -357,19 +364,56 @@ async function renderFCSScoreboard(){
     'southernutah':['southernutah','southeasternutah','soutah','soututah','southernutahthunderbirds'],
     'utahtech':['utahtech','utahtechuniversity','utahtechtrailblazers'],
     'ucdavis':['ucdavis','ucdavisaggies'],
-    'portlandstate':['portlandstate','portlandst','portlandstatevikings']
+    'portlandstate':['portlandstate','portlandst','portlandstatevikings'],
+    'westerncarolina':['westerncarolina','westerncarolinacatamounts'],
+    'abilenechristian':['abilenechristian','abilenechrstn','abilenechristianwildcats','acu'],
+    'stephenfaustin':['stephenfaustin','sfaustin','sfaustinlumberjacks','sfa','sfjacks','sf']
   };
-  function teamMatches(name,team){
-    const nameKeys=teamKeys(name), teamKeysList=teamKeys(team);
-    if(nameKeys.some(k=>teamKeysList.includes(k))) return true;
-    for(const variants of Object.values(teamAliases)){
+  function canonicalTeamKey(s){
+    const keys=teamKeys(s);
+    for(const [key,variants] of Object.entries(teamAliases)){
       const v=variants.map(norm);
-      if(nameKeys.some(k=>v.includes(k)) && teamKeysList.some(k=>v.includes(k))) return true;
+      if(keys.some(k=>v.includes(k))) return key;
     }
-    return false;
+    return null;
+  }
+  function looseTeamMatch(a,b){
+    const ak=teamKeys(a), bk=teamKeys(b);
+    if(ak.some(k=>bk.includes(k))) return true;
+    const ca=canonicalTeamKey(a), cb=canonicalTeamKey(b);
+    if(ca && cb && ca===cb) return true;
+    // Handle common ESPN short forms for non-Big-Sky FCS teams.
+    const compact=x=>norm(x);
+    const special={
+      'abilenechrstn':'abilenechristian','acuwildcats':'abilenechristian',
+      'sfAustin':'stephenfaustin','sfaustin':'stephenfaustin','sfa':'stephenfaustin',
+      'westerncarolinacatamounts':'westerncarolina'
+    };
+    const aa=ak.map(k=>special[k]||k), bb=bk.map(k=>special[k]||k);
+    return aa.some(k=>bb.includes(k));
+  }
+  function teamMatches(name,team){
+    if(!name || !team) return false;
+    // If either side is an ESPN team object, IDs are the most reliable match.
+    if(typeof name==='object' || typeof team==='object'){
+      const a=typeof name==='object'?name:null, b=typeof team==='object'?team:null;
+      if(a?.id && b?.id && String(a.id)===String(b.id)) return true;
+      const ak=canonicalTeamKey(a?.name||a?.short||a?.abbrev||'');
+      const bk=canonicalTeamKey(b?.name||b?.short||b?.abbrev||'');
+      return !!ak && ak===bk;
+    }
+    if(looseTeamMatch(name,team)) return true;
+    const a=canonicalTeamKey(name), b=canonicalTeamKey(team);
+    return !!a && a===b;
+  }
+  function teamObjectMatches(canonical,team){
+    if(!team) return false;
+    const key=canonicalTeamKey(canonical) || norm(canonical);
+    if(team.id && teamIds[key] && String(team.id)===String(teamIds[key])) return true;
+    return teamMatches(canonical,team.name) || teamMatches(canonical,team.short) || teamMatches(canonical,team.abbrev);
   }
   function findTeamEvent(name,events){
-    return events.find(ev=>(ev.teams||[]).some(t=>teamMatches(name,t.name)||teamMatches(name,t.short)))||null;
+    return events.find(ev=>(ev.teams||[]).some(t=>teamObjectMatches(name,t)))||null;
   }
   function statusText(ev){
     if(!ev)return 'NO GAME';
@@ -384,7 +428,7 @@ async function renderFCSScoreboard(){
   }
   function scoreLine(ev,name){
     if(!ev)return '<small>NO GAME</small>';
-    const me=(ev.teams||[]).find(x=>teamMatches(name,x.name)||teamMatches(name,x.short));
+    const me=(ev.teams||[]).find(x=>teamObjectMatches(name,x));
     if(!me)return '<small>'+escapeHtml(statusText(ev))+'</small>';
     const other=(ev.teams||[]).find(x=>x!==me);
     if(ev.completed||ev.state==='in'){const other=(ev.teams||[]).find(x=>x!==me);return `<span class="score-big">${escapeHtml(me.score??'0')}–${escapeHtml(other?.score??'0')}</span><small>${escapeHtml(statusText(ev))}</small>`;}
@@ -412,10 +456,10 @@ async function renderFCSScoreboard(){
     topEl.innerHTML=top25.slice(0,25).map(t=>{
       const ev=findTeamEvent(t.team,events);
       const isGriz=teamMatches('Montana',t.team);
+      const isBigSky=bigSkyTeams.some(x=>teamMatches(x,t.team));
       const detail=ev?gameLabel(ev):null;
       const matchup=detail?`${escapeHtml(detail.away)} @ ${escapeHtml(detail.home)}`:'No game this week';
-      // In the FCS Top 25, highlight Montana only — not other Big Sky teams.
-      const cardClass=isGriz?'griz':'';
+      const cardClass=isGriz?'griz':(isBigSky?'bigsky':'');
       return `<div class="fcs-rank-card ${cardClass}"><span class="fcs-rank">${escapeHtml(t.rank)}</span><div class="fcs-rank-team"><b>${escapeHtml(t.team)}</b><small>${escapeHtml(t.record||'')} • ${matchup}</small></div><span class="fcs-rank-score">${scoreLine(ev,t.team)}</span></div>`;
     }).join('');
 
@@ -505,40 +549,23 @@ function renderStatsDashboard(stats) {
   renderStatList("stats-defense", stats.defense);
   renderStatList("stats-situational", stats.situational, true);
 
-  const compare = document.getElementById("stats-compare");
-  if (compare && Array.isArray(stats.compare)) {
-    compare.innerHTML = `<div class="stats-compare-head"><span>TEAM STAT</span><b>MONTANA</b><b>OPPONENTS</b><strong>DIFF</strong></div>` +
-      stats.compare.map(r => `<div class="stats-compare-row"><span>${escapeHtml(r.label)}</span><b>${escapeHtml(r.montana)}</b><b>${escapeHtml(r.opponents)}</b><strong class="${String(r.diff||'').startsWith('+') ? 'positive' : String(r.diff||'').startsWith('-') ? 'negative' : ''}">${escapeHtml(r.diff || '—')}</strong></div>`).join("");
-  }
-
   const leaders = document.getElementById("stats-leaders");
   if (leaders && stats.leaders) {
     const groups = [
       ["PASSING", stats.leaders.passing || []],
       ["RUSHING", stats.leaders.rushing || []],
       ["RECEIVING", stats.leaders.receiving || []],
-      ["TACKLES", stats.leaders.tackles || stats.leaders.defense || []],
-      ["TFL / SACKS", stats.leaders.pressure || []],
-      ["SPECIAL TEAMS", stats.leaders.special || []]
+      ["DEFENSE", stats.leaders.defense || []]
     ];
     leaders.innerHTML = groups.map(([label,items]) => {
       const top = items[0] || {player:"—",line:"No stats yet",extra:""};
-      return `<div class="leader-card"><div class="eyebrow">${label}</div><h4>${escapeHtml(top.player)}</h4><p>${escapeHtml(top.line)}</p><small>${escapeHtml(top.extra || "")}</small>${items.length>1 ? items.slice(1,5).map(i=>`<div class="leader-more"><b>${escapeHtml(i.player)}</b><span>${escapeHtml(i.line)}</span></div>`).join("") : ""}</div>`;
-    }).join("");
-  }
-
-  const trends = document.getElementById("stats-trends");
-  if (trends && Array.isArray(stats.game_log)) {
-    const maxY = Math.max(1, ...stats.game_log.map(g => Number(g.montana_yards || 0)), ...stats.game_log.map(g => Number(g.opponent_yards || 0)));
-    trends.innerHTML = stats.game_log.map(g => {
-      const my = Number(g.montana_yards || 0), oy = Number(g.opponent_yards || 0);
-      return `<div class="trend-row"><div class="trend-meta"><b>${escapeHtml(g.week || "")}</b><span>${escapeHtml(g.opponent || "")}</span><strong>${escapeHtml(g.result || "")}</strong></div><div class="trend-bars"><div><span>MT</span><i style="width:${Math.round(my/maxY*100)}%"></i><b>${my}</b></div><div><span>OPP</span><i style="width:${Math.round(oy/maxY*100)}%"></i><b>${oy}</b></div></div></div>`;
+      return `<div class="leader-card"><div class="eyebrow">${label}</div><h4>${escapeHtml(top.player)}</h4><p>${escapeHtml(top.line)}</p><small>${escapeHtml(top.extra || "")}</small>${items.length>1 ? items.slice(1).map(i=>`<div class="leader-more"><b>${escapeHtml(i.player)}</b><span>${escapeHtml(i.line)}</span></div>`).join("") : ""}</div>`;
     }).join("");
   }
 
   const log = document.getElementById("stats-game-log");
   if (log && Array.isArray(stats.game_log)) {
-    log.innerHTML = stats.game_log.map(g => `<div class="game-log-row"><span class="week">${escapeHtml(g.week || "")}</span><span class="opp">${escapeHtml(g.opponent || "")}</span><span class="result ${String(g.result||"").startsWith("W") ? "win" : ""}">${escapeHtml(g.result || "")}</span><span class="yards">${escapeHtml(g.montana_yards || "—")}–${escapeHtml(g.opponent_yards || "—")}</span><span class="to">${escapeHtml(g.turnovers || "—")}</span></div><div class="game-log-note">${escapeHtml(g.notes || "")}</div>`).join("");
+    log.innerHTML = stats.game_log.map(g => `<div class="game-log-row"><span class="week">${escapeHtml(g.week || "")}</span><span class="opp">${escapeHtml(g.opponent || "")}</span><span class="result ${String(g.result||"").startsWith("W") ? "win" : ""}">${escapeHtml(g.result || "")}</span><span class="yards">YDS ${escapeHtml(g.yards || "—")}</span><span class="to">TO ${escapeHtml(g.turnovers || "—")}</span></div><div class="game-log-note">${escapeHtml(g.notes || "")}</div>`).join("");
   }
 }
 
