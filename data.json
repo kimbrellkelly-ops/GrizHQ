@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T05:20:13.538892+00:00",
+  "updated": "2026-09-06T05:31:17.754308+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -5131,64 +5131,6 @@
         ]
       },
       {
-        "id": "401860879",
-        "date": "2026-09-06T01:30Z",
-        "name": "Portland State Vikings at San Diego State Aztecs",
-        "teams": [
-          {
-            "id": "21",
-            "name": "San Diego State Aztecs",
-            "short": "San Diego St",
-            "abbrev": "SDSU",
-            "homeAway": "home",
-            "score": "53"
-          },
-          {
-            "id": "2502",
-            "name": "Portland State Vikings",
-            "short": "Portland St",
-            "abbrev": "PRST",
-            "homeAway": "away",
-            "score": "20"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "USA Net"
-        ]
-      },
-      {
-        "id": "401856774",
-        "date": "2026-09-06T02:00Z",
-        "name": "Morgan State Bears at Arizona State Sun Devils",
-        "teams": [
-          {
-            "id": "9",
-            "name": "Arizona State Sun Devils",
-            "short": "Arizona St",
-            "abbrev": "ASU",
-            "homeAway": "home",
-            "score": "70"
-          },
-          {
-            "id": "2415",
-            "name": "Morgan State Bears",
-            "short": "Morgan St",
-            "abbrev": "MORG",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
         "id": "401866411",
         "date": "2026-09-06T02:00Z",
         "name": "Mississippi Valley State Delta Devils at Sacramento State Hornets",
@@ -5199,7 +5141,7 @@
             "short": "Sacramento St",
             "abbrev": "SAC",
             "homeAway": "home",
-            "score": "45"
+            "score": "52"
           },
           {
             "id": "2400",
@@ -5212,7 +5154,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:52 - 4th",
+        "detail": "1:47 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5241,7 +5183,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:50 - 4th",
+        "detail": "1:49 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7581,6 +7523,64 @@
             "name": "Northern Arizona Lumberjacks",
             "short": "N Arizona",
             "abbrev": "NAU",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401860879",
+        "date": "2026-09-06T01:30Z",
+        "name": "Portland State Vikings at San Diego State Aztecs",
+        "teams": [
+          {
+            "id": "21",
+            "name": "San Diego State Aztecs",
+            "short": "San Diego St",
+            "abbrev": "SDSU",
+            "homeAway": "home",
+            "score": "53"
+          },
+          {
+            "id": "2502",
+            "name": "Portland State Vikings",
+            "short": "Portland St",
+            "abbrev": "PRST",
+            "homeAway": "away",
+            "score": "20"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "USA Net"
+        ]
+      },
+      {
+        "id": "401856774",
+        "date": "2026-09-06T02:00Z",
+        "name": "Morgan State Bears at Arizona State Sun Devils",
+        "teams": [
+          {
+            "id": "9",
+            "name": "Arizona State Sun Devils",
+            "short": "Arizona St",
+            "abbrev": "ASU",
+            "homeAway": "home",
+            "score": "70"
+          },
+          {
+            "id": "2415",
+            "name": "Morgan State Bears",
+            "short": "Morgan St",
+            "abbrev": "MORG",
             "homeAway": "away",
             "score": "7"
           }
@@ -27285,7 +27285,7 @@
       }
     ]
   },
-  "fcs_scores_updated": "2026-09-06T05:20:23.922642+00:00",
+  "fcs_scores_updated": "2026-09-06T05:31:23.739884+00:00",
   "latest_press_conference": {
     "title": "Montana State press conference – Brent Vigen, Jabez Woods, Zac Crews after 51-24 win over Butler",
     "date": "Sun, 06 Sep 2026 05:09:52 +0000",
