@@ -1,6 +1,79 @@
 {
-  "updated": "2026-09-06T20:23:34.515943+00:00",
-  "posts": [],
+  "updated": "2026-09-06T20:20:00+00:00",
+  "posts": [
+    {
+      "title": "Montana Griz press conference - Bobby Kennedy, Eli Gillman & Tyler King plus Drake’s Matt Walker",
+      "url": "https://www.youtube.com/watch?v=wj5xtQfNVN8",
+      "image": "https://i.ytimg.com/vi/wj5xtQfNVN8/hqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana Griz video from Skyline Sports.",
+      "date": "Sep. 6, 2026",
+      "platform": "youtube",
+      "youtube_id": "wj5xtQfNVN8"
+    },
+    {
+      "title": "SUU ball control thwarting the Griz offensive production?",
+      "url": "https://www.youtube.com/watch?v=akKwR4C_V9M",
+      "image": "https://i.ytimg.com/vi/akKwR4C_V9M/hqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana Griz video from Skyline Sports.",
+      "date": "Sep. 5, 2026",
+      "platform": "youtube",
+      "youtube_id": "akKwR4C_V9M"
+    },
+    {
+      "title": "Big Sky Breakdown - Griz standouts TE Reese Brooks, OL Torin Jeske, DT Cooper Buffington",
+      "url": "https://www.youtube.com/watch?v=jaXv8eeCO-E",
+      "image": "https://i.ytimg.com/vi/jaXv8eeCO-E/hqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana Griz video from Skyline Sports.",
+      "date": "Sep. 3, 2026",
+      "platform": "youtube",
+      "youtube_id": "jaXv8eeCO-E"
+    },
+    {
+      "title": "Talkin’ Schmidt - Top 3 Griz players from season-opening + best/worst of BK debut",
+      "url": "https://www.youtube.com/watch?v=9BjGfVWVUfU",
+      "image": "https://i.ytimg.com/vi/9BjGfVWVUfU/hqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana Griz video from Skyline Sports.",
+      "date": "Sep. 3, 2026",
+      "platform": "youtube",
+      "youtube_id": "9BjGfVWVUfU"
+    },
+    {
+      "title": "Montana Griz press conference - Bobby Kennedy, Braeden Orlandi & Dyllan Drummond",
+      "url": "https://www.youtube.com/watch?v=RsaQNx-3pfQ",
+      "image": "https://i.ytimg.com/vi/RsaQNx-3pfQ/hqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana Griz video from Skyline Sports.",
+      "date": "Aug. 31, 2026",
+      "platform": "youtube",
+      "youtube_id": "RsaQNx-3pfQ"
+    },
+    {
+      "title": "No. 2 Montana outlasts Southern Utah - SUU’s Fitzgerald, UM’s Kennedy & Griz players",
+      "url": "https://www.youtube.com/watch?v=3DLykMBKQLI",
+      "image": "https://i.ytimg.com/vi/3DLykMBKQLI/hqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana Griz video from Skyline Sports.",
+      "date": "Aug. 30, 2026",
+      "platform": "youtube",
+      "youtube_id": "3DLykMBKQLI"
+    }
+  ],
   "profiles": [
     {
       "name": "Montana Griz Football on X",
