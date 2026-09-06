@@ -35,6 +35,24 @@ EXCLUDE_TERMS = (
 
 IMAGE_CACHE = {}
 
+VIDEO_RE = re.compile(r"(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=|shorts/)|youtu\.be/)([A-Za-z0-9_-]{11})", re.I)
+
+
+def extract_youtube_id(text):
+    match = VIDEO_RE.search(text or "")
+    return match.group(1) if match else ""
+
+
+def video_thumbnail(video_id):
+    return f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg" if video_id else ""
+
+
+def looks_like_video(title, url="", text=""):
+    hay = f"{title} {url} {text}".lower()
+    return bool(extract_youtube_id(hay) or any(term in hay for term in (
+        "watch –", "watch -", "video", "press conference", "interview", "podcast", "postgame", "post-game", "highlights"
+    )))
+
 
 def clean(value):
     return re.sub(r"\s+", " ", html.unescape(value or "")).strip()
@@ -133,11 +151,15 @@ def fetch_article_metadata(url):
     if url in IMAGE_CACHE:
         return IMAGE_CACHE[url]
 
-    result = {"image": "", "published_at": ""}
+    result = {"image": "", "published_at": "", "youtube_id": "", "video_thumbnail": ""}
     try:
         response = requests.get(url, headers=HEADERS, timeout=20, allow_redirects=True)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
+
+        result["youtube_id"] = extract_youtube_id(response.text)
+        if result["youtube_id"]:
+            result["video_thumbnail"] = video_thumbnail(result["youtube_id"])
 
         for attrs in (
             {"property": "og:image"},
@@ -194,9 +216,11 @@ def parse_rss(source, url):
             title, publisher = title.rsplit(" - ", 1)
 
         dt = parse_date(pub)
-        image = image_from_rss_item(item, link)
-        if not image:
-            image = fetch_article_metadata(link).get("image", "")
+        rss_image = image_from_rss_item(item, link)
+        meta = fetch_article_metadata(link)
+        image = rss_image or meta.get("image", "")
+        youtube_id = meta.get("youtube_id", "")
+        is_video = looks_like_video(title, link, desc) or bool(youtube_id)
 
         items.append({
             "title": clean(title),
@@ -208,6 +232,10 @@ def parse_rss(source, url):
             "badge": category(title),
             "short": category(title)[:4].upper(),
             "image": image,
+            "is_video": is_video,
+            "youtube_id": youtube_id,
+            "video_url": f"https://www.youtube.com/watch?v={youtube_id}" if youtube_id else (link if is_video else ""),
+            "video_thumbnail": meta.get("video_thumbnail", "") or image,
         })
     return items
 
@@ -243,6 +271,8 @@ def parse_skyline():
         if dt == datetime.min.replace(tzinfo=timezone.utc):
             continue
 
+        youtube_id = meta.get("youtube_id", "")
+        is_video = looks_like_video(title, href, context) or bool(youtube_id)
         items.append({
             "title": title,
             "url": href,
@@ -253,6 +283,10 @@ def parse_skyline():
             "badge": category(title),
             "short": category(title)[:4].upper(),
             "image": meta.get("image", ""),
+            "is_video": is_video,
+            "youtube_id": youtube_id,
+            "video_url": f"https://www.youtube.com/watch?v={youtube_id}" if youtube_id else (href if is_video else ""),
+            "video_thumbnail": meta.get("video_thumbnail", "") or meta.get("image", ""),
         })
         seen.add(href)
         if len(items) >= 12:
@@ -285,14 +319,25 @@ def dedupe_and_sort(stories):
         incoming_date = parse_date(story.get("published_at") or story.get("date"))
         current_date = parse_date(current.get("published_at") or current.get("date")) if current else datetime.min.replace(tzinfo=timezone.utc)
         if current is None or incoming_date >= current_date:
-            if current and not story.get("image"):
-                story["image"] = current.get("image", "")
+            if current:
+                if not story.get("image"):
+                    story["image"] = current.get("image", "")
+                for key in ("is_video", "youtube_id", "video_url", "video_thumbnail"):
+                    if not story.get(key) and current.get(key):
+                        story[key] = current.get(key)
             story["title"] = title
             story["url"] = url
             story["description"] = clean(story.get("description"))[:220]
             story["badge"] = story.get("badge") or category(title)
             story["short"] = story.get("short") or story["badge"][:4].upper()
             story["image"] = valid_image(story.get("image", ""))
+            story["is_video"] = bool(story.get("is_video") or story.get("youtube_id") or looks_like_video(title, url, story.get("description", "")))
+            story["youtube_id"] = clean(story.get("youtube_id", ""))
+            story["video_url"] = clean(story.get("video_url", ""))
+            story["video_thumbnail"] = valid_image(story.get("video_thumbnail", "")) or story.get("image", "")
+            if story["youtube_id"]:
+                story["video_url"] = f"https://www.youtube.com/watch?v={story['youtube_id']}"
+                story["video_thumbnail"] = video_thumbnail(story["youtube_id"])
             by_key[identity] = story
 
     result = list(by_key.values())

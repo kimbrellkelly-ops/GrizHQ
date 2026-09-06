@@ -1,6 +1,6 @@
 {
   "updated": "2026-09-06T20:00:00Z",
-  "source": "Griz HQ multi-source football news hub",
+  "source": "Griz HQ multi-source football news hub with automatic article images and video detection",
   "stories": [
     {
       "title": "Give Gillman the crown: Griz ride RBs 4 touchdowns to win over Drake",
@@ -11,7 +11,11 @@
       "badge": "ANALYSIS",
       "short": "ANAL",
       "source": "Daily Inter Lake",
-      "image": "hero.jpg"
+      "image": "hero.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "hero.jpg"
     },
     {
       "title": "Gillman sets records as Griz roll past Bulldogs, 45-10",
@@ -23,7 +27,11 @@
       "score": "45–10",
       "short": "GAME",
       "source": "GoGriz",
-      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/9/5/20260905_fb_v_Drake_4405_rb_AFMpW.jpg"
+      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/9/5/20260905_fb_v_Drake_4405_rb_AFMpW.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/9/5/20260905_fb_v_Drake_4405_rb_AFMpW.jpg"
     },
     {
       "title": "Gillman breaks record as Griz overcome penalties to cruise past Drake",
@@ -34,7 +42,11 @@
       "badge": "ANALYSIS",
       "short": "ANAL",
       "source": "Skyline Sports",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Bobby-Kennedy-on-sideline-with-team-and-Jaylen-Johnson-780x470.jpeg"
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Bobby-Kennedy-on-sideline-with-team-and-Jaylen-Johnson-780x470.jpeg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Bobby-Kennedy-on-sideline-with-team-and-Jaylen-Johnson-780x470.jpeg"
     },
     {
       "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake's Matt Walker",
@@ -45,7 +57,11 @@
       "badge": "INSIDER",
       "short": "LIVE",
       "source": "Skyline Sports",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg"
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg",
+      "is_video": true,
+      "video_url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg",
+      "youtube_id": ""
     },
     {
       "title": "Trailblazers Drop In-State Duel at BYU on Saturday Night",
@@ -56,7 +72,11 @@
       "badge": "OPPONENT",
       "short": "OPP",
       "source": "Utah Tech Athletics",
-      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/dixieathletics.com/images/2026/9/5/utfb_byuwrap.jpg"
+      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/dixieathletics.com/images/2026/9/5/utfb_byuwrap.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/dixieathletics.com/images/2026/9/5/utfb_byuwrap.jpg"
     },
     {
       "title": "Stripe the Stadium - What you should wear",
@@ -67,7 +87,11 @@
       "badge": "GAME DAY",
       "short": "GAME",
       "source": "GoGriz",
-      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2024/9/21/_TM21627_2.jpg"
+      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2024/9/21/_TM21627_2.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2024/9/21/_TM21627_2.jpg"
     },
     {
       "title": "Mason named Big Sky Special Teams Player of the Week",
@@ -78,7 +102,11 @@
       "badge": "HONOR",
       "short": "HON",
       "source": "GoGriz",
-      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/31/Mason_ST_POW_Web.png"
+      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/31/Mason_ST_POW_Web.png",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/31/Mason_ST_POW_Web.png"
     },
     {
       "title": "Griz outlast T-Birds in Kennedy's debut",
@@ -89,7 +117,11 @@
       "badge": "GAME STORY",
       "short": "GAME",
       "source": "GoGriz",
-      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/30/20260829_fbvssouthernutah_0125.jpg"
+      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/30/20260829_fbvssouthernutah_0125.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/30/20260829_fbvssouthernutah_0125.jpg"
     }
   ]
 }
