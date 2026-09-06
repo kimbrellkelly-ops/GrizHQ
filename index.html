@@ -430,15 +430,13 @@
   const sourceLabel=s=>String(s||'GRIZ HQ').toUpperCase();
   const shortType=s=>{const t=cleanType(s); return t==='GAME STORY'?'GAME':t==='GAME DAY'?'GAME DAY':t==='RECRUITING'?'RECRUIT':t==='HONOR'?'HONOR':t==='INSIDER'?'INSIDER':t==='ANALYSIS'?'ANALYSIS':t==='OPPONENT'?'OPPONENT':'GRIZ';};
   const imgUrl=s=>String(s||'').trim()||'hero.jpg';
-  const imageProxy=url=>{const u=String(url||'').trim();return u&&/^https?:\/\//i.test(u)?`https://wsrv.nl/?url=${encodeURIComponent(u)}&w=1400&output=jpg`:u;};
+  const imageProxy=(url,provider)=>{const u=String(url||'').trim();if(!u||!/^https?:\/\//i.test(u))return u;const base=provider===2?'https://wsrv.nl/?url=':'https://images.weserv.nl/?url=';return `${base}${encodeURIComponent(u)}&w=1400&output=jpg`;};
   window.grizHQImageFallback=(img)=>{
     if(!img)return;
-    const original=img.dataset.originalSrc||img.src||'';
-    if(!img.dataset.proxyTried && /^https?:\/\//i.test(original)){
-      img.dataset.proxyTried='1';
-      img.src=imageProxy(original);
-      return;
-    }
+    const original=img.dataset.originalSrc||'';
+    const stage=Number(img.dataset.imageStage||0);
+    if(original && stage===0){img.dataset.imageStage='1';img.src=imageProxy(original,1);return;}
+    if(original && stage===1){img.dataset.imageStage='2';img.src=imageProxy(original,2);return;}
     img.onerror=null;
     img.src='hero.jpg';
   };
