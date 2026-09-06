@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T20:36:38.377875+00:00",
+  "updated": "2026-09-06T20:45:14.591864+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -9869,7 +9869,7 @@
       },
       {
         "id": "401868195",
-        "date": "2026-09-12T23:30Z",
+        "date": "2026-09-12T23:00Z",
         "name": "Tennessee State Tigers at Alabama A&M Bulldogs",
         "teams": [
           {
@@ -9891,7 +9891,7 @@
         ],
         "state": "pre",
         "completed": false,
-        "detail": "9/12 - 7:30 PM EDT",
+        "detail": "9/12 - 7:00 PM EDT",
         "broadcasts": []
       },
       {
@@ -27396,5 +27396,5 @@
     "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-06T20:36:47.558382+00:00"
+  "fcs_scores_updated": "2026-09-06T20:45:27.671412+00:00"
 }
