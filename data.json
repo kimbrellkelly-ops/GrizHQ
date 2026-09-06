@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T04:37:32.183497+00:00",
+  "updated": "2026-09-06T04:47:22.736078+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -5102,33 +5102,6 @@
     ],
     "2026-09-03": [
       {
-        "id": "401868297",
-        "date": "2026-09-05T23:00Z",
-        "name": "Miles College Golden Bears at Alabama A&M Bulldogs",
-        "teams": [
-          {
-            "id": "2010",
-            "name": "Alabama A&M Bulldogs",
-            "short": "Alabama A&M",
-            "abbrev": "AAMU",
-            "homeAway": "home",
-            "score": "38"
-          },
-          {
-            "id": "2396",
-            "name": "Miles College Golden Bears",
-            "short": "Miles",
-            "abbrev": "MIL",
-            "homeAway": "away",
-            "score": "23"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": []
-      },
-      {
         "id": "401867866",
         "date": "2026-09-05T23:45Z",
         "name": "Murray State Racers at Middle Tennessee Blue Raiders",
@@ -5210,7 +5183,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:16 - 4th",
+        "detail": "1:19 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5239,7 +5212,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:27 - 4th",
+        "detail": "7:36 - 4th",
         "broadcasts": [
           "USA Net"
         ]
@@ -5255,7 +5228,7 @@
             "short": "Arizona St",
             "abbrev": "ASU",
             "homeAway": "home",
-            "score": "63"
+            "score": "70"
           },
           {
             "id": "2415",
@@ -5268,7 +5241,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:53 - 3rd",
+        "detail": "0:35 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5284,7 +5257,7 @@
             "short": "Sacramento St",
             "abbrev": "SAC",
             "homeAway": "home",
-            "score": "31"
+            "score": "38"
           },
           {
             "id": "2400",
@@ -5297,7 +5270,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:35 - 3rd",
+        "detail": "0:18 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5313,7 +5286,7 @@
             "short": "San Diego",
             "abbrev": "USD",
             "homeAway": "home",
-            "score": "7"
+            "score": "17"
           },
           {
             "id": "302",
@@ -5326,9 +5299,416 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:48 - 3rd",
+        "detail": "13:59 - 4th",
         "broadcasts": [
           "ESPN+"
+        ]
+      },
+      {
+        "id": "401856768",
+        "date": "2026-09-04T01:00Z",
+        "name": "Idaho Vandals at Utah Utes",
+        "teams": [
+          {
+            "id": "254",
+            "name": "Utah Utes",
+            "short": "Utah",
+            "abbrev": "UTAH",
+            "homeAway": "home",
+            "score": "66"
+          },
+          {
+            "id": "70",
+            "name": "Idaho Vandals",
+            "short": "Idaho",
+            "abbrev": "IDHO",
+            "homeAway": "away",
+            "score": "14"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPNU"
+        ]
+      },
+      {
+        "id": "401856663",
+        "date": "2026-09-04T00:00Z",
+        "name": "Arkansas-Pine Bluff Golden Lions at Missouri Tigers",
+        "teams": [
+          {
+            "id": "142",
+            "name": "Missouri Tigers",
+            "short": "Missouri",
+            "abbrev": "MIZ",
+            "homeAway": "home",
+            "score": "54"
+          },
+          {
+            "id": "2029",
+            "name": "Arkansas-Pine Bluff Golden Lions",
+            "short": "AR-Pine Bluff",
+            "abbrev": "UAPB",
+            "homeAway": "away",
+            "score": "14"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "SEC Network"
+        ]
+      },
+      {
+        "id": "401868269",
+        "date": "2026-09-03T22:00Z",
+        "name": "Kentucky Christian Knights at Morehead State Eagles",
+        "teams": [
+          {
+            "id": "2413",
+            "name": "Morehead State Eagles",
+            "short": "Morehead St",
+            "abbrev": "MORE",
+            "homeAway": "home",
+            "score": "75"
+          },
+          {
+            "id": "3077",
+            "name": "Kentucky Christian Knights",
+            "short": "KCU",
+            "abbrev": "KYCH",
+            "homeAway": "away",
+            "score": "24"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401856767",
+        "date": "2026-09-03T23:00Z",
+        "name": "Bethune-Cookman Wildcats at UCF Knights",
+        "teams": [
+          {
+            "id": "2116",
+            "name": "UCF Knights",
+            "short": "UCF",
+            "abbrev": "UCF",
+            "homeAway": "home",
+            "score": "73"
+          },
+          {
+            "id": "2065",
+            "name": "Bethune-Cookman Wildcats",
+            "short": "Bethune",
+            "abbrev": "BCU",
+            "homeAway": "away",
+            "score": "6"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401864424",
+        "date": "2026-09-03T23:00Z",
+        "name": "Merrimack Warriors at Delaware Blue Hens",
+        "teams": [
+          {
+            "id": "48",
+            "name": "Delaware Blue Hens",
+            "short": "Delaware",
+            "abbrev": "DEL",
+            "homeAway": "home",
+            "score": "42"
+          },
+          {
+            "id": "2771",
+            "name": "Merrimack Warriors",
+            "short": "Merrimack",
+            "abbrev": "MRMK",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401864425",
+        "date": "2026-09-03T23:00Z",
+        "name": "West Georgia Wolves at Kennesaw State Owls",
+        "teams": [
+          {
+            "id": "338",
+            "name": "Kennesaw State Owls",
+            "short": "Kennesaw St",
+            "abbrev": "KENN",
+            "homeAway": "home",
+            "score": "47"
+          },
+          {
+            "id": "2698",
+            "name": "West Georgia Wolves",
+            "short": "West Georgia",
+            "abbrev": "WES",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401866409",
+        "date": "2026-09-03T23:00Z",
+        "name": "UAlbany Great Danes at Buffalo Bulls",
+        "teams": [
+          {
+            "id": "2084",
+            "name": "Buffalo Bulls",
+            "short": "Buffalo",
+            "abbrev": "BUFF",
+            "homeAway": "home",
+            "score": "21"
+          },
+          {
+            "id": "399",
+            "name": "UAlbany Great Danes",
+            "short": "UAlbany",
+            "abbrev": "ALB",
+            "homeAway": "away",
+            "score": "17"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401866622",
+        "date": "2026-09-03T23:00Z",
+        "name": "Lindenwood Lions at Stony Brook Seawolves",
+        "teams": [
+          {
+            "id": "2619",
+            "name": "Stony Brook Seawolves",
+            "short": "Stony Brook",
+            "abbrev": "STBK",
+            "homeAway": "home",
+            "score": "36"
+          },
+          {
+            "id": "2815",
+            "name": "Lindenwood Lions",
+            "short": "Lindenwood",
+            "abbrev": "LIN",
+            "homeAway": "away",
+            "score": "32"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "SNY",
+          "FloSports"
+        ]
+      },
+      {
+        "id": "401867889",
+        "date": "2026-09-03T23:00Z",
+        "name": "Southern Illinois Salukis at Samford Bulldogs",
+        "teams": [
+          {
+            "id": "2535",
+            "name": "Samford Bulldogs",
+            "short": "Samford",
+            "abbrev": "SAM",
+            "homeAway": "home",
+            "score": "18"
+          },
+          {
+            "id": "79",
+            "name": "Southern Illinois Salukis",
+            "short": "S Illinois",
+            "abbrev": "SIU",
+            "homeAway": "away",
+            "score": "22"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401858422",
+        "date": "2026-09-04T00:00Z",
+        "name": "Eastern Illinois Panthers at Minnesota Golden Gophers",
+        "teams": [
+          {
+            "id": "135",
+            "name": "Minnesota Golden Gophers",
+            "short": "Minnesota",
+            "abbrev": "MINN",
+            "homeAway": "home",
+            "score": "59"
+          },
+          {
+            "id": "2197",
+            "name": "Eastern Illinois Panthers",
+            "short": "E Illinois",
+            "abbrev": "EIU",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "Peacock"
+        ]
+      },
+      {
+        "id": "401858435",
+        "date": "2026-09-04T23:00Z",
+        "name": "Indiana State Sycamores at Purdue Boilermakers",
+        "teams": [
+          {
+            "id": "2509",
+            "name": "Purdue Boilermakers",
+            "short": "Purdue",
+            "abbrev": "PUR",
+            "homeAway": "home",
+            "score": "44"
+          },
+          {
+            "id": "282",
+            "name": "Indiana State Sycamores",
+            "short": "Indiana St",
+            "abbrev": "INST",
+            "homeAway": "away",
+            "score": "19"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "BTN"
+        ]
+      },
+      {
+        "id": "401866623",
+        "date": "2026-09-04T23:00Z",
+        "name": "North Carolina A&T Aggies at Georgia State Panthers",
+        "teams": [
+          {
+            "id": "2247",
+            "name": "Georgia State Panthers",
+            "short": "Georgia St",
+            "abbrev": "GAST",
+            "homeAway": "home",
+            "score": "59"
+          },
+          {
+            "id": "2448",
+            "name": "North Carolina A&T Aggies",
+            "short": "NC A&T",
+            "abbrev": "NCAT",
+            "homeAway": "away",
+            "score": "10"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868262",
+        "date": "2026-09-04T23:00Z",
+        "name": "Franklin Pierce Ravens at Marist Red Foxes",
+        "teams": [
+          {
+            "id": "2368",
+            "name": "Marist Red Foxes",
+            "short": "Marist",
+            "abbrev": "MRST",
+            "homeAway": "home",
+            "score": "27"
+          },
+          {
+            "id": "112334",
+            "name": "Franklin Pierce Ravens",
+            "short": "Franklin Pierce",
+            "abbrev": "FP",
+            "homeAway": "away",
+            "score": "18"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401856769",
+        "date": "2026-09-05T00:00Z",
+        "name": "Long Island University Sharks at Kansas Jayhawks",
+        "teams": [
+          {
+            "id": "2305",
+            "name": "Kansas Jayhawks",
+            "short": "Kansas",
+            "abbrev": "KU",
+            "homeAway": "home",
+            "score": "51"
+          },
+          {
+            "id": "2341",
+            "name": "Long Island University Sharks",
+            "short": "Long Island",
+            "abbrev": "LIU",
+            "homeAway": "away",
+            "score": "6"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPNU"
         ]
       },
       {
@@ -6724,6 +7104,33 @@
         ]
       },
       {
+        "id": "401868297",
+        "date": "2026-09-05T23:00Z",
+        "name": "Miles College Golden Bears at Alabama A&M Bulldogs",
+        "teams": [
+          {
+            "id": "2010",
+            "name": "Alabama A&M Bulldogs",
+            "short": "Alabama A&M",
+            "abbrev": "AAMU",
+            "homeAway": "home",
+            "score": "38"
+          },
+          {
+            "id": "2396",
+            "name": "Miles College Golden Bears",
+            "short": "Miles",
+            "abbrev": "MIL",
+            "homeAway": "away",
+            "score": "23"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": []
+      },
+      {
         "id": "401868316",
         "date": "2026-09-05T23:00Z",
         "name": "SE Louisiana Lions at South Alabama Jaguars",
@@ -7211,413 +7618,6 @@
         "completed": false,
         "detail": "Postponed",
         "broadcasts": []
-      },
-      {
-        "id": "401856768",
-        "date": "2026-09-04T01:00Z",
-        "name": "Idaho Vandals at Utah Utes",
-        "teams": [
-          {
-            "id": "254",
-            "name": "Utah Utes",
-            "short": "Utah",
-            "abbrev": "UTAH",
-            "homeAway": "home",
-            "score": "66"
-          },
-          {
-            "id": "70",
-            "name": "Idaho Vandals",
-            "short": "Idaho",
-            "abbrev": "IDHO",
-            "homeAway": "away",
-            "score": "14"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPNU"
-        ]
-      },
-      {
-        "id": "401856663",
-        "date": "2026-09-04T00:00Z",
-        "name": "Arkansas-Pine Bluff Golden Lions at Missouri Tigers",
-        "teams": [
-          {
-            "id": "142",
-            "name": "Missouri Tigers",
-            "short": "Missouri",
-            "abbrev": "MIZ",
-            "homeAway": "home",
-            "score": "54"
-          },
-          {
-            "id": "2029",
-            "name": "Arkansas-Pine Bluff Golden Lions",
-            "short": "AR-Pine Bluff",
-            "abbrev": "UAPB",
-            "homeAway": "away",
-            "score": "14"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "SEC Network"
-        ]
-      },
-      {
-        "id": "401868269",
-        "date": "2026-09-03T22:00Z",
-        "name": "Kentucky Christian Knights at Morehead State Eagles",
-        "teams": [
-          {
-            "id": "2413",
-            "name": "Morehead State Eagles",
-            "short": "Morehead St",
-            "abbrev": "MORE",
-            "homeAway": "home",
-            "score": "75"
-          },
-          {
-            "id": "3077",
-            "name": "Kentucky Christian Knights",
-            "short": "KCU",
-            "abbrev": "KYCH",
-            "homeAway": "away",
-            "score": "24"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401856767",
-        "date": "2026-09-03T23:00Z",
-        "name": "Bethune-Cookman Wildcats at UCF Knights",
-        "teams": [
-          {
-            "id": "2116",
-            "name": "UCF Knights",
-            "short": "UCF",
-            "abbrev": "UCF",
-            "homeAway": "home",
-            "score": "73"
-          },
-          {
-            "id": "2065",
-            "name": "Bethune-Cookman Wildcats",
-            "short": "Bethune",
-            "abbrev": "BCU",
-            "homeAway": "away",
-            "score": "6"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401864424",
-        "date": "2026-09-03T23:00Z",
-        "name": "Merrimack Warriors at Delaware Blue Hens",
-        "teams": [
-          {
-            "id": "48",
-            "name": "Delaware Blue Hens",
-            "short": "Delaware",
-            "abbrev": "DEL",
-            "homeAway": "home",
-            "score": "42"
-          },
-          {
-            "id": "2771",
-            "name": "Merrimack Warriors",
-            "short": "Merrimack",
-            "abbrev": "MRMK",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401864425",
-        "date": "2026-09-03T23:00Z",
-        "name": "West Georgia Wolves at Kennesaw State Owls",
-        "teams": [
-          {
-            "id": "338",
-            "name": "Kennesaw State Owls",
-            "short": "Kennesaw St",
-            "abbrev": "KENN",
-            "homeAway": "home",
-            "score": "47"
-          },
-          {
-            "id": "2698",
-            "name": "West Georgia Wolves",
-            "short": "West Georgia",
-            "abbrev": "WES",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401866409",
-        "date": "2026-09-03T23:00Z",
-        "name": "UAlbany Great Danes at Buffalo Bulls",
-        "teams": [
-          {
-            "id": "2084",
-            "name": "Buffalo Bulls",
-            "short": "Buffalo",
-            "abbrev": "BUFF",
-            "homeAway": "home",
-            "score": "21"
-          },
-          {
-            "id": "399",
-            "name": "UAlbany Great Danes",
-            "short": "UAlbany",
-            "abbrev": "ALB",
-            "homeAway": "away",
-            "score": "17"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401866622",
-        "date": "2026-09-03T23:00Z",
-        "name": "Lindenwood Lions at Stony Brook Seawolves",
-        "teams": [
-          {
-            "id": "2619",
-            "name": "Stony Brook Seawolves",
-            "short": "Stony Brook",
-            "abbrev": "STBK",
-            "homeAway": "home",
-            "score": "36"
-          },
-          {
-            "id": "2815",
-            "name": "Lindenwood Lions",
-            "short": "Lindenwood",
-            "abbrev": "LIN",
-            "homeAway": "away",
-            "score": "32"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "SNY",
-          "FloSports"
-        ]
-      },
-      {
-        "id": "401867889",
-        "date": "2026-09-03T23:00Z",
-        "name": "Southern Illinois Salukis at Samford Bulldogs",
-        "teams": [
-          {
-            "id": "2535",
-            "name": "Samford Bulldogs",
-            "short": "Samford",
-            "abbrev": "SAM",
-            "homeAway": "home",
-            "score": "18"
-          },
-          {
-            "id": "79",
-            "name": "Southern Illinois Salukis",
-            "short": "S Illinois",
-            "abbrev": "SIU",
-            "homeAway": "away",
-            "score": "22"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401858422",
-        "date": "2026-09-04T00:00Z",
-        "name": "Eastern Illinois Panthers at Minnesota Golden Gophers",
-        "teams": [
-          {
-            "id": "135",
-            "name": "Minnesota Golden Gophers",
-            "short": "Minnesota",
-            "abbrev": "MINN",
-            "homeAway": "home",
-            "score": "59"
-          },
-          {
-            "id": "2197",
-            "name": "Eastern Illinois Panthers",
-            "short": "E Illinois",
-            "abbrev": "EIU",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "Peacock"
-        ]
-      },
-      {
-        "id": "401858435",
-        "date": "2026-09-04T23:00Z",
-        "name": "Indiana State Sycamores at Purdue Boilermakers",
-        "teams": [
-          {
-            "id": "2509",
-            "name": "Purdue Boilermakers",
-            "short": "Purdue",
-            "abbrev": "PUR",
-            "homeAway": "home",
-            "score": "44"
-          },
-          {
-            "id": "282",
-            "name": "Indiana State Sycamores",
-            "short": "Indiana St",
-            "abbrev": "INST",
-            "homeAway": "away",
-            "score": "19"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "BTN"
-        ]
-      },
-      {
-        "id": "401866623",
-        "date": "2026-09-04T23:00Z",
-        "name": "North Carolina A&T Aggies at Georgia State Panthers",
-        "teams": [
-          {
-            "id": "2247",
-            "name": "Georgia State Panthers",
-            "short": "Georgia St",
-            "abbrev": "GAST",
-            "homeAway": "home",
-            "score": "59"
-          },
-          {
-            "id": "2448",
-            "name": "North Carolina A&T Aggies",
-            "short": "NC A&T",
-            "abbrev": "NCAT",
-            "homeAway": "away",
-            "score": "10"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868262",
-        "date": "2026-09-04T23:00Z",
-        "name": "Franklin Pierce Ravens at Marist Red Foxes",
-        "teams": [
-          {
-            "id": "2368",
-            "name": "Marist Red Foxes",
-            "short": "Marist",
-            "abbrev": "MRST",
-            "homeAway": "home",
-            "score": "27"
-          },
-          {
-            "id": "112334",
-            "name": "Franklin Pierce Ravens",
-            "short": "Franklin Pierce",
-            "abbrev": "FP",
-            "homeAway": "away",
-            "score": "18"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401856769",
-        "date": "2026-09-05T00:00Z",
-        "name": "Long Island University Sharks at Kansas Jayhawks",
-        "teams": [
-          {
-            "id": "2305",
-            "name": "Kansas Jayhawks",
-            "short": "Kansas",
-            "abbrev": "KU",
-            "homeAway": "home",
-            "score": "51"
-          },
-          {
-            "id": "2341",
-            "name": "Long Island University Sharks",
-            "short": "Long Island",
-            "abbrev": "LIU",
-            "homeAway": "away",
-            "score": "6"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPNU"
-        ]
       }
     ],
     "2026-09-10": [
@@ -27285,5 +27285,11 @@
       }
     ]
   },
-  "fcs_scores_updated": "2026-09-06T04:37:37.454408+00:00"
+  "fcs_scores_updated": "2026-09-06T04:47:30.205406+00:00",
+  "latest_press_conference": {
+    "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker",
+    "date": "Sun, 06 Sep 2026 02:23:32 +0000",
+    "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/",
+    "youtube_id": ""
+  }
 }
