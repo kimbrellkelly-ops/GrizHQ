@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T22:25:48.282022+00:00",
+  "updated": "2026-09-06T22:30:12.980687+00:00",
   "source": "Automated Griz HQ news hub",
   "stories": [
     {
@@ -228,6 +228,21 @@
       "video_thumbnail": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
     },
     {
+      "title": "How to watch, stream and listen to the Montana Grizzlies’ football games in 2026",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPUm0wNGpWa2xmMjVrVS1mNjREeEYtTzI5eVZzeU9VanJOcURWTUlzX2hUVy05LWNlU2lTTDdMY19zenZ4bkQ4YzZGVFdTenBMUmdCNDRXNDY4VExETXJuVzN5RllDeGpDLXotQ0VidW5BWXVvODYyYzlxNVdFd29FN1o5UVkxSld6eE95eGprOG5FTXlBTUdqaXBHNTkzR2dMQk9ydDg0Q25tNFRYMGhXZVlONnk1OW9RN1RZakRKMHVIVXFLcVdwY1N6dFhVUQ?oc=5",
+      "date": "Sep. 5, 2026",
+      "published_at": "2026-09-05T03:45:36+00:00",
+      "description": "How to watch, stream and listen to the Montana Grizzlies’ football games in 2026 Billings Gazette",
+      "source": "Billings Gazette",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ",
+      "image": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    },
+    {
       "title": "Stripe the Stadium - What you should wear",
       "url": "https://gogriz.com/news/2026/9/4/football-stripe-the-stadium-what-you-should-wear",
       "date": "Sep. 4, 2026",
@@ -316,21 +331,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&image_path=/images/2026/8/30/20260829_fbvssouthernutah_0134.jpg"
-    },
-    {
-      "title": "How to watch, stream and listen to the Montana Grizzlies’ football games in 2026",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPUm0wNGpWa2xmMjVrVS1mNjREeEYtTzI5eVZzeU9VanJOcURWTUlzX2hUVy05LWNlU2lTTDdMY19zenZ4bkQ4YzZGVFdTenBMUmdCNDRXNDY4VExETXJuVzN5RllDeGpDLXotQ0VidW5BWXVvODYyYzlxNVdFd29FN1o5UVkxSld6eE95eGprOG5FTXlBTUdqaXBHNTkzR2dMQk9ydDg0Q25tNFRYMGhXZVlONnk1OW9RN1RZakRKMHVIVXFLcVdwY1N6dFhVUQ?oc=5",
-      "date": "Aug. 29, 2026",
-      "published_at": "2026-08-29T18:06:59+00:00",
-      "description": "How to watch, stream and listen to the Montana Grizzlies’ football games in 2026 Billings Gazette",
-      "source": "Billings Gazette",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ",
-      "image": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
     },
     {
       "title": "Recap: No. 2 Montana Grizzlies hold off Southern Utah to win season opener",
