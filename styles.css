@@ -1730,6 +1730,50 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 @media(max-width:560px){.fcs-game .prominent-score{min-width:82px}.fcs-game .score-big{font-size:21px !important}}
 
 
+/* Mobile Big Sky scoreboard: matchup on the left, score large on the right. */
+@media (max-width: 560px) {
+  .fcs-game.bigsky-row {
+    grid-template-columns: minmax(0, 1fr) 105px !important;
+    grid-template-areas:
+      "time score"
+      "matchup score" !important;
+    align-items: center !important;
+    column-gap: 10px !important;
+    row-gap: 2px !important;
+    padding: 11px 10px !important;
+  }
+  .fcs-game.bigsky-row .fcs-time { grid-area: time; text-align: left; }
+  .fcs-game.bigsky-row .fcs-matchup { grid-area: matchup; min-width: 0; }
+  .fcs-game.bigsky-row .fcs-matchup b { display:block; font-size:13px; line-height:1.2; }
+  .fcs-game.bigsky-row .fcs-matchup small { display:block; margin-top:3px; }
+  .fcs-game.bigsky-row .fcs-score {
+    grid-area: score;
+    width: auto !important;
+    min-width: 105px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: right !important;
+    align-self: center !important;
+  }
+  .fcs-game.bigsky-row .fcs-score .score-big {
+    display:block;
+    font-size:32px !important;
+    line-height:1 !important;
+    font-weight:900 !important;
+    white-space:nowrap;
+  }
+  .fcs-game.bigsky-row.final .fcs-score .score-big { font-size:34px !important; }
+  .fcs-game.bigsky-row.live .fcs-score .score-big { font-size:34px !important; }
+  .fcs-game.bigsky-row .fcs-score small {
+    display:block;
+    margin-top:4px !important;
+    font-size:9px !important;
+    font-weight:900;
+    letter-spacing:.08em;
+  }
+  .fcs-game.bigsky-row .fcs-tv { display:none !important; }
+}
+
 /* Mobile Big Sky scoreboard fix: keep the score visible on its own row. */
 @media (max-width: 560px) {
   .fcs-game {

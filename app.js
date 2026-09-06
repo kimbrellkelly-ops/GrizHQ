@@ -344,7 +344,7 @@ async function renderFCSScoreboard(){
           const label=(team==='Weber State'||team==='Southern Utah')&&[d.away,d.home].includes('Weber State')&&[d.away,d.home].includes('Southern Utah')?'NON-CONFERENCE':'BIG SKY';
           const allScore=(ev.teams||[]).map(t=>`${t.short||t.name} ${t.score??''}`).join(' • ');
           const scoreForTeam=scoreLine(ev,team);
-          return `<div class="fcs-game ${ev.completed?'final':(ev.state==='in'?'live':'scheduled')} bigsky-row"><div class="fcs-time">${escapeHtml(statusText(ev))}</div><div class="fcs-matchup"><b>${escapeHtml(d.away)} @ ${escapeHtml(d.home)}</b><small>${escapeHtml(allScore)} <span class="bigsky-game-tag">${label}</span></small></div><div class="fcs-score prominent-score">${scoreForTeam}</div><div class="fcs-tv">${escapeHtml((ev.broadcasts||[]).join(', '))}</div></div>`;
+          return `<div class="fcs-game ${ev.completed?'final':(ev.state==='in'?'live':'scheduled')} bigsky-row"><div class="fcs-time">${escapeHtml(statusText(ev))}</div><div class="fcs-matchup"><b>${escapeHtml(d.away)} @ ${escapeHtml(d.home)}</b><small><span class="bigsky-game-tag">${label}</span></small></div><div class="fcs-score prominent-score">${scoreForTeam}</div><div class="fcs-tv">${escapeHtml((ev.broadcasts||[]).join(', '))}</div></div>`;
         }
         const sg=scheduledGame(team,idx);
         if(!sg) return `<div class="fcs-game scheduled bigsky-row bye"><div class="fcs-time">BYE</div><div class="fcs-matchup"><b>${escapeHtml(team)}</b><small>NO GAME THIS WEEK</small></div><div class="fcs-score"><strong>BYE</strong></div><div class="fcs-tv"></div></div>`;
