@@ -14,6 +14,59 @@ BIG_SKY = {
     "Weber State", "Cal Poly", "Idaho State", "Northern Colorado", "Eastern Washington"
 }
 
+
+FCS_SCORE_WEEKS = [
+    ("2026-08-27", "2026-08-30"), ("2026-09-03", "2026-09-06"),
+    ("2026-09-10", "2026-09-13"), ("2026-09-17", "2026-09-20"),
+    ("2026-09-24", "2026-09-27"), ("2026-10-01", "2026-10-04"),
+    ("2026-10-08", "2026-10-11"), ("2026-10-15", "2026-10-18"),
+    ("2026-10-22", "2026-10-25"), ("2026-10-29", "2026-11-01"),
+    ("2026-11-05", "2026-11-08"), ("2026-11-12", "2026-11-15"),
+    ("2026-11-19", "2026-11-22")
+]
+
+FCS_SCORE_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard"
+
+def fetch_fcs_scores():
+    """Cache ESPN FCS scoreboard data in data.json so the browser never depends on ESPN CORS."""
+    out = {}
+    for start, end in FCS_SCORE_WEEKS:
+        try:
+            r = requests.get(FCS_SCORE_URL, params={"dates": f"{start.replace('-', '')}-{end.replace('-', '')}", "groups": "81", "limit": 500}, headers=HEADERS, timeout=30)
+            r.raise_for_status()
+            payload = r.json()
+            games = []
+            for ev in payload.get("events", []):
+                comp = (ev.get("competitions") or [{}])[0]
+                teams = []
+                for c in comp.get("competitors", []):
+                    team = c.get("team") or {}
+                    teams.append({
+                        "id": str(team.get("id", "")),
+                        "name": team.get("displayName") or team.get("shortDisplayName") or "",
+                        "short": team.get("shortDisplayName") or team.get("displayName") or "",
+                        "abbrev": team.get("abbreviation") or "",
+                        "homeAway": c.get("homeAway", ""),
+                        "score": c.get("score", ""),
+                    })
+                st = comp.get("status", {}).get("type", {})
+                broadcasts=[]
+                for b in comp.get("broadcasts", []): broadcasts.extend(b.get("names", []) or [])
+                games.append({
+                    "id": str(ev.get("id", "")),
+                    "date": ev.get("date", ""),
+                    "name": ev.get("name", ""),
+                    "teams": teams,
+                    "state": st.get("state", ""),
+                    "completed": bool(st.get("completed")),
+                    "detail": st.get("shortDetail") or st.get("detail") or "",
+                    "broadcasts": broadcasts[:3],
+                })
+            out[start] = games
+        except Exception as e:
+            print(f"FCS scoreboard fetch failed for {start}: {e}")
+    return out
+
 def get(url):
     r = requests.get(url, headers=HEADERS, timeout=30)
     r.raise_for_status()
@@ -144,6 +197,11 @@ def main():
         new["fcs_top20"]=new["fcs_top25"][:20]
         new["fcs_rankings_date"]=new["rankings_date"]
     except Exception as e: print("Rankings update failed:",e)
+
+    try:
+        scores=fetch_fcs_scores()
+        if scores: new["fcs_scores"]=scores
+    except Exception as e: print("FCS scoreboard update failed:",e)
 
     try: new["news"]=parse_news()
     except Exception as e: print("News update failed:",e)

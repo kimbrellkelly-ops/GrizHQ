@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
 :root{--maroon:#660033;--maroon2:#7a0635;--ink:#171719;--paper:#f4f3f1;--line:#d6d4d1;--muted:#747474;--white:#fff}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif}a{color:inherit;text-decoration:none}
-.site-header{background:#151519;position:relative;overflow:hidden}.brand-row{height:148px;max-width:1600px;margin:auto;padding:16px 34px;display:grid;grid-template-columns:320px 1fr 92px;align-items:center;gap:30px;position:relative;background:linear-gradient(90deg,rgba(20,20,24,.98) 0%,rgba(35,22,29,.96) 42%,rgba(78,0,40,.93) 100%),url("mountain-bg.jpg") center/cover no-repeat}.brand-title{font:800 44px/1 "Barlow Condensed";letter-spacing:.5px;color:#171719}.brand-sub{font:800 12px/1.2 Inter;letter-spacing:1.8px;margin-top:6px;color:#222}.brand-tagline{font:800 9px/1.2 Inter;letter-spacing:2.2px;color:var(--maroon);margin-top:6px}.brand-right{display:flex;align-items:center;justify-content:center;gap:28px;height:100%;border-left:1px solid rgba(255,255,255,.25);padding-left:22px}.brand{display:flex;align-items:center;height:100%;z-index:2}.motto{font:800 italic 13px "Barlow Condensed";letter-spacing:2px;color:var(--maroon);display:flex;align-items:center;gap:15px}.motto b{font:800 18px "Barlow Condensed";font-style:normal;letter-spacing:2px;border-left:1px solid #bbb;padding-left:15px}
+.site-header{background:#151519;position:relative;overflow:hidden}.brand-row{height:148px;max-width:1600px;margin:auto;padding:16px 34px;display:grid;grid-template-columns:320px 1fr 92px;align-items:center;gap:30px;position:relative;background:linear-gradient(90deg,rgba(20,20,24,.98) 0%,rgba(35,22,29,.96) 42%,rgba(78,0,40,.93) 100%),url("hero.jpg") center/cover no-repeat}.brand-title{font:800 44px/1 "Barlow Condensed";letter-spacing:.5px;color:#171719}.brand-sub{font:800 12px/1.2 Inter;letter-spacing:1.8px;margin-top:6px;color:#222}.brand-tagline{font:800 9px/1.2 Inter;letter-spacing:2.2px;color:var(--maroon);margin-top:6px}.brand-right{display:flex;align-items:center;justify-content:center;gap:28px;height:100%;border-left:1px solid rgba(255,255,255,.25);padding-left:22px}.brand{display:flex;align-items:center;height:100%;z-index:2}.motto{font:800 italic 13px "Barlow Condensed";letter-spacing:2px;color:var(--maroon);display:flex;align-items:center;gap:15px}.motto b{font:800 18px "Barlow Condensed";font-style:normal;letter-spacing:2px;border-left:1px solid #bbb;padding-left:15px}
 .header-paw-image{height:52px;width:54px;border-left:1px solid #bbb;display:flex;align-items:center;justify-content:center;padding-left:10px}.header-paw-image img{width:36px;height:36px;object-fit:contain;display:block}
 .nav{height:48px;background:var(--maroon);color:#fff;display:flex;align-items:center;padding:0 max(28px,calc((100% - 1500px)/2));gap:31px}.nav a{font:800 14px "Barlow Condensed";letter-spacing:.6px;padding:16px 0 13px;border-bottom:4px solid transparent}.nav a.active{border-color:#fff}.nav a:hover{border-color:#fff}.nav small{font-size:11px}.social{margin-left:auto;font:800 14px Inter;white-space:nowrap}
 .hero{max-width:1500px;margin:auto;display:grid;grid-template-columns:minmax(0,1fr) 260px 330px;min-height:405px}.hero-photo{position:relative;overflow:hidden}.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.76) 0%,rgba(66,0,29,.48) 43%,rgba(0,0,0,.05) 75%)}.hero-copy{position:absolute;left:25px;bottom:34px;color:#fff}.eyebrow{font:800 12px "Inter";letter-spacing:2px;color:var(--maroon)}.eyebrow.light{color:#fff}.hero h1{font:800 51px/.96 "Barlow Condensed";letter-spacing:.8px;margin:15px 0 25px}.hero-buttons{display:flex;gap:12px}.button{display:inline-block;padding:12px 22px;font:800 12px "Barlow Condensed";letter-spacing:1px;text-align:center}.button.maroon{background:var(--maroon);color:#fff}.button.outline{border:1px solid #fff;color:#fff}.button.light-button{background:#fff;color:var(--maroon);width:100%;margin-top:15px}.button.full{width:100%;margin-top:12px}
@@ -77,7 +77,7 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   height:218px;max-width:none;margin:0;padding:18px 40px;box-sizing:border-box;
   display:grid;grid-template-columns:minmax(330px,1.05fr) minmax(430px,1.35fr) minmax(250px,.8fr);
   align-items:center;gap:24px;position:relative;overflow:hidden;color:#fff;
-  background-image:linear-gradient(90deg,rgba(10,12,15,.97) 0%,rgba(22,18,22,.88) 38%,rgba(54,17,35,.78) 70%,rgba(107,0,56,.95) 100%),url("mountain-bg.jpg");
+  background-image:linear-gradient(90deg,rgba(10,12,15,.97) 0%,rgba(22,18,22,.88) 38%,rgba(54,17,35,.78) 70%,rgba(107,0,56,.95) 100%),url("hero.jpg");
   background-position:center 42%;background-size:cover;
   border-bottom:4px solid #73003b;
 }
@@ -1720,106 +1720,14 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   }
 }
 
-
-/* =========================================================
-   GRIZ HQ — CLEAN CINEMATIC VISUAL REFRESH
-   Keeps the existing data/app functionality intact.
-   ========================================================= */
-:root{
-  --maroon:#65002f;
-  --maroon2:#85003d;
-  --deep:#0d1013;
-  --ink:#17181b;
-  --paper:#f2f1ef;
-  --silver:#d7d8db;
-}
-body{background:var(--paper);color:var(--ink)}
-.site-header{background:#0b0d10;box-shadow:0 10px 30px rgba(0,0,0,.22)}
-.brand-row{
-  height:252px;
-  padding:18px 42px;
-  grid-template-columns:minmax(360px,1.02fr) minmax(470px,1.18fr) minmax(285px,.72fr);
-  gap:28px;
-  background:
-    linear-gradient(90deg,rgba(5,8,11,.90) 0%,rgba(10,13,17,.72) 33%,rgba(35,12,25,.58) 67%,rgba(92,0,45,.70) 100%),
-    url("mountain-bg.jpg") center/cover no-repeat;
-  border-bottom:3px solid rgba(154,25,76,.9);
-}
-.brand-row:before{background:linear-gradient(105deg,transparent 0 39%,rgba(255,255,255,.07) 39.2%,transparent 39.7%)}
-.brand-row:after{right:-70px;top:-150px;width:580px;height:470px;background:rgba(111,0,55,.18)}
-.header-brand-block{padding-left:4px}
-.griz-hq-logo{width:min(440px,100%);height:205px;max-width:440px;max-height:205px;filter:drop-shadow(0 12px 18px rgba(0,0,0,.55))}
-.header-matchup{
-  min-height:200px;
-  padding:0 30px;
-  border-left:1px solid rgba(255,255,255,.22);
-  border-right:1px solid rgba(255,255,255,.22);
-}
-.header-matchup-kicker{font-size:15px;letter-spacing:3.5px;margin-bottom:12px}
-.header-matchup-kicker span{width:68px;height:2px;background:#a92b61}
-.header-matchup-teams{gap:28px}
-.header-team{min-width:175px;gap:12px}
-.header-team img{width:72px;height:72px}
-.header-team strong{font-size:31px;letter-spacing:1.4px}
-.header-vs{font-size:18px;letter-spacing:2.5px;color:#eee}
-.header-gamebar-date{font-size:17px;letter-spacing:2px;margin-top:12px}
-.header-gamebar-venue{font-size:10px;letter-spacing:1.8px;margin-top:7px}
-.header-go-block{align-items:flex-end;justify-content:center}
-.header-pride{display:none}
-.header-go-griz{display:block;width:285px;height:205px;white-space:normal;text-shadow:none}
-.header-go-griz img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
-.header-paw-image{display:none}
-.nav{
-  height:58px;
-  background:linear-gradient(90deg,#62002e,#790038 50%,#62002e);
-  padding:0 max(34px,calc((100% - 1540px)/2));
-  gap:0;
-  justify-content:space-between;
-  border-top:1px solid rgba(255,255,255,.08);
-}
-.nav a{font-size:15px;letter-spacing:.9px;padding:19px 12px 15px;border-bottom:4px solid transparent;transition:background .15s ease,border-color .15s ease}
-.nav a:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.65)}
-.nav a.active{border-color:#fff;background:rgba(255,255,255,.04)}
-.hero{max-width:none;grid-template-columns:minmax(0,1fr) 330px 400px;min-height:440px;background:#111}
-.hero-photo{min-height:440px;background:url("mountain-bg.jpg") center/cover no-repeat}
-.hero-photo img{object-position:center;height:100%;object-fit:cover;filter:saturate(.86) contrast(1.03)}
-.hero-overlay{background:linear-gradient(90deg,rgba(5,8,11,.82),rgba(25,12,21,.50) 45%,rgba(0,0,0,.12) 80%)}
-.hero-copy{left:54px;bottom:44px;max-width:700px}
-.hero h1{font-size:64px;line-height:.91;margin:14px 0 27px;letter-spacing:1px;text-shadow:0 4px 12px rgba(0,0,0,.35)}
-.hero-buttons{gap:10px}.button{padding:13px 23px}
-.next-game,.rankings{border-top:0;border-left:1px solid #34363a;background:linear-gradient(180deg,#17191c,#101114);padding:38px 28px}
-.next-game .eyebrow,.rankings h2{font-size:22px;letter-spacing:1.5px}
-.matchup{margin-top:28px}.matchup .team img{width:78px;height:78px}.matchup .team b{font-size:15px}
-.rankings{padding-left:28px;padding-right:28px}.rankings h2{margin-top:0}
-.poll-head b{font-size:12px}.rank-columns{gap:20px}.rank-columns ol{padding:0}.rank-columns li{padding:7px 8px;font-size:12px;border-bottom:1px solid #333}
-.rank-columns li.griz{background:#780037;color:#fff}
-.section{max-width:1540px;margin:0 auto;padding:42px 38px}
-.section-head{margin-bottom:22px}.section-head h2{font-size:38px;letter-spacing:.5px}
-.section-card,.stats-panel,.fcs-games,.fcs-empty,.fcs-loading{box-shadow:0 8px 24px rgba(0,0,0,.06)}
-
-@media(max-width:1200px){
-  .brand-row{height:225px;grid-template-columns:310px minmax(420px,1fr) 235px;padding:16px 24px;gap:16px}
-  .griz-hq-logo{width:300px;height:175px}.header-go-griz{width:225px;height:175px}
-  .header-team{min-width:145px}.header-team strong{font-size:25px}.header-team img{width:58px;height:58px}
-  .hero{grid-template-columns:minmax(0,1fr) 300px 340px}.hero h1{font-size:56px}
-  .nav{justify-content:flex-start;gap:10px;overflow-x:auto}
-}
-@media(max-width:850px){
-  .brand-row{height:165px;grid-template-columns:235px 1fr;padding:10px 16px;gap:8px}
-  .griz-hq-logo{width:225px;height:135px}.header-go-block{display:none}
-  .header-matchup{min-height:145px;border-right:0;padding:0 10px}.header-matchup-kicker{font-size:11px}.header-matchup-kicker span{width:30px}
-  .header-team{min-width:0}.header-team strong{font-size:18px}.header-team img{width:42px;height:42px}.header-vs{font-size:12px}
-  .header-gamebar-date{font-size:11px}.header-gamebar-venue{font-size:7px}
-  .nav{height:52px;padding:0 10px;gap:4px}.nav a{font-size:13px;padding:17px 13px 13px}
-  .hero{grid-template-columns:1fr;min-height:0}.hero-photo{min-height:420px}.next-game,.rankings{border-left:0;border-top:1px solid #34363a}
-  .section{padding:34px 22px}
-}
-@media(max-width:540px){
-  .brand-row{height:112px;grid-template-columns:145px 1fr;padding:6px 10px}.griz-hq-logo{width:145px;height:94px}
-  .header-matchup{min-height:96px;padding:0 3px}.header-matchup-kicker{font-size:8px;letter-spacing:1.6px;margin-bottom:4px}.header-matchup-kicker span{width:14px}
-  .header-matchup-teams{gap:6px}.header-team{gap:4px}.header-team strong{font-size:13px}.header-team img{width:28px;height:28px}.header-vs{font-size:9px}
-  .header-gamebar-date{font-size:8px;margin-top:4px}.header-gamebar-venue{font-size:5.5px;margin-top:2px;letter-spacing:.6px}
-  .nav{height:48px}.nav a{font-size:12px;padding:15px 12px 11px}
-  .hero-photo{min-height:360px}.hero-copy{left:24px;bottom:28px}.hero h1{font-size:45px;margin-bottom:20px}.hero-buttons{flex-wrap:wrap}.button{padding:11px 16px}
-  .section{padding:28px 14px}.section-head h2{font-size:32px}
+/* Big Sky scoreboard: make actual scores the visual focal point */
+.bigsky-row .prominent-score { min-width: 88px; text-align:center; }
+.bigsky-row .prominent-score .score-big { display:block; font-size:25px; line-height:1; font-weight:1000; letter-spacing:.3px; color:#73003b; }
+.bigsky-row.final .prominent-score .score-big { font-size:28px; }
+.bigsky-row.live .prominent-score .score-big { font-size:28px; }
+.bigsky-row .prominent-score small { display:block; margin-top:5px; font-size:9px; font-weight:900; letter-spacing:1px; color:#666; }
+.bigsky-row .fcs-matchup small { line-height:1.5; }
+@media(max-width:560px){
+  .bigsky-row .prominent-score .score-big { font-size:22px; }
+  .bigsky-row.final .prominent-score .score-big, .bigsky-row.live .prominent-score .score-big { font-size:24px; }
 }
