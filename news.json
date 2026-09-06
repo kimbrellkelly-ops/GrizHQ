@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T21:25:06.279312+00:00",
+  "updated": "2026-09-06T22:01:36.077822+00:00",
   "source": "Automated Griz HQ news hub",
   "stories": [
     {
@@ -26,6 +26,21 @@
       "source": "MontanaSports.com",
       "badge": "GAME DAY",
       "short": "GAME",
+      "image": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    },
+    {
+      "title": "Gilman makes history as Griz run past Drake 45-10",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQbU91Q3k2RGtBQkpUNHc0MjZfX0dMeXlXSDdlb1hNTzZ0UTFESWs4bDVMZWQwb25tRktBTUNtSUNTSFN2dTNwbkl1aVRDeHQxRkhzaDFxSjZzeHBsUUNSdEZ6d0s1cmxYenBTNzhrX1JZaDlHcFd3Z2FHRTctNGxVeWZocFZiNHE1SndrWUh0Y0cwYmJCQ1FLVDB1YllVRW4tNlBUMVc1NERjT293a2pTeHpIMy12eEhaSXhTWDZZa3BST3dCc2RWMDAyYXBvQXd6UEFFLTdnWE04Smg3dlROdmI4X1Q3YjV2eG01YQ?oc=5",
+      "date": "Sep. 6, 2026",
+      "published_at": "2026-09-06T04:23:14+00:00",
+      "description": "Gilman makes history as Griz run past Drake 45-10 swxlocalsports.com",
+      "source": "swxlocalsports.com",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ",
       "image": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
       "is_video": false,
       "youtube_id": "",
@@ -346,21 +361,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&image_path=/images/2026/4/8/03022026_Spring_Practice_ce_15.jpg"
-    },
-    {
-      "title": "Montana Grizzlies release 1st 2-deep roster ahead of season opener",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOTGpJR2dtcmxvWnZ5U0gtN0NxVWd1ZDlLa0hKRVlXc19iNGM1ZzNpNnotS0d1ZTVJR1dMU1JwWk55RTNGTDVNTV9OYkNoeWJFNkpTUVIwbnV6ZmRGOFJMbzFvTnA2YS1XZGg5S1NUbm40YllpdUZxRXRXMnh1WFpPYVRRc0NCbkJySi1IdGNHSWFfekZKX3dHZFZiUXFMV1Job3p6SmVMNDg3ajQ3NnhXUUxaOVJSMEU4SzJxdzBmSQ?oc=5",
-      "date": "Aug. 25, 2026",
-      "published_at": "2026-08-25T07:00:00+00:00",
-      "description": "Montana Grizzlies release 1st 2-deep roster ahead of season opener MontanaSports.com",
-      "source": "MontanaSports.com",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ",
-      "image": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
     }
   ]
 }
