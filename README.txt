@@ -1,28 +1,14 @@
-GRIZ HQ SCOREBOARD REPAIR
+GRIZ HQ HOME SCREEN ICON UPDATE
 
-Changed files:
-1. score_refresh.py
-2. .github/workflows/refresh-griz-data.yml
-3. index.html
+Upload/replace these files in the ROOT of your GitHub Pages repository:
 
-What this fixes:
-- FCS scores are cached into data.json by GitHub Actions instead of depending on ESPN browser/CORS access.
-- Uses both ESPN public scoreboard endpoints as fallbacks.
-- Never deletes an existing good score cache when a request fails.
-- Refreshes roughly every 10 minutes.
-- The index.html cache-buster forces browsers to load the current scoreboard code.
+- index.html
+- apple-touch-icon.png
+- favicon-32.png
+- icon-192.png
+- icon-512.png
+- site.webmanifest
 
-Upload:
-- Replace index.html in the repository root.
-- Add score_refresh.py to the repository root.
-- Replace .github/workflows/refresh-griz-data.yml with the included workflow.
-- Do not replace app.js, styles.css, data.json, images, or CNAME.
+The site now declares the Griz paw as its iPhone Home Screen icon and as the browser/PWA icon.
 
-After uploading:
-1. Open GitHub -> Actions.
-2. Choose "Refresh Griz HQ data".
-3. Click "Run workflow".
-4. Wait for the green check.
-5. Refresh grizhq.com with Ctrl+F5.
-
-The first successful run should repopulate data.json with fcs_scores, which the existing app.js already reads for both the FCS Top 25 and Big Sky scoreboard.
+IMPORTANT: If the old icon is still showing on an iPhone, delete the existing Griz HQ Home Screen bookmark and add Griz HQ to the Home Screen again. iOS can cache the previous icon.
