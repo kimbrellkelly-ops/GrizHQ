@@ -328,6 +328,41 @@ async function renderFCSScoreboard(){
 
   const top25=Array.isArray(localData.fcs_top25)?localData.fcs_top25:(Array.isArray(localData.fcs_top20)?localData.fcs_top20:[]);
   const cachedScores=localData.fcs_scores || {};
+
+  // Live ESPN FCS feed with cached-data fallback. This keeps the scoreboard
+  // working even if the scheduled Python updater has not refreshed data.json.
+  async function fetchLiveFcsScores(w){
+    const urls=[
+      `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=500`,
+      `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=500`
+    ];
+    for(const url of urls){
+      try{
+        const r=await fetch(url,{cache:'no-store'});
+        if(!r.ok) continue;
+        const j=await r.json();
+        const events=(j.events||[]).map(ev=>{
+          const comps=ev.competitions||[];
+          const c=comps[0]||{};
+          const teams=(c.competitors||[]).map(x=>({
+            id:x.team?.id ? String(x.team.id) : '',
+            name:x.team?.displayName||x.team?.name||'',
+            short:x.team?.shortDisplayName||x.team?.abbreviation||'',
+            abbrev:x.team?.abbreviation||'',
+            homeAway:x.homeAway,
+            score:x.score==null?'':String(x.score)
+          }));
+          const state=c.status?.type?.state||ev.status?.type?.state||'pre';
+          const completed=!!(c.status?.type?.completed || ev.status?.type?.completed);
+          const detail=c.status?.type?.shortDetail||c.status?.type?.detail||ev.status?.type?.shortDetail||'';
+          const broadcasts=(c.broadcasts||[]).flatMap(b=>b.names||[]);
+          return {id:String(ev.id),date:ev.date,teams,state,completed,detail,broadcasts};
+        });
+        if(events.length) return events;
+      }catch(e){}
+    }
+    return null;
+  }
   const rankDate=document.getElementById('fcs-rankings-date');
   if(rankDate&&localData.fcs_rankings_date) rankDate.textContent='Stats Perform • '+localData.fcs_rankings_date;
 
@@ -461,8 +496,14 @@ async function renderFCSScoreboard(){
     topEl.innerHTML='<div class="fcs-loading">Loading Top 25…</div>';
     if(bigSkyEl)bigSkyEl.innerHTML='<div class="fcs-loading">Loading Big Sky games…</div>';
     if(bigSkyLabelEl)bigSkyLabelEl.textContent=w[2]+' • All 13 teams';
-    const events=eventsForWeek(w);
-    statusEl.textContent=`${events.length} FCS games • cached feed`;
+    let events=eventsForWeek(w);
+    const liveEvents=await fetchLiveFcsScores(w);
+    if(liveEvents){
+      events=liveEvents;
+      statusEl.textContent=`${events.length} FCS games • live ESPN feed`;
+    }else{
+      statusEl.textContent=`${events.length} FCS games • cached feed`;
+    }
 
     topEl.innerHTML=top25.slice(0,25).map(t=>{
       const ev=findTeamEvent(t.team,events);
