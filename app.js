@@ -294,7 +294,27 @@ async function renderFCSScoreboard(){
     'southernutah':['southernutah','southeasternutah','soutah','soututah','southernutahthunderbirds'],
     'utahtech':['utahtech','utahtechuniversity','utahtechtrailblazers'],
     'ucdavis':['ucdavis','ucdavisaggies'],
-    'portlandstate':['portlandstate','portlandst','portlandstatevikings']
+    'portlandstate':['portlandstate','portlandst','portlandstatevikings'],
+    'southdakotastate':['southdakotastate','southdakotast','southdakotastatejackrabbits'],
+    'illinoisstate':['illinoisstate','illinoist','illinoisst','illinoisstateredbirds'],
+    'tarletonstate':['tarletonstate','tarletonst','tarletonstatetexans'],
+    'rhodeisland':['rhodeisland','rhodeislandrams'],
+    'northdakota':['northdakota','northdakotafightinghawks'],
+    'youngstownstate':['youngstownstate','youngstownst','youngstownstatepenguins'],
+    'lehigh':['lehigh','lehighmountainhawks'],
+    'southdakota':['southdakota','southdakotacoyotes'],
+    'tennesseetech':['tennesseetech','tennesseetechgoldeneagles'],
+    'stephenfaustin':['stephenfaustin','stephenfaustinlumberjacks'],
+    'lamar':['lamar','lamarcardinals'],
+    'austinpeay':['austinpeay','austinpeaygovernors'],
+    'yale':['yale','yalebulldogs'],
+    'williammary':['williammary','williammarytribe'],
+    'villanova':['villanova','villanovawildcats'],
+    'mercer':['mercer','mercerbears'],
+    'abilenechristian':['abilenechristian','abilenechristianwildcats'],
+    'southcarolinastate':['southcarolinastate','southcarolinast','southcarolinastatebulldogs'],
+    'westerncarolina':['westerncarolina','westerncarolinacatamounts'],
+    'westflorida':['westflorida','westfloridaargonauts']
   };
   function teamMatches(name,team){
     const n=norm(name), t=norm(team);
