@@ -2054,7 +2054,7 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   }
 }
 
-/* ===== PORTRAIT BIG SKY SCOREBOARD — DEFINITIVE FIX =====
+/* ===== PORTRAIT BIG SKY SCOREBOARD — DEFINITIVE FIX ===== */
 /* The score must stay visible on the right on narrow phones. */
 @media (max-width: 560px) {
   .fcs-games {
