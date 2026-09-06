@@ -1,7 +1,22 @@
 {
-  "updated": "2026-09-06T18:27:57.845077+00:00",
+  "updated": "2026-09-06T19:24:31.618141+00:00",
   "source": "Automated Griz HQ news hub",
   "stories": [
+    {
+      "title": "Grizzly Replay: No. 3 Montana vs. Drake",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOdENEWEg3eW1EVkNzTE5QVUp2NnNMMkhqYmszNVFOYnNkU3RkU052cnRQbkNOWHQxcjRIT0xkUjFRT0llU0lqRk1lQkl6Mm1jblNfMW9OZGM3bmRLNG9nMnp0OFRab2xnRlFzTzJkRXlvdUF6ZlpRbmZxRV9aT2NJNVU3R2ZyQXN2am9vUndETTRLQkZsT044?oc=5",
+      "date": "Sep. 6, 2026",
+      "published_at": "2026-09-06T15:36:57+00:00",
+      "description": "Grizzly Replay: No. 3 Montana vs. Drake MontanaSports.com",
+      "source": "MontanaSports.com",
+      "badge": "GAME DAY",
+      "short": "GAME",
+      "image": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    },
     {
       "title": "Gillman sets records as Griz roll past Bulldogs, 45-10",
       "url": "https://gogriz.com/news/2026/9/5/football-gillman-sets-records-as-griz-roll-past-bulldogs-45-10",
@@ -16,6 +31,36 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&image_path=/images/2026/9/5/20260905_fb_v_Drake_4405_rb.jpg"
+    },
+    {
+      "title": "Gillman sets records as Griz roll past Bulldogs, 45-10",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPbjZLUnQ3eEJjaTBtMF9yQTNyQVgza001X28xVE9mOW1FQUMtOVM4dkdCQWpITURNbFF0QkZ2ZWFFMjY5QkU5bDBlNk9JVV8tSDYwLUQzemtGbzVob1hzVmp0SzA2d3lRaVFyd0hwYVR5QnQyZVZzcGdyaVRfVHpEVlpHRkdtQjBla1pwTkloTlNYaDNQa3ZIMnIwRQ?oc=5",
+      "date": "Sep. 6, 2026",
+      "published_at": "2026-09-06T02:33:32+00:00",
+      "description": "Gillman sets records as Griz roll past Bulldogs, 45-10 gogriz.com",
+      "source": "gogriz.com",
+      "badge": "GAME STORY",
+      "short": "GAME",
+      "image": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    },
+    {
+      "title": "Eli Gillman's big day in win over Drake cements place in Grizzlies record book",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOZndseHJEMjdpY2M1Wm1mWGt0VjUwZnV4dnFKLVVFZnZDU3NpMUs2ajExUk9yV1dTT01jTmlBeXgtbW85SkY4SlQxeHZSa3NycUpqdWVaME00MjhJYmR5LXJwdU14OXIxWjQ4dkFWM3k0Y0g4UUFkbmJieFJlaFQzX1FSOFpjRFc0cVVkVFNUVGlCbDExdENSbU9RX2QtTmQ5MFd3MzVTRk5zbmdRZWdza1FCbnd0bE1INjRva29XSnRNUHB0RWtiNS1IYjhuUQ?oc=5",
+      "date": "Sep. 6, 2026",
+      "published_at": "2026-09-06T01:14:40+00:00",
+      "description": "Eli Gillman's big day in win over Drake cements place in Grizzlies record book Billings Gazette",
+      "source": "Billings Gazette",
+      "badge": "GAME STORY",
+      "short": "GAME",
+      "image": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
     },
     {
       "title": "Give Gillman the crown: Griz ride RBs 4 touchdowns to win over Drake",
@@ -78,6 +123,66 @@
       "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/dixieathletics.com/images/2026/9/5/utfb_byuwrap.jpg"
     },
     {
+      "title": "No. 3 Montana blows past Drake as Eli Gillman rewrites rushing TD record",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPVWUzTmI4RzcyNW1RX01ocW9oRTlXTnZQSVNRenhKdXIzOFVlUkR2UnhfTUIxTXZ0NFZpNHVXWWR2MU1MQ0htaFVxbkUzOFVyR1Y1MWJsd2cyMkgxRG9pQkxOR3c5QUlSTVdZai1WRlZYSDE5Um05ckZSNC1XUlZtazlnV2pqbU5ZX05vbWlvTjJPZlpPUHhDYmRKZmVkNjlRenhXMDFVblNmREhDS2EyYjk0YXFaYVVWM2VTNmhVd20xV2w4U1E?oc=5",
+      "date": "Sep. 5, 2026",
+      "published_at": "2026-09-05T22:35:37+00:00",
+      "description": "No. 3 Montana blows past Drake as Eli Gillman rewrites rushing TD record MontanaSports.com",
+      "source": "MontanaSports.com",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ",
+      "image": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    },
+    {
+      "title": "HALF: Griz lead Drake 21-3",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOcVp5Ni0zT1NaZG9CNTNNdzd2RnVoTkQtMDBHQlFmQmNZR2JRbmhfT3NGd0xnZmFtb0k5Ym9rekd5cHVhbEd1bk51eU1jdXJYSVhGM1JPUTVfb09KdmZsOW5WLVlWWEtwdS03ZE1wZnVyN09TbGdZUHdSenUzcWRpQzNWNDdCdnJMb19ldjJ4VGlTYmhhSG9XN1lXSG8tZzlqMk5UWXZ5dUxsTGhlOGVTZGZ5NDh1dHBIZkYxeGdZNm9RdjAzQXktWkhIeHQ?oc=5",
+      "date": "Sep. 5, 2026",
+      "published_at": "2026-09-05T20:38:51+00:00",
+      "description": "HALF: Griz lead Drake 21-3 SWX Local Sports",
+      "source": "SWX Local Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ",
+      "image": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    },
+    {
+      "title": "Recap: No. 3 Montana Grizzlies blow out Drake Bulldogs, move to 2-0",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPam9Tb2ZweFkxZzBadDhrLUJtZkRNaV9CMGh2NURrTG9SZmJXS1Q3c1U4eDluNWVLTTd5VUtKLVpGa2oxbVFrRFdIRVFlRThKTi1FQ3RFZVdjR2dJd3RXUG9iTjNXTUE0dGVoOUtVODVRaTU1SkNrU1R3bEktTXhHSUxieGlpVjNpbVpGYVlFanJNRDJkdEZsWENaNmJxLU05NGlTQ19GZWd5ekFCSU01SFFGMFFST0dWTXNRZGNXT0VkUlN0RGEw?oc=5",
+      "date": "Sep. 5, 2026",
+      "published_at": "2026-09-05T18:45:00+00:00",
+      "description": "Recap: No. 3 Montana Grizzlies blow out Drake Bulldogs, move to 2-0 The Missoulian",
+      "source": "The Missoulian",
+      "badge": "GAME STORY",
+      "short": "GAME",
+      "image": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    },
+    {
+      "title": "Recap: No. 3 Montana Grizzlies blow out Drake Bulldogs, move to 2-0",
+      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPUHhVWmNuMUx3NDB1NC04ejRyX3NOOFQyU1g5cGZhblBLRUR0YmJMUHlDX0dUcDZxaF9BdTVVSzhvS203V2UxTUVocFZrbmVnN2RDQ1lTQ2tROV84T3ZfaC0tZHVIYXhLZVplelFBTTA4OV9JOFFaQUUxYjFweHB4MzJtaEdWOF96ZzVzSWRiSzF2WmlvbmF6MkhYUGVITWIxMFVPS0JWcTRmTEsyTS03U2dna1ZMTV9mNU9SODZxZmNSTXR4Q2lSVE11TmNOQWRfa3I5ZHFSazJCWG9kS2xGaUVjQWxuazhnNUIzVEJfaFJVanVTbmNSRHJmTHc5ZkdDXzJz0gGIAkFVX3lxTE1CYmFtOEtvS2lNWnJXQmEtNm45OW1VQUpWMjBocTVnLXNqT2FfNkptbEtxbTFOSkpVbEpfeWxOMjlsbW9MQ2dJY2RpMmRvMGk1TTE4aEJDa3BFVkNKZV9yS3M2eTN6Vl9TM1IxbjJZLXdUdVRKdUE1UEFaTmx4cGZBXzU4RHFLa0FtTlpCRFlndWpqQmtaTTBwZ2pXdlFPSEVmeEZfQS1VM3JsZ3U3Y0NEMmk1ZVR1TmtKaDZCeG0zcXR0STdPVGRtOWhES2J0WERfS1FBWU13elFlN3Rjc291M19mZzZsVTZDYXYwTHlsUW1kZzZxWVRXTjZic3pfU0tTRVpQQTBSNA?oc=5",
+      "date": "Sep. 5, 2026",
+      "published_at": "2026-09-05T18:45:00+00:00",
+      "description": "Recap: No. 3 Montana Grizzlies blow out Drake Bulldogs, move to 2-0 406 Sports",
+      "source": "406 Sports",
+      "badge": "GAME STORY",
+      "short": "GAME",
+      "image": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    },
+    {
       "title": "Stripe the Stadium - What you should wear",
       "url": "https://gogriz.com/news/2026/9/4/football-stripe-the-stadium-what-you-should-wear",
       "date": "Sep. 4, 2026",
@@ -91,6 +196,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&image_path=/images/2024/9/21/_TM21627_2.jpg"
+    },
+    {
+      "title": "New coach, new energy as Griz enter second week of spring",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPa3AyNl84NU4xVXQtQzFLSXBxeEt1UUJnRFBGOFJJMVhUZnQtZy1kMWc5LVV2TEN6Z3VITXd1eElWeWJGeHl1Um1rVEtlbjRNUnlvUVptRWtZYWZuNWNfYlVjZGYzak1Bb2g0RVduRTBuXzBuYW5SWkhzTFhoZzUtYWxGNnFIVFRYdmcweTRCTXRPdEFCSC1nVHF0Ulh4Sms?oc=5",
+      "date": "Sep. 3, 2026",
+      "published_at": "2026-09-03T07:00:00+00:00",
+      "description": "New coach, new energy as Griz enter second week of spring gogriz.com",
+      "source": "gogriz.com",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ",
+      "image": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
     },
     {
       "title": "Griz look to build momentum against Drake",
@@ -136,6 +256,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&image_path=/images/2026/8/30/20260829_fbvssouthernutah_0134.jpg"
+    },
+    {
+      "title": "How to watch, stream and listen to the Montana Grizzlies’ football games in 2026",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPUm0wNGpWa2xmMjVrVS1mNjREeEYtTzI5eVZzeU9VanJOcURWTUlzX2hUVy05LWNlU2lTTDdMY19zenZ4bkQ4YzZGVFdTenBMUmdCNDRXNDY4VExETXJuVzN5RllDeGpDLXotQ0VidW5BWXVvODYyYzlxNVdFd29FN1o5UVkxSld6eE95eGprOG5FTXlBTUdqaXBHNTkzR2dMQk9ydDg0Q25tNFRYMGhXZVlONnk1OW9RN1RZakRKMHVIVXFLcVdwY1N6dFhVUQ?oc=5",
+      "date": "Aug. 29, 2026",
+      "published_at": "2026-08-29T18:06:59+00:00",
+      "description": "How to watch, stream and listen to the Montana Grizzlies’ football games in 2026 Billings Gazette",
+      "source": "Billings Gazette",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ",
+      "image": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
     },
     {
       "title": "Grizzly Insider returns in 2026",
