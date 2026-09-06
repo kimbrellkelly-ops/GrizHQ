@@ -17,17 +17,11 @@ HEADERS = {
 
 FEEDS = [
     ("GoGriz", "https://gogriz.com/rss?path=football"),
-    ("Google News", "https://news.google.com/rss/search?q=Montana+Grizzlies+football&hl=en-US&gl=US&ceid=US:en"),
+    ("Montana Sports", "https://www.montanasports.com/index.rss"),
 ]
 
 SKYLINE_URL = "https://skylinesportsmt.com/category/cat-griz-football/"
-FALLBACK_IMAGE = "https://ewscripps.brightspotcdn.com/dims4/default/80f8faf/2147483647/strip/true/crop/3453x1813%2B0%2B245/resize/1200x630%21/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2Fa8%2F0b%2F5b4b114348319365c393f37c67ad%2F09062025-griz-fb-cwu23.jpg"
-FALLBACK_IMAGES = [
-    "https://ewscripps.brightspotcdn.com/dims4/default/375f66f/2147483647/strip/true/crop/3000x1688%2B0%2B0/resize/1200x675%21/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2F09%2F3d%2F3ed83fe246d2912e0fcb353e96c4%2F20260205-bobby-kennedy-8875-rb-enhanced-nr-copy.jpg",
-    "https://townsquare.media/site/1113/files/2026/02/attachment-copy-of-moving-out-of-mt.jpg?q=75&w=1600",
-    "https://ewscripps.brightspotcdn.com/dims4/default/95396b8/2147483647/strip/true/crop/2048x1075%2B0%2B0/resize/1200x630%21/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2F53%2Fee%2Fa450ce504fe2a28fd158c0b83b9e%2Fdsc03935.jpg",
-    "https://ewscripps.brightspotcdn.com/dims4/default/8aa2729/2147483647/strip/true/crop/5069x2851%2B0%2B0/resize/1280x720%21/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2F30%2F6d%2F7db103f845ffb44dfbb9a96c6de8%2Fmtn-100524-griz-fb-weber-st29.jpg",
-]
+FALLBACK_IMAGE = "hero.jpg"
 
 GRIZ_TERMS = (
     "montana grizzlies", "montana griz", "griz football", "griz", "gillman",
@@ -122,21 +116,9 @@ def valid_image(url):
     if not url.lower().startswith(("http://", "https://")):
         return ""
     low = url.lower()
-    if any(x in low for x in ("logo", "avatar", "icon", "tracking", "pixel", "griz-hq")):
+    if any(x in low for x in ("logo", "avatar", "icon", "tracking", "pixel", "griz-hq", "news.google.com", "googleusercontent.com", "gstatic.com")):
         return ""
     return url
-
-
-
-def fallback_image_for_story(title, source=""):
-    """Return a real Griz football photo when an article does not expose one."""
-    text = f"{title} {source}".lower()
-    # Keep current-game coverage visually varied while avoiding the generic Griz HQ art.
-    if "bobby kennedy" in text or "press conference" in text:
-        return FALLBACK_IMAGES[0]
-    if "gillman" in text or "drake" in text or "game" in text:
-        return FALLBACK_IMAGES[2 if "gillman" in text else 1]
-    return FALLBACK_IMAGES[hash(text) % len(FALLBACK_IMAGES)]
 
 
 def image_from_rss_item(item, base_url):
@@ -230,13 +212,11 @@ def parse_rss(source, url):
             continue
 
         publisher = source
-        if source == "Google News" and " - " in title:
-            title, publisher = title.rsplit(" - ", 1)
 
         dt = parse_date(pub)
         rss_image = image_from_rss_item(item, link)
         meta = fetch_article_metadata(link)
-        image = rss_image or meta.get("image", "") or fallback_image_for_story(title, publisher)
+        image = rss_image or meta.get("image", "")
         youtube_id = meta.get("youtube_id", "")
         is_video = looks_like_video(title, link, desc) or bool(youtube_id)
 
@@ -300,7 +280,7 @@ def parse_skyline():
             "source": "Skyline Sports",
             "badge": category(title),
             "short": category(title)[:4].upper(),
-            "image": meta.get("image", "") or fallback_image_for_story(title, "Skyline Sports"),
+            "image": meta.get("image", ""),
             "is_video": is_video,
             "youtube_id": youtube_id,
             "video_url": f"https://www.youtube.com/watch?v={youtube_id}" if youtube_id else (href if is_video else ""),
@@ -348,7 +328,7 @@ def dedupe_and_sort(stories):
             story["description"] = clean(story.get("description"))[:220]
             story["badge"] = story.get("badge") or category(title)
             story["short"] = story.get("short") or story["badge"][:4].upper()
-            story["image"] = valid_image(story.get("image", "")) or fallback_image_for_story(title, story.get("source", ""))
+            story["image"] = valid_image(story.get("image", ""))
             story["is_video"] = bool(story.get("is_video") or story.get("youtube_id") or looks_like_video(title, url, story.get("description", "")))
             story["youtube_id"] = clean(story.get("youtube_id", ""))
             story["video_url"] = clean(story.get("video_url", ""))
