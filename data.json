@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T05:44:26.159398+00:00",
+  "updated": "2026-09-06T05:53:37.329521+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -5131,35 +5131,6 @@
         ]
       },
       {
-        "id": "401866411",
-        "date": "2026-09-06T02:00Z",
-        "name": "Mississippi Valley State Delta Devils at Sacramento State Hornets",
-        "teams": [
-          {
-            "id": "16",
-            "name": "Sacramento State Hornets",
-            "short": "Sacramento St",
-            "abbrev": "SAC",
-            "homeAway": "home",
-            "score": "52"
-          },
-          {
-            "id": "2400",
-            "name": "Mississippi Valley State Delta Devils",
-            "short": "Miss Valley St",
-            "abbrev": "MVSU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
         "id": "401868163",
         "date": "2026-09-06T02:00Z",
         "name": "UC Davis Aggies at San Diego Toreros",
@@ -5181,9 +5152,9 @@
             "score": "49"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "1:49 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7583,6 +7554,35 @@
             "abbrev": "MORG",
             "homeAway": "away",
             "score": "7"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401866411",
+        "date": "2026-09-06T02:00Z",
+        "name": "Mississippi Valley State Delta Devils at Sacramento State Hornets",
+        "teams": [
+          {
+            "id": "16",
+            "name": "Sacramento State Hornets",
+            "short": "Sacramento St",
+            "abbrev": "SAC",
+            "homeAway": "home",
+            "score": "52"
+          },
+          {
+            "id": "2400",
+            "name": "Mississippi Valley State Delta Devils",
+            "short": "Miss Valley St",
+            "abbrev": "MVSU",
+            "homeAway": "away",
+            "score": "0"
           }
         ],
         "state": "post",
@@ -27285,7 +27285,7 @@
       }
     ]
   },
-  "fcs_scores_updated": "2026-09-06T05:44:37.491665+00:00",
+  "fcs_scores_updated": "2026-09-06T05:53:44.582830+00:00",
   "latest_press_conference": {
     "title": "Montana State press conference – Brent Vigen, Jabez Woods, Zac Crews after 51-24 win over Butler",
     "date": "Sun, 06 Sep 2026 05:09:52 +0000",
