@@ -124,7 +124,33 @@ function renderMiniPolls(coaches, media) {
   wrap.innerHTML = [coaches, media].map(poll => `<ol>${poll.slice(0,10).map(t => `<li class="${String(t).toLowerCase().includes("montana") && !String(t).toLowerCase().includes("state") ? "griz" : ""}">${escapeHtml(t)}</li>`).join("")}</ol>`).join("");
 }
 function escapeHtml(s) { return String(s ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c])); }
+
+async function renderLatestPressConference(){
+  const box=document.getElementById("latest-press");
+  if(!box)return;
+  try{
+    const d=await (await fetch("data.json?ts="+Date.now(),{cache:"no-store"})).json();
+    const m=d.latest_press_conference;
+    if(!m)return;
+    const title=document.getElementById("latest-press-title");
+    const date=document.getElementById("latest-press-date");
+    const link=document.getElementById("latest-press-link");
+    const video=document.getElementById("latest-press-video");
+    if(title)title.textContent=m.title||"Latest Griz press conference";
+    if(date)date.textContent=(m.date?m.date+" • ":"")+"Skyline Sports";
+    if(link)link.href=m.url||"https://skylinesportsmt.com/category/press-conference/";
+    if(video){
+      if(m.youtube_id){
+        video.innerHTML='<iframe src="https://www.youtube.com/embed/'+encodeURIComponent(m.youtube_id)+'?rel=0" title="Latest Griz press conference" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+      } else {
+        video.innerHTML='<div class="press-video-placeholder">Skyline has published the press conference article. The video player will appear automatically when the YouTube video is attached.</div>';
+      }
+    }
+  }catch(e){}
+}
+
 loadGrizData();
+renderLatestPressConference();
 
 function renderDepthChart(d) {
   const dc = d.depth_chart;
@@ -232,6 +258,20 @@ async function renderBigSkyAndOpponent(){
     }
 
     const opponent = d.next_game?.opponent || "Drake";
+
+    // Keep the Game Center focused on Montana's NEXT game, not the game just played.
+    const gameCenterTitle = document.getElementById("game-center-title");
+    const gameCenterMeta = document.getElementById("game-center-meta");
+    if (gameCenterTitle) {
+      gameCenterTitle.textContent = `${opponent} at Montana`;
+    }
+    if (gameCenterMeta) {
+      const nextDate = d.next_game?.date || "";
+      const nextTime = d.next_game?.time || "";
+      const nextVenue = String(d.next_game?.venue || "Washington-Grizzly Stadium").split(",")[0];
+      gameCenterMeta.textContent = [nextDate, nextTime, nextVenue].filter(Boolean).join(" • ");
+    }
+
     const resources = d.opponent_resources?.[opponent];
     if (resources) {
       const hub = document.getElementById("opponent-hub-name");
@@ -294,27 +334,7 @@ async function renderFCSScoreboard(){
     'southernutah':['southernutah','southeasternutah','soutah','soututah','southernutahthunderbirds'],
     'utahtech':['utahtech','utahtechuniversity','utahtechtrailblazers'],
     'ucdavis':['ucdavis','ucdavisaggies'],
-    'portlandstate':['portlandstate','portlandst','portlandstatevikings'],
-    'southdakotastate':['southdakotastate','southdakotast','sdakotast','sdakotastate','southdakotastatejackrabbits'],
-    'illinoisstate':['illinoisstate','illinoist','illinoisst','illinoisstateredbirds'],
-    'tarletonstate':['tarletonstate','tarletonst','tarletonstatetexans'],
-    'rhodeisland':['rhodeisland','rhodeislandrams'],
-    'northdakota':['northdakota','northdakotafightinghawks'],
-    'youngstownstate':['youngstownstate','youngstownst','youngstownstatepenguins'],
-    'lehigh':['lehigh','lehighmountainhawks'],
-    'southdakota':['southdakota','sdakota','southdakotacoyotes'],
-    'tennesseetech':['tennesseetech','tennesseetechgoldeneagles'],
-    'stephenfaustin':['stephenfaustin','stephenfaustinlumberjacks'],
-    'lamar':['lamar','lamarcardinals'],
-    'austinpeay':['austinpeay','austinpeaygovernors'],
-    'yale':['yale','yalebulldogs'],
-    'williammary':['williammary','williammarytribe'],
-    'villanova':['villanova','villanovawildcats'],
-    'mercer':['mercer','mercerbears'],
-    'abilenechristian':['abilenechristian','abilenechrstn','acu','abilenechristianwildcats'],
-    'southcarolinastate':['southcarolinastate','southcarolinast','scstate','scst','southcarolinastatebulldogs'],
-    'westerncarolina':['westerncarolina','wcarolina','westerncarolinacatamounts'],
-    'westflorida':['westflorida','westfloridaargonauts']
+    'portlandstate':['portlandstate','portlandst','portlandstatevikings']
   };
   function teamMatches(name,team){
     const n=norm(name), t=norm(team);

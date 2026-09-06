@@ -181,6 +181,42 @@ def parse_stats(old):
 def normalize_poll(old_list):
     return old_list if isinstance(old_list,list) else []
 
+
+def fetch_latest_press_conference():
+    """Find the newest Montana/Griz press-conference article on Skyline and extract its YouTube ID when available."""
+    import urllib.request
+    feed_urls=[
+        "https://skylinesportsmt.com/category/press-conference/feed/",
+        "https://skylinesportsmt.com/category/press-conference/",
+    ]
+    fallback={
+        "title":"WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker",
+        "date":"September 5, 2026",
+        "url":"https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/"
+    }
+    for u in feed_urls:
+        try:
+            req=urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0"})
+            with urllib.request.urlopen(req,timeout=15) as r:
+                text=r.read().decode("utf-8","ignore")
+            # Prefer the newest post whose title contains Montana/Griz and press conference.
+            matches=re.findall(r'<item>(.*?)</item>',text,re.S|re.I) if '<item>' in text else []
+            for item in matches:
+                title_m=re.search(r'<title><!\[CDATA\[(.*?)\]\]></title>|<title>(.*?)</title>',item,re.S|re.I)
+                link_m=re.search(r'<link>(.*?)</link>',item,re.S|re.I)
+                if not title_m or not link_m: continue
+                title=html.unescape(next(x for x in title_m.groups() if x is not None)).strip()
+                url=html.unescape(link_m.group(1)).strip()
+                low=title.lower()
+                if 'press conference' in low and ('montana' in low or 'griz' in low):
+                    article=urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"}),timeout=15).read().decode('utf-8','ignore')
+                    y=re.search(r'(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=)|youtu\.be/)([A-Za-z0-9_-]{11})',article)
+                    date_m=re.search(r'<pubDate>(.*?)</pubDate>',item,re.S|re.I)
+                    return {"title":title,"date":date_m.group(1).strip() if date_m else "","url":url,"youtube_id":y.group(1) if y else ""}
+        except Exception:
+            continue
+    return fallback
+
 def main():
     old=json.loads(DATA.read_text()) if DATA.exists() else {}
     new=dict(old)
@@ -224,6 +260,7 @@ def main():
     try: new["stats"]=parse_stats(old)
     except Exception as e: print("Stats update failed:",e)
 
+    new["latest_press_conference"] = fetch_latest_press_conference()
     DATA.write_text(json.dumps(new,indent=2,ensure_ascii=False)+"\n")
     print("Griz HQ data refreshed.")
 
