@@ -1,14 +1,27 @@
-GRIZ HQ HOME SCREEN ICON UPDATE
+GRIZ HQ PHASE 2 — NEWS AUTOMATION
 
-Upload/replace these files in the ROOT of your GitHub Pages repository:
+Upload these files to your GitHub repository:
 
-- index.html
-- apple-touch-icon.png
-- favicon-32.png
-- icon-192.png
-- icon-512.png
-- site.webmanifest
+1. news_update.py
+   -> repository ROOT
 
-The site now declares the Griz paw as its iPhone Home Screen icon and as the browser/PWA icon.
+2. refresh-griz-news.yml
+   -> .github/workflows/
 
-IMPORTANT: If the old icon is still showing on an iPhone, delete the existing Griz HQ Home Screen bookmark and add Griz HQ to the Home Screen again. iOS can cache the previous icon.
+What it does:
+- Runs automatically every hour.
+- Pulls Montana football stories from GoGriz RSS, Google News, and Skyline Sports.
+- Filters out Montana State/Bobcats stories.
+- Deduplicates stories.
+- Keeps older stories as a fallback.
+- Updates ONLY news.json.
+- Does NOT modify data.json, app.js, index.html, styles.css, or the existing scoreboard workflow.
+
+After uploading:
+1. Open GitHub -> Actions.
+2. Select "Refresh Griz HQ News".
+3. Click "Run workflow" once to test it.
+4. Confirm the workflow completes successfully.
+5. Check that news.json has updated.
+
+The existing "Refresh Griz HQ data" workflow remains separate.
