@@ -2221,3 +2221,173 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .trend-bars b{font-size:11px;text-align:right}
 @media(max-width:1100px){.stats-summary-large{grid-template-columns:repeat(3,1fr)}.leader-grid-expanded{grid-template-columns:1fr 1fr}.leader-grid-expanded .leader-card:nth-child(3n){border-right:1px solid #ddd}.leader-grid-expanded .leader-card:nth-child(2n){border-right:0}}
 @media(max-width:600px){.stats-summary-large{grid-template-columns:1fr 1fr}.stats-compare{padding-left:16px;padding-right:16px}.stats-compare-head,.stats-compare-row{grid-template-columns:1.3fr .7fr .8fr .55fr;gap:8px}.stats-compare-row b,.stats-compare-row strong{font-size:13px}.leader-grid-expanded{grid-template-columns:1fr}.leader-grid-expanded .leader-card{border-right:0!important}.trend-meta{grid-template-columns:45px 1fr auto}}
+
+
+/* === RESTORED NEWS / VIDEO / SOCIAL / HISTORY VISUAL UPGRADES === */
+/* =========================================================
+   GRIZ HQ NEWSROOM — HOMEPAGE + FULL NEWS TAB
+   News content is loaded from news.json. No scoreboard/data styles changed.
+   ========================================================= */
+.ghq-home-news{background:#0f1012;color:#fff;border-top:6px solid var(--maroon);border-bottom:1px solid #292a2d}
+.ghq-news-shell,.ghq-newsroom-shell{max-width:1500px;margin:0 auto;padding:42px 34px}
+.ghq-news-head,.ghq-newsroom-top{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:24px}
+.ghq-news-head h2,.ghq-newsroom-top h2{margin:4px 0 7px;font:900 44px/.95 "Barlow Condensed";letter-spacing:1px;text-transform:uppercase}
+.ghq-news-head p,.ghq-newsroom-top p{margin:0;color:#aeb0b4;max-width:720px;font-size:13px;line-height:1.6}
+.ghq-news-live,.ghq-newsroom-status{display:flex;align-items:center;gap:9px;font:800 10px "Inter";letter-spacing:1.4px;color:#d5d6d8;white-space:nowrap}
+.ghq-news-live span,.ghq-newsroom-status span{width:9px;height:9px;border-radius:50%;background:#69c77d;box-shadow:0 0 0 4px rgba(105,199,125,.12)}
+.ghq-home-news-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(360px,1fr);gap:18px}
+.ghq-home-news-grid-simple{display:block}.ghq-home-news-grid-simple .ghq-home-news-side{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.ghq-home-news-grid-simple .ghq-news-card{min-height:360px;padding:0;overflow:hidden}.ghq-home-news-grid-simple .ghq-card-art{min-height:190px}.ghq-home-news-grid-simple .ghq-card-copy{padding:18px}.ghq-home-news-grid-simple .ghq-news-card h3{font-size:25px}
+.ghq-news-lead{display:grid;grid-template-rows:270px 1fr;background:#1b1c20;border:1px solid #303137;min-height:470px;transition:transform .18s ease,border-color .18s ease}
+.ghq-news-lead:hover,.ghq-news-card:hover,.ghq-news-feature-main:hover,.ghq-news-feature-small:hover,.ghq-news-tile:hover{transform:translateY(-2px);border-color:#777}
+.ghq-news-art,.ghq-feature-art,.ghq-tile-art{position:relative;overflow:hidden;background:radial-gradient(circle at 75% 25%,rgba(255,255,255,.13),transparent 25%),linear-gradient(135deg,#260014 0%,#660033 52%,#111217 100%)}
+.ghq-news-art:after,.ghq-feature-art:after,.ghq-tile-art:after{content:"M";position:absolute;right:-18px;bottom:-55px;font:900 230px/.8 "Barlow Condensed";color:rgba(255,255,255,.07);transform:skewX(-8deg)}
+.ghq-news-art-mark{position:absolute;left:25px;bottom:22px;font:900 42px/.9 "Barlow Condensed";letter-spacing:2px;color:#fff;z-index:2}
+.ghq-news-art-type{position:absolute;right:20px;top:18px;background:#fff;color:var(--maroon);padding:7px 10px;font:900 10px "Inter";letter-spacing:1px;z-index:2}
+.ghq-news-lead-copy{padding:23px 25px 25px}
+.ghq-news-meta{font:800 9px "Inter";letter-spacing:1.5px;color:#a7a9ae;text-transform:uppercase}
+.ghq-news-lead h3{font:900 32px/1 "Barlow Condensed";letter-spacing:.5px;margin:9px 0 9px;color:#fff}
+.ghq-news-lead p{font-size:13px;line-height:1.55;color:#b9bbc0;margin:0 0 18px;max-width:760px}
+.ghq-news-read,.ghq-news-feature-main .ghq-feature-copy>span{font:900 10px "Inter";letter-spacing:1.3px;color:#fff}
+.ghq-home-news-side{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ghq-news-card{background:#1b1c20;border:1px solid #303137;padding:20px;min-height:225px;display:flex;flex-direction:column;transition:transform .18s ease,border-color .18s ease}
+.ghq-card-type{font:900 9px "Inter";letter-spacing:1.3px;color:#d7a9bf}
+.ghq-news-card h3{font:900 23px/1.02 "Barlow Condensed";margin:9px 0 8px;color:#fff}
+.ghq-news-card p{font-size:11px;line-height:1.45;color:#aeb0b4;margin:0 0 12px}
+.ghq-news-card small{margin-top:auto;color:#777a80;font:700 8px "Inter";letter-spacing:.7px}
+.ghq-news-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:16px;padding-top:15px;border-top:1px solid #2b2c30;color:#7f8288;font-size:10px}
+.ghq-news-bottom b{color:#fff;margin-right:7px}.ghq-news-bottom a{font:900 10px "Inter";letter-spacing:1px;color:#fff}
+
+.ghq-newsroom{background:var(--paper)}
+.ghq-newsroom-shell{padding-top:48px;padding-bottom:60px}
+.ghq-newsroom-top h2{color:#151519;font-size:58px}
+.ghq-newsroom-top p{color:#666;max-width:760px}
+.ghq-newsroom-status{flex-direction:column;align-items:flex-end;color:#333;gap:7px}.ghq-newsroom-status small{font:600 10px Inter;color:#777;letter-spacing:.4px}
+.ghq-news-filters{display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:13px 0;margin-bottom:20px}
+.ghq-news-filters button{border:1px solid #c8c6c3;background:#fff;color:#5f5f61;padding:9px 13px;font:900 10px "Inter";letter-spacing:1px;cursor:pointer}
+.ghq-news-filters button:hover,.ghq-news-filters button.is-active{background:var(--maroon);border-color:var(--maroon);color:#fff}
+.ghq-news-feature-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(330px,.75fr);gap:18px;margin-bottom:40px}
+.ghq-news-feature-main{display:grid;grid-template-columns:1.1fr 1fr;min-height:370px;background:#151519;color:#fff;border:1px solid #292a2d;transition:transform .18s ease,border-color .18s ease}
+.ghq-feature-art{min-height:370px}.ghq-feature-art span{position:absolute;left:25px;bottom:22px;font:900 48px/.9 "Barlow Condensed";letter-spacing:2px;z-index:2}.ghq-feature-art b{position:absolute;right:18px;top:18px;background:#fff;color:var(--maroon);padding:7px 10px;font:900 9px Inter;letter-spacing:1px;z-index:2}
+.ghq-feature-copy{padding:31px 27px;display:flex;flex-direction:column;justify-content:center}.ghq-feature-copy h3{font:900 40px/.94 "Barlow Condensed";margin:10px 0 12px}.ghq-feature-copy p{color:#b6b8bc;font-size:13px;line-height:1.55;margin:0 0 22px}.ghq-feature-copy>span{margin-top:auto}
+.ghq-news-feature-stack{display:grid;gap:18px}
+.ghq-news-feature-small{display:grid;grid-template-columns:115px 1fr;gap:16px;background:#fff;border:1px solid #d3d1ce;padding:0;min-height:176px;transition:transform .18s ease,border-color .18s ease}
+.ghq-small-art{background:linear-gradient(145deg,#660033,#1a1a1e);color:#fff;display:flex;align-items:flex-end;padding:13px;font:900 26px "Barlow Condensed";letter-spacing:1px}
+.ghq-news-feature-small>div:last-child{padding:18px 16px 15px}.ghq-news-feature-small span{font:900 8px Inter;letter-spacing:1.2px;color:var(--maroon)}.ghq-news-feature-small h3{font:900 22px/1.02 "Barlow Condensed";margin:8px 0;color:#171719}.ghq-news-feature-small small{font:600 9px Inter;color:#777}
+.ghq-latest-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:14px;border-bottom:3px solid #151519;padding-bottom:12px}.ghq-latest-head h3{margin:3px 0 0;font:900 31px "Barlow Condensed"}.ghq-latest-head>span{font:800 9px Inter;letter-spacing:1.2px;color:#777}
+.ghq-news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ghq-news-tile{display:flex;flex-direction:column;background:#fff;border:1px solid #d3d1ce;min-height:330px;transition:transform .18s ease,border-color .18s ease}.ghq-tile-art{height:125px;flex:0 0 125px}.ghq-tile-art span{position:absolute;left:16px;bottom:13px;color:#fff;font:900 25px "Barlow Condensed";z-index:2}.ghq-tile-art b{position:absolute;right:14px;top:13px;color:#fff;font:900 8px Inter;letter-spacing:1.2px;z-index:2}.ghq-tile-copy{padding:17px 17px 15px;display:flex;flex-direction:column;flex:1}.ghq-tile-copy h3{font:900 24px/1.02 "Barlow Condensed";margin:8px 0;color:#151519}.ghq-tile-copy p{font-size:11px;line-height:1.45;color:#6c6d70;margin:0 0 12px}.ghq-tile-copy small{margin-top:auto;color:#888;font:600 9px Inter}
+.ghq-news-empty{grid-column:1/-1;background:#fff;border:1px dashed #bbb;padding:35px;text-align:center;color:#777}
+.ghq-news-footer{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line);margin-top:34px;padding-top:18px}.ghq-news-footer b{display:block;font:900 15px "Barlow Condensed";letter-spacing:1px}.ghq-news-footer span{display:block;color:#777;font-size:10px;margin-top:3px}.ghq-news-footer a{font:900 10px Inter;letter-spacing:1px;color:var(--maroon)}
+
+@media(max-width:900px){
+  .ghq-news-shell,.ghq-newsroom-shell{padding-left:18px;padding-right:18px}
+  .ghq-home-news-grid,.ghq-news-feature-grid{grid-template-columns:1fr}
+  .ghq-home-news-grid-simple .ghq-home-news-side{grid-template-columns:1fr 1fr}
+  .ghq-news-feature-stack{grid-template-columns:1fr 1fr}
+  .ghq-news-grid{grid-template-columns:1fr 1fr}
+  .ghq-news-head,.ghq-newsroom-top{align-items:flex-start}
+  .ghq-newsroom-top h2{font-size:48px}
+}
+@media(max-width:600px){
+  .ghq-news-head,.ghq-newsroom-top,.ghq-news-bottom,.ghq-news-footer{display:block}
+  .ghq-news-live,.ghq-newsroom-status{margin-top:14px;align-items:flex-start}
+  .ghq-news-head h2{font-size:38px}.ghq-newsroom-top h2{font-size:43px}
+  .ghq-home-news-side{grid-template-columns:1fr}
+  .ghq-home-news-grid-simple .ghq-home-news-side{grid-template-columns:1fr}
+  .ghq-news-lead{grid-template-rows:210px auto;min-height:0}.ghq-news-art-mark{font-size:32px}
+  .ghq-news-lead h3{font-size:29px}.ghq-news-feature-main{grid-template-columns:1fr;min-height:0}.ghq-feature-art{min-height:210px}.ghq-feature-copy{min-height:250px}.ghq-feature-copy h3{font-size:33px}.ghq-news-feature-stack{grid-template-columns:1fr}
+  .ghq-news-grid{grid-template-columns:1fr}.ghq-news-bottom a,.ghq-news-footer a{display:block;margin-top:12px}
+}
+
+/* =========================================================
+   NEWSROOM ARTICLE IMAGES
+   ========================================================= */
+.ghq-news-art img,.ghq-feature-art img,.ghq-small-art img,.ghq-tile-art img,.ghq-card-art img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;
+}
+.ghq-news-art:before,.ghq-feature-art:before,.ghq-small-art:before,.ghq-tile-art:before,.ghq-card-art:before{
+  content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.08) 15%,rgba(10,10,12,.82) 100%);z-index:1;
+}
+.ghq-news-art>*:not(img),.ghq-feature-art>*:not(img),.ghq-small-art>*:not(img),.ghq-tile-art>*:not(img),.ghq-card-art>*:not(img){z-index:2}
+.ghq-news-card{padding:0;overflow:hidden;display:flex;flex-direction:column;min-height:260px}
+.ghq-card-art{position:relative;height:125px;flex:0 0 125px;overflow:hidden;background:linear-gradient(145deg,#660033,#1a1a1e)}
+.ghq-card-art .ghq-card-type{position:absolute;left:16px;bottom:13px;color:#fff;font:900 9px Inter;letter-spacing:1.2px}
+.ghq-card-copy{padding:16px 18px 15px;display:flex;flex-direction:column;flex:1}
+.ghq-card-copy h3{margin:0 0 8px}
+.ghq-card-copy p{margin:0 0 12px}
+.ghq-card-copy small{margin-top:auto}
+.ghq-small-art{position:relative;overflow:hidden;background:linear-gradient(145deg,#660033,#1a1a1e);color:#fff}
+.ghq-small-art span{position:relative;z-index:2}
+.ghq-news-art,.ghq-feature-art,.ghq-tile-art{position:relative;overflow:hidden}
+.ghq-news-art-mark,.ghq-news-art-type,.ghq-feature-art span,.ghq-feature-art b,.ghq-tile-art span,.ghq-tile-art b{z-index:2}
+@media(max-width:600px){.ghq-card-art{height:150px;flex-basis:150px}}
+
+/* =========================================================
+   GRIZ VIDEO THUMBNAILS / VIDEO RAIL
+   ========================================================= */
+.ghq-video-section{background:#111216;color:#fff;border-top:1px solid #292a2e;border-bottom:1px solid #292a2e}
+.ghq-video-shell{max-width:1180px;margin:0 auto;padding:42px 24px 48px}
+.ghq-video-head,.ghq-video-newsroom-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:20px}
+.ghq-video-head h2{font:900 48px/.9 "Barlow Condensed";margin:5px 0 8px;letter-spacing:.5px}
+.ghq-video-head p{color:#aeb0b4;max-width:760px;margin:0;font-size:11px;line-height:1.5}
+.ghq-video-link{font:900 10px Inter;letter-spacing:1px;color:#fff;white-space:nowrap}
+.ghq-video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ghq-video-card{background:#1b1c20;border:1px solid #303137;color:#fff;display:flex;flex-direction:column;min-width:0;transition:transform .18s ease,border-color .18s ease}
+.ghq-video-card:hover,.ghq-news-tile:hover,.ghq-news-feature-main:hover,.ghq-news-feature-small:hover{transform:translateY(-2px);border-color:#8a0d42}
+.ghq-video-art{position:relative;height:175px;overflow:hidden;background:linear-gradient(145deg,#660033,#1a1a1e)}
+.ghq-video-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ghq-video-art:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.02) 25%,rgba(10,10,12,.82) 100%)}
+.ghq-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:rgba(128,0,55,.94);display:grid;place-items:center;color:#fff;font-size:19px;padding-left:3px;z-index:2;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+.ghq-video-art b{position:absolute;right:12px;top:12px;color:#fff;font:900 8px Inter;letter-spacing:1.2px;z-index:2}
+.ghq-video-art em{position:absolute;left:13px;bottom:12px;background:#fff;color:var(--maroon);padding:5px 7px;font:900 8px Inter;letter-spacing:1px;font-style:normal;z-index:2}
+.ghq-video-copy{padding:15px 16px 16px}
+.ghq-video-copy h3{font:900 23px/1.02 "Barlow Condensed";margin:7px 0 10px}
+.ghq-video-copy small{color:#777a80;font:700 8px Inter;letter-spacing:.7px}
+.ghq-video-empty{grid-column:1/-1;padding:28px;border:1px dashed #45464b;color:#8c8e93;text-align:center;font:600 11px Inter}
+.ghq-video-newsroom{margin:0 0 36px;padding-top:8px}
+.ghq-video-newsroom-head{border-bottom:3px solid #151519;padding-bottom:12px;margin-bottom:14px}
+.ghq-video-newsroom-head h3{margin:3px 0 0;font:900 31px "Barlow Condensed"}
+.ghq-video-newsroom-head>span{font:800 9px Inter;letter-spacing:1.2px;color:#777}
+.ghq-video-newsroom .ghq-video-grid{grid-template-columns:repeat(4,1fr)}
+.ghq-video-newsroom .ghq-video-art{height:135px}
+.ghq-tile-play{position:absolute;left:14px;top:14px;width:34px;height:34px;border-radius:50%;background:rgba(128,0,55,.94);display:grid;place-items:center;color:#fff;font-style:normal;font-size:12px;z-index:3;padding-left:2px}
+@media(max-width:900px){
+  .ghq-video-grid,.ghq-video-newsroom .ghq-video-grid{grid-template-columns:1fr 1fr}
+  .ghq-video-head{align-items:flex-start}
+}
+@media(max-width:600px){
+  .ghq-video-shell{padding-left:18px;padding-right:18px}
+  .ghq-video-head,.ghq-video-newsroom-head{display:block}
+  .ghq-video-head h2{font-size:40px}
+  .ghq-video-link{display:block;margin-top:12px}
+  .ghq-video-grid,.ghq-video-newsroom .ghq-video-grid{grid-template-columns:1fr}
+  .ghq-video-art{height:190px}
+}
+
+/* =========================================================
+   GRIZ SOCIAL RAIL
+   ========================================================= */
+.ghq-social-section{background:#0e0f12;color:#fff;border-top:1px solid #292a2e;border-bottom:1px solid #292a2e}
+.ghq-social-shell{max-width:1180px;margin:0 auto;padding:42px 24px 48px}
+.ghq-social-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:20px}
+.ghq-social-head h2{font:900 48px/.9 "Barlow Condensed";margin:5px 0 8px;letter-spacing:.5px}
+.ghq-social-head p{color:#aeb0b4;max-width:760px;margin:0;font-size:11px;line-height:1.5}
+.ghq-social-links{display:flex;gap:8px;flex-wrap:wrap}
+.ghq-social-links a{border:1px solid #45464b;color:#fff;padding:9px 11px;font:900 8px Inter;letter-spacing:1px}
+.ghq-social-links a:hover{border-color:#8a0d42;color:#fff}
+.ghq-social-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ghq-social-card{background:#191a1e;border:1px solid #303137;color:#fff;display:flex;flex-direction:column;min-width:0;transition:transform .18s ease,border-color .18s ease}
+.ghq-social-card:hover{transform:translateY(-2px);border-color:#8a0d42}
+.ghq-social-art{height:155px;position:relative;overflow:hidden;background:linear-gradient(145deg,#660033,#1a1a1e)}
+.ghq-social-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ghq-social-art:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.05),rgba(10,10,12,.82))}
+.ghq-social-badge{position:absolute;left:12px;bottom:11px;background:#fff;color:var(--maroon);padding:5px 7px;font:900 8px Inter;letter-spacing:1px;z-index:2}
+.ghq-social-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:50px;height:50px;border-radius:50%;background:rgba(128,0,55,.94);display:grid;place-items:center;color:#fff;font-style:normal;font-size:17px;z-index:2;padding-left:3px}
+.ghq-social-copy{padding:14px 15px 16px;display:flex;flex-direction:column;flex:1}
+.ghq-social-copy small{color:#8f9197;font:800 8px Inter;letter-spacing:1px}
+.ghq-social-copy h3{font:900 21px/1.04 "Barlow Condensed";margin:7px 0 8px}
+.ghq-social-copy p{font-size:10px;line-height:1.45;color:#b5b7bc;margin:0 0 12px}
+.ghq-social-copy span{margin-top:auto;color:#fff;font:800 8px Inter;letter-spacing:1px}
+.ghq-social-empty{grid-column:1/-1;padding:28px;border:1px dashed #45464b;color:#8c8e93;text-align:center;font:600 11px Inter}
+@media(max-width:900px){.ghq-social-grid{grid-template-columns:1fr 1fr}.ghq-social-head{align-items:flex-start}}
+@media(max-width:600px){.ghq-social-shell{padding-left:18px;padding-right:18px}.ghq-social-head{display:block}.ghq-social-head h2{font-size:40px}.ghq-social-links{margin-top:14px}.ghq-social-grid{grid-template-columns:1fr}.ghq-social-art{height:190px}}
