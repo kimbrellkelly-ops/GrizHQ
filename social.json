@@ -1,9 +1,18 @@
 {
-  "updated": "2026-09-06T18:00:00+00:00",
+  "updated": "2026-09-06T20:15:07.832649+00:00",
   "posts": [],
   "profiles": [
-    {"name":"Montana Griz Football on X","url":"https://x.com/MontanaGrizFB"},
-    {"name":"Montana Griz Football on Instagram","url":"https://www.instagram.com/montanagrizfootball/"},
-    {"name":"Skyline Sports YouTube","url":"https://www.youtube.com/@skylinesports"}
+    {
+      "name": "Montana Griz Football on X",
+      "url": "https://x.com/MontanaGrizFB"
+    },
+    {
+      "name": "Montana Griz Football on Instagram",
+      "url": "https://www.instagram.com/montanagrizfootball/"
+    },
+    {
+      "name": "Skyline Sports YouTube",
+      "url": "https://www.youtube.com/@skylinesports"
+    }
   ]
 }
