@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T02:50:13.101521+00:00",
+  "updated": "2026-09-06T02:51:07.772213+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -5125,7 +5125,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:24 - 3rd",
+        "detail": "4:39 - 3rd",
         "broadcasts": []
       },
       {
@@ -5181,7 +5181,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:50 - 4th",
+        "detail": "2:43 - 4th",
         "broadcasts": [
           "ACC Network",
           "ACCNX"
@@ -5240,7 +5240,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:47 - 3rd",
+        "detail": "4:36 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5269,7 +5269,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:32 - 4th",
+        "detail": "7:58 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5383,7 +5383,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:38 - 4th",
+        "detail": "11:39 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5441,7 +5441,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:00 - 4th",
+        "detail": "1:55 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5528,7 +5528,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:25 - 4th",
+        "detail": "7:37 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5616,7 +5616,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:46 - 2nd",
+        "detail": "0:39 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5645,7 +5645,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:37 - 2nd",
+        "detail": "6:06 - 2nd",
         "broadcasts": [
           "USA Net"
         ]
@@ -5661,7 +5661,7 @@
             "short": "Arizona St",
             "abbrev": "ASU",
             "homeAway": "home",
-            "score": "27"
+            "score": "28"
           },
           {
             "id": "2415",
@@ -5674,7 +5674,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:50 - 1st",
+        "detail": "2:45 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5732,7 +5732,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:53 - 2nd",
+        "detail": "13:59 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -27285,5 +27285,5 @@
       }
     ]
   },
-  "fcs_scores_updated": "2026-09-06T02:50:19.887650+00:00"
+  "fcs_scores_updated": "2026-09-06T02:51:16.912747+00:00"
 }
