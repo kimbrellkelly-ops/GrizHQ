@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T03:21:31.950822+00:00",
+  "updated": "2026-09-06T03:37:36.370784+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -5120,12 +5120,12 @@
             "short": "Miles",
             "abbrev": "MIL",
             "homeAway": "away",
-            "score": "14"
+            "score": "23"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 4th",
+        "detail": "12:05 - 4th",
         "broadcasts": []
       },
       {
@@ -5226,7 +5226,7 @@
             "short": "Southern",
             "abbrev": "SOU",
             "homeAway": "home",
-            "score": "27"
+            "score": "34"
           },
           {
             "id": "2310",
@@ -5237,9 +5237,9 @@
             "score": "15"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "4:48 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": []
       },
       {
@@ -5264,9 +5264,9 @@
             "score": "0"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "End of 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "BTN"
         ]
@@ -5293,9 +5293,9 @@
             "score": "18"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "0:26 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "BTN"
         ]
@@ -5409,9 +5409,9 @@
             "score": "42"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "2:29 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5493,12 +5493,12 @@
             "short": "Butler",
             "abbrev": "BTLR",
             "homeAway": "away",
-            "score": "17"
+            "score": "24"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:24 - 4th",
+        "detail": "0:37 - 4th",
         "broadcasts": [
           "ESPN+",
           "Scripps Sports"
@@ -5515,7 +5515,7 @@
             "short": "New Mexico St",
             "abbrev": "NMSU",
             "homeAway": "home",
-            "score": "23"
+            "score": "30"
           },
           {
             "id": "2385",
@@ -5528,7 +5528,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:05 - 3rd",
+        "detail": "4:39 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5557,7 +5557,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:45 - 3rd",
+        "detail": "8:40 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5586,7 +5586,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "12:45 - 3rd",
         "broadcasts": [
           "USA Net"
         ]
@@ -5602,7 +5602,7 @@
             "short": "Arizona St",
             "abbrev": "ASU",
             "homeAway": "home",
-            "score": "42"
+            "score": "48"
           },
           {
             "id": "2415",
@@ -5615,7 +5615,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:42 - 2nd",
+        "detail": "1:55 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5644,7 +5644,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:51 - 2nd",
+        "detail": "2:00 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5668,12 +5668,12 @@
             "short": "UC Davis",
             "abbrev": "UCD",
             "homeAway": "away",
-            "score": "21"
+            "score": "28"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:04 - 2nd",
+        "detail": "End of 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -27285,5 +27285,5 @@
       }
     ]
   },
-  "fcs_scores_updated": "2026-09-06T03:21:36.832653+00:00"
+  "fcs_scores_updated": "2026-09-06T03:37:42.610246+00:00"
 }
