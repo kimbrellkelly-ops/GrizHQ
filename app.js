@@ -99,18 +99,15 @@ async function loadGrizData() {
     const updated = document.getElementById("data-updated");
     if (updated) updated.textContent = d.updated ? "DATA UPDATED " + new Date(d.updated).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}) : "";
 
-    // News is intentionally separated from the core data layer. If news.json is unavailable, use the embedded fallback.
-    try {
-      const newsRes = await fetch("news.json?ts=" + Date.now(), {cache: "no-store"});
-      if (newsRes.ok) {
-        const newsData = await newsRes.json();
-        renderNewsroom(newsData.stories || newsData.news || d.news);
-      } else {
-        renderNewsroom(d.news);
-      }
-    } catch (newsErr) {
-      console.warn("Standalone news feed unavailable; using embedded fallback.", newsErr);
-      renderNewsroom(d.news);
+    if (Array.isArray(d.news) && d.news.length) {
+      const news = document.querySelectorAll("#news .auto-news");
+      d.news.slice(0, 3).forEach((item, i) => {
+        if (!news[i]) return;
+        const title = news[i].querySelector("h3"), small = news[i].querySelector("small"), p = news[i].querySelector("p");
+        if (title) title.innerHTML = `<a href="${item.url}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a>`;
+        if (small) small.textContent = item.date || "";
+        if (p) p.textContent = item.description || "Latest Montana football news.";
+      });
     }
   } catch (e) {
     console.warn("Griz HQ data layer unavailable; using page fallback.", e);
@@ -133,36 +130,6 @@ function renderMiniPolls(coaches, media) {
   const wrap = document.getElementById("rankings-mini");
   if (!wrap || !Array.isArray(coaches) || !Array.isArray(media)) return;
   wrap.innerHTML = [coaches, media].map(poll => `<ol>${poll.slice(0,10).map(t => `<li class="${isMontanaGrizzlies(t) ? "griz" : ""}">${escapeHtml(t)}</li>`).join("")}</ol>`).join("");
-}
-
-function renderNewsroom(items) {
-  if (!Array.isArray(items) || !items.length) return;
-  const cards = [...document.querySelectorAll("#news .auto-news")];
-  items.slice(0, cards.length).forEach((item, i) => {
-    const card = cards[i];
-    const url = escapeHtml(item.url || "#");
-    const title = escapeHtml(item.title || "Latest Montana football news");
-    const desc = escapeHtml(item.description || "Latest Montana football coverage from Griz HQ.");
-    const date = escapeHtml(item.date || "");
-    const h3 = card.querySelector("h3");
-    const small = card.querySelector("small");
-    const p = card.querySelector("p");
-    const links = card.querySelectorAll("a");
-    if (h3) h3.textContent = item.title || "Latest Montana football news";
-    if (small) small.textContent = date;
-    if (p) p.textContent = item.description || "Latest Montana football coverage from Griz HQ.";
-    links.forEach(a => { a.href = item.url || "#"; a.textContent = a.classList.contains("news-feature-link") ? "READ THE STORY ↗" : a.textContent; });
-    if (card.dataset.newsIndex === "0") {
-      const em = card.querySelector(".news-feature-art em");
-      if (em && item.score) em.textContent = item.score;
-      const badge = card.querySelector(".news-feature-art span");
-      if (badge) badge.textContent = item.badge || "TOP STORY";
-    }
-    const tag = card.querySelector(".news-card-tag");
-    if (tag) tag.textContent = item.badge || tag.textContent;
-    const mark = card.querySelector(".news-list-mark");
-    if (mark) mark.textContent = item.short || mark.textContent;
-  });
 }
 function escapeHtml(s) { return String(s ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c])); }
 
