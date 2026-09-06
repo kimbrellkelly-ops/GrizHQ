@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T15:06:22.499188+00:00",
+  "updated": "2026-09-06T15:20:19.097566+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -7647,8 +7647,7 @@
         "completed": false,
         "detail": "9/10 - 8:00 PM EDT",
         "broadcasts": [
-          "ACC Network",
-          "ACCNX"
+          "ACC Network"
         ]
       },
       {
@@ -7677,8 +7676,7 @@
         "completed": false,
         "detail": "9/11 - 7:00 PM EDT",
         "broadcasts": [
-          "ACC Network",
-          "ACCNX"
+          "ACC Network"
         ]
       },
       {
@@ -7794,8 +7792,7 @@
         "completed": false,
         "detail": "9/12 - 12:00 PM EDT",
         "broadcasts": [
-          "ACC Network",
-          "ACCNX"
+          "ACC Network"
         ]
       },
       {
@@ -10073,8 +10070,7 @@
         "completed": false,
         "detail": "9/19 - 12:00 PM EDT",
         "broadcasts": [
-          "ACC Network",
-          "ACCNX"
+          "ACC Network"
         ]
       },
       {
@@ -27285,7 +27281,7 @@
       }
     ]
   },
-  "fcs_scores_updated": "2026-09-06T15:06:32.602178+00:00",
+  "fcs_scores_updated": "2026-09-06T15:20:30.343299+00:00",
   "latest_press_conference": {
     "title": "Montana State press conference – Brent Vigen, Jabez Woods, Zac Crews after 51-24 win over Butler",
     "date": "Sun, 06 Sep 2026 05:09:52 +0000",
