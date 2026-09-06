@@ -321,7 +321,7 @@ async function renderFCSScoreboard(){
     const me=(ev.teams||[]).find(x=>teamMatches(name,x.name)||teamMatches(name,x.short));
     if(!me)return '<small>'+escapeHtml(statusText(ev))+'</small>';
     const other=(ev.teams||[]).find(x=>x!==me);
-    if(ev.completed||ev.state==='in')return `<span class="score-big">${escapeHtml(me.score??'0')}</span><small>${escapeHtml(statusText(ev))}</small>`;
+    if(ev.completed||ev.state==='in'){const other=(ev.teams||[]).find(x=>x!==me);return `<span class="score-big">${escapeHtml(me.score??'0')}–${escapeHtml(other?.score??'0')}</span><small>${escapeHtml(statusText(ev))}</small>`;}
     return `<small>${escapeHtml(statusText(ev))}</small>`;
   }
 
@@ -362,7 +362,7 @@ async function renderFCSScoreboard(){
         const scores=(ev.teams||[]).map(x=>`${escapeHtml(x.short||x.name||'')} ${escapeHtml(x.score??'')}`).join(' • ');
         const tv=(ev.broadcasts||[]).slice(0,2).join(', ');
         const state=ev.state==='in'?'live':(ev.completed?'final':'scheduled');
-        const rightScore=(ev.completed||ev.state==='in') ? `<span class="score-big">${escapeHtml((ev.teams||[]).find(x=>teamMatches(team,x.name)||teamMatches(team,x.short))?.score??'')}</span><small>${escapeHtml(statusText(ev))}</small>` : `<small>${escapeHtml(statusText(ev))}</small>`;
+        const rightScore=(ev.completed||ev.state==='in') ? (()=>{ const a=(ev.teams||[]).find(x=>x.homeAway==='away'), h=(ev.teams||[]).find(x=>x.homeAway==='home'); return `<span class="score-big">${escapeHtml(a?.score??'0')}–${escapeHtml(h?.score??'0')}</span><small>${escapeHtml(statusText(ev))}</small>`; })() : `<small>${escapeHtml(statusText(ev))}</small>`;
         return `<div class="fcs-game ${state} bigsky-row"><div class="fcs-time">${escapeHtml(d.time)}</div><div class="fcs-matchup"><b>${escapeHtml(d.away)} @ ${escapeHtml(d.home)}</b><small>${scores} <span class="bigsky-game-tag">${label}</span></small></div><div class="fcs-score">${rightScore}</div><div class="fcs-tv">${escapeHtml(tv)}</div></div>`;
       }).join('');
     }
