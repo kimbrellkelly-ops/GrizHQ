@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T06:26:14.118073+00:00",
+  "updated": "2026-09-06T06:41:24.533454+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -5102,35 +5102,6 @@
     ],
     "2026-09-03": [
       {
-        "id": "401867866",
-        "date": "2026-09-05T23:45Z",
-        "name": "Murray State Racers at Middle Tennessee Blue Raiders",
-        "teams": [
-          {
-            "id": "2393",
-            "name": "Middle Tennessee Blue Raiders",
-            "short": "MTSU",
-            "abbrev": "MTSU",
-            "homeAway": "home",
-            "score": "38"
-          },
-          {
-            "id": "93",
-            "name": "Murray State Racers",
-            "short": "Murray St",
-            "abbrev": "MUR",
-            "homeAway": "away",
-            "score": "14"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
         "id": "401856768",
         "date": "2026-09-04T01:00Z",
         "name": "Idaho Vandals at Utah Utes",
@@ -7120,6 +7091,35 @@
             "abbrev": "NWST",
             "homeAway": "away",
             "score": "6"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401867866",
+        "date": "2026-09-05T23:45Z",
+        "name": "Murray State Racers at Middle Tennessee Blue Raiders",
+        "teams": [
+          {
+            "id": "2393",
+            "name": "Middle Tennessee Blue Raiders",
+            "short": "MTSU",
+            "abbrev": "MTSU",
+            "homeAway": "home",
+            "score": "38"
+          },
+          {
+            "id": "93",
+            "name": "Murray State Racers",
+            "short": "Murray St",
+            "abbrev": "MUR",
+            "homeAway": "away",
+            "score": "14"
           }
         ],
         "state": "post",
@@ -27285,7 +27285,7 @@
       }
     ]
   },
-  "fcs_scores_updated": "2026-09-06T06:26:20.945361+00:00",
+  "fcs_scores_updated": "2026-09-06T06:41:30.911192+00:00",
   "latest_press_conference": {
     "title": "Montana State press conference – Brent Vigen, Jabez Woods, Zac Crews after 51-24 win over Butler",
     "date": "Sun, 06 Sep 2026 05:09:52 +0000",
