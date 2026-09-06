@@ -232,6 +232,20 @@ async function renderBigSkyAndOpponent(){
     }
 
     const opponent = d.next_game?.opponent || "Drake";
+
+    // Keep the Game Center focused on Montana's NEXT game, not the game just played.
+    const gameCenterTitle = document.getElementById("game-center-title");
+    const gameCenterMeta = document.getElementById("game-center-meta");
+    if (gameCenterTitle) {
+      gameCenterTitle.textContent = `${opponent} at Montana`;
+    }
+    if (gameCenterMeta) {
+      const nextDate = d.next_game?.date || "";
+      const nextTime = d.next_game?.time || "";
+      const nextVenue = String(d.next_game?.venue || "Washington-Grizzly Stadium").split(",")[0];
+      gameCenterMeta.textContent = [nextDate, nextTime, nextVenue].filter(Boolean).join(" • ");
+    }
+
     const resources = d.opponent_resources?.[opponent];
     if (resources) {
       const hub = document.getElementById("opponent-hub-name");
@@ -294,27 +308,7 @@ async function renderFCSScoreboard(){
     'southernutah':['southernutah','southeasternutah','soutah','soututah','southernutahthunderbirds'],
     'utahtech':['utahtech','utahtechuniversity','utahtechtrailblazers'],
     'ucdavis':['ucdavis','ucdavisaggies'],
-    'portlandstate':['portlandstate','portlandst','portlandstatevikings'],
-    'southdakotastate':['southdakotastate','southdakotast','southdakotastatejackrabbits'],
-    'illinoisstate':['illinoisstate','illinoist','illinoisst','illinoisstateredbirds'],
-    'tarletonstate':['tarletonstate','tarletonst','tarletonstatetexans'],
-    'rhodeisland':['rhodeisland','rhodeislandrams'],
-    'northdakota':['northdakota','northdakotafightinghawks'],
-    'youngstownstate':['youngstownstate','youngstownst','youngstownstatepenguins'],
-    'lehigh':['lehigh','lehighmountainhawks'],
-    'southdakota':['southdakota','southdakotacoyotes'],
-    'tennesseetech':['tennesseetech','tennesseetechgoldeneagles'],
-    'stephenfaustin':['stephenfaustin','stephenfaustinlumberjacks'],
-    'lamar':['lamar','lamarcardinals'],
-    'austinpeay':['austinpeay','austinpeaygovernors'],
-    'yale':['yale','yalebulldogs'],
-    'williammary':['williammary','williammarytribe'],
-    'villanova':['villanova','villanovawildcats'],
-    'mercer':['mercer','mercerbears'],
-    'abilenechristian':['abilenechristian','abilenechristianwildcats'],
-    'southcarolinastate':['southcarolinastate','southcarolinast','southcarolinastatebulldogs'],
-    'westerncarolina':['westerncarolina','westerncarolinacatamounts'],
-    'westflorida':['westflorida','westfloridaargonauts']
+    'portlandstate':['portlandstate','portlandst','portlandstatevikings']
   };
   function teamMatches(name,team){
     const n=norm(name), t=norm(team);
