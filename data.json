@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T21:06:21.241558+00:00",
+  "updated": "2026-09-06T21:19:32.576729+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -9810,6 +9810,33 @@
         ]
       },
       {
+        "id": "401868195",
+        "date": "2026-09-12T23:00Z",
+        "name": "Tennessee State Tigers at Alabama A&M Bulldogs",
+        "teams": [
+          {
+            "id": "2010",
+            "name": "Alabama A&M Bulldogs",
+            "short": "Alabama A&M",
+            "abbrev": "AAMU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2634",
+            "name": "Tennessee State Tigers",
+            "short": "Tennessee St",
+            "abbrev": "TNST",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "9/12 - 7:00 PM EDT",
+        "broadcasts": []
+      },
+      {
         "id": "401858447",
         "date": "2026-09-12T23:15Z",
         "name": "Western Illinois Leathernecks at Wisconsin Badgers",
@@ -9866,33 +9893,6 @@
         "broadcasts": [
           "ESPN+"
         ]
-      },
-      {
-        "id": "401868195",
-        "date": "2026-09-12T23:00Z",
-        "name": "Tennessee State Tigers at Alabama A&M Bulldogs",
-        "teams": [
-          {
-            "id": "2010",
-            "name": "Alabama A&M Bulldogs",
-            "short": "Alabama A&M",
-            "abbrev": "AAMU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2634",
-            "name": "Tennessee State Tigers",
-            "short": "Tennessee St",
-            "abbrev": "TNST",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "9/12 - 7:00 PM EDT",
-        "broadcasts": []
       },
       {
         "id": "401856784",
@@ -27396,5 +27396,5 @@
     "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-06T21:06:34.239418+00:00"
+  "fcs_scores_updated": "2026-09-06T21:19:40.669638+00:00"
 }
