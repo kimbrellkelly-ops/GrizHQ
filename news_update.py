@@ -4,7 +4,7 @@ import html
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
-from urllib.parse import urljoin, urlparse, parse_qs, unquote
+from urllib.parse import urljoin, urlparse
 from xml.etree import ElementTree as ET
 
 import requests
@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 
 NEWS_FILE = Path("news.json")
 HEADERS = {
-    "User-Agent": "GrizHQ-NewsBot/1.0 (+https://grizhq.com)"
+    "User-Agent": "GrizHQ-NewsBot/1.1 (+https://grizhq.com)"
 }
 
 FEEDS = [
@@ -21,38 +21,29 @@ FEEDS = [
 ]
 
 SKYLINE_URL = "https://skylinesportsmt.com/category/cat-griz-football/"
+FALLBACK_IMAGE = "hero.jpg"
 
 GRIZ_TERMS = (
-    "montana grizzlies", "montana griz", "griz football", "montana football",
-    "grizzly football", "eli gillman", "gillman", "bobby kennedy",
-    "keali'i ah yat", "kealii ah yat", "landon ransom-goelz", "brooks davis",
-    "washington-grizzly", "washington grizzly", "grizzly stadium",
-    "grizzly athletics football"
-)
-FOOTBALL_TERMS = (
-    "football", "qb", "quarterback", "wide receiver", "receiver", "running back",
-    "linebacker", "defensive end", "defensive back", "cornerback", "safety",
-    "offensive line", "defensive line", "touchdown", "fcs", "big sky",
-    "payton award", "buchanan award", "kickoff", "punt", "field goal",
-    "game preview", "game recap", "press conference", "fall camp", "roster",
-    "transfer portal", "recruit", "recruiting", "commit"
+    "montana grizzlies", "montana griz", "griz football", "griz", "gillman",
+    "bobby kennedy", "keali'i ah yat", "kealii ah yat", "landon ransom-goelz",
+    "brooks davis", "washington-grizzly", "washington grizzly", "grizzly stadium"
 )
 EXCLUDE_TERMS = (
     "montana state", "bobcats", "bobcat", "msu football", "bozeman",
-    "lady griz", "lady grizzlies", "griz volleyball", "griz soccer",
-    "griz basketball", "montana soccer", "montana volleyball",
-    "montana women's", "montana women's basketball", "montana softball",
-    "montana golf", "montana tennis", "montana track", "cross country",
     "cats and griz"
 )
+
+IMAGE_CACHE = {}
+
 
 def clean(value):
     return re.sub(r"\s+", " ", html.unescape(value or "")).strip()
 
+
 def parse_date(value):
     value = clean(value)
     if not value:
-        return datetime.now(timezone.utc)
+        return datetime.min.replace(tzinfo=timezone.utc)
     try:
         return parsedate_to_datetime(value).astimezone(timezone.utc)
     except Exception:
@@ -63,24 +54,17 @@ def parse_date(value):
             return dt.replace(tzinfo=timezone.utc) if dt.tzinfo is None else dt.astimezone(timezone.utc)
         except Exception:
             continue
-    return datetime.now(timezone.utc)
+    return datetime.min.replace(tzinfo=timezone.utc)
 
-def is_griz_story(title, description="", source=""):
+
+def is_griz_story(title, description=""):
     text = f"{title} {description}".lower()
-
-    # Hard block non-football Montana sports and Montana State/Bobcats.
     if any(term in text for term in EXCLUDE_TERMS):
-        return False
+        strong = ("montana grizzlies", "montana griz", "griz football", "eli gillman",
+                  "bobby kennedy", "keali'i ah yat", "kealii ah yat")
+        return any(term in text for term in strong)
+    return any(term in text for term in GRIZ_TERMS)
 
-    has_griz = any(term in text for term in GRIZ_TERMS)
-    has_football = any(term in text for term in FOOTBALL_TERMS)
-
-    # GoGriz's football RSS is already sport-specific. Outside sources must
-    # independently signal Montana + football to prevent unrelated Griz stories.
-    if source == "GoGriz":
-        return has_griz or has_football
-
-    return has_griz and has_football
 
 def category(title):
     t = title.lower()
@@ -88,6 +72,8 @@ def category(title):
         return "INSIDER"
     if any(x in t for x in ("commit", "commits", "recruit", "recruiting", "offer", "portal", "transfer")):
         return "RECRUITING"
+    if any(x in t for x in ("utah tech", "trailblazers", "opponent", "byu")):
+        return "OPPONENT"
     if any(x in t for x in ("preview", "vs.", "vs ", "against", "look to", "what you should wear", "game day")):
         return "GAME DAY"
     if any(x in t for x in ("recap", "roll past", "outlast", "beats", "beat ", "victory", "wins", "win over")):
@@ -98,12 +84,97 @@ def category(title):
         return "ANALYSIS"
     return "GRIZ NEWS"
 
+
 def normalize_url(url):
-    url = clean(url)
+    return clean(url)
+
+
+def valid_image(url):
     if not url:
         return ""
-    # Google News RSS links can point through news.google.com. Keep them usable.
+    url = clean(url)
+    if url.startswith("//"):
+        url = "https:" + url
+    if not url.lower().startswith(("http://", "https://")):
+        return ""
+    low = url.lower()
+    if any(x in low for x in ("logo", "avatar", "icon", "tracking", "pixel", "griz-hq")):
+        return ""
     return url
+
+
+def image_from_rss_item(item, base_url):
+    # Common RSS media/enclosure formats.
+    candidates = []
+    for tag in (
+        "{http://search.yahoo.com/mrss/}content",
+        "{http://search.yahoo.com/mrss/}thumbnail",
+        "{http://search.yahoo.com/mrss/}group",
+        "enclosure",
+    ):
+        for node in item.findall(f".//{tag}"):
+            candidates.append(node.attrib.get("url") or node.attrib.get("href") or "")
+    for raw in candidates:
+        image = valid_image(urljoin(base_url, raw))
+        if image:
+            return image
+    return ""
+
+
+def fetch_article_metadata(url):
+    """Return featured image and published date from an article page.
+
+    Priority: og:image, twitter:image, schema/image, then first meaningful article image.
+    The function is cached for the duration of one updater run.
+    """
+    url = normalize_url(url)
+    if not url:
+        return {"image": "", "published_at": ""}
+    if url in IMAGE_CACHE:
+        return IMAGE_CACHE[url]
+
+    result = {"image": "", "published_at": ""}
+    try:
+        response = requests.get(url, headers=HEADERS, timeout=20, allow_redirects=True)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+
+        for attrs in (
+            {"property": "og:image"},
+            {"name": "twitter:image"},
+            {"itemprop": "image"},
+        ):
+            node = soup.find("meta", attrs=attrs)
+            if node and node.get("content"):
+                result["image"] = valid_image(urljoin(response.url, node["content"]))
+                if result["image"]:
+                    break
+
+        if not result["image"]:
+            for node in soup.select("article img, main img"):
+                src = node.get("src") or node.get("data-src") or node.get("data-lazy-src")
+                image = valid_image(urljoin(response.url, src or ""))
+                if image:
+                    result["image"] = image
+                    break
+
+        date_node = (
+            soup.find("meta", attrs={"property": "article:published_time"})
+            or soup.find("meta", attrs={"name": "date"})
+            or soup.find("meta", attrs={"itemprop": "datePublished"})
+        )
+        if date_node and date_node.get("content"):
+            result["published_at"] = date_node["content"].strip()
+        else:
+            time_node = soup.find("time", attrs={"datetime": True})
+            if time_node:
+                result["published_at"] = time_node.get("datetime", "").strip()
+    except Exception as exc:
+        print(f"Metadata fetch failed for {url}: {exc}")
+
+    IMAGE_CACHE[url] = result
+    return result
+
 
 def parse_rss(source, url):
     response = requests.get(url, headers=HEADERS, timeout=25)
@@ -115,26 +186,31 @@ def parse_rss(source, url):
         link = clean(item.findtext("link"))
         pub = clean(item.findtext("pubDate"))
         desc = BeautifulSoup(clean(item.findtext("description")), "html.parser").get_text(" ", strip=True)
-        if not title or not link or not is_griz_story(title, desc, source):
+        if not title or not link or not is_griz_story(title, desc):
             continue
 
-        # Google News titles commonly end in " - Publisher".
         publisher = source
         if source == "Google News" and " - " in title:
             title, publisher = title.rsplit(" - ", 1)
 
         dt = parse_date(pub)
+        image = image_from_rss_item(item, link)
+        if not image:
+            image = fetch_article_metadata(link).get("image", "")
+
         items.append({
             "title": clean(title),
             "url": normalize_url(link),
-            "date": dt.strftime("%b. %-d, %Y"),
-            "published_at": dt.isoformat(),
+            "date": dt.strftime("%b. %-d, %Y") if dt != datetime.min.replace(tzinfo=timezone.utc) else "",
+            "published_at": dt.isoformat() if dt != datetime.min.replace(tzinfo=timezone.utc) else "",
             "description": clean(desc)[:220],
             "source": publisher,
             "badge": category(title),
             "short": category(title)[:4].upper(),
+            "image": image,
         })
     return items
+
 
 def parse_skyline():
     response = requests.get(SKYLINE_URL, headers=HEADERS, timeout=25)
@@ -152,14 +228,20 @@ def parse_skyline():
             continue
         if "/category/" in href or "/page/" in href or "/author/" in href:
             continue
-        if not is_griz_story(title, source='Skyline Sports'):
+        if not is_griz_story(title):
             continue
 
-        # Find a nearby date in the link's parent/container.
         container = a.find_parent(["article", "div", "li"])
         context = clean(container.get_text(" ", strip=True)) if container else ""
         date_match = re.search(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+2026", context)
-        dt = parse_date(date_match.group(0)) if date_match else datetime.now(timezone.utc)
+        dt = parse_date(date_match.group(0)) if date_match else datetime.min.replace(tzinfo=timezone.utc)
+        meta = fetch_article_metadata(href)
+        if dt == datetime.min.replace(tzinfo=timezone.utc) and meta.get("published_at"):
+            dt = parse_date(meta["published_at"])
+
+        # Never manufacture today's date when a Skyline article has no date.
+        if dt == datetime.min.replace(tzinfo=timezone.utc):
+            continue
 
         items.append({
             "title": title,
@@ -170,12 +252,14 @@ def parse_skyline():
             "source": "Skyline Sports",
             "badge": category(title),
             "short": category(title)[:4].upper(),
+            "image": meta.get("image", ""),
         })
         seen.add(href)
         if len(items) >= 12:
             break
 
     return items
+
 
 def load_existing():
     if not NEWS_FILE.exists():
@@ -187,6 +271,7 @@ def load_existing():
         print("Could not read existing news.json:", exc)
         return []
 
+
 def dedupe_and_sort(stories):
     by_key = {}
     for story in stories:
@@ -195,29 +280,25 @@ def dedupe_and_sort(stories):
         if not title or not url:
             continue
         key = re.sub(r"[^a-z0-9]+", " ", title.lower()).strip()
-        # Prefer a real URL as the identity, otherwise use title.
-        identity = url if url else key
+        identity = url or key
         current = by_key.get(identity)
-        if current is None or parse_date(story.get("published_at") or story.get("date")) > parse_date(current.get("published_at") or current.get("date")):
+        incoming_date = parse_date(story.get("published_at") or story.get("date"))
+        current_date = parse_date(current.get("published_at") or current.get("date")) if current else datetime.min.replace(tzinfo=timezone.utc)
+        if current is None or incoming_date >= current_date:
+            if current and not story.get("image"):
+                story["image"] = current.get("image", "")
             story["title"] = title
             story["url"] = url
             story["description"] = clean(story.get("description"))[:220]
             story["badge"] = story.get("badge") or category(title)
             story["short"] = story.get("short") or story["badge"][:4].upper()
+            story["image"] = valid_image(story.get("image", ""))
             by_key[identity] = story
 
     result = list(by_key.values())
-
-    # Prefer official GoGriz football stories when timestamps are close.
-    source_weight = {"GoGriz": 3, "Skyline Sports": 2, "Google News": 1}
-    result.sort(
-        key=lambda s: (
-            parse_date(s.get("published_at") or s.get("date")),
-            source_weight.get(s.get("source"), 0)
-        ),
-        reverse=True
-    )
+    result.sort(key=lambda s: parse_date(s.get("published_at") or s.get("date")), reverse=True)
     return result[:24]
+
 
 def main():
     existing = load_existing()
@@ -239,18 +320,8 @@ def main():
         print(f"Skyline scrape failed: {exc}")
 
     merged = dedupe_and_sort(fetched + existing)
-
-    # Safety: never replace a healthy existing feed with an empty/broken result.
-    # Also require at least one football-qualified story from the current run
-    # before allowing a completely stale/irrelevant collection to become primary.
-    current_football = [
-        s for s in fetched
-        if s.get("source") == "GoGriz" or (
-            is_griz_story(s.get("title", ""), s.get("description", ""), s.get("source", ""))
-        )
-    ]
-    if not merged or (fetched and not current_football):
-        print("No football-qualified stories collected; leaving news.json unchanged.")
+    if not merged:
+        print("No stories collected; leaving news.json unchanged.")
         return
 
     payload = {
@@ -261,6 +332,7 @@ def main():
 
     NEWS_FILE.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Wrote {len(merged)} stories to news.json.")
+
 
 if __name__ == "__main__":
     main()

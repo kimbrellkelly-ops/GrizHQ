@@ -9,7 +9,9 @@
       "published_at": "2026-09-06T00:00:00Z",
       "description": "Daily Inter Lake breaks down Eli Gillman's four-touchdown performance, his career records and Montana's 45-10 win over Drake.",
       "badge": "ANALYSIS",
-      "short": "ANAL"
+      "short": "ANAL",
+      "source": "Daily Inter Lake",
+      "image": "hero.jpg"
     },
     {
       "title": "Gillman sets records as Griz roll past Bulldogs, 45-10",
@@ -19,7 +21,9 @@
       "description": "Eli Gillman set Montana's career rushing touchdown record as the Griz rolled past Drake 45-10 and improved to 2-0.",
       "badge": "GAME STORY",
       "score": "45–10",
-      "short": "GAME"
+      "short": "GAME",
+      "source": "GoGriz",
+      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/9/5/20260905_fb_v_Drake_4405_rb_AFMpW.jpg"
     },
     {
       "title": "Gillman breaks record as Griz overcome penalties to cruise past Drake",
@@ -28,7 +32,9 @@
       "published_at": "2026-09-05T23:00:00Z",
       "description": "Skyline Sports examines Montana's second straight win, Eli Gillman's record-setting day and the Griz's 16 penalties for 138 yards.",
       "badge": "ANALYSIS",
-      "short": "ANAL"
+      "short": "ANAL",
+      "source": "Skyline Sports",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Bobby-Kennedy-on-sideline-with-team-and-Jaylen-Johnson-780x470.jpeg"
     },
     {
       "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake's Matt Walker",
@@ -37,7 +43,9 @@
       "published_at": "2026-09-05T23:00:00Z",
       "description": "Postgame comments from Bobby Kennedy, Eli Gillman, Tyler King and Drake coach Matt Walker following Montana's 45-10 win.",
       "badge": "INSIDER",
-      "short": "LIVE"
+      "short": "LIVE",
+      "source": "Skyline Sports",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg"
     },
     {
       "title": "Trailblazers Drop In-State Duel at BYU on Saturday Night",
@@ -46,7 +54,9 @@
       "published_at": "2026-09-05T22:46:00Z",
       "description": "Utah Tech fell 63-7 at BYU and now travels to Washington-Grizzly Stadium to face Montana on Sept. 12.",
       "badge": "OPPONENT",
-      "short": "OPP"
+      "short": "OPP",
+      "source": "Utah Tech Athletics",
+      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/dixieathletics.com/images/2026/9/5/utfb_byuwrap.jpg"
     },
     {
       "title": "Stripe the Stadium - What you should wear",
@@ -55,7 +65,9 @@
       "published_at": "2026-09-04T00:00:00Z",
       "description": "Montana fans were encouraged to stripe Washington-Grizzly Stadium for the Drake game.",
       "badge": "GAME DAY",
-      "short": "GAME"
+      "short": "GAME",
+      "source": "GoGriz",
+      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2024/9/21/_TM21627_2.jpg"
     },
     {
       "title": "Mason named Big Sky Special Teams Player of the Week",
@@ -64,7 +76,9 @@
       "published_at": "2026-08-31T00:00:00Z",
       "description": "Jake Mason earned Big Sky Special Teams Player of the Week recognition after Montana's opener against Southern Utah.",
       "badge": "HONOR",
-      "short": "HON"
+      "short": "HON",
+      "source": "GoGriz",
+      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/31/Mason_ST_POW_Web.png"
     },
     {
       "title": "Griz outlast T-Birds in Kennedy's debut",
@@ -73,7 +87,9 @@
       "published_at": "2026-08-30T00:00:00Z",
       "description": "Bobby Kennedy won his Montana debut as the Griz held off Southern Utah 28-21 in the 2026 opener.",
       "badge": "GAME STORY",
-      "short": "GAME"
+      "short": "GAME",
+      "source": "GoGriz",
+      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/30/20260829_fbvssouthernutah_0125.jpg"
     }
   ]
 }

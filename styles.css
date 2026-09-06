@@ -2264,3 +2264,26 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   .ghq-news-lead h3{font-size:29px}.ghq-news-feature-main{grid-template-columns:1fr;min-height:0}.ghq-feature-art{min-height:210px}.ghq-feature-copy{min-height:250px}.ghq-feature-copy h3{font-size:33px}.ghq-news-feature-stack{grid-template-columns:1fr}
   .ghq-news-grid{grid-template-columns:1fr}.ghq-news-bottom a,.ghq-news-footer a{display:block;margin-top:12px}
 }
+
+/* =========================================================
+   NEWSROOM ARTICLE IMAGES
+   ========================================================= */
+.ghq-news-art img,.ghq-feature-art img,.ghq-small-art img,.ghq-tile-art img,.ghq-card-art img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0;
+}
+.ghq-news-art:before,.ghq-feature-art:before,.ghq-small-art:before,.ghq-tile-art:before,.ghq-card-art:before{
+  content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.08) 15%,rgba(10,10,12,.82) 100%);z-index:1;
+}
+.ghq-news-art>*:not(img),.ghq-feature-art>*:not(img),.ghq-small-art>*:not(img),.ghq-tile-art>*:not(img),.ghq-card-art>*:not(img){z-index:2}
+.ghq-news-card{padding:0;overflow:hidden;display:flex;flex-direction:column;min-height:260px}
+.ghq-card-art{position:relative;height:125px;flex:0 0 125px;overflow:hidden;background:linear-gradient(145deg,#660033,#1a1a1e)}
+.ghq-card-art .ghq-card-type{position:absolute;left:16px;bottom:13px;color:#fff;font:900 9px Inter;letter-spacing:1.2px}
+.ghq-card-copy{padding:16px 18px 15px;display:flex;flex-direction:column;flex:1}
+.ghq-card-copy h3{margin:0 0 8px}
+.ghq-card-copy p{margin:0 0 12px}
+.ghq-card-copy small{margin-top:auto}
+.ghq-small-art{position:relative;overflow:hidden;background:linear-gradient(145deg,#660033,#1a1a1e);color:#fff}
+.ghq-small-art span{position:relative;z-index:2}
+.ghq-news-art,.ghq-feature-art,.ghq-tile-art{position:relative;overflow:hidden}
+.ghq-news-art-mark,.ghq-news-art-type,.ghq-feature-art span,.ghq-feature-art b,.ghq-tile-art span,.ghq-tile-art b{z-index:2}
+@media(max-width:600px){.ghq-card-art{height:150px;flex-basis:150px}}
