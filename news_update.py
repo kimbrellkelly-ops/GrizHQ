@@ -23,13 +23,27 @@ FEEDS = [
 SKYLINE_URL = "https://skylinesportsmt.com/category/cat-griz-football/"
 
 GRIZ_TERMS = (
-    "montana grizzlies", "montana griz", "griz football", "griz", "gillman",
-    "bobby kennedy", "keali'i ah yat", "kealii ah yat", "landon ransom-goelz",
-    "brooks davis", "washington-grizzly", "washington grizzly", "grizzly stadium"
+    "montana grizzlies", "montana griz", "griz football", "montana football",
+    "grizzly football", "eli gillman", "gillman", "bobby kennedy",
+    "keali'i ah yat", "kealii ah yat", "landon ransom-goelz", "brooks davis",
+    "washington-grizzly", "washington grizzly", "grizzly stadium",
+    "grizzly athletics football"
+)
+FOOTBALL_TERMS = (
+    "football", "qb", "quarterback", "wide receiver", "receiver", "running back",
+    "linebacker", "defensive end", "defensive back", "cornerback", "safety",
+    "offensive line", "defensive line", "touchdown", "fcs", "big sky",
+    "payton award", "buchanan award", "kickoff", "punt", "field goal",
+    "game preview", "game recap", "press conference", "fall camp", "roster",
+    "transfer portal", "recruit", "recruiting", "commit"
 )
 EXCLUDE_TERMS = (
     "montana state", "bobcats", "bobcat", "msu football", "bozeman",
-    "cats and griz"  # Avoid generic rivalry stories unless they are clearly Griz-specific.
+    "lady griz", "lady grizzlies", "griz volleyball", "griz soccer",
+    "griz basketball", "montana soccer", "montana volleyball",
+    "montana women's", "montana women's basketball", "montana softball",
+    "montana golf", "montana tennis", "montana track", "cross country",
+    "cats and griz"
 )
 
 def clean(value):
@@ -51,14 +65,22 @@ def parse_date(value):
             continue
     return datetime.now(timezone.utc)
 
-def is_griz_story(title, description=""):
+def is_griz_story(title, description="", source=""):
     text = f"{title} {description}".lower()
+
+    # Hard block non-football Montana sports and Montana State/Bobcats.
     if any(term in text for term in EXCLUDE_TERMS):
-        # Let clearly Griz-specific stories through only when they contain a strong Griz term.
-        strong = ("montana grizzlies", "montana griz", "griz football", "eli gillman",
-                  "bobby kennedy", "keali'i ah yat", "kealii ah yat")
-        return any(term in text for term in strong)
-    return any(term in text for term in GRIZ_TERMS)
+        return False
+
+    has_griz = any(term in text for term in GRIZ_TERMS)
+    has_football = any(term in text for term in FOOTBALL_TERMS)
+
+    # GoGriz's football RSS is already sport-specific. Outside sources must
+    # independently signal Montana + football to prevent unrelated Griz stories.
+    if source == "GoGriz":
+        return has_griz or has_football
+
+    return has_griz and has_football
 
 def category(title):
     t = title.lower()
@@ -93,7 +115,7 @@ def parse_rss(source, url):
         link = clean(item.findtext("link"))
         pub = clean(item.findtext("pubDate"))
         desc = BeautifulSoup(clean(item.findtext("description")), "html.parser").get_text(" ", strip=True)
-        if not title or not link or not is_griz_story(title, desc):
+        if not title or not link or not is_griz_story(title, desc, source):
             continue
 
         # Google News titles commonly end in " - Publisher".
@@ -130,7 +152,7 @@ def parse_skyline():
             continue
         if "/category/" in href or "/page/" in href or "/author/" in href:
             continue
-        if not is_griz_story(title):
+        if not is_griz_story(title, source='Skyline Sports'):
             continue
 
         # Find a nearby date in the link's parent/container.
@@ -185,7 +207,16 @@ def dedupe_and_sort(stories):
             by_key[identity] = story
 
     result = list(by_key.values())
-    result.sort(key=lambda s: parse_date(s.get("published_at") or s.get("date")), reverse=True)
+
+    # Prefer official GoGriz football stories when timestamps are close.
+    source_weight = {"GoGriz": 3, "Skyline Sports": 2, "Google News": 1}
+    result.sort(
+        key=lambda s: (
+            parse_date(s.get("published_at") or s.get("date")),
+            source_weight.get(s.get("source"), 0)
+        ),
+        reverse=True
+    )
     return result[:24]
 
 def main():
@@ -210,8 +241,16 @@ def main():
     merged = dedupe_and_sort(fetched + existing)
 
     # Safety: never replace a healthy existing feed with an empty/broken result.
-    if not merged:
-        print("No stories collected; leaving news.json unchanged.")
+    # Also require at least one football-qualified story from the current run
+    # before allowing a completely stale/irrelevant collection to become primary.
+    current_football = [
+        s for s in fetched
+        if s.get("source") == "GoGriz" or (
+            is_griz_story(s.get("title", ""), s.get("description", ""), s.get("source", ""))
+        )
+    ]
+    if not merged or (fetched and not current_football):
+        print("No football-qualified stories collected; leaving news.json unchanged.")
         return
 
     payload = {
