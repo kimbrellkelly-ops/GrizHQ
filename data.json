@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T02:26:17.975309+00:00",
+  "updated": "2026-09-06T02:29:34.996308+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -5125,7 +5125,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:27 - 4th",
+        "detail": "2:22 - 4th",
         "broadcasts": [
           "CBSSN"
         ]
@@ -5210,7 +5210,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:41 - 3rd",
+        "detail": "15:00 - 4th",
         "broadcasts": [
           "HBCU Go"
         ]
@@ -5226,7 +5226,7 @@
             "short": "Virginia Tech",
             "abbrev": "VT",
             "homeAway": "home",
-            "score": "66"
+            "score": "73"
           },
           {
             "id": "2678",
@@ -5239,7 +5239,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:07 - 4th",
+        "detail": "10:38 - 4th",
         "broadcasts": [
           "ACC Network",
           "ACCNX"
@@ -5298,7 +5298,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "13:52 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5327,7 +5327,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:37 - 3rd",
+        "detail": "2:25 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5343,7 +5343,7 @@
             "short": "Southern",
             "abbrev": "SOU",
             "homeAway": "home",
-            "score": "20"
+            "score": "27"
           },
           {
             "id": "2310",
@@ -5351,12 +5351,12 @@
             "short": "Kentucky St",
             "abbrev": "KYST",
             "homeAway": "away",
-            "score": "4"
+            "score": "2"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:04 - 3rd",
+        "detail": "5:09 - 3rd",
         "broadcasts": []
       },
       {
@@ -5383,7 +5383,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:03 - 3rd",
+        "detail": "6:09 - 3rd",
         "broadcasts": [
           "BTN"
         ]
@@ -5412,7 +5412,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:16 - 3rd",
+        "detail": "1:04 - 3rd",
         "broadcasts": [
           "BTN"
         ]
@@ -5499,7 +5499,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:35 - 4th",
+        "detail": "11:50 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5515,7 +5515,7 @@
             "short": "Southern Utah",
             "abbrev": "SUU",
             "homeAway": "home",
-            "score": "34"
+            "score": "41"
           },
           {
             "id": "2692",
@@ -5528,7 +5528,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "9:00 - 3rd",
+        "detail": "2:49 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5557,7 +5557,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:31 - 3rd",
+        "detail": "End of 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5573,7 +5573,7 @@
             "short": "Louisiana",
             "abbrev": "UL",
             "homeAway": "home",
-            "score": "28"
+            "score": "35"
           },
           {
             "id": "2320",
@@ -5586,7 +5586,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:38 - 3rd",
+        "detail": "15:00 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5645,7 +5645,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:06 - 2nd",
+        "detail": "2:12 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5674,7 +5674,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:00 - 2nd",
+        "detail": "7:12 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5690,7 +5690,7 @@
             "short": "San Diego St",
             "abbrev": "SDSU",
             "homeAway": "home",
-            "score": "7"
+            "score": "13"
           },
           {
             "id": "2502",
@@ -5703,7 +5703,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:14 - 2nd",
+        "detail": "14:04 - 2nd",
         "broadcasts": [
           "USA Net"
         ]
@@ -5732,7 +5732,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:30 - 1st",
+        "detail": "8:55 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5761,7 +5761,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:51 - 1st",
+        "detail": "7:06 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5790,7 +5790,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:24 - 1st",
+        "detail": "3:16 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7053,7 +7053,7 @@
             "short": "Jax State",
             "abbrev": "JVST",
             "homeAway": "home",
-            "score": "49"
+            "score": "63"
           },
           {
             "id": "2198",
