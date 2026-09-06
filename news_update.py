@@ -23,6 +23,15 @@ FEEDS = [
 SKYLINE_URL = "https://skylinesportsmt.com/category/cat-griz-football/"
 FALLBACK_IMAGE = "hero.jpg"
 
+# Verified publisher-hosted images for current Griz stories. These are used only
+# when an article page/feed does not expose its featured image cleanly.
+KNOWN_IMAGES = {
+    "https://www.montanasports.com/college/montana-grizzlies/no-3-montana-blows-past-drake-as-eli-gillman-rewrites-rushing-td-record": "https://ewscripps.brightspotcdn.com/dims4/default/67070b8/2147483647/strip/true/crop/3977x2237+0+0/resize/1280x720!/quality/90/?url=http://ewscripps-brightspot.s3.amazonaws.com/31/52/14a9c88541e9942044eff39e1f84/20260905-fbvsdrake-048.jpg",
+    "https://gogriz.com/news/2026/9/5/football-gillman-sets-records-as-griz-roll-past-bulldogs-45-10": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/9/5/20260905_fb_v_Drake_4405_rb_AFMpW.jpg",
+    "https://dailyinterlake.com/news/2026/sep/06/give-gillman-the-crown-griz-ride-rbs-4-touchdowns-to-win-pver-drake/": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/9/5/20260905_fb_v_Drake_4405_rb_AFMpW.jpg",
+    "https://skylinesportsmt.com/gillman-breaks-record-as-griz-overcome-penalties-to-cruise-past-drake-for-second-straight-win/": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Bobby-Kennedy-on-sideline-with-team-and-Jaylen-Johnson-780x470.jpeg",
+}
+
 GRIZ_TERMS = (
     "montana grizzlies", "montana griz", "griz football", "griz", "gillman",
     "bobby kennedy", "keali'i ah yat", "kealii ah yat", "landon ransom-goelz",
@@ -116,7 +125,7 @@ def valid_image(url):
     if not url.lower().startswith(("http://", "https://")):
         return ""
     low = url.lower()
-    if any(x in low for x in ("logo", "avatar", "icon", "tracking", "pixel", "griz-hq", "news.google.com", "googleusercontent.com", "gstatic.com")):
+    if any(x in low for x in ("logo", "avatar", "icon", "tracking", "pixel", "griz-hq")):
         return ""
     return url
 
@@ -216,7 +225,7 @@ def parse_rss(source, url):
         dt = parse_date(pub)
         rss_image = image_from_rss_item(item, link)
         meta = fetch_article_metadata(link)
-        image = rss_image or meta.get("image", "")
+        image = rss_image or meta.get("image", "") or KNOWN_IMAGES.get(normalize_url(link), "")
         youtube_id = meta.get("youtube_id", "")
         is_video = looks_like_video(title, link, desc) or bool(youtube_id)
 
@@ -280,7 +289,7 @@ def parse_skyline():
             "source": "Skyline Sports",
             "badge": category(title),
             "short": category(title)[:4].upper(),
-            "image": meta.get("image", ""),
+            "image": meta.get("image", "") or KNOWN_IMAGES.get(normalize_url(href), ""),
             "is_video": is_video,
             "youtube_id": youtube_id,
             "video_url": f"https://www.youtube.com/watch?v={youtube_id}" if youtube_id else (href if is_video else ""),
@@ -298,7 +307,10 @@ def load_existing():
         return []
     try:
         data = json.loads(NEWS_FILE.read_text(encoding="utf-8"))
-        return data.get("stories", []) if isinstance(data, dict) else []
+        stories = data.get("stories", []) if isinstance(data, dict) else []
+        # Never carry Google News proxy stories/images forward. They are not
+        # publisher images and are the source of the generic Google artwork.
+        return [s for s in stories if "news.google.com" not in str(s.get("url", "")).lower() and str(s.get("source", "")).lower() != "google news"]
     except Exception as exc:
         print("Could not read existing news.json:", exc)
         return []
@@ -362,6 +374,7 @@ def main():
     except Exception as exc:
         print(f"Skyline scrape failed: {exc}")
 
+    fetched = [s for s in fetched if "news.google.com" not in str(s.get("url", "")).lower() and str(s.get("source", "")).lower() != "google news"]
     merged = dedupe_and_sort(fetched + existing)
     if not merged:
         print("No stories collected; leaving news.json unchanged.")
