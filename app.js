@@ -275,36 +275,16 @@ async function renderBigSkyAndOpponent(){
     const resources = d.opponent_resources?.[opponent];
     if (resources) {
       const hub = document.getElementById("opponent-hub-name");
+      const logo = document.getElementById("opp-logo");
       const title = document.getElementById("opp-title");
       const official = document.getElementById("opp-official");
       const forum = document.getElementById("opp-forum");
       const forumLabel = document.getElementById("opp-forum-label");
       const media = document.getElementById("opp-media");
-      const oppLogo = document.getElementById("opp-logo");
-      const oppDate = document.getElementById("opp-date");
-      const oppVenue = document.getElementById("opp-venue");
-      const opponentLogos = {
-        "Southern Utah": "https://a.espncdn.com/i/teamlogos/ncaa/500/253.png",
-        "Drake": "https://a.espncdn.com/i/teamlogos/ncaa/500/2181.png",
-        "Utah Tech": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png",
-        "Oregon State": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
-        "UC Davis": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png",
-        "Northern Colorado": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png",
-        "Northern Arizona": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png",
-        "Idaho": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
-        "Eastern Washington": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png",
-        "Portland State": "https://a.espncdn.com/i/teamlogos/ncaa/500/279.png",
-        "Idaho State": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
-        "Montana State": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
-      };
       if (hub) hub.textContent = opponent;
+      const opponentLogos = {"Utah Tech":"https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png","Drake":"https://a.espncdn.com/i/teamlogos/ncaa/500/247.png","Southern Utah":"https://a.espncdn.com/i/teamlogos/ncaa/500/253.png","Oregon State":"https://a.espncdn.com/i/teamlogos/ncaa/500/204.png","UC Davis":"https://a.espncdn.com/i/teamlogos/ncaa/500/302.png","Northern Colorado":"https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png"};
+      if (logo) logo.src = opponentLogos[opponent] || `https://a.espncdn.com/i/teamlogos/ncaa/500/${({"Montana State":147,"Idaho":70,"Weber State":2692,"Eastern Washington":331,"Northern Arizona":2464,"Idaho State":304,"Cal Poly":13,"Portland State":2502}[opponent] || 3101)}.png`;
       if (title) title.textContent = opponent.toUpperCase();
-      if (oppLogo && opponentLogos[opponent]) {
-        oppLogo.src = opponentLogos[opponent];
-        oppLogo.alt = `${opponent} logo`;
-      }
-      if (oppDate) oppDate.textContent = [d.next_game?.date, d.next_game?.time].filter(Boolean).join(" • ").toUpperCase();
-      if (oppVenue) oppVenue.textContent = String(d.next_game?.venue || "Washington-Grizzly Stadium").split(",")[0].toUpperCase();
       if (official) official.href = resources.official;
       if (forum) forum.href = resources.forum;
       if (forumLabel) forumLabel.textContent = resources.label || "Fan discussion";
