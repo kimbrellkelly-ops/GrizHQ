@@ -404,10 +404,10 @@ async function renderFCSScoreboard(){
     topEl.innerHTML=top25.slice(0,25).map(t=>{
       const ev=findTeamEvent(t.team,events);
       const isGriz=teamMatches('Montana',t.team);
-      const isBigSky=bigSkyTeams.some(x=>teamMatches(x,t.team));
       const detail=ev?gameLabel(ev):null;
       const matchup=detail?`${escapeHtml(detail.away)} @ ${escapeHtml(detail.home)}`:'No game this week';
-      const cardClass=isGriz?'griz':(isBigSky?'bigsky':'');
+      // In the FCS Top 25, highlight Montana only — not other Big Sky teams.
+      const cardClass=isGriz?'griz':'';
       return `<div class="fcs-rank-card ${cardClass}"><span class="fcs-rank">${escapeHtml(t.rank)}</span><div class="fcs-rank-team"><b>${escapeHtml(t.team)}</b><small>${escapeHtml(t.record||'')} • ${matchup}</small></div><span class="fcs-rank-score">${scoreLine(ev,t.team)}</span></div>`;
     }).join('');
 
