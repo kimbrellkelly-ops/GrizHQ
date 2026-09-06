@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T01:24:34.512497+00:00",
+  "updated": "2026-09-06T01:53:11.347791+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Gillman sets records as Griz roll past Bulldogs, 45-10",
+      "url": "https://gogriz.com/news/2026/9/5/football-gillman-sets-records-as-griz-roll-past-bulldogs-45-10",
+      "date": "Sat, 5 Sep 2026 19:45:00 MST",
+      "description": "MISSOULA – It was a record setting day in Missoula as running back Eli Gillman became and all-time Grizzly great, leading Montana to a dominant 45-10 nonconference victory over the"
+    },
+    {
       "title": "Stripe the Stadium - What you should wear",
       "url": "https://gogriz.com/news/2026/9/4/football-stripe-the-stadium-what-you-should-wear",
       "date": "Fri, 4 Sep 2026 14:32:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/8/26/football-coach-kennedy-radio-show-premieres-wednesday-live-from-the-den",
       "date": "Wed, 26 Aug 2026 08:22:00 MST",
       "description": "MISSOULA - The Montana Grizzly Coaches Radio Show returns to The Den each Wednesday at 7 p.m. in 2026, giving fans an exclusive inside look at Griz football with first year head co"
-    },
-    {
-      "title": "Kennedy era opens as Griz host T-Birds",
-      "url": "https://gogriz.com/news/2026/8/25/football-kennedy-era-opens-as-griz-host-t-birds",
-      "date": "Tue, 25 Aug 2026 16:49:00 MST",
-      "description": "The dawn of a new era rises over Washington-Grizzly Stadium on Saturday as Bobby Kennedy leads Montana onto the field for the first time as UM's 38th head football coach."
     }
   ],
   "depth_chart": {
@@ -5123,9 +5123,9 @@
             "score": "38"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "3:23 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5149,12 +5149,12 @@
             "short": "Delaware St",
             "abbrev": "DSU",
             "homeAway": "away",
-            "score": "0"
+            "score": "15"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:20 - 4th",
+        "detail": "3:04 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5183,7 +5183,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:16 - 4th",
+        "detail": "6:03 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5210,9 +5210,9 @@
             "score": "10"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "4:24 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5239,9 +5239,9 @@
             "score": "6"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "7:38 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "CIAA Network"
         ]
@@ -5268,9 +5268,9 @@
             "score": "17"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "1:57 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5297,9 +5297,9 @@
             "score": "3"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "7:38 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5326,9 +5326,9 @@
             "score": "0"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "1:26 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": []
       },
       {
@@ -5350,12 +5350,12 @@
             "short": "Tennessee Tech",
             "abbrev": "TNTC",
             "homeAway": "away",
-            "score": "17"
+            "score": "24"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "8:32 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5384,7 +5384,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:35 - 4th",
+        "detail": "2:00 - 4th",
         "broadcasts": [
           "MEAC Network"
         ]
@@ -5400,7 +5400,7 @@
             "short": "Texas Tech",
             "abbrev": "TTU",
             "homeAway": "home",
-            "score": "17"
+            "score": "23"
           },
           {
             "id": "2000",
@@ -5413,7 +5413,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "7:11 - 3rd",
         "broadcasts": [
           "FS1"
         ]
@@ -5429,7 +5429,7 @@
             "short": "Vanderbilt",
             "abbrev": "VAN",
             "homeAway": "home",
-            "score": "15"
+            "score": "21"
           },
           {
             "id": "2046",
@@ -5442,7 +5442,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "9:50 - 3rd",
+        "detail": "15:00 - 3rd",
         "broadcasts": [
           "SECN+"
         ]
@@ -5458,7 +5458,7 @@
             "short": "Kansas St",
             "abbrev": "KSU",
             "homeAway": "home",
-            "score": "36"
+            "score": "50"
           },
           {
             "id": "2447",
@@ -5471,7 +5471,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 3rd",
+        "detail": "3:56 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5500,7 +5500,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "5:28 - 3rd",
         "broadcasts": [
           "CBSSN"
         ]
@@ -5529,7 +5529,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "4:12 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5558,7 +5558,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "3:15 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5574,7 +5574,7 @@
             "short": "C Arkansas",
             "abbrev": "CARK",
             "homeAway": "home",
-            "score": "7"
+            "score": "14"
           },
           {
             "id": "110242",
@@ -5582,12 +5582,12 @@
             "short": "West Florida",
             "abbrev": "UWF",
             "homeAway": "away",
-            "score": "35"
+            "score": "42"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:32 - 3rd",
+        "detail": "4:11 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5603,7 +5603,7 @@
             "short": "E Washington",
             "abbrev": "EWU",
             "homeAway": "home",
-            "score": "20"
+            "score": "27"
           },
           {
             "id": "2460",
@@ -5616,7 +5616,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 3rd",
+        "detail": "0:08 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5632,7 +5632,7 @@
             "short": "Jax State",
             "abbrev": "JVST",
             "homeAway": "home",
-            "score": "35"
+            "score": "42"
           },
           {
             "id": "2198",
@@ -5645,7 +5645,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "6:03 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5661,7 +5661,7 @@
             "short": "GA Southern",
             "abbrev": "GASO",
             "homeAway": "home",
-            "score": "24"
+            "score": "31"
           },
           {
             "id": "2127",
@@ -5674,7 +5674,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 3rd",
+        "detail": "2:35 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5690,7 +5690,7 @@
             "short": "Alabama A&M",
             "abbrev": "AAMU",
             "homeAway": "home",
-            "score": "7"
+            "score": "17"
           },
           {
             "id": "2396",
@@ -5698,12 +5698,12 @@
             "short": "Miles",
             "abbrev": "MIL",
             "homeAway": "away",
-            "score": "0"
+            "score": "7"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "9:11 - 1st",
+        "detail": "15:00 - 2nd",
         "broadcasts": []
       },
       {
@@ -5717,7 +5717,7 @@
             "short": "South Alabama",
             "abbrev": "USA",
             "homeAway": "home",
-            "score": "22"
+            "score": "32"
           },
           {
             "id": "2545",
@@ -5730,7 +5730,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:46 - 3rd",
+        "detail": "End of 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5746,7 +5746,7 @@
             "short": "Grambling",
             "abbrev": "GRAM",
             "homeAway": "home",
-            "score": "27"
+            "score": "34"
           },
           {
             "id": "2119",
@@ -5759,7 +5759,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "2:05 - 3rd",
         "broadcasts": []
       },
       {
@@ -5773,7 +5773,7 @@
             "short": "McNeese",
             "abbrev": "MCN",
             "homeAway": "home",
-            "score": "24"
+            "score": "38"
           },
           {
             "id": "102626",
@@ -5786,7 +5786,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "2:01 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5802,7 +5802,7 @@
             "short": "Jackson St",
             "abbrev": "JKST",
             "homeAway": "home",
-            "score": "28"
+            "score": "38"
           },
           {
             "id": "2206",
@@ -5815,7 +5815,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:22 - 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "HBCU Go"
         ]
@@ -5844,7 +5844,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:50 - 2nd",
+        "detail": "End of 2nd",
         "broadcasts": [
           "ACC Network",
           "ACCNX"
@@ -5861,7 +5861,7 @@
             "short": "Louisiana Tech",
             "abbrev": "LT",
             "homeAway": "home",
-            "score": "55"
+            "score": "63"
           },
           {
             "id": "2466",
@@ -5874,7 +5874,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:05 - 2nd",
+        "detail": "End of 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5919,7 +5919,7 @@
             "short": "BYU",
             "abbrev": "BYU",
             "homeAway": "home",
-            "score": "28"
+            "score": "35"
           },
           {
             "id": "3101",
@@ -5932,7 +5932,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:44 - 2nd",
+        "detail": "1:53 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5956,12 +5956,12 @@
             "short": "Kentucky St",
             "abbrev": "KYST",
             "homeAway": "away",
-            "score": "0"
+            "score": "2"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:44 - 2nd",
+        "detail": "4:20 - 2nd",
         "broadcasts": []
       },
       {
@@ -5975,7 +5975,7 @@
             "short": "Maryland",
             "abbrev": "MD",
             "homeAway": "home",
-            "score": "20"
+            "score": "27"
           },
           {
             "id": "2261",
@@ -5988,7 +5988,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:32 - 2nd",
+        "detail": "3:03 - 2nd",
         "broadcasts": [
           "BTN"
         ]
@@ -6004,7 +6004,7 @@
             "short": "Northwestern",
             "abbrev": "NU",
             "homeAway": "home",
-            "score": "7"
+            "score": "10"
           },
           {
             "id": "2571",
@@ -6012,12 +6012,12 @@
             "short": "S Dakota St",
             "abbrev": "SDST",
             "homeAway": "away",
-            "score": "3"
+            "score": "6"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:02 - 2nd",
+        "detail": "0:28 - 2nd",
         "broadcasts": [
           "BTN"
         ]
@@ -6033,7 +6033,7 @@
             "short": "W Illinois",
             "abbrev": "WIU",
             "homeAway": "home",
-            "score": "0"
+            "score": "3"
           },
           {
             "id": "2287",
@@ -6041,12 +6041,12 @@
             "short": "Illinois St",
             "abbrev": "ILST",
             "homeAway": "away",
-            "score": "17"
+            "score": "24"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 2nd",
+        "detail": "1:39 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6070,12 +6070,12 @@
             "short": "South Dakota",
             "abbrev": "SDAK",
             "homeAway": "away",
-            "score": "14"
+            "score": "21"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:33 - 2nd",
+        "detail": "0:40 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6091,7 +6091,7 @@
             "short": "Cal Poly",
             "abbrev": "CP",
             "homeAway": "home",
-            "score": "7"
+            "score": "14"
           },
           {
             "id": "2120",
@@ -6104,7 +6104,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:23 - 2nd",
+        "detail": "End of 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6120,7 +6120,7 @@
             "short": "Southern Utah",
             "abbrev": "SUU",
             "homeAway": "home",
-            "score": "13"
+            "score": "20"
           },
           {
             "id": "2692",
@@ -6128,12 +6128,12 @@
             "short": "Weber St",
             "abbrev": "WEB",
             "homeAway": "away",
-            "score": "15"
+            "score": "22"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:18 - 2nd",
+        "detail": "5:17 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6162,7 +6162,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:56 - 2nd",
+        "detail": "1:18 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6178,7 +6178,7 @@
             "short": "Louisiana",
             "abbrev": "UL",
             "homeAway": "home",
-            "score": "14"
+            "score": "21"
           },
           {
             "id": "2320",
@@ -6191,7 +6191,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:41 - 2nd",
+        "detail": "1:12 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6207,7 +6207,7 @@
             "short": "Montana St",
             "abbrev": "MTST",
             "homeAway": "home",
-            "score": "3"
+            "score": "10"
           },
           {
             "id": "2086",
@@ -6215,12 +6215,12 @@
             "short": "Butler",
             "abbrev": "BTLR",
             "homeAway": "away",
-            "score": "0"
+            "score": "3"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:05 - 1st",
+        "detail": "10:31 - 2nd",
         "broadcasts": [
           "ESPN+",
           "Scripps Sports"
@@ -7022,7 +7022,7 @@
             "short": "New Mexico St",
             "abbrev": "NMSU",
             "homeAway": "home",
-            "score": "0"
+            "score": "7"
           },
           {
             "id": "2385",
@@ -7030,12 +7030,12 @@
             "short": "Mercyhurst",
             "abbrev": "MERC",
             "homeAway": "away",
-            "score": "0"
+            "score": "7"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/5 - 9:00 PM EDT",
+        "detail": "7:51 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
