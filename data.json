@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T00:57:06.126224+00:00",
+  "updated": "2026-09-06T01:24:34.512497+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -5102,35 +5102,6 @@
     ],
     "2026-09-03": [
       {
-        "id": "401862694",
-        "date": "2026-09-05T19:30Z",
-        "name": "The Citadel Bulldogs at Charlotte 49ers",
-        "teams": [
-          {
-            "id": "2429",
-            "name": "Charlotte 49ers",
-            "short": "Charlotte",
-            "abbrev": "CLT",
-            "homeAway": "home",
-            "score": "41"
-          },
-          {
-            "id": "2643",
-            "name": "The Citadel Bulldogs",
-            "short": "The Citadel",
-            "abbrev": "CIT",
-            "homeAway": "away",
-            "score": "43"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final/3OT",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
         "id": "401866626",
         "date": "2026-09-05T22:00Z",
         "name": "Elon Phoenix at Davidson Wildcats",
@@ -5154,7 +5125,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:38 - 4th",
+        "detail": "3:23 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5170,7 +5141,7 @@
             "short": "William & Mary",
             "abbrev": "W&M",
             "homeAway": "home",
-            "score": "19"
+            "score": "22"
           },
           {
             "id": "2169",
@@ -5183,7 +5154,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 4th",
+        "detail": "12:20 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5212,7 +5183,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:48 - 4th",
+        "detail": "14:16 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5241,7 +5212,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "9:36 - 4th",
+        "detail": "4:24 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5270,7 +5241,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:26 - 4th",
+        "detail": "7:38 - 4th",
         "broadcasts": [
           "CIAA Network"
         ]
@@ -5299,7 +5270,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:20 - 4th",
+        "detail": "1:57 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5357,7 +5328,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:26 - 4th",
+        "detail": "1:26 - 4th",
         "broadcasts": []
       },
       {
@@ -5400,7 +5371,7 @@
             "short": "Howard",
             "abbrev": "HOW",
             "homeAway": "home",
-            "score": "14"
+            "score": "21"
           },
           {
             "id": "257",
@@ -5413,7 +5384,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:22 - 4th",
+        "detail": "11:35 - 4th",
         "broadcasts": [
           "MEAC Network"
         ]
@@ -5471,7 +5442,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:21 - 3rd",
+        "detail": "9:50 - 3rd",
         "broadcasts": [
           "SECN+"
         ]
@@ -5500,7 +5471,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "15:00 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5611,12 +5582,12 @@
             "short": "West Florida",
             "abbrev": "UWF",
             "homeAway": "away",
-            "score": "28"
+            "score": "35"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "14:32 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5645,7 +5616,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "15:00 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5674,7 +5645,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5703,7 +5674,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "15:00 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5732,7 +5703,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Delayed",
+        "detail": "9:11 - 1st",
         "broadcasts": []
       },
       {
@@ -5754,12 +5725,12 @@
             "short": "SE Louisiana",
             "abbrev": "SELA",
             "homeAway": "away",
-            "score": "7"
+            "score": "14"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "12:46 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5831,7 +5802,7 @@
             "short": "Jackson St",
             "abbrev": "JKST",
             "homeAway": "home",
-            "score": "21"
+            "score": "28"
           },
           {
             "id": "2206",
@@ -5844,7 +5815,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:16 - 2nd",
+        "detail": "10:22 - 2nd",
         "broadcasts": [
           "HBCU Go"
         ]
@@ -5860,7 +5831,7 @@
             "short": "Virginia Tech",
             "abbrev": "VT",
             "homeAway": "home",
-            "score": "38"
+            "score": "45"
           },
           {
             "id": "2678",
@@ -5873,7 +5844,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:55 - 2nd",
+        "detail": "1:50 - 2nd",
         "broadcasts": [
           "ACC Network",
           "ACCNX"
@@ -5890,7 +5861,7 @@
             "short": "Louisiana Tech",
             "abbrev": "LT",
             "homeAway": "home",
-            "score": "49"
+            "score": "55"
           },
           {
             "id": "2466",
@@ -5903,7 +5874,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:17 - 2nd",
+        "detail": "4:05 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5948,7 +5919,7 @@
             "short": "BYU",
             "abbrev": "BYU",
             "homeAway": "home",
-            "score": "21"
+            "score": "28"
           },
           {
             "id": "3101",
@@ -5961,7 +5932,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:48 - 2nd",
+        "detail": "3:44 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5977,7 +5948,7 @@
             "short": "Southern",
             "abbrev": "SOU",
             "homeAway": "home",
-            "score": "0"
+            "score": "7"
           },
           {
             "id": "2310",
@@ -5990,7 +5961,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 1st",
+        "detail": "13:44 - 2nd",
         "broadcasts": []
       },
       {
@@ -6004,7 +5975,7 @@
             "short": "Maryland",
             "abbrev": "MD",
             "homeAway": "home",
-            "score": "17"
+            "score": "20"
           },
           {
             "id": "2261",
@@ -6017,7 +5988,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:48 - 2nd",
+        "detail": "12:32 - 2nd",
         "broadcasts": [
           "BTN"
         ]
@@ -6041,12 +6012,12 @@
             "short": "S Dakota St",
             "abbrev": "SDST",
             "homeAway": "away",
-            "score": "0"
+            "score": "3"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:01 - 2nd",
+        "detail": "10:02 - 2nd",
         "broadcasts": [
           "BTN"
         ]
@@ -6075,7 +6046,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 1st",
+        "detail": "15:00 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6104,7 +6075,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:00 - 2nd",
+        "detail": "10:33 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6133,7 +6104,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:58 - 2nd",
+        "detail": "7:23 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6178,7 +6149,7 @@
             "short": "SF Austin",
             "abbrev": "SFA",
             "homeAway": "home",
-            "score": "14"
+            "score": "21"
           },
           {
             "id": "2837",
@@ -6191,7 +6162,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:14 - 2nd",
+        "detail": "11:56 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6220,7 +6191,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:17 - 2nd",
+        "detail": "10:41 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -6774,6 +6745,35 @@
         "state": "post",
         "completed": true,
         "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401862694",
+        "date": "2026-09-05T19:30Z",
+        "name": "The Citadel Bulldogs at Charlotte 49ers",
+        "teams": [
+          {
+            "id": "2429",
+            "name": "Charlotte 49ers",
+            "short": "Charlotte",
+            "abbrev": "CLT",
+            "homeAway": "home",
+            "score": "41"
+          },
+          {
+            "id": "2643",
+            "name": "The Citadel Bulldogs",
+            "short": "The Citadel",
+            "abbrev": "CIT",
+            "homeAway": "away",
+            "score": "43"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final/3OT",
         "broadcasts": [
           "ESPN+"
         ]
