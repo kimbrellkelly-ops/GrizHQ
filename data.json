@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T03:47:55.327534+00:00",
+  "updated": "2026-09-06T03:56:06.475310+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -5125,7 +5125,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:05 - 4th",
+        "detail": "3:17 - 4th",
         "broadcasts": []
       },
       {
@@ -5153,91 +5153,6 @@
         "state": "in",
         "completed": false,
         "detail": "Delayed",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868970",
-        "date": "2026-09-06T00:00Z",
-        "name": "Kentucky State Thorobreds at Southern Jaguars",
-        "teams": [
-          {
-            "id": "2582",
-            "name": "Southern Jaguars",
-            "short": "Southern",
-            "abbrev": "SOU",
-            "homeAway": "home",
-            "score": "34"
-          },
-          {
-            "id": "2310",
-            "name": "Kentucky State Thorobreds",
-            "short": "Kentucky St",
-            "abbrev": "KYST",
-            "homeAway": "away",
-            "score": "15"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": []
-      },
-      {
-        "id": "401858427",
-        "date": "2026-09-06T00:00Z",
-        "name": "Hampton Pirates at Maryland Terrapins",
-        "teams": [
-          {
-            "id": "120",
-            "name": "Maryland Terrapins",
-            "short": "Maryland",
-            "abbrev": "MD",
-            "homeAway": "home",
-            "score": "62"
-          },
-          {
-            "id": "2261",
-            "name": "Hampton Pirates",
-            "short": "Hampton",
-            "abbrev": "HAMP",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "BTN"
-        ]
-      },
-      {
-        "id": "401868158",
-        "date": "2026-09-06T00:00Z",
-        "name": "Weber State Wildcats at Southern Utah Thunderbirds",
-        "teams": [
-          {
-            "id": "253",
-            "name": "Southern Utah Thunderbirds",
-            "short": "Southern Utah",
-            "abbrev": "SUU",
-            "homeAway": "home",
-            "score": "47"
-          },
-          {
-            "id": "2692",
-            "name": "Weber State Wildcats",
-            "short": "Weber St",
-            "abbrev": "WEB",
-            "homeAway": "away",
-            "score": "42"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5283,7 +5198,7 @@
             "short": "New Mexico St",
             "abbrev": "NMSU",
             "homeAway": "home",
-            "score": "30"
+            "score": "37"
           },
           {
             "id": "2385",
@@ -5296,7 +5211,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 3rd",
+        "detail": "12:51 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5325,7 +5240,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:01 - 3rd",
+        "detail": "1:56 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5354,7 +5269,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:31 - 3rd",
+        "detail": "9:10 - 3rd",
         "broadcasts": [
           "USA Net"
         ]
@@ -5412,7 +5327,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:23 - 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7012,6 +6927,62 @@
         ]
       },
       {
+        "id": "401868970",
+        "date": "2026-09-06T00:00Z",
+        "name": "Kentucky State Thorobreds at Southern Jaguars",
+        "teams": [
+          {
+            "id": "2582",
+            "name": "Southern Jaguars",
+            "short": "Southern",
+            "abbrev": "SOU",
+            "homeAway": "home",
+            "score": "34"
+          },
+          {
+            "id": "2310",
+            "name": "Kentucky State Thorobreds",
+            "short": "Kentucky St",
+            "abbrev": "KYST",
+            "homeAway": "away",
+            "score": "15"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": []
+      },
+      {
+        "id": "401858427",
+        "date": "2026-09-06T00:00Z",
+        "name": "Hampton Pirates at Maryland Terrapins",
+        "teams": [
+          {
+            "id": "120",
+            "name": "Maryland Terrapins",
+            "short": "Maryland",
+            "abbrev": "MD",
+            "homeAway": "home",
+            "score": "62"
+          },
+          {
+            "id": "2261",
+            "name": "Hampton Pirates",
+            "short": "Hampton",
+            "abbrev": "HAMP",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "BTN"
+        ]
+      },
+      {
         "id": "401858431",
         "date": "2026-09-06T00:00Z",
         "name": "South Dakota State Jackrabbits at Northwestern Wildcats",
@@ -7118,6 +7089,35 @@
             "abbrev": "CEN",
             "homeAway": "away",
             "score": "17"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868158",
+        "date": "2026-09-06T00:00Z",
+        "name": "Weber State Wildcats at Southern Utah Thunderbirds",
+        "teams": [
+          {
+            "id": "253",
+            "name": "Southern Utah Thunderbirds",
+            "short": "Southern Utah",
+            "abbrev": "SUU",
+            "homeAway": "home",
+            "score": "47"
+          },
+          {
+            "id": "2692",
+            "name": "Weber State Wildcats",
+            "short": "Weber St",
+            "abbrev": "WEB",
+            "homeAway": "away",
+            "score": "42"
           }
         ],
         "state": "post",
@@ -27285,5 +27285,5 @@
       }
     ]
   },
-  "fcs_scores_updated": "2026-09-06T03:48:02.790767+00:00"
+  "fcs_scores_updated": "2026-09-06T03:56:10.642359+00:00"
 }
