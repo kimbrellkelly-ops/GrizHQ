@@ -108,7 +108,7 @@
 </div>
 </section>
 <section class="section tab-panel" data-tab="schedule" id="big-sky"><div class="section-head"><div class="eyebrow">AROUND THE LEAGUE</div><h2>2026 Big Sky Football</h2><span>All Big Sky teams • conference &amp; non-conference</span></div><div class="bigsky-tools"><label>TEAM<select id="bigsky-team-filter"><option value="ALL">ALL TEAMS</option></select></label><label>WEEK<select id="bigsky-date-filter"><option value="ALL">CURRENT WEEK</option></select></label></div><div class="bigsky-table" id="bigsky-table">Loading Big Sky schedule…</div><div class="schedule-source">Source: <a href="https://bigskyconf.com/news/2026/7/6/big-sky-announces-kickoff-times-for-2026-conference-football-season.aspx" rel="noopener" target="_blank">Big Sky Conference ↗</a></div></section>
-<section class="section tab-panel" data-tab="game" id="next-up"><div class="section-head"><div class="eyebrow">NEXT UP</div><h2>Next Up</h2><span id="opponent-hub-name">Utah Tech</span></div><div class="opponent-card"><div class="opponent-identity"><div class="opponent-logo-wrap"><img id="opp-logo" alt="Utah Tech Trailblazers logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png"/></div><div class="opponent-identity-copy"><div class="opponent-kicker">UP NEXT • <span id="opp-date">SEP 12 • 1 PM MT</span></div><h3 id="opp-title">UTAH TECH</h3><div class="opponent-venue" id="opp-venue">WASHINGTON-GRIZZLY STADIUM</div><p>Get ready for the next one. Jump straight to Utah Tech's official site, fan discussion and opponent coverage.</p></div></div><div class="opponent-links"><a href="#" id="opp-official" rel="noopener" target="_blank"><span class="opponent-link-mark">01</span><b>OFFICIAL SITE</b><span>Schedule • roster • news</span><em>VISIT ↗</em></a><a href="#" id="opp-forum" rel="noopener" target="_blank"><span class="opponent-link-mark">02</span><b>FAN FORUM</b><span id="opp-forum-label">Fan discussion</span><em>JOIN IN ↗</em></a><a href="#" id="opp-media" rel="noopener" target="_blank"><span class="opponent-link-mark">03</span><b>OPPONENT MEDIA</b><span>Audio • news • coverage</span><em>EXPLORE ↗</em></a></div></div></section>
+<section class="section tab-panel" data-tab="game" id="next-up"><div class="section-head"><div class="eyebrow">NEXT GAME</div><h2>Next Up</h2><span id="opponent-hub-name">Utah Tech</span></div><div class="opponent-card"><div class="opponent-identity"><div class="opponent-logo-wrap"><img id="opp-logo" alt="Utah Tech Trailblazers logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png"/></div><div class="opponent-identity-copy"><div class="opponent-kicker">UP NEXT • <span id="opp-date">SEP 12 • 1 PM MT</span></div><h3 id="opp-title">UTAH TECH</h3><div class="opponent-venue" id="opp-venue">WASHINGTON-GRIZZLY STADIUM</div><p>Get ready for the next one. Jump straight to Utah Tech's official site, fan discussion and opponent coverage.</p></div></div><div class="opponent-links"><a href="#" id="opp-official" rel="noopener" target="_blank"><span class="opponent-link-mark">01</span><b>OFFICIAL SITE</b><span>Schedule • roster • news</span><em>VISIT ↗</em></a><a href="#" id="opp-forum" rel="noopener" target="_blank"><span class="opponent-link-mark">02</span><b>FAN FORUM</b><span id="opp-forum-label">Fan discussion</span><em>JOIN IN ↗</em></a><a href="#" id="opp-media" rel="noopener" target="_blank"><span class="opponent-link-mark">03</span><b>OPPONENT MEDIA</b><span>Audio • news • coverage</span><em>EXPLORE ↗</em></a></div></div></section>
 <section class="lower-grid">
 <section class="panel tab-panel" data-tab="schedule" id="schedule">
 <div class="panel-title"><h2>2026 SEASON AT A GLANCE</h2></div>
@@ -185,14 +185,7 @@
 <div class="fcs-all-head bigsky-score-head"><div><b>BIG SKY SCORES</b><span id="bigsky-score-label">All 13 Big Sky teams</span></div><span>Conference + non-conference</span></div>
 <div class="fcs-games bigsky-score-games" id="bigsky-score-games"><div class="fcs-loading">Loading Big Sky games…</div></div>
 </section>
-<section class="section tab-panel" data-tab="game" id="drake">
-<div class="section-head"><div class="eyebrow">GAME CENTER</div><h2 id="game-center-title">Next Game at Montana</h2><span id="game-center-meta">Washington-Grizzly Stadium</span></div>
-<div class="game-grid">
-<article><strong>SCOUTING REPORT</strong><h3>Drake comes to Missoula angry</h3><p>The Bulldogs lost 38–35 to South Dakota Mines in their opener after scoring 22 fourth-quarter points. Montana has to make Drake earn every explosive play.</p><a href="#media">READ FULL SCOUTING REPORT →</a></article>
-<article><strong>THE MATCHUP</strong><h3>Griz defense vs. Drake's passing game</h3><p>Drake showed plenty of firepower in the opener. The biggest question for Montana is whether the front can create pressure without opening the back end.</p><a href="#stats">VIEW MATCHUP STATS →</a></article>
-<article><strong>OFFICIAL SOURCES</strong><h3>Drake Football</h3><p>Use the official Drake site for the opponent's roster, schedule, game notes and postgame coverage.</p><a href="https://godrakebulldogs.com/sports/football" rel="noopener" target="_blank">DRAKE FOOTBALL ↗</a></article>
-</div>
-</section>
+
 <section class="section tab-panel" data-tab="rankings" id="rankings">
 <div class="section-head"><div class="eyebrow">NATIONAL FCS RANKINGS</div><h2>Top 20 — Coaches &amp; Media</h2><span id="rankings-date">Loading…</span></div>
 <div class="full-polls">
@@ -391,7 +384,7 @@
       const valid=links.some(a=>a.dataset.tabLink===tab)?tab:'home';
       panels.forEach(p=>p.classList.toggle('is-active',p.dataset.tab===valid));
       links.forEach(a=>{const on=a.dataset.tabLink===valid;a.classList.toggle('active',on);on?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current');});
-      if(hash) history.replaceState(null,'','#'+(valid==='scores'?'fcs-scores':valid==='game'?'drake':valid));
+      if(hash) history.replaceState(null,'','#'+(valid==='scores'?'fcs-scores':valid==='game'?'next-up':valid));
       window.scrollTo(0,0);
     };
     links.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();activate(a.dataset.tabLink,true);}));
@@ -430,21 +423,11 @@
   const sourceLabel=s=>String(s||'GRIZ HQ').toUpperCase();
   const shortType=s=>{const t=cleanType(s); return t==='GAME STORY'?'GAME':t==='GAME DAY'?'GAME DAY':t==='RECRUITING'?'RECRUIT':t==='HONOR'?'HONOR':t==='INSIDER'?'INSIDER':t==='ANALYSIS'?'ANALYSIS':t==='OPPONENT'?'OPPONENT':'GRIZ';};
   const imgUrl=s=>String(s||'').trim()||'hero.jpg';
-  const imageProxy=(url,provider)=>{const u=String(url||'').trim();if(!u||!/^https?:\/\//i.test(u))return u;const base=provider===2?'https://wsrv.nl/?url=':'https://images.weserv.nl/?url=';return `${base}${encodeURIComponent(u)}&w=1400&output=jpg`;};
-  window.grizHQImageFallback=(img)=>{
-    if(!img)return;
-    const original=img.dataset.originalSrc||'';
-    const stage=Number(img.dataset.imageStage||0);
-    if(original && stage===0){img.dataset.imageStage='1';img.src=imageProxy(original,1);return;}
-    if(original && stage===1){img.dataset.imageStage='2';img.src=imageProxy(original,2);return;}
-    img.onerror=null;
-    img.src='hero.jpg';
-  };
-  const setImg=(img,url,alt)=>{if(!img)return;const original=imgUrl(url);img.dataset.originalSrc=original;img.alt=alt||'Montana Grizzlies football news';img.onerror=()=>window.grizHQImageFallback(img);img.src=original;};
+  const setImg=(img,url,alt)=>{if(!img)return;img.src=imgUrl(url);img.alt=alt||'Montana Grizzlies football news';img.onerror=()=>{img.onerror=null;img.src='hero.jpg';};};
   const isVideo=item=>Boolean(item&&item.is_video);
   const videoThumb=item=>imgUrl(item&&item.video_thumbnail)||imgUrl(item&&item.image);
   const videoHref=item=>String(item&&item.video_url||item&&item.url||'#');
-  const videoCard=item=>`<a class="ghq-video-card" href="${esc(videoHref(item))}" target="_blank" rel="noopener"><div class="ghq-video-art"><img src="${esc(videoThumb(item))}" data-original-src="${esc(videoThumb(item))}" alt="${esc(item.title||'Montana Grizzlies football video')}" loading="lazy" onerror="window.grizHQImageFallback(this)"><span class="ghq-play" aria-hidden="true">▶</span><b>${esc(sourceLabel(item.source))}</b><em>VIDEO</em></div><div class="ghq-video-copy"><div class="ghq-news-meta">VIDEO • ${esc(sourceLabel(item.source))}</div><h3>${esc(item.title||'Montana Grizzlies video')}</h3><small>${esc(item.date||'')}</small></div></a>`;
+  const videoCard=item=>`<a class="ghq-video-card" href="${esc(videoHref(item))}" target="_blank" rel="noopener"><div class="ghq-video-art"><img src="${esc(videoThumb(item))}" alt="${esc(item.title||'Montana Grizzlies football video')}" loading="lazy" onerror="this.onerror=null;this.src='hero.jpg'"><span class="ghq-play" aria-hidden="true">▶</span><b>${esc(sourceLabel(item.source))}</b><em>VIDEO</em></div><div class="ghq-video-copy"><div class="ghq-news-meta">VIDEO • ${esc(sourceLabel(item.source))}</div><h3>${esc(item.title||'Montana Grizzlies video')}</h3><small>${esc(item.date||'')}</small></div></a>`;
   const renderVideos=()=>{
     const videos=stories.filter(isVideo).slice(0,6);
     const home=document.getElementById('home-video-grid');
@@ -461,7 +444,7 @@
     const smalls=[...document.querySelectorAll('.ghq-news-feature-small')];
     filtered.slice(1,3).forEach((item,i)=>{const a=smalls[i];if(!a)return;a.href=item.url||'#';a.target='_blank';a.rel='noopener';a.querySelector('.ghq-small-art span').textContent=shortType(item.badge);setImg(a.querySelector('.ghq-small-art img'),item.image,item.title);a.querySelector('span').textContent=cleanType(item.badge);a.querySelector('h3').textContent=item.title||'';a.querySelector('small').textContent=`${item.date||''} • ${sourceLabel(item.source)}`;});
     const grid=document.getElementById('ghq-news-grid');
-    if(grid){grid.innerHTML=filtered.slice(3,15).map(item=>`<a class="ghq-news-tile" href="${esc(item.url||'#')}" target="_blank" rel="noopener"><div class="ghq-tile-art"><img src="${esc(item.image||'hero.jpg')}" data-original-src="${esc(item.image||'hero.jpg')}" alt="${esc(item.title||'Montana Grizzlies football news')}" loading="lazy" onerror="window.grizHQImageFallback(this)"><span>${esc(shortType(item.badge))}</span><b>${esc(sourceLabel(item.source))}</b>${isVideo(item)?'<i class="ghq-tile-play">▶</i>':''}</div><div class="ghq-tile-copy"><div class="ghq-news-meta">${esc(cleanType(item.badge))} • ${esc(sourceLabel(item.source))}${isVideo(item)?' • VIDEO':''}</div><h3>${esc(item.title||'')}</h3><p>${esc(item.description||'Latest Montana football coverage.')}</p><small>${esc(item.date||'')}</small></div></a>`).join('')||'<div class="ghq-news-empty">No stories in this category yet. Check back soon.</div>';}
+    if(grid){grid.innerHTML=filtered.slice(3,15).map(item=>`<a class="ghq-news-tile" href="${esc(item.url||'#')}" target="_blank" rel="noopener"><div class="ghq-tile-art"><img src="${esc(item.image||'hero.jpg')}" alt="${esc(item.title||'Montana Grizzlies football news')}" loading="lazy" onerror="this.onerror=null;this.src='hero.jpg'"><span>${esc(shortType(item.badge))}</span><b>${esc(sourceLabel(item.source))}</b>${isVideo(item)?'<i class="ghq-tile-play">▶</i>':''}</div><div class="ghq-tile-copy"><div class="ghq-news-meta">${esc(cleanType(item.badge))} • ${esc(sourceLabel(item.source))}${isVideo(item)?' • VIDEO':''}</div><h3>${esc(item.title||'')}</h3><p>${esc(item.description||'Latest Montana football coverage.')}</p><small>${esc(item.date||'')}</small></div></a>`).join('')||'<div class="ghq-news-empty">No stories in this category yet. Check back soon.</div>';}
     const label=document.getElementById('ghq-filter-label'); if(label) label.textContent=filter==='ALL'?'ALL STORIES':filter+'S';
     renderVideos();
   };
