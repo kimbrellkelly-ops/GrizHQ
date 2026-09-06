@@ -1,23 +1,31 @@
 {
-  "updated": "2026-09-06T17:30:16.589815+00:00",
+  "updated": "2026-09-06T17:35:44.910551+00:00",
   "source": "Automated Griz HQ news hub",
   "stories": [
     {
-      "title": "‘NOT ON MY WATCH’ – Sawyer evolves into stalwart veteran leader for Griz",
-      "url": "https://skylinesportsmt.com/not-on-my-watch-sawyer-evolves-into-stalwart-veteran-leader-for-griz/",
-      "date": "Sep. 6, 2026",
-      "published_at": "2026-09-06T17:30:16.587171+00:00",
-      "description": "‘NOT ON MY WATCH’ – Sawyer evolves into stalwart veteran leader for Griz March 9, 2026",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ"
+      "title": "Grizzly Insider returns in 2026",
+      "url": "https://gogriz.com/news/2026/8/26/football-grizzly-insider-returns-in-2026",
+      "date": "Aug. 26, 2026",
+      "description": "The weekly Grizzly Insider returns with football breakdowns, interviews and stories from around Grizzly Athletics.",
+      "badge": "INSIDER",
+      "short": "INS"
     },
     {
-      "title": "Lady Griz head coach Holsinger put on administrative leave",
-      "url": "https://skylinesportsmt.com/breaking-lady-griz-head-coach-holsinger-put-on-administrative-leavel/",
+      "title": "AKEM’S ANALYSIS: RUCKER OUT FOR NORTH DAKOTA, GRIZ PICK 26 CAPTAINS, MCQUAIDE NOT ELIGIBLE (AGAIN)",
+      "url": "https://skylinesportsmt.com/akems-analysis-rucker-out-for-north-dakota-griz-pick-26-captains-mcquaide-not-eligible-again/",
       "date": "Sep. 6, 2026",
-      "published_at": "2026-09-06T17:30:16.511742+00:00",
-      "description": "Lady Griz head coach Holsinger put on administrative leave",
+      "published_at": "2026-09-06T17:30:16.511265+00:00",
+      "description": "AKEM’S ANALYSIS: RUCKER OUT FOR NORTH DAKOTA, GRIZ PICK 26 CAPTAINS, MCQUAIDE NOT ELIGIBLE (AGAIN)",
+      "source": "Skyline Sports",
+      "badge": "ANALYSIS",
+      "short": "ANAL"
+    },
+    {
+      "title": "Sanders hired as new Montana DC; Johnson hired as new DL coach for Griz",
+      "url": "https://skylinesportsmt.com/sanders-hired-as-new-montana-dc-johnson-hired-as-new-dl-coach-for-griz/",
+      "date": "Sep. 6, 2026",
+      "published_at": "2026-09-06T17:30:16.511524+00:00",
+      "description": "Sanders hired as new Montana DC; Johnson hired as new DL coach for Griz",
       "source": "Skyline Sports",
       "badge": "GRIZ NEWS",
       "short": "GRIZ"
@@ -33,32 +41,24 @@
       "short": "GRIZ"
     },
     {
-      "title": "Sanders hired as new Montana DC; Johnson hired as new DL coach for Griz",
-      "url": "https://skylinesportsmt.com/sanders-hired-as-new-montana-dc-johnson-hired-as-new-dl-coach-for-griz/",
+      "title": "Lady Griz head coach Holsinger put on administrative leave",
+      "url": "https://skylinesportsmt.com/breaking-lady-griz-head-coach-holsinger-put-on-administrative-leavel/",
       "date": "Sep. 6, 2026",
-      "published_at": "2026-09-06T17:30:16.511524+00:00",
-      "description": "Sanders hired as new Montana DC; Johnson hired as new DL coach for Griz",
+      "published_at": "2026-09-06T17:30:16.511742+00:00",
+      "description": "Lady Griz head coach Holsinger put on administrative leave",
       "source": "Skyline Sports",
       "badge": "GRIZ NEWS",
       "short": "GRIZ"
     },
     {
-      "title": "AKEM’S ANALYSIS: RUCKER OUT FOR NORTH DAKOTA, GRIZ PICK 26 CAPTAINS, MCQUAIDE NOT ELIGIBLE (AGAIN)",
-      "url": "https://skylinesportsmt.com/akems-analysis-rucker-out-for-north-dakota-griz-pick-26-captains-mcquaide-not-eligible-again/",
+      "title": "‘NOT ON MY WATCH’ – Sawyer evolves into stalwart veteran leader for Griz",
+      "url": "https://skylinesportsmt.com/not-on-my-watch-sawyer-evolves-into-stalwart-veteran-leader-for-griz/",
       "date": "Sep. 6, 2026",
-      "published_at": "2026-09-06T17:30:16.511265+00:00",
-      "description": "AKEM’S ANALYSIS: RUCKER OUT FOR NORTH DAKOTA, GRIZ PICK 26 CAPTAINS, MCQUAIDE NOT ELIGIBLE (AGAIN)",
+      "published_at": "2026-09-06T17:30:16.587171+00:00",
+      "description": "‘NOT ON MY WATCH’ – Sawyer evolves into stalwart veteran leader for Griz March 9, 2026",
       "source": "Skyline Sports",
-      "badge": "ANALYSIS",
-      "short": "ANAL"
-    },
-    {
-      "title": "Grizzly Insider returns in 2026",
-      "url": "https://gogriz.com/news/2026/8/26/football-grizzly-insider-returns-in-2026",
-      "date": "Aug. 26, 2026",
-      "description": "The weekly Grizzly Insider returns with football breakdowns, interviews and stories from around Grizzly Athletics.",
-      "badge": "INSIDER",
-      "short": "INS"
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ"
     },
     {
       "title": "Griz outlast T-Birds in Kennedy’s debut",
@@ -172,6 +172,16 @@
       "short": "GRIZ"
     },
     {
+      "title": "Former Montana football player, coach Bruce Wallwork dies",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUTVHX1NZNmdSeGRRQ3lIcjBjNnJCUUhTbTNWYU9SRGRaeUdzUW1jSGs3dG9mc1FMdnA3eFBYekNDVFc2VzBvLURpS0NfblI2LTJzWmtmVjBHUDNfc0Vpb0c5WW9ZMUlPUUhNU2pDRTgzOTUyQU5jS2RZcEdBN2FORzg4QW41a25maHFSNWVLaXkwZEtQMUpMc05jX3c?oc=5",
+      "date": "Aug. 31, 2026",
+      "published_at": "2026-08-31T20:51:05+00:00",
+      "description": "Former Montana football player, coach Bruce Wallwork dies NBC Montana",
+      "source": "NBC Montana",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ"
+    },
+    {
       "title": "How to watch, stream and listen to the Montana Grizzlies’ football games in 2026",
       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPUm0wNGpWa2xmMjVrVS1mNjREeEYtTzI5eVZzeU9VanJOcURWTUlzX2hUVy05LWNlU2lTTDdMY19zenZ4bkQ4YzZGVFdTenBMUmdCNDRXNDY4VExETXJuVzN5RllDeGpDLXotQ0VidW5BWXVvODYyYzlxNVdFd29FN1o5UVkxSld6eE95eGprOG5FTXlBTUdqaXBHNTkzR2dMQk9ydDg0Q25tNFRYMGhXZVlONnk1OW9RN1RZakRKMHVIVXFLcVdwY1N6dFhVUQ?oc=5",
       "date": "Aug. 29, 2026",
@@ -217,16 +227,6 @@
       "date": "Aug. 26, 2026",
       "published_at": "2026-08-26T15:22:00+00:00",
       "description": "MISSOULA - The Montana Grizzly Coaches Radio Show returns to The Den each Wednesday at 7 p.m. in 2026, giving fans an exclusive inside look at Griz football with first year head coach Bobby Kennedy paired with unbeatable",
-      "source": "GoGriz",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ"
-    },
-    {
-      "title": "Kennedy era opens as Griz host T-Birds",
-      "url": "https://gogriz.com/news/2026/8/25/football-kennedy-era-opens-as-griz-host-t-birds",
-      "date": "Aug. 25, 2026",
-      "published_at": "2026-08-25T23:49:00+00:00",
-      "description": "The dawn of a new era rises over Washington-Grizzly Stadium on Saturday as Bobby Kennedy leads Montana onto the field for the first time as UM's 38th head football coach.",
       "source": "GoGriz",
       "badge": "GRIZ NEWS",
       "short": "GRIZ"
