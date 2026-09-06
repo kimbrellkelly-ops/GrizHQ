@@ -321,6 +321,18 @@ async function renderFCSScoreboard(){
   if(rankDate&&localData.fcs_rankings_date) rankDate.textContent='Stats Perform • '+localData.fcs_rankings_date;
 
   function norm(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');}
+  function teamKeys(s){
+    const raw=String(s||'').toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ').trim();
+    const tokens=raw?raw.split(/\s+/):[];
+    const expand={
+      'st':'state','st.':'state','n':'north','n.':'north','s':'south','s.':'south',
+      'e':'eastern','e.':'eastern','w':'west','w.':'west',
+      'no':'north','n.':'north'
+    };
+    const expanded=tokens.map(t=>expand[t]||t);
+    const keys=new Set([norm(s),norm(tokens.join(' ')),norm(expanded.join(' '))]);
+    return [...keys].filter(Boolean);
+  }
   const teamAliases={
     'montana':['montana','montanagrizzlies'],
     'montanastate':['montanastate','montanast','montanastatebobcats'],
@@ -329,7 +341,7 @@ async function renderFCSScoreboard(){
     'easternwashington':['easternwashington','ewashington','easternwash','easternwashingtoneagles'],
     'northernarizona':['northernarizona','narizona','northernaz','northernarizonalumberjacks'],
     'northerncolorado':['northerncolorado','ncolorado','northerncoloradobears'],
-    'idahostate':['idahostate','idst','idahostatebengals'],
+    'idahostate':['idahostate','idahost','idst','idahostatebengals'],
     'calpoly':['calpoly','calpolytechnic','calpolymustangs'],
     'southernutah':['southernutah','southeasternutah','soutah','soututah','southernutahthunderbirds'],
     'utahtech':['utahtech','utahtechuniversity','utahtechtrailblazers'],
@@ -337,10 +349,11 @@ async function renderFCSScoreboard(){
     'portlandstate':['portlandstate','portlandst','portlandstatevikings']
   };
   function teamMatches(name,team){
-    const n=norm(name), t=norm(team);
-    if(n===t) return true;
+    const nameKeys=teamKeys(name), teamKeysList=teamKeys(team);
+    if(nameKeys.some(k=>teamKeysList.includes(k))) return true;
     for(const variants of Object.values(teamAliases)){
-      if(variants.includes(n) && variants.includes(t)) return true;
+      const v=variants.map(norm);
+      if(nameKeys.some(k=>v.includes(k)) && teamKeysList.some(k=>v.includes(k))) return true;
     }
     return false;
   }
@@ -387,8 +400,8 @@ async function renderFCSScoreboard(){
 
     topEl.innerHTML=top25.slice(0,25).map(t=>{
       const ev=findTeamEvent(t.team,events);
-      const isGriz=norm(t.team)==='montana';
-      const isBigSky=bigSkyTeams.includes(t.team);
+      const isGriz=teamMatches('Montana',t.team);
+      const isBigSky=bigSkyTeams.some(x=>teamMatches(x,t.team));
       const detail=ev?gameLabel(ev):null;
       const matchup=detail?`${escapeHtml(detail.away)} @ ${escapeHtml(detail.home)}`:'No game this week';
       const cardClass=isGriz?'griz':(isBigSky?'bigsky':'');
