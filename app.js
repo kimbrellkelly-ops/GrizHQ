@@ -113,22 +113,15 @@ async function loadGrizData() {
     console.warn("Griz HQ data layer unavailable; using page fallback.", e);
   }
 }
-function isMontanaGrizzlies(team) {
-  const s = String(team || "").toLowerCase().trim();
-  if (!s.includes("montana")) return false;
-  if (/\bmontana\s+(?:state|st\.?)(?:\b|\.)/i.test(s)) return false;
-  if (s.includes("bobcats")) return false;
-  return true;
-}
 function renderPoll(id, teams) {
   const el = document.getElementById(id);
   if (!el || !Array.isArray(teams)) return;
-  el.innerHTML = teams.slice(0,20).map(t => `<li class="${isMontanaGrizzlies(t) ? "griz" : ""}">${escapeHtml(t)}</li>`).join("");
+  el.innerHTML = teams.slice(0,20).map(t => `<li class="${String(t).toLowerCase().includes("montana") && !String(t).toLowerCase().includes("state") ? "griz" : ""}">${escapeHtml(t)}</li>`).join("");
 }
 function renderMiniPolls(coaches, media) {
   const wrap = document.getElementById("rankings-mini");
   if (!wrap || !Array.isArray(coaches) || !Array.isArray(media)) return;
-  wrap.innerHTML = [coaches, media].map(poll => `<ol>${poll.slice(0,10).map(t => `<li class="${isMontanaGrizzlies(t) ? "griz" : ""}">${escapeHtml(t)}</li>`).join("")}</ol>`).join("");
+  wrap.innerHTML = [coaches, media].map(poll => `<ol>${poll.slice(0,10).map(t => `<li class="${String(t).toLowerCase().includes("montana") && !String(t).toLowerCase().includes("state") ? "griz" : ""}">${escapeHtml(t)}</li>`).join("")}</ol>`).join("");
 }
 function escapeHtml(s) { return String(s ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c])); }
 
@@ -279,6 +272,25 @@ async function renderBigSkyAndOpponent(){
       gameCenterMeta.textContent = [nextDate, nextTime, nextVenue].filter(Boolean).join(" • ");
     }
 
+    const nextLogo = document.getElementById("next-opponent-logo");
+    const nextLogos = {
+      "Utah Tech": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png",
+      "Oregon State": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
+      "UC Davis": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png",
+      "Northern Colorado": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png",
+      "Northern Arizona": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png",
+      "Idaho": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
+      "Eastern Washington": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png",
+      "Portland State": "https://a.espncdn.com/i/teamlogos/ncaa/500/2502.png",
+      "Idaho State": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
+      "Montana State": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
+    };
+    if (nextLogo && nextLogos[opponent]) { nextLogo.src = nextLogos[opponent]; nextLogo.alt = `${opponent} logo`; }
+    const nextDateEl=document.getElementById("next-game-date"), nextTimeEl=document.getElementById("next-game-time"), nextVenueEl=document.getElementById("next-game-venue");
+    if(nextDateEl && d.next_game?.date) nextDateEl.textContent=String(d.next_game.date).toUpperCase();
+    if(nextTimeEl && d.next_game?.time) nextTimeEl.textContent=String(d.next_game.time).toUpperCase();
+    if(nextVenueEl && d.next_game?.venue) nextVenueEl.textContent=String(d.next_game.venue).split(",")[0].toUpperCase();
+
     const resources = d.opponent_resources?.[opponent];
     if (resources) {
       const hub = document.getElementById("opponent-hub-name");
@@ -287,28 +299,8 @@ async function renderBigSkyAndOpponent(){
       const forum = document.getElementById("opp-forum");
       const forumLabel = document.getElementById("opp-forum-label");
       const media = document.getElementById("opp-media");
-      const oppLogo = document.getElementById("opp-logo");
-      const oppDate = document.getElementById("opp-date");
-      const oppVenue = document.getElementById("opp-venue");
-      const opponentLogos = {
-        "Southern Utah": "https://a.espncdn.com/i/teamlogos/ncaa/500/253.png",
-        "Drake": "https://a.espncdn.com/i/teamlogos/ncaa/500/2181.png",
-        "Utah Tech": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png",
-        "Oregon State": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
-        "UC Davis": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png",
-        "Northern Colorado": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png",
-        "Northern Arizona": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png",
-        "Idaho": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
-        "Eastern Washington": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png",
-        "Portland State": "https://a.espncdn.com/i/teamlogos/ncaa/500/279.png",
-        "Idaho State": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
-        "Montana State": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
-      };
       if (hub) hub.textContent = opponent;
       if (title) title.textContent = opponent.toUpperCase();
-      if (oppLogo && opponentLogos[opponent]) { oppLogo.src = opponentLogos[opponent]; oppLogo.alt = `${opponent} logo`; }
-      if (oppDate) oppDate.textContent = [d.next_game?.date, d.next_game?.time].filter(Boolean).join(" • ").toUpperCase();
-      if (oppVenue) oppVenue.textContent = String(d.next_game?.venue || "Washington-Grizzly Stadium").split(",")[0].toUpperCase();
       if (official) official.href = resources.official;
       if (forum) forum.href = resources.forum;
       if (forumLabel) forumLabel.textContent = resources.label || "Fan discussion";
@@ -482,10 +474,11 @@ async function renderFCSScoreboard(){
 
     topEl.innerHTML=top25.slice(0,25).map(t=>{
       const ev=findTeamEvent(t.team,events);
-      const isGriz=isMontanaGrizzlies(t.team);
+      const isGriz=teamMatches('Montana',t.team);
+      const isBigSky=bigSkyTeams.some(x=>teamMatches(x,t.team));
       const detail=ev?gameLabel(ev):null;
       const matchup=detail?`${escapeHtml(detail.away)} @ ${escapeHtml(detail.home)}`:'No game this week';
-      const cardClass=isGriz?'griz':'';
+      const cardClass=isGriz?'griz':(isBigSky?'bigsky':'');
       return `<div class="fcs-rank-card ${cardClass}"><span class="fcs-rank">${escapeHtml(t.rank)}</span><div class="fcs-rank-team"><b>${escapeHtml(t.team)}</b><small>${escapeHtml(t.record||'')} • ${matchup}</small></div><span class="fcs-rank-score">${scoreLine(ev,t.team)}</span></div>`;
     }).join('');
 
