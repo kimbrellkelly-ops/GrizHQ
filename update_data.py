@@ -208,7 +208,8 @@ def fetch_latest_press_conference():
                 title=html.unescape(next(x for x in title_m.groups() if x is not None)).strip()
                 url=html.unescape(link_m.group(1)).strip()
                 low=title.lower()
-                if 'press conference' in low and ('montana' in low or 'griz' in low):
+                if ('press conference' in low and ('griz' in low or 'montana grizzlies' in low)
+                        and 'montana state' not in low and 'bobcats' not in low):
                     article=urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"}),timeout=15).read().decode('utf-8','ignore')
                     y=re.search(r'(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=)|youtu\.be/)([A-Za-z0-9_-]{11})',article)
                     date_m=re.search(r'<pubDate>(.*?)</pubDate>',item,re.S|re.I)
