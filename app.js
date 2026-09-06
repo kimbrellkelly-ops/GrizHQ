@@ -281,26 +281,28 @@ async function renderFCSScoreboard(){
   if(rankDate&&localData.fcs_rankings_date) rankDate.textContent='Stats Perform • '+localData.fcs_rankings_date;
 
   function norm(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');}
-  const aliases={
-    'montanastate':['montanastate','montanast'],
-    'easternwashington':['easternwashington','ewashington','easternwash'],
-    'northernarizona':['northernarizona','narizona','northernaz'],
-    'northerncolorado':['northerncolorado','ncolorado'],
-    'idahostate':['idahostate','idst'],
-    'portlandstate':['portlandstate','portlandst'],
-    'southernutah':['southernutah','southeasternutah','soutah','soututah'],
-    'utahtech':['utahtech','utahtechuniversity'],
+  const teamAliases={
+    'montana':['montana','montanagrizzlies'],
+    'montanastate':['montanastate','montanast','montanastatebobcats'],
+    'idaho':['idaho','idahovandals'],
+    'weberstate':['weberstate','weberst','weberstatewildcats'],
+    'easternwashington':['easternwashington','ewashington','easternwash','easternwashingtoneagles'],
+    'northernarizona':['northernarizona','narizona','northernaz','northernarizonalumberjacks'],
+    'northerncolorado':['northerncolorado','ncolorado','northerncoloradobears'],
+    'idahostate':['idahostate','idst','idahostatebengals'],
+    'calpoly':['calpoly','calpolytechnic','calpolymustangs'],
+    'southernutah':['southernutah','southeasternutah','soutah','soututah','southernutahthunderbirds'],
+    'utahtech':['utahtech','utahtechuniversity','utahtechtrailblazers'],
     'ucdavis':['ucdavis','ucdavisaggies'],
-    'calpoly':['calpoly','calpolytechnic'],
-    'weberstate':['weberstate','weberst'],
-    'montana':['montana'],
-    'idaho':['idaho']
+    'portlandstate':['portlandstate','portlandst','portlandstatevikings']
   };
   function teamMatches(name,team){
-    const n=norm(name),tn=norm(team);
-    if(n===tn)return true;
-    const a=aliases[n]||[n];
-    return a.includes(tn);
+    const n=norm(name), t=norm(team);
+    if(n===t) return true;
+    for(const variants of Object.values(teamAliases)){
+      if(variants.includes(n) && variants.includes(t)) return true;
+    }
+    return false;
   }
   function findTeamEvent(name,events){
     return events.find(ev=>(ev.teams||[]).some(t=>teamMatches(name,t.name)||teamMatches(name,t.short)))||null;
