@@ -104,7 +104,7 @@
         <div>
           <div class="eyebrow light">GRIZ SOCIAL</div>
           <h2>WHAT GRIZ NATION IS WATCHING</h2>
-          <p>Verified Griz video, clips and social highlights — refreshed automatically.</p>
+          <p>Actual Griz social posts and videos from verified accounts — refreshed automatically.</p>
         </div>
         <div class="ghq-social-links">
           <a href="https://x.com/MontanaGrizFB" target="_blank" rel="noopener">X ↗</a>
@@ -112,19 +112,6 @@
         </div>
       </div>
       <div class="ghq-social-grid" id="ghq-social-grid"><div class="ghq-social-empty">Loading Griz social…</div></div>
-    </div>
-  </section>
-
-  <!-- HOMEPAGE VIDEO RAIL: derived from video-enabled news stories -->
-  <section class="ghq-video-section tab-panel" data-tab="home" id="home-video">
-    <div class="ghq-video-shell">
-      <div class="ghq-video-head">
-        <div><div class="eyebrow light">GRIZ TV • VIDEO</div><h2>WATCH THE LATEST</h2><p>Press conferences, interviews, analysis and Montana football video — with fresh thumbnails pulled automatically.</p></div>
-        <a href="#news" class="ghq-video-link">MORE GRIZ VIDEO →</a>
-      </div>
-      <div class="ghq-video-grid" id="home-video-grid">
-        <div class="ghq-video-empty">Loading the latest Griz video…</div>
-      </div>
     </div>
   </section>
 
@@ -392,12 +379,15 @@
   const grid=document.getElementById('ghq-social-grid');
   if(!grid)return;
   const render=items=>{
-    const valid=(Array.isArray(items)?items:[]).filter(x=>x && x.title && x.url).slice(0,6);
+    const valid=(Array.isArray(items)?items:[]).filter(x=>x && x.title && x.url).slice(0,8);
     grid.innerHTML=valid.length?valid.map(item=>{
-      const img=String(item.image||'hero.jpg');
+      const img=String(item.image||'').trim();
       const type=String(item.type||'SOCIAL').toUpperCase();
-      return `<a class="ghq-social-card" href="${esc(item.url)}" target="_blank" rel="noopener"><div class="ghq-social-art"><img src="${esc(img)}" alt="${esc(item.title)}" loading="lazy" onerror="this.onerror=null;this.src='hero.jpg'"><span class="ghq-social-badge">${esc(type)}</span>${item.video?'<i class="ghq-social-play">▶</i>':''}</div><div class="ghq-social-copy"><small>${esc(item.source||'GRIZ SOCIAL')}</small><h3>${esc(item.title)}</h3><p>${esc(item.description||'Montana Grizzlies social content.')}</p><span>${esc(item.date||'')} ↗</span></div></a>`;
-    }).join(''):'<div class="ghq-social-empty">No social posts are available right now.</div>';
+      const art=img
+        ? `<img src="${esc(img)}" alt="${esc(item.title)}" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('no-image')">`
+        : `<div class="ghq-social-noimage"><b>${esc(type==='YOUTUBE'?'▶':'𝕏')}</b></div>`;
+      return `<a class="ghq-social-card" href="${esc(item.url)}" target="_blank" rel="noopener"><div class="ghq-social-art">${art}<span class="ghq-social-badge">${esc(type)}</span>${item.video?'<i class="ghq-social-play">▶</i>':''}</div><div class="ghq-social-copy"><small>${esc(item.source||'GRIZ SOCIAL')}</small><h3>${esc(item.title)}</h3><p>${esc(item.description||'Montana Grizzlies social post.')}</p><span>${esc(item.date||'Recent')} ↗</span></div></a>`;
+    }).join(''):'<div class="ghq-social-empty">No verified Griz social posts are available right now.</div>';
   };
   fetch('social.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>render(d.posts)).catch(()=>render([]));
 })();

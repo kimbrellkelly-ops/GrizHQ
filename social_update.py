@@ -7,81 +7,161 @@ from bs4 import BeautifulSoup
 UA='Mozilla/5.0 (compatible; GrizHQ/1.0; +https://grizhq.com/)'
 HEADERS={'User-Agent':UA,'Accept-Language':'en-US,en;q=0.9'}
 BAD=re.compile(r'\b(montana state|montana st\.?|bobcats|bozeman)\b',re.I)
+YT_RE=re.compile(r'(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=|shorts/)|youtu\.be/)([A-Za-z0-9_-]{11})',re.I)
 
-# Verified Griz-focused pages. These are deliberately curated so the cards never
-# point to dead/placeholder YouTube URLs. Images are pulled from each page's
-# actual og:image/twitter/schema image when available.
-SOURCES=[
- ('Skyline Sports','WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker','https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/'),
- ('Skyline Sports','Gillman breaks record as Griz overcome penalties to cruise past Drake for second straight win','https://skylinesportsmt.com/gillman-breaks-record-as-griz-overcome-penalties-to-cruise-past-drake-for-second-straight-win/'),
- ('Skyline Sports','Talkin’ Schmidt – Andrew give top 3 Griz players from season-opening + best/worst of BK debut','https://skylinesportsmt.com/talkin-schmidt-andrew-give-top-3-griz-players-from-season-opening-best-worst-of-bk-debut/'),
- ('Skyline Sports','Nuanez brothers on Big Sky opening weekend, Montana escaping against Southern Utah','https://skylinesportsmt.com/nuanez-brothers-on-big-sky-opening-weekend-montana-escaping-against-southern-utah/'),
- ('GoGriz','Gillman sets records as Griz roll past Bulldogs 45-10','https://gogriz.com/news/2026/9/5/football-gillman-sets-records-as-griz-roll-past-bulldogs-45-10'),
- ('Daily Inter Lake','Give Gillman the crown: Griz ride RBs 4 touchdowns to win over Drake','https://dailyinterlake.com/news/2026/sep/06/give-gillman-the-crown-griz-ride-rbs-4-touchdowns-to-win-pver-drake/'),
-]
+# Real social sources only. No Griz HQ news/article URLs are used here.
+X_PROFILE='https://x.com/MontanaGrizFB'
+X_MIRROR='https://twstalker.com/MontanaGrizFB'
+SKYLINE_YOUTUBE='https://skylinesportsmt.com/skyline-sports-youtube/'
+SKYLINE_PROFILE='https://www.youtube.com/@skylinesports'
+
 
 def clean(s):
- return re.sub(r'\s+',' ',BeautifulSoup(s or '','html.parser').get_text(' ',strip=True)).strip()
+    return re.sub(r'\s+',' ',BeautifulSoup(s or '','html.parser').get_text(' ',strip=True)).strip()
+
 
 def parse_date(value):
- if not value: return ''
- value=value.strip()
- try:
-  return parsedate_to_datetime(value).astimezone(timezone.utc).strftime('%B %-d, %Y')
- except Exception: pass
- for fmt in ('%Y-%m-%dT%H:%M:%S%z','%Y-%m-%dT%H:%M:%S.%f%z','%Y-%m-%d','%B %d, %Y'):
-  try: return datetime.strptime(value,fmt).strftime('%B %-d, %Y')
-  except Exception: pass
- return ''
+    if not value: return ''
+    value=value.strip()
+    try:
+        return parsedate_to_datetime(value).astimezone(timezone.utc).strftime('%b %-d, %Y')
+    except Exception: pass
+    for fmt in ('%Y-%m-%dT%H:%M:%S%z','%Y-%m-%dT%H:%M:%S.%f%z','%Y-%m-%d','%B %d, %Y'):
+        try: return datetime.strptime(value,fmt).strftime('%b %-d, %Y')
+        except Exception: pass
+    return ''
 
-def meta(soup,*names):
- for name in names:
-  tag=soup.find('meta',attrs={'property':name}) or soup.find('meta',attrs={'name':name})
-  if tag and tag.get('content'): return tag['content'].strip()
- return ''
 
-def fetch(item):
- source,title,url=item
- try:
-  r=requests.get(url,headers=HEADERS,timeout=20)
-  r.raise_for_status()
-  soup=BeautifulSoup(r.text,'html.parser')
-  real_title=meta(soup,'og:title','twitter:title') or (soup.title.get_text(' ',strip=True) if soup.title else title)
-  image=meta(soup,'og:image','twitter:image','twitter:image:src')
-  if not image:
-   for img in soup.select('article img, main img, img'):
-    candidate=img.get('src') or img.get('data-src') or img.get('data-lazy-src')
-    if candidate and candidate.startswith(('http://','https://')):
-     image=candidate; break
-  date=meta(soup,'article:published_time','datePublished','date')
-  if not date:
-   t=soup.find('time')
-   date=t.get('datetime','') if t else ''
-  date=parse_date(date)
-  text=clean(soup.get_text(' ',strip=True))[:4000]
-  video=bool(soup.select_one('iframe[src*="youtube"], iframe[src*="youtu.be"], video')) or bool(re.search(r'\b(video|watch|press conference|podcast)\b', real_title, re.I))
-  if BAD.search(real_title) or BAD.search(text[:1500]): return None
-  return {'title':clean(real_title).replace(' – Skyline Sports','').strip() or title,
-          'url':url,'image':image or 'hero.jpg','source':source,
-          'type':'VIDEO' if video else 'SOCIAL','video':video,
-          'description':('Griz video and media content from a verified Montana football source.' if video else 'Montana football social and media highlight from a verified source.'),
-          'date':date or 'Recent'}
- except Exception as e:
-  print(f'Warning: {url}: {e}')
-  return None
+def image_from_node(node):
+    for img in node.find_all('img') if node else []:
+        for key in ('src','data-src','data-original','data-lazy-src'):
+            v=img.get(key)
+            if v and v.startswith(('http://','https://')):
+                if 'avatar' not in v.lower() and 'logo' not in v.lower(): return v
+    return ''
+
+
+def extract_youtube_id(url):
+    m=YT_RE.search(url or '')
+    return m.group(1) if m else ''
+
+
+def youtube_thumb(vid):
+    return f'https://i.ytimg.com/vi/{vid}/hqdefault.jpg' if vid else ''
+
+
+def parse_x_posts():
+    """Read the current public X mirror for the official @MontanaGrizFB account.
+    This gives us actual social-post text instead of converting news articles into cards.
+    """
+    try:
+        r=requests.get(X_MIRROR,headers=HEADERS,timeout=20)
+        r.raise_for_status()
+        soup=BeautifulSoup(r.text,'html.parser')
+    except Exception as e:
+        print('X mirror warning:',e)
+        return []
+
+    posts=[]
+    seen=set()
+    # TwStalker has changed markup over time, so use several broad selectors.
+    nodes=soup.select('[class*="tweet"], [class*="status"], article')
+    if not nodes:
+        nodes=soup.find_all('div')
+    for node in nodes:
+        text=clean(node.get_text(' ',strip=True))
+        if len(text)<25 or len(text)>700: continue
+        if 'Montana Griz Football' not in text and '@MontanaGrizFB' not in text and '#GoGriz' not in text: continue
+        if BAD.search(text): continue
+        # Remove obvious profile/navigation text.
+        if text in seen: continue
+        seen.add(text)
+        img=image_from_node(node)
+        # Try to find a timestamp.
+        dt=''
+        t=node.find('time')
+        if t: dt=parse_date(t.get('datetime') or t.get_text(' ',strip=True))
+        posts.append({
+            'title': text[:180] + ('…' if len(text)>180 else ''),
+            'url': X_PROFILE,
+            'image': img,
+            'source':'@MontanaGrizFB • X',
+            'type':'X POST',
+            'video': bool(node.find('video')) or bool(node.select_one('[class*="video"]')),
+            'description': text,
+            'date': dt or 'Recent',
+            'platform':'x'
+        })
+        if len(posts)>=6: break
+    return posts
+
+
+def parse_skyline_youtube():
+    """Scrape Skyline's public YouTube listing and keep only Montana/Griz videos."""
+    try:
+        r=requests.get(SKYLINE_YOUTUBE,headers=HEADERS,timeout=20)
+        r.raise_for_status()
+        soup=BeautifulSoup(r.text,'html.parser')
+    except Exception as e:
+        print('Skyline YouTube warning:',e)
+        return []
+
+    out=[]; seen=set()
+    # Collect YouTube IDs from embeds/links and use surrounding card text for titles.
+    for tag in soup.find_all(['iframe','a','div','article']):
+        href=tag.get('src') or tag.get('href') or ''
+        vid=extract_youtube_id(href)
+        if not vid: continue
+        if vid in seen: continue
+        parent=tag
+        best=''
+        for _ in range(4):
+            if not parent: break
+            txt=clean(parent.get_text(' ',strip=True))
+            if 10 <= len(txt) <= 400:
+                best=txt
+            parent=parent.parent
+        if not best: best=tag.get('title') or tag.get('aria-label') or ''
+        if not best: continue
+        if BAD.search(best): continue
+        # Keep content that clearly references Montana/Griz or is on a Griz-focused item.
+        if not re.search(r'\b(griz|montana|gillman|bobby kennedy|grizzlies)\b',best,re.I): continue
+        out.append({
+            'title':best[:180],
+            'url':f'https://www.youtube.com/watch?v={vid}',
+            'image':youtube_thumb(vid),
+            'source':'Skyline Sports YouTube',
+            'type':'YOUTUBE',
+            'video':True,
+            'description':'Montana Griz video from the Skyline Sports YouTube channel.',
+            'date':'Recent',
+            'platform':'youtube',
+            'youtube_id':vid
+        })
+        seen.add(vid)
+        if len(out)>=6: break
+    return out
+
 
 def main():
- out=[]; seen=set()
- for item in SOURCES:
-  x=fetch(item)
-  if x and x['url'] not in seen:
-   seen.add(x['url']); out.append(x)
- payload={'updated':datetime.now(timezone.utc).isoformat(),'posts':out[:6],
-          'profiles':[
-            {'name':'Montana Griz Football on X','url':'https://x.com/MontanaGrizFB'},
-            {'name':'Montana Griz Football on Instagram','url':'https://www.instagram.com/montanagrizfootball/'}
-          ]}
- with open('social.json','w',encoding='utf-8') as f: json.dump(payload,f,indent=2,ensure_ascii=False)
- print(f'Wrote {len(out)} verified Griz social/video cards')
+    posts=parse_x_posts()
+    videos=parse_skyline_youtube()
+    # Prefer a mix: current official X posts first, then real YouTube videos.
+    combined=[]
+    for item in posts[:4] + videos[:4]:
+        if not any(x.get('url')==item.get('url') and x.get('title')==item.get('title') for x in combined):
+            combined.append(item)
+    payload={
+        'updated':datetime.now(timezone.utc).isoformat(),
+        'posts':combined[:8],
+        'profiles':[
+            {'name':'Montana Griz Football on X','url':X_PROFILE},
+            {'name':'Montana Griz Football on Instagram','url':'https://www.instagram.com/montanagrizfootball/'},
+            {'name':'Skyline Sports YouTube','url':SKYLINE_PROFILE}
+        ]
+    }
+    with open('social.json','w',encoding='utf-8') as f:
+        json.dump(payload,f,indent=2,ensure_ascii=False)
+    print(f'Wrote {len(combined)} actual social/video cards')
 
 if __name__=='__main__': main()
