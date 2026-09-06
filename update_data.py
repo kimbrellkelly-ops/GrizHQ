@@ -275,7 +275,7 @@ def parse_stats(old):
             team_tot["pass"] += 282; team_tot["opp_pass"] += 252
             team_tot["rush"] += 206; team_tot["opp_rush"] += 45
             team_tot["first"] += 26; team_tot["opp_first"] += 24
-            team_tot["plays"] += 0; team_tot["opp_plays"] += 0
+            team_tot["plays"] += 83; team_tot["opp_plays"] += 85
             team_tot["pen_yds"] += 138; team_tot["opp_pen_yds"] += 30
             team_tot["third_made"] += 4; team_tot["third_att"] += 10
             team_tot["opp_third_made"] += 6; team_tot["opp_third_att"] += 15
