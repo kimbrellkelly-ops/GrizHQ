@@ -364,7 +364,10 @@ async function renderFCSScoreboard(){
     'southernutah':['southernutah','southeasternutah','soutah','soututah','southernutahthunderbirds'],
     'utahtech':['utahtech','utahtechuniversity','utahtechtrailblazers'],
     'ucdavis':['ucdavis','ucdavisaggies'],
-    'portlandstate':['portlandstate','portlandst','portlandstatevikings']
+    'portlandstate':['portlandstate','portlandst','portlandstatevikings'],
+    'westerncarolina':['westerncarolina','westerncarolinacatamounts'],
+    'abilenechristian':['abilenechristian','abilenechrstn','abilenechristianwildcats','acu'],
+    'stephenfaustin':['stephenfaustin','sfaustin','sfaustinlumberjacks','sfa','sfjacks','sf']
   };
   function canonicalTeamKey(s){
     const keys=teamKeys(s);
@@ -373,6 +376,21 @@ async function renderFCSScoreboard(){
       if(keys.some(k=>v.includes(k))) return key;
     }
     return null;
+  }
+  function looseTeamMatch(a,b){
+    const ak=teamKeys(a), bk=teamKeys(b);
+    if(ak.some(k=>bk.includes(k))) return true;
+    const ca=canonicalTeamKey(a), cb=canonicalTeamKey(b);
+    if(ca && cb && ca===cb) return true;
+    // Handle common ESPN short forms for non-Big-Sky FCS teams.
+    const compact=x=>norm(x);
+    const special={
+      'abilenechrstn':'abilenechristian','acuwildcats':'abilenechristian',
+      'sfAustin':'stephenfaustin','sfaustin':'stephenfaustin','sfa':'stephenfaustin',
+      'westerncarolinacatamounts':'westerncarolina'
+    };
+    const aa=ak.map(k=>special[k]||k), bb=bk.map(k=>special[k]||k);
+    return aa.some(k=>bb.includes(k));
   }
   function teamMatches(name,team){
     if(!name || !team) return false;
@@ -384,8 +402,7 @@ async function renderFCSScoreboard(){
       const bk=canonicalTeamKey(b?.name||b?.short||b?.abbrev||'');
       return !!ak && ak===bk;
     }
-    const nameKeys=teamKeys(name), teamKeysList=teamKeys(team);
-    if(nameKeys.some(k=>teamKeysList.includes(k))) return true;
+    if(looseTeamMatch(name,team)) return true;
     const a=canonicalTeamKey(name), b=canonicalTeamKey(team);
     return !!a && a===b;
   }
