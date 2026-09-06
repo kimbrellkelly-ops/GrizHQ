@@ -1720,14 +1720,11 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   }
 }
 
-/* Big Sky scoreboard: make actual scores the visual focal point */
-.bigsky-row .prominent-score { min-width: 88px; text-align:center; }
-.bigsky-row .prominent-score .score-big { display:block; font-size:25px; line-height:1; font-weight:1000; letter-spacing:.3px; color:#73003b; }
-.bigsky-row.final .prominent-score .score-big { font-size:28px; }
-.bigsky-row.live .prominent-score .score-big { font-size:28px; }
-.bigsky-row .prominent-score small { display:block; margin-top:5px; font-size:9px; font-weight:900; letter-spacing:1px; color:#666; }
-.bigsky-row .fcs-matchup small { line-height:1.5; }
-@media(max-width:560px){
-  .bigsky-row .prominent-score .score-big { font-size:22px; }
-  .bigsky-row.final .prominent-score .score-big, .bigsky-row.live .prominent-score .score-big { font-size:24px; }
-}
+/* Big Sky scoreboard — make actual scores the visual focal point */
+.fcs-game .prominent-score { text-align:center; min-width:110px; }
+.fcs-game .score-big { display:block; font-size:28px !important; line-height:1; font-weight:900; letter-spacing:.01em; color:#111; }
+.fcs-game.live .score-big { color:#8b1236; }
+.fcs-game.final .score-big { font-size:30px !important; }
+.fcs-game .prominent-score small { display:block; margin-top:5px; font-size:9px; font-weight:900; letter-spacing:.08em; }
+@media(max-width:900px){.fcs-game .score-big{font-size:23px !important}.fcs-game.final .score-big{font-size:25px !important}}
+@media(max-width:560px){.fcs-game .prominent-score{min-width:82px}.fcs-game .score-big{font-size:21px !important}}

@@ -25,16 +25,31 @@ FCS_SCORE_WEEKS = [
     ("2026-11-19", "2026-11-22")
 ]
 
-FCS_SCORE_URL = "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard"
+FCS_SCORE_URLS = [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+]
 
 def fetch_fcs_scores():
     """Cache ESPN FCS scoreboard data in data.json so the browser never depends on ESPN CORS."""
     out = {}
     for start, end in FCS_SCORE_WEEKS:
         try:
-            r = requests.get(FCS_SCORE_URL, params={"dates": f"{start.replace('-', '')}-{end.replace('-', '')}", "groups": "81", "limit": 500}, headers=HEADERS, timeout=30)
-            r.raise_for_status()
-            payload = r.json()
+            payload = None
+            last_error = None
+            params = {"dates": f"{start.replace('-', '')}-{end.replace('-', '')}", "groups": "81", "limit": 500}
+            for endpoint in FCS_SCORE_URLS:
+                try:
+                    r = requests.get(endpoint, params=params, headers=HEADERS, timeout=20)
+                    r.raise_for_status()
+                    candidate = r.json()
+                    if isinstance(candidate, dict) and "events" in candidate:
+                        payload = candidate
+                        break
+                except Exception as exc:
+                    last_error = exc
+            if payload is None:
+                raise RuntimeError(f"all ESPN scoreboard endpoints failed: {last_error}")
             games = []
             for ev in payload.get("events", []):
                 comp = (ev.get("competitions") or [{}])[0]
