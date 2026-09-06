@@ -2173,3 +2173,21 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
     font-size: 27px !important;
   }
 }
+
+/* Match FCS Top 25 score size to the Big Sky scoreboard */
+.fcs-rank-score .score-big {
+  display: block !important;
+  font-size: 30px !important;
+  line-height: .95 !important;
+  font-weight: 900 !important;
+  white-space: nowrap !important;
+}
+@media (max-width: 560px) {
+  .fcs-rank-score .score-big {
+    font-size: 30px !important;
+  }
+  .fcs-rank-score {
+    min-width: 82px !important;
+    text-align: right !important;
+  }
+}
