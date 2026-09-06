@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T05:07:04.811271+00:00",
+  "updated": "2026-09-06T05:20:13.538892+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -5131,35 +5131,6 @@
         ]
       },
       {
-        "id": "401856773",
-        "date": "2026-09-06T01:30Z",
-        "name": "Northern Arizona Lumberjacks at Arizona Wildcats",
-        "teams": [
-          {
-            "id": "12",
-            "name": "Arizona Wildcats",
-            "short": "Arizona",
-            "abbrev": "ARIZ",
-            "homeAway": "home",
-            "score": "35"
-          },
-          {
-            "id": "2464",
-            "name": "Northern Arizona Lumberjacks",
-            "short": "N Arizona",
-            "abbrev": "NAU",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
         "id": "401860879",
         "date": "2026-09-06T01:30Z",
         "name": "Portland State Vikings at San Diego State Aztecs",
@@ -5181,9 +5152,9 @@
             "score": "20"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "2:00 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "USA Net"
         ]
@@ -5210,9 +5181,9 @@
             "score": "7"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "4:05 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5241,7 +5212,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:04 - 4th",
+        "detail": "4:52 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5270,7 +5241,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:30 - 4th",
+        "detail": "1:50 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7583,6 +7554,35 @@
             "abbrev": "MERC",
             "homeAway": "away",
             "score": "14"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401856773",
+        "date": "2026-09-06T01:30Z",
+        "name": "Northern Arizona Lumberjacks at Arizona Wildcats",
+        "teams": [
+          {
+            "id": "12",
+            "name": "Arizona Wildcats",
+            "short": "Arizona",
+            "abbrev": "ARIZ",
+            "homeAway": "home",
+            "score": "35"
+          },
+          {
+            "id": "2464",
+            "name": "Northern Arizona Lumberjacks",
+            "short": "N Arizona",
+            "abbrev": "NAU",
+            "homeAway": "away",
+            "score": "7"
           }
         ],
         "state": "post",
@@ -27285,11 +27285,11 @@
       }
     ]
   },
-  "fcs_scores_updated": "2026-09-06T05:07:14.730909+00:00",
+  "fcs_scores_updated": "2026-09-06T05:20:23.922642+00:00",
   "latest_press_conference": {
-    "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker",
-    "date": "Sun, 06 Sep 2026 02:23:32 +0000",
-    "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/",
-    "youtube_id": ""
+    "title": "Montana State press conference – Brent Vigen, Jabez Woods, Zac Crews after 51-24 win over Butler",
+    "date": "Sun, 06 Sep 2026 05:09:52 +0000",
+    "url": "https://skylinesportsmt.com/montana-state-press-conference-brent-vigen-jabez-woods-zac-crews-after-51-24-win-over-butler/",
+    "youtube_id": "BpTf14bwiDg"
   }
 }
