@@ -21,7 +21,23 @@ FEEDS = [
 ]
 
 SKYLINE_URL = "https://skylinesportsmt.com/category/cat-griz-football/"
-FALLBACK_IMAGE = "hero.jpg"
+# Real Griz football photos used only when a story has no usable publisher image.
+# Rotate them deterministically so the Newsroom does not repeat the same fallback.
+GRIZ_FALLBACK_IMAGES = [
+    "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/9/5/20260905_fb_v_Drake_4405_rb_AFMpW.jpg",
+    "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2024/9/21/_TM21627_2.jpg",
+    "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/30/20260829_fbvssouthernutah_0125.jpg",
+    "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/31/Mason_ST_POW_Web.png",
+    "https://skylinesportsmt.com/wp-content/uploads/2026/08/Bobby-Kennedy-on-sideline-with-team-and-Jaylen-Johnson-780x470.jpeg",
+    "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg",
+]
+
+def griz_fallback_image(story, index=0):
+    seed = f"{story.get('url','')}|{story.get('title','')}"
+    # Stable across updater runs; index prevents identical blank stories clustering.
+    slot = (sum(seed.encode('utf-8')) + index) % len(GRIZ_FALLBACK_IMAGES)
+    return GRIZ_FALLBACK_IMAGES[slot]
+
 
 # Verified publisher-hosted images for current Griz stories. These are used only
 # when an article page/feed does not expose its featured image cleanly.
@@ -352,6 +368,18 @@ def dedupe_and_sort(stories):
 
     result = list(by_key.values())
     result.sort(key=lambda s: parse_date(s.get("published_at") or s.get("date")), reverse=True)
+
+    # Final safety net: a valid story should never reach the site with a blank image.
+    # Keep real publisher images when present; otherwise rotate through real Griz photos.
+    for i, story in enumerate(result):
+        if not valid_image(story.get("image", "")):
+            story["image"] = griz_fallback_image(story, i)
+            story["image_fallback"] = True
+        else:
+            story.pop("image_fallback", None)
+        if not valid_image(story.get("video_thumbnail", "")):
+            story["video_thumbnail"] = story["image"]
+
     return result[:24]
 
 
