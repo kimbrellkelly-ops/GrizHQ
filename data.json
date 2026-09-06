@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T11:30:38.665296+00:00",
+  "updated": "2026-09-06T11:43:56.137064+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -7013,35 +7013,6 @@
         ]
       },
       {
-        "id": "401868958",
-        "date": "2026-09-05T23:30Z",
-        "name": "Edward Waters Tigers at Jackson State Tigers",
-        "teams": [
-          {
-            "id": "2296",
-            "name": "Jackson State Tigers",
-            "short": "Jackson St",
-            "abbrev": "JKST",
-            "homeAway": "home",
-            "score": "66"
-          },
-          {
-            "id": "2206",
-            "name": "Edward Waters Tigers",
-            "short": "Edward Waters",
-            "abbrev": "EAU",
-            "homeAway": "away",
-            "score": "14"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "HBCU Go"
-        ]
-      },
-      {
         "id": "401858211",
         "date": "2026-09-05T23:30Z",
         "name": "VMI Keydets at Virginia Tech Hokies",
@@ -7069,6 +7040,35 @@
         "broadcasts": [
           "ACC Network",
           "ACCNX"
+        ]
+      },
+      {
+        "id": "401868958",
+        "date": "2026-09-05T23:30Z",
+        "name": "Edward Waters Tigers at Jackson State Tigers",
+        "teams": [
+          {
+            "id": "2296",
+            "name": "Jackson State Tigers",
+            "short": "Jackson St",
+            "abbrev": "JKST",
+            "homeAway": "home",
+            "score": "66"
+          },
+          {
+            "id": "2206",
+            "name": "Edward Waters Tigers",
+            "short": "Edward Waters",
+            "abbrev": "EAU",
+            "homeAway": "away",
+            "score": "14"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "HBCU Go"
         ]
       },
       {
@@ -7128,33 +7128,6 @@
         "broadcasts": [
           "ESPN+"
         ]
-      },
-      {
-        "id": "401868970",
-        "date": "2026-09-06T00:00Z",
-        "name": "Kentucky State Thorobreds at Southern Jaguars",
-        "teams": [
-          {
-            "id": "2582",
-            "name": "Southern Jaguars",
-            "short": "Southern",
-            "abbrev": "SOU",
-            "homeAway": "home",
-            "score": "34"
-          },
-          {
-            "id": "2310",
-            "name": "Kentucky State Thorobreds",
-            "short": "Kentucky St",
-            "abbrev": "KYST",
-            "homeAway": "away",
-            "score": "15"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": []
       },
       {
         "id": "401858427",
@@ -7358,6 +7331,33 @@
         "broadcasts": [
           "ESPN+"
         ]
+      },
+      {
+        "id": "401868970",
+        "date": "2026-09-06T00:00Z",
+        "name": "Kentucky State Thorobreds at Southern Jaguars",
+        "teams": [
+          {
+            "id": "2582",
+            "name": "Southern Jaguars",
+            "short": "Southern",
+            "abbrev": "SOU",
+            "homeAway": "home",
+            "score": "34"
+          },
+          {
+            "id": "2310",
+            "name": "Kentucky State Thorobreds",
+            "short": "Kentucky St",
+            "abbrev": "KYST",
+            "homeAway": "away",
+            "score": "15"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": []
       },
       {
         "id": "401869142",
@@ -27285,7 +27285,7 @@
       }
     ]
   },
-  "fcs_scores_updated": "2026-09-06T11:30:45.576254+00:00",
+  "fcs_scores_updated": "2026-09-06T11:44:04.444783+00:00",
   "latest_press_conference": {
     "title": "Montana State press conference – Brent Vigen, Jabez Woods, Zac Crews after 51-24 win over Butler",
     "date": "Sun, 06 Sep 2026 05:09:52 +0000",
