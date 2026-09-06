@@ -1,11 +1,75 @@
 {
-  "updated": "2026-09-06T00:00:00+00:00",
+  "updated": "2026-09-06T18:30:00Z",
   "posts": [
-    {"title":"Darts only 🎯 #GrizCamp 🐻","url":"https://www.youtube.com/@MontanaGrizFootball/shorts","image":"https://i.ytimg.com/vi/placeholder/hqdefault.jpg","source":"MONTANA GRIZ FOOTBALL","type":"SHORTS","video":true,"description":"Official Montana Griz Football short-form video.","date":"Latest Shorts"},
-    {"title":"OC Brent Pease has had this one in the play book for a looonnngg time 👏 TOUCHDOWN Eli Gillman!","url":"https://www.youtube.com/@MontanaGrizFootball/shorts","image":"https://i.ytimg.com/vi/placeholder/hqdefault.jpg","source":"MONTANA GRIZ FOOTBALL","type":"SHORTS","video":true,"description":"Official Griz short-form content.","date":"Official account"},
-    {"title":"MVP! Eli Gillman is the preseason Big Sky MVP for a reason 💪","url":"https://www.youtube.com/@MontanaGrizFootball/videos","image":"hero.jpg","source":"MONTANA GRIZ FOOTBALL","type":"VIDEO","video":true,"description":"Official Montana Griz Football video content.","date":"Official account"},
-    {"title":"It's time to do it, The Montana Way...","url":"https://www.youtube.com/@MontanaGrizFootball/videos","image":"hero.jpg","source":"MONTANA GRIZ FOOTBALL","type":"VIDEO","video":true,"description":"Official Montana Griz Football video content.","date":"Official account"},
-    {"title":"Montana Griz Football on X","url":"https://x.com/MontanaGrizFB","image":"hero.jpg","source":"X","type":"FOLLOW","video":false,"description":"Official Montana Griz Football posts, news and game-day content.","date":"Official account"},
-    {"title":"Montana Griz Football on Instagram","url":"https://www.instagram.com/montanagrizfootball/","image":"hero.jpg","source":"INSTAGRAM","type":"FOLLOW","video":false,"description":"Official Montana Griz Football photos, reels and team content.","date":"Official account"}
+    {
+      "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker",
+      "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg",
+      "source": "Skyline Sports",
+      "type": "VIDEO",
+      "video": true,
+      "description": "Postgame Griz press conference following Montana’s 45-10 win over Drake.",
+      "date": "September 6, 2026"
+    },
+    {
+      "title": "Gillman breaks record as Griz overcome penalties to cruise past Drake",
+      "url": "https://skylinesportsmt.com/gillman-breaks-record-as-griz-overcome-penalties-to-cruise-past-drake-for-second-straight-win/",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Bobby-Kennedy-on-sideline-with-team-and-Jaylen-Johnson-780x470.jpeg",
+      "source": "Skyline Sports",
+      "type": "VIDEO",
+      "video": true,
+      "description": "Skyline Sports coverage of Eli Gillman and Montana’s 45-10 win over Drake.",
+      "date": "September 5, 2026"
+    },
+    {
+      "title": "Talkin’ Schmidt – Griz players who stood out in the season opener",
+      "url": "https://skylinesportsmt.com/talkin-schmidt-andrew-give-top-3-griz-players-from-season-opening-best-worst-of-bk-debut/",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/09/Talkin-Schmidt-Andrew-Schmidt.jpg",
+      "source": "Skyline Sports",
+      "type": "VIDEO",
+      "video": true,
+      "description": "Former Griz running back Andrew Schmidt breaks down Montana’s season opener.",
+      "date": "September 2, 2026"
+    },
+    {
+      "title": "Nuanez brothers on Montana’s opening weekend and the win over Southern Utah",
+      "url": "https://skylinesportsmt.com/nuanez-brothers-on-big-sky-opening-weekend-montana-escaping-against-southern-utah/",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/09/Brooks-Colter-Nuanez.jpg",
+      "source": "Skyline Sports",
+      "type": "VIDEO",
+      "video": true,
+      "description": "Brooks and Colter Nuanez discuss the Griz after Week 0.",
+      "date": "September 1, 2026"
+    },
+    {
+      "title": "Gillman sets records as Griz roll past Bulldogs 45-10",
+      "url": "https://gogriz.com/news/2026/9/5/football-gillman-sets-records-as-griz-roll-past-bulldogs-45-10",
+      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/9/5/20260905_fb_v_Drake_4405_rb_AFMpW.jpg",
+      "source": "GoGriz",
+      "type": "SOCIAL",
+      "video": false,
+      "description": "Official Montana football coverage after the Drake win.",
+      "date": "September 5, 2026"
+    },
+    {
+      "title": "Give Gillman the crown: Griz ride RBs 4 touchdowns to win over Drake",
+      "url": "https://dailyinterlake.com/news/2026/sep/06/give-gillman-the-crown-griz-ride-rbs-4-touchdowns-to-win-pver-drake/",
+      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/30/20260829_fbvssouthernutah_0125.jpg",
+      "source": "Daily Inter Lake",
+      "type": "SOCIAL",
+      "video": false,
+      "description": "Regional Montana football coverage from the Daily Inter Lake.",
+      "date": "September 6, 2026"
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Montana Griz Football on X",
+      "url": "https://x.com/MontanaGrizFB"
+    },
+    {
+      "name": "Montana Griz Football on Instagram",
+      "url": "https://www.instagram.com/montanagrizfootball/"
+    }
   ]
 }
