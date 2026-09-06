@@ -333,6 +333,24 @@ async function renderFCSScoreboard(){
     const keys=new Set([norm(s),norm(tokens.join(' ')),norm(expanded.join(' '))]);
     return [...keys].filter(Boolean);
   }
+  // ESPN's names are not consistent across endpoints (e.g. Montana State,
+  // Montana St., Montana State Bobcats). Prefer ESPN team IDs, then fall back
+  // to normalized names/aliases so a naming change cannot hide a game.
+  const teamIds={
+    'montana':'149',
+    'montanastate':'147',
+    'idaho':'70',
+    'weberstate':'2692',
+    'easternwashington':'331',
+    'northernarizona':'2464',
+    'northerncolorado':'2458',
+    'idahostate':'304',
+    'calpoly':'13',
+    'southernutah':'253',
+    'utahtech':'3101',
+    'ucdavis':'302',
+    'portlandstate':'2502'
+  };
   const teamAliases={
     'montana':['montana','montanagrizzlies'],
     'montanastate':['montanastate','montanast','montanastatebobcats'],
@@ -348,17 +366,37 @@ async function renderFCSScoreboard(){
     'ucdavis':['ucdavis','ucdavisaggies'],
     'portlandstate':['portlandstate','portlandst','portlandstatevikings']
   };
+  function canonicalTeamKey(s){
+    const keys=teamKeys(s);
+    for(const [key,variants] of Object.entries(teamAliases)){
+      const v=variants.map(norm);
+      if(keys.some(k=>v.includes(k))) return key;
+    }
+    return null;
+  }
   function teamMatches(name,team){
+    if(!name || !team) return false;
+    // If either side is an ESPN team object, IDs are the most reliable match.
+    if(typeof name==='object' || typeof team==='object'){
+      const a=typeof name==='object'?name:null, b=typeof team==='object'?team:null;
+      if(a?.id && b?.id && String(a.id)===String(b.id)) return true;
+      const ak=canonicalTeamKey(a?.name||a?.short||a?.abbrev||'');
+      const bk=canonicalTeamKey(b?.name||b?.short||b?.abbrev||'');
+      return !!ak && ak===bk;
+    }
     const nameKeys=teamKeys(name), teamKeysList=teamKeys(team);
     if(nameKeys.some(k=>teamKeysList.includes(k))) return true;
-    for(const variants of Object.values(teamAliases)){
-      const v=variants.map(norm);
-      if(nameKeys.some(k=>v.includes(k)) && teamKeysList.some(k=>v.includes(k))) return true;
-    }
-    return false;
+    const a=canonicalTeamKey(name), b=canonicalTeamKey(team);
+    return !!a && a===b;
+  }
+  function teamObjectMatches(canonical,team){
+    if(!team) return false;
+    const key=canonicalTeamKey(canonical) || norm(canonical);
+    if(team.id && teamIds[key] && String(team.id)===String(teamIds[key])) return true;
+    return teamMatches(canonical,team.name) || teamMatches(canonical,team.short) || teamMatches(canonical,team.abbrev);
   }
   function findTeamEvent(name,events){
-    return events.find(ev=>(ev.teams||[]).some(t=>teamMatches(name,t.name)||teamMatches(name,t.short)))||null;
+    return events.find(ev=>(ev.teams||[]).some(t=>teamObjectMatches(name,t)))||null;
   }
   function statusText(ev){
     if(!ev)return 'NO GAME';
@@ -373,7 +411,7 @@ async function renderFCSScoreboard(){
   }
   function scoreLine(ev,name){
     if(!ev)return '<small>NO GAME</small>';
-    const me=(ev.teams||[]).find(x=>teamMatches(name,x.name)||teamMatches(name,x.short));
+    const me=(ev.teams||[]).find(x=>teamObjectMatches(name,x));
     if(!me)return '<small>'+escapeHtml(statusText(ev))+'</small>';
     const other=(ev.teams||[]).find(x=>x!==me);
     if(ev.completed||ev.state==='in'){const other=(ev.teams||[]).find(x=>x!==me);return `<span class="score-big">${escapeHtml(me.score??'0')}–${escapeHtml(other?.score??'0')}</span><small>${escapeHtml(statusText(ev))}</small>`;}
