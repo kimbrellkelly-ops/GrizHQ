@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T03:56:06.475310+00:00",
+  "updated": "2026-09-06T04:08:57.501220+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -5123,9 +5123,9 @@
             "score": "23"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "3:17 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": []
       },
       {
@@ -5158,36 +5158,6 @@
         ]
       },
       {
-        "id": "401868119",
-        "date": "2026-09-06T00:30Z",
-        "name": "Butler Bulldogs at Montana State Bobcats",
-        "teams": [
-          {
-            "id": "147",
-            "name": "Montana State Bobcats",
-            "short": "Montana St",
-            "abbrev": "MTST",
-            "homeAway": "home",
-            "score": "51"
-          },
-          {
-            "id": "2086",
-            "name": "Butler Bulldogs",
-            "short": "Butler",
-            "abbrev": "BTLR",
-            "homeAway": "away",
-            "score": "24"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+",
-          "Scripps Sports"
-        ]
-      },
-      {
         "id": "401870790",
         "date": "2026-09-06T01:00Z",
         "name": "Mercyhurst Lakers at New Mexico State Aggies",
@@ -5198,7 +5168,7 @@
             "short": "New Mexico St",
             "abbrev": "NMSU",
             "homeAway": "home",
-            "score": "37"
+            "score": "44"
           },
           {
             "id": "2385",
@@ -5211,7 +5181,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:51 - 4th",
+        "detail": "10:18 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5240,7 +5210,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:56 - 3rd",
+        "detail": "13:44 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5256,7 +5226,7 @@
             "short": "San Diego St",
             "abbrev": "SDSU",
             "homeAway": "home",
-            "score": "36"
+            "score": "43"
           },
           {
             "id": "2502",
@@ -5269,7 +5239,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "9:10 - 3rd",
+        "detail": "3:17 - 3rd",
         "broadcasts": [
           "USA Net"
         ]
@@ -5298,7 +5268,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 2nd",
+        "detail": "14:53 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -5356,7 +5326,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 3rd",
+        "detail": "13:21 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7183,6 +7153,36 @@
         "detail": "Final",
         "broadcasts": [
           "ESPN+"
+        ]
+      },
+      {
+        "id": "401868119",
+        "date": "2026-09-06T00:30Z",
+        "name": "Butler Bulldogs at Montana State Bobcats",
+        "teams": [
+          {
+            "id": "147",
+            "name": "Montana State Bobcats",
+            "short": "Montana St",
+            "abbrev": "MTST",
+            "homeAway": "home",
+            "score": "51"
+          },
+          {
+            "id": "2086",
+            "name": "Butler Bulldogs",
+            "short": "Butler",
+            "abbrev": "BTLR",
+            "homeAway": "away",
+            "score": "24"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+",
+          "Scripps Sports"
         ]
       },
       {
@@ -27285,5 +27285,5 @@
       }
     ]
   },
-  "fcs_scores_updated": "2026-09-06T03:56:10.642359+00:00"
+  "fcs_scores_updated": "2026-09-06T04:09:04.417204+00:00"
 }
