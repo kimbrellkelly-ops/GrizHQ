@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Griz HQ | Montana Football</title>
   <meta name="description" content="Griz HQ — a fan-built Montana Grizzlies football information hub.">
-  <link rel="stylesheet" href="styles.css?v=20260905-tabs2">
+  <link rel="stylesheet" href="styles.css?v=20260906-news3">
   <script src="app.js?v=20260906-scorecache2" defer></script>
 
 <style id="griz-tabs-critical">
@@ -126,27 +126,48 @@
     </aside>
   </section>
 
+
+  <!-- HOMEPAGE NEWSROOM: driven only by news.json -->
+  <section class="ghq-home-news tab-panel" data-tab="home" id="home-news">
+    <div class="ghq-news-shell">
+      <div class="ghq-news-head">
+        <div>
+          <div class="eyebrow">THE GRIZ NEWSROOM</div>
+          <h2>WHAT'S HAPPENING NOW</h2>
+          <p>Montana football news, game coverage, insider reports and everything Griz — updated automatically.</p>
+        </div>
+        <div class="ghq-news-live"><span></span>AUTO-UPDATED</div>
+      </div>
+      <div class="ghq-home-news-grid">
+        <a class="ghq-news-lead" id="home-news-lead" href="#news">
+          <div class="ghq-news-art"><span class="ghq-news-art-mark">GRIZ HQ</span><span class="ghq-news-art-type" id="home-news-lead-type">LATEST</span></div>
+          <div class="ghq-news-lead-copy">
+            <div class="ghq-news-meta" id="home-news-lead-meta">LATEST • MONTANA FOOTBALL</div>
+            <h3 id="home-news-lead-title">Loading the latest Griz news…</h3>
+            <p id="home-news-lead-desc">Checking the latest Montana football headlines.</p>
+            <span class="ghq-news-read">READ STORY ↗</span>
+          </div>
+        </a>
+        <div class="ghq-home-news-side" id="home-news-side">
+          <a class="ghq-news-card" href="#news"><span class="ghq-card-type">LATEST</span><h3>Loading…</h3><p>Latest Montana football coverage.</p><small>GRIZ HQ</small></a>
+          <a class="ghq-news-card" href="#news"><span class="ghq-card-type">LATEST</span><h3>Loading…</h3><p>Latest Montana football coverage.</p><small>GRIZ HQ</small></a>
+          <a class="ghq-news-card" href="#news"><span class="ghq-card-type">LATEST</span><h3>Loading…</h3><p>Latest Montana football coverage.</p><small>GRIZ HQ</small></a>
+          <a class="ghq-news-card" href="#news"><span class="ghq-card-type">LATEST</span><h3>Loading…</h3><p>Latest Montana football coverage.</p><small>GRIZ HQ</small></a>
+        </div>
+      </div>
+      <div class="ghq-news-bottom">
+        <div><b id="home-news-count">0</b> current stories in the newsroom</div>
+        <a href="#news">OPEN THE FULL NEWSROOM →</a>
+      </div>
+    </div>
+  </section>
+
   <section class="section tab-panel" id="big-sky" data-tab="schedule"><div class="section-head"><div class="eyebrow">AROUND THE LEAGUE</div><h2>2026 Big Sky Football</h2><span>All Big Sky teams • conference & non-conference</span></div><div class="bigsky-tools"><label>TEAM<select id="bigsky-team-filter"><option value="ALL">ALL TEAMS</option></select></label><label>WEEK<select id="bigsky-date-filter"><option value="ALL">CURRENT WEEK</option></select></label></div><div class="bigsky-table" id="bigsky-table">Loading Big Sky schedule…</div><div class="schedule-source">Source: <a href="https://bigskyconf.com/news/2026/7/6/big-sky-announces-kickoff-times-for-2026-conference-football-season.aspx" target="_blank" rel="noopener">Big Sky Conference ↗</a></div></section>
 <section class="section tab-panel" id="opponent" data-tab="game"><div class="section-head"><div class="eyebrow">GAME WEEK</div><h2>Next Opponent Hub</h2><span id="opponent-hub-name">Drake</span></div><div class="opponent-card"><div><h3 id="opp-title">DRAKE</h3><p>Check the other side of the matchup: official news, fan discussion and opponent media.</p></div><div class="opponent-links"><a id="opp-official" href="#" target="_blank" rel="noopener"><b>OFFICIAL SITE</b><span>Schedule • roster • news</span>↗</a><a id="opp-forum" href="#" target="_blank" rel="noopener"><b>FAN FORUM</b><span id="opp-forum-label">Fan discussion</span>↗</a><a id="opp-media" href="#" target="_blank" rel="noopener"><b>OPPONENT MEDIA</b><span>Audio • news • coverage</span>↗</a></div></div></section>
 
 
   <section class="lower-grid">
-    <section class="panel tab-panel" id="news" data-tab="news">
-      <div class="auto-badge">AUTO-UPDATED</div>
-      <div class="panel-title"><h2>LATEST NEWS</h2><a href="#media">VIEW ALL NEWS →</a></div>
-      <article class="news-row auto-news">
-        <div class="thumb">GRIZ<br>28–21</div>
-        <div><h3>Griz Move to No. 3 in Both Polls</h3><small>Aug. 31, 2026</small><p>Montana drops from No. 2 after the 28–21 win over Southern Utah.</p></div>
-      </article>
-      <article class="news-row">
-        <div class="thumb">PRESS</div>
-        <div><h3>Weekly Press Conference</h3><small>Aug. 31, 2026</small><p>Coach and player availability heading into Drake week.</p></div>
-      </article>
-      <article class="news-row">
-        <div class="thumb">W-G</div>
-        <div><h3>Washington-Grizzly Stadium Ready for Drake</h3><small>Aug. 31, 2026</small><p>Stripe the Stadium, Educators Game and Youth Day are on tap.</p></div>
-      </article>
-    </section>
+
 
     <section class="panel tab-panel" id="schedule" data-tab="schedule">
       <div class="panel-title"><h2>2026 SEASON AT A GLANCE</h2></div>
@@ -167,6 +188,50 @@
       </div>
       <a class="button maroon full" href="#schedule-full">FULL SCHEDULE →</a>
     </section>
+  </section>
+
+
+  <!-- FULL NEWSROOM: driven only by news.json -->
+  <section class="ghq-newsroom section tab-panel" id="news" data-tab="news">
+    <div class="ghq-newsroom-shell">
+      <div class="ghq-newsroom-top">
+        <div>
+          <div class="eyebrow">GRIZ HQ • DAILY FOOTBALL NEWS</div>
+          <h2>THE GRIZ NEWSROOM</h2>
+          <p>Your daily Montana football front page — official news, game stories, insider coverage and more.</p>
+        </div>
+        <div class="ghq-newsroom-status"><span></span><b id="news-updated-label">LIVE FEED</b><small id="news-updated-time">Checking for updates…</small></div>
+      </div>
+
+      <div class="ghq-news-filters" id="ghq-news-filters">
+        <button class="is-active" data-news-filter="ALL" type="button">ALL</button>
+        <button data-news-filter="GAME STORY" type="button">GAME STORIES</button>
+        <button data-news-filter="GAME DAY" type="button">GAME DAY</button>
+        <button data-news-filter="INSIDER" type="button">INSIDER</button>
+        <button data-news-filter="RECRUITING" type="button">RECRUITING</button>
+        <button data-news-filter="HONOR" type="button">HONORS</button>
+        <button data-news-filter="ANALYSIS" type="button">ANALYSIS</button>
+      </div>
+
+      <div class="ghq-news-feature-grid" id="ghq-news-feature">
+        <a class="ghq-news-feature-main" href="#">
+          <div class="ghq-feature-art"><span>GRIZ HQ</span><b>LATEST</b></div>
+          <div class="ghq-feature-copy"><div class="ghq-news-meta">LATEST • MONTANA FOOTBALL</div><h3>Loading the latest story…</h3><p>Checking the newsroom.</p><span>READ STORY ↗</span></div>
+        </a>
+        <div class="ghq-news-feature-stack">
+          <a class="ghq-news-feature-small" href="#"><div class="ghq-small-art">GRIZ</div><div><span>LATEST</span><h3>Loading…</h3><small>—</small></div></a>
+          <a class="ghq-news-feature-small" href="#"><div class="ghq-small-art">GRIZ</div><div><span>LATEST</span><h3>Loading…</h3><small>—</small></div></a>
+        </div>
+      </div>
+
+      <div class="ghq-latest-head"><div><div class="eyebrow">AROUND GRIZ NATION</div><h3>LATEST HEADLINES</h3></div><span id="ghq-filter-label">ALL STORIES</span></div>
+      <div class="ghq-news-grid" id="ghq-news-grid"></div>
+
+      <div class="ghq-news-footer">
+        <div><b>GRIZ HQ NEWS</b><span>Automatically refreshed from Montana football sources.</span></div>
+        <a href="https://gogriz.com/sports/football/archives" target="_blank" rel="noopener">OFFICIAL GOGRIZ FOOTBALL ARCHIVE ↗</a>
+      </div>
+    </div>
   </section>
 
   <section class="section fcs-scoreboard-section tab-panel" id="fcs-scores" data-tab="scores">
@@ -249,48 +314,37 @@
   </section>
 
   <section class="section tab-panel" id="stats" data-tab="stats">
-    <div class="section-head"><div class="eyebrow">NUMBERS</div><h2>Griz Stats Central</h2><span id="stats-through">Through Week 1</span></div>
-    <div class="stats-intro"><b>THE FULL PICTURE.</b> Team efficiency, player production, special teams and game-by-game trends — automatically refreshed from the official Montana statistics.</div>
-    <div class="stat-cards stats-summary-large" id="stats-summary"></div>
-
-    <div class="stats-panel stats-compare-panel">
-      <div class="stats-panel-head"><div><div class="eyebrow">MONTANA VS. THE FIELD</div><h3>Team Statistical Profile</h3></div><span>SEASON TO DATE</span></div>
-      <div class="stats-compare" id="stats-compare"></div>
-    </div>
+    <div class="section-head"><div class="eyebrow">NUMBERS</div><h2>Stats & Matchups</h2><span id="stats-through">Through Week 1</span></div>
+    <div class="stat-cards" id="stats-summary"></div>
 
     <div class="stats-two-col">
       <div class="stats-panel">
-        <div class="stats-panel-head"><div><div class="eyebrow">ATTACK</div><h3>Griz Offense</h3></div><span>SEASON</span></div>
+        <div class="stats-panel-head"><div><div class="eyebrow">ATTACK</div><h3>Griz Offense</h3></div><span>WEEK 1</span></div>
         <div class="stats-list" id="stats-offense"></div>
       </div>
       <div class="stats-panel">
-        <div class="stats-panel-head"><div><div class="eyebrow">STOP UNIT</div><h3>Griz Defense</h3></div><span>SEASON</span></div>
+        <div class="stats-panel-head"><div><div class="eyebrow">STOP UNIT</div><h3>Griz Defense</h3></div><span>WEEK 1</span></div>
         <div class="stats-list" id="stats-defense"></div>
       </div>
     </div>
 
     <div class="stats-panel stats-leaders-panel">
       <div class="stats-panel-head"><div><div class="eyebrow">PLAYER LEADERS</div><h3>Who's Producing?</h3></div><span>2026</span></div>
-      <div class="leader-grid leader-grid-expanded" id="stats-leaders"></div>
+      <div class="leader-grid" id="stats-leaders"></div>
     </div>
 
     <div class="stats-two-col">
       <div class="stats-panel">
-        <div class="stats-panel-head"><div><div class="eyebrow">GAME TRENDS</div><h3>Yards by Game</h3></div><span>MT vs OPP</span></div>
-        <div class="stats-trends" id="stats-trends"></div>
-      </div>
-      <div class="stats-panel">
-        <div class="stats-panel-head"><div><div class="eyebrow">SITUATIONAL</div><h3>By the Numbers</h3></div><span>EFFICIENCY</span></div>
+        <div class="stats-panel-head"><div><div class="eyebrow">SITUATIONAL</div><h3>By the Numbers</h3></div></div>
         <div class="stats-list" id="stats-situational"></div>
       </div>
+      <div class="stats-panel">
+        <div class="stats-panel-head"><div><div class="eyebrow">GAME LOG</div><h3>2026 Results</h3></div></div>
+        <div class="game-log" id="stats-game-log"></div>
+      </div>
     </div>
 
-    <div class="stats-panel">
-      <div class="stats-panel-head"><div><div class="eyebrow">GAME LOG</div><h3>2026 Results</h3></div><span>BOX SCORE SNAPSHOT</span></div>
-      <div class="game-log" id="stats-game-log"></div>
-    </div>
-
-    <div class="stats-note"><b>Built to update.</b> As each official box score is posted, Griz HQ can roll the cumulative player leaders, team profile, game log and trends forward automatically.</div>
+    <div class="stats-note"><b>Built to update.</b> As new box scores are added, this dashboard can roll the numbers forward automatically instead of rebuilding the page.</div>
   </section>
 
   <section class="section tab-panel" id="media" data-tab="media">
@@ -309,87 +363,24 @@
 <a href="https://skylinesportsmt.com/" target="_blank" rel="noopener"><strong>Skyline Sports</strong><span>Montana & FCS coverage</span></a></div></section>
 
 <section class="section tab-panel" id="history" data-tab="history">
-  <div class="section-head"><div class="eyebrow">TRADITION</div><h2>Griz History</h2><span>1897–present</span></div>
-
-  <div class="ghistory-hero">
-    <div class="ghistory-hero-copy">
-      <div class="eyebrow">A PROGRAM BUILT ON TRADITION</div>
-      <h3>More than a century of <em>Griz football.</em></h3>
-      <p>Montana football began in 1897. What followed was a century-plus of championships, rivalries, legendary players, packed stadiums and postseason runs that made the Grizzlies one of the defining programs in the FCS.</p>
-      <div class="ghistory-hero-tags"><span>1897</span><span>650+ WINS</span><span>2 NATIONAL TITLES</span><span>19 BIG SKY TITLES</span></div>
+    <div class="section-head"><div class="eyebrow">TRADITION</div><h2>Griz History</h2><span>1897–present</span></div>
+    <div class="history-grid">
+      <div class="history-stat"><b>2</b><span>NATIONAL CHAMPIONSHIPS</span><small>1995 • 2001</small></div>
+      <div class="history-stat"><b>19</b><span>BIG SKY CHAMPIONSHIPS</span><small>Most in conference history</small></div>
+      <div class="history-stat"><b>29</b><span>FCS PLAYOFF APPEARANCES</span><small>FCS record</small></div>
+      <div class="history-stat"><b>7</b><span>NATIONAL TITLE GAMES</span><small>Montana has played in seven</small></div>
     </div>
-    <div class="ghistory-hero-number"><strong>8</strong><span>NATIONAL<br>CHAMPIONSHIP<br>GAME APPEARANCES</span><small>1995 • 1996 • 2000 • 2001 • 2004 • 2008 • 2009 • 2023</small></div>
-  </div>
-
-  <div class="ghistory-stat-grid">
-    <div class="ghistory-stat"><strong>2</strong><span>National Championships</span><small>1995 • 2001</small></div>
-    <div class="ghistory-stat"><strong>19</strong><span>Big Sky Championships</span><small>Most in conference history</small></div>
-    <div class="ghistory-stat"><strong>29</strong><span>FCS Playoff Appearances</span><small>FCS record through 2025</small></div>
-    <div class="ghistory-stat"><strong>13</strong><span>FCS Semifinal Appearances</span><small>Most in FCS history</small></div>
-    <div class="ghistory-stat"><strong>30</strong><span>Straight Home Wins</span><small>1994–1997, fifth-longest FCS streak</small></div>
-    <div class="ghistory-stat"><strong>650+</strong><span>Program Wins</span><small>Among FCS's winningest programs</small></div>
-  </div>
-
-  <div class="ghistory-feature-grid">
-    <article class="ghistory-feature ghistory-feature-dark">
-      <div class="eyebrow">THE TURNING POINT</div>
-      <h3>Washington-Grizzly Stadium changed everything.</h3>
-      <p>Montana opened Washington-Grizzly Stadium on Oct. 18, 1986, with a 38–31 comeback over Idaho State. The new home became the foundation for the modern Griz era — and one of the strongest home-field advantages in college football.</p>
-      <div class="ghistory-big-fact"><strong>245–38</strong><span>Montana's record in Washington-Grizzly Stadium entering 2026</span></div>
-      <a href="https://gogriz.com/sports/2017/9/1/washington-grizzly-stadium-history?id=258" target="_blank" rel="noopener">WASHINGTON-GRIZZLY STADIUM HISTORY ↗</a>
-    </article>
-    <article class="ghistory-feature">
-      <div class="eyebrow">THE DYNASTY</div>
-      <h3>1993–2009: the era that made the Griz a national power.</h3>
-      <p>Montana reached the postseason a record 17 straight seasons from 1993–2009, won 15 conference titles during that span, played in seven national championship games and captured national championships in 1995 and 2001.</p>
-      <div class="ghistory-era-row"><span><b>17</b> straight playoff trips</span><span><b>15</b> Big Sky titles</span><span><b>2</b> national titles</span></div>
-    </article>
-  </div>
-
-  <div class="ghistory-section-title"><div><div class="eyebrow">THE ROAD TO GREATNESS</div><h3>Milestones that built Griz Nation</h3></div><span>1897 → 2026</span></div>
-  <div class="ghistory-timeline">
-    <div class="ghistory-timeline-item"><div class="ghistory-year">1897</div><div><h4>It starts here.</h4><p>Montana plays its first football season. The Grizzlies' first recorded season lays the foundation for what becomes one of the state's defining sports traditions.</p></div></div>
-    <div class="ghistory-timeline-item"><div class="ghistory-year">1969</div><div><h4>First Big Sky championship.</h4><p>Montana wins the first Big Sky football championship in program history, beginning a conference tradition that would eventually produce a league-record 19 titles.</p></div></div>
-    <div class="ghistory-timeline-item"><div class="ghistory-year">1986</div><div><h4>Washington-Grizzly Stadium opens.</h4><p>The Griz rally past Idaho State 38–31 in the first game at their new home. The stadium becomes the launchpad for the modern Montana football era.</p></div></div>
-    <div class="ghistory-timeline-item is-highlight"><div class="ghistory-year">1995</div><div><h4>First national championship.</h4><p>Don Read's Grizzlies go 13–2 and defeat Marshall 22–20 in the I-AA championship game. Quarterback Dave Dickenson wins the Walter Payton Award.</p></div></div>
-    <div class="ghistory-timeline-item"><div class="ghistory-year">2001</div><div><h4>Second national championship.</h4><p>Joe Glenn's Griz finish 15–1 and beat Furman 13–6 in Chattanooga. Yohance Humphery runs for 142 yards and the defense nearly posts a championship-game shutout.</p></div></div>
-    <div class="ghistory-timeline-item"><div class="ghistory-year">2008</div><div><h4>Another title-game run.</h4><p>Montana shocks top-seeded James Madison 35–27 in the semifinal to reach the national championship game for the sixth time, before falling to Richmond.</p></div></div>
-    <div class="ghistory-timeline-item"><div class="ghistory-year">2009</div><div><h4>Back to Chattanooga.</h4><p>The Griz storm through the playoffs, including a 24–17 semifinal win over Appalachian State, before a 23–21 loss to Villanova in the championship game.</p></div></div>
-    <div class="ghistory-timeline-item is-highlight"><div class="ghistory-year">2023</div><div><h4>19th Big Sky title. Eighth title game.</h4><p>Montana beats Montana State 37–7 for the league championship, then wins two overtime playoff thrillers before reaching the national championship game for the first time since 2009.</p></div></div>
-    <div class="ghistory-timeline-item"><div class="ghistory-year">2025</div><div><h4>Another historic postseason.</h4><p>Montana reaches the FCS semifinal for the 13th time — the most in FCS history — and extends its record total to 29 playoff appearances.</p></div></div>
-  </div>
-
-  <div class="ghistory-champs">
-    <div class="ghistory-section-title"><div><div class="eyebrow">THE TWO CROWNS</div><h3>Montana's national championships</h3></div></div>
-    <div class="ghistory-champ-grid">
-      <article><div class="ghistory-champ-year">1995</div><h4>Montana 22, Marshall 20</h4><p><b>Record: 13–2.</b> Don Read's first title team won Montana's first national championship in a comeback for the ages. Dave Dickenson earned the Walter Payton Award and the Griz finished a perfect 8–0 in Big Sky play.</p><a href="https://gogriz.com/honors/grizzly-sports-hall-of-fame/1995--football-team/38" target="_blank" rel="noopener">1995 TEAM HALL OF FAME ↗</a></article>
-      <article><div class="ghistory-champ-year">2001</div><h4>Montana 13, Furman 6</h4><p><b>Record: 15–1.</b> Joe Glenn's team finished the job after reaching the title game the year before. Yohance Humphery scored the lone Griz touchdown and the defense forced three turnovers.</p><a href="https://gogriz.com/honors/grizzly-sports-hall-of-fame/--football-team/55" target="_blank" rel="noopener">2001 TEAM HALL OF FAME ↗</a></article>
+    <div class="history">
+      <h3>Washington-Grizzly Stadium changed the program</h3>
+      <p>Washington-Grizzly Stadium opened on October 18, 1986, with Montana beating Idaho State 38–31. Since opening, the Griz have built one of the strongest home-field records in FCS football and turned Missoula into one of the sport's signature venues.</p>
+      <p>Montana's football program dates to 1897. The Griz won their first national championship in 1995 under Don Read and their second in 2001 under Joe Glenn. Montana has won 19 Big Sky championships, including the 2023 title.</p>
+      <div class="history-links">
+        <a href="https://gogriz.com/sports/2021/3/12/athletics-history" target="_blank" rel="noopener">OFFICIAL MONTANA ATHLETICS HISTORY ↗</a>
+        <a href="https://gogriz.com/sports/2017/9/1/washington-grizzly-stadium-history?id=258" target="_blank" rel="noopener">WASHINGTON-GRIZZLY STADIUM HISTORY ↗</a>
+        <a href="https://gogriz.com/news/2023/11/18/football-griz-dominate-cats-for-19th-big-sky-title/" target="_blank" rel="noopener">19TH BIG SKY TITLE — 2023 ↗</a>
+      </div>
     </div>
-  </div>
-
-  <div class="ghistory-feature-grid ghistory-feature-grid-bottom">
-    <article class="ghistory-feature">
-      <div class="eyebrow">THE BRAWL OF THE WILD</div>
-      <h3>Montana vs. Montana State</h3>
-      <p>The rivalry began in 1897 and has become one of the oldest and most intense rivalries in Division I football. The 2025 season produced a historic first: the two teams met twice in the same season, including a playoff semifinal in Bozeman.</p>
-      <div class="ghistory-rivalry"><strong>124+</strong><span>meetings entering the 2025 season</span></div>
-      <a href="https://gogriz.com/news/2025/11/19/football-title-on-the-line-as-griz-meet-cats-for-124th-time" target="_blank" rel="noopener">RIVALRY HISTORY ↗</a>
-    </article>
-    <article class="ghistory-feature">
-      <div class="eyebrow">LEGENDS</div>
-      <h3>The names that live in Griz lore.</h3>
-      <div class="ghistory-legends"><span>Dave Dickenson</span><span>Don Read</span><span>Joe Glenn</span><span>Yohance Humphery</span><span>Marc Mariani</span><span>Chase Reynolds</span></div>
-      <p class="ghistory-small">From Hall of Famers to walk-ons who became NFL stars, Montana has built a remarkable football lineage.</p>
-      <a href="https://gogriz.com/honors/grizzly-sports-hall-of-fame" target="_blank" rel="noopener">GRIZZLY SPORTS HALL OF FAME ↗</a>
-    </article>
-  </div>
-
-  <div class="history-links ghistory-links-final">
-    <a href="https://gogriz.com/sports/2021/3/12/athletics-history" target="_blank" rel="noopener">OFFICIAL MONTANA ATHLETICS HISTORY ↗</a>
-    <a href="https://gogriz.com/sports/2017/8/1/championship-tradition" target="_blank" rel="noopener">BIG SKY CHAMPIONSHIP HISTORY ↗</a>
-    <a href="https://gogriz.com/honors/grizzly-sports-hall-of-fame" target="_blank" rel="noopener">GRIZZLY SPORTS HALL OF FAME ↗</a>
-  </div>
-</section>
+  </section>
 </main>
 
 <footer id="about">
@@ -422,5 +413,40 @@
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initGrizTabs);else initGrizTabs();
 })();
 </script>
+
+<script>
+(function initNewsroom(){
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+  let stories=[];
+  const cleanType=s=>String(s||'GRIZ NEWS').toUpperCase();
+  const sourceLabel=s=>String(s||'GRIZ HQ').toUpperCase();
+  const shortType=s=>{const t=cleanType(s); return t==='GAME STORY'?'GAME':t==='GAME DAY'?'GAME DAY':t==='RECRUITING'?'RECRUIT':t==='HONOR'?'HONOR':t==='INSIDER'?'INSIDER':t==='ANALYSIS'?'ANALYSIS':'GRIZ';};
+  const render=filter=>{
+    const filtered=filter==='ALL'?stories:stories.filter(x=>cleanType(x.badge)===filter);
+    const lead=filtered[0]||stories[0];
+    const feature=document.querySelector('.ghq-news-feature-main');
+    if(feature&&lead){feature.href=lead.url||'#'; feature.target='_blank'; feature.rel='noopener'; feature.querySelector('.ghq-feature-art b').textContent=shortType(lead.badge); feature.querySelector('.ghq-feature-copy .ghq-news-meta').textContent=`${cleanType(lead.badge)} • ${sourceLabel(lead.source)}`; feature.querySelector('h3').textContent=lead.title||''; feature.querySelector('p').textContent=lead.description||'Latest Montana football coverage.';}
+    const smalls=[...document.querySelectorAll('.ghq-news-feature-small')];
+    filtered.slice(1,3).forEach((item,i)=>{const a=smalls[i];if(!a)return;a.href=item.url||'#';a.target='_blank';a.rel='noopener';a.querySelector('.ghq-small-art').textContent=shortType(item.badge);a.querySelector('span').textContent=cleanType(item.badge);a.querySelector('h3').textContent=item.title||'';a.querySelector('small').textContent=`${item.date||''} • ${sourceLabel(item.source)}`;});
+    const grid=document.getElementById('ghq-news-grid');
+    if(grid){grid.innerHTML=filtered.slice(3,15).map(item=>`<a class="ghq-news-tile" href="${esc(item.url||'#')}" target="_blank" rel="noopener"><div class="ghq-tile-art"><span>${esc(shortType(item.badge))}</span><b>GRIZ HQ</b></div><div class="ghq-tile-copy"><div class="ghq-news-meta">${esc(cleanType(item.badge))} • ${esc(sourceLabel(item.source))}</div><h3>${esc(item.title||'')}</h3><p>${esc(item.description||'Latest Montana football coverage.')}</p><small>${esc(item.date||'')}</small></div></a>`).join('')||'<div class="ghq-news-empty">No stories in this category yet. Check back soon.</div>';}
+    const label=document.getElementById('ghq-filter-label'); if(label) label.textContent=filter==='ALL'?'ALL STORIES':filter+'S';
+  };
+  const renderHome=()=>{
+    const lead=stories[0]; if(!lead)return;
+    const a=document.getElementById('home-news-lead'); a.href=lead.url||'#';a.target='_blank';a.rel='noopener';
+    document.getElementById('home-news-lead-type').textContent=shortType(lead.badge);
+    document.getElementById('home-news-lead-meta').textContent=`${cleanType(lead.badge)} • ${sourceLabel(lead.source)} • ${lead.date||''}`;
+    document.getElementById('home-news-lead-title').textContent=lead.title||'';
+    document.getElementById('home-news-lead-desc').textContent=lead.description||'Latest Montana football coverage.';
+    const cards=[...document.querySelectorAll('#home-news-side .ghq-news-card')];
+    stories.slice(1,5).forEach((item,i)=>{const card=cards[i];if(!card)return;card.href=item.url||'#';card.target='_blank';card.rel='noopener';card.querySelector('.ghq-card-type').textContent=shortType(item.badge);card.querySelector('h3').textContent=item.title||'';card.querySelector('p').textContent=item.description||'Latest Montana football coverage.';card.querySelector('small').textContent=`${item.date||''} • ${sourceLabel(item.source)}`;});
+    const count=document.getElementById('home-news-count');if(count)count.textContent=stories.length;
+  };
+  const bind=()=>document.querySelectorAll('[data-news-filter]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-news-filter]').forEach(x=>x.classList.remove('is-active'));btn.classList.add('is-active');render(btn.dataset.newsFilter);}));
+  fetch('news.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(data=>{stories=Array.isArray(data.stories)?data.stories:[];if(!stories.length)throw new Error('No stories');renderHome();render('ALL');bind();const u=document.getElementById('news-updated-time');if(u)u.textContent=data.updated?`Updated ${new Date(data.updated).toLocaleString([], {month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}`:'Updated automatically';}).catch(()=>{const u=document.getElementById('news-updated-time');if(u)u.textContent='Using latest available headlines';});
+})();
+</script>
+
 </body>
 </html>
