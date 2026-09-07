@@ -3597,3 +3597,6 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .schedule-main-status strong{font-size:16px}
 @media(max-width:1050px){.schedule-row.game-card-row,.schedule-row.game-card-row.head{grid-template-columns:75px minmax(180px,1.6fr) 110px}}
 @media(max-width:760px){.schedule-row.game-card-row{grid-template-columns:70px 1fr 90px}.schedule-row.game-card-row.head{display:none}}
+
+/* FCS Top 25 name alignment: keep the team name in the name column even when a logo is unavailable. */
+.ghq-fcs-top-team-row>span:not(.fcs-team-rank){grid-column:3!important;}
