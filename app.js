@@ -1357,12 +1357,26 @@ async function renderFCSScoreboard(){
     const seen=new Set();return out.filter(ev=>{const k=String(ev.id||'')||JSON.stringify(ev);if(seen.has(k))return false;seen.add(k);return true;});
   }
   async function fetchESPNEvents(w){
+    // FCS-only feeds do NOT include Big Sky teams when they play an FBS/Mountain West opponent.
+    // Montana State @ Nevada is the key example.  Fetch both the FCS feed and the general
+    // college-football scoreboard, then merge them so an FBS opponent can never make a Big Sky
+    // game look like a bye.
     const urls=[
       `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=1000`,
-      `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=1000`
+      `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=1000`,
+      `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&limit=1000`,
+      `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&limit=1000`
     ];
-    for(const url of urls){try{const r=await fetch(url,{cache:'no-store'});if(!r.ok)continue;const p=await r.json();if(Array.isArray(p.events))return p.events;}catch(e){}}
-    return [];
+    const merged=new Map();
+    for(const url of urls){
+      try{
+        const r=await fetch(url,{cache:'no-store'});if(!r.ok)continue;
+        const p=await r.json();
+        if(!Array.isArray(p.events))continue;
+        p.events.forEach(ev=>{const id=String(ev.id||'');if(id)merged.set(id,ev);});
+      }catch(e){}
+    }
+    return [...merged.values()];
   }
   function statusText(ev,game){
     if(!ev)return game?.time||'TBA';
@@ -1374,10 +1388,21 @@ async function renderFCSScoreboard(){
     const name=teamName(t,fallback),logo=logoFor(t);
     return `<div class="score-team-row ghq-fcs-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy">`:''}<span>${escapeHtml(name)}</span>${showScore?`<strong>${escapeHtml(t?.score??'—')}</strong>`:''}</div>`;
   }
+  function fullScheduleToRankedGame(teamName){
+    const rows=fullSchedule.filter(g=>{
+      const dt=scheduleDate(g.date);if(!dt)return false;
+      return teamMatch(teamName,g.team)||teamMatch(teamName,g.opponent);
+    });
+    if(!rows.length)return null;
+    const g=rows[0];
+    const away=g.location==='Away'?g.team:g.opponent;
+    const home=g.location==='Away'?g.opponent:g.team;
+    return {...g,displayAway:away,displayHome:home,matchupKey:`${g.date}|${norm(away)}|${norm(home)}`};
+  }
   function top25Card(t,events,scheduled){
     const rank=escapeHtml(t.rank||''),name=String(t.team||'Team');
     const ev=findTeamEvent(name,events);
-    const sg=scheduled.find(g=>teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome));
+    const sg=scheduled.find(g=>teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome)) || fullScheduleToRankedGame(name);
     if(ev){
       const ts=eventTeams(ev),a=ts.find(x=>x.homeAway==='away')||ts[0],h=ts.find(x=>x.homeAway==='home')||ts[1],playing=ev.completed||ev.state==='in';
       return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b></div>${scoreCardTeam(a,sg?.displayAway||'Away',playing)}${scoreCardTeam(h,sg?.displayHome||'Home',playing)}<small>${escapeHtml(statusText(ev,sg))}</small></div></div>`;
