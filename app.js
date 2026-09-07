@@ -454,7 +454,7 @@ async function fetchBigSkyWeather(game){
 async function enrichBigSkyScheduleCards(schedule){
   const jobs=schedule.map(async game=>{
     const key=`${game.date}|${game.team}|${game.opponent}|${game.location||''}`;
-    const row=document.querySelector(`.bigsky-game-row[data-bigsky-game-key="${CSS.escape(key)}"]`);
+    const row=document.querySelector(`.bigsky-game-card[data-bigsky-game-key="${CSS.escape(key)}"]`);
     if(!row) return;
     const [odds,weather]=await Promise.all([fetchBigSkyOdds(game),fetchBigSkyWeather(game)]);
     const bet=row.querySelector('.bigsky-betting');
