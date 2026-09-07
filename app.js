@@ -521,9 +521,91 @@ function multiBookFormat(o){
   return lines.length?{html:lines.join('<br>'),sub:'CURRENT MARKET LINES'}:null;
 }
 
+const KALSHI_CFB_EVENTS_URL='https://external-api.kalshi.com/trade-api/v2/events';
+const KALSHI_CFB_CACHE = new Map();
+
+function kalshiNormTeam(name){
+  const n=bigSkyTeamKey(name);
+  const aliases={
+    montana:'montana',montanastate:'montanastate',
+    utahtech:'utahtech',easternwashington:'easternwashington',
+    idaho:'idaho',idahostate:'idahostate',
+    northernarizona:'northernarizona',northerncolorado:'northerncolorado',
+    portlandstate:'portlandstate',weberstate:'weberstate',
+    ucdavis:'ucdavis',calpoly:'calpoly',sacramentostate:'sacramentostate',
+    sacramentost:'sacramentostate'
+  };
+  return aliases[n]||n;
+}
+
+function kalshiEventMatches(event,game){
+  const wanted=[kalshiNormTeam(game.displayAway||game.team),kalshiNormTeam(game.displayHome||game.opponent)];
+  const title=bigSkyTeamKey(event?.title||'');
+  const sub=bigSkyTeamKey(event?.sub_title||'');
+  const hay=title+' '+sub;
+  return wanted.every(w=>hay.includes(w));
+}
+
+function kalshiPrice(market){
+  if(!market)return null;
+  const vals=[market.last_price_dollars,market.yes_ask_dollars,market.yes_bid_dollars];
+  for(const v of vals){
+    const n=Number(v);
+    if(Number.isFinite(n))return Math.round(n*100);
+  }
+  const bid=Number(market.yes_bid_dollars), ask=Number(market.yes_ask_dollars);
+  if(Number.isFinite(bid)&&Number.isFinite(ask))return Math.round(((bid+ask)/2)*100);
+  return null;
+}
+
+function kalshiOutcomeName(market){
+  return String(market?.yes_sub_title||market?.title||'').trim();
+}
+
+function formatKalshiOdds(event,game){
+  const markets=Array.isArray(event?.markets)?event.markets:[];
+  if(!markets.length)return null;
+  const away=kalshiNormTeam(game.displayAway||game.team), home=kalshiNormTeam(game.displayHome||game.opponent);
+  const found={};
+  markets.forEach(m=>{
+    const name=kalshiNormTeam(kalshiOutcomeName(m));
+    const price=kalshiPrice(m);
+    if(price==null)return;
+    if(name===away)found.away={name:game.displayAway||game.team,price};
+    if(name===home)found.home={name:game.displayHome||game.opponent,price};
+  });
+  if(!found.away&&!found.home)return null;
+  const parts=[];
+  if(found.away)parts.push(`${found.away.name} ${found.away.price}%`);
+  if(found.home)parts.push(`${found.home.name} ${found.home.price}%`);
+  return {html:`<b>${escapeHtml(parts.join(' • '))}</b>`,sub:'KALSHI WIN PROBABILITY',url:event.event_ticker?`https://kalshi.com/events/${encodeURIComponent(event.event_ticker)}`:''};
+}
+
+async function fetchKalshiOdds(game){
+  const key='ncaa-football-open';
+  if(!KALSHI_CFB_CACHE.has(key)){
+    KALSHI_CFB_CACHE.set(key,(async()=>{
+      try{
+        const url=`${KALSHI_CFB_EVENTS_URL}?series_ticker=KXNCAAFGAME&status=open&limit=1000`;
+        const r=await fetch(url,{cache:'no-store'});
+        if(!r.ok)return [];
+        const d=await r.json();
+        return Array.isArray(d.events)?d.events:[];
+      }catch(e){return [];}
+    })());
+  }
+  const events=await KALSHI_CFB_CACHE.get(key);
+  const event=events.find(e=>kalshiEventMatches(e,game));
+  return event?formatKalshiOdds(event,game):null;
+}
+
 async function fetchBigSkyOdds(game){
-  // Preferred: compare Circa, DraftKings and Kalshi from the same live odds board.
-  // This keeps the Big Sky card useful even when one source has not posted a line.
+  // First ask Kalshi directly. Its public API exposes live NCAA football event markets
+  // without authentication, so we don't have to scrape the Kalshi page.
+  const kalshi=await fetchKalshiOdds(game);
+  if(kalshi)return {__multi:true,...kalshi};
+
+  // Then compare Circa and DraftKings from the live odds board.
   const multi=await fetchWagerTalkOdds(game);
   if(multi){
     const formatted=multiBookFormat(multi);
@@ -695,7 +777,7 @@ async function renderBigSkyAndOpponent(){
             </div>
             <div class="bigsky-game-bottom">
               <div class="bigsky-location"><b>${escapeHtml(game.venue || (game.location === "Away" ? "Away Game" : "Home Game"))}</b><span>${escapeHtml(game.city || "")}</span></div>
-              <div class="bigsky-info bigsky-betting"><b>CHECKING…</b><small>ESPN ODDS</small></div>
+              <div class="bigsky-info bigsky-betting"><b>CHECKING…</b><small>MARKET LINES</small></div>
               <div class="bigsky-info bigsky-weather"><b>CHECKING…</b><small>GAME WEATHER</small></div>
             </div>
           </div>`);
