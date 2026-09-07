@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07T10:57:11.321160+00:00",
+  "updated": "2026-09-07T11:10:59.658603+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -9538,6 +9538,33 @@
         ]
       },
       {
+        "id": "401868195",
+        "date": "2026-09-12T23:00Z",
+        "name": "Tennessee State Tigers at Alabama A&M Bulldogs",
+        "teams": [
+          {
+            "id": "2010",
+            "name": "Alabama A&M Bulldogs",
+            "short": "Alabama A&M",
+            "abbrev": "AAMU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2634",
+            "name": "Tennessee State Tigers",
+            "short": "Tennessee St",
+            "abbrev": "TNST",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "9/12 - 7:00 PM EDT",
+        "broadcasts": []
+      },
+      {
         "id": "401868236",
         "date": "2026-09-12T23:00Z",
         "name": "Tarleton State Texans at McNeese Cowboys",
@@ -9797,33 +9824,6 @@
           "Midco Sports Net",
           "KELO-TV"
         ]
-      },
-      {
-        "id": "401868195",
-        "date": "2026-09-12T23:00Z",
-        "name": "Tennessee State Tigers at Alabama A&M Bulldogs",
-        "teams": [
-          {
-            "id": "2010",
-            "name": "Alabama A&M Bulldogs",
-            "short": "Alabama A&M",
-            "abbrev": "AAMU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2634",
-            "name": "Tennessee State Tigers",
-            "short": "Tennessee St",
-            "abbrev": "TNST",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "9/12 - 7:00 PM EDT",
-        "broadcasts": []
       },
       {
         "id": "401858447",
@@ -27385,5 +27385,5 @@
     "url": "https://skylinesportsmt.com/montana-state-press-conference-brent-vigen-jabez-woods-zac-crews-after-51-24-win-over-butler/",
     "youtube_id": "BpTf14bwiDg"
   },
-  "fcs_scores_updated": "2026-09-07T10:57:42.516116+00:00"
+  "fcs_scores_updated": "2026-09-07T11:11:27.603957+00:00"
 }
