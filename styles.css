@@ -2174,6 +2174,21 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   }
 }
 
+
+/* FCS Top 25 — stacked matchup cards to match the Big Sky scoreboard */
+.fcs-top20{grid-template-columns:repeat(3,1fr) !important;}
+.fcs-rank-card{grid-template-columns:34px minmax(0,1fr) !important;align-items:stretch !important;min-height:112px;}
+.fcs-top-matchup{min-width:0;}
+.fcs-top-team-row{display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:8px;min-height:40px;border-bottom:1px solid #e6e6e6;}
+.fcs-top-team-row:last-of-type{border-bottom:0;}
+.fcs-top-team-row img{width:26px;height:26px;object-fit:contain;}
+.fcs-top-team-row span{font-size:12px;font-weight:800;line-height:1.15;min-width:0;}
+.fcs-top-team-row strong{font-size:23px;font-weight:900;line-height:1;}
+.fcs-top-matchup small{display:block;margin-top:7px;font-size:9px;font-weight:800;letter-spacing:.08em;color:#777;text-transform:uppercase;}
+.fcs-rank-card.griz .fcs-top-team-row strong{color:#8b1236;}
+@media(max-width:900px){.fcs-top20{grid-template-columns:repeat(2,1fr) !important;}}
+@media(max-width:560px){.fcs-top20{grid-template-columns:1fr !important;}.fcs-rank-card{min-height:104px;}.fcs-top-team-row{min-height:38px;}.fcs-top-team-row strong{font-size:24px;}}
+
 /* Match FCS Top 25 score size to the Big Sky scoreboard */
 .fcs-rank-score .score-big {
   display: block !important;

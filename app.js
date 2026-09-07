@@ -487,11 +487,27 @@ async function renderFCSScoreboard(){
     topEl.innerHTML=top25.slice(0,25).map(t=>{
       const ev=findTeamEvent(t.team,events);
       const isGriz=teamMatches('Montana',t.team);
-      const isBigSky=bigSkyTeams.some(x=>teamMatches(x,t.team));
-      const detail=ev?gameLabel(ev):null;
-      const matchup=detail?`${escapeHtml(detail.away)} @ ${escapeHtml(detail.home)}`:'No game this week';
       const cardClass=isGriz?'griz':'';
-      return `<div class="fcs-rank-card ${cardClass}"><span class="fcs-rank">${escapeHtml(t.rank)}</span><div class="fcs-rank-team"><b>${escapeHtml(t.team)}</b><small>${escapeHtml(t.record||'')} • ${matchup}</small></div><span class="fcs-rank-score">${scoreLine(ev,t.team)}</span></div>`;
+      const rank=escapeHtml(t.rank);
+      const teamLogo=(x)=>{
+        const id=x?.team?.id || x?.id;
+        const direct=x?.team?.logo || x?.logo;
+        return direct || (id ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(id)}.png` : '');
+      };
+      const teamRow=(x)=>{
+        const name=x?.short||x?.name||'Team';
+        const logo=teamLogo(x);
+        return `<div class="fcs-top-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy">`:''}<span>${escapeHtml(name)}</span><strong>${escapeHtml(x?.score??'—')}</strong></div>`;
+      };
+      if(ev){
+        const away=(ev.teams||[]).find(x=>x.homeAway==='away') || (ev.teams||[])[0];
+        const home=(ev.teams||[]).find(x=>x.homeAway==='home') || (ev.teams||[])[1];
+        const statusLabel=ev.completed ? 'FINAL' : (ev.state==='in' ? statusText(ev) : (ev.date?new Date(ev.date).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'}):'TBA'));
+        return `<div class="fcs-rank-card ${cardClass}"><span class="fcs-rank">${rank}</span><div class="fcs-top-matchup">${teamRow(away)}${teamRow(home)}<small>${escapeHtml(statusLabel)}</small></div></div>`;
+      }
+      const fallbackLogo=t.logo||t.logo_url||'';
+      const fallbackRow=`<div class="fcs-top-team-row">${fallbackLogo?`<img src="${escapeHtml(fallbackLogo)}" alt="" loading="lazy">`:''}<span>${escapeHtml(t.team)}</span><strong>—</strong></div>`;
+      return `<div class="fcs-rank-card ${cardClass}"><span class="fcs-rank">${rank}</span><div class="fcs-top-matchup">${fallbackRow}<small>${escapeHtml(t.record||'')} • NO GAME THIS WEEK</small></div></div>`;
     }).join('');
 
     if(bigSkyEl){
