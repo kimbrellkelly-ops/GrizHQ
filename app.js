@@ -1241,10 +1241,16 @@ async function renderFCSScoreboard(){
   const now=new Date(); let current=weeks.findIndex(w=>now>=new Date(w[0]+'T00:00:00')&&now<=new Date(w[1]+'T23:59:59')); if(current<0) current=0;
   if(!weekEl.dataset.userChanged) weekEl.value=String(current);
 
+  // The local cache is useful, but it must never be a single point of failure.
+  // Render whatever is available immediately, then supplement it with live ESPN
+  // data in the background. This keeps the entire Scores tab usable even if
+  // data.json is slow, stale, or temporarily unavailable.
   let localData={};
-  try{localData=await (await fetch('data.json?ts='+Date.now(),{cache:'no-store'})).json();}catch(e){
-    statusEl.textContent='Score data unavailable';
-    return;
+  try{
+    const cacheResponse=await fetch('data.json?ts='+Date.now(),{cache:'no-store'});
+    if(cacheResponse.ok) localData=await cacheResponse.json();
+  }catch(e){
+    console.warn('FCS cache unavailable; using live scoreboard',e);
   }
 
   const top25=Array.isArray(localData.fcs_top25)?localData.fcs_top25:(Array.isArray(localData.fcs_top20)?localData.fcs_top20:[]);
@@ -1382,39 +1388,47 @@ async function renderFCSScoreboard(){
   // is why some FCS teams/games were disappearing from the scoreboard. ESPN's
   // date-range endpoint returns the full slate, including FCS-vs-FBS games.
   async function fetchLiveFcsWeek(w){
-    const range=`${w[0].replaceAll('-','')}-${w[1].replaceAll('-','')}`;
-    const urls=[
-      `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${range}&limit=500`,
-      `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${range}&groups=81&limit=500`
-    ];
+    // Exact-date ESPN scoreboard requests are more reliable than a single
+    // multi-day request and return the complete slate for that date. Group 81
+    // is the FCS filter, but we also query the unfiltered date feed so FCS vs
+    // FBS games are not lost. We merge both feeds and dedupe by event id.
+    const dates=[];
+    const cursor=new Date(w[0]+'T12:00:00');
+    const endDate=new Date(w[1]+'T12:00:00');
+    while(cursor<=endDate){
+      dates.push(cursor.toISOString().slice(0,10).replaceAll('-',''));
+      cursor.setDate(cursor.getDate()+1);
+    }
     const merged=new Map();
-    for(const url of urls){
-      try{
-        const r=await fetch(url,{cache:'no-store'});
-        if(!r.ok) continue;
-        const d=await r.json();
-        if(Array.isArray(d.events)) d.events.forEach(ev=>{ if(ev?.id) merged.set(String(ev.id),ev); });
-      }catch(e){}
+    for(const ymd of dates){
+      const urls=[
+        `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${ymd}&limit=1000`,
+        `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${ymd}&groups=81&limit=1000`
+      ];
+      await Promise.all(urls.map(async url=>{
+        try{
+          const r=await fetch(url,{cache:'no-store'});
+          if(!r.ok) return;
+          const d=await r.json();
+          if(Array.isArray(d.events)){
+            d.events.forEach(ev=>{if(ev?.id) merged.set(String(ev.id),ev);});
+          }
+        }catch(e){}
+      }));
     }
     return [...merged.values()];
   }
 
-  async function draw(){
-    const w=weeks[Number(weekEl.value)||0];
-    statusEl.textContent='Loading cached scores…';
-    topEl.innerHTML='<div class="fcs-loading">Loading Top 25…</div>';
-    if(bigSkyEl)bigSkyEl.innerHTML='<div class="fcs-loading">Loading Big Sky games…</div>';
-    if(bigSkyLabelEl)bigSkyLabelEl.textContent=w[2]+' • All 13 teams';
-    const cachedEvents=eventsForWeek(w);
-    let liveEvents=[];
-    try{ liveEvents=await fetchLiveFcsWeek(w); }catch(e){}
-    // Live ESPN data wins when available; cached data fills any gaps.
-    const mergedEvents=new Map();
-    cachedEvents.forEach(ev=>{ if(ev?.id) mergedEvents.set(String(ev.id),ev); });
-    liveEvents.forEach(ev=>{ if(ev?.id) mergedEvents.set(String(ev.id),ev); });
-    const events=[...mergedEvents.values()];
-    statusEl.textContent=`${events.length} FCS games loaded • live ESPN + cached backup`;
 
+  function mergeEvents(cachedEvents,liveEvents){
+    const merged=new Map();
+    cachedEvents.forEach(ev=>{if(ev?.id) merged.set(String(ev.id),ev);});
+    liveEvents.forEach(ev=>{if(ev?.id) merged.set(String(ev.id),ev);});
+    return [...merged.values()];
+  }
+
+  function renderScoreboards(w,events,sourceLabel){
+    statusEl.textContent=`${events.length} FCS games loaded • ${sourceLabel}`;
     topEl.innerHTML=top25.slice(0,25).map(t=>{
       const ev=findTeamEvent(t.team,events);
       const isGriz=teamMatches('Montana',t.team);
@@ -1492,6 +1506,23 @@ async function renderFCSScoreboard(){
         const statusLabel=ev.completed ? 'FINAL' : (ev.state==='in' ? statusText(ev) : d.time);
         return `<div class="fcs-game ${state} bigsky-row"><div class="fcs-time">${escapeHtml(label)}</div><div class="fcs-matchup">${teamRow(away)}${teamRow(home)}<small class="score-game-status">${escapeHtml(statusLabel)}${tv?` • ${escapeHtml(tv)}`:''}</small></div><div class="fcs-score score-status">${escapeHtml(statusLabel)}</div><div class="fcs-tv">${escapeHtml(tv)}</div></div>`;
       }).join('');
+    }
+  }
+
+  async function draw(){
+    const w=weeks[Number(weekEl.value)||0];
+    if(bigSkyLabelEl)bigSkyLabelEl.textContent=w[2]+' • All 13 teams';
+    const cachedEvents=eventsForWeek(w);
+    // Render cached data immediately so the tab never appears broken while
+    // ESPN is being queried.
+    renderScoreboards(w,cachedEvents,cachedEvents.length?'cached feed':'waiting for live feed');
+    try{
+      const liveEvents=await fetchLiveFcsWeek(w);
+      const events=mergeEvents(cachedEvents,liveEvents);
+      renderScoreboards(w,events,liveEvents.length?'live ESPN + cached backup':'cached feed');
+    }catch(e){
+      console.warn('Live FCS scoreboard unavailable',e);
+      renderScoreboards(w,cachedEvents,cachedEvents.length?'cached feed':'live data unavailable');
     }
   }
   weekEl.onchange=()=>{weekEl.dataset.userChanged='1';draw();};
