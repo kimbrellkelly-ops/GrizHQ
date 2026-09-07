@@ -1,6 +1,16 @@
 {
-  "updated": "2026-09-07T23:25:25.051182+00:00",
+  "updated": "2026-09-07T23:40:03.833412+00:00",
   "source": "Automated Griz HQ news hub",
+  "story_count": 21,
+  "sources": [
+    "Daily Inter Lake",
+    "FCS Football Central",
+    "FCS Recruiting",
+    "GoGriz",
+    "HERO Sports",
+    "Skyline Sports",
+    "Utah Tech Athletics"
+  ],
   "stories": [
     {
       "title": "Gillman sets records as Griz roll past Bulldogs, 45-10",
@@ -108,6 +118,21 @@
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&image_path=/images/2026/8/30/20260829_vs_suu_9363_tm.JPG"
     },
     {
+      "title": "In-State OL Zandon Calder Discusses His Commitment To Montana",
+      "url": "https://www.si.com/college/fcs/big-sky/in-state-ol-zandon-calder-discusses-his-commitment-to-montana-football",
+      "date": "Sep. 1, 2026",
+      "published_at": "2026-09-01T17:37:49+00:00",
+      "description": "In-State OL Zandon Calder Discusses His Commitment To Montana The Wolf Point High School standout attended a Grizzly prospect camp on July 26 and announced his commitment on August 14.",
+      "source": "FCS Recruiting",
+      "badge": "RECRUITING",
+      "short": "RECRUI",
+      "image": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_90,w_1080,h_607/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/fcs_football_central/01m1da1bqk92rs9j7x2g.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_90,w_1080,h_607/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/fcs_football_central/01m1da1bqk92rs9j7x2g.jpg"
+    },
+    {
       "title": "Mason named Big Sky Special Teams Player of the Week",
       "url": "https://gogriz.com/news/2026/8/31/football-mason-named-big-sky-special-teams-player-of-the-week",
       "date": "Aug. 31, 2026",
@@ -211,6 +236,97 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&image_path=/images/2026/8/24/For_Montana_Jersey_Patch_V2.png"
+    },
+    {
+      "title": "Spring (TX) Grand Oaks OL Joel Botchway Finds the Right Fit at Lamar",
+      "url": "https://www.si.com/college/fcs/southland/spring-tx-grand-oaks-ol-joel-botchway-finds-the-right-fit-at-lamar-cardinals",
+      "date": "Aug. 23, 2026",
+      "published_at": "2026-08-23T22:13:16+00:00",
+      "description": "Southland Spring (TX) Grand Oaks OL Joel Botchway Finds the Right Fit at Lamar The Grizzlies' all-district offensive lineman committed to the Cardinals over McNeese.",
+      "source": "FCS Recruiting",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_32,w_2000,h_1125/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/fcs_football_central/01kqeb8qqe5d3j82s7zp.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_32,w_2000,h_1125/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/fcs_football_central/01kqeb8qqe5d3j82s7zp.jpg"
+    },
+    {
+      "title": "AKEM’S ANALYSIS: MONTANA WEEK 1 THOUGHTS, BIG SKY BREAKOUT PLAYERS, USD CLOSE TO FINDING A GUY",
+      "url": "https://skylinesportsmt.com/akems-analysis-montana-week-1-thoughts-big-sky-breakout-players-usd-close-to-finding-a-guy/",
+      "date": "Aug. 11, 2026",
+      "published_at": "2026-08-11T00:00:00+00:00",
+      "description": "Samuel Akem August 11, 2026 AKEM’S ANALYSIS: MONTANA WEEK 1 THOUGHTS, BIG SKY BREAKOUT PLAYERS, USD CLOSE TO FINDING A GUY In this week’s Akem’s Analysis, I’m discussing my thoughts about the Grizzlies after one week of practice. There’s so",
+      "source": "Skyline Sports",
+      "badge": "ANALYSIS",
+      "short": "ANALYS",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/AA-EP.-150-THUMBNAIL.png",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/08/AA-EP.-150-THUMBNAIL.png"
+    },
+    {
+      "title": "Montana Lands Commitment From Byron Nelson (TX) OL Nick Fungavaka",
+      "url": "https://www.si.com/college/fcs/big-sky/montana-football-lands-commitment-from-byron-nelson-tx-ol-nick-fungavaka",
+      "date": "Aug. 8, 2026",
+      "published_at": "2026-08-08T16:24:47+00:00",
+      "description": "Big Sky Montana Lands Commitment From Byron Nelson (TX) OL Nick Fungavaka The Byron Nelson High School offensive lineman becomes the third recruit from Texas to commit to the Grizzlies",
+      "source": "FCS Recruiting",
+      "badge": "RECRUITING",
+      "short": "RECRUI",
+      "image": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_322,w_1366,h_768/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/fcs_football_central/01kzfp3vsrfvgzf7m7b1.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_322,w_1366,h_768/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/fcs_football_central/01kzfp3vsrfvgzf7m7b1.jpg"
+    },
+    {
+      "title": "2026 Montana Football Preview: Can The Grizzlies Take The Championship Step? Zachary McKinnell | Jun 9, 2026",
+      "url": "https://www.si.com/college/fcs/big-sky/2026-montana-football-preview-can-the-grizzlies-take-the-championship-step",
+      "date": "Jun. 9, 2026",
+      "published_at": "2026-06-09T16:34:36+00:00",
+      "description": "2026 Montana Football Preview: Can The Grizzlies Take The Championship Step? Zachary McKinnell | Jun 9, 2026",
+      "source": "FCS Football Central",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_43,w_3050,h_1715/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/ImagnImages/mmsport/fcs_football_central/01ktmk82zqejd4aq1t6w.jpg",
+      "is_video": true,
+      "youtube_id": "MAKuhr_rlHo",
+      "video_url": "https://www.youtube.com/watch?v=MAKuhr_rlHo",
+      "video_thumbnail": "https://i.ytimg.com/vi/MAKuhr_rlHo/hqdefault.jpg"
+    },
+    {
+      "title": "FCS: 2026 Montana Football Preview",
+      "url": "https://herosports.com/fcs-2026-montana-football-preview-bzbz/",
+      "date": "May. 12, 2026",
+      "published_at": "2026-05-12T00:00:00+00:00",
+      "description": "FCS: 2026 Montana Football Preview by HERO Sports May 12, 2026 Montana is coming off a 13-2 season, advancing to the FCS semifinals for the second time in three years. As...",
+      "source": "HERO Sports",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg",
+      "image_fallback": true
+    },
+    {
+      "title": "‘NOT ON MY WATCH’ – Sawyer evolves into stalwart veteran leader for Griz",
+      "url": "https://skylinesportsmt.com/not-on-my-watch-sawyer-evolves-into-stalwart-veteran-leader-for-griz/",
+      "date": "Mar. 9, 2026",
+      "published_at": "2026-03-09T00:00:00+00:00",
+      "description": "‘NOT ON MY WATCH’ – Sawyer evolves into stalwart veteran leader for Griz March 9, 2026",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/02/Trajon-Sawyer-hammer-dunk-scaled.jpeg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/02/Trajon-Sawyer-hammer-dunk-scaled.jpeg"
     }
   ]
 }
