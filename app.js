@@ -1242,8 +1242,6 @@ async function renderFCSScoreboard(){
     weekEl.dataset.ready='1';
   }
 
-  // Automatically select the active football week. If today is between weeks,
-  // use the next upcoming week. Once the user chooses a week, preserve it.
   function getCurrentWeekIndex(){
     const now=new Date();
     for(let i=0;i<weeks.length;i++){
@@ -1251,9 +1249,7 @@ async function renderFCSScoreboard(){
       const end=new Date(weeks[i][1]+'T23:59:59');
       if(now>=start && now<=end) return i;
     }
-    for(let i=0;i<weeks.length;i++){
-      if(now < new Date(weeks[i][0]+'T00:00:00')) return i;
-    }
+    for(let i=0;i<weeks.length;i++) if(now < new Date(weeks[i][0]+'T00:00:00')) return i;
     return weeks.length-1;
   }
   if(!weekEl.dataset.userChanged) weekEl.value=String(getCurrentWeekIndex());
@@ -1261,10 +1257,7 @@ async function renderFCSScoreboard(){
   let localData={};
   try{
     localData=await (await fetch('data.json?ts='+Date.now(),{cache:'no-store'})).json();
-  }catch(e){
-    statusEl.textContent='Score data unavailable';
-    return;
-  }
+  }catch(e){statusEl.textContent='Score data unavailable';return;}
 
   const top25=Array.isArray(localData.fcs_top25)?localData.fcs_top25:(Array.isArray(localData.fcs_top20)?localData.fcs_top20:[]);
   const schedule=Array.isArray(localData.big_sky_full_schedules)?localData.big_sky_full_schedules:[];
@@ -1272,168 +1265,100 @@ async function renderFCSScoreboard(){
   if(rankDate&&localData.fcs_rankings_date) rankDate.textContent='Stats Perform • '+localData.fcs_rankings_date;
 
   function norm(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');}
-  const teamIds={
-    montana:'149',montanastate:'147',idaho:'70',weberstate:'2692',easternwashington:'331',
-    northernarizona:'2464',northerncolorado:'2458',idahostate:'304',calpoly:'13',southernutah:'253',
-    utahtech:'3101',ucdavis:'302',portlandstate:'2502'
-  };
+  const teamIds={montana:'149',montanastate:'147',idaho:'70',weberstate:'2692',easternwashington:'331',northernarizona:'2464',northerncolorado:'2458',idahostate:'304',calpoly:'13',southernutah:'253',utahtech:'3101',ucdavis:'302',portlandstate:'279'};
   const aliases={
-    montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanast','montanastatebobcats'],
-    idaho:['idaho','idahovandals'],weberstate:['weberstate','weberst','weberstatewildcats'],
-    easternwashington:['easternwashington','ewashington','easternwash','easternwashingtoneagles'],
-    northernarizona:['northernarizona','narizona','northernaz','northernarizonalumberjacks'],
-    northerncolorado:['northerncolorado','ncolorado','northerncoloradobears'],
-    idahostate:['idahostate','idahost','idst','idahostatebengals'],
-    calpoly:['calpoly','calpolymustangs','calpolytechnic'],
-    southernutah:['southernutah','soutah','soututah','southernutahthunderbirds'],
-    utahtech:['utahtech','utahtechuniversity','utahtechtrailblazers'],
-    ucdavis:['ucdavis','ucdavisaggies'],portlandstate:['portlandstate','portlandst','portlandstatevikings']
+    montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanast','montanastatebobcats'],idaho:['idaho','idahovandals'],weberstate:['weberstate','weberst','weberstatewildcats'],
+    easternwashington:['easternwashington','ewashington','easternwash','easternwashingtoneagles'],northernarizona:['northernarizona','narizona','northernaz','northernarizonalumberjacks'],
+    northerncolorado:['northerncolorado','ncolorado','northerncoloradobears'],idahostate:['idahostate','idahost','idst','idahostatebengals'],calpoly:['calpoly','calpolymustangs','calpolytechnic'],
+    southernutah:['southernutah','soutah','soututah','southernutahthunderbirds'],utahtech:['utahtech','utahtechuniversity','utahtechtrailblazers'],ucdavis:['ucdavis','ucdavisaggies'],portlandstate:['portlandstate','portlandst','portlandstatevikings']
   };
-  function canonical(s){
-    const n=norm(s);
-    for(const [k,v] of Object.entries(aliases)) if(v.some(x=>norm(x)===n)) return k;
-    return null;
-  }
+  function canonical(s){const n=norm(s);for(const [k,v] of Object.entries(aliases))if(v.some(x=>norm(x)===n))return k;return null;}
   function matches(a,b){
     if(!a||!b)return false;
-    const ao=typeof a==='object'?a:null, bo=typeof b==='object'?b:null;
-    if(ao?.id&&bo?.id&&String(ao.id)===String(bo.id)) return true;
+    const ao=typeof a==='object'?a:null,bo=typeof b==='object'?b:null;
+    if(ao?.id&&bo?.id&&String(ao.id)===String(bo.id))return true;
     const av=typeof a==='object'?(a.displayName||a.shortDisplayName||a.name||a.abbreviation||''):String(a);
     const bv=typeof b==='object'?(b.displayName||b.shortDisplayName||b.name||b.abbreviation||''):String(b);
     if(norm(av)===norm(bv))return true;
-    const ac=canonical(av),bc=canonical(bv);
-    return !!ac&&ac===bc;
+    const ac=canonical(av),bc=canonical(bv);return !!ac&&ac===bc;
   }
   function teamObjectMatches(name,t){
     const key=canonical(name)||norm(name);
     if(t?.id&&teamIds[key]&&String(t.id)===String(teamIds[key]))return true;
     return matches(name,t?.displayName||t?.name)||matches(name,t?.shortDisplayName||t?.short)||matches(name,t?.abbreviation);
   }
-  function statusText(ev){
-    if(!ev)return 'NO GAME';
-    if(ev.completed)return ev.detail||'FINAL';
-    if(ev.state==='in')return ev.detail||'LIVE';
-    if(ev.date)return new Date(ev.date).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});
-    return 'TBA';
-  }
   function eventTeams(ev){return Array.isArray(ev?.teams)?ev.teams:[];}
   function teamName(t){return t?.shortDisplayName||t?.short||t?.displayName||t?.name||t?.abbreviation||'Team';}
-  function logoFor(t){
-    const id=t?.team?.id||t?.id; const direct=t?.team?.logo||t?.logo;
-    return direct||(id?`https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(id)}.png`:'');
-  }
-  function teamRow(t){
-    const name=teamName(t),logo=logoFor(t);
-    return `<div class="score-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy">`:''}<span>${escapeHtml(name)}</span><strong>${escapeHtml(t?.score??'—')}</strong></div>`;
-  }
-
+  function logoFor(t){const id=t?.team?.id||t?.id;const direct=t?.team?.logo||t?.logo;return direct||(id?`https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(id)}.png`:'');}
+  function statusText(ev){if(!ev)return 'NO GAME';if(ev.completed)return ev.detail||'FINAL';if(ev.state==='in')return ev.detail||'LIVE';if(ev.date)return new Date(ev.date).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});return 'TBA';}
   function parseScheduleDate(label){
-    const m=String(label||'').trim().match(/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})$/i);
-    if(!m)return null;
-    const months={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
-    return new Date(2026,months[m[1].slice(0,1).toUpperCase()+m[1].slice(1).toLowerCase()],Number(m[2]),12);
+    const m=String(label||'').trim().match(/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})$/i);if(!m)return null;
+    const months={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};return new Date(2026,months[m[1][0].toUpperCase()+m[1].slice(1).toLowerCase()],Number(m[2]),12);
   }
   function scheduleGamesForWeek(w){
-    const rows=schedule.filter(g=>{
-      const d=parseScheduleDate(g.date); if(!d)return false;
-      return d>=new Date(w[0]+'T00:00:00')&&d<=new Date(w[1]+'T23:59:59');
-    });
-    const games=[]; const seen=new Set();
+    const rows=schedule.filter(g=>{const d=parseScheduleDate(g.date);return d&&d>=new Date(w[0]+'T00:00:00')&&d<=new Date(w[1]+'T23:59:59')&&bigSkyTeams.some(t=>matches(t,g.team));});
+    const games=[];const seen=new Set();
     rows.forEach(g=>{
-      const isBigSkyTeam=bigSkyTeams.some(t=>matches(t,g.team));
-      if(!isBigSkyTeam)return;
-      const home=g.location==='Home'?g.team:g.opponent;
-      const away=g.location==='Home'?g.opponent:g.team;
+      const home=g.location==='Home'?g.team:g.opponent,away=g.location==='Home'?g.opponent:g.team;
       const key=`${g.date}|${norm(away)}|${norm(home)}`;
-      if(seen.has(key))return;
-      seen.add(key);
-      games.push({
-        date:g.date, time:g.time||'TBA', away, home, bigSkyGame:!!g.big_sky_game
-      });
+      if(seen.has(key))return;seen.add(key);
+      games.push({...g,displayAway:away,displayHome:home,bigSkyGame:!!g.big_sky_game,matchupKey:key});
     });
-    return games;
+    return games.sort((a,b)=>(parseScheduleDate(a.date)-parseScheduleDate(b.date))||String(a.time||'').localeCompare(String(b.time||'')));
   }
-
   function eventMatchesGame(ev,g){
-    const ts=eventTeams(ev); if(ts.length<2)return false;
-    const away=ts.find(t=>t.homeAway==='away')||ts[0];
-    const home=ts.find(t=>t.homeAway==='home')||ts[1];
-    return matches(g.away,away)||matches(g.home,home) ? (matches(g.away,away)&&matches(g.home,home)) : false;
+    const ts=eventTeams(ev);if(ts.length<2)return false;
+    const away=ts.find(t=>t.homeAway==='away')||ts[0],home=ts.find(t=>t.homeAway==='home')||ts[1];
+    return matches(g.displayAway,away)&&matches(g.displayHome,home);
   }
-
   async function fetchESPNEvents(w){
-    const urls=[
-      `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=1000`,
-      `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=1000`
-    ];
-    for(const url of urls){
-      try{
-        const r=await fetch(url,{cache:'no-store'}); if(!r.ok)continue;
-        const p=await r.json(); if(Array.isArray(p.events))return p.events;
-      }catch(e){/* try next source */}
-    }
+    const urls=[`https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=1000`,`https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=1000`];
+    for(const url of urls){try{const r=await fetch(url,{cache:'no-store'});if(!r.ok)continue;const p=await r.json();if(Array.isArray(p.events))return p.events;}catch(e){}}
     return [];
   }
-
   function normalizeESPNEvent(ev){
-    const c=(ev?.competitions||[])[0]||{};
-    const ts=(c.competitors||[]).map(x=>({
-      id:String(x.id||x.team?.id||''),name:x.team?.displayName||x.team?.shortDisplayName||'',short:x.team?.shortDisplayName||x.team?.displayName||'',
-      abbreviation:x.team?.abbreviation||'',homeAway:x.homeAway||'',score:x.score??'',logo:x.team?.logo||''
-    }));
-    const st=c.status?.type||{};
-    const broadcasts=[]; (c.broadcasts||[]).forEach(b=>(b.names||[]).forEach(n=>broadcasts.push(n)));
+    const c=(ev?.competitions||[])[0]||{};const ts=(c.competitors||[]).map(x=>({id:String(x.id||x.team?.id||''),name:x.team?.displayName||x.team?.shortDisplayName||'',short:x.team?.shortDisplayName||x.team?.displayName||'',abbreviation:x.team?.abbreviation||'',homeAway:x.homeAway||'',score:x.score??'',logo:x.team?.logo||''}));
+    const st=c.status?.type||{};const broadcasts=[];(c.broadcasts||[]).forEach(b=>(b.names||[]).forEach(n=>broadcasts.push(n)));
     return {id:String(ev.id||''),date:ev.date||c.date||'',teams:ts,state:st.state||'',completed:!!st.completed,detail:st.shortDetail||st.detail||'',broadcasts:broadcasts.slice(0,3)};
   }
-
-  function mergedEventForGame(g,liveEvents){
-    const live=liveEvents.find(ev=>eventMatchesGame(ev,g));
-    if(live)return normalizeESPNEvent(live);
-    const d=parseScheduleDate(g.date);
-    const dateIso=d?`${g.date}`:'';
-    return {
-      id:`schedule-${norm(g.date)}-${norm(g.away)}-${norm(g.home)}`,
-      date:dateIso, state:'pre',completed:false,detail:g.time||'TBA',broadcasts:[],
-      teams:[{name:g.away,short:g.away,homeAway:'away',score:''},{name:g.home,short:g.home,homeAway:'home',score:''}],
-      scheduleFallback:true,bigSkyGame:g.bigSkyGame,time:g.time
-    };
-  }
-
+  function findLive(g,liveEvents){const raw=liveEvents.find(ev=>eventMatchesGame(ev,g));return raw?normalizeESPNEvent(raw):null;}
+  function fallbackEvent(g){return {id:`schedule-${norm(g.date)}-${norm(g.displayAway)}-${norm(g.displayHome)}`,date:`2026-${String(parseScheduleDate(g.date).getMonth()+1).padStart(2,'0')}-${String(parseScheduleDate(g.date).getDate()).padStart(2,'0')}T12:00:00`,state:'pre',completed:false,detail:g.time||'TBA',broadcasts:[],teams:[{name:g.displayAway,short:g.displayAway,homeAway:'away',score:''},{name:g.displayHome,short:g.displayHome,homeAway:'home',score:''}],scheduleFallback:true};}
+  function teamRow(t,showScore){const name=teamName(t),logo=logoFor(t);return `<div class="score-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy">`:''}<span>${escapeHtml(name)}</span>${showScore?`<strong>${escapeHtml(t?.score??'—')}</strong>`:''}</div>`;}
   function gameCard(ev,g){
-    const ts=eventTeams(ev); const away=ts.find(t=>t.homeAway==='away')||ts[0]; const home=ts.find(t=>t.homeAway==='home')||ts[1];
-    const final=!!ev.completed, live=ev.state==='in';
-    const state=live?'live':(final?'final':'scheduled');
-    const label=g.bigSkyGame?'BIG SKY':'NON-CONFERENCE';
-    const status=final?(ev.detail||'FINAL'):live?(ev.detail||'LIVE'):(g.time||statusText(ev));
-    const tv=(ev.broadcasts||[]).slice(0,2).join(', ');
-    return `<div class="fcs-game ${state} bigsky-row"><div class="fcs-time"><b>${escapeHtml(g.date)}</b><small>${escapeHtml(label)}</small></div><div class="fcs-matchup">${teamRow(away)}${teamRow(home)}<small class="score-game-status">${escapeHtml(status)}${tv?` • ${escapeHtml(tv)}`:''}</small></div><div class="fcs-score score-status">${final||live?`<span class="score-big">${escapeHtml(away?.score??'—')}–${escapeHtml(home?.score??'—')}</span><small>${escapeHtml(final?'FINAL':status)}</small>`:'<small>UPCOMING</small>'}</div><div class="fcs-tv">${escapeHtml(tv)}</div></div>`;
+    const ts=eventTeams(ev),away=ts.find(t=>t.homeAway==='away')||ts[0],home=ts.find(t=>t.homeAway==='home')||ts[1],final=!!ev.completed,live=ev.state==='in';
+    const state=live?'live':(final?'final':'scheduled'),label=g.bigSkyGame?'BIG SKY':'NON-CONFERENCE',tv=(ev.broadcasts||[]).slice(0,2).join(', ');
+    const status=final?(ev.detail||'FINAL'):live?(ev.detail||'LIVE'):(g.time||'TBA');
+    return `<div class="fcs-game ${state} bigsky-row" data-fcs-game-key="${escapeHtml(g.matchupKey)}"><div class="fcs-time"><b>${escapeHtml(g.date)}</b><small>${escapeHtml(label)}</small></div><div class="fcs-matchup">${teamRow(away,final||live)}${teamRow(home,final||live)}<small class="score-game-status">${escapeHtml(status)}${tv?` • ${escapeHtml(tv)}`:''}</small></div><div class="fcs-score score-status">${final||live?`<span class="score-big">${escapeHtml(away?.score??'—')}–${escapeHtml(home?.score??'—')}</span><small>${escapeHtml(final?'FINAL':status)}</small>`:`<small>${escapeHtml(status)}</small>`}</div><div class="fcs-tv">${escapeHtml(tv)}</div><div class="bigsky-info bigsky-betting"><b>CHECKING…</b><small>MARKET LINES</small></div></div>`;
   }
-
   function top25Card(t,events){
-    const ev=events.find(e=>eventTeams(e).some(x=>teamObjectMatches(t.team,x)));
-    const rank=escapeHtml(t.rank||'');
-    if(ev){
-      const ts=eventTeams(ev); const away=ts.find(x=>x.homeAway==='away')||ts[0]; const home=ts.find(x=>x.homeAway==='home')||ts[1];
-      const status=ev.completed?'FINAL':(ev.state==='in'?statusText(ev):(ev.date?new Date(ev.date).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'}):'TBA'));
-      return `<div class="fcs-rank-card ${matches('Montana',t.team)?'griz':''}"><div class="fcs-top-matchup">${teamRow(away)}${teamRow(home)}<small>${escapeHtml(status)}</small></div></div>`;
-    }
+    const ev=events.find(e=>eventTeams(e).some(x=>teamObjectMatches(t.team,x)));const rank=escapeHtml(t.rank||'');
+    if(ev){const ts=eventTeams(ev),away=ts.find(x=>x.homeAway==='away')||ts[0],home=ts.find(x=>x.homeAway==='home')||ts[1],playing=ev.completed||ev.state==='in';const status=ev.completed?'FINAL':(ev.state==='in'?statusText(ev):(ev.date?new Date(ev.date).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'}):'TBA'));return `<div class="fcs-rank-card ${matches('Montana',t.team)?'griz':''}"><div class="fcs-top-matchup">${teamRow(away,playing)}${teamRow(home,playing)}<small>${escapeHtml(status)}</small></div></div>`;}
     return `<div class="fcs-rank-card ${matches('Montana',t.team)?'griz':''}"><div class="fcs-top-matchup"><div class="fcs-top-team-row"><span><span class="fcs-team-rank">#${rank}</span><span class="fcs-team-name">${escapeHtml(t.team)}</span></span><strong>—</strong></div><small>${escapeHtml(t.record||'')} • NO GAME THIS WEEK</small></div></div>`;
   }
-
+  async function enrichScoreCards(games){
+    await Promise.all(games.map(async g=>{
+      const row=document.querySelector(`.fcs-game[data-fcs-game-key="${CSS.escape(g.matchupKey)}"]`);if(!row)return;
+      try{
+        const odds=await fetchBigSkyOdds({...g,date:g.date,team:g.team,opponent:g.opponent,displayAway:g.displayAway,displayHome:g.displayHome,location:g.location});
+        const bet=row.querySelector('.bigsky-betting');
+        const o=odds?.__allBooks?odds:(odds?.__multi?odds:(odds?.__circa?(circaFormatOdds(odds)||bigSkyFormatOdds(odds)):bigSkyFormatOdds(odds)));
+        if(bet)bet.innerHTML=o?.html?`${o.html}<small>${escapeHtml(o.sub||'CURRENT MARKET LINES')}</small>`:`<b>${escapeHtml(o?.main||'LINE NOT POSTED')}</b><small>${escapeHtml(o?.sub||'BETTING LINE')}</small>`;
+      }catch(e){const bet=row.querySelector('.bigsky-betting');if(bet)bet.innerHTML='<b>LINE NOT POSTED</b><small>TRY AGAIN LATER</small>';}
+    }));
+  }
   async function draw(){
-    const w=weeks[Number(weekEl.value)||0];
-    if(bigSkyLabelEl)bigSkyLabelEl.textContent=w[2]+' • All 13 teams';
-    statusEl.textContent='Loading schedule + live FCS scores…';
+    const w=weeks[Number(weekEl.value)||0];if(bigSkyLabelEl)bigSkyLabelEl.textContent=w[2]+' • All 13 Big Sky teams';
+    statusEl.textContent='Loading complete Big Sky schedule…';
     const scheduled=scheduleGamesForWeek(w);
     const liveEvents=await fetchESPNEvents(w);
-    const merged=scheduled.map(g=>mergedEventForGame(g,liveEvents));
-    const covered=new Set(); merged.forEach(ev=>eventTeams(ev).forEach(t=>{for(const bs of bigSkyTeams)if(matches(bs,t))covered.add(canonical(bs)||norm(bs));}));
-    statusEl.textContent=`${merged.length} Big Sky games • ${covered.size}/13 teams covered`;
-
-    topEl.innerHTML=top25.slice(0,25).map(t=>top25Card(t,liveEvents.map(normalizeESPNEvent))).join('');
-    if(bigSkyEl)bigSkyEl.innerHTML=merged.map((ev,i)=>gameCard(ev,scheduled[i])).join('')||'<div class="fcs-loading">No games scheduled this week.</div>';
+    const normalizedLive=liveEvents.map(normalizeESPNEvent);
+    const merged=scheduled.map(g=>({g,ev:findLive(g,liveEvents)||fallbackEvent(g)}));
+    const covered=new Set();merged.forEach(x=>{if(bigSkyTeams.some(t=>matches(t,x.g.team)||matches(t,x.g.opponent))) {covered.add(canonical(x.g.team)||norm(x.g.team));covered.add(canonical(x.g.opponent)||norm(x.g.opponent));}});
+    statusEl.textContent=`${merged.length} Big Sky games • ${covered.size}/13 teams scheduled`;
+    topEl.innerHTML=top25.slice(0,25).map(t=>top25Card(t,normalizedLive)).join('');
+    if(bigSkyEl)bigSkyEl.innerHTML=merged.map(x=>gameCard(x.ev,x.g)).join('')||'<div class="fcs-loading">No games scheduled this week.</div>';
+    await enrichScoreCards(merged.map(x=>x.g));
   }
-
   weekEl.onchange=()=>{weekEl.dataset.userChanged='1';draw();};
   if(refreshEl)refreshEl.onclick=draw;
   draw();
