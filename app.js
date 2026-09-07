@@ -500,11 +500,22 @@ async function renderFCSScoreboard(){
         if(!ev)return `<div class="fcs-game scheduled bigsky-row bye"><div class="fcs-time">BYE</div><div class="fcs-matchup"><b>${escapeHtml(team)}</b><small>NO GAME THIS WEEK</small></div><div class="fcs-score">BYE</div><div class="fcs-tv"></div></div>`;
         const d=gameLabel(ev);
         const label=(team==='Weber State'&&[d.away,d.home].includes('Southern Utah'))||(team==='Southern Utah'&&[d.away,d.home].includes('Weber State'))?'NON-CONFERENCE':'BIG SKY';
-        const scores=(ev.teams||[]).map(x=>`${escapeHtml(x.short||x.name||'')} ${escapeHtml(x.score??'')}`).join(' • ');
         const tv=(ev.broadcasts||[]).slice(0,2).join(', ');
         const state=ev.state==='in'?'live':(ev.completed?'final':'scheduled');
-        const rightScore=(ev.completed||ev.state==='in') ? (()=>{ const a=(ev.teams||[]).find(x=>x.homeAway==='away'), h=(ev.teams||[]).find(x=>x.homeAway==='home'); return `<span class="score-big">${escapeHtml(a?.score??'0')}–${escapeHtml(h?.score??'0')}</span><small>${escapeHtml(statusText(ev))}</small>`; })() : `<small>${escapeHtml(statusText(ev))}</small>`;
-        return `<div class="fcs-game ${state} bigsky-row"><div class="fcs-time">${escapeHtml(d.time)}</div><div class="fcs-matchup"><b>${escapeHtml(d.away)} @ ${escapeHtml(d.home)}</b><small>${scores} <span class="bigsky-game-tag">${label}</span></small></div><div class="fcs-score">${rightScore}</div><div class="fcs-tv">${escapeHtml(tv)}</div></div>`;
+        const away=(ev.teams||[]).find(x=>x.homeAway==='away') || (ev.teams||[])[0];
+        const home=(ev.teams||[]).find(x=>x.homeAway==='home') || (ev.teams||[])[1];
+        const teamLogo=(x)=>{
+          const id=x?.team?.id || x?.id;
+          const direct=x?.team?.logo || x?.logo;
+          return direct || (id ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(id)}.png` : '');
+        };
+        const teamRow=(x)=>{
+          const name=x?.short||x?.name||'Team';
+          const logo=teamLogo(x);
+          return `<div class="score-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy">`:''}<span>${escapeHtml(name)}</span><strong>${escapeHtml(x?.score??'—')}</strong></div>`;
+        };
+        const statusLabel=ev.completed ? 'FINAL' : (ev.state==='in' ? statusText(ev) : d.time);
+        return `<div class="fcs-game ${state} bigsky-row"><div class="fcs-time">${escapeHtml(label)}</div><div class="fcs-matchup">${teamRow(away)}${teamRow(home)}<small class="score-game-status">${escapeHtml(statusLabel)}${tv?` • ${escapeHtml(tv)}`:''}</small></div><div class="fcs-score score-status">${escapeHtml(statusLabel)}</div><div class="fcs-tv">${escapeHtml(tv)}</div></div>`;
       }).join('');
     }
   }

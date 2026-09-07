@@ -2449,3 +2449,60 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .ghq-next-details span{color:#ddd}
 @media(max-width:850px){.ghq-next-team-logo{width:96px;height:96px;padding:10px}}
 @media(max-width:560px){.ghq-next-team-logo{width:88px;height:88px;padding:9px}}
+
+/* Scoreboard redesign: clear top/bottom team rows with logos and scores */
+.fcs-game.bigsky-row{
+  grid-template-columns:110px minmax(0,1fr) 1px 150px;
+  gap:18px;
+  padding:14px 18px;
+}
+.fcs-game.bigsky-row .fcs-matchup{min-width:0}
+.score-team-row{
+  display:grid;
+  grid-template-columns:30px minmax(0,1fr) auto;
+  align-items:center;
+  gap:10px;
+  min-height:38px;
+  padding:4px 0;
+  border-bottom:1px solid #eee;
+}
+.score-team-row:last-of-type{border-bottom:0}
+.score-team-row img{
+  width:28px;
+  height:28px;
+  object-fit:contain;
+}
+.score-team-row span{
+  font-size:14px;
+  font-weight:800;
+  line-height:1.1;
+}
+.score-team-row strong{
+  min-width:42px;
+  text-align:right;
+  font:900 25px/1 "Barlow Condensed",sans-serif;
+  color:#171719;
+}
+.fcs-game.live .score-team-row strong{color:#8b1236}
+.score-game-status{
+  display:block;
+  margin-top:7px;
+  font-size:9px!important;
+  font-weight:800;
+  letter-spacing:.06em;
+  color:#777!important;
+}
+.fcs-game.bigsky-row .fcs-score.score-status{display:none}
+@media(max-width:900px){
+  .fcs-game.bigsky-row{grid-template-columns:90px minmax(0,1fr) 1px 100px;gap:12px}
+  .score-team-row span{font-size:13px}
+  .score-team-row strong{font-size:23px}
+}
+@media(max-width:560px){
+  .fcs-game.bigsky-row{grid-template-columns:1fr;gap:5px;padding:12px 14px}
+  .fcs-game.bigsky-row .fcs-time{font-size:9px}
+  .fcs-game.bigsky-row .fcs-tv{display:none}
+  .score-team-row{grid-template-columns:28px minmax(0,1fr) auto}
+  .score-team-row img{width:25px;height:25px}
+  .score-team-row strong{font-size:24px}
+}
