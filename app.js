@@ -408,6 +408,12 @@ async function renderFCSScoreboard(){
     }
     return null;
   }
+  const canonicalRankKey=s=>canonicalTeamKey(s)||norm(s);
+  const rankLookup=new Map();
+  top25.slice(0,25).forEach(item=>{
+    const r=String(item?.rank??'').trim();
+    if(r) rankLookup.set(canonicalRankKey(item?.team||''),r);
+  });
   function looseTeamMatch(a,b){
     const ak=teamKeys(a), bk=teamKeys(b);
     if(ak.some(k=>bk.includes(k))) return true;
@@ -497,7 +503,9 @@ async function renderFCSScoreboard(){
       const teamRow=(x)=>{
         const name=x?.short||x?.name||'Team';
         const logo=teamLogo(x);
-        return `<div class="fcs-top-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy">`:''}<span>${escapeHtml(name)}</span><strong>${escapeHtml(x?.score??'—')}</strong></div>`;
+        const rankForTeam=rankLookup.get(canonicalRankKey(x?.name||x?.short||x?.abbrev||''));
+        const rankBadge=rankForTeam?`<span class="fcs-team-rank">#${escapeHtml(rankForTeam)}</span>`:'';
+        return `<div class="fcs-top-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy">`:''}<span>${rankBadge}<span class="fcs-team-name">${escapeHtml(name)}</span></span><strong>${escapeHtml(x?.score??'—')}</strong></div>`;
       };
       if(ev){
         const away=(ev.teams||[]).find(x=>x.homeAway==='away') || (ev.teams||[])[0];
@@ -506,7 +514,9 @@ async function renderFCSScoreboard(){
         return `<div class="fcs-rank-card ${cardClass}"><span class="fcs-rank">${rank}</span><div class="fcs-top-matchup">${teamRow(away)}${teamRow(home)}<small>${escapeHtml(statusLabel)}</small></div></div>`;
       }
       const fallbackLogo=t.logo||t.logo_url||'';
-      const fallbackRow=`<div class="fcs-top-team-row">${fallbackLogo?`<img src="${escapeHtml(fallbackLogo)}" alt="" loading="lazy">`:''}<span>${escapeHtml(t.team)}</span><strong>—</strong></div>`;
+      const fallbackRank=String(t.rank||'').trim();
+      const fallbackRankBadge=fallbackRank?`<span class="fcs-team-rank">#${escapeHtml(fallbackRank)}</span>`:'';
+      const fallbackRow=`<div class="fcs-top-team-row">${fallbackLogo?`<img src="${escapeHtml(fallbackLogo)}" alt="" loading="lazy">`:''}<span>${fallbackRankBadge}<span class="fcs-team-name">${escapeHtml(t.team)}</span></span><strong>—</strong></div>`;
       return `<div class="fcs-rank-card ${cardClass}"><span class="fcs-rank">${rank}</span><div class="fcs-top-matchup">${fallbackRow}<small>${escapeHtml(t.record||'')} • NO GAME THIS WEEK</small></div></div>`;
     }).join('');
 

@@ -2521,3 +2521,9 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   .score-team-row img{width:25px;height:25px}
   .score-team-row strong{font-size:24px}
 }
+
+/* FCS Top 25: show the ranking directly beside each ranked team. */
+.fcs-top-team-row > span:first-of-type{display:flex;align-items:center;gap:7px;min-width:0;}
+.fcs-team-rank{display:inline-flex;align-items:center;justify-content:center;min-width:29px;height:21px;padding:0 5px;border-radius:4px;background:#8b1236;color:#fff;font-size:11px;font-weight:900;line-height:1;letter-spacing:.1px;flex:0 0 auto;}
+.fcs-team-name{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.fcs-rank-card > .fcs-rank{display:none;}
