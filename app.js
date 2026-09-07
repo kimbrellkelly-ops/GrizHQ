@@ -288,6 +288,12 @@ async function fetchLiveFCSCoachesPoll() {
     const record = t.record || t.records?.[0]?.summary || "";
     return { rank, previous: hasPrevious ? previous : null, delta, name, record };
   });
+  // ESPN can temporarily return the preseason FCS poll after a new weekly poll
+  // has been released elsewhere. A real weekly poll should contain previous
+  // ranks for most teams. Reject an all-NEW response so we use the verified
+  // weekly snapshot instead of displaying the stale preseason poll.
+  const withPrevious = teams.filter(t => t.previous != null).length;
+  if (withPrevious < 10) throw new Error("ESPN returned a stale/preseason FCS poll");
   const date = poll.lastUpdated || poll.date || data.lastUpdated || "";
   return { teams, date, name: poll.name || poll.headline || "FCS Coaches Poll" };
 }
