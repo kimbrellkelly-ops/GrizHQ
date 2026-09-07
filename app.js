@@ -1103,29 +1103,18 @@ async function renderBigSkyAndOpponent(){
         const weekGames = games.filter(game => weekForDate(game.date) === selectedWeek);
         const shownTeams = selectedTeam === "ALL" ? teams : [selectedTeam];
         const visible = [];
-        const seen = new Map();
+        const seen = new Set();
 
-        // The source schedule has one row from each team's perspective.  Do
-        // NOT include the time string in the dedupe key: one row can say
-        // "8:00 PM MT" while the reverse row says "7:00 PM MST" for the exact
-        // same kickoff.  Sorting the two participants gives us one true game.
+        // Build one card per matchup when viewing the whole league.  The source
+        // schedule contains a row for each participating team, so dedupe games
+        // here without changing the underlying data or any other site section.
         shownTeams.forEach(team => {
           weekGames.filter(game => game.team === team).forEach(game => {
             const a = game.location === "Away" ? game.team : game.opponent;
             const h = game.location === "Away" ? game.opponent : game.team;
-            const matchupKey = `${game.date}|${[norm(a),norm(h)].sort().join('|')}`;
-            if (selectedTeam === "ALL" && seen.has(matchupKey)) {
-              const priorIndex = seen.get(matchupKey);
-              const prior = visible[priorIndex];
-              if (prior) {
-                if ((!prior.time || prior.time === 'TBA') && game.time) prior.time = game.time;
-                if (!prior.network && game.network) prior.network = game.network;
-                if (!prior.venue && game.venue) prior.venue = game.venue;
-                prior.big_sky_game = prior.big_sky_game || game.big_sky_game;
-              }
-              return;
-            }
-            seen.set(matchupKey, visible.length);
+            const matchupKey = `${game.date}|${a}|${h}|${game.time || ""}`;
+            if (selectedTeam === "ALL" && seen.has(matchupKey)) return;
+            seen.add(matchupKey);
             visible.push({...game, displayAway:a, displayHome:h, matchupKey});
           });
         });
@@ -1283,12 +1272,6 @@ async function renderFCSScoreboard(){
     ucdavis:['ucdavis','ucdavisaggies'],portlandstate:['portlandstate','portlandst','portlandstatevikings']
   };
   function canonicalBigSky(s){const n=norm(s);for(const [k,v] of Object.entries(bigSkyAliases))if(v.some(x=>norm(x)===n))return k;return null;}
-  const mascotWords=['grizzlies','bobcats','vandals','wildcats','eagles','lumberjacks','bears','bengals','mustangs','thunderbirds','trailblazers','aggies','vikings','rams','crimson','bulldogs','argonauts','jackrabbits','coyotes','buffaloes','cowboys','cowgirls','wolf pack','wolfpack','huskies','tigers','bison','phoenix','seahawks','penguins','penguins','colonials','flames','phoenix','gamecocks','paladins','phoenix','bearkats','cardinals','sooners','hornets','spiders','dukes','rainbows','warriors','rainiers','hawks','fighting illini','redbirds','salukis','phoenix'];
-  function cleanSchoolName(s){
-    let n=norm(s);
-    for(const m of mascotWords){const mm=norm(m);if(n.endsWith(mm)&&n.length>mm.length){n=n.slice(0,-mm.length);break;}}
-    return n;
-  }
   function teamMatch(a,b){
     if(!a||!b)return false;
     const ao=typeof a==='object'?a:null,bo=typeof b==='object'?b:null;
@@ -1299,9 +1282,12 @@ async function renderFCSScoreboard(){
     if(an===bn)return true;
     const ac=canonicalBigSky(an),bc=canonicalBigSky(bn);
     if(ac&&bc&&ac===bc)return true;
-    // Never use prefix matching: it causes Idaho/Idaho State and
-    // South Dakota/South Dakota State to collide.
-    return cleanSchoolName(an)===cleanSchoolName(bn);
+    // General FCS school-name matching. ESPN often appends the mascot;
+    // rankings normally do not.  The Montana/Montana State guard prevents
+    // the shorter Montana name from matching the Bobcats.
+    const montanaPair=(an.includes('montanastate')||bn.includes('montanastate'))&&(an.includes('montana')||bn.includes('montana'));
+    if(!montanaPair && (an.startsWith(bn)||bn.startsWith(an)))return true;
+    return false;
   }
   function teamObjMatch(name,t){
     if(!t)return false;
@@ -1327,7 +1313,7 @@ async function renderFCSScoreboard(){
       const away=g.location==='Away'?g.opponent:g.team;
       const home=g.location==='Away'?g.team:g.opponent;
       if(!away||!home)return;
-      const key=`${String(g.date)}|${norm(away)}|${norm(home)}`;
+      const pair=[norm(away),norm(home)].sort().join('|'); const key=`${String(g.date)}|${pair}`;
       const existing=byGame.get(key);
       if(existing){
         existing.bigSkyGame=existing.bigSkyGame||!!g.big_sky_game;
@@ -1362,13 +1348,13 @@ async function renderFCSScoreboard(){
   async function fetchESPNEvents(w){
     const urls=[
       `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=1000`,
-      `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=1000`,
-      // Full college-football feed is required for FCS teams playing FBS opponents.
       `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&limit=1000`,
+      `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=1000`,
       `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&limit=1000`
     ];
-    for(const url of urls){try{const r=await fetch(url,{cache:'no-store'});if(!r.ok)continue;const p=await r.json();if(Array.isArray(p.events))return p.events;}catch(e){}}
-    return [];
+    const all=[]; const seen=new Set();
+    for(const url of urls){try{const r=await fetch(url,{cache:'no-store'});if(!r.ok)continue;const p=await r.json();for(const ev of (Array.isArray(p.events)?p.events:[])){const id=String(ev.id||'');if(id&&!seen.has(id)){seen.add(id);all.push(ev);}}}catch(e){}}
+    return all;
   }
   function statusText(ev,game){
     if(!ev)return game?.time||'TBA';
@@ -1383,7 +1369,7 @@ async function renderFCSScoreboard(){
   function top25Card(t,events,scheduled){
     const rank=escapeHtml(t.rank||''),name=String(t.team||'Team');
     const ev=findTeamEvent(name,events);
-    const sg=scheduled.find(g=>teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome));
+    const sg=scheduled.find(g=>teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome)) || fullSchedule.map(g=>{ const dt=scheduleDate(g.date); const start=new Date(weeks[Number(weekEl.value)||0][0]+'T00:00:00'); const end=new Date(weeks[Number(weekEl.value)||0][1]+'T23:59:59'); if(!dt||dt<start||dt>end)return null; const away=g.location==='Away'?g.opponent:g.team; const home=g.location==='Away'?g.team:g.opponent; return {...g,displayAway:away,displayHome:home,matchupKey:`${g.date}|${[norm(away),norm(home)].sort().join('|')}`}; }).find(g=>g && (teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome)));
     if(ev){
       const ts=eventTeams(ev),a=ts.find(x=>x.homeAway==='away')||ts[0],h=ts.find(x=>x.homeAway==='home')||ts[1],playing=ev.completed||ev.state==='in';
       return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b></div>${scoreCardTeam(a,sg?.displayAway||'Away',playing)}${scoreCardTeam(h,sg?.displayHome||'Home',playing)}<small>${escapeHtml(statusText(ev,sg))}</small></div></div>`;
