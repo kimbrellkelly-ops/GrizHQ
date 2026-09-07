@@ -35,5 +35,5 @@ jobs:
           git config user.name "griz-hq-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data.json
-          git diff --cached --quiet || git commit -m "Auto-update Griz HQ scores and roster"
+          git diff --cached --quiet || git commit -m "Auto-update Griz HQ data"
           git push
