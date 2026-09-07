@@ -760,17 +760,27 @@ function bigSkyWeatherLabel(code){
   const map={0:'Clear',1:'Mostly clear',2:'Partly cloudy',3:'Overcast',45:'Fog',48:'Rime fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',71:'Light snow',73:'Snow',75:'Heavy snow',80:'Rain showers',81:'Rain showers',82:'Heavy showers',85:'Snow showers',86:'Heavy snow showers',95:'Thunderstorms',96:'T-storms + hail',99:'T-storms + hail'};
   return map[Number(code)] || 'Forecast';
 }
+function forecastOpenDate(gameDate){
+  const dt=new Date(`${gameDate}T12:00:00`);
+  dt.setDate(dt.getDate()-7);
+  return dt.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+}
 async function fetchBigSkyWeather(game){
   const iso=bigSkyDateISO(game.date); const v=bigSkyVenueFor(game); if(!iso||!v) return null;
   const key=`${iso}|${v.lat}|${v.lon}`;
   if(!BIG_SKY_WEATHER_CACHE.has(key)){
     BIG_SKY_WEATHER_CACHE.set(key,(async()=>{
       try{
-        const url=`https://api.open-meteo.com/v1/forecast?latitude=${v.lat}&longitude=${v.lon}&daily=weather_code,temperature_2m_max,precipitation_probability_max,wind_speed_10m_max&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto&start_date=${iso}&end_date=${iso}`;
-        const res=await fetch(url); const d=await res.json();
-        if(!d.daily?.time?.length) return null;
-        return {temp:d.daily.temperature_2m_max?.[0], code:d.daily.weather_code?.[0], rain:d.daily.precipitation_probability_max?.[0], wind:d.daily.wind_speed_10m_max?.[0], venue:v.venue};
-      }catch(e){ return null; }
+        // Ask Open-Meteo for its full available forecast window instead of
+        // requesting a single date. This prevents future games from being
+        // incorrectly labeled TBD when the forecast is available.
+        const url=`https://api.open-meteo.com/v1/forecast?latitude=${v.lat}&longitude=${v.lon}&daily=weather_code,temperature_2m_max,precipitation_probability_max,wind_speed_10m_max&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto&forecast_days=16`;
+        const res=await fetch(url,{cache:'no-store'}); if(!res.ok) return {available:false,openDate:forecastOpenDate(iso)};
+        const d=await res.json();
+        const idx=Array.isArray(d.daily?.time)?d.daily.time.indexOf(iso):-1;
+        if(idx<0) return {available:false,openDate:forecastOpenDate(iso),venue:v.venue};
+        return {available:true,temp:d.daily.temperature_2m_max?.[idx],code:d.daily.weather_code?.[idx],rain:d.daily.precipitation_probability_max?.[idx],wind:d.daily.wind_speed_10m_max?.[idx],venue:v.venue};
+      }catch(e){ return {available:false,openDate:forecastOpenDate(iso),venue:v.venue}; }
     })());
   }
   return await BIG_SKY_WEATHER_CACHE.get(key);
@@ -786,12 +796,16 @@ async function enrichBigSkyScheduleCards(schedule){
     const o=odds?.__allBooks ? odds : (odds?.__multi ? odds : (odds?.__circa ? (circaFormatOdds(odds) || bigSkyFormatOdds(odds)) : bigSkyFormatOdds(odds)));
     if(bet){ if(o?.html) bet.innerHTML=`${o.html}<small>${escapeHtml(o.sub||'CURRENT MARKET LINES')}</small>`; else bet.innerHTML=`<b>${escapeHtml(o?.main||'LINE NOT POSTED')}</b><small>${escapeHtml(o?.sub||'BETTING LINE')}</small>`; }
     if(wx){
-      if(weather){
-        const temp=weather.temp!=null?`${Math.round(weather.temp)}°`:'TBD';
+      if(weather?.available){
+        const temp=weather.temp!=null?`${Math.round(weather.temp)}°`:'—';
         const rain=weather.rain!=null?`${Math.round(weather.rain)}% rain`:'';
         const wind=weather.wind!=null?`${Math.round(weather.wind)} mph wind`:'';
         wx.innerHTML=`<b>${escapeHtml(temp)} • ${escapeHtml(bigSkyWeatherLabel(weather.code))}</b><small>${escapeHtml([rain,wind].filter(Boolean).join(' • ')||'Forecast')}</small>`;
-      }else wx.innerHTML='<b>FORECAST TBD</b><small>GAME WEATHER</small>';
+      }else if(weather?.openDate){
+        wx.innerHTML=`<b>FORECAST OPENS ${escapeHtml(weather.openDate).toUpperCase()}</b><small>WEATHER NOT YET IN FORECAST WINDOW</small>`;
+      }else{
+        wx.innerHTML='<b>FORECAST UNAVAILABLE</b><small>TRY AGAIN LATER</small>';
+      }
     }
   });
   await Promise.all(jobs);
