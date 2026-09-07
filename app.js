@@ -14,6 +14,27 @@ const GRIZ_GAME_VENUES = {
   "Montana State": {lat:45.6676, lon:-111.0490, venue:"Bobcat Stadium"}
 };
 
+const GRIZ_SCHEDULE_LOGOS = {
+  "Montana": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png",
+  "Southern Utah": "https://a.espncdn.com/i/teamlogos/ncaa/500/253.png",
+  "Drake": "https://a.espncdn.com/i/teamlogos/ncaa/500/2181.png",
+  "Utah Tech": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png",
+  "Oregon State": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
+  "UC Davis": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png",
+  "Northern Colorado": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png",
+  "Northern Arizona": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png",
+  "Idaho": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
+  "Eastern Washington": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png",
+  "Portland State": "https://a.espncdn.com/i/teamlogos/ncaa/500/279.png",
+  "Idaho State": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
+  "Montana State": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
+};
+
+function scheduleLogo(name) {
+  const key = String(name || '').trim();
+  return GRIZ_SCHEDULE_LOGOS[key] || '';
+}
+
 function scheduleDateISO(label) {
   const m = String(label || '').trim().toUpperCase().match(/^([A-Z]{3})\s+(\d{1,2})/);
   if (!m) return null;
@@ -194,7 +215,7 @@ async function loadGrizData() {
     const schedule = document.getElementById("schedule-list");
     if (schedule && Array.isArray(d.schedule)) {
       const firstUpcoming = d.schedule.findIndex(x => !x.result);
-      schedule.innerHTML = `<div class="schedule-row head"><span>DATE</span><span>OPPONENT</span><span>RESULT / TIME</span><span>BETTING</span><span>WEATHER</span></div>` +
+      schedule.innerHTML = `<div class="schedule-row head"><span>DATE</span><span>OPPONENT</span><span>RESULT / TIME</span></div>` +
         d.schedule.map((g, i) => {
           const isNext = !g.result && i === firstUpcoming;
           const key = `${g.date || ""}|${g.opponent || ""}`;
@@ -203,13 +224,12 @@ async function loadGrizData() {
           const status = g.result || g.time || "";
           return `<div class="schedule-row game-card-row ${isNext ? "next" : ""} ${g.result ? "played" : "upcoming"}" data-game-key="${escapeHtml(key)}">
             <div class="schedule-main-date"><span>${escapeHtml(g.date || "")}</span><small>${g.location === "Away" ? "AWAY" : "HOME"}</small></div>
-            <div class="schedule-main-match"><b>${g.location === "Away" ? "@ " : ""}${escapeHtml(g.opponent || "")}</b><span>${escapeHtml(venue)}</span>${tv ? `<small>${escapeHtml(tv)}</small>` : ""}</div>
+            <div class="schedule-main-match"><div class="schedule-team-line"><img src="${scheduleLogo(g.opponent)}" alt="${escapeHtml(g.opponent || "Opponent")} logo" loading="lazy" onerror="this.style.display='none'"><b>${g.location === "Away" ? "@ " : ""}${escapeHtml(g.opponent || "")}</b></div><span>${escapeHtml(venue)}</span>${tv ? `<small>${escapeHtml(tv)}</small>` : ""}</div>
             <div class="schedule-main-status"><strong>${escapeHtml(status)}</strong>${isNext ? `<em>NEXT GAME</em>` : (g.result ? `<em>FINAL</em>` : `<em>UPCOMING</em>`)}</div>
-            <div class="schedule-odds"><b>CHECKING…</b><span>Sportsbook line</span></div>
-            <div class="schedule-weather"><b>CHECKING…</b><span>Game-day forecast</span></div>
           </div>`;
         }).join("");
-      enrichScheduleCards(schedule, d.schedule);
+      // Main Griz schedule intentionally stays clean: no sportsbook/weather columns.
+      // The separate Around the League / Big Sky board handles market + weather data.
     }
 
     renderStatsDashboard(d.stats);
