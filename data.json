@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07T04:23:04.461813+00:00",
+  "updated": "2026-09-07T04:52:34.145563+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -20,7 +20,8 @@
       "location": "Home",
       "result": "W 28-21",
       "time": "7 PM",
-      "conference": true
+      "conference": true,
+      "game_center": "https://gogriz.com/game-center/6481"
     },
     {
       "date": "Sep 5 (Sat)",
@@ -28,7 +29,8 @@
       "location": "Home",
       "result": "W 45-10",
       "time": "1 PM",
-      "conference": false
+      "conference": false,
+      "game_center": "https://gogriz.com/game-center/6482"
     },
     {
       "date": "Sep 12 (Sat)",
@@ -36,7 +38,8 @@
       "location": "Home",
       "result": "",
       "time": "1 PM",
-      "conference": false
+      "conference": false,
+      "game_center": "https://gogriz.com/game-center/4257"
     },
     {
       "date": "Sep 19 (Sat)",
@@ -44,7 +47,8 @@
       "location": "Away",
       "result": "",
       "time": "9 PM (MT)",
-      "conference": false
+      "conference": false,
+      "game_center": "https://gogriz.com/game-center/6235"
     },
     {
       "date": "Sep 26 (Sat)",
@@ -52,7 +56,8 @@
       "location": "Away",
       "result": "",
       "time": "8 PM (MT)",
-      "conference": true
+      "conference": true,
+      "game_center": "https://gogriz.com/game-center/5256"
     },
     {
       "date": "Oct 3 (Sat)",
@@ -60,7 +65,8 @@
       "location": "Home",
       "result": "",
       "time": "2 PM",
-      "conference": true
+      "conference": true,
+      "game_center": "https://gogriz.com/game-center/5261"
     },
     {
       "date": "Oct 10 (Sat)",
@@ -68,7 +74,8 @@
       "location": "Away",
       "result": "",
       "time": "3 PM (MT)",
-      "conference": true
+      "conference": true,
+      "game_center": "https://gogriz.com/game-center/5260"
     },
     {
       "date": "Oct 17 (Sat)",
@@ -76,7 +83,8 @@
       "location": "Home",
       "result": "",
       "time": "1 PM",
-      "conference": true
+      "conference": true,
+      "game_center": "https://gogriz.com/game-center/6483"
     },
     {
       "date": "Oct 31 (Sat)",
@@ -84,7 +92,8 @@
       "location": "Away",
       "result": "",
       "time": "2 PM (MT)",
-      "conference": true
+      "conference": true,
+      "game_center": "https://gogriz.com/game-center/5259"
     },
     {
       "date": "Nov 7 (Sat)",
@@ -92,7 +101,8 @@
       "location": "Home",
       "result": "",
       "time": "1 PM",
-      "conference": true
+      "conference": true,
+      "game_center": "https://gogriz.com/game-center/5255"
     },
     {
       "date": "Nov 14 (Sat)",
@@ -100,7 +110,8 @@
       "location": "Home",
       "result": "",
       "time": "8:30 PM",
-      "conference": true
+      "conference": true,
+      "game_center": "https://gogriz.com/game-center/6484"
     },
     {
       "date": "Nov 21 (Sat)",
@@ -108,7 +119,8 @@
       "location": "Away",
       "result": "",
       "time": "Noon",
-      "conference": true
+      "conference": true,
+      "game_center": "https://gogriz.com/game-center/5262"
     }
   ],
   "coaches_poll": [
@@ -2940,24 +2952,24 @@
     "through": "Current 2026 cumulative stats",
     "team_summary": [
       {
-        "value": "2-0–1-0",
+        "value": "2-0",
         "label": "RECORD",
         "note": "2026"
       },
       {
-        "value": "36.50",
+        "value": "36.5",
         "label": "POINTS / GAME",
         "note": "Official cumulative stats"
       },
       {
-        "value": "826",
+        "value": "413",
         "label": "TOTAL OFFENSE",
-        "note": "Per game"
+        "note": "Yards per game"
       },
       {
-        "value": "—",
+        "value": "404",
         "label": "TOTAL DEFENSE",
-        "note": "Yards allowed"
+        "note": "Yards allowed per game"
       }
     ],
     "offense": [
@@ -27380,10 +27392,10 @@
     ]
   },
   "latest_press_conference": {
-    "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker",
-    "date": "Sun, 06 Sep 2026 02:23:32 +0000",
-    "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/",
-    "youtube_id": ""
+    "title": "Montana State press conference – Brent Vigen, Jabez Woods, Zac Crews after 51-24 win over Butler",
+    "date": "Sun, 06 Sep 2026 05:09:52 +0000",
+    "url": "https://skylinesportsmt.com/montana-state-press-conference-brent-vigen-jabez-woods-zac-crews-after-51-24-win-over-butler/",
+    "youtube_id": "BpTf14bwiDg"
   },
-  "fcs_scores_updated": "2026-09-07T04:23:31.875213+00:00"
+  "fcs_scores_updated": "2026-09-07T04:52:44.242046+00:00"
 }
