@@ -1425,7 +1425,10 @@ async function renderFCSScoreboard(){
     const rawEv=findTeamEvent(name,events);
     const ev=sg ? (events.find(e=>eventMatchesGame(e,sg)) || rawEv && eventMatchesGame(rawEv,sg) ? (events.find(e=>eventMatchesGame(e,sg)) || rawEv) : null) : rawEv;
     if(ev){
-      const ts=eventTeams(ev),a=ts.find(x=>x.homeAway==='away')||ts[0],h=ts.find(x=>x.homeAway==='home')||ts[1],playing=ev.completed||ev.state==='in';
+      const ts=eventTeams(ev);
+      const a=sg? (ts.find(x=>teamMatch(sg.displayAway,x))||ts.find(x=>x.homeAway==='away')||ts[0]) : (ts.find(x=>x.homeAway==='away')||ts[0]);
+      const h=sg? (ts.find(x=>teamMatch(sg.displayHome,x))||ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]) : (ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]);
+      const playing=ev.completed||ev.state==='in';
       return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b></div>${scoreCardTeam(a,sg?.displayAway||'Away',playing)}${scoreCardTeam(h,sg?.displayHome||'Home',playing)}<small>${escapeHtml(statusText(ev,sg))}</small></div></div>`;
     }
     if(sg){
@@ -1434,13 +1437,20 @@ async function renderFCSScoreboard(){
     return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b></div><small>${escapeHtml(t.record||'')} • NO GAME THIS WEEK</small></div></div>`;
   }
   function gameCard(game,ev){
-    const ts=eventTeams(ev),a=ts.find(x=>x.homeAway==='away')||ts[0]||null,h=ts.find(x=>x.homeAway==='home')||ts[1]||null;
+    const ts=eventTeams(ev);
+    // Always honor the scheduled matchup's home/away designation. ESPN can
+    // return competitors in different orders, and some historical/cached
+    // events do not reliably preserve homeAway. The scoreboard convention is
+    // therefore: AWAY team on top, HOME team on bottom.
+    const scheduledAway=game.displayAway,scheduledHome=game.displayHome;
+    const a=ts.find(x=>teamMatch(scheduledAway,x))||ts.find(x=>x.homeAway==='away')||ts[0]||null;
+    const h=ts.find(x=>teamMatch(scheduledHome,x))||ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||null;
     const final=!!ev?.completed,live=ev?.state==='in',state=live?'live':(final?'final':'scheduled');
     const label=game.bigSkyGame?'BIG SKY':'NON-CONFERENCE';
     const tv=(ev?.broadcasts||[]).slice(0,2).join(', ');
     const status=statusText(ev,game);
-    const awayName=a?teamName(a,game.displayAway):game.displayAway;
-    const homeName=h?teamName(h,game.displayHome):game.displayHome;
+    const awayName=a?teamName(a,scheduledAway):scheduledAway;
+    const homeName=h?teamName(h,scheduledHome):scheduledHome;
     return `<div class="fcs-game ${state} bigsky-row ghq-fcs-game" data-fcs-game-key="${escapeHtml(game.matchupKey)}"><div class="fcs-time"><b>${escapeHtml(game.date)}</b><small>${escapeHtml(label)}</small></div><div class="fcs-matchup">${scoreCardTeam(a,awayName,final||live)}${scoreCardTeam(h,homeName,final||live)}<small class="score-game-status">${escapeHtml(status)}${tv?' • '+escapeHtml(tv):''}</small></div><div class="fcs-score score-status">${final||live?`<span class="score-big">${escapeHtml(a?.score??'—')}–${escapeHtml(h?.score??'—')}</span><small>${escapeHtml(final?'FINAL':status)}</small>`:`<small>${escapeHtml(status)}</small>`}</div><div class="fcs-tv">${escapeHtml(tv)}</div><div class="bigsky-info bigsky-betting"><b>CHECKING…</b><small>MARKET LINES</small></div></div>`;
   }
   function liveOrCachedForGame(game,liveEvents,cachedEvents){
