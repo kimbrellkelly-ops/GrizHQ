@@ -113,15 +113,23 @@ async function loadGrizData() {
     console.warn("Griz HQ data layer unavailable; using page fallback.", e);
   }
 }
+function isMontanaGrizzlies(team) {
+  const s = String(team || "").toLowerCase().trim();
+  // Highlight Montana only. Never highlight Montana State/Bobcats.
+  if (!s.includes("montana")) return false;
+  if (/\bmontana\s+(?:state|st\.?)(?:\b|\.)/i.test(s)) return false;
+  if (s.includes("bobcats")) return false;
+  return true;
+}
 function renderPoll(id, teams) {
   const el = document.getElementById(id);
   if (!el || !Array.isArray(teams)) return;
-  el.innerHTML = teams.slice(0,20).map(t => `<li class="${String(t).toLowerCase().includes("montana") && !String(t).toLowerCase().includes("state") ? "griz" : ""}">${escapeHtml(t)}</li>`).join("");
+  el.innerHTML = teams.slice(0,20).map(t => `<li class="${isMontanaGrizzlies(t) ? "griz" : ""}">${escapeHtml(t)}</li>`).join("");
 }
 function renderMiniPolls(coaches, media) {
   const wrap = document.getElementById("rankings-mini");
   if (!wrap || !Array.isArray(coaches) || !Array.isArray(media)) return;
-  wrap.innerHTML = [coaches, media].map(poll => `<ol>${poll.slice(0,10).map(t => `<li class="${String(t).toLowerCase().includes("montana") && !String(t).toLowerCase().includes("state") ? "griz" : ""}">${escapeHtml(t)}</li>`).join("")}</ol>`).join("");
+  wrap.innerHTML = [coaches, media].map(poll => `<ol>${poll.slice(0,10).map(t => `<li class="${isMontanaGrizzlies(t) ? "griz" : ""}">${escapeHtml(t)}</li>`).join("")}</ol>`).join("");
 }
 function escapeHtml(s) { return String(s ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c])); }
 
@@ -478,7 +486,7 @@ async function renderFCSScoreboard(){
       const isBigSky=bigSkyTeams.some(x=>teamMatches(x,t.team));
       const detail=ev?gameLabel(ev):null;
       const matchup=detail?`${escapeHtml(detail.away)} @ ${escapeHtml(detail.home)}`:'No game this week';
-      const cardClass=isGriz?'griz':(isBigSky?'bigsky':'');
+      const cardClass=isGriz?'griz':'';
       return `<div class="fcs-rank-card ${cardClass}"><span class="fcs-rank">${escapeHtml(t.rank)}</span><div class="fcs-rank-team"><b>${escapeHtml(t.team)}</b><small>${escapeHtml(t.record||'')} • ${matchup}</small></div><span class="fcs-rank-score">${scoreLine(ev,t.team)}</span></div>`;
     }).join('');
 
