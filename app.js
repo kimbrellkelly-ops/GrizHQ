@@ -344,14 +344,60 @@ function bigSkyVenueFor(game){
   return BIG_SKY_VENUES[home] || Object.entries(BIG_SKY_VENUES).find(([k])=>bigSkyTeamKey(k)===bigSkyTeamKey(home))?.[1] || null;
 }
 function bigSkyFormatOdds(odds){
-  if(!odds) return {main:'NOT POSTED', sub:'Sportsbook line'};
-  const provider = odds.provider?.name || odds.providerName || 'Sportsbook';
+  if(!odds) return {main:'LINE NOT POSTED', sub:'ESPN • NO CURRENT LINE'};
+  const provider = odds.provider?.name || odds.provider?.displayName || odds.providerName || 'ESPN SPORTSBOOK DATA';
   const spread = odds.details || odds.spread || '';
-  const total = odds.overUnder != null ? `O/U ${odds.overUnder}` : (odds.total != null ? `O/U ${odds.total}` : '');
-  const ml = odds.moneyline != null ? `ML ${odds.moneyline}` : '';
-  const parts = [spread,total,ml].filter(Boolean);
-  return {main: parts.length ? parts.join(' • ') : 'LINE POSTED', sub:provider};
+  const totalValue = odds.overUnder ?? odds.total;
+  const total = totalValue != null ? `O/U ${totalValue}` : '';
+
+  // ESPN commonly supplies moneylines inside homeTeamOdds / awayTeamOdds.
+  // Keep both sides when ESPN provides them so the table is actually useful for betting.
+  const ml = [];
+  const awayML = odds.awayTeamOdds?.moneyLine ?? odds.awayTeamOdds?.moneyline;
+  const homeML = odds.homeTeamOdds?.moneyLine ?? odds.homeTeamOdds?.moneyline;
+  if(awayML != null) ml.push(`AWAY ML ${awayML}`);
+  if(homeML != null) ml.push(`HOME ML ${homeML}`);
+  if(!ml.length && odds.moneyline != null) {
+    if(typeof odds.moneyline === 'object') {
+      const v = odds.moneyline.displayValue ?? odds.moneyline.value;
+      if(v != null) ml.push(`ML ${v}`);
+    } else ml.push(`ML ${odds.moneyline}`);
+  }
+
+  const parts = [spread,total,...ml].filter(Boolean);
+  return {
+    main: parts.length ? parts.join(' • ') : 'LINE POSTED',
+    sub: `ESPN${provider && provider !== 'ESPN' ? ` • ${provider}` : ''}`
+  };
 }
+
+function bigSkyNormTeam(name){
+  const n=bigSkyTeamKey(name);
+  const aliases={
+    montanastate:'montanastate',montanast:'montanastate',
+    northernarizona:'northernarizona',northernaz:'northernarizona',
+    northerncolorado:'northerncolorado',northernco:'northerncolorado',
+    idahostate:'idahostate',idahost:'idahostate',
+    easternwashington:'easternwashington',easternwa:'easternwashington',
+    portlandstate:'portlandstate',portlandst:'portlandstate',
+    sacramentostate:'sacramentostate',sacstate:'sacramentostate',
+    calpoly:'calpoly',ucdavis:'ucdavis',daviss:'ucdavis',
+    webersate:'weberstate',weberstate:'weberstate',
+    utahtech:'utahtech',montana:'montana',idaho:'idaho'
+  };
+  return aliases[n] || n;
+}
+
+function bigSkyEventMatches(event, game){
+  const comps=event?.competitions?.[0];
+  const teams=(comps?.competitors||[]).map(c=>c.team||{});
+  const wanted=[bigSkyNormTeam(game.team),bigSkyNormTeam(game.opponent)];
+  const have=teams.map(t=>bigSkyNormTeam(t.displayName||t.shortDisplayName||t.name||t.abbreviation||''));
+  if(wanted.every(w=>have.some(h=>h===w))) return true;
+  const n=bigSkyTeamKey(event?.name||'');
+  return wanted.every(w=>n.includes(w));
+}
+
 async function fetchBigSkyOdds(game){
   const iso = bigSkyDateISO(game.date); if(!iso) return null;
   const cacheKey = iso;
@@ -359,19 +405,32 @@ async function fetchBigSkyOdds(game){
     BIG_SKY_ODDS_CACHE.set(cacheKey,(async()=>{
       try{
         const ymd=iso.replaceAll('-','');
-        const res=await fetch(`https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${ymd}&limit=500`);
+        const res=await fetch(`https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${ymd}&limit=500`,{cache:'no-store'});
+        if(!res.ok) return [];
         const d=await res.json();
         return Array.isArray(d.events)?d.events:[];
       }catch(e){ return []; }
     })());
   }
   const events=await BIG_SKY_ODDS_CACHE.get(cacheKey);
-  const norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
-  const a=norm(game.team), b=norm(game.opponent);
-  const ev=events.find(e=>{
-    const n=norm(e.name); return n.includes(a)&&n.includes(b);
-  });
-  return ev?.competitions?.[0]?.odds?.[0] || null;
+  const ev=events.find(e=>bigSkyEventMatches(e,game));
+  if(!ev) return null;
+  const competition=ev.competitions?.[0];
+  let odds=Array.isArray(competition?.odds) ? competition.odds[0] : competition?.odds;
+
+  // ESPN's game package is a useful fallback when the scoreboard has the event
+  // but its embedded odds array is missing or delayed.
+  if(!odds && ev.id){
+    try{
+      const r=await fetch(`https://cdn.espn.com/core/college-football/game?xhr=1&gameId=${ev.id}`,{cache:'no-store'});
+      if(r.ok){
+        const pkg=await r.json();
+        const c=pkg?.gamepackageJSON?.header?.competitions?.[0] || pkg?.header?.competitions?.[0];
+        odds=Array.isArray(c?.odds) ? c.odds[0] : c?.odds;
+      }
+    }catch(e){}
+  }
+  return odds || null;
 }
 function bigSkyWeatherLabel(code){
   const map={0:'Clear',1:'Mostly clear',2:'Partly cloudy',3:'Overcast',45:'Fog',48:'Rime fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',71:'Light snow',73:'Snow',75:'Heavy snow',80:'Rain showers',81:'Rain showers',82:'Heavy showers',85:'Snow showers',86:'Heavy snow showers',95:'Thunderstorms',96:'T-storms + hail',99:'T-storms + hail'};
@@ -468,37 +527,66 @@ async function renderBigSkyAndOpponent(){
         const selectedTeam = teamSelect?.value || "ALL";
         const weekGames = games.filter(game => weekForDate(game.date) === selectedWeek);
         const shownTeams = selectedTeam === "ALL" ? teams : [selectedTeam];
-        const rows = [];
+        const visible = [];
+        const seen = new Set();
 
-        // Always walk every Big Sky team. The opponent can be Big Sky or non-conference.
+        // Build one card per matchup when viewing the whole league.  The source
+        // schedule contains a row for each participating team, so dedupe games
+        // here without changing the underlying data or any other site section.
         shownTeams.forEach(team => {
-          const teamGames = weekGames.filter(game => game.team === team);
-          if (!teamGames.length) {
-            rows.push(`<div class="bigsky-row bye-row"><span>${escapeHtml(selectedWeek)}</span><b>${escapeHtml(team)}</b><span>BYE / NO GAME</span><span>—</span><span class="bigsky-info muted">—</span><span class="bigsky-info muted">—</span></div>`);
-            return;
-          }
-          teamGames.sort((a,b) => dateObj(a.date) - dateObj(b.date));
-          teamGames.forEach(game => {
-            const prefix = game.location === "Away" ? "@ " : "vs ";
-            const tag = game.big_sky_game ? ' <small class="league-tag">BIG SKY</small>' : ' <small class="league-tag nonconf-tag">NON-CONFERENCE</small>';
-            const key = `${game.date}|${team}|${game.opponent}|${game.location || ""}`;
-            rows.push(`<div class="bigsky-row bigsky-game-row" data-bigsky-game-key="${escapeHtml(key)}">
-              <span>${escapeHtml(game.date)}</span>
-              <b>${escapeHtml(team)}</b>
-              <span>${prefix}${escapeHtml(game.opponent)}${tag}</span>
-              <span>${escapeHtml(game.time || "TBA")}</span>
-              <span class="bigsky-info bigsky-betting"><b>CHECKING…</b><small>SPORTSBOOK</small></span>
-              <span class="bigsky-info bigsky-weather"><b>CHECKING…</b><small>GAME WEATHER</small></span>
-            </div>`);
+          weekGames.filter(game => game.team === team).forEach(game => {
+            const a = game.location === "Away" ? game.team : game.opponent;
+            const h = game.location === "Away" ? game.opponent : game.team;
+            const matchupKey = `${game.date}|${a}|${h}|${game.time || ""}`;
+            if (selectedTeam === "ALL" && seen.has(matchupKey)) return;
+            seen.add(matchupKey);
+            visible.push({...game, displayAway:a, displayHome:h, matchupKey});
           });
         });
 
-        table.innerHTML = `<div class="bigsky-row bigsky-head"><span>DATE</span><span>BIG SKY TEAM</span><span>OPPONENT</span><span>TIME</span><span>BETTING</span><span>WEATHER</span></div>${rows.join("")}`;
+        visible.sort((a,b) => dateObj(a.date) - dateObj(b.date) || String(a.time||"").localeCompare(String(b.time||"")) || a.displayAway.localeCompare(b.displayAway));
+
+        const dateLabel = label => {
+          const dt = dateObj(label);
+          return dt.toLocaleDateString("en-US", {weekday:"long", month:"long", day:"numeric"}).toUpperCase();
+        };
+        const rows = [];
+        let lastDate = "";
+        visible.forEach(game => {
+          if (game.date !== lastDate) {
+            rows.push(`<div class="bigsky-date-divider"><span>${escapeHtml(dateLabel(game.date))}</span></div>`);
+            lastDate = game.date;
+          }
+          const prefix = game.location === "Away" ? "AWAY" : "HOME";
+          const tag = game.big_sky_game ? '<span class="league-tag">BIG SKY</span>' : '<span class="league-tag nonconf-tag">NON-CONFERENCE</span>';
+          const key = `${game.date}|${game.team}|${game.opponent}|${game.location || ""}`;
+          rows.push(`<div class="bigsky-game-card" data-bigsky-game-key="${escapeHtml(key)}">
+            <div class="bigsky-game-top">
+              <div class="bigsky-game-time"><strong>${escapeHtml(game.time || "TBA")}</strong><span>${escapeHtml(game.network || "")}</span></div>
+              <div class="bigsky-game-type">${tag}<span>${escapeHtml(prefix)}</span></div>
+            </div>
+            <div class="bigsky-matchup">
+              <div class="bigsky-team away"><strong>${escapeHtml(game.displayAway)}</strong><small>${escapeHtml(game.displayAway === game.team ? (game.away_record || "") : (game.opponent_record || ""))}</small></div>
+              <div class="bigsky-at">@</div>
+              <div class="bigsky-team home"><strong>${escapeHtml(game.displayHome)}</strong><small>${escapeHtml(game.displayHome === game.team ? (game.home_record || "") : (game.opponent_record || ""))}</small></div>
+            </div>
+            <div class="bigsky-game-bottom">
+              <div class="bigsky-location"><b>${escapeHtml(game.venue || (game.location === "Away" ? "Away Game" : "Home Game"))}</b><span>${escapeHtml(game.city || "")}</span></div>
+              <div class="bigsky-info bigsky-betting"><b>CHECKING…</b><small>ESPN ODDS</small></div>
+              <div class="bigsky-info bigsky-weather"><b>CHECKING…</b><small>GAME WEATHER</small></div>
+            </div>
+          </div>`);
+        });
+
+        if (!visible.length) {
+          rows.push(`<div class="bigsky-empty"><b>NO GAMES THIS WEEK</b><span>${escapeHtml(selectedTeam === "ALL" ? "No Big Sky matchups are scheduled." : `${selectedTeam} has a bye.`)}</span></div>`);
+        }
+
+        table.innerHTML = rows.join("");
 
         // Enrich only the games currently visible in the selected week/team view.
-        // This keeps the Big Sky schedule fast while still giving each matchup the same
-        // betting + weather treatment as the main Montana schedule.
-        enrichBigSkyScheduleCards(weekGames.filter(game => shownTeams.includes(game.team)));
+        // The existing ESPN/weather calls remain isolated to this Big Sky section.
+        enrichBigSkyScheduleCards(visible);
       }
       if (teamSelect) teamSelect.onchange = draw;
       if (weekSelect) weekSelect.onchange = draw;
