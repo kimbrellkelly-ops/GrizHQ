@@ -408,6 +408,7 @@ async function renderFCSScoreboard(){
     }
     return null;
   }
+
   function looseTeamMatch(a,b){
     const ak=teamKeys(a), bk=teamKeys(b);
     if(ak.some(k=>bk.includes(k))) return true;
@@ -487,11 +488,55 @@ async function renderFCSScoreboard(){
     topEl.innerHTML=top25.slice(0,25).map(t=>{
       const ev=findTeamEvent(t.team,events);
       const isGriz=teamMatches('Montana',t.team);
-      const isBigSky=bigSkyTeams.some(x=>teamMatches(x,t.team));
-      const detail=ev?gameLabel(ev):null;
-      const matchup=detail?`${escapeHtml(detail.away)} @ ${escapeHtml(detail.home)}`:'No game this week';
       const cardClass=isGriz?'griz':'';
-      return `<div class="fcs-rank-card ${cardClass}"><span class="fcs-rank">${escapeHtml(t.rank)}</span><div class="fcs-rank-team"><b>${escapeHtml(t.team)}</b><small>${escapeHtml(t.record||'')} • ${matchup}</small></div><span class="fcs-rank-score">${scoreLine(ev,t.team)}</span></div>`;
+      const rank=escapeHtml(t.rank);
+      const teamLogo=(x)=>{
+        const id=x?.team?.id || x?.id;
+        const direct=x?.team?.logo || x?.logo;
+        return direct || (id ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(id)}.png` : '');
+      };
+      const teamRow=(x)=>{
+        const team=x?.team||x||{};
+        const name=team?.shortDisplayName||team?.displayName||team?.name||x?.short||x?.name||'Team';
+        const logo=teamLogo(x);
+        const rankForTeamForRow=(teamObj)=>{
+          const rowName=teamObj?.displayName||teamObj?.shortDisplayName||teamObj?.name||teamObj?.abbreviation||'';
+          const rowId=teamObj?.id ? String(teamObj.id) : '';
+          const rowNorm=norm(rowName);
+          for(const item of top25.slice(0,25)){
+            const rankValue=String(item?.rank??'').trim();
+            if(!rankValue) continue;
+            const rankName=String(item?.team||'');
+            const rankNorm=norm(rankName);
+            // Prefer an explicit ID match when the rankings feed provides one.
+            if(rowId && item?.id && String(item.id)===rowId) return rankValue;
+            // First use the existing alias-aware matcher.
+            if(rowName && teamMatches(rankName,rowName)) return rankValue;
+            // Stats Perform names usually omit the mascot while ESPN includes it.
+            // Match when one normalized name is the full leading school name of the other.
+            // Guard Montana vs Montana State so the Bobcats can never inherit Montana's rank.
+            if(rowNorm && rankNorm && rowNorm!==rankNorm){
+              const montanaStatePair=(rowNorm.includes('montanastate')||rankNorm.includes('montanastate')) && (rowNorm.includes('montana')||rankNorm.includes('montana'));
+              if(!montanaStatePair && (rowNorm.startsWith(rankNorm)||rankNorm.startsWith(rowNorm))) return rankValue;
+            }
+          }
+          return '';
+        };
+        const rankForTeam=rankForTeamForRow(team);
+        const rankBadge=rankForTeam?`<span class="fcs-team-rank">#${escapeHtml(rankForTeam)}</span>`:'';
+        return `<div class="fcs-top-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy">`:''}<span><span class="fcs-team-rank-wrap">${rankBadge}</span><span class="fcs-team-name">${escapeHtml(name)}</span></span><strong>${escapeHtml(x?.score??team?.score??'—')}</strong></div>`;
+      };
+      if(ev){
+        const away=(ev.teams||[]).find(x=>x.homeAway==='away') || (ev.teams||[])[0];
+        const home=(ev.teams||[]).find(x=>x.homeAway==='home') || (ev.teams||[])[1];
+        const statusLabel=ev.completed ? 'FINAL' : (ev.state==='in' ? statusText(ev) : (ev.date?new Date(ev.date).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'}):'TBA'));
+        return `<div class="fcs-rank-card ${cardClass}"><div class="fcs-top-matchup">${teamRow(away)}${teamRow(home)}<small>${escapeHtml(statusLabel)}</small></div></div>`;
+      }
+      const fallbackLogo=t.logo||t.logo_url||'';
+      const fallbackRank=String(t.rank||'').trim();
+      const fallbackRankBadge=fallbackRank?`<span class="fcs-team-rank">#${escapeHtml(fallbackRank)}</span>`:'';
+      const fallbackRow=`<div class="fcs-top-team-row">${fallbackLogo?`<img src="${escapeHtml(fallbackLogo)}" alt="" loading="lazy">`:''}<span><span class="fcs-team-rank-wrap">${fallbackRankBadge}</span><span class="fcs-team-name">${escapeHtml(t.team)}</span></span><strong>—</strong></div>`;
+      return `<div class="fcs-rank-card ${cardClass}"><div class="fcs-top-matchup">${fallbackRow}<small>${escapeHtml(t.record||'')} • NO GAME THIS WEEK</small></div></div>`;
     }).join('');
 
     if(bigSkyEl){
