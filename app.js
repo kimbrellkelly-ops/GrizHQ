@@ -273,17 +273,9 @@ async function loadGrizData() {
     console.warn("Griz HQ data layer unavailable; using page fallback.", e);
   }
 }
-function isMontanaGrizzlies(team) {
-  const s = String(team || "").toLowerCase().trim();
-  // Highlight Montana only. Never highlight Montana State/Bobcats.
-  if (!s.includes("montana")) return false;
-  if (/\bmontana\s+(?:state|st\.?)(?:\b|\.)/i.test(s)) return false;
-  if (s.includes("bobcats")) return false;
-  return true;
-}
 async function fetchLiveFCSCoachesPoll() {
-  // ESPN publishes the FCS Coaches Poll in rankings[2]. This is independent
-  // of Griz HQ's local data.json, so the Rankings tab can update when the poll changes.
+  // ESPN publishes the FCS Coaches Poll. Keep the live poll independent of
+  // Griz HQ's local data.json so the rankings can update when the poll changes.
   const url = "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings?seasontype=2&type=0&level=3&ts=" + Date.now();
   const res = await fetch(url, { cache: "no-store" });
   if (!res.ok) throw new Error("FCS rankings request failed: " + res.status);
@@ -294,31 +286,76 @@ async function fetchLiveFCSCoachesPoll() {
   const teams = poll.ranks.slice(0, 25).map(r => {
     const t = r.team || {};
     const name = t.displayName || t.shortDisplayName || t.name || t.abbreviation || "Team";
-    const rank = r.current ?? r.rank ?? "";
-    const prev = r.previous ?? r.previousRank ?? "";
+    const rank = Number(r.current ?? r.rank);
+    const previous = Number(r.previous ?? r.previousRank);
+    const hasPrevious = Number.isFinite(previous) && previous > 0;
+    const delta = hasPrevious && Number.isFinite(rank) ? previous - rank : null;
     const record = t.record || t.records?.[0]?.summary || "";
-    let move = "";
-    if (Number.isFinite(Number(rank)) && Number.isFinite(Number(prev)) && Number(prev) > 0) {
-      const delta = Number(prev) - Number(rank);
-      move = delta > 0 ? ` ↑${delta}` : delta < 0 ? ` ↓${Math.abs(delta)}` : " —";
-    }
-    return `${rank}. ${name}${record ? ` (${record})` : ""}${move}`;
+    return { rank, previous: hasPrevious ? previous : null, delta, name, record };
   });
   const date = poll.lastUpdated || poll.date || data.lastUpdated || "";
   return { teams, date, name: poll.name || poll.headline || "FCS Coaches Poll" };
 }
 
+function rankingMovementMarkup(t) {
+  if (!t || !Number.isFinite(t.rank)) return "";
+  if (t.previous == null) return '<span class="rank-movement rank-new">NEW</span>';
+  if (t.delta > 0) return `<span class="rank-movement rank-up">▲ ${escapeHtml(t.delta)}</span>`;
+  if (t.delta < 0) return `<span class="rank-movement rank-down">▼ ${escapeHtml(Math.abs(t.delta))}</span>`;
+  return '<span class="rank-movement rank-same">—</span>';
+}
+
+function normalizeRankingEntry(t) {
+  if (t && typeof t === "object") return t;
+  const raw = String(t ?? "");
+  const m = raw.match(/^\s*(\d+)\.\s*(.*?)(?:\s*\(([^)]*)\))?(?:\s*(?:↑|▲)(\d+)|\s*(?:↓|▼)(\d+))?\s*$/);
+  if (!m) return { rank: null, previous: null, delta: null, name: raw, record: "" };
+  const rank = Number(m[1]);
+  const delta = m[4] ? Number(m[4]) : (m[5] ? -Number(m[5]) : null);
+  return { rank, previous: delta == null ? null : rank + delta, delta, name: m[2], record: m[3] || "" };
+}
+
 function renderPoll(id, teams) {
   const el = document.getElementById(id);
   if (!el || !Array.isArray(teams)) return;
-  el.innerHTML = teams.slice(0,20).map(t => `<li class="${isMontanaGrizzlies(t) ? "griz" : ""}">${escapeHtml(t)}</li>`).join("");
+  el.innerHTML = teams.slice(0, 20).map(t0 => {
+    const t = normalizeRankingEntry(t0);
+    const rank = Number.isFinite(t.rank) ? t.rank + "." : "";
+    const record = t.record ? ` <small class="rank-record">(${escapeHtml(t.record)})</small>` : "";
+    return `<li><span class="rank-number">${escapeHtml(rank)}</span><span class="rank-team-name">${escapeHtml(t.name)}</span>${record}${rankingMovementMarkup(t)}</li>`;
+  }).join("");
 }
+
 function renderMiniPolls(coaches, media) {
   const wrap = document.getElementById("rankings-mini");
   if (!wrap || !Array.isArray(coaches) || !Array.isArray(media)) return;
-  wrap.innerHTML = [coaches, media].map(poll => `<ol>${poll.slice(0,10).map(t => `<li class="${isMontanaGrizzlies(t) ? "griz" : ""}">${escapeHtml(t)}</li>`).join("")}</ol>`).join("");
+  wrap.innerHTML = [coaches, media].map(poll => `<ol>${poll.slice(0,10).map(t0 => {
+    const t = normalizeRankingEntry(t0);
+    const rank = Number.isFinite(t.rank) ? t.rank + "." : "";
+    return `<li><span class="rank-number">${escapeHtml(rank)}</span><span class="rank-team-name">${escapeHtml(t.name)}</span>${rankingMovementMarkup(t)}</li>`;
+  }).join("")}</ol>`).join("");
 }
 function escapeHtml(s) { return String(s ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c])); }
+function installRankingMovementStyles() {
+  if (document.getElementById("griz-ranking-movement-styles")) return;
+  const style = document.createElement("style");
+  style.id = "griz-ranking-movement-styles";
+  style.textContent = `
+    #coaches-poll li, #media-poll li { display:flex; align-items:center; gap:.45rem; }
+    #coaches-poll .rank-number, #media-poll .rank-number { min-width:2rem; font-weight:800; }
+    .rank-team-name { flex:1; }
+    .rank-record { opacity:.68; font-size:.78em; }
+    .rank-movement { margin-left:auto; padding:.18rem .42rem; border-radius:999px; font-size:.7rem; font-weight:900; letter-spacing:.04em; white-space:nowrap; }
+    .rank-up { background:#e6f4ea; color:#187a3d; }
+    .rank-down { background:#fbe9e7; color:#a33a2b; }
+    .rank-new { background:#eee; color:#333; }
+    .rank-same { color:#888; }
+    @media (max-width:640px) { .rank-record { display:none; } }
+  `;
+  document.head.appendChild(style);
+}
+
+
 
 async function renderLatestPressConference(){
   const box=document.getElementById("latest-press");
@@ -346,6 +383,7 @@ async function renderLatestPressConference(){
   }catch(e){}
 }
 
+installRankingMovementStyles();
 loadGrizData();
 renderLatestPressConference();
 
