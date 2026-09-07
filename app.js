@@ -1103,18 +1103,29 @@ async function renderBigSkyAndOpponent(){
         const weekGames = games.filter(game => weekForDate(game.date) === selectedWeek);
         const shownTeams = selectedTeam === "ALL" ? teams : [selectedTeam];
         const visible = [];
-        const seen = new Set();
+        const seen = new Map();
 
-        // Build one card per matchup when viewing the whole league.  The source
-        // schedule contains a row for each participating team, so dedupe games
-        // here without changing the underlying data or any other site section.
+        // The source schedule has one row from each team's perspective.  Do
+        // NOT include the time string in the dedupe key: one row can say
+        // "8:00 PM MT" while the reverse row says "7:00 PM MST" for the exact
+        // same kickoff.  Sorting the two participants gives us one true game.
         shownTeams.forEach(team => {
           weekGames.filter(game => game.team === team).forEach(game => {
             const a = game.location === "Away" ? game.team : game.opponent;
             const h = game.location === "Away" ? game.opponent : game.team;
-            const matchupKey = `${game.date}|${a}|${h}|${game.time || ""}`;
-            if (selectedTeam === "ALL" && seen.has(matchupKey)) return;
-            seen.add(matchupKey);
+            const matchupKey = `${game.date}|${[norm(a),norm(h)].sort().join('|')}`;
+            if (selectedTeam === "ALL" && seen.has(matchupKey)) {
+              const priorIndex = seen.get(matchupKey);
+              const prior = visible[priorIndex];
+              if (prior) {
+                if ((!prior.time || prior.time === 'TBA') && game.time) prior.time = game.time;
+                if (!prior.network && game.network) prior.network = game.network;
+                if (!prior.venue && game.venue) prior.venue = game.venue;
+                prior.big_sky_game = prior.big_sky_game || game.big_sky_game;
+              }
+              return;
+            }
+            seen.set(matchupKey, visible.length);
             visible.push({...game, displayAway:a, displayHome:h, matchupKey});
           });
         });
@@ -1242,18 +1253,18 @@ async function renderFCSScoreboard(){
     weekEl.dataset.ready='1';
   }
   function getCurrentFootballWeek(){
-    const now=new Date();
-    const today=new Date(now.getFullYear(),now.getMonth(),now.getDate(),12);
-    let idx=weeks.findIndex(w=>today>=new Date(w[0]+'T12:00:00')&&today<=new Date(w[1]+'T12:00:00'));
-    if(idx>=0)return idx;
-    idx=weeks.findIndex(w=>new Date(w[0]+'T12:00:00')>today);
-    return idx>=0?idx:weeks.length-1;
+    const today=new Date();
+    const day=new Date(today.getFullYear(),today.getMonth(),today.getDate(),12);
+    const inside=weeks.findIndex(w=>day>=new Date(w[0]+'T12:00:00')&&day<=new Date(w[1]+'T12:00:00'));
+    if(inside>=0)return inside;
+    const next=weeks.findIndex(w=>new Date(w[0]+'T12:00:00')>day);
+    return next>=0?next:weeks.length-1;
   }
   if(!weekEl.dataset.userChanged) weekEl.value=String(getCurrentFootballWeek());
 
   let localData={};
   try{localData=await (await fetch('data.json?ts='+Date.now(),{cache:'no-store'})).json();}
-  catch(e){statusEl.textContent='Score data unavailable';return;}
+  catch(e){if(statusEl)statusEl.textContent='Score data unavailable';return;}
 
   const top25=Array.isArray(localData.fcs_top25)?localData.fcs_top25:(Array.isArray(localData.fcs_top20)?localData.fcs_top20:[]);
   const fullSchedule=Array.isArray(localData.big_sky_full_schedules)?localData.big_sky_full_schedules:[];
@@ -1262,7 +1273,8 @@ async function renderFCSScoreboard(){
   if(rankDate&&localData.fcs_rankings_date) rankDate.textContent='Stats Perform • '+localData.fcs_rankings_date;
 
   function norm(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');}
-  const aliases={
+  const teamIds={montana:'149',montanastate:'147',idaho:'70',weberstate:'2692',easternwashington:'331',northernarizona:'2464',northerncolorado:'2458',idahostate:'304',calpoly:'13',southernutah:'253',utahtech:'3101',ucdavis:'302',portlandstate:'2502'};
+  const bigSkyAliases={
     montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanast','montanastatebobcats'],idaho:['idaho','idahovandals'],
     weberstate:['weberstate','weberst','weberstatewildcats'],easternwashington:['easternwashington','ewashington','easternwash','easternwashingtoneagles'],
     northernarizona:['northernarizona','narizona','northernaz','northernarizonalumberjacks'],northerncolorado:['northerncolorado','ncolorado','northerncoloradobears'],
@@ -1270,21 +1282,27 @@ async function renderFCSScoreboard(){
     southernutah:['southernutah','soutah','soututah','southernutahthunderbirds'],utahtech:['utahtech','utahtechuniversity','utahtechtrailblazers'],
     ucdavis:['ucdavis','ucdavisaggies'],portlandstate:['portlandstate','portlandst','portlandstatevikings']
   };
-  const teamIds={montana:'149',montanastate:'147',idaho:'70',weberstate:'2692',easternwashington:'331',northernarizona:'2464',northerncolorado:'2458',idahostate:'304',calpoly:'13',southernutah:'253',utahtech:'3101',ucdavis:'302',portlandstate:'279'};
-  function canonical(s){const n=norm(s);for(const [k,v] of Object.entries(aliases))if(v.some(x=>norm(x)===n))return k;return null;}
+  function canonicalBigSky(s){const n=norm(s);for(const [k,v] of Object.entries(bigSkyAliases))if(v.some(x=>norm(x)===n))return k;return null;}
   function teamMatch(a,b){
     if(!a||!b)return false;
     const ao=typeof a==='object'?a:null,bo=typeof b==='object'?b:null;
     if(ao?.id&&bo?.id&&String(ao.id)===String(bo.id))return true;
-    const an=norm(ao?.displayName||ao?.name||ao?.short||ao?.abbrev||a);
-    const bn=norm(bo?.displayName||bo?.name||bo?.short||bo?.abbrev||b);
+    const an=norm(ao?.displayName||ao?.name||ao?.short||ao?.shortDisplayName||ao?.abbrev||a);
+    const bn=norm(bo?.displayName||bo?.name||bo?.short||bo?.shortDisplayName||bo?.abbrev||b);
+    if(!an||!bn)return false;
     if(an===bn)return true;
-    const ac=canonical(an),bc=canonical(bn);
-    return !!ac&&ac===bc;
+    const ac=canonicalBigSky(an),bc=canonicalBigSky(bn);
+    if(ac&&bc&&ac===bc)return true;
+    // General FCS school-name matching. ESPN often appends the mascot;
+    // rankings normally do not.  The Montana/Montana State guard prevents
+    // the shorter Montana name from matching the Bobcats.
+    const montanaPair=(an.includes('montanastate')||bn.includes('montanastate'))&&(an.includes('montana')||bn.includes('montana'));
+    if(!montanaPair && (an.startsWith(bn)||bn.startsWith(an)))return true;
+    return false;
   }
   function teamObjMatch(name,t){
     if(!t)return false;
-    const key=canonical(name)||norm(name);
+    const key=canonicalBigSky(name)||norm(name);
     if(t.id&&teamIds[key]&&String(t.id)===String(teamIds[key]))return true;
     return teamMatch(name,t.displayName||t.name||t.shortDisplayName||t.short||t.abbreviation||'');
   }
@@ -1301,16 +1319,17 @@ async function renderFCSScoreboard(){
     const byGame=new Map();
     fullSchedule.forEach(g=>{
       const dt=scheduleDate(g.date);if(!dt||dt<start||dt>end)return;
-      if(!bigSkyTeams.some(t=>teamMatch(t,g.team)))return;
+      const bs=canonicalBigSky(g.team);
+      if(!bs)return;
       const away=g.location==='Away'?g.opponent:g.team;
       const home=g.location==='Away'?g.team:g.opponent;
       if(!away||!home)return;
-      // Sort the two participants so the two team-perspective schedule rows collapse into one game.
-      const key=[norm(away),norm(home)].sort().join('|')+'|'+String(g.date);
+      const key=`${String(g.date)}|${norm(away)}|${norm(home)}`;
       const existing=byGame.get(key);
       if(existing){
         existing.bigSkyGame=existing.bigSkyGame||!!g.big_sky_game;
         if((!existing.time||existing.time==='TBA')&&g.time)existing.time=g.time;
+        if(!existing.network&&g.network)existing.network=g.network;
         return;
       }
       byGame.set(key,{...g,date:g.date,time:g.time||'TBA',displayAway:away,displayHome:home,bigSkyGame:!!g.big_sky_game,matchupKey:key});
@@ -1364,10 +1383,9 @@ async function renderFCSScoreboard(){
       return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b></div>${scoreCardTeam(a,sg?.displayAway||'Away',playing)}${scoreCardTeam(h,sg?.displayHome||'Home',playing)}<small>${escapeHtml(statusText(ev,sg))}</small></div></div>`;
     }
     if(sg){
-      const home=sg.displayHome,away=sg.displayAway;
-      return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b></div><div class="ghq-fcs-scheduled"><b>${escapeHtml(away)}</b><span>@</span><b>${escapeHtml(home)}</b></div><small>${escapeHtml(sg.time||'TBA')}</small></div></div>`;
+      return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b></div><div class="ghq-fcs-scheduled"><span>${escapeHtml(sg.displayAway)}</span><b>@</b><span>${escapeHtml(sg.displayHome)}</span></div><small>${escapeHtml(sg.time||'TBA')}</small></div></div>`;
     }
-    return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b><strong>—</strong></div><small>${escapeHtml(t.record||'')} • NO GAME THIS WEEK</small></div></div>`;
+    return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b></div><small>${escapeHtml(t.record||'')} • NO GAME THIS WEEK</small></div></div>`;
   }
   function gameCard(game,ev){
     const ts=eventTeams(ev),a=ts.find(x=>x.homeAway==='away')||ts[0]||null,h=ts.find(x=>x.homeAway==='home')||ts[1]||null;
@@ -1375,12 +1393,12 @@ async function renderFCSScoreboard(){
     const label=game.bigSkyGame?'BIG SKY':'NON-CONFERENCE';
     const tv=(ev?.broadcasts||[]).slice(0,2).join(', ');
     const status=statusText(ev,game);
-    return `<div class="fcs-game ${state} bigsky-row ghq-fcs-game" data-fcs-game-key="${escapeHtml(game.matchupKey)}"><div class="fcs-time"><b>${escapeHtml(game.date)}</b><small>${escapeHtml(label)}</small></div><div class="fcs-matchup">${scoreCardTeam(a,game.displayAway,final||live)}${scoreCardTeam(h,game.displayHome,final||live)}<small class="score-game-status">${escapeHtml(status)}${tv?' • '+escapeHtml(tv):''}</small></div><div class="fcs-score score-status">${final||live?`<span class="score-big">${escapeHtml(a?.score??'—')}–${escapeHtml(h?.score??'—')}</span><small>${escapeHtml(final?'FINAL':status)}</small>`:`<small>${escapeHtml(status)}</small>`}</div><div class="fcs-tv">${escapeHtml(tv)}</div><div class="bigsky-info bigsky-betting"><b>CHECKING…</b><small>MARKET LINES</small></div></div>`;
+    const awayName=a?teamName(a,game.displayAway):game.displayAway;
+    const homeName=h?teamName(h,game.displayHome):game.displayHome;
+    return `<div class="fcs-game ${state} bigsky-row ghq-fcs-game" data-fcs-game-key="${escapeHtml(game.matchupKey)}"><div class="fcs-time"><b>${escapeHtml(game.date)}</b><small>${escapeHtml(label)}</small></div><div class="fcs-matchup">${scoreCardTeam(a,awayName,final||live)}${scoreCardTeam(h,homeName,final||live)}<small class="score-game-status">${escapeHtml(status)}${tv?' • '+escapeHtml(tv):''}</small></div><div class="fcs-score score-status">${final||live?`<span class="score-big">${escapeHtml(a?.score??'—')}–${escapeHtml(h?.score??'—')}</span><small>${escapeHtml(final?'FINAL':status)}</small>`:`<small>${escapeHtml(status)}</small>`}</div><div class="fcs-tv">${escapeHtml(tv)}</div><div class="bigsky-info bigsky-betting"><b>CHECKING…</b><small>MARKET LINES</small></div></div>`;
   }
   function liveOrCachedForGame(game,liveEvents,cachedEvents){
-    return liveEvents.find(e=>eventMatchesGame(e,game))||cachedEvents.find(e=>{
-      const ts=eventTeams(e);return ts.some(t=>teamMatch(game.displayAway,t))&&ts.some(t=>teamMatch(game.displayHome,t));
-    })||null;
+    return liveEvents.find(e=>eventMatchesGame(e,game))||cachedEvents.find(e=>{const ts=eventTeams(e);return ts.some(t=>teamMatch(game.displayAway,t))&&ts.some(t=>teamMatch(game.displayHome,t));})||null;
   }
   async function enrichScoreCards(games,normalizedLive){
     await Promise.all(games.map(async game=>{
@@ -1411,14 +1429,21 @@ async function renderFCSScoreboard(){
     const cached=cachedEventsForWeek(w);
     const rawLive=await fetchESPNEvents(w);
     const normalizedLive=rawLive.map(normalizeEvent);
-    const liveEvents=rawLive;
-    const eventPool=normalizedLive.length?normalizedLive:cached;
-    const merged=scheduled.map(g=>({g,ev:liveOrCachedForGame(g,liveEvents,cached)}));
+    // Merge live and cached feeds instead of letting an incomplete live ESPN
+    // response erase cached games. Live data wins when the same event exists.
+    const eventMap=new Map();
+    cached.forEach(e=>eventMap.set(String(e.id||JSON.stringify(e)),e));
+    normalizedLive.forEach(e=>eventMap.set(String(e.id||JSON.stringify(e)),e));
+    const eventPool=[...eventMap.values()];
+    const merged=scheduled.map(g=>({g,ev:liveOrCachedForGame(g,normalizedLive,cached)}));
 
-    // Count only Big Sky members. Opponents such as Colorado, SMU and Wyoming
-    // must never inflate the 13-team coverage number.
     const covered=new Set();
-    scheduled.forEach(g=>{for(const team of bigSkyTeams){if(teamMatch(team,g.displayAway)||teamMatch(team,g.displayHome)){covered.add(canonical(team)||norm(team));break;}}});
+    scheduled.forEach(g=>{
+      for(const team of [g.displayAway,g.displayHome]){
+        const key=canonicalBigSky(team);
+        if(key)covered.add(key);
+      }
+    });
     const uniqueBigSkyGames=scheduled.length;
     if(bigSkyLabelEl)bigSkyLabelEl.textContent=`${uniqueBigSkyGames} games • ${covered.size}/13 Big Sky teams scheduled`;
     if(statusEl)statusEl.textContent=`${uniqueBigSkyGames} Big Sky games • ${covered.size}/13 teams scheduled`;
@@ -1430,7 +1455,9 @@ async function renderFCSScoreboard(){
   weekEl.onchange=()=>{weekEl.dataset.userChanged='1';draw();};
   if(refreshEl)refreshEl.onclick=draw;
   draw();
+  setInterval(()=>{if(new Date().getDay()>=4)draw();},60000);
 }
+
 renderFCSScoreboard();
 
 /* Griz HQ tab navigation */
