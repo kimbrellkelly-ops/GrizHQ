@@ -944,7 +944,21 @@ async function renderFCSScoreboard(){
     ['2026-08-27','2026-08-30','WEEK 0 • AUG 27–30'],['2026-09-03','2026-09-06','WEEK 1 • SEP 3–6'],['2026-09-10','2026-09-13','WEEK 2 • SEP 10–13'],['2026-09-17','2026-09-20','WEEK 3 • SEP 17–20'],['2026-09-24','2026-09-27','WEEK 4 • SEP 24–27'],['2026-10-01','2026-10-04','WEEK 5 • OCT 1–4'],['2026-10-08','2026-10-11','WEEK 6 • OCT 8–11'],['2026-10-15','2026-10-18','WEEK 7 • OCT 15–18'],['2026-10-22','2026-10-25','WEEK 8 • OCT 22–25'],['2026-10-29','2026-11-01','WEEK 9 • OCT 29–NOV 1'],['2026-11-05','2026-11-08','WEEK 10 • NOV 5–8'],['2026-11-12','2026-11-15','WEEK 11 • NOV 12–15'],['2026-11-19','2026-11-22','WEEK 12 • NOV 19–22']
   ];
   if(!weekEl.dataset.ready){weeks.forEach((w,i)=>{const o=document.createElement('option');o.value=i;o.textContent=w[2];weekEl.appendChild(o);});weekEl.dataset.ready='1';}
-  const now=new Date(); let current=weeks.findIndex(w=>now>=new Date(w[0]+'T00:00:00')&&now<=new Date(w[1]+'T23:59:59')); if(current<0){ const nextWeek=weeks.findIndex(w=>new Date(w[0]+'T00:00:00')>now); current=nextWeek>=0?nextWeek:weeks.length-1; }
+  // Auto-select the football week: Thu-Sun is that week; Mon-Wed belongs to the next upcoming football week.
+  // This prevents Monday/Tuesday from falling back to the first option (Week 0).
+  function getCurrentFootballWeek(){
+    const now=new Date();
+    const today=new Date(now.getFullYear(),now.getMonth(),now.getDate(),12);
+    let idx=weeks.findIndex(w=>{
+      const start=new Date(w[0]+'T12:00:00');
+      const end=new Date(w[1]+'T12:00:00');
+      return today>=start&&today<=end;
+    });
+    if(idx>=0)return idx;
+    idx=weeks.findIndex(w=>new Date(w[0]+'T12:00:00')>today);
+    return idx>=0?idx:weeks.length-1;
+  }
+  const current=getCurrentFootballWeek();
   if(!weekEl.dataset.userChanged) weekEl.value=String(current);
 
   let localData={};
@@ -993,14 +1007,25 @@ async function renderFCSScoreboard(){
   function logoFor(x){const id=x?.team?.id||x?.id;return x?.team?.logo||x?.logo||(id?`https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(id)}.png`:'');}
   function scheduleDate(label){const m={Aug:7,Sep:8,Oct:9,Nov:10};const [mo,day]=String(label||'').split(/\s+/);return mo&&day?new Date(2026,m[mo],Number(day),12):null;}
   function scheduleGamesForWeek(w){
-    const seen=new Set(), out=[];
+    // The full Big Sky schedule is the authoritative structure. The score feed only enriches it.
+    // Collapse the two team-perspective records into one game and preserve BIG SKY if either record says so.
+    const byGame=new Map();
     fullSchedule.forEach(g=>{
-      const dt=scheduleDate(g.date); if(!dt||dt<new Date(w[0]+'T00:00:00')||dt>new Date(w[1]+'T23:59:59'))return;
-      const a=g.location==='Away'?g.opponent:g.team, h=g.location==='Away'?g.team:g.opponent;
-      const key=[norm(a),norm(h),g.date].sort().join('|'); if(seen.has(key))return; seen.add(key);
-      out.push({date:g.date,time:g.time||'TBA',away:a,home:h,bigSkyGame:!!g.big_sky_game});
+      const dt=scheduleDate(g.date);
+      if(!dt||dt<new Date(w[0]+'T00:00:00')||dt>new Date(w[1]+'T23:59:59'))return;
+      const away=g.location==='Away'?g.opponent:g.team;
+      const home=g.location==='Away'?g.team:g.opponent;
+      if(!away||!home)return;
+      const key=[norm(away),norm(home),g.date].sort().join('|');
+      const prior=byGame.get(key);
+      if(!prior){
+        byGame.set(key,{date:g.date,time:g.time||'TBA',away,home,bigSkyGame:!!g.big_sky_game});
+      }else{
+        prior.bigSkyGame=prior.bigSkyGame||!!g.big_sky_game;
+        if((!prior.time||prior.time==='TBA')&&g.time)prior.time=g.time;
+      }
     });
-    return out.sort((a,b)=>scheduleDate(a.date)-scheduleDate(b.date));
+    return [...byGame.values()].sort((a,b)=>scheduleDate(a.date)-scheduleDate(b.date));
   }
   function eventsForWeek(w){
     const out=[];Object.entries(cachedScores).forEach(([date,items])=>{if(date>=w[0]&&date<=w[1]&&Array.isArray(items))out.push(...items);});
@@ -1015,7 +1040,10 @@ async function renderFCSScoreboard(){
     statusEl.textContent='Loading scores…';topEl.innerHTML='<div class="fcs-loading">Loading Top 25…</div>';if(bigSkyEl)bigSkyEl.innerHTML='<div class="fcs-loading">Loading Big Sky games…</div>';
     if(bigSkyLabelEl)bigSkyLabelEl.textContent=w[2]+' • All 13 teams';
     const events=eventsForWeek(w), scheduled=scheduleGamesForWeek(w);
-    statusEl.textContent=`${scheduled.length} Big Sky games • live scores layered onto schedule`;
+    const coveredTeams=new Set();
+    scheduled.forEach(g=>{coveredTeams.add(canonical(g.away)||norm(g.away));coveredTeams.add(canonical(g.home)||norm(g.home));});
+    const bigSkyCovered=bigSkyTeams.filter(t=>[...coveredTeams].some(k=>teamMatch(t,k))).length;
+    statusEl.textContent=`${scheduled.length} Big Sky games • ${bigSkyCovered}/13 teams scheduled • live scores layered onto schedule`;
 
     topEl.innerHTML=top25.slice(0,25).map(t=>{
       const ev=findTeamEvent(t.team,events), cardClass=teamMatch('Montana',t.team)?'griz':'';
