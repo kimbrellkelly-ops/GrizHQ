@@ -269,6 +269,196 @@ def parse_stats(old, schedule=None):
     ]
     return new
 
+def _clean_depth_name(name):
+    name=re.sub(r"\s+", " ", name or "").strip(" .")
+    name=re.sub(r"\s+-OR\s*$", "", name, flags=re.I)
+    return name
+
+
+def _extract_depth_players_from_line(line):
+    """Extract one or more jersey/name pairs from a PDF text line."""
+    out=[]
+    pat=r"(?<!\d)(\d{1,2})\s+([A-Za-z][A-Za-z’'\-\. ]+?)(?=\s+\d+-\d+\b)"
+    for m in re.finditer(pat, line):
+        name=_clean_depth_name(m.group(2))
+        if name and len(name.split()) >= 2:
+            out.append(name)
+    return out
+
+
+def _depth_position(text):
+    """Map the 2026 Griz two-deep PDF headings to the site's stable position labels."""
+    t=clean(text).upper().replace("–","-")
+    mappings=[
+        ("WIDE RECEIVER (X)","WR-X"),("WIDE RECEIVER (Z)","WR-Z"),("WIDE RECEIVER (F)","WR-F"),
+        ("TIGHT END","TE"),("QUARTERBACK","QB"),("TAILBACK","RB"),
+        ("LEFT TACKLE","LT"),("LEFT GUARD","LG"),("CENTER","C"),
+        ("RIGHT GUARD","RG"),("RIGHT TACKLE","RT"),
+        ("NOSE","NT"),("ELEPHANT","DE"),("DEFENSIVE END","DL"),
+        ("BUCK (LB)","BUCK"),("BUCK","BUCK"),("SAM (LB)","LB-SAM"),("SAM","LB-SAM"),
+        ("MIKE (LB)","LB-MIKE"),("MIKE","LB-MIKE"),("WILL (LB)","LB-WILL"),("WILL","LB-WILL"),
+        ("CORNERBACK","CB"),("FREE SAFETY","S"),("GRIZ (NICKEL)","S"),("BOUNDARY SAFETY","S"),
+        ("PUNTER","P"),("KICKER","K"),("PUNT RETURN","PR"),("KICKOFF RETURN","KR"),
+        ("HOLDER","H"),("SNAPPER","LS")
+    ]
+    for needle, pos in mappings:
+        if t == needle or t.startswith(needle+" "):
+            return pos
+    return None
+
+
+def parse_depth_chart_pdf(pdf_bytes, source_url, published=""):
+    """Parse the one-page Montana two-deep PDF while preserving the site's existing schema."""
+    try:
+        import pdfplumber
+        from io import BytesIO
+        with pdfplumber.open(BytesIO(pdf_bytes)) as pdf:
+            if not pdf.pages:
+                raise RuntimeError("depth chart PDF has no pages")
+            page=pdf.pages[0]
+            words=page.extract_words(keep_blank_chars=False, use_text_flow=False)
+            if not words:
+                raise RuntimeError("depth chart PDF contains no text")
+
+            # The current Griz one-page sheet has three vertical columns: offense, defense, specialists.
+            columns={"offense":[],"defense":[],"special_teams":[]}
+            for w in words:
+                x=float(w.get("x0",0)); top=float(w.get("top",0))
+                col="offense" if x < 380 else ("defense" if x < 710 else "special_teams")
+                columns[col].append((top,x,w.get("text", "")))
+
+            parsed={k:[] for k in columns}
+            position_order={k:[] for k in columns}
+            active={k:None for k in columns}
+            stop={k:False for k in columns}
+
+            # Group words into visual rows, then walk each column top-to-bottom.
+            for col, items in columns.items():
+                items.sort(key=lambda z:(z[0],z[1]))
+                rows=[]
+                for item in items:
+                    if not rows or abs(item[0]-rows[-1][0])>2.5:
+                        rows.append([item[0],[(item[1],item[2])]])
+                    else:
+                        rows[-1][1].append((item[1],item[2]))
+                for top, rowwords in rows:
+                    row=" ".join(t for _,t in sorted(rowwords,key=lambda z:z[0])).strip()
+                    normrow=clean(row).upper()
+                    if normrow.startswith("PRONUNCIATION"):
+                        stop[col]=True
+                        active[col]=None
+                        continue
+                    if stop[col]:
+                        continue
+                    pos=_depth_position(row)
+                    if pos:
+                        active[col]=pos
+                        position_order[col].append(pos)
+                        parsed[col].append({"position":pos,"_players":[]})
+                        continue
+                    if not active[col]:
+                        continue
+                    players=_extract_depth_players_from_line(row)
+                    if players:
+                        parsed[col][-1]["_players"].extend(players)
+
+            def finalize(section):
+                out=[]
+                for row in parsed[section]:
+                    players=[]
+                    for name in row.get("_players",[]):
+                        if name not in players: players.append(name)
+                    if not players: continue
+                    item={"position":row["position"],"first":players[0],"second":players[1] if len(players)>1 else "—"}
+                    if len(players)>2:
+                        item["also"]=" / ".join(players[2:])
+                    out.append(item)
+                return out
+
+            offense=finalize("offense")
+            defense=finalize("defense")
+            special=finalize("special_teams")
+            if len(offense)<8 or len(defense)<8 or len(special)<3:
+                raise RuntimeError(f"depth chart parse incomplete: offense={len(offense)} defense={len(defense)} special={len(special)}")
+            return {
+                "source":"Official Montana two-deep / GoGriz game notes",
+                "source_url":source_url,
+                "published":published or datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+                "note":"Automatically refreshed from the latest published Montana two-deep. If the official source is temporarily unavailable, the last good chart is retained.",
+                "offense":offense,
+                "defense":defense,
+                "special_teams":special,
+            }
+    except Exception as e:
+        raise RuntimeError(f"depth chart parse failed: {e}") from e
+
+
+def fetch_depth_chart(old):
+    """Find the newest 2026 GoGriz football notes PDF containing a two-deep and safely update it."""
+    fallback_url="https://ewscripps.brightspotcdn.com/66/2f/2ecc2224473884436d4981ff2667/um-depth-chart.pdf"
+    feed="https://gogriz.com/rss?path=football"
+    candidates=[]
+    try:
+        root=ET.fromstring(get(feed))
+        for item in root.findall(".//item")[:30]:
+            title=clean(item.findtext("title")); link=clean(item.findtext("link")); pub=clean(item.findtext("pubDate"))
+            if not link: continue
+            low=title.lower()
+            if any(k in low for k in ("football","griz","bulldog","trailblazer","beaver","wildcat","vandals")):
+                candidates.append((link,pub,title))
+    except Exception as e:
+        print("Depth chart RSS scan failed:",e)
+
+    # Prefer a newly published article with a notes/depth PDF. Scan newest first.
+    for article_url,pub,title in candidates:
+        try:
+            article=get(article_url)
+            if not re.search(r"two[- ]deep|depth chart|depth[- ]chart", article, re.I) and "notes" not in article.lower():
+                continue
+            hrefs=[]
+            soup=BeautifulSoup(article,"html.parser")
+            for a in soup.find_all("a",href=True):
+                href=urljoin(article_url,a.get("href")); txt=clean(a.get_text(" ",strip=True)).lower()
+                if ".pdf" in href.lower() or "notes" in txt or "game notes" in txt:
+                    hrefs.append((href,txt))
+            hrefs += [(u,"") for u in re.findall(r'https?://[^\"\'\s<>]+\.pdf(?:\?[^\"\'\s<>]*)?',article,re.I)]
+            seen=set()
+            for href,txt in hrefs:
+                if href in seen: continue
+                seen.add(href)
+                if not ("pdf" in href.lower() or "notes" in txt or "two" in txt or "depth" in txt): continue
+                try:
+                    r=requests.get(href,headers=HEADERS,timeout=30)
+                    r.raise_for_status()
+                    if r.content[:4] != b"%PDF": continue
+                    dt=""
+                    try:
+                        from email.utils import parsedate_to_datetime
+                        dt=parsedate_to_datetime(pub).date().isoformat() if pub else ""
+                    except Exception: pass
+                    dc=parse_depth_chart_pdf(r.content,href,dt)
+                    print("Depth chart updated from:",href)
+                    return dc
+                except Exception as e:
+                    print("Depth chart candidate failed:",href,e)
+        except Exception as e:
+            print("Depth chart article scan failed:",article_url,e)
+
+    # Known-good current 2026 two-deep source. This keeps the chart alive even when RSS/article scanning changes upstream.
+    try:
+        r=requests.get(fallback_url,headers=HEADERS,timeout=30)
+        r.raise_for_status()
+        if r.content[:4] == b"%PDF":
+            return parse_depth_chart_pdf(r.content,fallback_url,"2026-08-25")
+    except Exception as e:
+        print("Fallback depth chart fetch failed:",e)
+
+    olddc=old.get("depth_chart") if isinstance(old.get("depth_chart"),dict) else None
+    if olddc and olddc.get("offense") and olddc.get("defense"):
+        return olddc
+    return None
+
+
 def normalize_poll(old_list):
     return old_list if isinstance(old_list,list) else []
 
@@ -331,9 +521,15 @@ def main():
     try:
         coaches=parse_rankings("https://www.ncaa.com/rankings/football/fcs/afca-fcs-coaches-poll")
         media=parse_rankings("https://www.ncaa.com/rankings/football/fcs/stats-perform-fcs-top-25")
+        old_coaches = old.get("coaches_poll") if isinstance(old.get("coaches_poll"), list) else []
+        old_media = old.get("media_poll") if isinstance(old.get("media_poll"), list) else []
         new["coaches_poll"]=coaches; new["media_poll"]=media
-        new["rankings_date"]=datetime.now(timezone.utc).strftime("%b %-d, %Y")
-        # Keep the scoreboard's object format synchronized with the Stats Perform poll.
+        rankings_changed = (coaches != old_coaches) or (media != old_media)
+        if rankings_changed or not old.get("rankings_date"):
+            new["rankings_date"]=datetime.now(timezone.utc).strftime("%b %-d, %Y")
+        else:
+            new["rankings_date"]=old.get("rankings_date")
+        # Keep the scoreboard object format synchronized with the Stats Perform poll.
         oldmap={str(x.get("team")):x.get("record","") for x in old.get("fcs_top25",[]) if isinstance(x,dict)}
         new["fcs_top25"]=[{"rank":i+1,"team":team,"record":oldmap.get(team,"")} for i,team in enumerate(media)]
         new["fcs_top20"]=new["fcs_top25"][:20]
@@ -350,6 +546,13 @@ def main():
 
     try: new["stats"]=parse_stats(old, sched if "sched" in locals() else None)
     except Exception as e: print("Stats update failed:",e)
+
+    try:
+        depth=fetch_depth_chart(old)
+        if depth:
+            new["depth_chart"]=depth
+    except Exception as e:
+        print("Depth chart update failed; retaining last good chart:",e)
 
     new["latest_press_conference"] = fetch_latest_press_conference()
     DATA.write_text(json.dumps(new,indent=2,ensure_ascii=False)+"\n")
