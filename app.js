@@ -1261,8 +1261,13 @@ async function renderFCSScoreboard(){
   const rankDate=document.getElementById('fcs-rankings-date');
   if(rankDate&&localData.fcs_rankings_date) rankDate.textContent='Stats Perform • '+localData.fcs_rankings_date;
 
-  function norm(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');}
+  function cleanTeamLabel(s){return String(s||'').replace(/\s*\([^)]*\)\s*$/,'').replace(/\s+/g,' ').trim();}
+  function norm(s){return cleanTeamLabel(s).toLowerCase().replace(/[^a-z0-9]/g,'');}
   const teamIds={montana:'149',montanastate:'147',idaho:'70',weberstate:'2692',easternwashington:'331',northernarizona:'2464',northerncolorado:'2458',idahostate:'304',calpoly:'13',southernutah:'253',utahtech:'3101',ucdavis:'302',portlandstate:'2502'};
+  const FCS_LOGO_IDS={
+    Montana:'149','Montana State':'147',Idaho:'70','Weber State':'2692','Eastern Washington':'331','Northern Arizona':'2464','Northern Colorado':'2458','Idaho State':'304','Cal Poly':'13','Southern Utah':'253','Utah Tech':'3101','UC Davis':'302','Portland State':'2502',
+    Nevada:'2440',Colorado:'38','South Dakota':'233','Wyoming':'2751','Colorado State':'36',Utah:'254',Oregon:'2483','Oregon State':'204','Washington State':'265',Washington:'264','San Jose State':'23','San José State':'23','Utah State':'328','Boise State':'68','Fresno State':'278','San Diego State':'21','South Dakota State':'2569','North Dakota State':'2449','Montana State (57)':'147'
+  };
   const bigSkyAliases={
     montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanast','montanastatebobcats'],idaho:['idaho','idahovandals'],
     weberstate:['weberstate','weberst','weberstatewildcats'],easternwashington:['easternwashington','ewashington','easternwash','easternwashingtoneagles'],
@@ -1296,7 +1301,19 @@ async function renderFCSScoreboard(){
     return teamMatch(name,t.displayName||t.name||t.shortDisplayName||t.short||t.abbreviation||'');
   }
   function eventTeams(ev){return Array.isArray(ev?.teams)?ev.teams:[];}
-  function logoFor(t){const id=t?.team?.id||t?.id;return t?.team?.logo||t?.logo||(id?`https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(id)}.png`:'');}
+  function logoIdForName(name){
+    const cleaned=cleanTeamLabel(name);
+    if(FCS_LOGO_IDS[cleaned])return FCS_LOGO_IDS[cleaned];
+    const key=canonicalBigSky(cleaned);
+    if(key&&teamIds[key])return teamIds[key];
+    const n=norm(cleaned);
+    const hit=Object.entries(FCS_LOGO_IDS).find(([k])=>norm(k)===n);
+    return hit?hit[1]:'';
+  }
+  function logoFor(t,fallback=''){
+    const id=t?.team?.id||t?.id;
+    return t?.team?.logo||t?.logo||(id?`https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(id)}.png`:logoIdForName(fallback)?`https://a.espncdn.com/i/teamlogos/ncaa/500/${logoIdForName(fallback)}.png`:'');
+  }
   function teamName(t,fallback='Team'){return t?.shortDisplayName||t?.short||t?.displayName||t?.name||t?.abbreviation||fallback;}
   function scheduleDate(label){
     const m={Aug:7,Sep:8,Oct:9,Nov:10};
@@ -1363,11 +1380,11 @@ async function renderFCSScoreboard(){
     return game?.time|| (ev.date?new Date(ev.date).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'}):'TBA');
   }
   function scoreCardTeam(t,fallback,showScore){
-    const name=teamName(t,fallback),logo=logoFor(t);
-    return `<div class="score-team-row ghq-fcs-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy">`:''}<span>${escapeHtml(name)}</span>${showScore?`<strong>${escapeHtml(t?.score??'—')}</strong>`:''}</div>`;
+    const name=teamName(t,fallback),logo=logoFor(t,fallback);
+    return `<div class="score-team-row ghq-fcs-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}<span>${escapeHtml(name)}</span>${showScore?`<strong>${escapeHtml(t?.score??'—')}</strong>`:''}</div>`;
   }
   function top25Card(t,events,scheduled){
-    const rank=escapeHtml(t.rank||''),name=String(t.team||'Team');
+    const rank=escapeHtml(t.rank||''),name=cleanTeamLabel(t.team||'Team');
     const sg=scheduled.find(g=>teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome)) || fullSchedule.map(g=>{ const dt=scheduleDate(g.date); const start=new Date(weeks[Number(weekEl.value)||0][0]+'T00:00:00'); const end=new Date(weeks[Number(weekEl.value)||0][1]+'T23:59:59'); if(!dt||dt<start||dt>end)return null; const away=g.location==='Away'?g.opponent:g.team; const home=g.location==='Away'?g.team:g.opponent; return {...g,displayAway:away,displayHome:home,matchupKey:`${g.date}|${[norm(away),norm(home)].sort().join('|')}`}; }).find(g=>g && (teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome)));
     // Prefer the scheduled matchup for ranked teams. ESPN's FCS-only feed can
     // contain no event (or an unrelated team event) when an FCS team plays an
@@ -1379,7 +1396,7 @@ async function renderFCSScoreboard(){
       return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b></div>${scoreCardTeam(a,sg?.displayAway||'Away',playing)}${scoreCardTeam(h,sg?.displayHome||'Home',playing)}<small>${escapeHtml(statusText(ev,sg))}</small></div></div>`;
     }
     if(sg){
-      return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b></div><div class="ghq-fcs-scheduled"><span>${escapeHtml(sg.displayAway)}</span><b>@</b><span>${escapeHtml(sg.displayHome)}</span></div><small>${escapeHtml(sg.time||'TBA')}</small></div></div>`;
+      return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(cleanTeamLabel(name))}</b></div><div class="ghq-fcs-scheduled ghq-fcs-scheduled-teams">${scoreCardTeam(null,sg.displayAway,false)}<b>@</b>${scoreCardTeam(null,sg.displayHome,false)}</div><small>${escapeHtml(sg.time||'TBA')}</small></div></div>`;
     }
     return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b></div><small>${escapeHtml(t.record||'')} • NO GAME THIS WEEK</small></div></div>`;
   }
@@ -1413,7 +1430,7 @@ async function renderFCSScoreboard(){
   function injectStyles(){
     if(document.getElementById('ghq-fcs-scoreboard-surgical-styles'))return;
     const s=document.createElement('style');s.id='ghq-fcs-scoreboard-surgical-styles';s.textContent=`
-      .ghq-fcs-rank-card{overflow:hidden!important}.ghq-fcs-top-matchup{min-width:0!important}.ghq-fcs-rank-heading{display:flex!important;align-items:center!important;gap:10px!important;width:100%!important;min-height:30px!important}.ghq-fcs-rank-heading b{display:inline-block!important;visibility:visible!important;opacity:1!important;color:#151515!important;font-size:17px!important;font-weight:800!important;line-height:1.2!important;white-space:normal!important}.ghq-fcs-rank-heading strong{margin-left:auto!important;color:#151515!important}.ghq-fcs-scheduled{display:flex!important;gap:8px!important;align-items:center!important;margin:9px 0 4px!important;font-size:14px!important;color:#151515!important}.ghq-fcs-scheduled span{opacity:.55!important}.ghq-fcs-team-row{display:flex!important;align-items:center!important;min-width:0!important;gap:8px!important}.ghq-fcs-team-row span{display:block!important;visibility:visible!important;opacity:1!important;color:#151515!important;font-weight:700!important;white-space:normal!important}.ghq-fcs-team-row img{width:26px!important;height:26px!important;object-fit:contain!important;flex:0 0 26px!important}.ghq-fcs-team-row strong{margin-left:auto!important}.ghq-fcs-game .bigsky-betting{min-width:180px!important}.ghq-fcs-game .fcs-matchup{min-width:0!important}
+      .ghq-fcs-rank-card{overflow:hidden!important}.ghq-fcs-top-matchup{min-width:0!important}.ghq-fcs-rank-heading{display:flex!important;align-items:center!important;gap:10px!important;width:100%!important;min-height:30px!important}.ghq-fcs-rank-heading b{display:inline-block!important;visibility:visible!important;opacity:1!important;color:#151515!important;font-size:17px!important;font-weight:800!important;line-height:1.2!important;white-space:normal!important}.ghq-fcs-rank-heading strong{margin-left:auto!important;color:#151515!important}.ghq-fcs-scheduled{display:flex!important;gap:8px!important;align-items:center!important;margin:9px 0 4px!important;font-size:14px!important;color:#151515!important}.ghq-fcs-scheduled span{opacity:.55!important}.ghq-fcs-team-row{display:flex!important;align-items:center!important;min-width:0!important;gap:8px!important}.ghq-fcs-team-row span{display:block!important;visibility:visible!important;opacity:1!important;color:#151515!important;font-weight:700!important;white-space:normal!important}.ghq-fcs-team-row img{width:26px!important;height:26px!important;object-fit:contain!important;flex:0 0 26px!important}.ghq-fcs-team-row strong{margin-left:auto!important}.ghq-fcs-scheduled-teams{display:flex!important;align-items:center!important;gap:8px!important}.ghq-fcs-scheduled-teams .ghq-fcs-team-row{min-width:0!important;flex:1 1 0!important}.ghq-fcs-scheduled-teams .ghq-fcs-team-row span{font-size:13px!important}.ghq-fcs-game .bigsky-betting{min-width:180px!important}.ghq-fcs-game .fcs-matchup{min-width:0!important}
     `;document.head.appendChild(s);
   }
   injectStyles();
