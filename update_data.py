@@ -134,274 +134,69 @@ def parse_news():
 
 def parse_stats(old):
     """Refresh the core stats dashboard from the official 2026 cumulative stats page.
-    The GoGriz Team Statistics table contains Montana and Opponents as adjacent
-    columns. Parse those columns directly so Total Defense is always derived
-    from the opponents' Total Offense average, and format the record cleanly.
-    """
+    If a stats section changes shape upstream, keep the previous good dashboard."""
     soup=BeautifulSoup(get("https://gogriz.com/sports/football/stats/2026"),"html.parser")
     text=soup.get_text("\n",strip=True)
-    m=re.search(r"Team Statistics \((\d+)-(\d+),\s*(\d+)-(\d+)\)", text)
-    if not m:
-        raise RuntimeError("Team Statistics record block not found")
-    wins, losses, cw, cl = m.groups()
-
+    m=re.search(r"Team Statistics \(([^)]+)\)",text)
+    if not m: raise RuntimeError("Team Statistics block not found")
+    record_raw=m.group(1)
+    # GoGriz labels this block as "Overall, Conference"; the Stats card only needs overall.
+    record=record_raw.split(",",1)[0].strip()
+    # Pull the Montana/Opponents columns from the visible team-stat table.
     team_table=None
     for t in soup.find_all("table"):
         st=t.get_text(" ",strip=True)
-        if "Points Per Game" in st and "Total Offense" in st and "Avg. Per Game" in st:
-            team_table=t
-            break
-    if team_table is None:
-        raise RuntimeError("Team stats table not found")
-
-    # Sidearm's table uses rows like: Label | Montana | Opponents.
-    # Keep the current section so duplicate labels such as Total/Avg. Per Game
-    # can be interpreted correctly.
-    section=""
+        if "Points Per Game" in st and "Total Offense" in st:
+            team_table=t; break
+    if team_table is None: raise RuntimeError("Team stats table not found")
     rows={}
     for tr in team_table.find_all("tr"):
-        cells=[clean(x.get_text(" ",strip=True)) for x in tr.find_all(["td","th"])]
-        if not cells:
-            continue
-        label=cells[0]
-        if label in {"Scoring","First Downs","Rushing","Passing","Total Offense","Returns","Kicking","Penalties","Time Of Possession","Miscellaneous"}:
-            section=label
-            continue
-        if len(cells)>=3:
-            rows[(section,label)] = (cells[1],cells[2])
-
-    def pair(section_name, label, default=("—","—")):
-        return rows.get((section_name,label), default)
-
-    ppg_m, ppg_o = pair("Scoring","Points Per Game")
-    total_off_m, total_off_o = pair("Total Offense","Avg. Per Game")
-    total_yards_m, total_yards_o = pair("Total Offense","Total Yards")
-    if total_off_m == "—":
-        total_off_m = total_yards_m
-    if total_off_o == "—":
-        total_off_o = total_yards_o
-
+        c=[clean(x.get_text(" ",strip=True)) for x in tr.find_all(["td","th"])]
+        if len(c)>=3: rows[c[0]]=c[1:]
+    def pair(label, default="—"):
+        v=rows.get(label, [default,default]); return v[0] if v else default
+    ppg=pair("Points Per Game"); total=pair("Total"); total_yards=pair("Total Yards")
+    avg_play=pair("Average Per Play"); pass_total=pair("Total", "—")
+    # The table has duplicate labels; use section-aware text regex for key values.
+    def after(section,label,default="—"):
+        pat=rf"{re.escape(section)}.*?{re.escape(label)}\s+([^\s]+)"
+        mm=re.search(pat,text,re.S|re.I)
+        return mm.group(1) if mm else default
+    rush_avg=after("Rushing","Avg. Per Game")
+    pass_avg=after("Passing","Avg. Per Game")
+    total_avg=after("Total Offense","Avg. Per Game")
+    # "Total Yards" has Montana and Opponents in adjacent columns.
+    # Total defense on Griz HQ is yards allowed per game, not the season total.
+    total_yards_cols=rows.get("Total Yards", ["—", "—"])
+    opp_total_yards=total_yards_cols[1] if len(total_yards_cols)>1 else "—"
+    games_played=0
+    gm=re.match(r"(\d+)-\d+", record)
+    if gm: games_played=int(gm.group(1))
+    try:
+        opp_total=float(str(opp_total_yards).replace(",","")) / games_played if games_played else None
+        opp_total=f"{opp_total:.0f}" if opp_total is not None else "—"
+    except Exception:
+        opp_total="—"
+    turnover_line=after("Miscellaneous","Fumbles-Lost")
     oldstats=old.get("stats",{}) if isinstance(old.get("stats"),dict) else {}
     new=dict(oldstats)
     new["through"]="Current 2026 cumulative stats"
-    new["team_summary"]=[
-        {"value":f"{wins}–{losses} • {cw}–{cl} BIG SKY","label":"RECORD","note":"2026"},
-        {"value":ppg_m,"label":"POINTS / GAME","note":"Official cumulative stats"},
-        {"value":total_off_m,"label":"TOTAL OFFENSE","note":"Yards per game"},
-        {"value":total_off_o,"label":"TOTAL DEFENSE","note":"Yards allowed per game"}
+    new["team_summary"]= [
+        {"value":record.replace(", ","–"),"label":"RECORD","note":"2026"},
+        {"value":ppg,"label":"POINTS / GAME","note":"Official cumulative stats"},
+        {"value":total_avg if total_avg!="—" else total_yards,"label":"TOTAL OFFENSE","note":"Per game"},
+        {"value":opp_total,"label":"TOTAL DEFENSE","note":"Yards allowed"}
     ]
-
-    # Keep the existing detailed cards, comparison table, leaders, game log,
-    # etc. intact; those are maintained by the rest of the data pipeline.
-    new.setdefault("offense",oldstats.get("offense",[]))
-    new.setdefault("defense",oldstats.get("defense",[]))
+    # Preserve the existing detailed cards unless we can safely derive values.
+    new.setdefault("offense",oldstats.get("offense",[])); new.setdefault("defense",oldstats.get("defense",[]))
     return new
-
-
-def _clean_depth_name(name):
-    name=re.sub(r"\s+", " ", name or "").strip(" .")
-    name=re.sub(r"\s+-OR\s*$", "", name, flags=re.I)
-    return name
-
-
-def _extract_depth_players_from_line(line):
-    """Extract one or more jersey/name pairs from a PDF text line."""
-    out=[]
-    pat=r"(?<!\d)(\d{1,2})\s+([A-Za-z][A-Za-z’'\-\. ]+?)(?=\s+\d+-\d+\b)"
-    for m in re.finditer(pat, line):
-        name=_clean_depth_name(m.group(2))
-        if name and len(name.split()) >= 2:
-            out.append(name)
-    return out
-
-
-def _depth_position(text):
-    """Map the 2026 Griz two-deep PDF headings to the site's stable position labels."""
-    t=clean(text).upper().replace("–","-")
-    mappings=[
-        ("WIDE RECEIVER (X)","WR-X"),("WIDE RECEIVER (Z)","WR-Z"),("WIDE RECEIVER (F)","WR-F"),
-        ("TIGHT END","TE"),("QUARTERBACK","QB"),("TAILBACK","RB"),
-        ("LEFT TACKLE","LT"),("LEFT GUARD","LG"),("CENTER","C"),
-        ("RIGHT GUARD","RG"),("RIGHT TACKLE","RT"),
-        ("NOSE","NT"),("ELEPHANT","DE"),("DEFENSIVE END","DL"),
-        ("BUCK (LB)","BUCK"),("BUCK","BUCK"),("SAM (LB)","LB-SAM"),("SAM","LB-SAM"),
-        ("MIKE (LB)","LB-MIKE"),("MIKE","LB-MIKE"),("WILL (LB)","LB-WILL"),("WILL","LB-WILL"),
-        ("CORNERBACK","CB"),("FREE SAFETY","S"),("GRIZ (NICKEL)","S"),("BOUNDARY SAFETY","S"),
-        ("PUNTER","P"),("KICKER","K"),("PUNT RETURN","PR"),("KICKOFF RETURN","KR"),
-        ("HOLDER","H"),("SNAPPER","LS")
-    ]
-    for needle, pos in mappings:
-        if t == needle or t.startswith(needle+" "):
-            return pos
-    return None
-
-
-def parse_depth_chart_pdf(pdf_bytes, source_url, published=""):
-    """Parse the one-page Montana two-deep PDF while preserving the site's existing schema."""
-    try:
-        import pdfplumber
-        from io import BytesIO
-        with pdfplumber.open(BytesIO(pdf_bytes)) as pdf:
-            if not pdf.pages:
-                raise RuntimeError("depth chart PDF has no pages")
-            page=pdf.pages[0]
-            words=page.extract_words(keep_blank_chars=False, use_text_flow=False)
-            if not words:
-                raise RuntimeError("depth chart PDF contains no text")
-
-            # The current Griz one-page sheet has three vertical columns: offense, defense, specialists.
-            columns={"offense":[],"defense":[],"special_teams":[]}
-            for w in words:
-                x=float(w.get("x0",0)); top=float(w.get("top",0))
-                col="offense" if x < 380 else ("defense" if x < 710 else "special_teams")
-                columns[col].append((top,x,w.get("text", "")))
-
-            parsed={k:[] for k in columns}
-            position_order={k:[] for k in columns}
-            active={k:None for k in columns}
-            stop={k:False for k in columns}
-
-            # Group words into visual rows, then walk each column top-to-bottom.
-            for col, items in columns.items():
-                items.sort(key=lambda z:(z[0],z[1]))
-                rows=[]
-                for item in items:
-                    if not rows or abs(item[0]-rows[-1][0])>2.5:
-                        rows.append([item[0],[(item[1],item[2])]])
-                    else:
-                        rows[-1][1].append((item[1],item[2]))
-                for top, rowwords in rows:
-                    row=" ".join(t for _,t in sorted(rowwords,key=lambda z:z[0])).strip()
-                    normrow=clean(row).upper()
-                    if normrow.startswith("PRONUNCIATION"):
-                        stop[col]=True
-                        active[col]=None
-                        continue
-                    if stop[col]:
-                        continue
-                    pos=_depth_position(row)
-                    if pos:
-                        active[col]=pos
-                        position_order[col].append(pos)
-                        parsed[col].append({"position":pos,"_players":[]})
-                        continue
-                    if not active[col]:
-                        continue
-                    players=_extract_depth_players_from_line(row)
-                    if players:
-                        parsed[col][-1]["_players"].extend(players)
-
-            def finalize(section):
-                out=[]
-                for row in parsed[section]:
-                    players=[]
-                    for name in row.get("_players",[]):
-                        if name not in players: players.append(name)
-                    if not players: continue
-                    item={"position":row["position"],"first":players[0],"second":players[1] if len(players)>1 else "—"}
-                    if len(players)>2:
-                        item["also"]=" / ".join(players[2:])
-                    out.append(item)
-                return out
-
-            offense=finalize("offense")
-            defense=finalize("defense")
-            special=finalize("special_teams")
-            if len(offense)<8 or len(defense)<8 or len(special)<3:
-                raise RuntimeError(f"depth chart parse incomplete: offense={len(offense)} defense={len(defense)} special={len(special)}")
-            return {
-                "source":"Official Montana two-deep / GoGriz game notes",
-                "source_url":source_url,
-                "published":published or datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-                "note":"Automatically refreshed from the latest published Montana two-deep. If the official source is temporarily unavailable, the last good chart is retained.",
-                "offense":offense,
-                "defense":defense,
-                "special_teams":special,
-            }
-    except Exception as e:
-        raise RuntimeError(f"depth chart parse failed: {e}") from e
-
-
-def fetch_depth_chart(old):
-    """Find the newest 2026 GoGriz football notes PDF containing a two-deep and safely update it."""
-    fallback_url="https://ewscripps.brightspotcdn.com/66/2f/2ecc2224473884436d4981ff2667/um-depth-chart.pdf"
-    feed="https://gogriz.com/rss?path=football"
-    candidates=[]
-    try:
-        root=ET.fromstring(get(feed))
-        for item in root.findall(".//item")[:30]:
-            title=clean(item.findtext("title")); link=clean(item.findtext("link")); pub=clean(item.findtext("pubDate"))
-            if not link: continue
-            low=title.lower()
-            if any(k in low for k in ("football","griz","bulldog","trailblazer","beaver","wildcat","vandals")):
-                candidates.append((link,pub,title))
-    except Exception as e:
-        print("Depth chart RSS scan failed:",e)
-
-    # Prefer a newly published article with a notes/depth PDF. Scan newest first.
-    for article_url,pub,title in candidates:
-        try:
-            article=get(article_url)
-            if not re.search(r"two[- ]deep|depth chart|depth[- ]chart", article, re.I) and "notes" not in article.lower():
-                continue
-            hrefs=[]
-            soup=BeautifulSoup(article,"html.parser")
-            for a in soup.find_all("a",href=True):
-                href=urljoin(article_url,a.get("href")); txt=clean(a.get_text(" ",strip=True)).lower()
-                if ".pdf" in href.lower() or "notes" in txt or "game notes" in txt:
-                    hrefs.append((href,txt))
-            hrefs += [(u,"") for u in re.findall(r'https?://[^\"\'\s<>]+\.pdf(?:\?[^\"\'\s<>]*)?',article,re.I)]
-            seen=set()
-            for href,txt in hrefs:
-                if href in seen: continue
-                seen.add(href)
-                if not ("pdf" in href.lower() or "notes" in txt or "two" in txt or "depth" in txt): continue
-                try:
-                    r=requests.get(href,headers=HEADERS,timeout=30)
-                    r.raise_for_status()
-                    if r.content[:4] != b"%PDF": continue
-                    dt=""
-                    try:
-                        from email.utils import parsedate_to_datetime
-                        dt=parsedate_to_datetime(pub).date().isoformat() if pub else ""
-                    except Exception: pass
-                    dc=parse_depth_chart_pdf(r.content,href,dt)
-                    print("Depth chart updated from:",href)
-                    return dc
-                except Exception as e:
-                    print("Depth chart candidate failed:",href,e)
-        except Exception as e:
-            print("Depth chart article scan failed:",article_url,e)
-
-    # Known-good current 2026 two-deep source. This keeps the chart alive even when RSS/article scanning changes upstream.
-    try:
-        r=requests.get(fallback_url,headers=HEADERS,timeout=30)
-        r.raise_for_status()
-        if r.content[:4] == b"%PDF":
-            return parse_depth_chart_pdf(r.content,fallback_url,"2026-08-25")
-    except Exception as e:
-        print("Fallback depth chart fetch failed:",e)
-
-    olddc=old.get("depth_chart") if isinstance(old.get("depth_chart"),dict) else None
-    if olddc and olddc.get("offense") and olddc.get("defense"):
-        return olddc
-    return None
 
 def normalize_poll(old_list):
     return old_list if isinstance(old_list,list) else []
 
 
-def _is_montana_state_press_title(title):
-    """Return True for Montana State/Bobcats press items that must never enter the Griz feed."""
-    low = str(title or "").lower().strip()
-    if "bobcats" in low or "bozeman" in low:
-        return True
-    if re.search(r"\bmontana\s+(?:state|st\.?)\b", low):
-        return True
-    return False
-
 def fetch_latest_press_conference():
-    """Find the newest Montana/Griz press-conference article on Skyline and extract its YouTube ID when available, excluding Montana State/Bobcats."""
+    """Find the newest Montana/Griz press-conference article on Skyline and extract its YouTube ID when available."""
     import urllib.request
     feed_urls=[
         "https://skylinesportsmt.com/category/press-conference/feed/",
@@ -426,10 +221,6 @@ def fetch_latest_press_conference():
                 title=html.unescape(next(x for x in title_m.groups() if x is not None)).strip()
                 url=html.unescape(link_m.group(1)).strip()
                 low=title.lower()
-                # Skyline's press-conference feed mixes Griz and Bobcat items.
-                # Never allow Montana State/Bobcats/Bozeman into the Griz slot.
-                if _is_montana_state_press_title(title):
-                    continue
                 if 'press conference' in low and ('montana' in low or 'griz' in low):
                     article=urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"}),timeout=15).read().decode('utf-8','ignore')
                     y=re.search(r'(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=)|youtu\.be/)([A-Za-z0-9_-]{11})',article)
@@ -481,13 +272,6 @@ def main():
 
     try: new["stats"]=parse_stats(old)
     except Exception as e: print("Stats update failed:",e)
-
-    try:
-        depth=fetch_depth_chart(old)
-        if depth:
-            new["depth_chart"]=depth
-    except Exception as e:
-        print("Depth chart update failed; retaining last good chart:",e)
 
     new["latest_press_conference"] = fetch_latest_press_conference()
     DATA.write_text(json.dumps(new,indent=2,ensure_ascii=False)+"\n")
