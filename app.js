@@ -303,47 +303,21 @@ async function renderBigSkyAndOpponent(){
     if(nextTimeEl && d.next_game?.time) nextTimeEl.textContent=String(d.next_game.time).toUpperCase();
     if(nextVenueEl && d.next_game?.venue) nextVenueEl.textContent=String(d.next_game.venue).split(",")[0].toUpperCase();
 
-    // Next Up / Opponent Hub.  Keep this data-driven so the entire hub follows
-    // the next opponent without having to edit index.html every game week.
-    const defaultOpponentLinks = {
-      "Utah Tech": {
-        official:"https://utahtechtrailblazers.com/sports/football",
-        roster:"https://utahtechtrailblazers.com/sports/football/roster",
-        schedule:"https://utahtechtrailblazers.com/sports/football/schedule/2026",
-        news:"https://utahtechtrailblazers.com/sports/football",
-        media:"https://www.youtube.com/@UtahTechTrailblazers"
-      },
-      "Oregon State": { official:"https://osubeavers.com/sports/football", roster:"https://osubeavers.com/sports/football/roster", schedule:"https://osubeavers.com/sports/football/schedule/2026", news:"https://osubeavers.com/sports/football", media:"https://www.youtube.com/@BeaverAthletics" },
-      "UC Davis": { official:"https://ucdavisaggies.com/sports/football", roster:"https://ucdavisaggies.com/sports/football/roster", schedule:"https://ucdavisaggies.com/sports/football/schedule/2026", news:"https://ucdavisaggies.com/sports/football", media:"https://www.youtube.com/@UCDavisAggies" },
-      "Northern Colorado": { official:"https://uncbears.com/sports/football", roster:"https://uncbears.com/sports/football/roster", schedule:"https://uncbears.com/sports/football/schedule/2026", news:"https://uncbears.com/sports/football", media:"https://www.youtube.com/@UNCBEARS" },
-      "Northern Arizona": { official:"https://nauathletics.com/sports/football", roster:"https://nauathletics.com/sports/football/roster", schedule:"https://nauathletics.com/sports/football/schedule/2026", news:"https://nauathletics.com/sports/football", media:"https://www.youtube.com/@NAUAthletics" },
-      "Idaho": { official:"https://govandals.com/sports/football", roster:"https://govandals.com/sports/football/roster", schedule:"https://govandals.com/sports/football/schedule/2026", news:"https://govandals.com/sports/football", media:"https://www.youtube.com/@IdahoVandals" },
-      "Eastern Washington": { official:"https://goeags.com/sports/football", roster:"https://goeags.com/sports/football/roster", schedule:"https://goeags.com/sports/football/schedule/2026", news:"https://goeags.com/sports/football", media:"https://www.youtube.com/@EWUAthletics" },
-      "Portland State": { official:"https://goviks.com/sports/football", roster:"https://goviks.com/sports/football/roster", schedule:"https://goviks.com/sports/football/schedule/2026", news:"https://goviks.com/sports/football", media:"https://www.youtube.com/@PortlandStateVikings" },
-      "Idaho State": { official:"https://isubengals.com/sports/football", roster:"https://isubengals.com/sports/football/roster", schedule:"https://isubengals.com/sports/football/schedule/2026", news:"https://isubengals.com/sports/football", media:"https://www.youtube.com/@ISUBengals" },
-      "Montana State": { official:"https://msubobcats.com/sports/football", roster:"https://msubobcats.com/sports/football/roster", schedule:"https://msubobcats.com/sports/football/schedule/2026", news:"https://msubobcats.com/sports/football", media:"https://www.youtube.com/@MSUBobcats" }
-    };
-    const resources = {...(defaultOpponentLinks[opponent] || {}), ...(d.opponent_resources?.[opponent] || {})};
-    const setHref = (id, value) => { const el=document.getElementById(id); if (el && value) el.href=value; };
-    const setText = (id, value) => { const el=document.getElementById(id); if (el && value) el.textContent=value; };
-    setText("opponent-hub-name", opponent);
-    setText("opp-title", opponent.toUpperCase());
-    setText("opp-hub-title", opponent.toUpperCase());
-    setText("next-hub-opponent-name", opponent.toUpperCase());
-    setText("compare-opponent-name", opponent.toUpperCase());
-    setText("next-hub-date", next.date ? String(next.date).toUpperCase() : "NEXT GAME");
-    setText("next-hub-time", next.time ? String(next.time).toUpperCase() : "TIME TBA");
-    setText("next-hub-venue", next.venue ? String(next.venue).replace(/,\s*/g," • ").toUpperCase() : "WASHINGTON-GRIZZLY STADIUM • MISSOULA, MT");
-    setHref("opp-link-official", resources.official);
-    setHref("opp-link-roster", resources.roster);
-    setHref("opp-link-roster2", resources.roster);
-    setHref("opp-link-schedule", resources.schedule);
-    setHref("opp-link-news", resources.news || resources.official);
-    setHref("opp-link-media", resources.media);
-    setHref("opp-link-stats", resources.stats || resources.official);
-    setHref("opp-link-coach", resources.staff || resources.official);
-    setHref("opp-link-search", "https://www.google.com/search?q=" + encodeURIComponent(opponent + " football"));
-    setHref("series-history-link", "https://gogriz.com/sports/football/opponent-history");
+    const resources = d.opponent_resources?.[opponent];
+    if (resources) {
+      const hub = document.getElementById("opponent-hub-name");
+      const title = document.getElementById("opp-title");
+      const official = document.getElementById("opp-official");
+      const forum = document.getElementById("opp-forum");
+      const forumLabel = document.getElementById("opp-forum-label");
+      const media = document.getElementById("opp-media");
+      if (hub) hub.textContent = opponent;
+      if (title) title.textContent = opponent.toUpperCase();
+      if (official) official.href = resources.official;
+      if (forum) forum.href = resources.forum;
+      if (forumLabel) forumLabel.textContent = resources.label || "Fan discussion";
+      if (media) media.href = resources.media;
+    }
   } catch (e) { console.warn("Big Sky render error", e); }
 }
 renderBigSkyAndOpponent();
