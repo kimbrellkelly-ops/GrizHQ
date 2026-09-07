@@ -749,23 +749,153 @@ async function fetchKalshiOdds(game){
   return event?formatKalshiOdds(event,game):null;
 }
 
-async function fetchBigSkyOdds(game){
-  const [kalshi,multi,maddux,circa]=await Promise.all([
-    fetchKalshiOdds(game),fetchWagerTalkOdds(game),fetchMadduxOdds(game),fetchCircaOdds(game)
-  ]);
-  const combined=formatAllBookLines(kalshi,multi,maddux,circa);
-  if(combined)return {__allBooks:true,...combined};
+async function fetchEspnCoreGameOdds(eventId, competitionId){
+  if(!eventId) return null;
+  const compId = competitionId || eventId;
+  const urls = [
+    `https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/events/${eventId}/competitions/${compId}/odds?limit=50`,
+    `https://cdn.espn.com/core/college-football/game?xhr=1&gameId=${eventId}`
+  ];
+  for(const url of urls){
+    try{
+      const r=await fetch(url,{cache:'no-store'});
+      if(!r.ok) continue;
+      const d=await r.json();
+      const items = Array.isArray(d?.items) ? d.items : [];
+      const first = items[0] || d?.gamepackageJSON?.header?.competitions?.[0]?.odds?.[0] || d?.gamepackageJSON?.header?.competitions?.[0]?.odds || null;
+      if(first) return first;
+    }catch(e){}
+  }
+  return null;
+}
 
-  // Final fallback: ESPN game odds so the card does not go blank.
-  const iso=bigSkyDateISO(game.date); if(!iso)return null;
+function espnOddsMatchValue(odds){
+  if(!odds) return null;
+  const provider = odds.provider?.name || odds.provider?.displayName || odds.providerName || 'ESPN ODDS';
+  const spread = odds.details || odds.spread || '';
+  const totalValue = odds.overUnder ?? odds.total;
+  const total = totalValue != null ? `O/U ${totalValue}` : '';
+  const ml=[];
+  const awayML = odds.awayTeamOdds?.moneyLine ?? odds.awayTeamOdds?.moneyline ?? odds.awayTeamOdds?.moneyline?.displayValue;
+  const homeML = odds.homeTeamOdds?.moneyLine ?? odds.homeTeamOdds?.moneyline ?? odds.homeTeamOdds?.moneyline?.displayValue;
+  if(awayML != null) ml.push(`AWAY ML ${awayML}`);
+  if(homeML != null) ml.push(`HOME ML ${homeML}`);
+  if(!ml.length && odds.moneyline != null){
+    const v=typeof odds.moneyline==='object' ? (odds.moneyline.displayValue ?? odds.moneyline.value) : odds.moneyline;
+    if(v!=null) ml.push(`ML ${v}`);
+  }
+  const parts=[spread,total,...ml].filter(Boolean);
+  return parts.length ? {main:parts.join(' • '),sub:`ESPN${provider && provider!=='ESPN' ? ` • ${provider}`:''}`} : null;
+}
+
+function cbsWeekForDate(label){
+  const m={Aug:0,Sep:1,Oct:2,Nov:3};
+  const [mon,day]=String(label||'').trim().split(/\s+/);
+  const dt=new Date(2026,(m[mon]??1),Number(day||1),12);
+  const sep3=new Date(2026,8,3,12);
+  const diff=Math.floor((dt-sep3)/86400000);
+  if(dt<new Date(2026,8,3,12)) return 1;
+  return Math.max(1,Math.floor(diff/7)+1);
+}
+
+function cbsTeamAliasesForOdds(name){
+  const n=bigSkyTeamKey(name);
+  const map={
+    montana:['montana','montanagrizzlies','mont'],montanastate:['montanastate','montanastbobcats','montst','mtst'],
+    utahtech:['utahtech','utahtechtrailblazers','utu'],easternwashington:['easternwashington','easternwa','ewash','ewashington'],
+    southdakota:['southdakota','usd','sdak'],weberstate:['weberstate','weberst','web'],colorado:['colorado','colo'],
+    northerncolorado:['northerncolorado','nco','ncol','northernco'],wyoming:['wyoming','wyo'],
+    northernarizona:['northernarizona','nau','nazu','northernaz'],incarnateword:['incarnateword','uiw'],
+    idahostate:['idahostate','idst'],sandiego:['sandiego','usd'],idaho:['idaho','idho'],lamar:['lamar','lam'],
+    'ucdavis':['ucdavis','ucd','ucdavis'],smu:['smu'],portlandstate:['portlandstate','portlandst','post'],
+    northdakota:['northdakota','ndak'],calpoly:['calpoly','cp'],sanjosestate:['sanjosestate','sjsu'],
+    'coloradostate':['coloradostate','csu'],southernutah:['southernutah','sout','su'],
+    nevada:['nevada','nev'],
+    oregonstate:['oregonstate','orst']
+  };
+  return map[n] || [n];
+}
+function cbsGameTextMatch(text,game){
+  const n=bigSkyTeamKey(text);
+  const a=cbsTeamAliasesForOdds(game.displayAway||game.team), h=cbsTeamAliasesForOdds(game.displayHome||game.opponent);
+  return a.some(x=>n.includes(bigSkyTeamKey(x))) && h.some(x=>n.includes(bigSkyTeamKey(x)));
+}
+function parseCbsOddsText(text,game){
+  const clean=String(text||'').replace(/\r/g,'');
+  const lines=clean.split('\n').map(x=>x.trim()).filter(Boolean);
+  for(let i=0;i<lines.length;i++){
+    if(!cbsGameTextMatch(lines.slice(i,i+8).join(' '),game)) continue;
+    const block=lines.slice(i,Math.min(lines.length,i+12)).join(' ');
+    const spreadMatches=[...block.matchAll(/([+-]\d+(?:\.5)?)(?:\s+[-+]?\d{2,3})?/g)].map(m=>m[1]);
+    const mlMatches=[...block.matchAll(/([+-]\d{3,5})(?:\s+[-+]?\d{2,3})?/g)].map(m=>m[1]);
+    const totalMatch=block.match(/(?:o|u)(\d+(?:\.5)?)/ig);
+    const spreads=spreadMatches.filter((v,j,a)=>a.indexOf(v)===j).slice(0,2);
+    const mls=mlMatches.filter((v,j,a)=>a.indexOf(v)===j).slice(0,2);
+    const total=totalMatch?.[0] || '';
+    if(spreads.length || mls.length || total){
+      return {main:[spreads.length?`SPREAD ${spreads.join(' / ')}`:'',total?`TOTAL ${total.toUpperCase()}`:'',mls.length?`ML ${mls.join(' / ')}`:''].filter(Boolean).join(' • '),sub:'CBS SPORTS ODDS'};
+    }
+  }
+  return null;
+}
+async function fetchCbsOdds(game){
+  const week=cbsWeekForDate(game.date);
+  const url=`https://www.cbssports.com/college-football/odds/BSKY/2026/regular/week-${week}/`;
+  const proxies=[
+    `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+    `https://r.jina.ai/${url}`
+  ];
+  for(const proxy of proxies){
+    try{
+      const r=await fetch(proxy,{cache:'no-store'});
+      if(!r.ok) continue;
+      const text=await r.text();
+      const found=parseCbsOddsText(text,game);
+      if(found) return found;
+    }catch(e){}
+  }
+  return null;
+}
+
+async function fetchBigSkyOdds(game){
+  // The previous version depended heavily on scraping third-party HTML pages.
+  // Those pages frequently block browser fetches, which made every card say
+  // LINE NOT POSTED even when a line existed. ESPN's event/odds endpoints are
+  // the primary source now, with CBS as a browser-safe fallback.
+  const iso=bigSkyDateISO(game.date); if(!iso) return null;
   const cacheKey=iso;
   if(!BIG_SKY_ODDS_CACHE.has(cacheKey)){
-    BIG_SKY_ODDS_CACHE.set(cacheKey,(async()=>{try{const ymd=iso.replaceAll('-','');const res=await fetch(`https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${ymd}&limit=500`,{cache:'no-store'});if(!res.ok)return [];const d=await res.json();return Array.isArray(d.events)?d.events:[];}catch(e){return [];}})());
+    BIG_SKY_ODDS_CACHE.set(cacheKey,(async()=>{
+      try{
+        const ymd=iso.replaceAll('-','');
+        const urls=[
+          `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${ymd}&limit=500`,
+          `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${ymd}&groups=80,81&limit=500`
+        ];
+        for(const u of urls){
+          try{
+            const res=await fetch(u,{cache:'no-store'});
+            if(res.ok){const d=await res.json(); if(Array.isArray(d.events)&&d.events.length) return d.events;}
+          }catch(e){}
+        }
+      }catch(e){}
+      return [];
+    })());
   }
-  const events=await BIG_SKY_ODDS_CACHE.get(cacheKey); const ev=events.find(e=>bigSkyEventMatches(e,game)); if(!ev)return null;
-  const competition=ev.competitions?.[0]; let odds=Array.isArray(competition?.odds)?competition.odds[0]:competition?.odds;
-  if(!odds&&ev.id){try{const r=await fetch(`https://cdn.espn.com/core/college-football/game?xhr=1&gameId=${ev.id}`,{cache:'no-store'});if(r.ok){const pkg=await r.json();const c=pkg?.gamepackageJSON?.header?.competitions?.[0]||pkg?.header?.competitions?.[0];odds=Array.isArray(c?.odds)?c.odds[0]:c?.odds;}}catch(e){}}
-  return odds||null;
+  const events=await BIG_SKY_ODDS_CACHE.get(cacheKey);
+  const ev=events.find(e=>bigSkyEventMatches(e,game));
+  if(ev){
+    const competition=ev.competitions?.[0];
+    let odds=Array.isArray(competition?.odds)?competition.odds[0]:competition?.odds;
+    const direct=espnOddsMatchValue(odds);
+    if(direct) return {__allBooks:true,html:`<div class="market-line-row"><b>ESPN</b><span>${escapeHtml(direct.main)}</span></div>`,sub:direct.sub};
+    const core=await fetchEspnCoreGameOdds(ev.id,competition?.id);
+    const coreFormatted=espnOddsMatchValue(core);
+    if(coreFormatted) return {__allBooks:true,html:`<div class="market-line-row"><b>ESPN</b><span>${escapeHtml(coreFormatted.main)}</span></div>`,sub:coreFormatted.sub};
+  }
+  const cbs=await fetchCbsOdds(game);
+  if(cbs) return {__allBooks:true,html:`<div class="market-line-row"><b>CBS</b><span>${escapeHtml(cbs.main)}</span></div>`,sub:cbs.sub};
+  return null;
 }
 
 function bigSkyWeatherLabel(code){
