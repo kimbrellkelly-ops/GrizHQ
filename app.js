@@ -1306,8 +1306,9 @@ async function renderFCSScoreboard(){
     // General FCS school-name matching. ESPN often appends the mascot;
     // rankings normally do not.  The Montana/Montana State guard prevents
     // the shorter Montana name from matching the Bobcats.
-    const montanaPair=(an.includes('montanastate')||bn.includes('montanastate'))&&(an.includes('montana')||bn.includes('montana'));
-    if(!montanaPair && (an.startsWith(bn)||bn.startsWith(an)))return true;
+    const protectedPairs=[['montana','montanastate'],['idaho','idahostate'],['southdakota','southdakotastate'],['northdakota','northdakotastate']];
+    const protectedPair=protectedPairs.some(([x,y])=>(an===x&&bn===y)||(an===y&&bn===x));
+    if(!protectedPair && (an.startsWith(bn)||bn.startsWith(an)))return true;
     return false;
   }
   function teamObjMatch(name,t){
