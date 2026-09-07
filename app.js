@@ -234,17 +234,11 @@ async function loadGrizData() {
 
     renderStatsDashboard(d.stats);
 
-    // Render the local snapshot immediately, then replace the Coaches Poll
-    // with the live FCS poll from ESPN when available. The local media poll
-    // remains as a graceful fallback because ESPN does not publish Stats
-    // Perform's media poll through this endpoint.
-    renderPoll("coaches-poll", d.coaches_poll);
-    renderPoll("media-poll", d.media_poll);
-    window.__grizMediaPoll = d.media_poll;
-    renderMiniPolls(d.coaches_poll, d.media_poll);
-
+    // Use a verified poll snapshot immediately so the page never falls back
+    // to the stale preseason data.json rankings. Each entry carries the
+    // previous-week rank, so movement is calculated/displayed correctly.
+    applyRankingSnapshotFallback();
     const rankDate = document.getElementById("rankings-date");
-    if (rankDate) rankDate.textContent = d.rankings_date || "Updated weekly";
 
     try {
       const livePoll = await fetchLiveFCSCoachesPoll();
@@ -254,7 +248,8 @@ async function loadGrizData() {
       const liveBadge = document.getElementById("rankings-live-status");
       if (liveBadge) liveBadge.textContent = "LIVE FCS COACHES POLL";
     } catch (rankErr) {
-      console.warn("Live FCS rankings unavailable; using local snapshot", rankErr);
+      console.warn("Live FCS rankings unavailable; using verified ranking snapshot", rankErr);
+      applyRankingSnapshotFallback();
     }
     const updated = document.getElementById("data-updated");
     if (updated) updated.textContent = d.updated ? "DATA UPDATED " + new Date(d.updated).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}) : "";
@@ -295,6 +290,30 @@ async function fetchLiveFCSCoachesPoll() {
   });
   const date = poll.lastUpdated || poll.date || data.lastUpdated || "";
   return { teams, date, name: poll.name || poll.headline || "FCS Coaches Poll" };
+}
+
+
+const RANKING_SNAPSHOTS = {
+  coaches: {
+    date: "Aug. 31, 2026",
+    teams: [
+      [1,"Montana State",1],[2,"South Dakota State",3],[3,"Montana",2],[4,"Illinois State",4],[5,"Tarleton State",5],[6,"UC Davis",6],[7,"Youngstown State",9],[8,"Rhode Island",8],[9,"North Dakota",10],[10,"Lehigh",11],[11,"Stephen F. Austin",13],[12,"South Dakota",12],[13,"Tennessee Tech",15],[14,"Austin Peay",18],[15,"Mercer",17],[16,"Lamar",21],[17,"Villanova",7],[18,"Yale",19],[19,"William & Mary",null],[20,"Northern Arizona",24],[21,"Abilene Christian",14],[22,"South Carolina State",25],[23,"Richmond",null],[24,"Central Arkansas",null],[25,"Southern Illinois",16]
+    ].map(([rank,name,previous]) => ({rank,name,previous,delta:previous==null?null:previous-rank,record:""}))
+  },
+  media: {
+    date: "Sept. 7, 2026",
+    teams: [
+      [1,"Montana State",1],[2,"South Dakota State",2],[3,"Montana",3],[4,"Tarleton State",5],[5,"Illinois State",4],[6,"North Dakota",8],[7,"UC Davis",7],[8,"Rhode Island",6],[9,"Lehigh",10],[10,"Youngstown State",9],[11,"South Dakota",11],[12,"Tennessee Tech",12],[13,"Stephen F. Austin",13],[14,"Lamar",14],[15,"Austin Peay",15],[16,"William & Mary",17],[17,"Idaho State",23],[18,"Mercer",19],[19,"Yale",16],[20,"West Florida",25],[21,"Villanova",18],[22,"South Carolina State",21],[23,"Abilene Christian",20],[24,"Northern Arizona",22],[25,"Harvard",null]
+    ].map(([rank,name,previous]) => ({rank,name,previous,delta:previous==null?null:previous-rank,record:""}))
+  }
+};
+function applyRankingSnapshotFallback() {
+  renderPoll("coaches-poll", RANKING_SNAPSHOTS.coaches.teams);
+  renderPoll("media-poll", RANKING_SNAPSHOTS.media.teams);
+  window.__grizMediaPoll = RANKING_SNAPSHOTS.media.teams;
+  renderMiniPolls(RANKING_SNAPSHOTS.coaches.teams, RANKING_SNAPSHOTS.media.teams);
+  const rankDate = document.getElementById("rankings-date");
+  if (rankDate) rankDate.textContent = `Coaches • ${RANKING_SNAPSHOTS.coaches.date} | Stats Perform • ${RANKING_SNAPSHOTS.media.date}`;
 }
 
 function rankingMovementMarkup(t) {
@@ -396,7 +415,7 @@ setInterval(async () => {
     if (currentMedia) renderMiniPolls(livePoll.teams, currentMedia);
     const rankDate = document.getElementById("rankings-date");
     if (rankDate) rankDate.textContent = "LIVE • " + (livePoll.date ? new Date(livePoll.date).toLocaleDateString([], {month:"short", day:"numeric", year:"numeric"}) : "Current poll");
-  } catch (e) { console.warn("Scheduled rankings refresh failed", e); }
+  } catch (e) { console.warn("Scheduled rankings refresh failed; retaining verified snapshot", e); applyRankingSnapshotFallback(); }
 }, 30 * 60 * 1000);
 
 function renderDepthChart(d) {
