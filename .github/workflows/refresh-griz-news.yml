@@ -2,7 +2,9 @@ name: Refresh Griz HQ News
 
 on:
   schedule:
-    - cron: "17 * * * *"
+    # GitHub may delay scheduled jobs during busy periods. Fifteen minutes gives
+    # Griz HQ frequent updates without hammering publishers.
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -15,7 +17,6 @@ concurrency:
 jobs:
   refresh-news:
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -28,7 +29,7 @@ jobs:
       - name: Install news dependencies
         run: pip install requests beautifulsoup4
 
-      - name: Refresh news.json only
+      - name: Refresh news.json
         run: python news_update.py
 
       - name: Commit news.json only
