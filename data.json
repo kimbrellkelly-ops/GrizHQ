@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07T04:52:34.145563+00:00",
+  "updated": "2026-09-07T05:21:32.800383+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -20,8 +20,7 @@
       "location": "Home",
       "result": "W 28-21",
       "time": "7 PM",
-      "conference": true,
-      "game_center": "https://gogriz.com/game-center/6481"
+      "conference": true
     },
     {
       "date": "Sep 5 (Sat)",
@@ -29,8 +28,7 @@
       "location": "Home",
       "result": "W 45-10",
       "time": "1 PM",
-      "conference": false,
-      "game_center": "https://gogriz.com/game-center/6482"
+      "conference": false
     },
     {
       "date": "Sep 12 (Sat)",
@@ -38,8 +36,7 @@
       "location": "Home",
       "result": "",
       "time": "1 PM",
-      "conference": false,
-      "game_center": "https://gogriz.com/game-center/4257"
+      "conference": false
     },
     {
       "date": "Sep 19 (Sat)",
@@ -47,8 +44,7 @@
       "location": "Away",
       "result": "",
       "time": "9 PM (MT)",
-      "conference": false,
-      "game_center": "https://gogriz.com/game-center/6235"
+      "conference": false
     },
     {
       "date": "Sep 26 (Sat)",
@@ -56,8 +52,7 @@
       "location": "Away",
       "result": "",
       "time": "8 PM (MT)",
-      "conference": true,
-      "game_center": "https://gogriz.com/game-center/5256"
+      "conference": true
     },
     {
       "date": "Oct 3 (Sat)",
@@ -65,8 +60,7 @@
       "location": "Home",
       "result": "",
       "time": "2 PM",
-      "conference": true,
-      "game_center": "https://gogriz.com/game-center/5261"
+      "conference": true
     },
     {
       "date": "Oct 10 (Sat)",
@@ -74,8 +68,7 @@
       "location": "Away",
       "result": "",
       "time": "3 PM (MT)",
-      "conference": true,
-      "game_center": "https://gogriz.com/game-center/5260"
+      "conference": true
     },
     {
       "date": "Oct 17 (Sat)",
@@ -83,8 +76,7 @@
       "location": "Home",
       "result": "",
       "time": "1 PM",
-      "conference": true,
-      "game_center": "https://gogriz.com/game-center/6483"
+      "conference": true
     },
     {
       "date": "Oct 31 (Sat)",
@@ -92,8 +84,7 @@
       "location": "Away",
       "result": "",
       "time": "2 PM (MT)",
-      "conference": true,
-      "game_center": "https://gogriz.com/game-center/5259"
+      "conference": true
     },
     {
       "date": "Nov 7 (Sat)",
@@ -101,8 +92,7 @@
       "location": "Home",
       "result": "",
       "time": "1 PM",
-      "conference": true,
-      "game_center": "https://gogriz.com/game-center/5255"
+      "conference": true
     },
     {
       "date": "Nov 14 (Sat)",
@@ -110,8 +100,7 @@
       "location": "Home",
       "result": "",
       "time": "8:30 PM",
-      "conference": true,
-      "game_center": "https://gogriz.com/game-center/6484"
+      "conference": true
     },
     {
       "date": "Nov 21 (Sat)",
@@ -119,8 +108,7 @@
       "location": "Away",
       "result": "",
       "time": "Noon",
-      "conference": true,
-      "game_center": "https://gogriz.com/game-center/5262"
+      "conference": true
     }
   ],
   "coaches_poll": [
@@ -2949,17 +2937,17 @@
     }
   ],
   "stats": {
-    "through": "Current 2026 cumulative stats",
+    "through": "Through current completed games",
     "team_summary": [
       {
-        "value": "2-0",
+        "value": "2–0",
         "label": "RECORD",
         "note": "2026"
       },
       {
         "value": "36.5",
         "label": "POINTS / GAME",
-        "note": "Official cumulative stats"
+        "note": "Official game results"
       },
       {
         "value": "413",
@@ -27397,5 +27385,5 @@
     "url": "https://skylinesportsmt.com/montana-state-press-conference-brent-vigen-jabez-woods-zac-crews-after-51-24-win-over-butler/",
     "youtube_id": "BpTf14bwiDg"
   },
-  "fcs_scores_updated": "2026-09-07T04:52:44.242046+00:00"
+  "fcs_scores_updated": "2026-09-07T05:21:44.831263+00:00"
 }
