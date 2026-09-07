@@ -3245,3 +3245,25 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   #big-sky[data-tab="schedule"] .bigsky-row{min-width:560px !important;}
   #big-sky[data-tab="schedule"] .bigsky-table{overflow-x:auto !important;}
 }
+
+/* Game information layer for the season schedule */
+.schedule{padding:0 20px 6px}
+.schedule-row.game-card-row{display:grid;grid-template-columns:92px minmax(180px,1.55fr) 120px minmax(170px,1fr) minmax(190px,1.1fr);gap:16px;align-items:center;padding:15px 12px;border-bottom:1px solid #e4e1df;background:#fff;font-size:10px;transition:background .18s ease,transform .18s ease}
+.schedule-row.game-card-row:hover{background:#faf7f8}
+.schedule-row.game-card-row.next{background:#f3e7ed;border-left:5px solid var(--maroon);padding-left:7px}
+.schedule-row.game-card-row.played{background:#fbfbfa}
+.schedule-row.game-card-row.head{display:grid;grid-template-columns:92px minmax(180px,1.55fr) 120px minmax(170px,1fr) minmax(190px,1.1fr);padding:10px 12px;background:var(--maroon);color:#fff;border:0;font-size:8px;letter-spacing:1px;text-transform:uppercase}
+.schedule-main-date span{display:block;font:800 15px "Barlow Condensed";color:var(--maroon);letter-spacing:.4px}
+.schedule-main-date small{display:block;font:800 7px Inter;letter-spacing:1.2px;color:#777;margin-top:4px}
+.schedule-main-match b{display:block;font:800 20px "Barlow Condensed";letter-spacing:.2px;color:#171719}
+.schedule-main-match span{display:block;color:#666;font-size:8px;margin-top:4px;line-height:1.35}
+.schedule-main-match small{display:inline-block;margin-top:6px;padding:3px 6px;background:#eeeae8;color:#555;font:800 7px Inter;letter-spacing:.7px}
+.schedule-main-status strong{display:block;font:800 15px "Barlow Condensed";color:#171719}
+.schedule-main-status em{display:block;font:800 7px Inter;letter-spacing:1px;color:var(--maroon);font-style:normal;margin-top:4px}
+.schedule-odds,.schedule-weather{min-height:54px;border-left:1px solid #e4e1df;padding-left:14px;display:flex;flex-wrap:wrap;align-content:center;gap:3px 10px}
+.schedule-odds b,.schedule-weather b{display:block;width:100%;font:800 15px "Barlow Condensed";color:var(--maroon)}
+.schedule-odds span,.schedule-weather span{font-size:8px;color:#555}
+.schedule-odds small,.schedule-weather small{display:block;width:100%;font-size:7px;color:#999;text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+.schedule-row.next .schedule-odds,.schedule-row.next .schedule-weather{border-color:#d8c5cd}
+@media(max-width:1050px){.schedule-row.game-card-row,.schedule-row.game-card-row.head{grid-template-columns:75px minmax(150px,1.4fr) 105px 1fr 1fr;gap:10px}.schedule-main-match b{font-size:17px}}
+@media(max-width:760px){.schedule{padding:0 12px}.schedule-row.game-card-row.head{display:none}.schedule-row.game-card-row{grid-template-columns:70px 1fr 90px;gap:10px;padding:14px 8px}.schedule-main-match b{font-size:18px}.schedule-odds,.schedule-weather{grid-column:2 / -1;border-left:0;border-top:1px solid #e8e5e3;padding:9px 0 0;min-height:0}.schedule-main-status{text-align:right}.schedule-odds b,.schedule-weather b{width:auto}.schedule-odds span,.schedule-weather span{font-size:8px}.schedule-odds small,.schedule-weather small{width:auto}}

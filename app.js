@@ -1,3 +1,118 @@
+
+const GRIZ_GAME_VENUES = {
+  "Southern Utah": {lat:46.8721, lon:-113.9940, venue:"Washington-Grizzly Stadium"},
+  "Drake": {lat:46.8721, lon:-113.9940, venue:"Washington-Grizzly Stadium"},
+  "Utah Tech": {lat:46.8721, lon:-113.9940, venue:"Washington-Grizzly Stadium"},
+  "Oregon State": {lat:44.5595, lon:-123.2800, venue:"Reser Stadium"},
+  "UC Davis": {lat:38.5418, lon:-121.7505, venue:"UC Davis Health Stadium"},
+  "Northern Colorado": {lat:46.8721, lon:-113.9940, venue:"Washington-Grizzly Stadium"},
+  "Northern Arizona": {lat:35.1894, lon:-111.6513, venue:"J. Lawrence Walkup Skydome"},
+  "Idaho": {lat:46.8721, lon:-113.9940, venue:"Washington-Grizzly Stadium"},
+  "Eastern Washington": {lat:47.4917, lon:-117.5830, venue:"Roos Field"},
+  "Portland State": {lat:45.5481, lon:-122.6890, venue:"Hillsboro Stadium"},
+  "Idaho State": {lat:46.8721, lon:-113.9940, venue:"Washington-Grizzly Stadium"},
+  "Montana State": {lat:45.6676, lon:-111.0490, venue:"Bobcat Stadium"}
+};
+
+function scheduleDateISO(label) {
+  const m = String(label || '').trim().toUpperCase().match(/^([A-Z]{3})\s+(\d{1,2})/);
+  if (!m) return null;
+  const months = {JAN:'01',FEB:'02',MAR:'03',APR:'04',MAY:'05',JUN:'06',JUL:'07',AUG:'08',SEP:'09',OCT:'10',NOV:'11',DEC:'12'};
+  return months[m[1]] ? `2026-${months[m[1]]}-${String(m[2]).padStart(2,'0')}` : null;
+}
+
+function formatOdds(odds) {
+  if (!odds) return {provider:'LINE NOT POSTED', spread:'—', total:'—', moneyline:'—'};
+  const provider = odds.provider?.name || odds.provider?.displayName || 'SPORTSBOOK';
+  const details = odds.details || odds.spread || '—';
+  const total = odds.overUnder != null ? odds.overUnder : '—';
+  let moneyline = '—';
+  if (Array.isArray(odds.moneyline)) {
+    moneyline = odds.moneyline.map(x => x.value ?? x.displayValue).filter(Boolean).join(' / ') || '—';
+  } else if (odds.moneyline) {
+    moneyline = odds.moneyline.displayValue || odds.moneyline.value || '—';
+  }
+  return {provider, spread:details || '—', total, moneyline};
+}
+
+async function fetchGameOdds(game) {
+  const iso = scheduleDateISO(game.date);
+  if (!iso || game.result) return null;
+  try {
+    const r = await fetch(`https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${iso.replaceAll('-','')}&limit=500`, {cache:'no-store'});
+    if (!r.ok) return null;
+    const d = await r.json();
+    const event = (d.events || []).find(e => {
+      const name = String(e.name || '').toLowerCase();
+      return name.includes('montana') && name.includes(String(game.opponent || '').toLowerCase());
+    });
+    const odds = event?.competitions?.[0]?.odds;
+    if (!odds) return null;
+    const first = Array.isArray(odds) ? odds[0] : odds;
+    return formatOdds(first);
+  } catch (e) { return null; }
+}
+
+function weatherLabel(code) {
+  const c = Number(code);
+  if ([0].includes(c)) return 'Clear';
+  if ([1,2].includes(c)) return 'Mostly clear';
+  if ([3].includes(c)) return 'Cloudy';
+  if ([45,48].includes(c)) return 'Fog';
+  if ([51,53,55,56,57].includes(c)) return 'Drizzle';
+  if ([61,63,65,66,67].includes(c)) return 'Rain';
+  if ([71,73,75,77].includes(c)) return 'Snow';
+  if ([80,81,82].includes(c)) return 'Showers';
+  if ([95,96,99].includes(c)) return 'Thunderstorms';
+  return 'Forecast available';
+}
+
+async function fetchGameWeather(game) {
+  const iso = scheduleDateISO(game.date), loc = GRIZ_GAME_VENUES[game.opponent];
+  if (!iso || !loc || game.result) return null;
+  try {
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${loc.lat}&longitude=${loc.lon}&daily=weather_code,temperature_2m_max,precipitation_probability_max,wind_speed_10m_max&timezone=auto&start_date=${iso}&end_date=${iso}`;
+    const r = await fetch(url, {cache:'no-store'});
+    if (!r.ok) return null;
+    const d = await r.json();
+    if (!d.daily?.time?.length) return null;
+    return {
+      temp: Math.round(Number(d.daily.temperature_2m_max?.[0])),
+      rain: Number(d.daily.precipitation_probability_max?.[0] ?? 0),
+      wind: Math.round(Number(d.daily.wind_speed_10m_max?.[0] ?? 0)),
+      condition: weatherLabel(d.daily.weather_code?.[0])
+    };
+  } catch (e) { return null; }
+}
+
+async function enrichScheduleCards(schedule, games) {
+  const upcoming = games.filter(g => !g.result);
+  const enriched = await Promise.all(upcoming.map(async g => ({
+    key: `${g.date}|${g.opponent}`,
+    odds: await fetchGameOdds(g),
+    weather: await fetchGameWeather(g)
+  })));
+  const map = new Map(enriched.map(x => [x.key, x]));
+  schedule.querySelectorAll('.schedule-row[data-game-key]').forEach(row => {
+    const item = map.get(row.dataset.gameKey);
+    if (!item) return;
+    const odds = item.odds;
+    const weather = item.weather;
+    const oddsEl = row.querySelector('.schedule-odds');
+    const weatherEl = row.querySelector('.schedule-weather');
+    if (oddsEl) {
+      oddsEl.innerHTML = odds
+        ? `<b>${escapeHtml(odds.spread)}</b><span>O/U ${escapeHtml(String(odds.total))}</span><span>ML ${escapeHtml(String(odds.moneyline))}</span><small>${escapeHtml(odds.provider)}</small>`
+        : `<b>NOT POSTED</b><span>Sportsbook line unavailable</span>`;
+    }
+    if (weatherEl) {
+      weatherEl.innerHTML = weather
+        ? `<b>${escapeHtml(String(weather.temp))}°</b><span>${escapeHtml(weather.condition)}</span><span>${escapeHtml(String(weather.rain))}% rain · ${escapeHtml(String(weather.wind))} mph</span><small>Open-Meteo forecast</small>`
+        : `<b>FORECAST TBD</b><span>Closer to kickoff</span>`;
+    }
+  });
+}
+
 async function loadGrizData() {
   try {
     const res = await fetch("data.json?ts=" + Date.now(), {cache: "no-store"});
@@ -78,14 +193,23 @@ async function loadGrizData() {
 
     const schedule = document.getElementById("schedule-list");
     if (schedule && Array.isArray(d.schedule)) {
-      schedule.innerHTML = `<div class="schedule-row head"><span>DATE</span><span>OPPONENT</span><span>RESULT / TIME</span></div>` +
+      const firstUpcoming = d.schedule.findIndex(x => !x.result);
+      schedule.innerHTML = `<div class="schedule-row head"><span>DATE</span><span>OPPONENT</span><span>RESULT / TIME</span><span>BETTING</span><span>WEATHER</span></div>` +
         d.schedule.map((g, i) => {
-          const isNext = !g.result && i === d.schedule.findIndex(x => !x.result);
-          return `<div class="schedule-row ${isNext ? "next" : ""}">
-            <span>${g.date || ""}</span><b>${g.location === "Away" ? "@ " : ""}${g.opponent || ""}</b>
-            <strong>${g.result || g.time || ""}</strong>
+          const isNext = !g.result && i === firstUpcoming;
+          const key = `${g.date || ""}|${g.opponent || ""}`;
+          const venue = g.venue || GRIZ_GAME_VENUES[g.opponent]?.venue || (g.location === "Away" ? "Road game" : "Washington-Grizzly Stadium");
+          const tv = g.tv || g.network || "";
+          const status = g.result || g.time || "";
+          return `<div class="schedule-row game-card-row ${isNext ? "next" : ""} ${g.result ? "played" : "upcoming"}" data-game-key="${escapeHtml(key)}">
+            <div class="schedule-main-date"><span>${escapeHtml(g.date || "")}</span><small>${g.location === "Away" ? "AWAY" : "HOME"}</small></div>
+            <div class="schedule-main-match"><b>${g.location === "Away" ? "@ " : ""}${escapeHtml(g.opponent || "")}</b><span>${escapeHtml(venue)}</span>${tv ? `<small>${escapeHtml(tv)}</small>` : ""}</div>
+            <div class="schedule-main-status"><strong>${escapeHtml(status)}</strong>${isNext ? `<em>NEXT GAME</em>` : (g.result ? `<em>FINAL</em>` : `<em>UPCOMING</em>`)}</div>
+            <div class="schedule-odds"><b>CHECKING…</b><span>Sportsbook line</span></div>
+            <div class="schedule-weather"><b>CHECKING…</b><span>Game-day forecast</span></div>
           </div>`;
         }).join("");
+      enrichScheduleCards(schedule, d.schedule);
     }
 
     renderStatsDashboard(d.stats);
