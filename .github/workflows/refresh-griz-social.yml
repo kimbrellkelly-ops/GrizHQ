@@ -1,4 +1,4 @@
-name: Refresh Griz Social
+name: Refresh Griz HQ Social
 
 on:
   schedule:
@@ -8,24 +8,28 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: griz-hq-social
+  cancel-in-progress: true
+
 jobs:
   refresh-social:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Check out repository
         uses: actions/checkout@v4
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      - name: Install dependencies
+      - name: Install social dependencies
         run: pip install requests beautifulsoup4
-      - name: Refresh social feed
+      - name: Refresh social.json
         run: python social_update.py
-      - name: Commit social feed
+      - name: Commit social.json only
         run: |
-          git config user.name "grizhq-bot"
-          git config user.email "grizhq-bot@users.noreply.github.com"
+          git config user.name 'griz-hq-social-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add social.json
-          git diff --cached --quiet || git commit -m "Refresh Griz social feed"
+          git diff --cached --quiet || git commit -m 'Auto-update Griz HQ social'
           git push
