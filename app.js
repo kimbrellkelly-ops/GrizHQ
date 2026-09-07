@@ -1337,14 +1337,6 @@ async function renderFCSScoreboard(){
       }
       byGame.set(key,{...g,date:g.date,time:g.time||'TBA',displayAway:away,displayHome:home,bigSkyGame:!!g.big_sky_game,matchupKey:key});
     });
-    // Supplemental non-FCS games that must remain visible on the FCS Top 25 / Big Sky scoreboard.
-    // Montana State @ Nevada is a Big Sky team's Week 2 game and is an FCS-vs-FBS matchup,
-    // so it can be absent from an FCS-only feed. Keep it in the schedule layer regardless.
-    if(w[0]==='2026-09-10'){
-      const g={date:'Sep 12',time:'7:30 PM PT',team:'Montana State',opponent:'Nevada',location:'Away',network:'The CW',big_sky_game:false,displayAway:'Montana State',displayHome:'Nevada'};
-      g.matchupKey='Sep 12|montanastate|nevada';
-      byGame.set(g.matchupKey,g);
-    }
     return [...byGame.values()].sort((a,b)=>{
       const da=scheduleDate(a.date)?.getTime()||0,db=scheduleDate(b.date)?.getTime()||0;
       return da-db||String(a.time||'').localeCompare(String(b.time||''));
@@ -1368,14 +1360,12 @@ async function renderFCSScoreboard(){
     const seen=new Set();return out.filter(ev=>{const k=String(ev.id||'')||JSON.stringify(ev);if(seen.has(k))return false;seen.add(k);return true;});
   }
   async function fetchESPNEvents(w){
-    const start=w[0].replace(/-/g,'');
-    const end=w[1].replace(/-/g,'');
     const urls=[
-      `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${start}-${end}&groups=81&limit=1000`,
-      `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${start}-${end}&groups=81&limit=1000`,
+      `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=1000`,
+      `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=1000`,
       // Full college-football feed is required for FCS teams playing FBS opponents.
-      `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${start}-${end}&limit=1000`,
-      `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${start}-${end}&limit=1000`
+      `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&limit=1000`,
+      `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&limit=1000`
     ];
     for(const url of urls){try{const r=await fetch(url,{cache:'no-store'});if(!r.ok)continue;const p=await r.json();if(Array.isArray(p.events))return p.events;}catch(e){}}
     return [];
@@ -1390,10 +1380,21 @@ async function renderFCSScoreboard(){
     const name=teamName(t,fallback),logo=logoFor(t);
     return `<div class="score-team-row ghq-fcs-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy">`:''}<span>${escapeHtml(name)}</span>${showScore?`<strong>${escapeHtml(t?.score??'—')}</strong>`:''}</div>`;
   }
+  function top25ScheduledGame(name,scheduled){
+    const rankedKey=canonicalBigSky(name);
+    if(rankedKey){
+      const exact=scheduled.find(g=>canonicalBigSky(g.displayAway)===rankedKey||canonicalBigSky(g.displayHome)===rankedKey);
+      if(exact)return exact;
+    }
+    return scheduled.find(g=>teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome))||null;
+  }
   function top25Card(t,events,scheduled){
     const rank=escapeHtml(t.rank||''),name=String(t.team||'Team');
     const ev=findTeamEvent(name,events);
-    const sg=scheduled.find(g=>teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome));
+    // Keep the Top 25 cards independent from generic FCS event matching.
+    // The Big Sky scoreboard already has the authoritative scheduled matchup,
+    // including FCS-vs-FBS games such as Montana State at Nevada.
+    const sg=top25ScheduledGame(name,scheduled);
     if(ev){
       const ts=eventTeams(ev),a=ts.find(x=>x.homeAway==='away')||ts[0],h=ts.find(x=>x.homeAway==='home')||ts[1],playing=ev.completed||ev.state==='in';
       return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b></div>${scoreCardTeam(a,sg?.displayAway||'Away',playing)}${scoreCardTeam(h,sg?.displayHome||'Home',playing)}<small>${escapeHtml(statusText(ev,sg))}</small></div></div>`;
