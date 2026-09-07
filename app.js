@@ -501,17 +501,18 @@ async function renderFCSScoreboard(){
         return direct || (id ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(id)}.png` : '');
       };
       const teamRow=(x)=>{
-        const name=x?.short||x?.name||'Team';
+        const team=x?.team||x||{};
+        const name=team?.shortDisplayName||team?.displayName||team?.name||x?.short||x?.name||'Team';
         const logo=teamLogo(x);
-        const rankForTeam=rankLookup.get(canonicalRankKey(x?.name||x?.short||x?.abbrev||''));
+        const rankForTeam=rankLookup.get(canonicalRankKey(team?.displayName||team?.name||team?.shortDisplayName||team?.abbreviation||''));
         const rankBadge=rankForTeam?`<span class="fcs-team-rank">#${escapeHtml(rankForTeam)}</span>`:'';
-        return `<div class="fcs-top-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy">`:''}<span>${rankBadge}<span class="fcs-team-name">${escapeHtml(name)}</span></span><strong>${escapeHtml(x?.score??'—')}</strong></div>`;
+        return `<div class="fcs-top-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy">`:''}<span><span class="fcs-team-rank-wrap">${rankBadge}</span><span class="fcs-team-name">${escapeHtml(name)}</span></span><strong>${escapeHtml(x?.score??team?.score??'—')}</strong></div>`;
       };
       if(ev){
         const away=(ev.teams||[]).find(x=>x.homeAway==='away') || (ev.teams||[])[0];
         const home=(ev.teams||[]).find(x=>x.homeAway==='home') || (ev.teams||[])[1];
         const statusLabel=ev.completed ? 'FINAL' : (ev.state==='in' ? statusText(ev) : (ev.date?new Date(ev.date).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'}):'TBA'));
-        return `<div class="fcs-rank-card ${cardClass}"><span class="fcs-rank">${rank}</span><div class="fcs-top-matchup">${teamRow(away)}${teamRow(home)}<small>${escapeHtml(statusLabel)}</small></div></div>`;
+        return `<div class="fcs-rank-card ${cardClass}"><div class="fcs-top-matchup">${teamRow(away)}${teamRow(home)}<small>${escapeHtml(statusLabel)}</small></div></div>`;
       }
       const fallbackLogo=t.logo||t.logo_url||'';
       const fallbackRank=String(t.rank||'').trim();

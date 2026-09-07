@@ -2177,7 +2177,7 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 
 /* FCS Top 25 — stacked matchup cards to match the Big Sky scoreboard */
 .fcs-top20{grid-template-columns:repeat(3,1fr) !important;}
-.fcs-rank-card{grid-template-columns:34px minmax(0,1fr) !important;align-items:stretch !important;min-height:112px;}
+.fcs-rank-card{grid-template-columns:minmax(0,1fr) !important;align-items:stretch !important;min-height:112px;}
 .fcs-top-matchup{min-width:0;}
 .fcs-top-team-row{display:grid;grid-template-columns:28px minmax(0,1fr) auto;align-items:center;gap:8px;min-height:40px;border-bottom:1px solid #e6e6e6;}
 .fcs-top-team-row:last-of-type{border-bottom:0;}
@@ -2524,6 +2524,7 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 
 /* FCS Top 25: show the ranking directly beside each ranked team. */
 .fcs-top-team-row > span:first-of-type{display:flex;align-items:center;gap:7px;min-width:0;}
+.fcs-team-rank-wrap{display:inline-flex;align-items:center;min-width:0;}
 .fcs-team-rank{display:inline-flex;align-items:center;justify-content:center;min-width:29px;height:21px;padding:0 5px;border-radius:4px;background:#8b1236;color:#fff;font-size:11px;font-weight:900;line-height:1;letter-spacing:.1px;flex:0 0 auto;}
 .fcs-team-name{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .fcs-rank-card > .fcs-rank{display:none;}
