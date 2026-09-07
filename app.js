@@ -1416,12 +1416,14 @@ async function renderFCSScoreboard(){
     const name=teamName(t,fallback),logo=logoFor(t,fallback);
     return `<div class="score-team-row ghq-fcs-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}<span>${escapeHtml(name)}</span>${showScore?`<strong>${escapeHtml(t?.score??'—')}</strong>`:''}</div>`;
   }
+  function top25TeamRow(t, fallback, rank, isRanked, showScore){
+    const name=teamName(t,fallback), logo=logoFor(t,fallback);
+    const rankHtml=isRanked?`<span class="fcs-team-rank">#${escapeHtml(rank)}</span>`:'<span class="fcs-team-rank fcs-team-rank-empty"></span>';
+    return `<div class="ghq-fcs-top-team-row">${rankHtml}${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}<span>${escapeHtml(name)}</span>${showScore?`<strong>${escapeHtml(t?.score??'—')}</strong>`:''}</div>`;
+  }
   function top25Card(t,events,scheduled){
-    const rank=escapeHtml(t.rank||''),name=cleanTeamLabel(t.team||'Team');
+    const rank=String(t.rank||''),name=cleanTeamLabel(t.team||'Team');
     const sg=scheduled.find(g=>teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome)) || fullSchedule.map(g=>{ const dt=scheduleDate(g.date); const start=new Date(weeks[Number(weekEl.value)||0][0]+'T00:00:00'); const end=new Date(weeks[Number(weekEl.value)||0][1]+'T23:59:59'); if(!dt||dt<start||dt>end)return null; const away=g.location==='Away'?g.opponent:g.team; const home=g.location==='Away'?g.team:g.opponent; return {...g,displayAway:away,displayHome:home,matchupKey:`${g.date}|${[norm(away),norm(home)].sort().join('|')}`}; }).find(g=>g && (teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome)));
-    // Prefer the scheduled matchup for ranked teams. ESPN's FCS-only feed can
-    // contain no event (or an unrelated team event) when an FCS team plays an
-    // FBS opponent. Only use a live/cached event when it matches the scheduled game.
     const rawEv=findTeamEvent(name,events);
     const ev=sg ? (events.find(e=>eventMatchesGame(e,sg)) || rawEv && eventMatchesGame(rawEv,sg) ? (events.find(e=>eventMatchesGame(e,sg)) || rawEv) : null) : rawEv;
     if(ev){
@@ -1429,12 +1431,16 @@ async function renderFCSScoreboard(){
       const a=sg? (ts.find(x=>teamMatch(sg.displayAway,x))||ts.find(x=>x.homeAway==='away')||ts[0]) : (ts.find(x=>x.homeAway==='away')||ts[0]);
       const h=sg? (ts.find(x=>teamMatch(sg.displayHome,x))||ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]) : (ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]);
       const playing=ev.completed||ev.state==='in';
-      return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b></div>${scoreCardTeam(a,sg?.displayAway||'Away',playing)}${scoreCardTeam(h,sg?.displayHome||'Home',playing)}<small>${escapeHtml(statusText(ev,sg))}</small></div></div>`;
+      const rankedAway=teamMatch(name,a), rankedHome=teamMatch(name,h);
+      const awayRow=top25TeamRow(a,sg?.displayAway||'Away',rank,rankedAway,playing);
+      const homeRow=top25TeamRow(h,sg?.displayHome||'Home',rank,rankedHome,playing);
+      return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${awayRow}${homeRow}<div class="ghq-fcs-top-meta"><span>${escapeHtml(statusText(ev,sg))}</span>${ev?.broadcasts?.length?`<small>${escapeHtml(ev.broadcasts.slice(0,2).flatMap(b=>b.names||[]).join(', '))}</small>`:''}</div></div></div>`;
     }
     if(sg){
-      return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(cleanTeamLabel(name))}</b></div><div class="ghq-fcs-scheduled ghq-fcs-scheduled-teams">${scoreCardTeam(null,sg.displayAway,false)}<b>@</b>${scoreCardTeam(null,sg.displayHome,false)}</div><small>${escapeHtml(sg.time||'TBA')}</small></div></div>`;
+      const rankedAway=teamMatch(name,sg.displayAway), rankedHome=teamMatch(name,sg.displayHome);
+      return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${top25TeamRow(null,sg.displayAway,rank,rankedAway,false)}${top25TeamRow(null,sg.displayHome,rank,rankedHome,false)}<div class="ghq-fcs-top-meta"><span>${escapeHtml(sg.time||'TBA')}</span>${sg.network?`<small>${escapeHtml(sg.network)}</small>`:''}</div></div></div>`;
     }
-    return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b></div><small>${escapeHtml(t.record||'')} • NO GAME THIS WEEK</small></div></div>`;
+    return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${top25TeamRow(null,name,rank,true,false)}<div class="ghq-fcs-top-meta"><span>BYE / NO GAME THIS WEEK</span></div></div></div>`;
   }
   function gameCard(game,ev){
     const ts=eventTeams(ev);
@@ -1474,6 +1480,18 @@ async function renderFCSScoreboard(){
     if(document.getElementById('ghq-fcs-scoreboard-surgical-styles'))return;
     const s=document.createElement('style');s.id='ghq-fcs-scoreboard-surgical-styles';s.textContent=`
       .ghq-fcs-rank-card{overflow:hidden!important}.ghq-fcs-top-matchup{min-width:0!important}.ghq-fcs-rank-heading{display:flex!important;align-items:center!important;gap:10px!important;width:100%!important;min-height:30px!important}.ghq-fcs-rank-heading b{display:inline-block!important;visibility:visible!important;opacity:1!important;color:#151515!important;font-size:17px!important;font-weight:800!important;line-height:1.2!important;white-space:normal!important}.ghq-fcs-rank-heading strong{margin-left:auto!important;color:#151515!important}.ghq-fcs-scheduled{display:flex!important;gap:8px!important;align-items:center!important;margin:9px 0 4px!important;font-size:14px!important;color:#151515!important}.ghq-fcs-scheduled span{opacity:.55!important}.ghq-fcs-team-row{display:flex!important;align-items:center!important;min-width:0!important;gap:8px!important}.ghq-fcs-team-row span{display:block!important;visibility:visible!important;opacity:1!important;color:#151515!important;font-weight:700!important;white-space:normal!important}.ghq-fcs-team-row img{width:26px!important;height:26px!important;object-fit:contain!important;flex:0 0 26px!important}.ghq-fcs-team-row strong{margin-left:auto!important}.ghq-fcs-scheduled-teams{display:flex!important;align-items:center!important;gap:8px!important}.ghq-fcs-scheduled-teams .ghq-fcs-team-row{min-width:0!important;flex:1 1 0!important}.ghq-fcs-scheduled-teams .ghq-fcs-team-row span{font-size:13px!important}.ghq-fcs-game .bigsky-betting{min-width:180px!important}.ghq-fcs-game .fcs-matchup{min-width:0!important}
+      .ghq-fcs-top-scorecard{display:flex!important;flex-direction:column!important;gap:0!important;padding:8px 10px!important;min-width:0!important}
+      .ghq-fcs-top-team-row{display:grid!important;grid-template-columns:34px 30px minmax(0,1fr) auto!important;align-items:center!important;min-height:42px!important;gap:7px!important;border-bottom:1px solid #e6e6e6!important;color:#151515!important}
+      .ghq-fcs-top-team-row:last-of-type{border-bottom:0!important}
+      .ghq-fcs-top-team-row .fcs-team-rank{display:flex!important;align-items:center!important;justify-content:center!important;background:#8c1531!important;color:#fff!important;border-radius:5px!important;font-size:12px!important;font-weight:900!important;min-height:25px!important;padding:0 4px!important}
+      .ghq-fcs-top-team-row .fcs-team-rank-empty{background:transparent!important}
+      .ghq-fcs-top-team-row img{width:28px!important;height:28px!important;object-fit:contain!important}
+      .ghq-fcs-top-team-row>span:not(.fcs-team-rank){font-size:15px!important;font-weight:750!important;line-height:1.15!important;min-width:0!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+      .ghq-fcs-top-team-row strong{font-size:18px!important;font-weight:900!important;margin-left:auto!important}
+      .ghq-fcs-top-meta{display:flex!important;justify-content:flex-end!important;align-items:center!important;gap:8px!important;padding-top:6px!important;font-size:11px!important;color:#666!important;text-transform:uppercase!important;letter-spacing:.03em!important}
+      .ghq-fcs-top-meta small{font-size:10px!important;color:#777!important}
+      @media(max-width:700px){.ghq-fcs-top-team-row{grid-template-columns:31px 27px minmax(0,1fr) auto!important}.ghq-fcs-top-team-row img{width:25px!important;height:25px!important}.ghq-fcs-top-team-row>span:not(.fcs-team-rank){font-size:14px!important}}
+
     `;document.head.appendChild(s);
   }
   injectStyles();
