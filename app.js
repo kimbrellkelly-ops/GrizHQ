@@ -464,7 +464,19 @@ const BIG_SKY_VENUES = {
   "UC Davis": {lat:38.5418, lon:-121.7505, venue:"UC Davis Health Stadium"},
   "Cal Poly": {lat:35.3000, lon:-120.6625, venue:"Alex G. Spanos Stadium"},
   "Sacramento State": {lat:38.5600, lon:-121.4241, venue:"Hornet Stadium"},
-  "Utah Tech": {lat:37.1059, lon:-113.5667, venue:"Greater Zion Stadium"}
+  "Utah Tech": {lat:37.1059, lon:-113.5667, venue:"Greater Zion Stadium"},
+  // Non-Big-Sky opponents that appear on league schedules.  These are
+  // needed so away games can still use the actual home-stadium location
+  // for weather instead of falling through to "Forecast unavailable".
+  "Colorado": {lat:40.0095, lon:-105.2669, venue:"Folsom Field"},
+  "South Dakota": {lat:42.7860, lon:-96.9250, venue:"DakotaDome"},
+  "Wyoming": {lat:41.1399, lon:-105.2755, venue:"War Memorial Stadium"},
+  "Northwestern State": {lat:31.7556, lon:-93.0978, venue:"Turpin Stadium"},
+  "Northeastern State": {lat:36.1551, lon:-94.9678, venue:"Gable Field"},
+  "VMI": {lat:37.7879, lon:-79.4428, venue:"Alumni Memorial Field at Foster Stadium"},
+  "Drake": {lat:41.6014, lon:-93.6580, venue:"Drake Stadium"},
+  "Oregon State": {lat:44.5590, lon:-123.2800, venue:"Reser Stadium"},
+  "South Dakota State": {lat:44.3222, lon:-96.7837, venue:"Dana J. Dykhouse Stadium"}
 };
 const BIG_SKY_WEATHER_CACHE = new Map();
 const BIG_SKY_ODDS_CACHE = new Map();
