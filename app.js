@@ -1368,8 +1368,12 @@ async function renderFCSScoreboard(){
   }
   function top25Card(t,events,scheduled){
     const rank=escapeHtml(t.rank||''),name=String(t.team||'Team');
-    const ev=findTeamEvent(name,events);
     const sg=scheduled.find(g=>teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome)) || fullSchedule.map(g=>{ const dt=scheduleDate(g.date); const start=new Date(weeks[Number(weekEl.value)||0][0]+'T00:00:00'); const end=new Date(weeks[Number(weekEl.value)||0][1]+'T23:59:59'); if(!dt||dt<start||dt>end)return null; const away=g.location==='Away'?g.opponent:g.team; const home=g.location==='Away'?g.team:g.opponent; return {...g,displayAway:away,displayHome:home,matchupKey:`${g.date}|${[norm(away),norm(home)].sort().join('|')}`}; }).find(g=>g && (teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome)));
+    // Prefer the scheduled matchup for ranked teams. ESPN's FCS-only feed can
+    // contain no event (or an unrelated team event) when an FCS team plays an
+    // FBS opponent. Only use a live/cached event when it matches the scheduled game.
+    const rawEv=findTeamEvent(name,events);
+    const ev=sg ? (events.find(e=>eventMatchesGame(e,sg)) || rawEv && eventMatchesGame(rawEv,sg) ? (events.find(e=>eventMatchesGame(e,sg)) || rawEv) : null) : rawEv;
     if(ev){
       const ts=eventTeams(ev),a=ts.find(x=>x.homeAway==='away')||ts[0],h=ts.find(x=>x.homeAway==='home')||ts[1],playing=ev.completed||ev.state==='in';
       return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="fcs-top-matchup ghq-fcs-top-matchup"><div class="ghq-fcs-rank-heading"><span class="fcs-team-rank">#${rank}</span><b>${escapeHtml(name)}</b></div>${scoreCardTeam(a,sg?.displayAway||'Away',playing)}${scoreCardTeam(h,sg?.displayHome||'Home',playing)}<small>${escapeHtml(statusText(ev,sg))}</small></div></div>`;
