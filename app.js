@@ -165,8 +165,10 @@ function renderDepthChart(d) {
   if (!dc) return;
   const note = document.getElementById("depth-chart-note");
   const updated = document.getElementById("depth-chart-updated");
-  if (note) note.innerHTML = `${escapeHtml(dc.note || "Latest published two-deep")} <a href="${dc.source_url}" target="_blank" rel="noopener">Source ↗</a>`;
+  const sourceButton = document.getElementById("depth-chart-source");
+  if (note) note.innerHTML = `${escapeHtml(dc.note || "Latest published two-deep")} <a href="${dc.source_url || "#"}" target="_blank" rel="noopener">Source ↗</a>`;
   if (updated) updated.textContent = dc.published ? `Published ${dc.published}` : "2026 season";
+  if (sourceButton && dc.source_url) sourceButton.href = dc.source_url;
   ["offense","defense","special_teams"].forEach(section => {
     const el = document.getElementById("depth-" + (section === "special_teams" ? "special" : section));
     if (!el || !Array.isArray(dc[section])) return;
