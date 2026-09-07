@@ -140,6 +140,8 @@ async function renderLatestPressConference(){
     const d=await (await fetch("data.json?ts="+Date.now(),{cache:"no-store"})).json();
     const m=d.latest_press_conference;
     if(!m)return;
+    const pressTitle=String(m.title||'').toLowerCase();
+    if(pressTitle.includes('montana state') || pressTitle.includes('montana st.') || pressTitle.includes('bobcats') || pressTitle.includes('bozeman')) return;
     const title=document.getElementById("latest-press-title");
     const date=document.getElementById("latest-press-date");
     const link=document.getElementById("latest-press-link");

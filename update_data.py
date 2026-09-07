@@ -373,8 +373,17 @@ def normalize_poll(old_list):
     return old_list if isinstance(old_list,list) else []
 
 
+def _is_montana_state_press_title(title):
+    """Return True for Montana State/Bobcats press items that must never enter the Griz feed."""
+    low = str(title or "").lower().strip()
+    if "bobcats" in low or "bozeman" in low:
+        return True
+    if re.search(r"\bmontana\s+(?:state|st\.?)\b", low):
+        return True
+    return False
+
 def fetch_latest_press_conference():
-    """Find the newest Montana/Griz press-conference article on Skyline and extract its YouTube ID when available."""
+    """Find the newest Montana/Griz press-conference article on Skyline and extract its YouTube ID when available, excluding Montana State/Bobcats."""
     import urllib.request
     feed_urls=[
         "https://skylinesportsmt.com/category/press-conference/feed/",
@@ -399,6 +408,10 @@ def fetch_latest_press_conference():
                 title=html.unescape(next(x for x in title_m.groups() if x is not None)).strip()
                 url=html.unescape(link_m.group(1)).strip()
                 low=title.lower()
+                # Skyline's press-conference feed mixes Griz and Bobcat items.
+                # Never allow Montana State/Bobcats/Bozeman into the Griz slot.
+                if _is_montana_state_press_title(title):
+                    continue
                 if 'press conference' in low and ('montana' in low or 'griz' in low):
                     article=urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"}),timeout=15).read().decode('utf-8','ignore')
                     y=re.search(r'(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=)|youtu\.be/)([A-Za-z0-9_-]{11})',article)
