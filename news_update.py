@@ -20,13 +20,21 @@ FEEDS = [
     ("GoGriz", "https://gogriz.com/rss?path=football"),
     ("Montana Sports", "https://www.montanasports.com/index.rss"),
     ("KPAX", "https://www.kpax.com/news/rss"),
+    ("NCAA FCS", "https://www.ncaa.com/news/football/fcs/rss.xml"),
+    ("Missoulian", "https://missoulian.com/search/?f=rss"),
 ]
 
 # High-value pages without dependable RSS feeds. These are parsed for article cards.
 # The updater only keeps stories that are actually about Montana/Griz football.
 SOURCE_PAGES = [
+    ("Skyline Sports", "https://skylinesportsmt.com/"),
     ("Skyline Sports", "https://skylinesportsmt.com/category/cat-griz-football/"),
+    ("Skyline Sports", "https://skylinesportsmt.com/category/press-conference/"),
     ("NBC Montana", "https://nbcmontana.com/sports"),
+    ("Daily Inter Lake", "https://dailyinterlake.com/news/sports/"),
+    ("Daily Inter Lake", "https://dailyinterlake.com/news/pods/"),
+    ("406 MT Sports", "https://406mtsports.com/college/montana-grizzlies/"),
+    ("406 MT Sports", "https://406mtsports.com/college/big-sky-conference/"),
     ("KPAX Grizzlies", "https://www.kpax.com/big-sky-conference/montana-grizzlies"),
     ("Big Sky Conference", "https://bigskyconf.com/news/"),
     ("FCS Football Central", "https://www.si.com/college/fcs/big-sky/"),
@@ -375,7 +383,7 @@ def dedupe_and_sort(stories):
             story.pop("image_fallback", None)
         if not valid_image(story.get("video_thumbnail", "")):
             story["video_thumbnail"] = story["image"]
-    return result[:60]
+    return result[:100]
 
 
 def main():

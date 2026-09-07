@@ -582,7 +582,9 @@
       return `<a class="ghq-social-card" href="${esc(item.url)}" target="_blank" rel="noopener"><div class="ghq-social-art">${art}<span class="ghq-social-badge">${esc(type)}</span>${item.video?'<i class="ghq-social-play">▶</i>':''}</div><div class="ghq-social-copy"><small>${esc(item.source||'GRIZ SOCIAL')}</small><h3>${esc(item.title)}</h3><p>${esc(item.description||'Montana Grizzlies social post.')}</p><span>${esc(item.date||'Recent')} ↗</span></div></a>`;
     }).join(''):'<div class="ghq-social-empty">No verified Griz social posts are available right now.</div>';
   };
-  fetch('social.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>render(d.posts)).catch(()=>render([]));
+  const loadSocial=()=>fetch('social.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>render(d.posts)).catch(()=>render([]));
+  loadSocial();
+  window.setInterval(loadSocial,5*60*1000);
 })();
 </script>
 <script>
