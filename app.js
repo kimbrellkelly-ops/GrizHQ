@@ -408,12 +408,7 @@ async function renderFCSScoreboard(){
     }
     return null;
   }
-  const canonicalRankKey=s=>canonicalTeamKey(s)||norm(s);
-  const rankLookup=new Map();
-  top25.slice(0,25).forEach(item=>{
-    const r=String(item?.rank??'').trim();
-    if(r) rankLookup.set(canonicalRankKey(item?.team||''),r);
-  });
+
   function looseTeamMatch(a,b){
     const ak=teamKeys(a), bk=teamKeys(b);
     if(ak.some(k=>bk.includes(k))) return true;
@@ -504,7 +499,18 @@ async function renderFCSScoreboard(){
         const team=x?.team||x||{};
         const name=team?.shortDisplayName||team?.displayName||team?.name||x?.short||x?.name||'Team';
         const logo=teamLogo(x);
-        const rankForTeam=rankLookup.get(canonicalRankKey(team?.displayName||team?.name||team?.shortDisplayName||team?.abbreviation||''));
+        const rankForTeamForRow=(teamObj)=>{
+          const rowName=teamObj?.displayName||teamObj?.shortDisplayName||teamObj?.name||teamObj?.abbreviation||'';
+          const rowId=teamObj?.id ? String(teamObj.id) : '';
+          for(const item of top25.slice(0,25)){
+            const rankValue=String(item?.rank??'').trim();
+            if(!rankValue) continue;
+            if(rowId && item?.id && String(item.id)===rowId) return rankValue;
+            if(rowName && teamMatches(item?.team||'',rowName)) return rankValue;
+          }
+          return '';
+        };
+        const rankForTeam=rankForTeamForRow(team);
         const rankBadge=rankForTeam?`<span class="fcs-team-rank">#${escapeHtml(rankForTeam)}</span>`:'';
         return `<div class="fcs-top-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy">`:''}<span><span class="fcs-team-rank-wrap">${rankBadge}</span><span class="fcs-team-name">${escapeHtml(name)}</span></span><strong>${escapeHtml(x?.score??team?.score??'—')}</strong></div>`;
       };
