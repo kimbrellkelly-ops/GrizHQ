@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07T02:23:17.853149+00:00",
+  "updated": "2026-09-07T02:38:47.392614+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -8,14 +8,14 @@
   },
   "next_game": {
     "opponent": "Utah Tech",
-    "date": "Sep 12",
+    "date": "Sep 12 (Sat)",
     "time": "1 PM",
     "venue": "Washington-Grizzly Stadium, Missoula, Mont.",
     "url": "https://gogriz.com/sports/football/schedule"
   },
   "schedule": [
     {
-      "date": "Aug 29",
+      "date": "Aug 29 (Sat)",
       "opponent": "Southern Utah",
       "location": "Home",
       "result": "W 28-21",
@@ -23,16 +23,15 @@
       "conference": true
     },
     {
-      "date": "Sep 5",
+      "date": "Sep 5 (Sat)",
       "opponent": "Drake",
       "location": "Home",
       "result": "W 45-10",
       "time": "1 PM",
-      "conference": false,
-      "boxscore_url": "https://gogriz.com/game-center/6482"
+      "conference": false
     },
     {
-      "date": "Sep 12",
+      "date": "Sep 12 (Sat)",
       "opponent": "Utah Tech",
       "location": "Home",
       "result": "",
@@ -40,23 +39,23 @@
       "conference": false
     },
     {
-      "date": "Sep 19",
+      "date": "Sep 19 (Sat)",
       "opponent": "Oregon State",
       "location": "Away",
       "result": "",
-      "time": "9 PM MT",
+      "time": "9 PM (MT)",
       "conference": false
     },
     {
-      "date": "Sep 26",
+      "date": "Sep 26 (Sat)",
       "opponent": "UC Davis",
       "location": "Away",
       "result": "",
-      "time": "8 PM MT",
+      "time": "8 PM (MT)",
       "conference": true
     },
     {
-      "date": "Oct 3",
+      "date": "Oct 3 (Sat)",
       "opponent": "Northern Colorado",
       "location": "Home",
       "result": "",
@@ -64,15 +63,15 @@
       "conference": true
     },
     {
-      "date": "Oct 10",
+      "date": "Oct 10 (Sat)",
       "opponent": "Northern Arizona",
       "location": "Away",
       "result": "",
-      "time": "3 PM MT",
+      "time": "3 PM (MT)",
       "conference": true
     },
     {
-      "date": "Oct 17",
+      "date": "Oct 17 (Sat)",
       "opponent": "Idaho",
       "location": "Home",
       "result": "",
@@ -80,15 +79,15 @@
       "conference": true
     },
     {
-      "date": "Oct 31",
+      "date": "Oct 31 (Sat)",
       "opponent": "Eastern Washington",
       "location": "Away",
       "result": "",
-      "time": "2 PM MT",
+      "time": "2 PM (MT)",
       "conference": true
     },
     {
-      "date": "Nov 7",
+      "date": "Nov 7 (Sat)",
       "opponent": "Portland State",
       "location": "Home",
       "result": "",
@@ -96,7 +95,7 @@
       "conference": true
     },
     {
-      "date": "Nov 14",
+      "date": "Nov 14 (Sat)",
       "opponent": "Idaho State",
       "location": "Home",
       "result": "",
@@ -104,7 +103,7 @@
       "conference": true
     },
     {
-      "date": "Nov 21",
+      "date": "Nov 21 (Sat)",
       "opponent": "Montana State",
       "location": "Away",
       "result": "",
@@ -2938,37 +2937,27 @@
     }
   ],
   "stats": {
-    "through": "Through Wk 2 • Drake",
+    "through": "Current 2026 cumulative stats",
     "team_summary": [
       {
-        "value": "2-0",
+        "value": "2-0–1-0",
         "label": "RECORD",
-        "note": "2 games"
+        "note": "2026"
       },
       {
-        "value": "36.5",
+        "value": "36.50",
         "label": "POINTS / GAME",
-        "note": "73 total"
+        "note": "Official cumulative stats"
       },
       {
-        "value": "413",
+        "value": "826",
         "label": "TOTAL OFFENSE",
-        "note": "826 total yards"
+        "note": "Per game"
       },
       {
-        "value": "404",
+        "value": "—",
         "label": "TOTAL DEFENSE",
-        "note": "807 yards allowed"
-      },
-      {
-        "value": "+1",
-        "label": "TURNOVER MARGIN",
-        "note": "3 takeaways"
-      },
-      {
-        "value": "41.8%",
-        "label": "3RD DOWN",
-        "note": "10/24 converted"
+        "note": "Yards allowed"
       }
     ],
     "offense": [
@@ -27391,10 +27380,10 @@
     ]
   },
   "latest_press_conference": {
-    "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker",
-    "date": "Sun, 06 Sep 2026 02:23:32 +0000",
-    "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/",
-    "youtube_id": ""
+    "title": "Montana State press conference – Brent Vigen, Jabez Woods, Zac Crews after 51-24 win over Butler",
+    "date": "Sun, 06 Sep 2026 05:09:52 +0000",
+    "url": "https://skylinesportsmt.com/montana-state-press-conference-brent-vigen-jabez-woods-zac-crews-after-51-24-win-over-butler/",
+    "youtube_id": "BpTf14bwiDg"
   },
-  "fcs_scores_updated": "2026-09-07T02:23:27.910202+00:00"
+  "fcs_scores_updated": "2026-09-07T02:39:14.461249+00:00"
 }
