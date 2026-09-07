@@ -27,7 +27,15 @@ const GRIZ_SCHEDULE_LOGOS = {
   "Eastern Washington": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png",
   "Portland State": "https://a.espncdn.com/i/teamlogos/ncaa/500/279.png",
   "Idaho State": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
-  "Montana State": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
+  "Montana State": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png",
+  "Lamar": "https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png",
+  "South Dakota": "https://a.espncdn.com/i/teamlogos/ncaa/500/233.png",
+  "Wyoming": "https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png",
+  "Incarnate Word": "https://a.espncdn.com/i/teamlogos/ncaa/500/2916.png",
+  "Colorado State": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png",
+  "San Jose State": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png",
+  "North Dakota": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png",
+  "Nevada": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png"
 };
 
 function scheduleLogo(name) {
@@ -974,7 +982,15 @@ const BIG_SKY_LOGOS={
   'Colorado':'https://a.espncdn.com/i/teamlogos/ncaa/500/38.png',
   'SMU':'https://a.espncdn.com/i/teamlogos/ncaa/500/256.png',
   'San Diego':'https://a.espncdn.com/i/teamlogos/ncaa/500/301.png',
-  'Southern Utah':'https://a.espncdn.com/i/teamlogos/ncaa/500/253.png'
+  'Southern Utah':'https://a.espncdn.com/i/teamlogos/ncaa/500/253.png',
+  'Lamar':'https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png',
+  'South Dakota':'https://a.espncdn.com/i/teamlogos/ncaa/500/233.png',
+  'Wyoming':'https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png',
+  'Incarnate Word':'https://a.espncdn.com/i/teamlogos/ncaa/500/2916.png',
+  'Colorado State':'https://a.espncdn.com/i/teamlogos/ncaa/500/36.png',
+  'San Jose State':'https://a.espncdn.com/i/teamlogos/ncaa/500/23.png',
+  'North Dakota':'https://a.espncdn.com/i/teamlogos/ncaa/500/155.png',
+  'Nevada':'https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png'
 };
 function bigSkyLogo(name){
   if(BIG_SKY_LOGOS[name]) return BIG_SKY_LOGOS[name];
@@ -1266,7 +1282,7 @@ async function renderFCSScoreboard(){
   const teamIds={montana:'149',montanastate:'147',idaho:'70',weberstate:'2692',easternwashington:'331',northernarizona:'2464',northerncolorado:'2458',idahostate:'304',calpoly:'13',southernutah:'253',utahtech:'3101',ucdavis:'302',portlandstate:'2502'};
   const FCS_LOGO_IDS={
     Montana:'149','Montana State':'147',Idaho:'70','Weber State':'2692','Eastern Washington':'331','Northern Arizona':'2464','Northern Colorado':'2458','Idaho State':'304','Cal Poly':'13','Southern Utah':'253','Utah Tech':'3101','UC Davis':'302','Portland State':'2502',
-    Nevada:'2440',Colorado:'38','South Dakota':'233','Wyoming':'2751','Colorado State':'36',Utah:'254',Oregon:'2483','Oregon State':'204','Washington State':'265',Washington:'264','San Jose State':'23','San José State':'23','Utah State':'328','Boise State':'68','Fresno State':'278','San Diego State':'21','South Dakota State':'2569','North Dakota State':'2449','Montana State (57)':'147'
+    Nevada:'2440',Colorado:'38','South Dakota':'233','Wyoming':'2751','Colorado State':'36',Utah:'254',Oregon:'2483','Oregon State':'204','Washington State':'265',Washington:'264','San Jose State':'23','San José State':'23','Utah State':'328','Boise State':'68','Fresno State':'278','San Diego State':'21','South Dakota State':'2569','North Dakota State':'2449','Montana State (57)':'147','North Dakota':'155','Lamar':'2320','Incarnate Word':'2916','SMU':'256'
   };
   const bigSkyAliases={
     montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanast','montanastatebobcats'],idaho:['idaho','idahovandals'],
