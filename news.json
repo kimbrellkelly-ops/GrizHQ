@@ -1,8 +1,9 @@
 {
-  "updated": "2026-09-07T23:47:40.123777+00:00",
+  "updated": "2026-09-07T23:59:43.028555+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 21,
+  "story_count": 34,
   "sources": [
+    "406 MT Sports",
     "Daily Inter Lake",
     "FCS Football Central",
     "FCS Recruiting",
@@ -12,6 +13,81 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "First look: No. 3 Montana Grizzlies vs. Utah Tech Trailblazers",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-3-montana-grizzlies-vs-utah-tech-trailblazers/article_a21dc9ad-197d-48e0-aacc-7f4c6454a08e.html",
+      "date": "Sep. 7, 2026",
+      "published_at": "2026-09-07T22:45:00+00:00",
+      "description": "First look: No. 3 Montana Grizzlies vs. Utah Tech Trailblazers",
+      "source": "406 MT Sports",
+      "badge": "OPPONENT",
+      "short": "OPPONE",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/21/a21dc9ad-197d-48e0-aacc-7f4c6454a08e/6a9ef6b127b38.preview.jpg?crop=1763%2C926%2C0%2C115&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/21/a21dc9ad-197d-48e0-aacc-7f4c6454a08e/6a9ef6b127b38.preview.jpg?crop=1763%2C926%2C0%2C115&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "WEEK 1 REACTION: ELI GILLMAN IS THE GREATEST RUNNING BACK IN MONTANA HISTORY, WE ARE ALL WITNESSES",
+      "url": "https://skylinesportsmt.com/week-1-reaction-eli-gillman-is-the-greatest-running-back-in-montana-history-we-are-all-witnesses/",
+      "date": "Sep. 7, 2026",
+      "published_at": "2026-09-07T00:00:00+00:00",
+      "description": "September 7, 2026 WEEK 1 REACTION: ELI GILLMAN IS THE GREATEST RUNNING BACK IN MONTANA HISTORY, WE ARE ALL WITNESSES",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/09/DBP-EP.-27-THUMBNAIL.png",
+      "is_video": true,
+      "youtube_id": "hqDW4oYH3fg",
+      "video_url": "https://www.youtube.com/watch?v=hqDW4oYH3fg",
+      "video_thumbnail": "https://i.ytimg.com/vi/hqDW4oYH3fg/hqdefault.jpg"
+    },
+    {
+      "title": "Griz press conference – Montana’s Bobby Kennedy, S Kade Boyd, WR Landon Ransom-Goelz on Utah Tech",
+      "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
+      "date": "Sep. 7, 2026",
+      "published_at": "2026-09-07T00:00:00+00:00",
+      "description": "Colter Nuanez September 7, 2026 Griz press conference – Montana’s Bobby Kennedy, S Kade Boyd, WR Landon Ransom-Goelz on Utah Tech Montana head coach Bobby Kennedy, safety Kade Boyd and wide receiver Landon Ransom-Goelz addressed the media c",
+      "source": "Skyline Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Landon-Ransom-Goelz-fights-for-yards-after-the-catch.jpeg",
+      "is_video": true,
+      "youtube_id": "",
+      "video_url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Landon-Ransom-Goelz-fights-for-yards-after-the-catch.jpeg"
+    },
+    {
+      "title": "Week 1: No. 3 Montana Grizzlies take down Drake",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-1-no-3-montana-grizzlies-take-down-drake/collection_72dfbcec-85cc-4542-ab41-868212fe9f34.html",
+      "date": "Sep. 6, 2026",
+      "published_at": "2026-09-06T20:00:00+00:00",
+      "description": "Week 1: No. 3 Montana Grizzlies take down Drake",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/2d/72dfbcec-85cc-4542-ab41-868212fe9f34/6a9d3df190b06.preview.jpg?crop=1765%2C927%2C0%2C123&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/2d/72dfbcec-85cc-4542-ab41-868212fe9f34/6a9d3df190b06.preview.jpg?crop=1765%2C927%2C0%2C123&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "3 takeaways: No. 3 Grizzlies show strides but lack 'discipline' in beating Drake",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-3-grizzlies-show-strides-but-lack-discipline-in-beating-drake/article_de3c0760-782f-48bf-9175-b87f05369a5c.html",
+      "date": "Sep. 6, 2026",
+      "published_at": "2026-09-06T12:00:00+00:00",
+      "description": "3 takeaways: No. 3 Grizzlies show strides but lack 'discipline' in beating Drake",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/e3/de3c0760-782f-48bf-9175-b87f05369a5c/6a9ce278e0bf3.preview.jpg?crop=1002%2C526%2C479%2C75",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/e3/de3c0760-782f-48bf-9175-b87f05369a5c/6a9ce278e0bf3.preview.jpg?crop=1002%2C526%2C479%2C75"
+    },
     {
       "title": "Gillman sets records as Griz roll past Bulldogs, 45-10",
       "url": "https://gogriz.com/news/2026/9/5/football-gillman-sets-records-as-griz-roll-past-bulldogs-45-10",
@@ -26,6 +102,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&image_path=/images/2026/9/5/20260905_fb_v_Drake_4405_rb.jpg"
+    },
+    {
+      "title": "Eli Gillman's big day in win over Drake cements place in Grizzlies record book",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/eli-gillmans-big-day-in-win-over-drake-cements-place-in-grizzlies-record-book/article_cad53a42-28eb-4ef7-9968-f38d99e938a7.html",
+      "date": "Sep. 6, 2026",
+      "published_at": "2026-09-06T01:00:00+00:00",
+      "description": "Eli Gillman's big day in win over Drake cements place in Grizzlies record book",
+      "source": "406 MT Sports",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/ad/cad53a42-28eb-4ef7-9968-f38d99e938a7/6a9ca726d8675.preview.jpg?crop=1703%2C894%2C29%2C111&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/ad/cad53a42-28eb-4ef7-9968-f38d99e938a7/6a9ca726d8675.preview.jpg?crop=1703%2C894%2C29%2C111&resize=1200%2C630&order=crop%2Cresize"
     },
     {
       "title": "Give Gillman the crown: Griz ride RBs 4 touchdowns to win over Drake",
@@ -43,19 +134,19 @@
       "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/9/5/20260905_fb_v_Drake_4405_rb_AFMpW.jpg"
     },
     {
-      "title": "Gillman breaks record as Griz overcome penalties to cruise past Drake",
-      "url": "https://skylinesportsmt.com/gillman-breaks-record-as-griz-overcome-penalties-to-cruise-past-drake-for-second-straight-win/",
+      "title": "Montana's King, Kennedy, Gillman on win over Drake",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montanas-king-kennedy-gillman-on-win-over-drake/video_85ce6486-e45e-5f96-b0d3-4595556ce68e.html",
       "date": "Sep. 5, 2026",
-      "published_at": "2026-09-05T23:00:00Z",
-      "description": "Skyline Sports examines Montana's second straight win, Eli Gillman's record-setting day and the Griz's 16 penalties for 138 yards.",
-      "badge": "ANALYSIS",
-      "short": "ANAL",
-      "source": "Skyline Sports",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Bobby-Kennedy-on-sideline-with-team-and-Jaylen-Johnson-780x470.jpeg",
-      "is_video": false,
+      "published_at": "2026-09-05T23:29:00+00:00",
+      "description": "Montana's King, Kennedy, Gillman on win over Drake",
+      "source": "406 MT Sports",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/5c/85ce6486-e45e-5f96-b0d3-4595556ce68e/6a9ca5ff40c23.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": true,
       "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Bobby-Kennedy-on-sideline-with-team-and-Jaylen-Johnson-780x470.jpeg"
+      "video_url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montanas-king-kennedy-gillman-on-win-over-drake/video_85ce6486-e45e-5f96-b0d3-4595556ce68e.html",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/5c/85ce6486-e45e-5f96-b0d3-4595556ce68e/6a9ca5ff40c23.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
     },
     {
       "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake's Matt Walker",
@@ -73,6 +164,21 @@
       "youtube_id": ""
     },
     {
+      "title": "Gillman breaks record as Griz overcome penalties to cruise past Drake",
+      "url": "https://skylinesportsmt.com/gillman-breaks-record-as-griz-overcome-penalties-to-cruise-past-drake-for-second-straight-win/",
+      "date": "Sep. 5, 2026",
+      "published_at": "2026-09-05T23:00:00Z",
+      "description": "Skyline Sports examines Montana's second straight win, Eli Gillman's record-setting day and the Griz's 16 penalties for 138 yards.",
+      "badge": "ANALYSIS",
+      "short": "ANAL",
+      "source": "Skyline Sports",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Bobby-Kennedy-on-sideline-with-team-and-Jaylen-Johnson-780x470.jpeg",
+      "is_video": true,
+      "youtube_id": "wj5xtQfNVN8",
+      "video_url": "https://www.youtube.com/watch?v=wj5xtQfNVN8",
+      "video_thumbnail": "https://i.ytimg.com/vi/wj5xtQfNVN8/hqdefault.jpg"
+    },
+    {
       "title": "Trailblazers Drop In-State Duel at BYU on Saturday Night",
       "url": "https://utahtechtrailblazers.com/news/2026/9/5/football-trailblazers-drop-in-state-duel-at-byu-on-saturday-night.aspx",
       "date": "Sep. 5, 2026",
@@ -88,6 +194,21 @@
       "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/dixieathletics.com/images/2026/9/5/utfb_byuwrap.jpg"
     },
     {
+      "title": "PHOTOS: Grizzlies bite Bulldogs, 45-10",
+      "url": "https://dailyinterlake.com/news/2026/sep/05/photos-grizzlies-bite-bulldogs-45-10/",
+      "date": "Sep. 5, 2026",
+      "published_at": "2026-09-05T08:05:00+00:00",
+      "description": "Updated 1 day, 20 hours ago PHOTOS: Grizzlies bite Bulldogs, 45-10 The Montana Grizzlies improved to 2-0 with a 45-10 win over the Drake Bulldogs at Washington-Grizzly Stadium on Saturday, Sept. 5.",
+      "source": "Daily Inter Lake",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/09/05/0905_SPO_DIL_football_Grizzlies_vs_Drake-1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/09/05/0905_SPO_DIL_football_Grizzlies_vs_Drake-1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698"
+    },
+    {
       "title": "Stripe the Stadium - What you should wear",
       "url": "https://gogriz.com/news/2026/9/4/football-stripe-the-stadium-what-you-should-wear",
       "date": "Sep. 4, 2026",
@@ -101,6 +222,36 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&image_path=/images/2024/9/21/_TM21627_2.jpg"
+    },
+    {
+      "title": "Talkin’ Schmidt – Andrew give top 3 Griz players from season-opening + best/worst of BK debut",
+      "url": "https://skylinesportsmt.com/talkin-schmidt-andrew-give-top-3-griz-players-from-season-opening-best-worst-of-bk-debut/",
+      "date": "Sep. 2, 2026",
+      "published_at": "2026-09-02T00:00:00+00:00",
+      "description": "September 2, 2026 Talkin’ Schmidt – Andrew give top 3 Griz players from season-opening + best/worst of BK debut",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Montana-Griz-special-teams-blocking-field-goal-Tyler-King-Cooper-Buffington-Jake-Mason-and-Solomon-Tuliaupupu.jpeg",
+      "is_video": true,
+      "youtube_id": "9BjGfVWVUfU",
+      "video_url": "https://www.youtube.com/watch?v=9BjGfVWVUfU",
+      "video_thumbnail": "https://i.ytimg.com/vi/9BjGfVWVUfU/hqdefault.jpg"
+    },
+    {
+      "title": "Cussin’ & Discussin’ Episode 10 – Eric & Austin Buehler",
+      "url": "https://skylinesportsmt.com/cussin-discussin-episode-10-eric-austin-buehler/",
+      "date": "Sep. 2, 2026",
+      "published_at": "2026-09-02T00:00:00+00:00",
+      "description": "September 2, 2026 Cussin’ & Discussin’ Episode 10 – Eric & Austin Buehler Ty Hobbs & DJ Colter are joined by Eric & Austin Buehler, a father-son duo with deep Griz football roots.",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Austin-Buehler-stanced-at-tackle.jpeg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Austin-Buehler-stanced-at-tackle.jpeg"
     },
     {
       "title": "Griz look to build momentum against Drake",
@@ -148,6 +299,21 @@
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&image_path=/images/2026/8/31/Mason_ST_POW_Web.png"
     },
     {
+      "title": "Montana Griz press conference – Head coach Bobby Kennedy, SS Braeden Orlandi, OL Dyllan Drummond",
+      "url": "https://skylinesportsmt.com/montana-griz-press-conference-head-coach-bobby-kennedy-ss-braeden-orlandi-ol-dyllan-drummond/",
+      "date": "Aug. 31, 2026",
+      "published_at": "2026-08-31T00:00:00+00:00",
+      "description": "Colter Nuanez August 31, 2026 Montana Griz press conference – Head coach Bobby Kennedy, SS Braeden Orlandi, OL Dyllan Drummond Montana head coach Bobby Kennedy along with offensive lineman Dyllan Drummond and safety Braeden Orlandi addresse",
+      "source": "Skyline Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Braeden-Orlandi-blasts-ball-carrier.jpeg",
+      "is_video": true,
+      "youtube_id": "RsaQNx-3pfQ",
+      "video_url": "https://www.youtube.com/watch?v=RsaQNx-3pfQ",
+      "video_thumbnail": "https://i.ytimg.com/vi/RsaQNx-3pfQ/hqdefault.jpg"
+    },
+    {
       "title": "Griz outlast T-Birds in Kennedy’s debut",
       "url": "https://gogriz.com/news/2026/8/30/football-griz-outlast-t-birds-in-kennedys-debut",
       "date": "Aug. 30, 2026",
@@ -161,6 +327,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&image_path=/images/2026/8/30/20260829_fbvssouthernutah_0134.jpg"
+    },
+    {
+      "title": "Griz football – SUU’s Fitzgerald, UM’s Kennedy & Griz players post-game press conference following UM’s win over SUU",
+      "url": "https://skylinesportsmt.com/griz-football-suus-fitzgerald-ums-kennedy-griz-players-post-game-press-conference-following-ums-win-over-suu/",
+      "date": "Aug. 30, 2026",
+      "published_at": "2026-08-30T00:00:00+00:00",
+      "description": "Colter Nuanez August 30, 2026 Griz football – SUU’s Fitzgerald, UM’s Kennedy & Griz players post-game press conference following UM’s win over SUU Southern Utah head coach Delane Fitzgerald along with Montana head coach Bobby Kennedy, WR Le",
+      "source": "Skyline Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/IMG_9960.jpeg",
+      "is_video": true,
+      "youtube_id": "3DLykMBKQLI",
+      "video_url": "https://www.youtube.com/watch?v=3DLykMBKQLI",
+      "video_thumbnail": "https://i.ytimg.com/vi/3DLykMBKQLI/hqdefault.jpg"
     },
     {
       "title": "Grizzly Insider returns in 2026",
@@ -206,6 +387,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_primary&image_path=/images/2024/9/4/Coaches_Show_web.png"
+    },
+    {
+      "title": "Keali’i Ah Yat thriving heading into fourth year with Griz",
+      "url": "https://skylinesportsmt.com/kealii-ah-yat-thriving-heading-into-fourth-year-with-griz/",
+      "date": "Aug. 26, 2026",
+      "published_at": "2026-08-26T00:00:00+00:00",
+      "description": "Keali’i Ah Yat thriving heading into fourth year with Griz August 26, 2026",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2024/09/Kealii-Ah-Yat-breaks-through-an-arm-tackle-scaled.jpeg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2024/09/Kealii-Ah-Yat-breaks-through-an-arm-tackle-scaled.jpeg"
     },
     {
       "title": "Kennedy era opens as Griz host T-Birds",
