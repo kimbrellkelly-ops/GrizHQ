@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07T14:52:25.828989+00:00",
+  "updated": "2026-09-07T15:22:41.281197+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -139,31 +139,31 @@
     "Southern Illinois"
   ],
   "media_poll": [
-    "Montana State",
+    "Montana State (57)",
     "South Dakota State",
     "Montana",
-    "Illinois State",
     "Tarleton State",
-    "Rhode Island",
-    "UC Davis",
+    "Illinois State",
     "North Dakota",
-    "Youngstown State",
+    "UC Davis",
+    "Rhode Island",
     "Lehigh",
+    "Youngstown State",
     "South Dakota",
     "Tennessee Tech",
     "Stephen F. Austin",
     "Lamar",
     "Austin Peay",
-    "Yale",
     "William & Mary",
-    "Villanova",
-    "Mercer",
-    "Abilene Christian",
-    "South Carolina State",
-    "Northern Arizona",
     "Idaho State",
-    "Western Carolina",
-    "West Florida"
+    "Mercer",
+    "Yale",
+    "West Florida",
+    "Villanova",
+    "South Carolina State",
+    "Abilene Christian",
+    "Northern Arizona",
+    "Harvard"
   ],
   "news": [
     {
@@ -2710,8 +2710,8 @@
   "fcs_top20": [
     {
       "rank": 1,
-      "team": "Montana State",
-      "record": "1-0"
+      "team": "Montana State (57)",
+      "record": ""
     },
     {
       "rank": 2,
@@ -2725,17 +2725,17 @@
     },
     {
       "rank": 4,
-      "team": "Illinois State",
-      "record": "1-0"
-    },
-    {
-      "rank": 5,
       "team": "Tarleton State",
       "record": "1-0"
     },
     {
+      "rank": 5,
+      "team": "Illinois State",
+      "record": "1-0"
+    },
+    {
       "rank": 6,
-      "team": "Rhode Island",
+      "team": "North Dakota",
       "record": "1-0"
     },
     {
@@ -2745,17 +2745,17 @@
     },
     {
       "rank": 8,
-      "team": "North Dakota",
+      "team": "Rhode Island",
       "record": "1-0"
     },
     {
       "rank": 9,
-      "team": "Youngstown State",
+      "team": "Lehigh",
       "record": "1-0"
     },
     {
       "rank": 10,
-      "team": "Lehigh",
+      "team": "Youngstown State",
       "record": "1-0"
     },
     {
@@ -2785,35 +2785,35 @@
     },
     {
       "rank": 16,
-      "team": "Yale",
-      "record": "0-0"
-    },
-    {
-      "rank": 17,
       "team": "William & Mary",
       "record": "1-0"
     },
     {
-      "rank": 18,
-      "team": "Villanova",
-      "record": "0-1"
+      "rank": 17,
+      "team": "Idaho State",
+      "record": "1-0"
     },
     {
-      "rank": 19,
+      "rank": 18,
       "team": "Mercer",
       "record": "1-0"
     },
     {
+      "rank": 19,
+      "team": "Yale",
+      "record": "0-0"
+    },
+    {
       "rank": 20,
-      "team": "Abilene Christian",
-      "record": "0-1"
+      "team": "West Florida",
+      "record": "1-0"
     }
   ],
   "fcs_top25": [
     {
       "rank": 1,
-      "team": "Montana State",
-      "record": "1-0"
+      "team": "Montana State (57)",
+      "record": ""
     },
     {
       "rank": 2,
@@ -2827,17 +2827,17 @@
     },
     {
       "rank": 4,
-      "team": "Illinois State",
-      "record": "1-0"
-    },
-    {
-      "rank": 5,
       "team": "Tarleton State",
       "record": "1-0"
     },
     {
+      "rank": 5,
+      "team": "Illinois State",
+      "record": "1-0"
+    },
+    {
       "rank": 6,
-      "team": "Rhode Island",
+      "team": "North Dakota",
       "record": "1-0"
     },
     {
@@ -2847,17 +2847,17 @@
     },
     {
       "rank": 8,
-      "team": "North Dakota",
+      "team": "Rhode Island",
       "record": "1-0"
     },
     {
       "rank": 9,
-      "team": "Youngstown State",
+      "team": "Lehigh",
       "record": "1-0"
     },
     {
       "rank": 10,
-      "team": "Lehigh",
+      "team": "Youngstown State",
       "record": "1-0"
     },
     {
@@ -2887,53 +2887,53 @@
     },
     {
       "rank": 16,
-      "team": "Yale",
-      "record": "0-0"
-    },
-    {
-      "rank": 17,
       "team": "William & Mary",
       "record": "1-0"
     },
     {
-      "rank": 18,
-      "team": "Villanova",
-      "record": "0-1"
-    },
-    {
-      "rank": 19,
-      "team": "Mercer",
-      "record": "1-0"
-    },
-    {
-      "rank": 20,
-      "team": "Abilene Christian",
-      "record": "0-1"
-    },
-    {
-      "rank": 21,
-      "team": "South Carolina State",
-      "record": "1-0"
-    },
-    {
-      "rank": 22,
-      "team": "Northern Arizona",
-      "record": "1-0"
-    },
-    {
-      "rank": 23,
+      "rank": 17,
       "team": "Idaho State",
       "record": "1-0"
     },
     {
+      "rank": 18,
+      "team": "Mercer",
+      "record": "1-0"
+    },
+    {
+      "rank": 19,
+      "team": "Yale",
+      "record": "0-0"
+    },
+    {
+      "rank": 20,
+      "team": "West Florida",
+      "record": "1-0"
+    },
+    {
+      "rank": 21,
+      "team": "Villanova",
+      "record": "0-1"
+    },
+    {
+      "rank": 22,
+      "team": "South Carolina State",
+      "record": "1-0"
+    },
+    {
+      "rank": 23,
+      "team": "Abilene Christian",
+      "record": "0-1"
+    },
+    {
       "rank": 24,
-      "team": "Western Carolina",
+      "team": "Northern Arizona",
       "record": "1-0"
     },
     {
       "rank": 25,
-      "team": "West Florida",
-      "record": "1-0"
+      "team": "Harvard",
+      "record": ""
     }
   ],
   "stats": {
@@ -27385,5 +27385,5 @@
     "url": "https://skylinesportsmt.com/montana-state-press-conference-brent-vigen-jabez-woods-zac-crews-after-51-24-win-over-butler/",
     "youtube_id": "BpTf14bwiDg"
   },
-  "fcs_scores_updated": "2026-09-07T14:52:55.703351+00:00"
+  "fcs_scores_updated": "2026-09-07T15:23:08.029361+00:00"
 }
