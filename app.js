@@ -1377,14 +1377,43 @@ async function renderFCSScoreboard(){
     return out.filter(ev=>{if(seen.has(ev.id))return false;seen.add(ev.id);return true;});
   }
 
+  // Pull the complete selected-week scoreboard directly from ESPN. The old
+  // version depended only on data.json, which can be a partial cached feed and
+  // is why some FCS teams/games were disappearing from the scoreboard. ESPN's
+  // date-range endpoint returns the full slate, including FCS-vs-FBS games.
+  async function fetchLiveFcsWeek(w){
+    const range=`${w[0].replaceAll('-','')}-${w[1].replaceAll('-','')}`;
+    const urls=[
+      `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${range}&limit=500`,
+      `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${range}&groups=81&limit=500`
+    ];
+    const merged=new Map();
+    for(const url of urls){
+      try{
+        const r=await fetch(url,{cache:'no-store'});
+        if(!r.ok) continue;
+        const d=await r.json();
+        if(Array.isArray(d.events)) d.events.forEach(ev=>{ if(ev?.id) merged.set(String(ev.id),ev); });
+      }catch(e){}
+    }
+    return [...merged.values()];
+  }
+
   async function draw(){
     const w=weeks[Number(weekEl.value)||0];
     statusEl.textContent='Loading cached scores…';
     topEl.innerHTML='<div class="fcs-loading">Loading Top 25…</div>';
     if(bigSkyEl)bigSkyEl.innerHTML='<div class="fcs-loading">Loading Big Sky games…</div>';
     if(bigSkyLabelEl)bigSkyLabelEl.textContent=w[2]+' • All 13 teams';
-    const events=eventsForWeek(w);
-    statusEl.textContent=`${events.length} FCS games • cached feed`;
+    const cachedEvents=eventsForWeek(w);
+    let liveEvents=[];
+    try{ liveEvents=await fetchLiveFcsWeek(w); }catch(e){}
+    // Live ESPN data wins when available; cached data fills any gaps.
+    const mergedEvents=new Map();
+    cachedEvents.forEach(ev=>{ if(ev?.id) mergedEvents.set(String(ev.id),ev); });
+    liveEvents.forEach(ev=>{ if(ev?.id) mergedEvents.set(String(ev.id),ev); });
+    const events=[...mergedEvents.values()];
+    statusEl.textContent=`${events.length} FCS games loaded • live ESPN + cached backup`;
 
     topEl.innerHTML=top25.slice(0,25).map(t=>{
       const ev=findTeamEvent(t.team,events);
