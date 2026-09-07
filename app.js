@@ -234,12 +234,28 @@ async function loadGrizData() {
 
     renderStatsDashboard(d.stats);
 
+    // Render the local snapshot immediately, then replace the Coaches Poll
+    // with the live FCS poll from ESPN when available. The local media poll
+    // remains as a graceful fallback because ESPN does not publish Stats
+    // Perform's media poll through this endpoint.
     renderPoll("coaches-poll", d.coaches_poll);
     renderPoll("media-poll", d.media_poll);
+    window.__grizMediaPoll = d.media_poll;
     renderMiniPolls(d.coaches_poll, d.media_poll);
 
     const rankDate = document.getElementById("rankings-date");
     if (rankDate) rankDate.textContent = d.rankings_date || "Updated weekly";
+
+    try {
+      const livePoll = await fetchLiveFCSCoachesPoll();
+      renderPoll("coaches-poll", livePoll.teams);
+      renderMiniPolls(livePoll.teams, d.media_poll);
+      if (rankDate) rankDate.textContent = "LIVE • " + (livePoll.date ? new Date(livePoll.date).toLocaleDateString([], {month:"short", day:"numeric", year:"numeric"}) : "Current poll");
+      const liveBadge = document.getElementById("rankings-live-status");
+      if (liveBadge) liveBadge.textContent = "LIVE FCS COACHES POLL";
+    } catch (rankErr) {
+      console.warn("Live FCS rankings unavailable; using local snapshot", rankErr);
+    }
     const updated = document.getElementById("data-updated");
     if (updated) updated.textContent = d.updated ? "DATA UPDATED " + new Date(d.updated).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}) : "";
 
@@ -265,6 +281,33 @@ function isMontanaGrizzlies(team) {
   if (s.includes("bobcats")) return false;
   return true;
 }
+async function fetchLiveFCSCoachesPoll() {
+  // ESPN publishes the FCS Coaches Poll in rankings[2]. This is independent
+  // of Griz HQ's local data.json, so the Rankings tab can update when the poll changes.
+  const url = "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings?seasontype=2&type=0&level=3&ts=" + Date.now();
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error("FCS rankings request failed: " + res.status);
+  const data = await res.json();
+  const polls = Array.isArray(data.rankings) ? data.rankings : [];
+  const poll = polls.find(p => /FCS.*Coach|Coach.*FCS/i.test(String(p.name || p.headline || ""))) || polls[2];
+  if (!poll || !Array.isArray(poll.ranks) || !poll.ranks.length) throw new Error("No FCS Coaches Poll returned");
+  const teams = poll.ranks.slice(0, 25).map(r => {
+    const t = r.team || {};
+    const name = t.displayName || t.shortDisplayName || t.name || t.abbreviation || "Team";
+    const rank = r.current ?? r.rank ?? "";
+    const prev = r.previous ?? r.previousRank ?? "";
+    const record = t.record || t.records?.[0]?.summary || "";
+    let move = "";
+    if (Number.isFinite(Number(rank)) && Number.isFinite(Number(prev)) && Number(prev) > 0) {
+      const delta = Number(prev) - Number(rank);
+      move = delta > 0 ? ` ↑${delta}` : delta < 0 ? ` ↓${Math.abs(delta)}` : " —";
+    }
+    return `${rank}. ${name}${record ? ` (${record})` : ""}${move}`;
+  });
+  const date = poll.lastUpdated || poll.date || data.lastUpdated || "";
+  return { teams, date, name: poll.name || poll.headline || "FCS Coaches Poll" };
+}
+
 function renderPoll(id, teams) {
   const el = document.getElementById(id);
   if (!el || !Array.isArray(teams)) return;
@@ -305,6 +348,18 @@ async function renderLatestPressConference(){
 
 loadGrizData();
 renderLatestPressConference();
+
+// Re-check the national FCS Coaches Poll every 30 minutes while the page is open.
+setInterval(async () => {
+  try {
+    const livePoll = await fetchLiveFCSCoachesPoll();
+    renderPoll("coaches-poll", livePoll.teams);
+    const currentMedia = Array.isArray(window.__grizMediaPoll) ? window.__grizMediaPoll : null;
+    if (currentMedia) renderMiniPolls(livePoll.teams, currentMedia);
+    const rankDate = document.getElementById("rankings-date");
+    if (rankDate) rankDate.textContent = "LIVE • " + (livePoll.date ? new Date(livePoll.date).toLocaleDateString([], {month:"short", day:"numeric", year:"numeric"}) : "Current poll");
+  } catch (e) { console.warn("Scheduled rankings refresh failed", e); }
+}, 30 * 60 * 1000);
 
 function renderDepthChart(d) {
   const dc = d.depth_chart;
