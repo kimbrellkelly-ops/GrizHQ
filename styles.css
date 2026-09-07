@@ -3536,3 +3536,54 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   #big-sky[data-tab="schedule"] .bigsky-location{grid-column:1/-1;padding-bottom:9px;border-bottom:1px solid #ece9e6}
   #big-sky[data-tab="schedule"] .bigsky-info{padding-left:10px}
 }
+
+/* Big Sky scoreboard cards — team logos + line-shop presentation */
+#big-sky[data-tab="schedule"] .bigsky-matchup .bigsky-team{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  min-width:0;
+}
+#big-sky[data-tab="schedule"] .bigsky-matchup .bigsky-team.away{justify-content:flex-start;text-align:left}
+#big-sky[data-tab="schedule"] .bigsky-matchup .bigsky-team.home{justify-content:flex-end;text-align:right}
+#big-sky[data-tab="schedule"] .bigsky-team-logo{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  flex:0 0 58px;
+}
+#big-sky[data-tab="schedule"] .bigsky-team-copy{min-width:0}
+#big-sky[data-tab="schedule"] .bigsky-team strong{margin:0}
+#big-sky[data-tab="schedule"] .bigsky-team small{margin-top:7px}
+#big-sky[data-tab="schedule"] .bigsky-info.bigsky-betting{
+  overflow:hidden;
+}
+#big-sky[data-tab="schedule"] .bigsky-betting .market-line-row{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  gap:8px;
+  align-items:baseline;
+  margin:1px 0;
+}
+#big-sky[data-tab="schedule"] .bigsky-betting .market-line-row b{
+  font:900 9px/1 Inter,Arial,sans-serif !important;
+  letter-spacing:.05em;
+  color:#555 !important;
+  white-space:nowrap;
+}
+#big-sky[data-tab="schedule"] .bigsky-betting .market-line-row span{
+  min-width:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font:800 12px/1.15 "Barlow Condensed",Inter,sans-serif;
+  color:var(--maroon);
+}
+#big-sky[data-tab="schedule"] .bigsky-betting .kalshi-line span{color:#168c70}
+
+@media(max-width:700px){
+  #big-sky[data-tab="schedule"] .bigsky-team-logo{width:45px;height:45px;flex-basis:45px}
+  #big-sky[data-tab="schedule"] .bigsky-matchup .bigsky-team{gap:9px}
+  #big-sky[data-tab="schedule"] .bigsky-team strong{font-size:21px}
+  #big-sky[data-tab="schedule"] .bigsky-betting .market-line-row span{font-size:11px}
+}

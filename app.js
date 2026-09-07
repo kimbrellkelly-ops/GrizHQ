@@ -600,40 +600,21 @@ async function fetchKalshiOdds(game){
 }
 
 async function fetchBigSkyOdds(game){
-  // First ask Kalshi directly. Its public API exposes live NCAA football event markets
-  // without authentication, so we don't have to scrape the Kalshi page.
-  const kalshi=await fetchKalshiOdds(game);
-  if(kalshi)return {__multi:true,...kalshi};
-
-  // Then compare Circa and DraftKings from the live odds board.
-  const multi=await fetchWagerTalkOdds(game);
-  if(multi){
-    const formatted=multiBookFormat(multi);
-    if(formatted)return {__multi:true,...formatted};
-  }
-  const circa=await fetchCircaOdds(game);
-  if(circa)return {__circa:true,...circa};
+  const [kalshi,multi,maddux,circa]=await Promise.all([
+    fetchKalshiOdds(game),fetchWagerTalkOdds(game),fetchMadduxOdds(game),fetchCircaOdds(game)
+  ]);
+  const combined=formatAllBookLines(kalshi,multi,maddux,circa);
+  if(combined)return {__allBooks:true,...combined};
 
   // Final fallback: ESPN game odds so the card does not go blank.
   const iso=bigSkyDateISO(game.date); if(!iso)return null;
   const cacheKey=iso;
   if(!BIG_SKY_ODDS_CACHE.has(cacheKey)){
-    BIG_SKY_ODDS_CACHE.set(cacheKey,(async()=>{
-      try{
-        const ymd=iso.replaceAll('-','');
-        const res=await fetch(`https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${ymd}&limit=500`,{cache:'no-store'});
-        if(!res.ok)return [];
-        const d=await res.json(); return Array.isArray(d.events)?d.events:[];
-      }catch(e){return [];}
-    })());
+    BIG_SKY_ODDS_CACHE.set(cacheKey,(async()=>{try{const ymd=iso.replaceAll('-','');const res=await fetch(`https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${ymd}&limit=500`,{cache:'no-store'});if(!res.ok)return [];const d=await res.json();return Array.isArray(d.events)?d.events:[];}catch(e){return [];}})());
   }
-  const events=await BIG_SKY_ODDS_CACHE.get(cacheKey);
-  const ev=events.find(e=>bigSkyEventMatches(e,game)); if(!ev)return null;
-  const competition=ev.competitions?.[0];
-  let odds=Array.isArray(competition?.odds)?competition.odds[0]:competition?.odds;
-  if(!odds&&ev.id){
-    try{ const r=await fetch(`https://cdn.espn.com/core/college-football/game?xhr=1&gameId=${ev.id}`,{cache:'no-store'}); if(r.ok){ const pkg=await r.json(); const c=pkg?.gamepackageJSON?.header?.competitions?.[0]||pkg?.header?.competitions?.[0]; odds=Array.isArray(c?.odds)?c.odds[0]:c?.odds; } }catch(e){}
-  }
+  const events=await BIG_SKY_ODDS_CACHE.get(cacheKey); const ev=events.find(e=>bigSkyEventMatches(e,game)); if(!ev)return null;
+  const competition=ev.competitions?.[0]; let odds=Array.isArray(competition?.odds)?competition.odds[0]:competition?.odds;
+  if(!odds&&ev.id){try{const r=await fetch(`https://cdn.espn.com/core/college-football/game?xhr=1&gameId=${ev.id}`,{cache:'no-store'});if(r.ok){const pkg=await r.json();const c=pkg?.gamepackageJSON?.header?.competitions?.[0]||pkg?.header?.competitions?.[0];odds=Array.isArray(c?.odds)?c.odds[0]:c?.odds;}}catch(e){}}
   return odds||null;
 }
 
@@ -664,7 +645,7 @@ async function enrichBigSkyScheduleCards(schedule){
     const [odds,weather]=await Promise.all([fetchBigSkyOdds(game),fetchBigSkyWeather(game)]);
     const bet=row.querySelector('.bigsky-betting');
     const wx=row.querySelector('.bigsky-weather');
-    const o=odds?.__multi ? odds : (odds?.__circa ? (circaFormatOdds(odds) || bigSkyFormatOdds(odds)) : bigSkyFormatOdds(odds));
+    const o=odds?.__allBooks ? odds : (odds?.__multi ? odds : (odds?.__circa ? (circaFormatOdds(odds) || bigSkyFormatOdds(odds)) : bigSkyFormatOdds(odds)));
     if(bet){ if(o?.html) bet.innerHTML=`${o.html}<small>${escapeHtml(o.sub||'CURRENT MARKET LINES')}</small>`; else bet.innerHTML=`<b>${escapeHtml(o?.main||'LINE NOT POSTED')}</b><small>${escapeHtml(o?.sub||'BETTING LINE')}</small>`; }
     if(wx){
       if(weather){
@@ -676,6 +657,101 @@ async function enrichBigSkyScheduleCards(schedule){
     }
   });
   await Promise.all(jobs);
+}
+
+
+const BIG_SKY_LOGOS={
+  'Montana':'https://a.espncdn.com/i/teamlogos/ncaa/500/149.png',
+  'Montana State':'https://a.espncdn.com/i/teamlogos/ncaa/500/147.png',
+  'Idaho':'https://a.espncdn.com/i/teamlogos/ncaa/500/70.png',
+  'Idaho State':'https://a.espncdn.com/i/teamlogos/ncaa/500/304.png',
+  'Eastern Washington':'https://a.espncdn.com/i/teamlogos/ncaa/500/331.png',
+  'Northern Arizona':'https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png',
+  'Northern Colorado':'https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png',
+  'Portland State':'https://a.espncdn.com/i/teamlogos/ncaa/500/2502.png',
+  'Sacramento State':'https://a.espncdn.com/i/teamlogos/ncaa/500/16.png',
+  'Weber State':'https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png',
+  'UC Davis':'https://a.espncdn.com/i/teamlogos/ncaa/500/302.png',
+  'Cal Poly':'https://a.espncdn.com/i/teamlogos/ncaa/500/13.png',
+  'Utah Tech':'https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png',
+  'Oregon State':'https://a.espncdn.com/i/teamlogos/ncaa/500/204.png',
+  'Washington State':'https://a.espncdn.com/i/teamlogos/ncaa/500/265.png',
+  'Oregon':'https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png',
+  'Colorado':'https://a.espncdn.com/i/teamlogos/ncaa/500/38.png',
+  'SMU':'https://a.espncdn.com/i/teamlogos/ncaa/500/256.png',
+  'San Diego':'https://a.espncdn.com/i/teamlogos/ncaa/500/301.png',
+  'Southern Utah':'https://a.espncdn.com/i/teamlogos/ncaa/500/253.png'
+};
+function bigSkyLogo(name){
+  if(BIG_SKY_LOGOS[name]) return BIG_SKY_LOGOS[name];
+  const key=String(name||'').trim().toLowerCase();
+  const found=Object.keys(BIG_SKY_LOGOS).find(k=>k.toLowerCase()===key);
+  return found?BIG_SKY_LOGOS[found]:'';
+}
+function bigSkyTeamMarkup(name,record,side){
+  const logo=bigSkyLogo(name);
+  return `<div class="bigsky-team ${side}">${logo?`<img class="bigsky-team-logo" src="${logo}" alt="${escapeHtml(name)} logo" loading="lazy" onerror="this.style.display='none'">`:''}<div class="bigsky-team-copy"><strong>${escapeHtml(name)}</strong><small>${escapeHtml(record||'')}</small></div></div>`;
+}
+
+const MADDUX_CFB_URL='https://madduxsports.com/college-football-lines.php';
+const MADDUX_CFB_CACHE=new Map();
+function madduxAliases(name){
+  const n=bigSkyTeamKey(name);
+  const map={
+    montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanastbobcats','montanastatebobcats'],
+    easternwashington:['easternwashington','easternwashingtoneagles','easternwa'],idaho:['idaho','idahovandals'],idahostate:['idahostate','idahobengals'],
+    northernarizona:['northernarizona','northernaz','nau'],northerncolorado:['northerncolorado','northernco'],portlandstate:['portlandstate','portlandst'],
+    sacramentostate:['sacramentostate','sacramento','sacstate'],weberstate:['weberstate','weberst'],ucdavis:['ucdavis','ucd'],calpoly:['calpoly'],
+    utahtech:['utahtech','utahtechtrailblazers']
+  };
+  return map[n]||[n];
+}
+function madduxGameMatch(text,game){
+  const n=bigSkyTeamKey(text);
+  const a=madduxAliases(game.displayAway||game.team), h=madduxAliases(game.displayHome||game.opponent);
+  return a.some(x=>n.includes(x))&&h.some(x=>n.includes(x));
+}
+function parseMadduxBooks(html,game){
+  if(!html)return null;
+  const doc=new DOMParser().parseFromString(html,'text/html');
+  const tables=[...doc.querySelectorAll('table')];
+  const wanted=['circa','draftkings','betonline','pinnacle','bovada','betmgm','fanduel','bet365','caesars'];
+  for(const table of tables){
+    const rows=[...table.querySelectorAll('tr')]; if(!rows.length)continue;
+    const header=[...rows[0].querySelectorAll('th,td')].map(c=>bigSkyTeamKey(c.innerText));
+    const idx={}; wanted.forEach(w=>{const i=header.findIndex(h=>h.includes(bigSkyTeamKey(w)));if(i>=0)idx[w]=i;});
+    if(!Object.keys(idx).length)continue;
+    for(const tr of rows.slice(1)){
+      const cells=[...tr.querySelectorAll('th,td')]; const rowText=cells.map(c=>c.innerText).join(' ');
+      if(!madduxGameMatch(rowText,game))continue;
+      const out={};
+      Object.entries(idx).forEach(([book,i])=>{const val=(cells[i]?.innerText||'').replace(/\s+/g,' ').trim();if(val&&val!=='-')out[book]=val;});
+      if(Object.keys(out).length)return out;
+    }
+  }
+  return null;
+}
+async function fetchMadduxOdds(game){
+  const key='maddux-cfb';
+  if(!MADDUX_CFB_CACHE.has(key)){
+    MADDUX_CFB_CACHE.set(key,(async()=>{try{const r=await fetch(MADDUX_CFB_URL,{cache:'no-store'});if(!r.ok)return '';return await r.text();}catch(e){return '';}})());
+  }
+  return parseMadduxBooks(await MADDUX_CFB_CACHE.get(key),game);
+}
+function mergeMarketLines(base,more){
+  const out={...(base||{})};
+  Object.entries(more||{}).forEach(([k,v])=>{if(v&&(!out[k]||String(out[k]).length<String(v).length))out[k]=v;});
+  return out;
+}
+function formatAllBookLines(kalshi,multi,maddux,circa){
+  const rows=[];
+  if(kalshi?.html) rows.push(`<div class="market-line-row kalshi-line"><b>KALSHI</b><span>${kalshi.html.replace(/<\/?b>/g,'')}</span></div>`);
+  const merged=mergeMarketLines(multi,maddux);
+  const labels={circa:'CIRCA',draftkings:'DRAFTKINGS',betonline:'BETONLINE',pinnacle:'PINNACLE',bovada:'BOVADA',betmgm:'BETMGM',fanduel:'FANDUEL',bet365:'BET365',caesars:'CAESARS'};
+  Object.entries(labels).forEach(([key,label])=>{if(merged?.[key])rows.push(`<div class="market-line-row"><b>${label}</b><span>${escapeHtml(String(merged[key]))}</span></div>`);});
+  if(circa && !merged?.circa){const bits=[circa.spread,circa.total,circa.moneyline].filter(Boolean).join(' • ');if(bits)rows.push(`<div class="market-line-row"><b>CIRCA</b><span>${escapeHtml(bits)}</span></div>`);}
+  if(!rows.length)return null;
+  return {html:rows.join(''),sub:'LINE SHOP • MULTIPLE SOURCES'};
 }
 
 async function renderBigSkyAndOpponent(){
@@ -771,9 +847,9 @@ async function renderBigSkyAndOpponent(){
               <div class="bigsky-game-type">${tag}<span>${escapeHtml(prefix)}</span></div>
             </div>
             <div class="bigsky-matchup">
-              <div class="bigsky-team away"><strong>${escapeHtml(game.displayAway)}</strong><small>${escapeHtml(game.displayAway === game.team ? (game.away_record || "") : (game.opponent_record || ""))}</small></div>
+              ${bigSkyTeamMarkup(game.displayAway, game.displayAway === game.team ? (game.away_record || "") : (game.opponent_record || ""), "away")}
               <div class="bigsky-at">@</div>
-              <div class="bigsky-team home"><strong>${escapeHtml(game.displayHome)}</strong><small>${escapeHtml(game.displayHome === game.team ? (game.home_record || "") : (game.opponent_record || ""))}</small></div>
+              ${bigSkyTeamMarkup(game.displayHome, game.displayHome === game.team ? (game.home_record || "") : (game.opponent_record || ""), "home")}
             </div>
             <div class="bigsky-game-bottom">
               <div class="bigsky-location"><b>${escapeHtml(game.venue || (game.location === "Away" ? "Away Game" : "Home Game"))}</b><span>${escapeHtml(game.city || "")}</span></div>
