@@ -502,11 +502,23 @@ async function renderFCSScoreboard(){
         const rankForTeamForRow=(teamObj)=>{
           const rowName=teamObj?.displayName||teamObj?.shortDisplayName||teamObj?.name||teamObj?.abbreviation||'';
           const rowId=teamObj?.id ? String(teamObj.id) : '';
+          const rowNorm=norm(rowName);
           for(const item of top25.slice(0,25)){
             const rankValue=String(item?.rank??'').trim();
             if(!rankValue) continue;
+            const rankName=String(item?.team||'');
+            const rankNorm=norm(rankName);
+            // Prefer an explicit ID match when the rankings feed provides one.
             if(rowId && item?.id && String(item.id)===rowId) return rankValue;
-            if(rowName && teamMatches(item?.team||'',rowName)) return rankValue;
+            // First use the existing alias-aware matcher.
+            if(rowName && teamMatches(rankName,rowName)) return rankValue;
+            // Stats Perform names usually omit the mascot while ESPN includes it.
+            // Match when one normalized name is the full leading school name of the other.
+            // Guard Montana vs Montana State so the Bobcats can never inherit Montana's rank.
+            if(rowNorm && rankNorm && rowNorm!==rankNorm){
+              const montanaStatePair=(rowNorm.includes('montanastate')||rankNorm.includes('montanastate')) && (rowNorm.includes('montana')||rankNorm.includes('montana'));
+              if(!montanaStatePair && (rowNorm.startsWith(rankNorm)||rankNorm.startsWith(rowNorm))) return rankValue;
+            }
           }
           return '';
         };
@@ -523,8 +535,8 @@ async function renderFCSScoreboard(){
       const fallbackLogo=t.logo||t.logo_url||'';
       const fallbackRank=String(t.rank||'').trim();
       const fallbackRankBadge=fallbackRank?`<span class="fcs-team-rank">#${escapeHtml(fallbackRank)}</span>`:'';
-      const fallbackRow=`<div class="fcs-top-team-row">${fallbackLogo?`<img src="${escapeHtml(fallbackLogo)}" alt="" loading="lazy">`:''}<span>${fallbackRankBadge}<span class="fcs-team-name">${escapeHtml(t.team)}</span></span><strong>—</strong></div>`;
-      return `<div class="fcs-rank-card ${cardClass}"><span class="fcs-rank">${rank}</span><div class="fcs-top-matchup">${fallbackRow}<small>${escapeHtml(t.record||'')} • NO GAME THIS WEEK</small></div></div>`;
+      const fallbackRow=`<div class="fcs-top-team-row">${fallbackLogo?`<img src="${escapeHtml(fallbackLogo)}" alt="" loading="lazy">`:''}<span><span class="fcs-team-rank-wrap">${fallbackRankBadge}</span><span class="fcs-team-name">${escapeHtml(t.team)}</span></span><strong>—</strong></div>`;
+      return `<div class="fcs-rank-card ${cardClass}"><div class="fcs-top-matchup">${fallbackRow}<small>${escapeHtml(t.record||'')} • NO GAME THIS WEEK</small></div></div>`;
     }).join('');
 
     if(bigSkyEl){
