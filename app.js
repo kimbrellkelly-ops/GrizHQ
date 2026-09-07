@@ -313,6 +313,107 @@ loadGrizData = async function() {
 };
 loadGrizData();
 
+const BIG_SKY_VENUES = {
+  "Montana": {lat:46.8721, lon:-113.9940, venue:"Washington-Grizzly Stadium"},
+  "Montana State": {lat:45.6676, lon:-111.0490, venue:"Bobcat Stadium"},
+  "Idaho": {lat:46.7280, lon:-117.1543, venue:"Kibbie Dome"},
+  "Idaho State": {lat:43.6021, lon:-112.0734, venue:"Holt Arena"},
+  "Eastern Washington": {lat:47.4917, lon:-117.5830, venue:"Roos Field"},
+  "Portland State": {lat:45.5481, lon:-122.6890, venue:"Hillsboro Stadium"},
+  "Northern Arizona": {lat:35.1894, lon:-111.6513, venue:"J. Lawrence Walkup Skydome"},
+  "Northern Colorado": {lat:40.4064, lon:-104.6974, venue:"Nottingham Field"},
+  "Weber State": {lat:41.1919, lon:-111.9459, venue:"Stewart Stadium"},
+  "UC Davis": {lat:38.5418, lon:-121.7505, venue:"UC Davis Health Stadium"},
+  "Cal Poly": {lat:35.3000, lon:-120.6625, venue:"Alex G. Spanos Stadium"},
+  "Sacramento State": {lat:38.5600, lon:-121.4241, venue:"Hornet Stadium"},
+  "Utah Tech": {lat:37.1059, lon:-113.5667, venue:"Greater Zion Stadium"}
+};
+const BIG_SKY_WEATHER_CACHE = new Map();
+const BIG_SKY_ODDS_CACHE = new Map();
+function bigSkyDateISO(label){
+  const m = {Aug:8, Sep:9, Oct:10, Nov:11};
+  const [mon,day] = String(label||'').trim().split(/\s+/);
+  if(!m[mon] || !day) return '';
+  return `2026-${String(m[mon]).padStart(2,'0')}-${String(Number(day)).padStart(2,'0')}`;
+}
+function bigSkyTeamKey(name){
+  return String(name||'').toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]/g,'');
+}
+function bigSkyVenueFor(game){
+  const home = game.location === 'Away' ? game.opponent : game.team;
+  return BIG_SKY_VENUES[home] || Object.entries(BIG_SKY_VENUES).find(([k])=>bigSkyTeamKey(k)===bigSkyTeamKey(home))?.[1] || null;
+}
+function bigSkyFormatOdds(odds){
+  if(!odds) return {main:'NOT POSTED', sub:'Sportsbook line'};
+  const provider = odds.provider?.name || odds.providerName || 'Sportsbook';
+  const spread = odds.details || odds.spread || '';
+  const total = odds.overUnder != null ? `O/U ${odds.overUnder}` : (odds.total != null ? `O/U ${odds.total}` : '');
+  const ml = odds.moneyline != null ? `ML ${odds.moneyline}` : '';
+  const parts = [spread,total,ml].filter(Boolean);
+  return {main: parts.length ? parts.join(' • ') : 'LINE POSTED', sub:provider};
+}
+async function fetchBigSkyOdds(game){
+  const iso = bigSkyDateISO(game.date); if(!iso) return null;
+  const cacheKey = iso;
+  if(!BIG_SKY_ODDS_CACHE.has(cacheKey)){
+    BIG_SKY_ODDS_CACHE.set(cacheKey,(async()=>{
+      try{
+        const ymd=iso.replaceAll('-','');
+        const res=await fetch(`https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${ymd}&limit=500`);
+        const d=await res.json();
+        return Array.isArray(d.events)?d.events:[];
+      }catch(e){ return []; }
+    })());
+  }
+  const events=await BIG_SKY_ODDS_CACHE.get(cacheKey);
+  const norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+  const a=norm(game.team), b=norm(game.opponent);
+  const ev=events.find(e=>{
+    const n=norm(e.name); return n.includes(a)&&n.includes(b);
+  });
+  return ev?.competitions?.[0]?.odds?.[0] || null;
+}
+function bigSkyWeatherLabel(code){
+  const map={0:'Clear',1:'Mostly clear',2:'Partly cloudy',3:'Overcast',45:'Fog',48:'Rime fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',71:'Light snow',73:'Snow',75:'Heavy snow',80:'Rain showers',81:'Rain showers',82:'Heavy showers',85:'Snow showers',86:'Heavy snow showers',95:'Thunderstorms',96:'T-storms + hail',99:'T-storms + hail'};
+  return map[Number(code)] || 'Forecast';
+}
+async function fetchBigSkyWeather(game){
+  const iso=bigSkyDateISO(game.date); const v=bigSkyVenueFor(game); if(!iso||!v) return null;
+  const key=`${iso}|${v.lat}|${v.lon}`;
+  if(!BIG_SKY_WEATHER_CACHE.has(key)){
+    BIG_SKY_WEATHER_CACHE.set(key,(async()=>{
+      try{
+        const url=`https://api.open-meteo.com/v1/forecast?latitude=${v.lat}&longitude=${v.lon}&daily=weather_code,temperature_2m_max,precipitation_probability_max,wind_speed_10m_max&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto&start_date=${iso}&end_date=${iso}`;
+        const res=await fetch(url); const d=await res.json();
+        if(!d.daily?.time?.length) return null;
+        return {temp:d.daily.temperature_2m_max?.[0], code:d.daily.weather_code?.[0], rain:d.daily.precipitation_probability_max?.[0], wind:d.daily.wind_speed_10m_max?.[0], venue:v.venue};
+      }catch(e){ return null; }
+    })());
+  }
+  return await BIG_SKY_WEATHER_CACHE.get(key);
+}
+async function enrichBigSkyScheduleCards(schedule){
+  const jobs=schedule.map(async game=>{
+    const key=`${game.date}|${game.team}|${game.opponent}|${game.location||''}`;
+    const row=document.querySelector(`.bigsky-game-row[data-bigsky-game-key="${CSS.escape(key)}"]`);
+    if(!row) return;
+    const [odds,weather]=await Promise.all([fetchBigSkyOdds(game),fetchBigSkyWeather(game)]);
+    const bet=row.querySelector('.bigsky-betting');
+    const wx=row.querySelector('.bigsky-weather');
+    const o=bigSkyFormatOdds(odds);
+    if(bet) bet.innerHTML=`<b>${escapeHtml(o.main)}</b><small>${escapeHtml(o.sub)}</small>`;
+    if(wx){
+      if(weather){
+        const temp=weather.temp!=null?`${Math.round(weather.temp)}°`:'TBD';
+        const rain=weather.rain!=null?`${Math.round(weather.rain)}% rain`:'';
+        const wind=weather.wind!=null?`${Math.round(weather.wind)} mph wind`:'';
+        wx.innerHTML=`<b>${escapeHtml(temp)} • ${escapeHtml(bigSkyWeatherLabel(weather.code))}</b><small>${escapeHtml([rain,wind].filter(Boolean).join(' • ')||'Forecast')}</small>`;
+      }else wx.innerHTML='<b>FORECAST TBD</b><small>GAME WEATHER</small>';
+    }
+  });
+  await Promise.all(jobs);
+}
+
 async function renderBigSkyAndOpponent(){
   try {
     const d = await (await fetch("data.json?ts=" + Date.now(), {cache:"no-store"})).json();
@@ -373,18 +474,31 @@ async function renderBigSkyAndOpponent(){
         shownTeams.forEach(team => {
           const teamGames = weekGames.filter(game => game.team === team);
           if (!teamGames.length) {
-            rows.push(`<div class="bigsky-row bye-row"><span>${escapeHtml(selectedWeek)}</span><b>${escapeHtml(team)}</b><span>BYE / NO GAME</span><span>—</span></div>`);
+            rows.push(`<div class="bigsky-row bye-row"><span>${escapeHtml(selectedWeek)}</span><b>${escapeHtml(team)}</b><span>BYE / NO GAME</span><span>—</span><span class="bigsky-info muted">—</span><span class="bigsky-info muted">—</span></div>`);
             return;
           }
           teamGames.sort((a,b) => dateObj(a.date) - dateObj(b.date));
           teamGames.forEach(game => {
             const prefix = game.location === "Away" ? "@ " : "vs ";
             const tag = game.big_sky_game ? ' <small class="league-tag">BIG SKY</small>' : ' <small class="league-tag nonconf-tag">NON-CONFERENCE</small>';
-            rows.push(`<div class="bigsky-row"><span>${escapeHtml(game.date)}</span><b>${escapeHtml(team)}</b><span>${prefix}${escapeHtml(game.opponent)}${tag}</span><span>${escapeHtml(game.time || "TBA")}</span></div>`);
+            const key = `${game.date}|${team}|${game.opponent}|${game.location || ""}`;
+            rows.push(`<div class="bigsky-row bigsky-game-row" data-bigsky-game-key="${escapeHtml(key)}">
+              <span>${escapeHtml(game.date)}</span>
+              <b>${escapeHtml(team)}</b>
+              <span>${prefix}${escapeHtml(game.opponent)}${tag}</span>
+              <span>${escapeHtml(game.time || "TBA")}</span>
+              <span class="bigsky-info bigsky-betting"><b>CHECKING…</b><small>SPORTSBOOK</small></span>
+              <span class="bigsky-info bigsky-weather"><b>CHECKING…</b><small>GAME WEATHER</small></span>
+            </div>`);
           });
         });
 
-        table.innerHTML = `<div class="bigsky-row bigsky-head"><span>DATE</span><span>BIG SKY TEAM</span><span>OPPONENT</span><span>TIME</span></div>${rows.join("")}`;
+        table.innerHTML = `<div class="bigsky-row bigsky-head"><span>DATE</span><span>BIG SKY TEAM</span><span>OPPONENT</span><span>TIME</span><span>BETTING</span><span>WEATHER</span></div>${rows.join("")}`;
+
+        // Enrich only the games currently visible in the selected week/team view.
+        // This keeps the Big Sky schedule fast while still giving each matchup the same
+        // betting + weather treatment as the main Montana schedule.
+        enrichBigSkyScheduleCards(weekGames.filter(game => shownTeams.includes(game.team)));
       }
       if (teamSelect) teamSelect.onchange = draw;
       if (weekSelect) weekSelect.onchange = draw;

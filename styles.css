@@ -3267,3 +3267,23 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .schedule-row.next .schedule-odds,.schedule-row.next .schedule-weather{border-color:#d8c5cd}
 @media(max-width:1050px){.schedule-row.game-card-row,.schedule-row.game-card-row.head{grid-template-columns:75px minmax(150px,1.4fr) 105px 1fr 1fr;gap:10px}.schedule-main-match b{font-size:17px}}
 @media(max-width:760px){.schedule{padding:0 12px}.schedule-row.game-card-row.head{display:none}.schedule-row.game-card-row{grid-template-columns:70px 1fr 90px;gap:10px;padding:14px 8px}.schedule-main-match b{font-size:18px}.schedule-odds,.schedule-weather{grid-column:2 / -1;border-left:0;border-top:1px solid #e8e5e3;padding:9px 0 0;min-height:0}.schedule-main-status{text-align:right}.schedule-odds b,.schedule-weather b{width:auto}.schedule-odds span,.schedule-weather span{font-size:8px}.schedule-odds small,.schedule-weather small{width:auto}}
+
+/* Big Sky schedule game information upgrade */
+#big-sky[data-tab="schedule"] .bigsky-table{overflow-x:auto}
+#big-sky[data-tab="schedule"] .bigsky-row{grid-template-columns:78px minmax(150px,1.05fr) minmax(210px,1.45fr) 100px minmax(185px,1.15fr) minmax(205px,1.2fr);gap:14px;align-items:center}
+#big-sky[data-tab="schedule"] .bigsky-head{min-width:1080px}
+#big-sky[data-tab="schedule"] .bigsky-game-row{min-width:1080px;padding-top:12px;padding-bottom:12px}
+#big-sky[data-tab="schedule"] .bigsky-game-row > span,
+#big-sky[data-tab="schedule"] .bigsky-game-row > b{min-width:0}
+#big-sky[data-tab="schedule"] .bigsky-info{min-height:48px;border-left:1px solid #dedfe1;padding-left:12px;display:flex;flex-direction:column;justify-content:center;gap:3px}
+#big-sky[data-tab="schedule"] .bigsky-info b{font:800 14px/1.05 "Barlow Condensed",sans-serif;color:var(--maroon);letter-spacing:.15px}
+#big-sky[data-tab="schedule"] .bigsky-info small{font-size:7px;line-height:1.1;color:#777;text-transform:uppercase;letter-spacing:.65px}
+#big-sky[data-tab="schedule"] .bigsky-info.muted{color:#999;border-left:0}
+#big-sky[data-tab="schedule"] .bigsky-info.muted b{color:#999}
+#big-sky[data-tab="schedule"] .bigsky-betting b{font-size:13px}
+#big-sky[data-tab="schedule"] .bigsky-weather b{font-size:13px}
+#big-sky[data-tab="schedule"] .bigsky-game-row:hover .bigsky-info{border-color:#c9cbd0}
+@media(max-width:760px){
+  #big-sky[data-tab="schedule"] .bigsky-row{grid-template-columns:72px minmax(135px,1fr) minmax(185px,1.3fr) 88px minmax(170px,1fr) minmax(180px,1fr);gap:10px}
+  #big-sky[data-tab="schedule"] .bigsky-head,#big-sky[data-tab="schedule"] .bigsky-game-row{min-width:920px}
+}
