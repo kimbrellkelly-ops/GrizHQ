@@ -102,13 +102,20 @@ def parse_schedule():
             if len(cells)<len(headers): continue
             def val(name): return cells[idx[name]] if name in idx and idx[name]<len(cells) else ""
             opp=val("opponent")
+            game_center=""
+            for a in tr.find_all("a", href=True):
+                href=urljoin("https://gogriz.com", a.get("href", ""))
+                if "/game-center/" in href or "/boxscore/" in href:
+                    game_center=href
+                    break
             rows.append({
                 "date":val("date"),
                 "opponent":opp,
                 "location":"Away" if val("at").lower() in ("away","at","yes") or val("at").startswith("@") else "Home",
                 "result":val("result") if val("result") not in ("-","—") else "",
                 "time":val("time"),
-                "conference": any(k.lower() in opp.lower() for k in BIG_SKY)
+                "conference": any(k.lower() in opp.lower() for k in BIG_SKY),
+                "game_center":game_center
             })
         if rows: break
     if not rows: raise RuntimeError("Could not parse GoGriz schedule")
@@ -132,63 +139,122 @@ def parse_news():
         out.append({"title":title,"url":link,"date":pub,"description":BeautifulSoup(desc,"html.parser").get_text(" ",strip=True)[:180]})
     return out
 
-def parse_stats(old):
-    """Refresh the core stats dashboard from the official 2026 cumulative stats page.
-    If a stats section changes shape upstream, keep the previous good dashboard."""
-    soup=BeautifulSoup(get("https://gogriz.com/sports/football/stats/2026"),"html.parser")
-    text=soup.get_text("\n",strip=True)
-    m=re.search(r"Team Statistics \(([^)]+)\)",text)
-    if not m: raise RuntimeError("Team Statistics block not found")
-    record_raw=m.group(1)
-    # GoGriz labels this block as "Overall, Conference"; the Stats card only needs overall.
-    record=record_raw.split(",",1)[0].strip()
-    # Pull the Montana/Opponents columns from the visible team-stat table.
-    team_table=None
-    for t in soup.find_all("table"):
-        st=t.get_text(" ",strip=True)
-        if "Points Per Game" in st and "Total Offense" in st:
-            team_table=t; break
-    if team_table is None: raise RuntimeError("Team stats table not found")
-    rows={}
-    for tr in team_table.find_all("tr"):
-        c=[clean(x.get_text(" ",strip=True)) for x in tr.find_all(["td","th"])]
-        if len(c)>=3: rows[c[0]]=c[1:]
-    def pair(label, default="—"):
-        v=rows.get(label, [default,default]); return v[0] if v else default
-    ppg=pair("Points Per Game"); total=pair("Total"); total_yards=pair("Total Yards")
-    avg_play=pair("Average Per Play"); pass_total=pair("Total", "—")
-    # The table has duplicate labels; use section-aware text regex for key values.
-    def after(section,label,default="—"):
-        pat=rf"{re.escape(section)}.*?{re.escape(label)}\s+([^\s]+)"
-        mm=re.search(pat,text,re.S|re.I)
-        return mm.group(1) if mm else default
-    rush_avg=after("Rushing","Avg. Per Game")
-    pass_avg=after("Passing","Avg. Per Game")
-    total_avg=after("Total Offense","Avg. Per Game")
-    # "Total Yards" has Montana and Opponents in adjacent columns.
-    # Total defense on Griz HQ is yards allowed per game, not the season total.
-    total_yards_cols=rows.get("Total Yards", ["—", "—"])
-    opp_total_yards=total_yards_cols[1] if len(total_yards_cols)>1 else "—"
-    games_played=0
-    gm=re.match(r"(\d+)-\d+", record)
-    if gm: games_played=int(gm.group(1))
+def attach_game_centers(schedule):
+    """Attach official Game Center URLs in schedule order. The text schedule omits link URLs."""
     try:
-        opp_total=float(str(opp_total_yards).replace(",","")) / games_played if games_played else None
-        opp_total=f"{opp_total:.0f}" if opp_total is not None else "—"
-    except Exception:
-        opp_total="—"
-    turnover_line=after("Miscellaneous","Fumbles-Lost")
+        soup=BeautifulSoup(get("https://gogriz.com/sports/football/schedule"),"html.parser")
+        urls=[]
+        for a in soup.find_all("a", href=True):
+            label=clean(a.get_text(" ",strip=True)).lower()
+            href=urljoin("https://gogriz.com",a.get("href",""))
+            if label == "game center" and "/game-center/" in href:
+                urls.append(href)
+        for i,g in enumerate(schedule):
+            if i < len(urls): g["game_center"]=urls[i]
+    except Exception as e:
+        print("Game center link map failed:",e)
+    return schedule
+
+def parse_game_center_totals(url):
+    """Read Montana and opponent total yards from an individual official game center."""
+    if not url: return None
+    try:
+        soup=BeautifulSoup(get(url),"html.parser")
+        for table in soup.find_all("table"):
+            rows=[]
+            for tr in table.find_all("tr"):
+                cells=[clean(x.get_text(" ",strip=True)) for x in tr.find_all(["td","th"]) ]
+                if cells: rows.append(cells)
+            joined=" ".join(" ".join(r) for r in rows)
+            if "Rushing Yards" not in joined or "Passing Yards" not in joined or "Plays-Yards" not in joined:
+                continue
+            for row in rows:
+                if row and row[0].lower() in ("plays-yards","plays–yards") and len(row)>=3:
+                    vals=row[1:]
+                    def yards(v):
+                        m=re.search(r"-(\d+)$",v.replace(",",""))
+                        return int(m.group(1)) if m else None
+                    nums=[yards(v) for v in vals]
+                    nums=[n for n in nums if n is not None]
+                    if len(nums)>=2:
+                        # Official game-center team-stats tables list opponent first and Montana second.
+                        return {"opponent_yards":nums[0],"montana_yards":nums[-1]}
+        return None
+    except Exception as e:
+        print("Game center stats failed:",url,e)
+        return None
+
+def parse_stats(old, schedule=None, current_record=""):
+    """Build the Stats summary using the current team record and official game centers.
+    The cumulative GoGriz page can lag after a Saturday game, so never let its stale
+    record or defense overwrite the current schedule-driven values.
+    """
     oldstats=old.get("stats",{}) if isinstance(old.get("stats"),dict) else {}
     new=dict(oldstats)
+    if not current_record:
+        current_record=str((old.get("team") or {}).get("record") or "")
+
+    # First try official game centers for completed games. This gives true cumulative
+    # totals even when the season cumulative page is temporarily one game behind.
+    played=schedule or old.get("schedule") or []
+    completed=[g for g in played if g.get("result")]
+    opponent_yards=[]
+    montana_yards=[]
+    for g in completed:
+        r=parse_game_center_totals(g.get("game_center",""))
+        if r:
+            opponent_yards.append(r["opponent_yards"])
+            montana_yards.append(r["montana_yards"])
+
+    # Fallback to the cumulative page for any values we can safely read.
+    try:
+        soup=BeautifulSoup(get("https://gogriz.com/sports/football/stats/2026"),"html.parser")
+        text=soup.get_text("\n",strip=True)
+        m=re.search(r"Team Statistics \(([^)]+)\)",text)
+        source_record=m.group(1).split(",",1)[0].strip() if m else ""
+        team_table=None
+        for t in soup.find_all("table"):
+            st=t.get_text(" ",strip=True)
+            if "Points Per Game" in st and "Total Offense" in st:
+                team_table=t; break
+        rows={}
+        if team_table is not None:
+            for tr in team_table.find_all("tr"):
+                c=[clean(x.get_text(" ",strip=True)) for x in tr.find_all(["td","th"])]
+                if len(c)>=3: rows[c[0]]=c[1:]
+        def pair(label, default="—"):
+            v=rows.get(label,[default,default]); return v[0] if v else default
+        ppg=pair("Points Per Game")
+        total_avg=pair("Avg. Per Game")
+        total_yards_cols=rows.get("Total Yards",["—","—"])
+        source_opp_yards=total_yards_cols[1] if len(total_yards_cols)>1 else "—"
+    except Exception as e:
+        print("Cumulative stats fetch failed:",e)
+        source_record=ppg=total_avg=source_opp_yards="—"
+
+    games=len(opponent_yards)
+    if games:
+        defense=f"{sum(opponent_yards)/games:.0f}"
+        offense=f"{sum(montana_yards)/games:.0f}"
+        # Points per game comes from the actual schedule results and is therefore
+        # current even if the cumulative page is stale.
+        points=[]
+        for g in completed:
+            mscore=re.search(r"(?:W|L)\s*(\d+)\s*[-–]",g.get("result",""))
+            if mscore: points.append(int(mscore.group(1)))
+        ppg=f"{sum(points)/len(points):.1f}" if points else ppg
+    else:
+        defense=source_opp_yards
+        offense=total_avg
+
+    # Keep the detailed player/situational cards already maintained by Griz HQ.
     new["through"]="Current 2026 cumulative stats"
-    new["team_summary"]= [
-        {"value":record.replace(", ","–"),"label":"RECORD","note":"2026"},
+    new["team_summary"]=[
+        {"value":str(current_record).replace(", ","–"),"label":"RECORD","note":"2026"},
         {"value":ppg,"label":"POINTS / GAME","note":"Official cumulative stats"},
-        {"value":total_avg if total_avg!="—" else total_yards,"label":"TOTAL OFFENSE","note":"Per game"},
-        {"value":opp_total,"label":"TOTAL DEFENSE","note":"Yards allowed"}
+        {"value":offense,"label":"TOTAL OFFENSE","note":"Yards per game"},
+        {"value":defense,"label":"TOTAL DEFENSE","note":"Yards allowed per game"}
     ]
-    # Preserve the existing detailed cards unless we can safely derive values.
-    new.setdefault("offense",oldstats.get("offense",[])); new.setdefault("defense",oldstats.get("defense",[]))
     return new
 
 def normalize_poll(old_list):
@@ -237,7 +303,7 @@ def main():
     new["source"]="Automatically refreshed from official/public sources."
 
     try:
-        sched=parse_schedule(); new["schedule"]=sched
+        sched=parse_schedule(); sched=attach_game_centers(sched); new["schedule"]=sched
         played=[g for g in sched if g.get("result")]
         wins=sum(1 for g in played if g["result"].upper().startswith("W")); losses=sum(1 for g in played if g["result"].upper().startswith("L"))
         conf=[g for g in played if g.get("conference")]
@@ -270,7 +336,7 @@ def main():
     try: new["news"]=parse_news()
     except Exception as e: print("News update failed:",e)
 
-    try: new["stats"]=parse_stats(old)
+    try: new["stats"]=parse_stats(old, sched if "sched" in locals() else None, new.get("team",{}).get("record", ""))
     except Exception as e: print("Stats update failed:",e)
 
     new["latest_press_conference"] = fetch_latest_press_conference()
