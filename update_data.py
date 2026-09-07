@@ -134,50 +134,68 @@ def parse_news():
 
 def parse_stats(old):
     """Refresh the core stats dashboard from the official 2026 cumulative stats page.
-    If a stats section changes shape upstream, keep the previous good dashboard."""
+    The GoGriz Team Statistics table contains Montana and Opponents as adjacent
+    columns. Parse those columns directly so Total Defense is always derived
+    from the opponents' Total Offense average, and format the record cleanly.
+    """
     soup=BeautifulSoup(get("https://gogriz.com/sports/football/stats/2026"),"html.parser")
     text=soup.get_text("\n",strip=True)
-    m=re.search(r"Team Statistics \(([^)]+)\)",text)
-    if not m: raise RuntimeError("Team Statistics block not found")
-    record=m.group(1)
-    # Pull the Montana/Opponents columns from the visible team-stat table.
+    m=re.search(r"Team Statistics \((\d+)-(\d+),\s*(\d+)-(\d+)\)", text)
+    if not m:
+        raise RuntimeError("Team Statistics record block not found")
+    wins, losses, cw, cl = m.groups()
+
     team_table=None
     for t in soup.find_all("table"):
         st=t.get_text(" ",strip=True)
-        if "Points Per Game" in st and "Total Offense" in st:
-            team_table=t; break
-    if team_table is None: raise RuntimeError("Team stats table not found")
+        if "Points Per Game" in st and "Total Offense" in st and "Avg. Per Game" in st:
+            team_table=t
+            break
+    if team_table is None:
+        raise RuntimeError("Team stats table not found")
+
+    # Sidearm's table uses rows like: Label | Montana | Opponents.
+    # Keep the current section so duplicate labels such as Total/Avg. Per Game
+    # can be interpreted correctly.
+    section=""
     rows={}
     for tr in team_table.find_all("tr"):
-        c=[clean(x.get_text(" ",strip=True)) for x in tr.find_all(["td","th"])]
-        if len(c)>=3: rows[c[0]]=c[1:]
-    def pair(label, default="—"):
-        v=rows.get(label, [default,default]); return v[0] if v else default
-    ppg=pair("Points Per Game"); total=pair("Total"); total_yards=pair("Total Yards")
-    avg_play=pair("Average Per Play"); pass_total=pair("Total", "—")
-    # The table has duplicate labels; use section-aware text regex for key values.
-    def after(section,label,default="—"):
-        pat=rf"{re.escape(section)}.*?{re.escape(label)}\\s+([^\\s]+)"
-        mm=re.search(pat,text,re.S|re.I)
-        return mm.group(1) if mm else default
-    rush_avg=after("Rushing","Avg. Per Game")
-    pass_avg=after("Passing","Avg. Per Game")
-    total_avg=after("Total Offense","Avg. Per Game")
-    opp_total=after("Total Offense","Total Yards")
-    turnover_line=after("Miscellaneous","Fumbles-Lost")
+        cells=[clean(x.get_text(" ",strip=True)) for x in tr.find_all(["td","th"])]
+        if not cells:
+            continue
+        label=cells[0]
+        if label in {"Scoring","First Downs","Rushing","Passing","Total Offense","Returns","Kicking","Penalties","Time Of Possession","Miscellaneous"}:
+            section=label
+            continue
+        if len(cells)>=3:
+            rows[(section,label)] = (cells[1],cells[2])
+
+    def pair(section_name, label, default=("—","—")):
+        return rows.get((section_name,label), default)
+
+    ppg_m, ppg_o = pair("Scoring","Points Per Game")
+    total_off_m, total_off_o = pair("Total Offense","Avg. Per Game")
+    total_yards_m, total_yards_o = pair("Total Offense","Total Yards")
+    if total_off_m == "—":
+        total_off_m = total_yards_m
+    if total_off_o == "—":
+        total_off_o = total_yards_o
+
     oldstats=old.get("stats",{}) if isinstance(old.get("stats"),dict) else {}
     new=dict(oldstats)
     new["through"]="Current 2026 cumulative stats"
-    new["team_summary"]= [
-        {"value":record.replace(", ","–"),"label":"RECORD","note":"2026"},
-        {"value":ppg,"label":"POINTS / GAME","note":"Official cumulative stats"},
-        {"value":total_avg if total_avg!="—" else total_yards,"label":"TOTAL OFFENSE","note":"Per game"},
-        {"value":opp_total,"label":"TOTAL DEFENSE","note":"Yards allowed"}
+    new["team_summary"]=[
+        {"value":f"{wins}–{losses} • {cw}–{cl} BIG SKY","label":"RECORD","note":"2026"},
+        {"value":ppg_m,"label":"POINTS / GAME","note":"Official cumulative stats"},
+        {"value":total_off_m,"label":"TOTAL OFFENSE","note":"Yards per game"},
+        {"value":total_off_o,"label":"TOTAL DEFENSE","note":"Yards allowed per game"}
     ]
-    # Preserve the existing detailed cards unless we can safely derive values.
-    new.setdefault("offense",oldstats.get("offense",[])); new.setdefault("defense",oldstats.get("defense",[]))
-    return new
 
+    # Keep the existing detailed cards, comparison table, leaders, game log,
+    # etc. intact; those are maintained by the rest of the data pipeline.
+    new.setdefault("offense",oldstats.get("offense",[]))
+    new.setdefault("defense",oldstats.get("defense",[]))
+    return new
 
 
 def _clean_depth_name(name):
