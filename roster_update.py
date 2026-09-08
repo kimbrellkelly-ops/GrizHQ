@@ -211,7 +211,13 @@ def update_index(text,players,photos,coaches,coach_photos):
         'SENIORS':class_counts['SENIORS'],
         '5TH YEAR':class_counts['5TH YEAR'],
     }
-    print('Class counts:', {k: class_counts[k] for k in ('FRESHMEN','SOPHOMORES','JUNIORS','SENIORS','5TH YEAR','GRADUATE')})
+    raw_class_counts=Counter(str(p.get('year') or '').strip() for p in players)
+    print('Raw roster class labels:', dict(raw_class_counts))
+    print('Normalized class counts:', {k: class_counts[k] for k in ('FRESHMEN','SOPHOMORES','JUNIORS','SENIORS','5TH YEAR','GRADUATE','OTHER')})
+    required_classes=('FRESHMEN','SOPHOMORES','JUNIORS','SENIORS','5TH YEAR')
+    missing_classes=[k for k in required_classes if class_counts[k] == 0]
+    if missing_classes:
+        raise RuntimeError('Safety stop: expected class counts are zero: '+', '.join(missing_classes))
     snapshot="""<div class="roster-snapshot-grid">
   <div class="roster-snapshot-card"><span>{OFFENSE}</span><strong>OFFENSE</strong><small>QB · RB · WR · TE · OL</small></div>
   <div class="roster-snapshot-card"><span>{DEFENSE}</span><strong>DEFENSE</strong><small>DL · LB · DB</small></div>
@@ -222,7 +228,11 @@ def update_index(text,players,photos,coaches,coach_photos):
   <div class="roster-snapshot-card"><span>{SENIORS}</span><strong>SENIORS</strong><small>Fourth-year players</small></div>
   <div class="roster-snapshot-card"><span>{FIFTH_YEAR}</span><strong>5TH YEAR</strong><small>Graduate / extra-eligibility veterans</small></div>
 </div>""".format(**{**counts,'FIFTH_YEAR':counts['5TH YEAR']})
-    text=re.sub(r'<div class="roster-snapshot-grid">.*?</div>\s*(?=<div class="roster-explorer")',snapshot+'\n',text,count=1,flags=re.S)
+    snapshot_start=text.find('<div class="roster-snapshot-grid">')
+    snapshot_end=text.find('<div class="roster-explorer"', snapshot_start)
+    if snapshot_start < 0 or snapshot_end < 0:
+        raise RuntimeError('Safety stop: roster snapshot markers missing')
+    text=text[:snapshot_start]+snapshot+'\n'+text[snapshot_end:]
     text=re.sub(r'(class="roster-hq-stat"><b>)\d+(</b><span>PLAYERS</span>)',rf'\g<1>{len(players)}\g<2>',text,count=1)
     text=re.sub(r'(id="roster-count">)\d+ PLAYERS',rf'\g<1>{len(players)} PLAYERS',text,count=1)
     text=re.sub(r'(id="roster-filter-note">)Showing all \d+ players',rf'\g<1>Showing all {len(players)} players',text,count=1)
