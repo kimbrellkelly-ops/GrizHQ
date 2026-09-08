@@ -3695,23 +3695,3 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
     gap: 12px !important;
   }
 }
-
-
-/* FCS Top 25 — robust team-name layout when ESPN has no logo */
-.ghq-fcs-top-team-row > span:not(.fcs-team-rank) {
-  grid-column: 3 !important;
-  min-width: 0 !important;
-  white-space: normal !important;
-  overflow: visible !important;
-  text-overflow: clip !important;
-  overflow-wrap: anywhere !important;
-}
-.ghq-fcs-top-team-row:not(:has(img)) {
-  grid-template-columns: 34px minmax(0,1fr) auto !important;
-}
-.ghq-fcs-top-team-row:not(:has(img)) > span:not(.fcs-team-rank) {
-  grid-column: 2 !important;
-}
-.ghq-fcs-top-team-row {
-  min-width: 0 !important;
-}
