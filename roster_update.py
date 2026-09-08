@@ -64,7 +64,7 @@ def fetch(url):
 
 def clean_height(v): return re.sub(r'\s+','',v.replace("''", "'"))
 def clean_weight(v): return re.sub(r'\D+','',v or '')
-def norm(s): return re.sub(r'[^a-z0-9]+','',s.lower())
+def norm(s): return re.sub(r'[^a-z0-9]+','',(s or '').lower())
 
 def parse_roster(page):
     p=TableParser(); p.feed(page); players=[]
@@ -122,30 +122,31 @@ def verified_photos(roster_page, players):
             if valid_image_url(u): out[p['name']]=u; break
     return out
 
+CORE_COACHES = [
+    "Bobby Kennedy", "Brent Pease", "Rob Phenicie", "Eric Sanders",
+    "Chris White", "Wes Nurse", "Dominic Daste", "Jaylen Johnson",
+    "Kim McCloud", "Brent Myers", "Eric Price", "Nic Roger", "Dan Ryan"
+]
+
 def parse_coaches(page):
     p=TableParser(); p.feed(page); rows=[]
+    wanted={norm(x):x for x in CORE_COACHES}
     for row in p.rows:
-        if len(row)>=2:
-            name,title=row[0].strip(),row[1].strip()
-            if name and title and name.lower() not in {'name','coaching staff','support staff'} and len(name.split())>=2:
-                rows.append({'name':name,'title':title})
-    # Keep only coaching staff by stopping before obvious support/admin-only entries.
-    # Official 2026 page currently has 12 core football coaches; require the head coach and DC.
-    seen=[]
-    for x in rows:
-        if x['name'] not in {y['name'] for y in seen}: seen.append(x)
-    return seen
+        if len(row)<2: continue
+        name,title=row[0].strip(),row[1].strip()
+        key=wanted.get(norm(name))
+        if key and title:
+            rows.append({'name':key,'title':title})
+    # Preserve the official staff-page order and exclude support/admin staff.
+    by_name={x['name']:x for x in rows}
+    return [by_name[n] for n in CORE_COACHES if n in by_name]
 
 def validate_coaches(coaches):
     names={c['name'] for c in coaches}
     if 'Bobby Kennedy' not in names: raise RuntimeError('Safety stop: Bobby Kennedy not found on official coaches page')
     if 'Eric Sanders' not in names: raise RuntimeError('Safety stop: Eric Sanders not found on official coaches page')
-    if len(coaches)<10: raise RuntimeError(f'Safety stop: only {len(coaches)} coaches parsed')
-    # Exclude obvious support-staff titles if the page structure changes.
-    support_words=('analyst','video coordinator','communications','nutrition','student assistant','game management','general manager','athletic director','director of recruiting')
-    filtered=[c for c in coaches if not any(w in c['title'].lower() for w in support_words)]
-    if len(filtered)<10: raise RuntimeError(f'Safety stop: coaching staff filter left only {len(filtered)} coaches')
-    return filtered
+    if len(coaches)<10: raise RuntimeError(f'Safety stop: only {len(coaches)} core coaches parsed')
+    return coaches
 
 def html_escape(s): return html.escape(str(s),quote=True)
 def roster_raw(players):
@@ -185,9 +186,27 @@ def update_index(text,players,photos,coaches,coach_photos):
         if pos in {'K','KP','LS','P'}: return 'special'
         if pos in {'QB','RB','WR','TE','OL','OT','ATH'}: return 'offense'
         return 'defense'
-    counts={'OFFENSE':sum(unit(p['pos'])=='offense' for p in players),'DEFENSE':sum(unit(p['pos'])=='defense' for p in players),'SPECIALISTS':sum(unit(p['pos'])=='special' for p in players),'FRESHMEN':sum(p['year'] in {'Fr','Freshman'} for p in players),'R-JUNIORS':sum(p['year'] in {'R-Jr'} for p in players),'R-SENIORS':sum(p['year'] in {'R-Sr'} for p in players)}
-    for label,val in counts.items():
-        text=re.sub(rf'(<div class="roster-snapshot-card"><span>)\d+(</span><strong>{re.escape(label)}</strong>)',rf'\g<1>{val}\g<2>',text,count=1)
+    counts={
+        'OFFENSE':sum(unit(p['pos'])=='offense' for p in players),
+        'DEFENSE':sum(unit(p['pos'])=='defense' for p in players),
+        'SPECIALISTS':sum(unit(p['pos'])=='special' for p in players),
+        'FRESHMEN':sum(p['year'] in {'Fr','Freshman'} for p in players),
+        'SOPHOMORES':sum(p['year'] in {'So','Sophomore'} for p in players),
+        'JUNIORS':sum(p['year'] in {'Jr','Junior'} for p in players),
+        'SENIORS':sum(p['year'] in {'Sr','Senior'} for p in players),
+        '5TH YEAR':sum(p['year'] in {'5th','5th Year','5th-year'} for p in players),
+    }
+    snapshot="""<div class="roster-snapshot-grid">
+  <div class="roster-snapshot-card"><span>{OFFENSE}</span><strong>OFFENSE</strong><small>QB · RB · WR · TE · OL</small></div>
+  <div class="roster-snapshot-card"><span>{DEFENSE}</span><strong>DEFENSE</strong><small>DL · LB · DB</small></div>
+  <div class="roster-snapshot-card"><span>{SPECIALISTS}</span><strong>SPECIALISTS</strong><small>K · P/KP · LS</small></div>
+  <div class="roster-snapshot-card"><span>{FRESHMEN}</span><strong>FRESHMEN</strong><small>First-year players</small></div>
+  <div class="roster-snapshot-card"><span>{SOPHOMORES}</span><strong>SOPHOMORES</strong><small>Second-year players</small></div>
+  <div class="roster-snapshot-card"><span>{JUNIORS}</span><strong>JUNIORS</strong><small>Third-year players</small></div>
+  <div class="roster-snapshot-card"><span>{SENIORS}</span><strong>SENIORS</strong><small>Fourth-year players</small></div>
+  <div class="roster-snapshot-card"><span>{FIFTH_YEAR}</span><strong>5TH YEAR</strong><small>Graduate / extra-eligibility veterans</small></div>
+</div>""".format(**{**counts,'FIFTH_YEAR':counts['5TH YEAR']})
+    text=re.sub(r'<div class="roster-snapshot-grid">.*?</div>\s*(?=<div class="roster-explorer")',snapshot+'\n',text,count=1,flags=re.S)
     text=re.sub(r'(class="roster-hq-stat"><b>)\d+(</b><span>PLAYERS</span>)',rf'\g<1>{len(players)}\g<2>',text,count=1)
     text=re.sub(r'(id="roster-count">)\d+ PLAYERS',rf'\g<1>{len(players)} PLAYERS',text,count=1)
     text=re.sub(r'(id="roster-filter-note">)Showing all \d+ players',rf'\g<1>Showing all {len(players)} players',text,count=1)
@@ -208,15 +227,18 @@ def main():
     if len(photos)<max(70,int(len(players)*0.65)):
         raise RuntimeError(f'Safety stop: only {len(photos)} verified player photos found for {len(players)} players')
     raw_coaches=parse_coaches(coaches_page); coaches=validate_coaches(raw_coaches)
-    # Coach photos: the staff index does not reliably expose the photo alt text.
-    # Use each coach's official GoGriz profile link, then verify the image there.
+    # Coach photos: staff-page links say “Full Bio for NAME”; each official profile
+    # exposes its verified image as an “Image: NAME” link. Use those real URLs.
     linkp=LinkParser(); linkp.feed(coaches_page)
     profile_links={}
     for href,label in linkp.links:
+        if '/sports/football/roster/coaches/' not in href: continue
         n=norm(label)
         for c in coaches:
-            if n==norm(c['name']) and '/sports/football/roster/coaches/' in href:
+            ck=norm(c['name'])
+            if ck and ck in n:
                 profile_links[c['name']]=absolute_url(href,COACHES_URL)
+                break
     coach_photos={}
     for c in coaches:
         profile=profile_links.get(c['name'])
@@ -226,22 +248,17 @@ def main():
         except Exception as exc:
             print(f'Coach photo warning: could not fetch {c["name"]} profile: {exc}')
             continue
-        # SIDEARM coach profile pages expose the official headshot as an
-        # anchor whose href is the image URL (the staff index itself does
-        # not expose those image URLs). Prefer that verified image link.
-        lp=LinkParser(); lp.feed(profile_page)
         key=norm(c['name'])
-        matches=[]
+        # Preferred source: the profile's official “Image: NAME” anchor.
+        lp=LinkParser(); lp.feed(profile_page)
         for href,label in lp.links:
-            u=absolute_url(href,profile)
-            if not valid_image_url(u): continue
-            lab=norm(label)
-            if lab.startswith('image') and (not key or key in lab):
-                matches.append(u)
-        if matches:
-            coach_photos[c['name']]=matches[0]
-            continue
-        # Fallback: inspect actual img tags for exact alt/title matches.
+            if not valid_image_url(absolute_url(href,profile)): continue
+            low=norm(label)
+            if low.startswith('image') and key and key in low:
+                coach_photos[c['name']]=absolute_url(href,profile)
+                break
+        if c['name'] in coach_photos: continue
+        # Fallback: exact alt/title match on an img tag.
         ip=ImageParser(); ip.feed(profile_page)
         for im in ip.images:
             alt=norm(im['alt']); title=norm(im['title'])
@@ -250,10 +267,8 @@ def main():
                 if valid_image_url(u):
                     coach_photos[c['name']]=u
                     break
-        if c['name'] in coach_photos:
-            continue
-        # Conservative fallback: only accept a clearly player/staff-hosted image URL
-        # whose filename contains the coach surname. Never guess a URL from scratch.
+        if c['name'] in coach_photos: continue
+        # Conservative surname fallback only; never synthesize a URL.
         surname=norm(c['name'].split()[-1])
         for im in ip.images:
             u=absolute_url(im['src'],profile)
