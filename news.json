@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-08T00:54:54.433223+00:00",
+  "updated": "2026-09-08T01:04:54.606747+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 36,
   "sources": [
@@ -16,21 +16,6 @@
   "stories": [
     {
       "title": "First look: No. 3 Montana Grizzlies vs. Utah Tech Trailblazers",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-3-montana-grizzlies-vs-utah-tech-trailblazers/article_a21dc9ad-197d-48e0-aacc-7f4c6454a08e.html",
-      "date": "Sep. 7, 2026",
-      "published_at": "2026-09-07T22:45:00+00:00",
-      "description": "First look: No. 3 Montana Grizzlies vs. Utah Tech Trailblazers",
-      "source": "406 MT Sports",
-      "badge": "OPPONENT",
-      "short": "OPPONE",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/21/a21dc9ad-197d-48e0-aacc-7f4c6454a08e/6a9ef6b127b38.preview.jpg?crop=1763%2C926%2C0%2C115&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/21/a21dc9ad-197d-48e0-aacc-7f4c6454a08e/6a9ef6b127b38.preview.jpg?crop=1763%2C926%2C0%2C115&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "First look: No. 3 Montana Grizzlies vs. Utah Tech Trailblazers",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_3a218a7f-3b3c-5c15-b238-a61231374c5b.html",
       "date": "Sep. 7, 2026",
       "published_at": "2026-09-07T22:45:00+00:00",
@@ -43,6 +28,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/7f/07fcbd45-da65-5096-b67d-feb82d27daa7/6a9cbba2b1d62.image.jpg?resize=300%2C200"
+    },
+    {
+      "title": "First look: No. 3 Montana Grizzlies vs. Utah Tech Trailblazers",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-3-montana-grizzlies-vs-utah-tech-trailblazers/article_a21dc9ad-197d-48e0-aacc-7f4c6454a08e.html",
+      "date": "Sep. 7, 2026",
+      "published_at": "2026-09-07T22:45:00+00:00",
+      "description": "First look: No. 3 Montana Grizzlies vs. Utah Tech Trailblazers",
+      "source": "406 MT Sports",
+      "badge": "OPPONENT",
+      "short": "OPPONE",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/21/a21dc9ad-197d-48e0-aacc-7f4c6454a08e/6a9ef6b127b38.preview.jpg?crop=1763%2C926%2C0%2C115&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/21/a21dc9ad-197d-48e0-aacc-7f4c6454a08e/6a9ef6b127b38.preview.jpg?crop=1763%2C926%2C0%2C115&resize=1200%2C630&order=crop%2Cresize"
     },
     {
       "title": "Montana's Boyd, Kennedy, Ransom-Goelz preview Utah Tech",
