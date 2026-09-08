@@ -1419,7 +1419,8 @@ async function renderFCSScoreboard(){
   function top25TeamRow(t, fallback, rank, isRanked, showScore){
     const name=teamName(t,fallback), logo=logoFor(t,fallback);
     const rankHtml=isRanked?`<span class="fcs-team-rank">#${escapeHtml(rank)}</span>`:'<span class="fcs-team-rank fcs-team-rank-empty"></span>';
-    return `<div class="ghq-fcs-top-team-row">${rankHtml}${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}<span>${escapeHtml(name)}</span>${showScore?`<strong>${escapeHtml(t?.score??'—')}</strong>`:''}</div>`;
+    const logoClass=logo?'':' no-logo';
+    return `<div class="ghq-fcs-top-team-row${logoClass}">${rankHtml}${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}<span>${escapeHtml(name)}</span>${showScore?`<strong>${escapeHtml(t?.score??'—')}</strong>`:''}</div>`;
   }
   function top25Card(t,events,scheduled){
     const rank=String(t.rank||''),name=cleanTeamLabel(t.team||'Team');
@@ -1428,8 +1429,13 @@ async function renderFCSScoreboard(){
     const ev=sg ? (events.find(e=>eventMatchesGame(e,sg)) || rawEv && eventMatchesGame(rawEv,sg) ? (events.find(e=>eventMatchesGame(e,sg)) || rawEv) : null) : rawEv;
     if(ev){
       const ts=eventTeams(ev);
-      const a=sg? (ts.find(x=>teamMatch(sg.displayAway,x))||ts.find(x=>x.homeAway==='away')||ts[0]) : (ts.find(x=>x.homeAway==='away')||ts[0]);
-      const h=sg? (ts.find(x=>teamMatch(sg.displayHome,x))||ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]) : (ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]);
+      // ESPN's explicit homeAway flag is authoritative when available.
+      // This guarantees the scoreboard convention is always AWAY on top, HOME on bottom,
+      // even if the cached/schedule row was stored in the opposite order.
+      const espnAway=ts.find(x=>x.homeAway==='away');
+      const espnHome=ts.find(x=>x.homeAway==='home');
+      const a=espnAway|| (sg? (ts.find(x=>teamMatch(sg.displayAway,x))||ts[0]) : ts[0]);
+      const h=espnHome|| (sg? (ts.find(x=>teamMatch(sg.displayHome,x))||ts.find(x=>x!==a)||ts[1]) : (ts.find(x=>x!==a)||ts[1]));
       const playing=ev.completed||ev.state==='in';
       const rankedAway=teamMatch(name,a), rankedHome=teamMatch(name,h);
       const awayRow=top25TeamRow(a,sg?.displayAway||'Away',rank,rankedAway,playing);
@@ -1449,8 +1455,12 @@ async function renderFCSScoreboard(){
     // events do not reliably preserve homeAway. The scoreboard convention is
     // therefore: AWAY team on top, HOME team on bottom.
     const scheduledAway=game.displayAway,scheduledHome=game.displayHome;
-    const a=ts.find(x=>teamMatch(scheduledAway,x))||ts.find(x=>x.homeAway==='away')||ts[0]||null;
-    const h=ts.find(x=>teamMatch(scheduledHome,x))||ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||null;
+    // Prefer ESPN's explicit homeAway flags when the live/cached event has them.
+    // Otherwise fall back to the verified schedule matchup.
+    const espnAway=ts.find(x=>x.homeAway==='away');
+    const espnHome=ts.find(x=>x.homeAway==='home');
+    const a=espnAway||ts.find(x=>teamMatch(scheduledAway,x))||ts[0]||null;
+    const h=espnHome||ts.find(x=>teamMatch(scheduledHome,x))||ts.find(x=>x!==a)||null;
     const final=!!ev?.completed,live=ev?.state==='in',state=live?'live':(final?'final':'scheduled');
     const label=game.bigSkyGame?'BIG SKY':'NON-CONFERENCE';
     const tv=(ev?.broadcasts||[]).slice(0,2).join(', ');
@@ -1487,6 +1497,8 @@ async function renderFCSScoreboard(){
       .ghq-fcs-top-team-row .fcs-team-rank-empty{background:transparent!important}
       .ghq-fcs-top-team-row img{width:28px!important;height:28px!important;object-fit:contain!important}
       .ghq-fcs-top-team-row>span:not(.fcs-team-rank){font-size:15px!important;font-weight:750!important;line-height:1.15!important;min-width:0!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+      .ghq-fcs-top-team-row.no-logo{grid-template-columns:34px minmax(0,1fr) auto!important}
+      .ghq-fcs-top-team-row.no-logo>span:not(.fcs-team-rank){grid-column:2!important}
       .ghq-fcs-top-team-row strong{font-size:18px!important;font-weight:900!important;margin-left:auto!important}
       .ghq-fcs-top-meta{display:flex!important;justify-content:flex-end!important;align-items:center!important;gap:8px!important;padding-top:6px!important;font-size:11px!important;color:#666!important;text-transform:uppercase!important;letter-spacing:.03em!important}
       .ghq-fcs-top-meta small{font-size:10px!important;color:#777!important}
