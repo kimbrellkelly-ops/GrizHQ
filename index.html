@@ -682,6 +682,32 @@
 </section>
 </main>
 <script>
+(function initRosterHQLinks(){
+  const root=document.getElementById('roster');
+  if(!root)return;
+  root.querySelectorAll('.roster-pulse-card').forEach(card=>{
+    card.addEventListener('click',e=>{
+      e.preventDefault();
+      const target=document.querySelector(card.getAttribute('href'));
+      if(target){target.scrollIntoView({behavior:'smooth',block:'start'});}
+    });
+  });
+  root.querySelectorAll('.roster-intel-card').forEach(card=>{
+    const link=card.querySelector('a[href]');
+    if(!link)return;
+    card.setAttribute('role','link');
+    card.setAttribute('tabindex','0');
+    card.addEventListener('click',e=>{
+      if(e.target.closest('a'))return;
+      window.open(link.href,'_blank','noopener');
+    });
+    card.addEventListener('keydown',e=>{
+      if(e.key==='Enter' || e.key===' '){e.preventDefault();window.open(link.href,'_blank','noopener');}
+    });
+  });
+})();
+</script>
+<script>
 (function(){
   const root=document.getElementById('history'); if(!root)return;
   const filters=[...root.querySelectorAll('[data-ghx-filter]')];
