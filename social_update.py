@@ -1,5 +1,6 @@
 import json
 import re
+import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib.parse import urljoin
@@ -10,333 +11,289 @@ from bs4 import BeautifulSoup
 
 OUT = Path('social.json')
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (compatible; GrizHQ-SocialBot/2.0; +https://grizhq.com)',
+    'User-Agent': 'Mozilla/5.0 (compatible; GrizHQ-SocialBot/3.0; +https://grizhq.com)',
     'Accept-Language': 'en-US,en;q=0.9',
 }
+MAX_ITEMS = 40
+MAX_AGE_DAYS = 7
+REQUEST_TIMEOUT = 25
 
-# X has repeatedly changed/blocked public access methods.  Try several public
-# RSS/mirror endpoints, but never make one third-party mirror a hard dependency.
-X_ACCOUNTS = [
-    ('Montana Griz Football on X', 'MontanaGrizFB'),
-    ('Montana Grizzlies on X', 'UMGRIZZLIES'),
-    ('Big Sky Football on X', 'BigSkyFB'),
-]
-X_RSS_ENDPOINTS = [
-    'https://xcancel.com/{user}/rss',
-    'https://nitter.poast.org/{user}/rss',
-    'https://nitter.privacyredirect.com/{user}/rss',
-    'https://nitter.tiekoetter.com/{user}/rss',
-]
-X_HTML_ENDPOINTS = [
-    'https://twitterviewer.io/profile/{user}',
+# These are intentionally stable public pages. We do NOT use X syndication,
+# Nitter, TwStalker, or YouTube Atom feeds because those endpoints have proven
+# unreliable in GitHub Actions.
+X_MIRRORS = [
+    ('Montana Griz Football on X', 'MontanaGrizFB', 'https://www.24vids.com/channel/montanagrizfb'),
+    ('Montana Grizzlies on X', 'UMGRIZZLIES', 'https://www.24vids.com/channel/umgrizzlies'),
+    ('Big Sky Football on X', 'BigSkyFB', 'https://www.24vids.com/channel/bigskyfb'),
 ]
 
 SKYLINE_VIDEO_PAGE = 'https://skylinesportsmt.com/skyline-sports-youtube/'
+SKYLINE_WP_API = 'https://skylinesportsmt.com/wp-json/wp/v2/pages?slug=skyline-sports-youtube&per_page=5'
 
-FRESH_DAYS = 7
-MAX_ITEMS = 40
+VIDEO_RE = re.compile(r'(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=|shorts/)|youtu\.be/)([A-Za-z0-9_-]{11})', re.I)
+DATE_RE = re.compile(r'\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}(?:,\s*\d{4})?\b', re.I)
+REL_RE = re.compile(r'\b(\d+)\s*(second|minute|min|hour|hr|day|week)s?\s+ago\b', re.I)
 
 
-def clean(v):
-    return re.sub(r'\s+', ' ', str(v or '')).strip()
+def clean(value):
+    return re.sub(r'\s+', ' ', str(value or '')).strip()
 
 
 def parse_dt(value):
-    value = clean(value)
     if not value:
         return None
-    candidates = [value, value.replace('Z', '+00:00')]
-    for candidate in candidates:
-        try:
-            dt = datetime.fromisoformat(candidate)
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
-            return dt.astimezone(timezone.utc)
-        except Exception:
-            pass
-    for fmt in (
-        '%a, %d %b %Y %H:%M:%S %z',
-        '%a, %d %b %Y %H:%M:%S GMT',
-        '%Y-%m-%d',
-        '%B %d, %Y',
-        '%b %d, %Y',
-    ):
-        try:
-            dt = datetime.strptime(value, fmt)
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
-            return dt.astimezone(timezone.utc)
-        except Exception:
-            pass
+    text = clean(value)
+    now = datetime.now(timezone.utc)
+    try:
+        return datetime.fromisoformat(text.replace('Z', '+00:00')).astimezone(timezone.utc)
+    except Exception:
+        pass
+    m = REL_RE.search(text)
+    if m:
+        n = int(m.group(1)); unit = m.group(2).lower()
+        units = {
+            'second': timedelta(seconds=n), 'minute': timedelta(minutes=n), 'min': timedelta(minutes=n),
+            'hour': timedelta(hours=n), 'hr': timedelta(hours=n), 'day': timedelta(days=n),
+            'week': timedelta(weeks=n),
+        }
+        return now - units[unit]
+    if re.search(r'\byesterday\b', text, re.I):
+        return now - timedelta(days=1)
+    m = DATE_RE.search(text)
+    if m:
+        raw = m.group(0).replace('.', '')
+        for fmt in ('%b %d, %Y', '%B %d, %Y', '%b %d', '%B %d'):
+            try:
+                dt = datetime.strptime(raw, fmt)
+                if '%Y' not in fmt:
+                    dt = dt.replace(year=now.year)
+                    if dt > now.replace(tzinfo=None):
+                        dt = dt.replace(year=dt.year - 1)
+                return dt.replace(tzinfo=timezone.utc)
+            except Exception:
+                continue
     return None
 
 
 def fmt_date(dt):
-    if not dt:
-        return 'Recent'
-    return dt.strftime('%b. %-d, %Y')
+    return dt.strftime('%b. %-d, %Y') if dt else ''
 
 
-def request(url, timeout=20):
-    return requests.get(url, headers=HEADERS, timeout=timeout, allow_redirects=True)
+def request(url):
+    r = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
+    r.raise_for_status()
+    return r
 
 
-def parse_feed(source, content):
-    """Parse RSS/Atom XML from an X mirror into our common social format."""
-    try:
-        root = ET.fromstring(content)
-    except Exception:
-        return []
+def dedupe(posts):
+    by = {}
+    for p in posts:
+        url = clean(p.get('url'))
+        title = clean(p.get('title'))
+        if url and title:
+            by[url] = p
+    return list(by.values())
 
+
+def make_social_post(title, url, handle, dt, image=''):
+    return {
+        'title': title,
+        'url': url,
+        'image': image,
+        'source': f'@{handle} on X',
+        'type': 'SOCIAL',
+        'video': False,
+        'description': f'Public social post from @{handle}.',
+        'date': fmt_date(dt),
+        'platform': 'x',
+        'published_at': dt.isoformat() if dt else '',
+    }
+
+
+def x_from_24vids(label, handle, page_url):
+    """Parse the public 24vids mirror of an X profile.
+
+    24vids is used only as a public mirror. If it is unavailable or stale,
+    the source is skipped; it can never make the workflow fail by itself.
+    """
     out = []
-    # RSS 2.0
-    for item in root.findall('.//item'):
-        title = clean(item.findtext('title'))
-        url = clean(item.findtext('link'))
-        pub = clean(item.findtext('pubDate') or item.findtext('published') or item.findtext('updated'))
-        desc = clean(item.findtext('description'))
-        dt = parse_dt(pub)
-        if title and url:
-            out.append({
-                'title': title,
-                'url': url,
-                'image': '',
-                'source': source,
-                'type': 'X',
-                'video': False,
-                'description': desc or f'{source} social post.',
-                'date': fmt_date(dt),
-                'platform': 'x',
-                'published_at': dt.isoformat() if dt else pub,
-            })
-
-    # Atom / Nitter-style feeds
-    ns = '{http://www.w3.org/2005/Atom}'
-    for entry in root.findall(f'.//{ns}entry'):
-        title = clean(entry.findtext(f'{ns}title'))
-        link_node = entry.find(f'{ns}link')
-        url = clean(link_node.attrib.get('href', '') if link_node is not None else '')
-        pub = clean(entry.findtext(f'{ns}published') or entry.findtext(f'{ns}updated'))
-        summary = clean(entry.findtext(f'{ns}summary'))
-        dt = parse_dt(pub)
-        if title and url:
-            out.append({
-                'title': title,
-                'url': url,
-                'image': '',
-                'source': source,
-                'type': 'X',
-                'video': False,
-                'description': summary or f'{source} social post.',
-                'date': fmt_date(dt),
-                'platform': 'x',
-                'published_at': dt.isoformat() if dt else pub,
-            })
-    return out
-
-
-def fetch_x_rss(display_name, user):
-    for template in X_RSS_ENDPOINTS:
-        url = template.format(user=user)
-        try:
-            r = request(url)
-            if r.status_code != 200:
-                print(f'X RSS {display_name}: {r.status_code} {url}')
-                continue
-            posts = parse_feed(display_name, r.content)
-            if posts:
-                print(f'X RSS {display_name}: {len(posts)} posts from {url}')
-                return posts
-            print(f'X RSS {display_name}: empty feed from {url}')
-        except Exception as e:
-            print(f'X RSS {display_name}: failed {url}: {e}')
-    return []
-
-
-def fetch_x_html(display_name, user):
-    """Best-effort fallback for public mirror pages that expose post text/links."""
-    for template in X_HTML_ENDPOINTS:
-        url = template.format(user=user)
-        try:
-            r = request(url)
-            if r.status_code != 200:
-                print(f'X HTML {display_name}: {r.status_code} {url}')
-                continue
-            soup = BeautifulSoup(r.text, 'html.parser')
-            found = []
-            for a in soup.find_all('a', href=True):
-                href = a.get('href', '')
-                if '/status/' not in href:
-                    continue
-                title = clean(a.get_text(' ', strip=True))
-                if not title or title.startswith('@'):
-                    continue
-                full = urljoin(r.url, href)
-                # Try to find a nearby timestamp.
-                parent = a.parent
-                raw = clean(parent.get_text(' ', strip=True) if parent else '')
-                dt = parse_dt(raw)
-                found.append({
-                    'title': title,
-                    'url': full,
-                    'image': '',
-                    'source': display_name,
-                    'type': 'X',
-                    'video': False,
-                    'description': f'{display_name} social post.',
-                    'date': fmt_date(dt),
-                    'platform': 'x',
-                    'published_at': dt.isoformat() if dt else '',
-                })
-            if found:
-                print(f'X HTML {display_name}: {len(found)} posts from {url}')
-                return found
-        except Exception as e:
-            print(f'X HTML {display_name}: failed {url}: {e}')
-    return []
-
-
-def fetch_skyline_videos():
-    """Skyline maintains a current public video index that is more reliable than its YouTube Atom feed."""
     try:
-        r = request(SKYLINE_VIDEO_PAGE)
-        r.raise_for_status()
-    except Exception as e:
-        print('Skyline video page failed:', e)
-        return []
+        r = request(page_url)
+        soup = BeautifulSoup(r.text, 'html.parser')
+        # 24vids profile pages expose individual post links. Walk each link's
+        # nearest useful container and look for relative dates such as '7 hours ago'.
+        for a in soup.find_all('a', href=True):
+            href = urljoin(r.url, a.get('href', ''))
+            if '24vids.com' not in href or href.rstrip('/') == page_url.rstrip('/'):
+                continue
+            text = clean(a.get_text(' ', strip=True))
+            if len(text) < 8:
+                continue
+            container = a
+            for _ in range(5):
+                if container.parent:
+                    container = container.parent
+            block = clean(container.get_text(' ', strip=True))
+            if handle.lower() not in block.lower() and 'goGriz' not in block and '#GoGriz' not in block:
+                # Still accept a profile page's own post links when the title is useful.
+                if not any(k in text.lower() for k in ('griz', 'montana', 'gogriz')):
+                    continue
+            dt = parse_dt(block) or parse_dt(a.get('title')) or parse_dt(a.get('datetime'))
+            if not dt:
+                continue
+            # Avoid profile/category/navigation links.
+            if len(text) > 400:
+                text = text[:397] + '...'
+            img = container.find('img')
+            image = clean((img.get('src') or img.get('data-src')) if img else '')
+            out.append(make_social_post(text, href, handle, dt, image))
+    except Exception as exc:
+        print(f'{label}: 24vids unavailable: {exc}')
+    return dedupe(out)
 
-    soup = BeautifulSoup(r.text, 'html.parser')
+
+def parse_skyline_html(html, base_url):
+    soup = BeautifulSoup(html, 'html.parser')
     out = []
-    seen = set()
     for a in soup.find_all('a', href=True):
-        href = a.get('href', '')
-        m = re.search(r'(?:youtube\.com/watch\?v=|youtu\.be/)([A-Za-z0-9_-]{11})', href)
+        href = urljoin(base_url, a.get('href', ''))
+        m = VIDEO_RE.search(href)
+        if not m:
+            # Some embeds expose the video id in data attributes instead of href.
+            raw = ' '.join(str(v) for v in a.attrs.values())
+            m = VIDEO_RE.search(raw)
         if not m:
             continue
-        vid = m.group(1)
-        if vid in seen:
-            continue
-        seen.add(vid)
         title = clean(a.get_text(' ', strip=True))
+        container = a
+        for _ in range(7):
+            if container.parent:
+                container = container.parent
+        block = clean(container.get_text(' ', strip=True))
+        dt = parse_dt(block)
+        if not dt:
+            match = DATE_RE.search(block)
+            dt = parse_dt(match.group(0)) if match else None
         if not title:
-            # Some WordPress video cards keep the title in an adjacent heading.
-            parent = a.parent
-            title = clean(parent.get_text(' ', strip=True) if parent else '')
-        if not title:
+            # If the anchor itself has no text, use nearby heading/title text.
+            title = clean(container.find(['h1','h2','h3','h4','h5','h6']).get_text(' ', strip=True)) if container.find(['h1','h2','h3','h4','h5','h6']) else ''
+        if not title or not dt:
             continue
-        # Keep the feed Griz-focused. Skyline's page includes MSU content too.
-        hay = title.lower()
-        if not re.search(r'\bgriz\b|montana|big sky', hay, re.I):
+        # Keep Montana/Griz/Big Sky football content; this is a social/video feed,
+        # not the full Skyline channel dump.
+        if not re.search(r'\b(Montana|Griz|Grizzlies|Big Sky|FCS|Utah Tech|Drake|Southern Utah)\b', title, re.I):
             continue
-        container_text = clean(a.parent.parent.get_text(' ', strip=True) if a.parent and a.parent.parent else '')
-        dt = None
-        # Search for a visible month/day/year date near the video card.
-        md = re.search(r'\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}\b', container_text)
-        if md:
-            dt = parse_dt(md.group(0))
+        img = container.find('img')
+        image = clean((img.get('src') or img.get('data-src')) if img else '')
         out.append({
             'title': title,
-            'url': f'https://www.youtube.com/watch?v={vid}',
-            'image': f'https://i.ytimg.com/vi/{vid}/hqdefault.jpg',
+            'url': href,
+            'image': image or f'https://i.ytimg.com/vi/{m.group(1)}/hqdefault.jpg',
             'source': 'Skyline Sports YouTube',
             'type': 'YOUTUBE',
             'video': True,
-            'description': 'Verified Montana Griz video from Skyline Sports.',
+            'description': 'Verified Montana/Big Sky video from Skyline Sports.',
             'date': fmt_date(dt),
             'platform': 'youtube',
-            'youtube_id': vid,
-            'published_at': dt.isoformat() if dt else '',
+            'youtube_id': m.group(1),
+            'published_at': dt.isoformat(),
         })
-    print(f'Skyline video index: {len(out)} Griz videos found')
-    return out
+    return dedupe(out)
+
+
+def skyline_videos():
+    # Direct public page first.
+    try:
+        r = request(SKYLINE_VIDEO_PAGE)
+        out = parse_skyline_html(r.text, r.url)
+        if out:
+            return out
+        print('Skyline video page returned no parsable videos; trying WordPress API.')
+    except Exception as exc:
+        print('Skyline video page failed:', exc)
+    # WordPress API fallback. The page content is public and generally more stable
+    # for automated retrieval than the rendered page.
+    try:
+        r = request(SKYLINE_WP_API)
+        data = r.json()
+        if isinstance(data, list):
+            for page in data:
+                content = ((page.get('content') or {}).get('rendered') or '')
+                out = parse_skyline_html(content, 'https://skylinesportsmt.com/')
+                if out:
+                    return out
+    except Exception as exc:
+        print('Skyline WordPress API failed:', exc)
+    return []
 
 
 def load_existing():
     try:
-        d = json.loads(OUT.read_text(encoding='utf-8'))
-        return d.get('posts', []) if isinstance(d, dict) else []
+        data = json.loads(OUT.read_text(encoding='utf-8'))
+        return data.get('posts', []) if isinstance(data, dict) else []
     except Exception:
         return []
 
 
-def normalize_existing(items):
-    cutoff = datetime.now(timezone.utc) - timedelta(days=FRESH_DAYS)
-    out = []
-    for p in items:
-        dt = parse_dt(p.get('published_at'))
-        if dt is None:
-            # Old records with only a display date are retained only if the date parses.
-            dt = parse_dt(p.get('date'))
-        if dt is None or dt < cutoff:
-            continue
-        q = dict(p)
-        q['published_at'] = dt.isoformat()
-        out.append(q)
-    return out
+def post_dt(post):
+    return parse_dt(post.get('published_at'))
 
 
 def main():
-    fresh = []
+    now = datetime.now(timezone.utc)
+    cutoff = now - timedelta(days=MAX_AGE_DAYS)
+    posts = []
+    fresh_sources = []
 
-    # X: best-effort; failures are logged but do not block Skyline from updating.
-    for display_name, user in X_ACCOUNTS:
-        posts = fetch_x_rss(display_name, user)
-        if not posts:
-            posts = fetch_x_html(display_name, user)
-        fresh.extend(posts)
-        if posts:
-            print(f'{display_name}: {len(posts)} fresh candidates')
+    # Public X mirrors: never let a blocked mirror abort the entire updater.
+    for label, handle, page in X_MIRRORS:
+        found = [p for p in x_from_24vids(label, handle, page) if post_dt(p) and post_dt(p) >= cutoff]
+        if found:
+            fresh_sources.append(label)
+            posts.extend(found)
+            print(f'{label}: {len(found)} fresh posts via 24vids')
         else:
-            print(f'{display_name}: no fresh posts found')
+            print(f'{label}: no fresh posts via 24vids')
 
-    # Skyline: independent of YouTube's deprecated/blocked Atom endpoints.
-    fresh.extend(fetch_skyline_videos())
+    # Skyline is our dependable video source and is independent of X/YouTube APIs.
+    skyline = [p for p in skyline_videos() if post_dt(p) and post_dt(p) >= cutoff]
+    if skyline:
+        fresh_sources.append('Skyline Sports video index')
+        posts.extend(skyline)
+        print(f'Skyline Sports video index: {len(skyline)} fresh videos')
+    else:
+        print('Skyline Sports video index: no fresh videos found')
 
-    # Only keep recent previous items as a short-term outage buffer.
-    existing = normalize_existing(load_existing())
+    # Keep only recent cached items. Nothing older than seven days can survive.
+    existing = [p for p in load_existing() if post_dt(p) and post_dt(p) >= cutoff]
+    posts.extend(existing)
+    posts = dedupe(posts)
+    posts.sort(key=lambda p: post_dt(p) or datetime.min.replace(tzinfo=timezone.utc), reverse=True)
 
-    by_url = {}
-    for p in existing + fresh:
-        url = clean(p.get('url'))
-        title = clean(p.get('title'))
-        if not url or not title:
-            continue
-        by_url[url] = p
+    # The workflow should fail only when we truly have no usable fresh source.
+    # Cached recent posts alone are not considered a successful refresh.
+    if not fresh_sources:
+        print('ERROR: No fresh social source was retrieved. Refusing to publish a stale feed.')
+        sys.exit(1)
 
-    items = list(by_url.values())
-    cutoff = datetime.now(timezone.utc) - timedelta(days=FRESH_DAYS)
-    recent = []
-    for p in items:
-        dt = parse_dt(p.get('published_at'))
-        if dt is None or dt < cutoff:
-            continue
-        recent.append(p)
-
-    def key(x):
-        dt = parse_dt(x.get('published_at'))
-        return dt.timestamp() if dt else 0
-
-    recent.sort(key=key, reverse=True)
-
-    # Do not silently publish an ancient/stale feed. At least one current source
-    # must have produced something or a recent existing item must still be present.
-    fresh_now = [p for p in fresh if (parse_dt(p.get('published_at')) or datetime.min.replace(tzinfo=timezone.utc)) >= cutoff]
-    if not fresh_now and not recent:
-        raise RuntimeError('No fresh social source was retrieved. Refusing to publish a stale feed.')
+    if not posts or not post_dt(posts[0]) or post_dt(posts[0]) < cutoff:
+        print('ERROR: No social item is within the freshness window.')
+        sys.exit(1)
 
     payload = {
-        'updated': datetime.now(timezone.utc).isoformat(),
-        'posts': recent[:MAX_ITEMS],
+        'updated': now.isoformat(),
+        'posts': posts[:MAX_ITEMS],
         'profiles': [
             {'name': 'Montana Griz Football on X', 'url': 'https://x.com/MontanaGrizFB'},
             {'name': 'Montana Grizzlies on X', 'url': 'https://x.com/UMGRIZZLIES'},
             {'name': 'Montana Griz Football on Instagram', 'url': 'https://www.instagram.com/montanagrizfootball/'},
             {'name': 'Skyline Sports YouTube', 'url': 'https://www.youtube.com/@skylinesports'},
-            {'name': 'Big Sky Conference', 'url': 'https://x.com/BigSkyConf'},
+            {'name': 'Big Sky Football on X', 'url': 'https://x.com/BigSkyFB'},
+            {'name': 'Big Sky Conference YouTube', 'url': 'https://www.youtube.com/@BigSkyConf'},
         ],
     }
     OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
-    print(f'Wrote {len(payload["posts"])} social items; {len(fresh_now)} fresh items retrieved this run.')
+    print(f'Wrote {len(payload["posts"])} social items from {len(fresh_sources)} fresh sources: {", ".join(fresh_sources)}')
 
 
 if __name__ == '__main__':
