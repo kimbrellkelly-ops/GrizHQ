@@ -1118,6 +1118,7 @@ const rosterPhotos={
 
 
 
+
 function photoFor(p){return rosterPhotos[p.name]||'';}
 function photoMarkup(p){const src=photoFor(p); return src?`<img src="${src}" alt="${p.name}" loading="lazy" data-roster-photo="1">`:`<span class="roster-photo-placeholder">${p.n==='TBD'?'':p.n}</span>`;}
 const featureCaptains=['Keali\'i Ah Yat','Eli Gillman','Solomon Tuliaupupu','Peyton Wing'];
