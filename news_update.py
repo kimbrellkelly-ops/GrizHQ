@@ -4,7 +4,7 @@ import html
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin, urlparse, parse_qs, unquote
 from xml.etree import ElementTree as ET
 
 import requests
@@ -22,6 +22,15 @@ FEEDS = [
     ("KPAX", "https://www.kpax.com/news/rss"),
     ("NCAA FCS", "https://www.ncaa.com/news/football/fcs/rss.xml"),
     ("Missoulian", "https://missoulian.com/search/?f=rss"),
+]
+
+# Broad discovery feeds catch new stories when a publisher's own RSS feed or
+# page markup changes. Google News is used only as a discovery layer; the
+# updater follows each item to the original publisher before saving it.
+DISCOVERY_FEEDS = [
+    ("Google News", "https://news.google.com/rss/search?q=Montana+Grizzlies+football&hl=en-US&gl=US&ceid=US:en"),
+    ("Google News", "https://news.google.com/rss/search?q=Montana+Griz+football&hl=en-US&gl=US&ceid=US:en"),
+    ("Google News", "https://news.google.com/rss/search?q=Montana+Grizzlies+Utah+Tech&hl=en-US&gl=US&ceid=US:en"),
 ]
 
 # High-value pages without dependable RSS feeds. These are parsed for article cards.
@@ -77,6 +86,7 @@ EXCLUDE_TERMS = (
 )
 
 IMAGE_CACHE = {}
+REDIRECT_CACHE = {}
 VIDEO_RE = re.compile(r"(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=|shorts/)|youtu\.be/)([A-Za-z0-9_-]{11})", re.I)
 
 
@@ -110,7 +120,9 @@ def parse_date(value):
         pass
     for fmt in (
         "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d",
-        "%B %d, %Y", "%b %d, %Y", "%B %d, %Y %I:%M %p", "%b %d, %Y %I:%M %p"
+        "%B %d, %Y", "%b %d, %Y", "%B %d, %Y %I:%M %p", "%b %d, %Y %I:%M %p",
+        "%a, %d %b %Y %H:%M:%S %z", "%a, %d %b %Y %H:%M %z",
+        "%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%d %H:%M:%S", "%m/%d/%Y %I:%M %p"
     ):
         try:
             dt = datetime.strptime(value, fmt)
@@ -210,17 +222,44 @@ def fetch_article_metadata(url):
                 if image:
                     result["image"] = image
                     break
+        # Publishers expose publication time in several different ways.
+        date_value = ""
         date_node = (
             soup.find("meta", attrs={"property": "article:published_time"})
+            or soup.find("meta", attrs={"property": "article:published"})
             or soup.find("meta", attrs={"name": "date"})
+            or soup.find("meta", attrs={"name": "pubdate"})
             or soup.find("meta", attrs={"itemprop": "datePublished"})
         )
-        if date_node and date_node.get("content"):
-            result["published_at"] = date_node["content"].strip()
-        else:
-            time_node = soup.find("time", attrs={"datetime": True})
-            if time_node:
-                result["published_at"] = time_node.get("datetime", "").strip()
+        if date_node:
+            date_value = date_node.get("content") or date_node.get("datetime") or date_node.get_text(" ", strip=True)
+        if not date_value:
+            for node in soup.select('time[datetime], time[itemprop="datePublished"], [itemprop="datePublished"]')[:8]:
+                date_value = node.get("datetime") or node.get("content") or node.get_text(" ", strip=True)
+                if date_value:
+                    break
+        if not date_value:
+            # JSON-LD is common on modern publisher pages.
+            for node in soup.find_all("script", attrs={"type": "application/ld+json"})[:12]:
+                try:
+                    raw = json.loads(node.string or node.get_text() or "{}")
+                    candidates = raw if isinstance(raw, list) else [raw]
+                    for obj in candidates:
+                        if isinstance(obj, dict):
+                            if isinstance(obj.get("@graph"), list):
+                                candidates.extend(obj["@graph"])
+                            for key in ("datePublished", "dateCreated"):
+                                if obj.get(key):
+                                    date_value = obj[key]
+                                    break
+                        if date_value:
+                            break
+                    if date_value:
+                        break
+                except Exception:
+                    continue
+        if date_value:
+            result["published_at"] = clean(str(date_value))
     except Exception as exc:
         print(f"Metadata fetch failed for {url}: {exc}")
     IMAGE_CACHE[url] = result
@@ -255,6 +294,46 @@ def make_story(title, link, description, source, published_value="", image="", i
         "video_url": f"https://www.youtube.com/watch?v={youtube_id}" if youtube_id else (video_url or (link if video_flag else "")),
         "video_thumbnail": meta.get("video_thumbnail", "") or image,
     }
+
+
+def resolve_publisher_url(url):
+    """Follow a Google News redirect and return the original publisher URL."""
+    url = normalize_url(url)
+    if not url or "news.google.com" not in urlparse(url).netloc.lower():
+        return url
+    if url in REDIRECT_CACHE:
+        return REDIRECT_CACHE[url]
+    try:
+        response = requests.get(url, headers=HEADERS, timeout=15, allow_redirects=True)
+        final_url = normalize_url(response.url)
+        if "news.google.com" not in urlparse(final_url).netloc.lower():
+            REDIRECT_CACHE[url] = final_url
+            return final_url
+    except Exception as exc:
+        print(f"Google News redirect failed: {exc}")
+    REDIRECT_CACHE[url] = ""
+    return ""
+
+
+def parse_google_news_rss(url):
+    response = requests.get(url, headers=HEADERS, timeout=25)
+    response.raise_for_status()
+    root = ET.fromstring(response.content)
+    items = []
+    for item in root.findall(".//item")[:30]:
+        title = clean(item.findtext("title") or "")
+        raw_link = clean(item.findtext("link") or "")
+        link = resolve_publisher_url(raw_link)
+        if not title or not link:
+            continue
+        pub = clean(item.findtext("pubDate") or "")
+        desc = BeautifulSoup(clean(item.findtext("description") or ""), "html.parser").get_text(" ", strip=True)
+        source_node = item.find("source")
+        publisher = clean(source_node.text if source_node is not None else "") or "News"
+        story = make_story(title, link, desc, publisher, pub, "")
+        if story:
+            items.append(story)
+    return items
 
 
 def parse_rss(source, url):
@@ -397,6 +476,14 @@ def main():
             fetched.extend(items)
         except Exception as exc:
             print(f"{source} feed failed: {exc}")
+
+    for source, url in DISCOVERY_FEEDS:
+        try:
+            items = parse_google_news_rss(url)
+            print(f"{source} discovery ({url.split('q=', 1)[-1].split('&', 1)[0]}): {len(items)} Griz stories")
+            fetched.extend(items)
+        except Exception as exc:
+            print(f"{source} discovery failed: {exc}")
 
     for source, url in SOURCE_PAGES:
         try:
