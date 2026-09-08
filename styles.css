@@ -3988,3 +3988,15 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .roster-modal-photo{width:100%;height:100%;object-fit:cover;object-position:center top}
 @media(max-width:1100px){.roster-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.roster-explorer-head{padding:22px 18px 16px}.roster-filters{padding:0 18px 14px}.roster-search-row{padding:14px 18px}.roster-grid{grid-template-columns:1fr;padding:14px}.roster-player{grid-template-columns:96px 40px minmax(0,1fr);min-height:145px;padding:10px}.roster-photo{width:96px;height:120px}.roster-jersey{font-size:2rem}.roster-player-main strong{font-size:1rem}.roster-player-main small{font-size:.7rem}.roster-player-main em{font-size:.66rem}}
+/* ROSTER HQ INFORMATION PASS */
+.roster-snapshot-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:0 0 22px}
+.roster-snapshot-card{background:#fff;border:1px solid #e1dcd6;padding:14px 13px;min-height:92px;position:relative}
+.roster-snapshot-card span{display:block;font:900 28px/1 'Barlow Condensed',sans-serif;color:#6b1f2b;margin-bottom:5px}
+.roster-snapshot-card strong{display:block;font-size:.72rem;letter-spacing:.06em;color:#171717}
+.roster-snapshot-card small{display:block;color:#7b7168;font-size:.66rem;line-height:1.3;margin-top:4px}
+.roster-badge.transfer{background:#ece5f0;color:#5c426c}
+.roster-modal-body .stat-feature{grid-column:span 1;background:#f4ecee;border-left:3px solid #6b1f2b}
+.roster-modal-body .stat-feature.wide{grid-column:1/-1;background:#f7f4f0;border-left-color:#9a8b80}
+.roster-modal-body .stat-feature span{line-height:1.35}
+@media(max-width:1100px){.roster-snapshot-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.roster-snapshot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.roster-modal-body .stat-feature{grid-column:1/-1}}
