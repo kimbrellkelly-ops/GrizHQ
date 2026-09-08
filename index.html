@@ -6,6 +6,11 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Griz HQ | Montana Football</title>
 <meta content="Griz HQ — a fan-built Montana Grizzlies football information hub." name="description"/>
+<link rel="icon" type="image/png" sizes="512x512" href="https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"/>
+<link rel="shortcut icon" href="https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"/>
+<meta name="apple-mobile-web-app-title" content="Griz HQ"/>
+<meta name="application-name" content="Griz HQ"/>
 <link href="styles.css?v=20260906-news3" rel="stylesheet"/>
 <script defer="" src="app.js?v=20260907-top25-scorecards1"></script>
 <style id="griz-tabs-critical">
@@ -582,16 +587,13 @@
       return `<a class="ghq-social-card" href="${esc(item.url)}" target="_blank" rel="noopener"><div class="ghq-social-art">${art}<span class="ghq-social-badge">${esc(type)}</span>${item.video?'<i class="ghq-social-play">▶</i>':''}</div><div class="ghq-social-copy"><small>${esc(item.source||'GRIZ SOCIAL')}</small><h3>${esc(item.title)}</h3><p>${esc(item.description||'Montana Grizzlies social post.')}</p><span>${esc(item.date||'Recent')} ↗</span></div></a>`;
     }).join(''):'<div class="ghq-social-empty">No verified Griz social posts are available right now.</div>';
   };
-  const loadSocial=()=>fetch('social.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>render(d.posts)).catch(()=>render([]));
-  loadSocial();
-  window.setInterval(loadSocial,5*60*1000);
+  fetch('social.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>render(d.posts)).catch(()=>render([]));
 })();
 </script>
 <script>
 (function initNewsroom(){
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
   let stories=[];
-  let activeFilter='ALL';
   const cleanType=s=>String(s||'GRIZ NEWS').toUpperCase();
   const sourceLabel=s=>String(s||'GRIZ HQ').toUpperCase();
   const shortType=s=>{const t=cleanType(s); return t==='GAME STORY'?'GAME':t==='GAME DAY'?'GAME DAY':t==='RECRUITING'?'RECRUIT':t==='HONOR'?'HONOR':t==='INSIDER'?'INSIDER':t==='ANALYSIS'?'ANALYSIS':t==='OPPONENT'?'OPPONENT':'GRIZ';};
@@ -626,12 +628,8 @@
     stories.slice(0,4).forEach((item,i)=>{const card=cards[i];if(!card)return;card.href=item.url||'#';card.target='_blank';card.rel='noopener';card.querySelector('.ghq-card-type').textContent=shortType(item.badge);setImg(card.querySelector('.ghq-card-art img'),item.image,item.title);card.querySelector('h3').textContent=item.title||'';card.querySelector('p').textContent=item.description||'Latest Montana football coverage.';card.querySelector('small').textContent=`${item.date||''} • ${sourceLabel(item.source)}`;});
     const count=document.getElementById('home-news-count');if(count)count.textContent=stories.length;
   };
-  const bind=()=>document.querySelectorAll('[data-news-filter]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-news-filter]').forEach(x=>x.classList.remove('is-active'));btn.classList.add('is-active');activeFilter=btn.dataset.newsFilter;render(activeFilter);}));
-  const loadNews=initial=>fetch('news.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(data=>{const incoming=Array.isArray(data.stories)?data.stories:[];if(!incoming.length)throw new Error('No stories');stories=incoming;renderHome();render(activeFilter);if(initial)bind();const u=document.getElementById('news-updated-time');if(u)u.textContent=data.updated?`Updated ${new Date(data.updated).toLocaleString([], {month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}`:'Updated automatically';}).catch(()=>{const u=document.getElementById('news-updated-time');if(u&&initial)u.textContent='Using latest available headlines';});
-  loadNews(true);
-  // Refresh the newsroom in place so an open Griz HQ tab picks up new stories
-  // shortly after the GitHub news job publishes news.json.
-  window.setInterval(()=>loadNews(false),5*60*1000);
+  const bind=()=>document.querySelectorAll('[data-news-filter]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-news-filter]').forEach(x=>x.classList.remove('is-active'));btn.classList.add('is-active');render(btn.dataset.newsFilter);}));
+  fetch('news.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(data=>{stories=Array.isArray(data.stories)?data.stories:[];if(!stories.length)throw new Error('No stories');renderHome();render('ALL');bind();const u=document.getElementById('news-updated-time');if(u)u.textContent=data.updated?`Updated ${new Date(data.updated).toLocaleString([], {month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}`:'Updated automatically';}).catch(()=>{const u=document.getElementById('news-updated-time');if(u)u.textContent='Using latest available headlines';});
 })();
 </script>
 </body>
