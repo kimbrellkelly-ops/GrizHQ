@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-08T17:56:04.958547+00:00",
+  "updated": "2026-09-08T18:10:17.034442+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -19868,30 +19868,13 @@
         ]
       },
       {
-        "id": "401868937",
-        "date": "2026-10-24T19:00Z",
-        "name": "Arkansas-Pine Bluff Golden Lions at Florida A&M Rattlers",
-        "teams": [
-          {
-            "id": "50",
-            "name": "Florida A&M Rattlers",
-            "short": "Florida A&M",
-            "abbrev": "FAMU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2029",
-            "name": "Arkansas-Pine Bluff Golden Lions",
-            "short": "AR-Pine Bluff",
-            "abbrev": "UAPB",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
+        "id": "",
+        "date": "",
+        "name": "",
+        "teams": [],
+        "state": "",
         "completed": false,
-        "detail": "10/24 - 3:00 PM EDT",
+        "detail": "",
         "broadcasts": []
       },
       {
@@ -27067,33 +27050,14 @@
         ]
       },
       {
-        "id": "401868947",
-        "date": "2026-11-21T20:30Z",
-        "name": "Florida A&M Rattlers at Bethune-Cookman Wildcats",
-        "teams": [
-          {
-            "id": "2065",
-            "name": "Bethune-Cookman Wildcats",
-            "short": "Bethune",
-            "abbrev": "BCU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "50",
-            "name": "Florida A&M Rattlers",
-            "short": "Florida A&M",
-            "abbrev": "FAMU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
+        "id": "",
+        "date": "",
+        "name": "",
+        "teams": [],
+        "state": "",
         "completed": false,
-        "detail": "11/21 - 3:30 PM EST",
-        "broadcasts": [
-          "ESPN+"
-        ]
+        "detail": "",
+        "broadcasts": []
       },
       {
         "id": "401868083",
@@ -27420,5 +27384,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-08T17:56:32.948681+00:00"
+  "fcs_scores_updated": "2026-09-08T18:10:45.160136+00:00"
 }
