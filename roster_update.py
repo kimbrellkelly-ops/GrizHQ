@@ -226,17 +226,31 @@ def main():
         except Exception as exc:
             print(f'Coach photo warning: could not fetch {c["name"]} profile: {exc}')
             continue
-        ip=ImageParser(); ip.feed(profile_page)
+        # SIDEARM coach profile pages expose the official headshot as an
+        # anchor whose href is the image URL (the staff index itself does
+        # not expose those image URLs). Prefer that verified image link.
+        lp=LinkParser(); lp.feed(profile_page)
         key=norm(c['name'])
-        # Prefer an exact name match in alt/title.
         matches=[]
+        for href,label in lp.links:
+            u=absolute_url(href,profile)
+            if not valid_image_url(u): continue
+            lab=norm(label)
+            if lab.startswith('image') and (not key or key in lab):
+                matches.append(u)
+        if matches:
+            coach_photos[c['name']]=matches[0]
+            continue
+        # Fallback: inspect actual img tags for exact alt/title matches.
+        ip=ImageParser(); ip.feed(profile_page)
         for im in ip.images:
             alt=norm(im['alt']); title=norm(im['title'])
             if key and (key==alt or key==title or key in alt or key in title):
                 u=absolute_url(im['src'],profile)
-                if valid_image_url(u): matches.append(u)
-        if matches:
-            coach_photos[c['name']]=matches[0]
+                if valid_image_url(u):
+                    coach_photos[c['name']]=u
+                    break
+        if c['name'] in coach_photos:
             continue
         # Conservative fallback: only accept a clearly player/staff-hosted image URL
         # whose filename contains the coach surname. Never guess a URL from scratch.
