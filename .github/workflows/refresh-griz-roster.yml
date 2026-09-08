@@ -21,21 +21,25 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: true
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-
       - name: Rebase on latest main before changing files
         run: |
           git config user.name "griz-hq-bot"
           git config user.email "griz-hq-bot@users.noreply.github.com"
           git pull --rebase origin main
-
+      - name: Diagnose exact updater and commit
+        run: |
+          echo "Workflow commit SHA: $GITHUB_SHA"
+          echo "Workflow file SHA: $GITHUB_WORKFLOW_SHA"
+          echo "Checked-out HEAD: $(git rev-parse HEAD)"
+          echo "roster_update.py SHA256: $(sha256sum roster_update.py | cut -d' ' -f1)"
+          echo "Class-count code lines:"
+          grep -nE 'class_key|class_counts|Raw roster class labels|Normalized class counts|expected class counts' roster_update.py || true
       - name: Refresh roster, verified photos and coaching staff
         run: python roster_update.py
-
       - name: Validate changed files
         run: |
           python -m py_compile roster_update.py
@@ -43,11 +47,10 @@ jobs:
           git status --short
           changed="$(git diff --name-only)"
           if [ -n "$changed" ]; then
-            echo "$changed" | grep -E '^(index\.html|roster_update\.py)$' >/dev/null || {
+            echo "$changed" | grep -E '^(index\.html|roster_update\.py|\.github/workflows/refresh-griz-roster\.yml)$' >/dev/null || {
               echo "Unexpected changed file detected"; exit 1;
             }
           fi
-
       - name: Commit only when roster data changed
         run: |
           if git diff --quiet -- index.html; then
@@ -56,7 +59,6 @@ jobs:
           fi
           git add index.html
           git commit -m "Auto-refresh Griz roster HQ"
-
       - name: Push with retry
         run: |
           for attempt in 1 2 3; do
