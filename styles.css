@@ -3955,11 +3955,36 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 @media(max-width:1000px){.roster-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.roster-explorer-head{align-items:flex-start;flex-direction:column}.roster-search-row{flex-direction:column;align-items:stretch}.roster-search-row span{white-space:normal}}
 @media(max-width:640px){.roster-grid{grid-template-columns:1fr;padding:12px}.roster-filters{padding:0 14px 14px}.roster-search-row{padding:14px}.roster-explorer-head{padding:20px 18px 15px}.roster-player{grid-template-columns:34px 1fr auto}.roster-modal-body{grid-template-columns:1fr}.roster-modal-card{padding:22px}}
 
-/* ROSTER HQ PHOTO TRIAL */
-.roster-player{display:grid;grid-template-columns:64px 42px minmax(0,1fr) auto;align-items:center;gap:12px;}
-.roster-photo{width:64px;height:78px;border-radius:10px;overflow:hidden;background:linear-gradient(145deg,#eee,#d9d9d9);display:flex;align-items:flex-end;justify-content:center;border:1px solid rgba(74,26,48,.12);flex:0 0 64px;}
-.roster-photo img{width:100%;height:100%;object-fit:cover;display:block;}
-.roster-photo-placeholder{font-weight:900;font-size:18px;color:#fff;background:#5b1f3b;width:100%;height:100%;display:flex;align-items:center;justify-content:center;}
-.roster-modal-photo-wrap{width:150px;height:190px;border-radius:14px;overflow:hidden;background:#eee;margin:8px 0 14px;border:1px solid rgba(74,26,48,.14);}
-.roster-modal-photo{width:100%;height:100%;object-fit:cover;display:none;}
-@media(max-width:700px){.roster-player{grid-template-columns:54px 34px minmax(0,1fr);gap:9px}.roster-photo{width:54px;height:66px}.roster-badges{grid-column:3;justify-self:start}.roster-modal-photo-wrap{width:125px;height:160px;}}
+/* ROSTER HQ CLEAN CARD PASS — visual-only, scoped to explorer */
+.roster-explorer{border:1px solid #e1dcd6;border-radius:0;box-shadow:0 8px 24px rgba(33,27,22,.05);background:#fff;margin:24px 0 30px}
+.roster-explorer-head{padding:28px 32px 20px;background:linear-gradient(180deg,#fff 0%,#fbfaf8 100%);border-bottom:0;position:relative;overflow:hidden}
+.roster-explorer-head:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.96),rgba(255,255,255,.84)),url('mountain-bg.jpg') right center/cover no-repeat;opacity:.38;pointer-events:none}
+.roster-explorer-head>*{position:relative;z-index:1}
+.roster-explorer-head h3{font-size:2.05rem;line-height:1.02;margin:5px 0 6px;color:#171717;font-weight:900}
+.roster-explorer-head p{font-size:.9rem;color:#6b655f}
+.roster-count{font-size:.95rem;color:#6b1f2b}
+.roster-filters{padding:0 32px 17px;gap:9px;background:#fff;border-bottom:1px solid #eee9e3}
+.roster-filter{padding:10px 15px;border:1px solid #ddd7d0;background:#fff;color:#171717;border-radius:999px;font-size:.74rem;letter-spacing:.07em;transition:.15s ease}
+.roster-filter:hover{border-color:#9b7078}
+.roster-filter.active{background:#6b1f2b;border-color:#6b1f2b}
+.roster-search-row{padding:18px 32px;background:#fff;gap:16px}
+.roster-search-row input{height:50px;border-radius:8px;border:1px solid #d9d3cc;font-size:1rem;padding:0 16px;box-shadow:none}
+.roster-search-row input:focus{outline:none;border-color:#6b1f2b;box-shadow:0 0 0 3px rgba(107,31,43,.08)}
+.roster-search-row span{font-size:.82rem;color:#746c64}
+.roster-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:18px 22px 24px;background:#f5f2ee;max-height:800px}
+.roster-player{grid-template-columns:118px 52px minmax(0,1fr);grid-template-rows:auto 1fr;gap:0 14px;align-items:center;padding:12px 14px;min-height:174px;border:1px solid #ded8d1;border-radius:12px;background:#fff;box-shadow:0 2px 5px rgba(33,27,22,.025);position:relative;overflow:hidden}
+.roster-player:hover{transform:translateY(-2px);border-color:#b9969d;box-shadow:0 10px 22px rgba(33,27,22,.09)}
+.roster-photo{grid-column:1;grid-row:1 / span 2;width:118px;height:148px;border-radius:9px;overflow:hidden;background:#eee9e4;display:flex;align-items:center;justify-content:center;align-self:center}
+.roster-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.roster-photo-placeholder{font-size:2.8rem;font-weight:950;color:#6b1f2b}
+.roster-jersey{grid-column:2;grid-row:1 / span 2;align-self:center;font-size:2.55rem;line-height:1;font-weight:950;color:#6b1f2b;text-align:center}
+.roster-player-main{grid-column:3;grid-row:1;align-self:end;min-width:0;padding-top:4px}
+.roster-player-main strong{font-size:1.1rem;line-height:1.05;font-weight:900;color:#181818;display:block;white-space:normal;overflow:visible;text-overflow:clip}
+.roster-player-main small{font-size:.76rem;line-height:1.25;margin-top:5px;color:#645d56}
+.roster-player-main em{font-size:.72rem;line-height:1.25;margin-top:4px;color:#817970;white-space:normal;overflow:visible;text-overflow:clip}
+.roster-badges{grid-column:3;grid-row:2;align-self:start;align-items:flex-start;flex-direction:row;flex-wrap:wrap;gap:6px;padding-top:10px}
+.roster-badge{font-size:.58rem;padding:5px 8px}
+.roster-modal-photo-wrap{width:150px;height:190px;border-radius:10px;overflow:hidden;background:#eee9e4;margin:4px 0 14px}
+.roster-modal-photo{width:100%;height:100%;object-fit:cover;object-position:center top}
+@media(max-width:1100px){.roster-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.roster-explorer-head{padding:22px 18px 16px}.roster-filters{padding:0 18px 14px}.roster-search-row{padding:14px 18px}.roster-grid{grid-template-columns:1fr;padding:14px}.roster-player{grid-template-columns:96px 40px minmax(0,1fr);min-height:145px;padding:10px}.roster-photo{width:96px;height:120px}.roster-jersey{font-size:2rem}.roster-player-main strong{font-size:1rem}.roster-player-main small{font-size:.7rem}.roster-player-main em{font-size:.66rem}}
