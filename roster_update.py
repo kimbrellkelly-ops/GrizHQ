@@ -187,16 +187,31 @@ def update_index(text,players,photos,coaches,coach_photos):
         if pos in {'K','KP','LS','P'}: return 'special'
         if pos in {'QB','RB','WR','TE','OL','OT','ATH'}: return 'offense'
         return 'defense'
+    def class_key(value):
+        # Official GoGriz currently uses labels such as "Fr.", "So.",
+        # "Jr.", "Sr.", "5th", and "Gr.". Normalize punctuation
+        # and spacing so the count logic is resilient to presentation changes.
+        v=re.sub(r'[^a-z0-9]+','',str(value or '').lower())
+        return {
+            'fr':'FRESHMEN', 'freshman':'FRESHMEN',
+            'so':'SOPHOMORES', 'sophomore':'SOPHOMORES',
+            'jr':'JUNIORS', 'junior':'JUNIORS',
+            'sr':'SENIORS', 'senior':'SENIORS',
+            '5th':'5TH YEAR', '5thyear':'5TH YEAR',
+            'gr':'GRADUATE', 'graduate':'GRADUATE',
+        }.get(v,'OTHER')
+    class_counts=Counter(class_key(p['year']) for p in players)
     counts={
         'OFFENSE':sum(unit(p['pos'])=='offense' for p in players),
         'DEFENSE':sum(unit(p['pos'])=='defense' for p in players),
         'SPECIALISTS':sum(unit(p['pos'])=='special' for p in players),
-        'FRESHMEN':sum(p['year'] in {'Fr','Freshman'} for p in players),
-        'SOPHOMORES':sum(p['year'] in {'So','Sophomore'} for p in players),
-        'JUNIORS':sum(p['year'] in {'Jr','Junior'} for p in players),
-        'SENIORS':sum(p['year'] in {'Sr','Senior'} for p in players),
-        '5TH YEAR':sum(p['year'] in {'5th','5th Year','5th-year'} for p in players),
+        'FRESHMEN':class_counts['FRESHMEN'],
+        'SOPHOMORES':class_counts['SOPHOMORES'],
+        'JUNIORS':class_counts['JUNIORS'],
+        'SENIORS':class_counts['SENIORS'],
+        '5TH YEAR':class_counts['5TH YEAR'],
     }
+    print('Class counts:', {k: class_counts[k] for k in ('FRESHMEN','SOPHOMORES','JUNIORS','SENIORS','5TH YEAR','GRADUATE')})
     snapshot="""<div class="roster-snapshot-grid">
   <div class="roster-snapshot-card"><span>{OFFENSE}</span><strong>OFFENSE</strong><small>QB · RB · WR · TE · OL</small></div>
   <div class="roster-snapshot-card"><span>{DEFENSE}</span><strong>DEFENSE</strong><small>DL · LB · DB</small></div>
