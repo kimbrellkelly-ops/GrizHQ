@@ -3778,3 +3778,137 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 @media(max-width:1250px){.griz-transfer-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:950px){.griz-transfer-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.griz-transfer-coach{grid-template-columns:1fr 1fr}.griz-transfer-coach .griz-transfer-line.current,.griz-transfer-coach .griz-transfer-note{grid-column:auto;grid-row:auto}}
 @media(max-width:700px){.griz-transfers{padding:22px 0 18px}.griz-transfers-head{display:block}.griz-transfers-head h3{font-size:36px}.griz-transfers-head p{font-size:13px}.griz-transfer-legend{justify-content:flex-start;margin-top:12px;font-size:10px}.griz-transfer-grid{grid-template-columns:1fr}.griz-transfer-card{min-height:0}.griz-transfer-coach{grid-template-columns:1fr}.griz-transfer-coach>div:nth-child(2){text-align:left;border-left:0;border-top:1px solid #ddd;padding:12px 0 0}.griz-transfer-coach p,.griz-transfer-coach .griz-transfer-line.current,.griz-transfer-coach .griz-transfer-note{grid-column:auto;grid-row:auto}}
+
+/* GRIZ TRANSFERS — Hauck panel upgrade; scoped to .griz-transfer-coach only */
+.griz-transfer-coach{
+  position:relative;
+  margin-top:16px;
+  min-height:142px;
+  background:#fff;
+  color:var(--ink);
+  border:1px solid #dedede;
+  border-top:3px solid var(--maroon);
+  border-radius:3px;
+  padding:20px 22px;
+  display:grid;
+  grid-template-columns:minmax(230px,1.05fr) minmax(290px,1.2fr) minmax(300px,1.35fr) minmax(130px,.6fr);
+  grid-template-rows:auto auto;
+  gap:8px 24px;
+  align-items:center;
+  box-shadow:0 1px 2px rgba(0,0,0,.04);
+}
+.griz-transfer-coach>div:first-child{
+  grid-column:1;
+  grid-row:1 / span 2;
+  align-self:center;
+  min-width:0;
+  padding-left:2px;
+}
+.griz-transfer-coach>div:first-child .griz-transfer-status{
+  display:block;
+  width:max-content;
+  padding:0;
+  background:transparent;
+  color:var(--maroon);
+  border-radius:0;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.8px;
+}
+.griz-transfer-coach>div:first-child .griz-transfer-status::before{
+  content:"";
+  display:inline-block;
+  width:22px;
+  height:3px;
+  margin:0 7px 3px 0;
+  background:var(--maroon);
+}
+.griz-transfer-coach h4{
+  color:#111820;
+  font-size:36px;
+  line-height:.95;
+  margin:10px 0 5px;
+}
+.griz-transfer-coach .griz-transfer-dest{
+  font-size:15px;
+  line-height:1.25;
+  font-weight:800;
+  color:#50565c;
+  margin:0;
+}
+.griz-transfer-coach>div:nth-child(2){
+  grid-column:4;
+  grid-row:1 / span 2;
+  text-align:right;
+  border-left:1px solid #ddd;
+  padding-left:20px;
+  font-size:12px;
+  line-height:1.4;
+  align-self:center;
+}
+.griz-transfer-coach>div:nth-child(2)::before{
+  content:"Former Montana head coach";
+  display:block;
+  color:#596067;
+  font-size:12px;
+  margin-bottom:4px;
+}
+.griz-transfer-coach>div:nth-child(2) span{display:none}
+.griz-transfer-coach>div:nth-child(2) b{
+  display:block;
+  color:var(--maroon);
+  font-size:17px;
+  line-height:1.1;
+}
+.griz-transfer-coach p{
+  grid-column:3;
+  grid-row:1 / span 2;
+  align-self:center;
+  margin:0;
+  padding-left:24px;
+  border-left:1px solid #ddd;
+  color:#4e545a;
+  font-size:13px;
+  line-height:1.45;
+}
+.griz-transfer-coach .griz-transfer-line.current{
+  grid-column:2;
+  grid-row:1 / span 2;
+  align-self:center;
+  position:relative;
+  background:transparent;
+  margin:0;
+  padding:0 0 0 24px;
+  border-top:0;
+  color:#222;
+  font-size:12px;
+  line-height:1.55;
+  font-weight:700;
+}
+.griz-transfer-coach .griz-transfer-line.current::before{
+  content:"ILLINOIS DEFENSE (2026)";
+  display:block;
+  color:var(--maroon);
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:.2px;
+  margin-bottom:9px;
+}
+.griz-transfer-coach .griz-transfer-note{display:none}
+
+@media(max-width:1100px){
+  .griz-transfer-coach{grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto;gap:14px 20px}
+  .griz-transfer-coach>div:first-child{grid-column:1;grid-row:1 / span 2}
+  .griz-transfer-coach .griz-transfer-line.current{grid-column:2;grid-row:1}
+  .griz-transfer-coach p{grid-column:2;grid-row:2;border-left:0;border-top:1px solid #ddd;padding:12px 0 0}
+  .griz-transfer-coach>div:nth-child(2){grid-column:1 / -1;grid-row:3;text-align:left;border-left:0;border-top:1px solid #ddd;padding:12px 0 0}
+  .griz-transfer-coach>div:nth-child(2)::before{display:none}
+}
+@media(max-width:700px){
+  .griz-transfer-coach{grid-template-columns:1fr;grid-template-rows:auto;min-height:0;padding:18px}
+  .griz-transfer-coach>div:first-child,.griz-transfer-coach .griz-transfer-line.current,.griz-transfer-coach p,.griz-transfer-coach>div:nth-child(2){grid-column:auto;grid-row:auto}
+  .griz-transfer-coach .griz-transfer-line.current{border-top:1px solid #ddd;padding:14px 0 0}
+  .griz-transfer-coach p{border-top:1px solid #ddd;padding:14px 0 0}
+  .griz-transfer-coach>div:nth-child(2){border-top:1px solid #ddd;padding:14px 0 0}
+  .griz-transfer-coach h4{font-size:32px}
+}
