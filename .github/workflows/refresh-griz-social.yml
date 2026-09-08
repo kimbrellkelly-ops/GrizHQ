@@ -9,8 +9,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: griz-hq-social
-  cancel-in-progress: true
+  group: griz-hq-repo-writes
+  cancel-in-progress: false
 
 jobs:
   refresh-social:
@@ -31,5 +31,16 @@ jobs:
           git config user.name 'griz-hq-social-bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add social.json
-          git diff --cached --quiet || git commit -m 'Auto-update Griz HQ social'
-          git push
+          if git diff --cached --quiet; then
+            echo "No social changes to commit."
+            exit 0
+          fi
+          git commit -m 'Auto-update Griz HQ social'
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            echo "Push attempt ${attempt} failed; retrying after refetch..."
+            git rebase --abort || true
+            git fetch origin main
+          done
+          echo "Unable to push refreshed Griz HQ social after 3 attempts."
+          exit 1
