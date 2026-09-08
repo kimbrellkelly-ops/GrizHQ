@@ -45,7 +45,7 @@ class ImageParser(HTMLParser):
     def handle_starttag(self,tag,attrs):
         if tag.lower()!='img': return
         d=dict(attrs); src=d.get('src') or d.get('data-src') or d.get('data-lazy-src') or ''
-        if src: self.images.append({'src':src,'alt':d.get('alt',''),'title':d.get('title','')})
+        if src: self.images.append({'src':src,'alt':d.get('alt') or '','title':d.get('title') or ''})
 
 class LinkParser(HTMLParser):
     def __init__(self):
@@ -64,7 +64,7 @@ def fetch(url):
 
 def clean_height(v): return re.sub(r'\s+','',v.replace("''", "'"))
 def clean_weight(v): return re.sub(r'\D+','',v or '')
-def norm(s): return re.sub(r'[^a-z0-9]+','',s.lower())
+def norm(s): return re.sub(r'[^a-z0-9]+','',(s or '').lower())
 
 def parse_roster(page):
     p=TableParser(); p.feed(page); players=[]
@@ -213,7 +213,7 @@ def main():
     for c in coaches:
         key=norm(c['name'])
         for im in ims:
-            alt=norm(im['alt']); title=norm(im['title'])
+            alt=norm(im.get('alt') or ''); title=norm(im.get('title') or '')
             if key and (key==alt or key==title or key in alt or key in title):
                 u=absolute_url(im['src'],COACHES_URL)
                 if valid_image_url(u): coach_photos[c['name']]=u; break
