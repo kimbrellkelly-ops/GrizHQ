@@ -3695,16 +3695,3 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
     gap: 12px !important;
   }
 }
-
-/* Former Griz Tracker */
-.former-griz-wrap{margin-top:32px;padding-top:28px;border-top:1px solid rgba(102,27,46,.16)}
-.former-griz-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:18px}
-.former-griz-head h3{margin:4px 0 6px;font-size:clamp(1.35rem,2vw,1.8rem)}
-.former-griz-head p{margin:0;color:var(--muted,#666);max-width:720px}
-.former-griz-head>span{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--maroon,#661b2e);white-space:nowrap}
-.former-griz-feature{margin-bottom:18px}
-.former-griz-coach-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;padding:20px;border-radius:14px;background:linear-gradient(135deg,rgba(102,27,46,.96),rgba(74,17,34,.96));color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.12)}
-.former-griz-coach-card .eyebrow{color:rgba(255,255,255,.72)}
-.former-griz-coach-card h4{margin:4px 0 5px;font-size:1.35rem}.former-griz-coach-card p{margin:8px 0 0;color:rgba(255,255,255,.82);line-height:1.5}.former-griz-coach-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.former-griz-chip{display:inline-flex;align-items:center;padding:5px 9px;border-radius:999px;background:rgba(255,255,255,.12);font-size:.72rem;font-weight:800}.former-griz-grade{font-size:2rem;font-weight:900;text-align:center}.former-griz-grade small{display:block;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;opacity:.7}
-.former-griz-table-wrap{overflow-x:auto;border:1px solid rgba(0,0,0,.08);border-radius:14px;background:#fff}.former-griz-table{min-width:760px}.former-griz-row{display:grid;grid-template-columns:1.5fr 1.1fr .55fr 1fr 1.25fr .55fr;align-items:center;gap:12px;padding:13px 15px;border-top:1px solid rgba(0,0,0,.06);font-size:.88rem}.former-griz-row:first-child{border-top:0}.former-griz-row:not(.former-griz-label):hover{background:rgba(102,27,46,.035)}.former-griz-label{background:rgba(102,27,46,.055);font-size:.67rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#5f5f5f}.former-griz-player{font-weight:900;color:var(--maroon,#661b2e)}.former-griz-school{font-weight:750}.former-griz-stat{font-weight:750}.former-griz-role{font-size:.76rem;color:#666}.former-griz-grade-cell{text-align:center;font-weight:900}.former-griz-link{display:inline-block;margin-top:4px;font-size:.68rem;text-decoration:underline}.former-griz-note{margin-top:10px;font-size:.76rem;color:#777;line-height:1.45}
-@media(max-width:720px){.former-griz-head{align-items:flex-start;flex-direction:column;gap:8px}.former-griz-coach-card{grid-template-columns:1fr}.former-griz-grade{text-align:left}.former-griz-table{min-width:700px}}

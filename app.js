@@ -432,24 +432,6 @@ setInterval(async () => {
   } catch (e) { console.warn("Scheduled rankings refresh failed; retaining verified snapshot", e); applyRankingSnapshotFallback(); }
 }, 30 * 60 * 1000);
 
-function renderFormerGriz(d) {
-  const fg = d && d.former_griz;
-  if (!fg) return;
-  const through = document.getElementById("former-griz-through");
-  const coach = document.getElementById("former-griz-coach");
-  const table = document.getElementById("former-griz-table");
-  const note = document.getElementById("former-griz-note");
-  if (through) through.textContent = fg.through || "Current season";
-  if (coach && Array.isArray(fg.coaches) && fg.coaches[0]) {
-    const c = fg.coaches[0];
-    coach.innerHTML = `<div class="former-griz-coach-card"><div><div class="eyebrow">FORMER GRIZ COACH • ${escapeHtml(c.school || "")}</div><h4>${escapeHtml(c.name)}</h4><div class="former-griz-chip">${escapeHtml(c.position || "")}</div><div class="former-griz-meta"><span class="former-griz-chip">${escapeHtml(c.role || "")}</span><span class="former-griz-chip">${escapeHtml(c.status || "")}</span><span class="former-griz-chip">${escapeHtml(c.last_game || "")}</span></div><p>${escapeHtml(c.summary || "")}</p><a href="${c.url || '#'}" target="_blank" rel="noopener" style="color:#fff;font-size:.72rem;font-weight:800;display:inline-block;margin-top:9px">VIEW ILLINOIS BIO ↗</a></div><div class="former-griz-grade">${escapeHtml(c.grade || "—")}<small>Griz HQ grade</small></div></div>`;
-  }
-  if (table && Array.isArray(fg.players)) {
-    table.innerHTML = `<div class="former-griz-row former-griz-label"><span>PLAYER</span><span>NEW SCHOOL</span><span>POS</span><span>ROLE</span><span>LAST GAME / SEASON</span><span>GRADE</span></div>` + fg.players.map(p => `<div class="former-griz-row"><span><a class="former-griz-player" href="${p.url || '#'}" target="_blank" rel="noopener">${escapeHtml(p.name)}</a></span><span class="former-griz-school">${escapeHtml(p.school)}</span><span>${escapeHtml(p.position)}</span><span><span>${escapeHtml(p.status || '')}</span> <span class="former-griz-role">${escapeHtml(p.role || '')}</span></span><span class="former-griz-stat">${escapeHtml(p.last_game || '—')}<br><span class="former-griz-role">${escapeHtml(p.season || '')}</span></span><span class="former-griz-grade-cell">${escapeHtml(p.grade || '—')}</span></div>`).join('');
-  }
-  if (note) note.innerHTML = escapeHtml(fg.note || '');
-}
-
 function renderDepthChart(d) {
   const dc = d.depth_chart;
   if (!dc) return;
@@ -473,7 +455,6 @@ loadGrizData = async function() {
     const res = await fetch("data.json?ts=" + Date.now(), {cache:"no-store"});
     const d = await res.json();
     renderDepthChart(d);
-    renderFormerGriz(d);
   } catch(e) {}
 };
 loadGrizData();
