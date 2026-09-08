@@ -30,7 +30,7 @@ X_MIRRORS = [
 SKYLINE_VIDEO_PAGE = 'https://skylinesportsmt.com/skyline-sports-youtube/'
 SKYLINE_WP_API = 'https://skylinesportsmt.com/wp-json/wp/v2/pages?slug=skyline-sports-youtube&per_page=5'
 
-VIDEO_RE = re.compile(r'(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=|shorts/)|youtu\.be/)([A-Za-z0-9_-]{11})', re.I)
+VIDEO_RE = re.compile(r'(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=|shorts/)|youtu\.be/|i\.ytimg\.com/vi/)([A-Za-z0-9_-]{11})', re.I)
 DATE_RE = re.compile(r'\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}(?:,\s*\d{4})?\b', re.I)
 REL_RE = re.compile(r'\b(\d+)\s*(second|minute|min|hour|hr|day|week)s?\s+ago\b', re.I)
 
@@ -165,6 +165,10 @@ def parse_skyline_html(html, base_url):
         if not m:
             continue
         title = clean(a.get_text(' ', strip=True))
+        # Skyline links the thumbnail itself to i.ytimg.com. When that happens,
+        # turn the thumbnail URL into the actual YouTube watch URL so the card
+        # opens the video rather than the image.
+        video_url = f'https://www.youtube.com/watch?v={m.group(1)}' if 'i.ytimg.com' in href else href
         container = a
         for _ in range(7):
             if container.parent:
@@ -187,7 +191,7 @@ def parse_skyline_html(html, base_url):
         image = clean((img.get('src') or img.get('data-src')) if img else '')
         out.append({
             'title': title,
-            'url': href,
+            'url': video_url,
             'image': image or f'https://i.ytimg.com/vi/{m.group(1)}/hqdefault.jpg',
             'source': 'Skyline Sports YouTube',
             'type': 'YOUTUBE',
