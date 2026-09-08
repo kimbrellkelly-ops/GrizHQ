@@ -45,7 +45,7 @@ class ImageParser(HTMLParser):
     def handle_starttag(self,tag,attrs):
         if tag.lower()!='img': return
         d=dict(attrs); src=d.get('src') or d.get('data-src') or d.get('data-lazy-src') or ''
-        if src: self.images.append({'src':src,'alt':d.get('alt') or '','title':d.get('title') or ''})
+        if src: self.images.append({'src':src,'alt':d.get('alt',''),'title':d.get('title','')})
 
 class LinkParser(HTMLParser):
     def __init__(self):
@@ -64,7 +64,7 @@ def fetch(url):
 
 def clean_height(v): return re.sub(r'\s+','',v.replace("''", "'"))
 def clean_weight(v): return re.sub(r'\D+','',v or '')
-def norm(s): return re.sub(r'[^a-z0-9]+','',(s or '').lower())
+def norm(s): return re.sub(r'[^a-z0-9]+','',s.lower())
 
 def parse_roster(page):
     p=TableParser(); p.feed(page); players=[]
@@ -208,15 +208,43 @@ def main():
     if len(photos)<max(70,int(len(players)*0.65)):
         raise RuntimeError(f'Safety stop: only {len(photos)} verified player photos found for {len(players)} players')
     raw_coaches=parse_coaches(coaches_page); coaches=validate_coaches(raw_coaches)
-    # coach photos from official staff page
-    coach_imgs=ImageParser(); coach_imgs.feed(coaches_page); ims=coach_imgs.images; coach_photos={}
+    # Coach photos: the staff index does not reliably expose the photo alt text.
+    # Use each coach's official GoGriz profile link, then verify the image there.
+    linkp=LinkParser(); linkp.feed(coaches_page)
+    profile_links={}
+    for href,label in linkp.links:
+        n=norm(label)
+        for c in coaches:
+            if n==norm(c['name']) and '/sports/football/roster/coaches/' in href:
+                profile_links[c['name']]=absolute_url(href,COACHES_URL)
+    coach_photos={}
     for c in coaches:
+        profile=profile_links.get(c['name'])
+        if not profile: continue
+        try:
+            profile_page=fetch(profile)
+        except Exception as exc:
+            print(f'Coach photo warning: could not fetch {c["name"]} profile: {exc}')
+            continue
+        ip=ImageParser(); ip.feed(profile_page)
         key=norm(c['name'])
-        for im in ims:
-            alt=norm(im.get('alt') or ''); title=norm(im.get('title') or '')
+        # Prefer an exact name match in alt/title.
+        matches=[]
+        for im in ip.images:
+            alt=norm(im['alt']); title=norm(im['title'])
             if key and (key==alt or key==title or key in alt or key in title):
-                u=absolute_url(im['src'],COACHES_URL)
-                if valid_image_url(u): coach_photos[c['name']]=u; break
+                u=absolute_url(im['src'],profile)
+                if valid_image_url(u): matches.append(u)
+        if matches:
+            coach_photos[c['name']]=matches[0]
+            continue
+        # Conservative fallback: only accept a clearly player/staff-hosted image URL
+        # whose filename contains the coach surname. Never guess a URL from scratch.
+        surname=norm(c['name'].split()[-1])
+        for im in ip.images:
+            u=absolute_url(im['src'],profile)
+            if valid_image_url(u) and surname and surname in norm(u):
+                coach_photos[c['name']]=u; break
     if len(coach_photos)<5: print(f'Warning: only {len(coach_photos)} coach photos verified; continuing with placeholders')
     print(f'Roster: {len(players)} players; verified photos: {len(photos)}; coaches: {len(coaches)}; coach photos: {len(coach_photos)}')
     current=INDEX.read_text(encoding='utf-8'); updated=update_index(current,players,photos,coaches,coach_photos)
