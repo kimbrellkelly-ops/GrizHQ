@@ -153,53 +153,82 @@ def x_from_24vids(label, handle, page_url):
 
 
 def parse_skyline_html(html, base_url):
+    """Parse Skyline's video cards directly from thumbnail URLs.
+
+    Skyline's public page exposes the YouTube thumbnail as the clickable link
+    and renders the title/date as neighboring text rather than putting the
+    YouTube URL in the anchor. Parse the card around each i.ytimg thumbnail so
+    the updater is independent of that presentation detail.
+    """
     soup = BeautifulSoup(html, 'html.parser')
     out = []
-    for a in soup.find_all('a', href=True):
-        href = urljoin(base_url, a.get('href', ''))
-        m = VIDEO_RE.search(href)
-        if not m:
-            # Some embeds expose the video id in data attributes instead of href.
-            raw = ' '.join(str(v) for v in a.attrs.values())
-            m = VIDEO_RE.search(raw)
+
+    def duration_remainder(text):
+        return re.sub(r'\b\d{1,2}:\d{2}(?::\d{2})?\b', ' ', text)
+
+    def extract_title(container, block):
+        # First try visible text nodes immediately associated with the card.
+        candidates = []
+        for node in container.find_all(string=True):
+            t = clean(node)
+            if not t or re.fullmatch(r'\d{1,2}:\d{2}(?::\d{2})?', t):
+                continue
+            if DATE_RE.fullmatch(t) or re.fullmatch(r'\d{1,2}\s*(?:seconds?|minutes?|hours?|days?)\s+ago', t, re.I):
+                continue
+            candidates.append(t)
+        # Prefer a substantial title-like node containing Griz/Montana/Big Sky.
+        for t in candidates:
+            if len(t) >= 12 and re.search(r'\b(Montana|Griz|Grizzlies|Big Sky|FCS|Utah Tech|Drake|Southern Utah)\b', t, re.I):
+                return t[:500]
+        for t in candidates:
+            if len(t) >= 12:
+                return t[:500]
+        # Last resort: clean the combined card text.
+        cleaned = duration_remainder(block)
+        cleaned = DATE_RE.sub(' ', cleaned)
+        cleaned = REL_RE.sub(' ', cleaned)
+        return clean(cleaned)[:500]
+
+    # Directly inspect every Skyline YouTube thumbnail. This is the reliable
+    # identifier exposed by the current page (e.g. i.ytimg.com/vi/<id>/...).
+    for img in soup.find_all('img'):
+        src = clean(img.get('src') or img.get('data-src') or img.get('data-lazy-src'))
+        m = VIDEO_RE.search(src)
         if not m:
             continue
-        title = clean(a.get_text(' ', strip=True))
-        # Skyline links the thumbnail itself to i.ytimg.com. When that happens,
-        # turn the thumbnail URL into the actual YouTube watch URL so the card
-        # opens the video rather than the image.
-        video_url = f'https://www.youtube.com/watch?v={m.group(1)}' if 'i.ytimg.com' in href else href
-        container = a
-        for _ in range(7):
-            if container.parent:
-                container = container.parent
-        block = clean(container.get_text(' ', strip=True))
-        dt = parse_dt(block)
-        if not dt:
-            match = DATE_RE.search(block)
-            dt = parse_dt(match.group(0)) if match else None
+        video_id = m.group(1)
+        container = img
+        best = None
+        for _ in range(8):
+            if not container.parent:
+                break
+            container = container.parent
+            block = clean(container.get_text(' ', strip=True))
+            dt = parse_dt(block)
+            if dt and 20 <= len(block) <= 1500:
+                best = (container, block, dt)
+                # Stop once the container looks like a single video card.
+                if re.search(r'\b\d{1,2}:\d{2}(?::\d{2})?\b', block) and len(block) <= 700:
+                    break
+        if not best:
+            continue
+        container, block, dt = best
+        title = extract_title(container, block)
         if not title:
-            # If the anchor itself has no text, use nearby heading/title text.
-            title = clean(container.find(['h1','h2','h3','h4','h5','h6']).get_text(' ', strip=True)) if container.find(['h1','h2','h3','h4','h5','h6']) else ''
-        if not title or not dt:
             continue
-        # Keep Montana/Griz/Big Sky football content; this is a social/video feed,
-        # not the full Skyline channel dump.
         if not re.search(r'\b(Montana|Griz|Grizzlies|Big Sky|FCS|Utah Tech|Drake|Southern Utah)\b', title, re.I):
             continue
-        img = container.find('img')
-        image = clean((img.get('src') or img.get('data-src')) if img else '')
         out.append({
             'title': title,
-            'url': video_url,
-            'image': image or f'https://i.ytimg.com/vi/{m.group(1)}/hqdefault.jpg',
+            'url': f'https://www.youtube.com/watch?v={video_id}',
+            'image': src,
             'source': 'Skyline Sports YouTube',
             'type': 'YOUTUBE',
             'video': True,
             'description': 'Verified Montana/Big Sky video from Skyline Sports.',
             'date': fmt_date(dt),
             'platform': 'youtube',
-            'youtube_id': m.group(1),
+            'youtube_id': video_id,
             'published_at': dt.isoformat(),
         })
     return dedupe(out)
