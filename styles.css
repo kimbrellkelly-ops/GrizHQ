@@ -3598,12 +3598,100 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 @media(max-width:1050px){.schedule-row.game-card-row,.schedule-row.game-card-row.head{grid-template-columns:75px minmax(180px,1.6fr) 110px}}
 @media(max-width:760px){.schedule-row.game-card-row{grid-template-columns:70px 1fr 90px}.schedule-row.game-card-row.head{display:none}}
 
-/* SURGICAL FIX: Big Sky FCS scoreboard date/category labels on separate lines. */
-.fcs-games.bigsky-score-games .fcs-game.bigsky-row .fcs-time b,
-.fcs-games.bigsky-score-games .fcs-game.bigsky-row .fcs-time small {
-  display: block !important;
+
+/* ===== SURGICAL FIX: FCS BIG SKY SCOREBOARD ONLY =====
+   Keep the master layout everywhere else. The scoreboard markup has
+   four visible columns: date, matchup, TV, and market lines. */
+@media (min-width: 561px) {
+  .fcs-games.bigsky-score-games .fcs-game.bigsky-row {
+    display: grid !important;
+    grid-template-columns: 120px minmax(0, 1fr) 150px 230px !important;
+    gap: 18px !important;
+    align-items: stretch !important;
+    box-sizing: border-box !important;
+  }
+
+  .fcs-games.bigsky-score-games .fcs-game.bigsky-row .fcs-time {
+    grid-column: 1 !important;
+    min-width: 0 !important;
+    align-self: center !important;
+    text-align: left !important;
+  }
+
+  .fcs-games.bigsky-score-games .fcs-game.bigsky-row .fcs-time b,
+  .fcs-games.bigsky-score-games .fcs-game.bigsky-row .fcs-time small {
+    display: block !important;
+  }
+
+  .fcs-games.bigsky-score-games .fcs-game.bigsky-row .fcs-time b {
+    white-space: nowrap !important;
+    font-size: 12px !important;
+    line-height: 1.1 !important;
+  }
+
+  .fcs-games.bigsky-score-games .fcs-game.bigsky-row .fcs-time small {
+    margin-top: 4px !important;
+    white-space: normal !important;
+    font-size: 9px !important;
+    line-height: 1.15 !important;
+  }
+
+  .fcs-games.bigsky-score-games .fcs-game.bigsky-row .fcs-matchup {
+    grid-column: 2 !important;
+    min-width: 0 !important;
+  }
+
+  .fcs-games.bigsky-score-games .fcs-game.bigsky-row .fcs-score {
+    display: none !important;
+  }
+
+  .fcs-games.bigsky-score-games .fcs-game.bigsky-row .fcs-tv {
+    grid-column: 3 !important;
+    display: flex !important;
+    min-width: 0 !important;
+    align-items: center !important;
+    padding-left: 14px !important;
+    border-left: 1px solid #dedfe1 !important;
+    font-size: 10px !important;
+    line-height: 1.25 !important;
+    font-weight: 800 !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .fcs-games.bigsky-score-games .fcs-game.bigsky-row .bigsky-betting {
+    grid-column: 4 !important;
+    min-width: 0 !important;
+    align-self: center !important;
+    padding-left: 14px !important;
+    border-left: 1px solid #dedfe1 !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    overflow: hidden !important;
+  }
+
+  .fcs-games.bigsky-score-games .fcs-game.bigsky-row .bigsky-betting b {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .fcs-games.bigsky-score-games .fcs-game.bigsky-row .bigsky-betting small {
+    display: block !important;
+    font-size: 8px !important;
+    line-height: 1.2 !important;
+    white-space: normal !important;
+    letter-spacing: .04em !important;
+  }
 }
 
-.fcs-games.bigsky-score-games .fcs-game.bigsky-row .fcs-time small {
-  margin-top: 3px !important;
+@media (min-width: 561px) and (max-width: 1000px) {
+  .fcs-games.bigsky-score-games .fcs-game.bigsky-row {
+    grid-template-columns: 95px minmax(0, 1fr) 125px 185px !important;
+    gap: 12px !important;
+  }
 }
