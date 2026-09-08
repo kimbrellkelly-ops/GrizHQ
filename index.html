@@ -345,50 +345,60 @@
   <div class="roster-hq-copy">
     <div class="eyebrow">ROSTER HQ</div>
     <h3>Meet the 2026 Griz</h3>
-    <p>The roster view now puts the depth chart in context: who is here, where the experience sits, and which players are shaping the current two-deep.</p>
+    <p>One place to see the roster, current two-deep, position groups, experience and new arrivals. Use the explorer below instead of jumping around the page.</p>
   </div>
   <div class="roster-hq-stats">
-    <div class="roster-hq-stat"><b>107</b><span>LISTED PLAYERS</span><small>2026 GoGriz roster</small></div>
+    <div class="roster-hq-stat"><b>107</b><span>PLAYERS</span><small>Official 2026 roster</small></div>
     <div class="roster-hq-stat"><b>3</b><span>UNITS</span><small>Offense · Defense · ST</small></div>
-    <div class="roster-hq-stat"><b>11</b><span>POSITION GROUPS</span><small>Across the current roster</small></div>
-    <div class="roster-hq-stat accent"><b>2026</b><span>ROSTER YEAR</span><small>Current official roster</small></div>
+    <div class="roster-hq-stat"><b>11</b><span>GROUPS</span><small>QB through specialists</small></div>
+    <div class="roster-hq-stat accent"><b>2-DEEP</b><span>NOW</span><small>Latest published depth chart</small></div>
   </div>
 </div>
-<div class="roster-pulse">
-  <a class="roster-pulse-card" href="#depth-offense"><span class="pulse-kicker">OFFENSE</span><strong>QB · RB · WR · TE · OL</strong><small>Explore the current offensive two-deep ↓</small></a>
-  <a class="roster-pulse-card" href="#depth-defense"><span class="pulse-kicker">DEFENSE</span><strong>DL · LB · CB · S</strong><small>See the defensive rotation ↓</small></a>
-  <a class="roster-pulse-card" href="#depth-special"><span class="pulse-kicker">SPECIAL TEAMS</span><strong>K · P · LS · RETURNERS</strong><small>See the specialists ↓</small></a>
-</div>
+
 <div class="roster-intel-grid">
-  <article class="roster-intel-card featured">
-    <span class="roster-intel-kicker">QB1</span>
-    <h4>Keali'i Ah Yat</h4>
-    <div class="roster-intel-meta">R-Jr. · QB · 6'1" · 200 lbs</div>
-    <p>Montana's current first-team quarterback and one of the most important pieces on the roster.</p>
-    <a href="https://gogriz.com/sports/football/roster/keali-i-ah-yat/" target="_blank" rel="noopener">OFFICIAL BIO ↗</a>
-  </article>
-  <article class="roster-intel-card">
-    <span class="roster-intel-kicker">RETURNING STAR</span>
-    <h4>Eli Gillman</h4>
-    <div class="roster-intel-meta">R-Sr. · RB · 6'0" · 213 lbs</div>
-    <p>The veteran back sits atop the current depth chart and gives the offense a proven lead runner.</p>
-    <a href="https://gogriz.com/sports/football/roster/eli-gillman/" target="_blank" rel="noopener">OFFICIAL BIO ↗</a>
-  </article>
-  <article class="roster-intel-card">
-    <span class="roster-intel-kicker">VETERAN CORE</span>
-    <h4>Kade Boyd</h4>
-    <div class="roster-intel-meta">R-Jr. · S · 6'0" · 197 lbs</div>
-    <p>One of the returning leaders in the back end and a first-team safety in the current two-deep.</p>
-    <a href="https://gogriz.com/sports/football/roster/kade-boyd/" target="_blank" rel="noopener">OFFICIAL BIO ↗</a>
-  </article>
-  <article class="roster-intel-card">
-    <span class="roster-intel-kicker">TRANSFER ARRIVAL</span>
-    <h4>Weston Adams</h4>
-    <div class="roster-intel-meta">R-Sr. · WR · 5'11" · 192 lbs</div>
-    <p>The Illinois transfer adds veteran experience to a receiver room with multiple current contributors.</p>
-    <a href="https://gogriz.com/sports/football/roster/weston-adams/" target="_blank" rel="noopener">OFFICIAL BIO ↗</a>
-  </article>
+  <div class="roster-intel-card"><span class="intel-kicker">QB1</span><strong>Keali'i Ah Yat</strong><small>R-Jr. · QB · 6'1" · 200</small><p>The offense starts with a veteran quarterback who has already been through the Griz spotlight.</p></div>
+  <div class="roster-intel-card"><span class="intel-kicker">RB1</span><strong>Eli Gillman</strong><small>R-Sr. · RB · 6'0" · 213</small><p>Montana's lead back is one of the clearest experience anchors on the roster.</p></div>
+  <div class="roster-intel-card"><span class="intel-kicker">WR1</span><strong>Landon Ransom-Goelz</strong><small>R-Jr. · WR · 6'1" · 185</small><p>A major outside target and one of the names shaping the current offensive identity.</p></div>
+  <div class="roster-intel-card"><span class="intel-kicker">DEFENSE</span><strong>Kade Boyd</strong><small>R-Jr. · S · 6'0" · 197</small><p>One of the leaders in the back end of a defense with significant returning experience.</p></div>
 </div>
+
+<div class="roster-explorer" id="roster-explorer">
+  <div class="roster-explorer-head">
+    <div><div class="eyebrow">ROSTER EXPLORER</div><h3>Find any Griz in seconds</h3><p>Filter by unit, position or class. Click a player for the full roster card.</p></div>
+    <div class="roster-count" id="roster-count">107 PLAYERS</div>
+  </div>
+  <div class="roster-filters" role="tablist" aria-label="Roster filters">
+    <button class="roster-filter active" data-filter="all">ALL</button>
+    <button class="roster-filter" data-filter="offense">OFFENSE</button>
+    <button class="roster-filter" data-filter="defense">DEFENSE</button>
+    <button class="roster-filter" data-filter="special">SPECIAL TEAMS</button>
+    <button class="roster-filter" data-filter="qb">QB</button>
+    <button class="roster-filter" data-filter="rb">RB</button>
+    <button class="roster-filter" data-filter="wr">WR</button>
+    <button class="roster-filter" data-filter="te">TE</button>
+    <button class="roster-filter" data-filter="ol">OL</button>
+    <button class="roster-filter" data-filter="dl">DL</button>
+    <button class="roster-filter" data-filter="lb">LB</button>
+    <button class="roster-filter" data-filter="db">DB</button>
+    <button class="roster-filter" data-filter="new">NEW</button>
+  </div>
+  <div class="roster-search-row"><input id="roster-search" type="search" placeholder="Search by player, position, school or hometown…" aria-label="Search roster"><span id="roster-filter-note">Showing all 107 players</span></div>
+  <div class="roster-grid" id="roster-grid"></div>
+</div>
+
+<div class="roster-player-modal" id="roster-player-modal" aria-hidden="true">
+  <div class="roster-modal-backdrop" data-close-roster></div>
+  <div class="roster-modal-card" role="dialog" aria-modal="true" aria-labelledby="roster-modal-name">
+    <button class="roster-modal-close" data-close-roster aria-label="Close player card">×</button>
+    <div class="roster-modal-number" id="roster-modal-number"></div>
+    <div class="roster-modal-kicker" id="roster-modal-kicker"></div>
+    <h3 id="roster-modal-name"></h3>
+    <div class="roster-modal-meta" id="roster-modal-meta"></div>
+    <div class="roster-modal-body" id="roster-modal-body"></div>
+    <a id="roster-modal-official" class="button outline-maroon" href="https://gogriz.com/sports/football/roster" target="_blank" rel="noopener">OFFICIAL ROSTER ↗</a>
+  </div>
+</div>
+
 <div class="depth-switchbar">
   <div><span class="eyebrow">THE CURRENT TWO-DEEP</span><strong>Depth Chart</strong></div>
   <span>Use the unit cards below to jump around the roster.</span>
@@ -815,6 +825,128 @@
   };
   const bind=()=>document.querySelectorAll('[data-news-filter]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-news-filter]').forEach(x=>x.classList.remove('is-active'));btn.classList.add('is-active');render(btn.dataset.newsFilter);}));
   fetch('news.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(data=>{stories=Array.isArray(data.stories)?data.stories:[];if(!stories.length)throw new Error('No stories');renderHome();render('ALL');bind();const u=document.getElementById('news-updated-time');if(u)u.textContent=data.updated?`Updated ${new Date(data.updated).toLocaleString([], {month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}`:'Updated automatically';}).catch(()=>{const u=document.getElementById('news-updated-time');if(u)u.textContent='Using latest available headlines';});
+})();
+</script>
+<script>
+(function(){
+const raw=`0|Monte Gillman|R-So|WR|5'8|162|Dassel, Minn.|Dassel-Cokato HS
+0|Gabe Stroud|R-So|CB|5'11|186|Whitehouse, Texas|Whitehouse HS / North Texas
+2|Hunter Haines|R-So|S|6'2|205|West Linn, Ore.|West Linn HS / San Diego St.
+2|Landon Ransom-Goelz|R-Jr|WR|6'1|185|Trophy Club, Texas|Byron Nelson HS / Rice
+3|Brooks Davis|R-So|WR|6'0|174|Brentwood, Calif.|Heritage HS
+3|Jeilani Davis|R-So|CB|6'0|204|Inglewood, Calif.|Mater Dei HS / Utah
+4|Dane Parker|R-So|S|6'1|175|Puyallup, Wash.|Puyallup HS / Air Force Prep
+5|Ian Finch|R-Sr|WR|6'3|209|Missoula, Mont.|Hellgate HS
+6|Chris Johnson|R-So|CB|6'1|200|Fort Worth, Texas|Aledo HS / Arizona St.
+6|Legend Lyons|R-Fr|WR|6'2|180|Covina, Calif.|Charter Oak HS / Minnesota
+7|Kash Goicoechea|R-So|S|6'1|197|Kalispell, Mont.|Glacier HS
+8|Keali'i Ah Yat|R-Jr|QB|6'1|200|Kaneohe, Hawaii|Kamehameha HS
+8|Adama Fall|Gr.S|S|6'3|210|Simi Valley, Calif.|Simi Valley HS / Arizona St.
+9|Jordan Dever|R-Jr|WR|6'0|174|Spokane, Wash.|Shadle Park HS
+10|Eli Gillman|R-Sr|RB|6'0|213|Dassel, Minn.|Dassel-Cokato HS
+11|Cameron Gurnsey|R-Jr|WR|6'1|197|Butte, Mont.|Butte HS
+12|Elijah Brady|R-Jr|CB|6'1|172|Seattle, Wash.|West Seattle HS
+12|Gage Sliter|R-Jr|QB|6'1|193|Kalispell, Mont.|Glacier HS
+13|Brock Beaner|R-Fr|S|6'0|193|Anacortes, Wash.|Anacortes HS
+13|Lekeldrick Bridges|R-So|WR|5'11|170|Cedar Hill, Texas|Cedar Hill
+14|DeAnte Gentry|R-Fr|CB|5'11|169|Fort Worth, Texas|Lamar HS
+14|Korbin Hendrix|R-Jr|WR|6'3|192|McKinney, Texas|McKinney North HS / Arizona St.
+16|Braeden Orlandi|R-Jr|S|6'1|205|Valley Springs, Calif.|Calaveras HS / Carroll
+17|Kade Boyd|R-Jr|S|6'0|197|Billings, Mont.|Central HS
+17|Luke Flowers|R-So|QB|6'1|188|Rigby, Idaho|Rigby HS
+18|Devin Dunn|R-Sr|DB|5'10|189|Chandler, Ariz.|Chandler HS / Arizona
+18|Cody Schweikert|R-So|ATH|6'3|212|Columbia Falls, Mont.|Columbia Falls HS
+19|Drew Price|R-Fr|QB|5'10|171|Jacksonville, Fla.|Ponte Vedra HS
+20|Sage Salopek|R-Fr|CB|6'0|168|Seattle, Wash.|O'dea HS
+21|Ashton Paine|R-Jr|DB|6'1|195|Olympia, Wash.|Tumwater HS / South Dakota
+23|Dylan Paine|Gr|RB|5'9|202|Olympia, Wash.|Tumwater HS / Washington St.
+24|Justin Eklund|R-Sr|LB|6'2|235|Rocklin, Calif.|Folsom HS / Bowling Green
+25|Brady Beaner|So|S|6'0|187|Anacortes, Wash.|Anacortes HS
+26|Chase Cook|R-Fr|RB|5'11|198|Red Lodge, Mont.|Red Lodge HS
+28|Hashim Jones|R-Fr|RB|6'0|208|Hartford, Conn.|Capital Prep
+29|Tanner Huff|Gr|S|6'0|210|Butte, Mont.|Butte HS
+30|Kade Cutler|R-Sr|S|6'0|200|Phillipsburg, Mont.|Flint Creek HS / Montana St.
+31|Tanner Williams|R-So|LB|6'1|225|Orange, Calif.|Mater Dei HS / San Diego St.
+32|Peyton Wing|Sr|LB|6'0|229|Sumner, Wash.|Sumner HS / Portland St.
+33|Taylor Jones|R-Fr|LB|6'1|205|Missoula, Mont.|Loyola Sacred Heart HS
+36|Garrett Speer|R-So|DB|6'0|191|Sherwood, Ore.|Jesuit HS
+37|Clay Oven|R-Jr|LB|6'2|216|Billings, Mont.|Central HS
+39|Fynn Ridgeway|R-Jr|RB|6'1|204|Whitefish, Mont.|Whitefish HS / Minn. St. Moorhead
+40|Colton Lentz|R-Fr|LB|6'3|213|Nooksack, Wash.|Nooksack Valley HS
+41|Ryder Barinowski|Jr|K|6'0|210|Whitefish, Mont.|Whitefish HS / Montana Tech
+42|Giovanni Pifferini|R-Jr|DL|6'4|230|Placerville, Calif.|El Dorado HS / Fresno City
+44|Titus Rohrer|R-Sr|TE|6'7|240|Bryan, Ohio|Bryan HS / Tennessee
+45|Wyatt Redding|R-Sr|KP|6'1|196|Sumner, Wash.|Sumner HS / Central Washington
+46|Jo Silver|R-Sr|KP|6'0|213|Fremont, Ohio|Fremont-Ross HS / Kent St.
+47|Jace Eastlick|R-So|LS|6'3|225|Coeur d'Alene, Idaho|Coeur d'Alene HS / Fort Lewis
+48|Styles Goodman|So|LB|6'2|234|Austin, Texas|Weiss HS / Air Force Prep
+49|Isaac Keim|R-So|DL|6'4|265|Kalispell, Mont.|Glacier HS
+50|Sam Merriman|R-Fr|LB|6'0|225|Seattle, Wash.|Bishop Blanchet HS
+51|Spencer Tripp|R-Fr|DL|5'11|264|Missoula, Mont.|Big Sky HS
+55|Austin Buehler|R-Jr|OL|6'5|285|Helena, Mont.|Capital HS
+56|Naiteitei Mose|R-Sr|LB|6'0|230|Euless, Texas|Trinity HS / Georgetown HS
+57|Jake Mason|R-Jr|DL|6'2|250|Ferndale, Wash.|Ferndale HS / Washington
+58|Solomon Tuliaupupu|Gr|LB|6'3|242|Pomona, Calif.|Mater Dei HS / USC
+59|Nui Tovey|So|DE|6'3|240|Lake Oswego, Ore.|Lakeridge HS / Utah Tech
+61|Lincoln Hoefer|R-Fr|OL|6'6|279|Everson, Wash.|Meridian HS
+63|Kaikoa Kanakaole|R-Fr|OL|6'5|335|Kapa'a, Hawaii|Saint Louis HS
+64|Matt Hilden|R-So|OL|6'6|309|Santa Rosa, Calif.|Cardinal Newman HS
+65|Dylan Jemtegaard|Gr|OL|6'4|281|Yelm, Wash.|Yelm HS / Cal
+66|Ezra Meyer|R-Fr|OL|6'5|290|Missoula, Mont.|Big Sky HS
+68|Torin Jeske|R-So|OL|6'6|271|Bozeman, Mont.|Bozeman HS
+71|Quinlan Hyatt|R-Fr|OL|6'7|285|Spokane, Wash.|West Valley HS
+72|Jack D'Ambra|Gr|OL|6'3|290|Wildomar, Calif.|Vista Murrieta HS / San Diego
+73|Trevor Steinbach|R-So|OL|6'5|300|Sammamish, Wash.|Skyline HS
+75|Dyllan Drummond|R-So|OL|6'4|305|Tyler, Texas|Chapel Hill HS / UNLV
+76|Campbell Vandiver|R-Jr|OT|6'8|280|Nashville, Tenn.|Lipscomb Academy / South Carolina
+77|Carter Bowen|Sr|OL|6'7|318|Dawson, Minn.|Dawson-Boyd HS / Butler CC
+78|Lucas Freitas|R-Jr|OL|6'6|318|Snoqualmie, Wash.|Mount Si HS
+80|Malaki Davis|Fr|TE|6'5|230|Tacoma, Wash.|Roosevelt HS
+81|Mariano Birdno|R-So|TE|6'5|260|Flagstaff, Ariz.|Flagstaff HS / St. Thomas
+84|Grady Walker|R-So|TE|6'4|224|Missoula, Mont.|Sentinel HS
+85|Bridger Smith|R-Fr|WR|6'1|170|Kalispell, Mont.|Glacier HS
+86|Weston Adams|R-Sr|WR|5'11|192|Shell, Wyo.|IMG Academy / Illinois
+88|Reese Brooks|R-Fr|TE|6'4|240|Round Rock, Texas|Cedar Ridge HS / Cal Poly
+89|Danny Sirmon|R-So|TE|6'6|255|Missoula, Mont.|Sentinel HS
+90|Tyler King|R-Jr|DL|6'5|250|Happy Valley, Ore.|Clackamas HS / Central Washington
+91|Cooper Buffington|R-Fr|DL|6'4|252|Winfield, Iowa|Winfield-Mt. Union
+92|Zekiel Seumalo|Sr|DL|6'0|265|Kent, Wash.|Kentwood HS / Allan Hancock
+93|Cole Muilenburg|R-So|DL|6'5|246|Gig Harbor, Wash.|Peninsula HS / Valparaiso
+94|Cole Harpole|R-Fr|DL|6'3|221|Gunter, Texas|Gunter HS
+96|Logan Knaevelsrud|R-Fr|DL|6'4|235|Snoqualmie, Wash.|Mount Si
+97|Hayden Schwartz|R-Sr|DL|6'4|248|Jacksonville, Fla.|The Bolles School / Minnesota
+99|Braydon Bailey|R-Sr|DT|6'2|280|Kona, Hawaii|Kahuku HS / Utah St.
+TBD|Cooper Cyphers|Fr|DL|6'2|230|Aledo, Texas|Aledo HS
+TBD|Wesley Ehret|Fr|WR|6'2|180|Belgrade, Mont.|Belgrade HS
+TBD|Merek Fisher|Fr|TE|6'6|230|Billings, Mont.|Skyview HS
+TBD|Dawson Hammond|Fr|ATH|6'0|170|Malta, Mont.|Malta HS
+TBD|Brady Jay|Fr|QB|6'1|180|Moses Lake, Wash.|Moses Lake HS
+TBD|Kougar Kappel|Fr|S|6'0|180|Red Lodge, Mont.|Red Lodge HS
+TBD|Dane Kellner|Fr|S|5'11|170|Honolulu, Hawaii|Punahou HS
+TBD|Owen Liechti|Fr|OL|6'7|285|Ankeny, Iowa|Ankeny HS
+TBD|Parker Link|Fr|ATH|5'10|170|Missoula, Mont.|Hellgate HS
+TBD|Cooper Neer|Fr|LB|6'3|205|Kennewick, Wash.|Kennewick HS
+TBD|Jayden Nicholas|Fr|CB|6'0|170|Suisun City, Calif.|De La Salle HS
+TBD|Mac Olsen|Fr|DL|6'4|245|Manti, Utah|Manti HS
+TBD|Derek Opitz|Fr|DT|6'3|250|Helena, Mont.|Capital HS
+TBD|Evan Pyron|Fr|DE|6'3|225|Missoula, Mont.|Hellgate HS
+TBD|Elijah Rincon|Fr|DE|6'3|230|Hacienda Heights, Calif.|Downey HS
+TBD|Courtney Rogers|Fr|RB|6'2|200|Blytheville, Ark.|Blytheville HS
+TBD|Lincoln Senter|Fr|ATH|6'5|250|Great Falls, Mont.|C.M. Russell HS
+TBD|William Snell|Fr|WR|6'4|195|Billings, Mont.|Central HS
+TBD|Rodney Weatherspoon|Fr|CB|6'0|175|Forth Worth, Texas|Byron Nelson HS
+TBD|Josiah West|Fr|OL|6'6|260|Prosser, Wash.|Prosser HS`;
+const roster=raw.split('\n').map(x=>{const [n,name,year,pos,ht,wt,home,school]=x.split('|');return{n,name,year,pos,ht,wt,home,school:school||home};});
+const offense=['QB','RB','WR','TE','OL','OT']; const defense=['DL','DE','DT','LB','CB','S','DB','ATH']; const special=['K','KP','LS'];
+const twoDeep=new Set(['Keali\'i Ah Yat','Luke Flowers','Eli Gillman','Dylan Paine','Landon Ransom-Goelz','Weston Adams','Brooks Davis','Jordan Dever','Lekeldrick Bridges','Korbin Hendrix','Titus Rohrer','Mariano Birdno','Reese Brooks','Torin Jeske','Lucas Freitas','Jack D\'Ambra','Matt Hilden','Dyllan Drummond','Austin Buehler','Carter Bowen','Tyler King','Manase Tupou','Cooper Buffington','Zekiel Seumalo','Jake Mason','Hayden Schwartz','Solomon Tuliaupupu','Justin Eklund','Peyton Wing','Nai Mose','Clay Oven','Tanner Williams','Chris Johnson II','Chris Johnson','Gabe Stroud','Brady Beaner','Sage Salopek','Kade Boyd','Ashton Paine','Kade Cutler','Brock Beaner','Tanner Huff','Jo Silver','Ryder Barinowski','Jace Eastlick','Brooks Davis','Monte Gillman','Everett O\'Donnell']);
+function unit(p){if(special.includes(p))return'special';if(offense.includes(p))return'offense';return'defense'}
+function isNew(p){return p.year==='Fr'||p.school.includes('/')}
+function card(p){const badges=[]; if(twoDeep.has(p.name))badges.push('<span class="roster-badge depth">2-DEEP</span>'); if(isNew(p))badges.push('<span class="roster-badge new">NEW</span>'); else badges.push('<span class="roster-badge returner">ROSTER</span>'); return `<button class="roster-player" data-name="${p.name.replace(/"/g,'&quot;')}"><span class="roster-jersey">${p.n}</span><span class="roster-player-main"><strong>${p.name}</strong><small>${p.year} · ${p.pos} · ${p.ht} · ${p.wt}</small><em>${p.home}</em></span><span class="roster-badges">${badges.join('')}</span></button>`}
+const grid=document.getElementById('roster-grid'), search=document.getElementById('roster-search'), count=document.getElementById('roster-count'), note=document.getElementById('roster-filter-note'); let active='all';
+function render(){const q=search.value.trim().toLowerCase();const arr=roster.filter(p=>{const text=[p.name,p.year,p.pos,p.home,p.school].join(' ').toLowerCase();const matchQ=!q||text.includes(q);let match=true;if(active==='offense')match=offense.includes(p.pos);else if(active==='defense')match=defense.includes(p.pos);else if(active==='special')match=special.includes(p.pos);else if(['qb','rb','wr','te','ol','dl','lb','db'].includes(active))match=active==='db'?['CB','S','DB'].includes(p.pos):(active==='ol'?['OL','OT'].includes(p.pos):active.toUpperCase()===p.pos|| (active==='dl'&&['DL','DE','DT'].includes(p.pos)));else if(active==='new')match=isNew(p);return match&&matchQ});grid.innerHTML=arr.map(card).join('');count.textContent=`${arr.length} PLAYER${arr.length===1?'':'S'}`;note.textContent=q||active!=='all'?`Showing ${arr.length} matching players`:`Showing all ${roster.length} players`;grid.querySelectorAll('.roster-player').forEach(b=>b.addEventListener('click',()=>openPlayer(b.dataset.name)));}
+function openPlayer(name){const p=roster.find(x=>x.name===name);if(!p)return;document.getElementById('roster-modal-number').textContent=`#${p.n}`;document.getElementById('roster-modal-kicker').textContent=`${unit(p.pos).toUpperCase()} · ${p.pos}`;document.getElementById('roster-modal-name').textContent=p.name;document.getElementById('roster-modal-meta').textContent=`${p.year} · ${p.ht} · ${p.wt}`;document.getElementById('roster-modal-body').innerHTML=`<div><b>Hometown</b><span>${p.home}</span></div><div><b>Previous school</b><span>${p.school}</span></div><div><b>Roster status</b><span>${isNew(p)?'New to the 2026 roster / freshman entry':'Returning roster player'}${twoDeep.has(p.name)?' · Listed in current two-deep':''}</span></div>`;const m=document.getElementById('roster-player-modal');m.classList.add('open');m.setAttribute('aria-hidden','false');document.body.classList.add('roster-modal-open')}
+function close(){const m=document.getElementById('roster-player-modal');m.classList.remove('open');m.setAttribute('aria-hidden','true');document.body.classList.remove('roster-modal-open')}
+document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.roster-filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');active=b.dataset.filter;render()}));search.addEventListener('input',render);document.querySelectorAll('[data-close-roster]').forEach(x=>x.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});render();
 })();
 </script>
 </body>
