@@ -6,7 +6,6 @@ Updates ONLY the dedicated Roster HQ data/coach markers in index.html.
 - Player photos come from the actual official roster page image URLs; no filename guessing.
 - Coaching staff comes from the official 2026 football staff page.
 - If parsing/validation fails, index.html is left untouched.
-
 This updater intentionally does NOT touch the scoreboard, news, social, stats,
 schedule, transfer tracker, depth chart, or honors/watchlist content.
 """
@@ -104,13 +103,11 @@ def verified_photos(roster_page, players):
         u=absolute_url(x['src'],ROSTER_PAGE_URL)
         if valid_image_url(u): imgs.append({'url':u,'alt':x['alt'],'title':x['title']})
     out={}
-    # First: exact alt/title matches.
     for p in players:
         key=norm(p['name'])
         for im in imgs:
             if key and (norm(im['alt'])==key or norm(im['title'])==key or key in norm(im['alt']) or key in norm(im['title'])):
                 out[p['name']]=im['url']; break
-    # Second: use the player's visible name as an anchor and choose a nearby official image.
     for p in players:
         if p['name'] in out: continue
         idx=roster_page.lower().find(p['name'].lower())
@@ -135,9 +132,7 @@ def parse_coaches(page):
         if len(row)<2: continue
         name,title=row[0].strip(),row[1].strip()
         key=wanted.get(norm(name))
-        if key and title:
-            rows.append({'name':key,'title':title})
-    # Preserve the official staff-page order and exclude support/admin staff.
+        if key and title: rows.append({'name':key,'title':title})
     by_name={x['name']:x for x in rows}
     return [by_name[n] for n in CORE_COACHES if n in by_name]
 
@@ -149,6 +144,7 @@ def validate_coaches(coaches):
     return coaches
 
 def html_escape(s): return html.escape(str(s),quote=True)
+
 def roster_raw(players):
     return '\n'.join('|'.join(str(p[k]).replace('|','/') for k in ('n','name','year','pos','ht','wt','home','school')) for p in players)
 
@@ -161,27 +157,32 @@ def coach_html(coaches, coach_photos):
     return '\n'.join(cards)
 
 def update_index(text,players,photos,coaches,coach_photos):
-    # roster raw block
-    a=text.find('const raw=`');
+    a=text.find('const raw=`')
     if a<0: raise RuntimeError('Safety stop: roster raw marker missing')
     s=a+len('const raw=`'); e=text.find('`;\nconst roster=',s)
     if e<0: raise RuntimeError('Safety stop: roster raw end marker missing')
     text=text[:s]+roster_raw(players)+text[e:]
-    # verified photo map: ONLY URLs actually found on official roster page.
-    ps=text.find('const rosterPhotos=');
+
+    ps=text.find('const rosterPhotos=')
     if ps<0: raise RuntimeError('Safety stop: roster photo marker missing')
-    pe=text.find('};\nconst rosterPhotoBase',ps)
+    # The updater intentionally removes filename-guessing logic.  Older versions
+    # expected a rosterPhotoBase marker here, but current index.html now has only
+    # `};` followed directly by photoFor().  Locate the actual object terminator
+    # instead of depending on a removed legacy marker.
+    pe=text.find('};',ps)
     if pe<0: raise RuntimeError('Safety stop: roster photo map end marker missing')
     photo_js='const rosterPhotos='+json.dumps(photos,ensure_ascii=False,indent=2)+';'
     text=text[:ps]+photo_js+'\n'+text[pe+2:]
     # Disable filename guessing; photos are verified URLs only.
     text=re.sub(r"const rosterPhotoBase='[^']*';\nfunction generatedRosterPhoto\(p\)\{.*?\}\nfunction photoFor\(p\)\{return rosterPhotos\[p.name\]\|\|generatedRosterPhoto\(p\);\}","function photoFor(p){return rosterPhotos[p.name]||'';}",text,count=1,flags=re.S)
-    # coach section marker
+    # Also normalize an already-modern photoFor function without changing any other JS.
+    text=re.sub(r"function photoFor\(p\)\{return rosterPhotos\[p\.name\]\|\|'';\}","function photoFor(p){return rosterPhotos[p.name]||'';}",text,count=1)
+
     start='<!-- ROSTER_COACHES_START -->'; end='<!-- ROSTER_COACHES_END -->'
     if start not in text or end not in text: raise RuntimeError('Safety stop: coach section markers missing')
     block=f'''{start}\n<section class="griz-coaches-section" id="roster-coaches">\n  <div class="griz-coaches-head"><div><div class="eyebrow">THE STAFF</div><h3>Coaching Staff</h3><p>The 2026 Montana football coaching staff, pulled from the official GoGriz staff page.</p></div><a class="button outline-maroon" href="{COACHES_URL}" target="_blank" rel="noopener">OFFICIAL STAFF ↗</a></div>\n  <div class="griz-coaches-grid">{coach_html(coaches,coach_photos)}</div>\n</section>\n{end}'''
     text=re.sub(re.escape(start)+r'.*?'+re.escape(end),lambda m:block,text,count=1,flags=re.S)
-    # counts
+
     def unit(pos):
         if pos in {'K','KP','LS','P'}: return 'special'
         if pos in {'QB','RB','WR','TE','OL','OT','ATH'}: return 'offense'
@@ -210,12 +211,10 @@ def update_index(text,players,photos,coaches,coach_photos):
     text=re.sub(r'(class="roster-hq-stat"><b>)\d+(</b><span>PLAYERS</span>)',rf'\g<1>{len(players)}\g<2>',text,count=1)
     text=re.sub(r'(id="roster-count">)\d+ PLAYERS',rf'\g<1>{len(players)} PLAYERS',text,count=1)
     text=re.sub(r'(id="roster-filter-note">)Showing all \d+ players',rf'\g<1>Showing all {len(players)} players',text,count=1)
-    # Add Coaches to roster nav exactly once.
     if 'data-roster-jump="roster-coaches"' not in text:
         needle='<button type="button" class="roster-section-nav-btn" data-roster-jump="roster-transfers">'
         repl='<button type="button" class="roster-section-nav-btn" data-roster-jump="roster-coaches">🏈 <span>COACHES</span></button>\n  '+needle
         text=text.replace(needle,repl,1)
-    # Remove internal transfer development note only.
     text=re.sub(r'<div class="griz-transfer-note"><b>Data note:</b> This first version is a verified snapshot, not the automated weekly tracker yet\..*?</div>','',text,count=1,flags=re.S)
     return text
 
@@ -227,8 +226,6 @@ def main():
     if len(photos)<max(70,int(len(players)*0.65)):
         raise RuntimeError(f'Safety stop: only {len(photos)} verified player photos found for {len(players)} players')
     raw_coaches=parse_coaches(coaches_page); coaches=validate_coaches(raw_coaches)
-    # Coach photos: staff-page links say “Full Bio for NAME”; each official profile
-    # exposes its verified image as an “Image: NAME” link. Use those real URLs.
     linkp=LinkParser(); linkp.feed(coaches_page)
     profile_links={}
     for href,label in linkp.links:
@@ -237,8 +234,7 @@ def main():
         for c in coaches:
             ck=norm(c['name'])
             if ck and ck in n:
-                profile_links[c['name']]=absolute_url(href,COACHES_URL)
-                break
+                profile_links[c['name']]=absolute_url(href,COACHES_URL); break
     coach_photos={}
     for c in coaches:
         profile=profile_links.get(c['name'])
@@ -246,40 +242,31 @@ def main():
         try:
             profile_page=fetch(profile)
         except Exception as exc:
-            print(f'Coach photo warning: could not fetch {c["name"]} profile: {exc}')
-            continue
+            print(f'Coach photo warning: could not fetch {c["name"]} profile: {exc}'); continue
         key=norm(c['name'])
-        # Preferred source: the profile's official “Image: NAME” anchor.
         lp=LinkParser(); lp.feed(profile_page)
         for href,label in lp.links:
             if not valid_image_url(absolute_url(href,profile)): continue
             low=norm(label)
             if low.startswith('image') and key and key in low:
-                coach_photos[c['name']]=absolute_url(href,profile)
-                break
+                coach_photos[c['name']]=absolute_url(href,profile); break
         if c['name'] in coach_photos: continue
-        # Fallback: exact alt/title match on an img tag.
         ip=ImageParser(); ip.feed(profile_page)
         for im in ip.images:
             alt=norm(im['alt']); title=norm(im['title'])
             if key and (key==alt or key==title or key in alt or key in title):
                 u=absolute_url(im['src'],profile)
-                if valid_image_url(u):
-                    coach_photos[c['name']]=u
-                    break
+                if valid_image_url(u): coach_photos[c['name']]=u; break
         if c['name'] in coach_photos: continue
-        # Conservative surname fallback only; never synthesize a URL.
         surname=norm(c['name'].split()[-1])
         for im in ip.images:
             u=absolute_url(im['src'],profile)
-            if valid_image_url(u) and surname and surname in norm(u):
-                coach_photos[c['name']]=u; break
+            if valid_image_url(u) and surname and surname in norm(u): coach_photos[c['name']]=u; break
     if len(coach_photos)<5: print(f'Warning: only {len(coach_photos)} coach photos verified; continuing with placeholders')
     print(f'Roster: {len(players)} players; verified photos: {len(photos)}; coaches: {len(coaches)}; coach photos: {len(coach_photos)}')
     current=INDEX.read_text(encoding='utf-8'); updated=update_index(current,players,photos,coaches,coach_photos)
     if updated==current: print('No roster/coach changes detected.'); return
     if args.check: print('Check mode: no files changed.'); return
-    # final safety: make sure only expected markers changed conceptually
     INDEX.write_text(updated,encoding='utf-8'); print('Updated index.html surgically.')
 
 if __name__=='__main__':
