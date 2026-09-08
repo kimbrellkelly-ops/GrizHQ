@@ -3912,3 +3912,35 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   .griz-transfer-coach>div:nth-child(2){border-top:1px solid #ddd;padding:14px 0 0}
   .griz-transfer-coach h4{font-size:32px}
 }
+
+/* ROSTER HQ PHASE 1 — isolated enhancement; does not alter depth-chart logic */
+.roster-hq-intro{display:grid;grid-template-columns:1.05fr 1.95fr;gap:18px;align-items:stretch;margin:18px 0 14px}
+.roster-hq-copy{background:#fff;border:1px solid var(--line);border-left:6px solid var(--maroon);padding:22px 24px}
+.roster-hq-copy h3{margin:2px 0 7px;font:800 34px/1 "Barlow Condensed",sans-serif;color:var(--maroon);text-transform:uppercase}
+.roster-hq-copy p{margin:0;color:#555;font-size:14px;line-height:1.55;max-width:620px}
+.roster-hq-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.roster-hq-stat{background:#fff;border:1px solid var(--line);padding:16px 12px;display:flex;flex-direction:column;justify-content:center;text-align:center;min-height:104px}
+.roster-hq-stat b{font:900 34px/1 "Barlow Condensed",sans-serif;color:var(--maroon)}
+.roster-hq-stat span{margin-top:5px;font:800 11px/1.1 "Barlow Condensed",sans-serif;letter-spacing:1.2px;color:#333}
+.roster-hq-stat small{margin-top:6px;color:#777;font-size:10px}
+.roster-hq-stat.accent{background:var(--maroon)}
+.roster-hq-stat.accent b,.roster-hq-stat.accent span,.roster-hq-stat.accent small{color:#fff}
+.roster-pulse{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 16px}
+.roster-pulse-card{display:block;background:#f7f7f7;border:1px solid var(--line);padding:15px 17px;text-decoration:none;color:inherit;transition:.15s ease}
+.roster-pulse-card:hover{transform:translateY(-2px);border-color:var(--maroon);box-shadow:0 7px 18px rgba(0,0,0,.07)}
+.pulse-kicker,.roster-intel-kicker{display:block;color:var(--maroon);font:800 10px/1 "Barlow Condensed",sans-serif;letter-spacing:1.2px;margin-bottom:6px}
+.roster-pulse-card strong{display:block;font:800 20px/1.05 "Barlow Condensed",sans-serif;color:#202020;text-transform:uppercase}
+.roster-pulse-card small{display:block;margin-top:6px;color:#777;font-size:11px}
+.roster-intel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 18px}
+.roster-intel-card{background:#fff;border:1px solid var(--line);padding:17px 18px;min-height:175px;position:relative}
+.roster-intel-card.featured{border-top:4px solid var(--maroon)}
+.roster-intel-card h4{margin:0 0 4px;font:800 25px/1 "Barlow Condensed",sans-serif;color:#202020}
+.roster-intel-meta{font-size:11px;font-weight:700;color:#666;margin-bottom:10px}
+.roster-intel-card p{margin:0 0 12px;color:#555;font-size:12px;line-height:1.45}
+.roster-intel-card a{font:800 10px "Inter",sans-serif;color:var(--maroon);text-decoration:none;letter-spacing:.3px}
+.depth-switchbar{display:flex;justify-content:space-between;align-items:end;background:#242424;color:#fff;padding:14px 18px;margin:0 0 8px}
+.depth-switchbar strong{display:block;font:800 25px/1 "Barlow Condensed",sans-serif;text-transform:uppercase}
+.depth-switchbar .eyebrow{color:#d9b7c0;display:block;margin-bottom:3px}
+.depth-switchbar>span{font-size:11px;color:#cfcfcf}
+@media(max-width:1050px){.roster-hq-intro{grid-template-columns:1fr}.roster-intel-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.roster-hq-stats{grid-template-columns:1fr 1fr}.roster-pulse{grid-template-columns:1fr}.roster-intel-grid{grid-template-columns:1fr}.roster-hq-copy{padding:18px}.roster-hq-copy h3{font-size:30px}.depth-switchbar{display:block}.depth-switchbar>span{display:block;margin-top:6px}}
