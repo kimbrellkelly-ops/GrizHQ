@@ -1,0 +1,67 @@
+name: Refresh Griz Roster HQ
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 15 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: griz-hq-repo-writes
+  cancel-in-progress: false
+
+jobs:
+  refresh-roster:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Rebase on latest main before changing files
+        run: |
+          git config user.name "griz-hq-bot"
+          git config user.email "griz-hq-bot@users.noreply.github.com"
+          git pull --rebase origin main
+
+      - name: Refresh roster, verified photos and coaching staff
+        run: python roster_update.py
+
+      - name: Validate changed files
+        run: |
+          python -m py_compile roster_update.py
+          git diff --check
+          git status --short
+          changed="$(git diff --name-only)"
+          if [ -n "$changed" ]; then
+            echo "$changed" | grep -E '^(index\.html|roster_update\.py)$' >/dev/null || {
+              echo "Unexpected changed file detected"; exit 1;
+            }
+          fi
+
+      - name: Commit only when roster data changed
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "No roster changes detected; nothing to commit."
+            exit 0
+          fi
+          git add index.html
+          git commit -m "Auto-refresh Griz roster HQ"
+
+      - name: Push with retry
+        run: |
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            echo "Push attempt $attempt failed; retrying..."
+            sleep 5
+          done
+          exit 1
