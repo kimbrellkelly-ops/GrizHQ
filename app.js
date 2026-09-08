@@ -1282,7 +1282,8 @@ async function renderFCSScoreboard(){
   const teamIds={montana:'149',montanastate:'147',idaho:'70',weberstate:'2692',easternwashington:'331',northernarizona:'2464',northerncolorado:'2458',idahostate:'304',calpoly:'13',southernutah:'253',utahtech:'3101',ucdavis:'302',portlandstate:'2502'};
   const FCS_LOGO_IDS={
     Montana:'149','Montana State':'147',Idaho:'70','Weber State':'2692','Eastern Washington':'331','Northern Arizona':'2464','Northern Colorado':'2458','Idaho State':'304','Cal Poly':'13','Southern Utah':'253','Utah Tech':'3101','UC Davis':'302','Portland State':'2502',
-    Nevada:'2440',Colorado:'38','South Dakota':'233','Wyoming':'2751','Colorado State':'36',Utah:'254',Oregon:'2483','Oregon State':'204','Washington State':'265',Washington:'264','San Jose State':'23','San José State':'23','Utah State':'328','Boise State':'68','Fresno State':'278','San Diego State':'21','South Dakota State':'2569','North Dakota State':'2449','Montana State (57)':'147','North Dakota':'155','Lamar':'2320','Incarnate Word':'2916','SMU':'256'
+    Nevada:'2440',Colorado:'38','South Dakota':'233','Wyoming':'2751','Colorado State':'36',Utah:'254',Oregon:'2483','Oregon State':'204','Washington State':'265',Washington:'264','San Jose State':'23','San José State':'23','Utah State':'328','Boise State':'68','Fresno State':'278','San Diego State':'21','South Dakota State':'2569','North Dakota State':'2449','Montana State (57)':'147','North Dakota':'155','Lamar':'2320','Incarnate Word':'2916','SMU':'256',
+    'Yale':'43','William & Mary':'2729','Southern Illinois':'79','Sacramento State':'16','Harvard':'108','Western Carolina':'2717','West Florida':'110242','South Carolina State':'2569','Abilene Christian':'2000','Mercer':'2382','Austin Peay':'2046','Villanova':'222','Louisville':'97','Lehigh':'2329','Illinois State':'2287','Tarleton State':'348','Rhode Island':'227','Youngstown State':'2754','Tennessee Tech':'2633','Stephen F. Austin':'2617','Northern Iowa':'2448','Richmond':'2678','New Hampshire':'160','Maine':'311'
   };
   const bigSkyAliases={
     montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanast','montanastatebobcats'],idaho:['idaho','idahovandals'],
@@ -1419,7 +1420,7 @@ async function renderFCSScoreboard(){
   function top25TeamRow(t, fallback, rank, isRanked, showScore){
     const name=teamName(t,fallback), logo=logoFor(t,fallback);
     const rankHtml=isRanked?`<span class="fcs-team-rank">#${escapeHtml(rank)}</span>`:'<span class="fcs-team-rank fcs-team-rank-empty"></span>';
-    const logoClass=logo?'':' no-logo';
+    const logoClass=logo?' has-logo':' no-logo';
     return `<div class="ghq-fcs-top-team-row${logoClass}">${rankHtml}${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}<span>${escapeHtml(name)}</span>${showScore?`<strong>${escapeHtml(t?.score??'—')}</strong>`:''}</div>`;
   }
   function top25Card(t,events,scheduled){
@@ -1429,13 +1430,10 @@ async function renderFCSScoreboard(){
     const ev=sg ? (events.find(e=>eventMatchesGame(e,sg)) || rawEv && eventMatchesGame(rawEv,sg) ? (events.find(e=>eventMatchesGame(e,sg)) || rawEv) : null) : rawEv;
     if(ev){
       const ts=eventTeams(ev);
-      // ESPN's explicit homeAway flag is authoritative when available.
-      // This guarantees the scoreboard convention is always AWAY on top, HOME on bottom,
-      // even if the cached/schedule row was stored in the opposite order.
-      const espnAway=ts.find(x=>x.homeAway==='away');
-      const espnHome=ts.find(x=>x.homeAway==='home');
-      const a=espnAway|| (sg? (ts.find(x=>teamMatch(sg.displayAway,x))||ts[0]) : ts[0]);
-      const h=espnHome|| (sg? (ts.find(x=>teamMatch(sg.displayHome,x))||ts.find(x=>x!==a)||ts[1]) : (ts.find(x=>x!==a)||ts[1]));
+      // When ESPN provides homeAway, trust that as the authoritative ordering.
+      // The scheduled matchup is only a fallback for older cached events.
+      const a=ts.find(x=>x.homeAway==='away') || (sg&&ts.find(x=>teamMatch(sg.displayAway,x))) || ts[0] || null;
+      const h=ts.find(x=>x.homeAway==='home') || (sg&&ts.find(x=>teamMatch(sg.displayHome,x))) || ts.find(x=>x!==a) || ts[1] || null;
       const playing=ev.completed||ev.state==='in';
       const rankedAway=teamMatch(name,a), rankedHome=teamMatch(name,h);
       const awayRow=top25TeamRow(a,sg?.displayAway||'Away',rank,rankedAway,playing);
@@ -1455,12 +1453,8 @@ async function renderFCSScoreboard(){
     // events do not reliably preserve homeAway. The scoreboard convention is
     // therefore: AWAY team on top, HOME team on bottom.
     const scheduledAway=game.displayAway,scheduledHome=game.displayHome;
-    // Prefer ESPN's explicit homeAway flags when the live/cached event has them.
-    // Otherwise fall back to the verified schedule matchup.
-    const espnAway=ts.find(x=>x.homeAway==='away');
-    const espnHome=ts.find(x=>x.homeAway==='home');
-    const a=espnAway||ts.find(x=>teamMatch(scheduledAway,x))||ts[0]||null;
-    const h=espnHome||ts.find(x=>teamMatch(scheduledHome,x))||ts.find(x=>x!==a)||null;
+    const a=ts.find(x=>teamMatch(scheduledAway,x))||ts.find(x=>x.homeAway==='away')||ts[0]||null;
+    const h=ts.find(x=>teamMatch(scheduledHome,x))||ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||null;
     const final=!!ev?.completed,live=ev?.state==='in',state=live?'live':(final?'final':'scheduled');
     const label=game.bigSkyGame?'BIG SKY':'NON-CONFERENCE';
     const tv=(ev?.broadcasts||[]).slice(0,2).join(', ');
@@ -1496,9 +1490,7 @@ async function renderFCSScoreboard(){
       .ghq-fcs-top-team-row .fcs-team-rank{display:flex!important;align-items:center!important;justify-content:center!important;background:#8c1531!important;color:#fff!important;border-radius:5px!important;font-size:12px!important;font-weight:900!important;min-height:25px!important;padding:0 4px!important}
       .ghq-fcs-top-team-row .fcs-team-rank-empty{background:transparent!important}
       .ghq-fcs-top-team-row img{width:28px!important;height:28px!important;object-fit:contain!important}
-      .ghq-fcs-top-team-row>span:not(.fcs-team-rank){font-size:15px!important;font-weight:750!important;line-height:1.15!important;min-width:0!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
-      .ghq-fcs-top-team-row.no-logo{grid-template-columns:34px minmax(0,1fr) auto!important}
-      .ghq-fcs-top-team-row.no-logo>span:not(.fcs-team-rank){grid-column:2!important}
+      .ghq-fcs-top-team-row>span:not(.fcs-team-rank){font-size:15px!important;font-weight:750!important;line-height:1.15!important;min-width:0!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}.ghq-fcs-top-team-row.no-logo{grid-template-columns:34px minmax(0,1fr) auto!important}.ghq-fcs-top-team-row.no-logo>span:not(.fcs-team-rank){white-space:normal!important;overflow:visible!important;text-overflow:clip!important}
       .ghq-fcs-top-team-row strong{font-size:18px!important;font-weight:900!important;margin-left:auto!important}
       .ghq-fcs-top-meta{display:flex!important;justify-content:flex-end!important;align-items:center!important;gap:8px!important;padding-top:6px!important;font-size:11px!important;color:#666!important;text-transform:uppercase!important;letter-spacing:.03em!important}
       .ghq-fcs-top-meta small{font-size:10px!important;color:#777!important}
