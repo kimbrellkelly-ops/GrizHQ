@@ -3737,3 +3737,44 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .griz-transfer-note{background:#f3e8ed;border-left:4px solid var(--maroon);color:#666}
 @media(max-width:1050px){.griz-transfer-grid{grid-template-columns:repeat(3,1fr)}.griz-transfer-coach{grid-template-columns:1fr 1fr}.griz-transfer-coach .griz-transfer-line.current,.griz-transfer-coach .griz-transfer-note{grid-column:auto;grid-row:auto}}
 @media(max-width:700px){.griz-transfers{padding:22px 14px 18px}.griz-transfer-grid{grid-template-columns:1fr}.griz-transfer-coach{grid-template-columns:1fr}.griz-transfer-coach>div:nth-child(2){text-align:left;border-left:0;border-top:1px solid var(--line);padding:12px 0 0}.griz-transfer-coach p,.griz-transfer-coach .griz-transfer-line.current,.griz-transfer-coach .griz-transfer-note{grid-column:auto;grid-row:auto}}
+
+/* GRIZ TRANSFERS — second surgical visual pass: closer to approved mockup; scoped only to transfer section */
+.griz-transfers{background:#fff;margin-top:30px;padding:26px 0 20px;border-top:0;box-shadow:none}
+.griz-transfers-head{padding:0 2px 18px;margin-bottom:18px;border-bottom:0;align-items:flex-end}
+.griz-transfers-head h3{font-size:42px;line-height:.98;color:var(--maroon);letter-spacing:.2px;margin:3px 0 7px}
+.griz-transfers-head p{max-width:900px;color:#4f5459;font-size:14px;line-height:1.4}
+.griz-transfer-legend{font-size:11px;gap:12px;color:#555}
+.griz-transfer-summary{display:none}
+.griz-transfer-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.griz-transfer-card{border:1px solid #dedede;border-top:3px solid #c9c9c9;border-radius:3px;padding:15px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.04);min-height:250px}
+.griz-transfer-card.status-yellow{border-top-color:#d3a500}
+.griz-transfer-card.status-green{border-top-color:#2aa05a}
+.griz-transfer-card.status-red{border-top-color:#c83c3c}
+.griz-transfer-top{align-items:flex-start;gap:6px}
+.griz-transfer-status{font-size:10px;line-height:1.1;padding:6px 10px;border-radius:999px;letter-spacing:.25px;white-space:nowrap}
+.griz-transfer-card.status-yellow .griz-transfer-status{background:#f6c933;color:#241d00}
+.griz-transfer-card.status-green .griz-transfer-status{background:#2caf62;color:#fff}
+.griz-transfer-card.status-red .griz-transfer-status{background:#d95c5c;color:#fff}
+.griz-loss{font-size:9px;line-height:1.05;color:#6b6b6b;text-align:right;white-space:nowrap}
+.griz-loss b{display:block;font-size:18px;line-height:1;color:var(--maroon);margin:3px 0 0}
+.griz-transfer-card h4{font-size:26px;line-height:1;margin:11px 0 4px;color:#15191d}
+.griz-transfer-dest{font-size:13px;line-height:1.2;font-weight:800;color:#30343a;margin:0 0 13px}
+.griz-transfer-line{grid-template-columns:78px 1fr;gap:7px;border-top:1px solid #e6e6e6;padding:8px 0;font-size:11px;line-height:1.35;color:#222}
+.griz-transfer-line b{font-size:10px;letter-spacing:.25px;color:#222}
+.griz-transfer-line.current{background:#faf9f8;margin:0 -15px;padding-left:15px;padding-right:15px}
+.griz-transfer-card p{font-size:12px;line-height:1.4;color:#4e545a;margin:10px 0 12px}
+.griz-transfer-card a{font-size:10px;line-height:1.1;font-weight:900;color:var(--maroon);letter-spacing:.3px}
+.griz-transfer-coach{margin-top:16px;background:#fff;color:var(--ink);border:1px solid #dedede;border-top:3px solid var(--maroon);border-radius:3px;padding:17px 20px;grid-template-columns:1.05fr 1fr auto;gap:18px;align-items:center;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.griz-transfer-coach h4{font-size:34px;line-height:1;color:var(--ink);margin:5px 0 4px}
+.griz-transfer-coach .griz-transfer-dest{font-size:14px;color:#4a5056}
+.griz-transfer-coach>div:nth-child(2){text-align:left;border-left:1px solid #ddd;padding-left:20px;font-size:12px;line-height:1.4}
+.griz-transfer-coach>div:nth-child(2) b{color:var(--maroon);font-size:13px}
+.griz-transfer-coach>div:nth-child(2) span{color:#666;font-size:11px}
+.griz-transfer-coach p{grid-column:2/-1;grid-row:2;margin:0;color:#4e545a;font-size:12px;line-height:1.4}
+.griz-transfer-coach .griz-transfer-line.current{grid-column:2;grid-row:1;background:transparent;margin:0;padding:0;border-top:0;color:#222;font-size:11px}
+.griz-transfer-coach .griz-transfer-note{grid-column:2/-1;grid-row:2;margin:0;background:transparent;border-left:0;padding:0;color:#4e545a;font-size:12px;line-height:1.4}
+.griz-transfer-note{margin-top:12px;background:#f5e9ee;border-left:4px solid var(--maroon);padding:11px 14px;color:#555;font-size:11px;line-height:1.45}
+.griz-transfer-note b{color:#34383d}
+@media(max-width:1250px){.griz-transfer-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:950px){.griz-transfer-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.griz-transfer-coach{grid-template-columns:1fr 1fr}.griz-transfer-coach .griz-transfer-line.current,.griz-transfer-coach .griz-transfer-note{grid-column:auto;grid-row:auto}}
+@media(max-width:700px){.griz-transfers{padding:22px 0 18px}.griz-transfers-head{display:block}.griz-transfers-head h3{font-size:36px}.griz-transfers-head p{font-size:13px}.griz-transfer-legend{justify-content:flex-start;margin-top:12px;font-size:10px}.griz-transfer-grid{grid-template-columns:1fr}.griz-transfer-card{min-height:0}.griz-transfer-coach{grid-template-columns:1fr}.griz-transfer-coach>div:nth-child(2){text-align:left;border-left:0;border-top:1px solid #ddd;padding:12px 0 0}.griz-transfer-coach p,.griz-transfer-coach .griz-transfer-line.current,.griz-transfer-coach .griz-transfer-note{grid-column:auto;grid-row:auto}}
