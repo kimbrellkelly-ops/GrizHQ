@@ -3598,70 +3598,12 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 @media(max-width:1050px){.schedule-row.game-card-row,.schedule-row.game-card-row.head{grid-template-columns:75px minmax(180px,1.6fr) 110px}}
 @media(max-width:760px){.schedule-row.game-card-row{grid-template-columns:70px 1fr 90px}.schedule-row.game-card-row.head{display:none}}
 
-/* ================================================================
-   FCS BIG SKY SCOREBOARD — SURGICAL RIGHT-COLUMN FIX
-   Scoped only to the FCS scoreboard cards. Do not affect the
-   Around the League schedule or any other site section.
-   ================================================================ */
-.fcs-games.bigsky-score-games .ghq-fcs-game {
-  grid-template-columns: 82px minmax(0,1fr) 110px 165px 250px !important;
-  gap: 14px !important;
-  align-items: center !important;
+/* SURGICAL FIX: Big Sky FCS scoreboard date/category labels on separate lines. */
+.fcs-games.bigsky-score-games .fcs-game.bigsky-row .fcs-time b,
+.fcs-games.bigsky-score-games .fcs-game.bigsky-row .fcs-time small {
+  display: block !important;
 }
 
-.fcs-games.bigsky-score-games .ghq-fcs-game .fcs-tv,
-.fcs-games.bigsky-score-games .ghq-fcs-game .bigsky-betting {
-  min-width: 0 !important;
-  overflow: hidden !important;
-}
-
-.fcs-games.bigsky-score-games .ghq-fcs-game .fcs-tv {
-  font-size: 11px !important;
-  line-height: 1.25 !important;
-  color: #555 !important;
-  white-space: normal !important;
-  overflow-wrap: anywhere !important;
-  padding-left: 12px !important;
-  border-left: 1px solid #dedfe1 !important;
-}
-
-.fcs-games.bigsky-score-games .ghq-fcs-game .bigsky-betting {
-  min-width: 0 !important;
-  padding-left: 12px !important;
-  border-left: 1px solid #dedfe1 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  gap: 3px !important;
-}
-
-.fcs-games.bigsky-score-games .ghq-fcs-game .bigsky-betting b {
-  font-size: 12px !important;
-  line-height: 1.15 !important;
-  white-space: normal !important;
-  overflow-wrap: anywhere !important;
-}
-
-.fcs-games.bigsky-score-games .ghq-fcs-game .bigsky-betting small {
-  font-size: 9px !important;
-  line-height: 1.15 !important;
-  white-space: normal !important;
-}
-
-@media (max-width: 1100px) and (min-width: 761px) {
-  .fcs-games.bigsky-score-games .ghq-fcs-game {
-    grid-template-columns: 72px minmax(0,1fr) 95px 135px 190px !important;
-    gap: 10px !important;
-  }
-}
-
-@media (max-width: 760px) {
-  .fcs-games.bigsky-score-games .ghq-fcs-game {
-    grid-template-columns: 54px minmax(0,1fr) 70px !important;
-    gap: 8px !important;
-  }
-  .fcs-games.bigsky-score-games .ghq-fcs-game .fcs-tv,
-  .fcs-games.bigsky-score-games .ghq-fcs-game .bigsky-betting {
-    display: none !important;
-  }
+.fcs-games.bigsky-score-games .fcs-game.bigsky-row .fcs-time small {
+  margin-top: 3px !important;
 }
