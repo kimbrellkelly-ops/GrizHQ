@@ -26,6 +26,7 @@ OFFICIAL_ROLES = [
 ]
 
 PENALTY_ABBREVIATIONS = {"UNS", "UNR", "DPI", "OPI", "KCI", "OFC", "IFH", "FST"}
+TEAM_ALIASES = {"UOM": "UM"}
 
 SUMMARY_RE = re.compile(
     r"Penalties\s*-\s*Yds\.?\s*\|\s*(?P<a>\d+)-(?P<ay>\d+)\s*\|\s*(?P<b>\d+)-(?P<by>\d+)",
@@ -79,7 +80,7 @@ def _parse_component(component: str) -> tuple[str, str, str | None, int | None]:
     m = re.match(r"^(?P<team>[A-Z]{2,4})\s+(?P<body>.+)$", component.strip(), re.I)
     if not m:
         return "", norm_space(component), None, None
-    team = m.group("team").upper()
+    team = TEAM_ALIASES.get(m.group("team").upper(), m.group("team").upper())
     body = m.group("body").strip()
     yard_m = re.search(r"\s+(?P<yards>\d+)\s+yards\b", body, re.I)
     yards = int(yard_m.group("yards")) if yard_m else None

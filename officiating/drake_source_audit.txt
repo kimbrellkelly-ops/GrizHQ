@@ -1,0 +1,5 @@
+2026 Drake current GoGriz Team Statistics: Drake 6-20, Montana 16-138.
+
+PBP evidence includes four explicit Drake false starts (5 yards each), one Drake delay of game (5 yards), and one Drake intentional grounding event with no explicit yardage in the PBP line. The visible false-start + delay yardage alone is 25, exceeding the reported Drake 20-yard total. The intentional-grounding line cannot be assigned yardage by inference.
+
+Conclusion: Drake is BLOCKED pending source reconciliation. Do not overwrite the official source total or invent event yardage.
