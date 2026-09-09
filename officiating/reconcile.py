@@ -77,13 +77,11 @@ def reconcile(official_summary: dict[str, Any], events: Iterable[dict[str, Any]]
         if _declined(event):
             declined[team] += 1
             continue
-
         if _offsetting(event):
             offsetting[team] += 1
             continue
 
         counts[team] += 1
-
         group = event.get("compound_group")
         if group:
             group = str(group)
