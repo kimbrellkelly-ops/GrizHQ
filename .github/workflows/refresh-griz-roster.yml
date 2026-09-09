@@ -1,9 +1,13 @@
- name: Refresh Griz Roster HQ
+name: Refresh Griz Roster HQ
 
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 15 * * *"
+  push:
+    paths:
+      - "roster_update.py"
+      - ".github/workflows/refresh-griz-roster.yml"
 
 permissions:
   contents: write
