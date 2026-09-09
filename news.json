@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-09T21:04:17.156784+00:00",
+  "updated": "2026-09-09T21:22:19.037772+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 49,
+  "story_count": 51,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "FCS Weekly – Akem & Nuanez talk about former Griz & Cats who transferred, Gillman’s greatness & more",
+      "url": "https://skylinesportsmt.com/fcs-weekly-akem-nuanez-talk-about-former-griz-cats-who-transferred-gillmans-greatness-more/",
+      "date": "Sep. 9, 2026",
+      "published_at": "2026-09-09T21:08:10+00:00",
+      "description": "September 9, 2026 FCS Weekly – Akem & Nuanez talk about former Griz & Cats who transferred, Gillman’s greatness & more",
+      "source": "Skyline Sports",
+      "badge": "RECRUITING",
+      "short": "RECRUI",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2025/12/Caleb-Otlewski-quiets-thr-crowd-after-TFL-scaled.jpeg",
+      "is_video": true,
+      "youtube_id": "7BgeFXClPRc",
+      "video_url": "https://www.youtube.com/watch?v=7BgeFXClPRc",
+      "video_thumbnail": "https://i.ytimg.com/vi/7BgeFXClPRc/hqdefault.jpg"
+    },
     {
       "title": "Jeff Choate drags Griz into Bobcats-Wolf Pack conversation",
       "url": "https://missoulian.com/sports/college/big-sky-conference/montana-state-university/article_11cc629c-1815-53ff-a710-805f708e8595.html",
@@ -434,6 +449,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/8/31/Mason_ST_POW_Web.png"
+    },
+    {
+      "title": "Bridges comes up in the clutch to lift Kennedy, Griz to season-opening victory over Southern Utah",
+      "url": "https://skylinesportsmt.com/bridges-comes-up-in-the-clutch-to-lift-kennedy-griz-to-season-opening-victory-over-southern-utah/",
+      "date": "Aug. 30, 2026",
+      "published_at": "2026-08-30T15:17:04+00:00",
+      "description": "Bridges comes up in the clutch to lift Kennedy, Griz to season-opening victory over Southern Utah August 30, 2026",
+      "source": "Skyline Sports",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/IMG_9888.jpeg",
+      "is_video": true,
+      "youtube_id": "3DLykMBKQLI",
+      "video_url": "https://www.youtube.com/watch?v=3DLykMBKQLI",
+      "video_thumbnail": "https://i.ytimg.com/vi/3DLykMBKQLI/hqdefault.jpg"
     },
     {
       "title": "Griz football – SUU’s Fitzgerald, UM’s Kennedy & Griz players post-game press conference following UM’s win over SUU",
