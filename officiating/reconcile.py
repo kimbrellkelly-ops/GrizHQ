@@ -50,34 +50,34 @@ def _team_code_map(summary: dict[str, Any], first_team: str, second_team: str) -
     return {"first": first_team, "second": second_team}
 
 
+def _raw(event: dict[str, Any]) -> str:
+    return str(event.get("raw_text", ""))
+
+
 def _event_is_declined(event: dict[str, Any]) -> bool:
     value = str(event.get("accepted_status", event.get("disposition", ""))).strip().lower()
-    return value in {"declined", "not accepted", "not_accepted"}
+    if value in {"declined", "not accepted", "not_accepted"}:
+        return True
+    return bool(__import__("re").search(r"\bdeclined\b", _raw(event), __import__("re").I))
 
 
 def _event_is_offsetting(event: dict[str, Any]) -> bool:
-    return bool(event.get("offsetting")) or str(event.get("accepted_status", "")).strip().lower() == "offsetting"
+    if bool(event.get("offsetting")):
+        return True
+    value = str(event.get("accepted_status", "")).strip().lower()
+    return value == "offsetting" or bool(__import__("re").search(r"\boffsetting\b", _raw(event), __import__("re").I))
 
 
 def _event_yards(event: dict[str, Any]) -> tuple[int | None, bool]:
-    """Return (accepted_yards, unknown).
-
-    Compound groups may have the combined yardage stored on compound_yards. Only
-    one event in the group is allowed to carry that combined amount; duplicate
-    application is explicitly prevented.
-    """
-    if _event_is_offsetting(event):
-        return 0, False
-    if _event_is_declined(event):
+    """Return (accepted_yards, unknown)."""
+    if _event_is_offsetting(event) or _event_is_declined(event):
         return 0, False
     yards = event.get("yards")
     if yards is not None:
         return int(yards), False
     compound_yards = event.get("compound_yards")
-    if compound_yards is not None and event.get("compound_yards_owner", False):
-        return int(compound_yards), False
     if compound_yards is not None:
-        return 0, False
+        return int(compound_yards), False
     return None, True
 
 
@@ -89,11 +89,8 @@ def reconcile(
 ) -> ReconciliationResult:
     """Reconcile canonical event records against the official two-team summary."""
     flags: set[str] = set()
-    mapping = _team_code_map(official_summary, first_team, second_team)
-    official = {
-        first_team: official_summary["first"],
-        second_team: official_summary["second"],
-    }
+    _team_code_map(official_summary, first_team, second_team)
+    official = {first_team: official_summary["first"], second_team: official_summary["second"]}
     counts = defaultdict(int)
     yards = defaultdict(int)
     unknown = defaultdict(int)
@@ -110,7 +107,6 @@ def reconcile(
             declined[team] += 1
             continue
 
-        # Every foul component is a penalty event, including offsetting fouls.
         counts[team] += 1
         if _event_is_offsetting(event):
             offsetting[team] += 1
@@ -120,13 +116,12 @@ def reconcile(
             if group in seen_compound_groups:
                 continue
             seen_compound_groups.add(group)
-            # Prefer an explicitly designated owner; otherwise search the group.
-            if event.get("compound_yards") is not None:
-                yards[team] += int(event["compound_yards"])
-                continue
-            # A compound group without combined yardage cannot be reconciled safely.
-            unknown[team] += 1
-            flags.add(f"COMPOUND_YARDAGE_UNKNOWN:{group}")
+            combined = event.get("compound_yards")
+            if combined is None:
+                unknown[team] += 1
+                flags.add(f"COMPOUND_YARDAGE_UNKNOWN:{group}")
+            else:
+                yards[team] += int(combined)
             continue
 
         value, is_unknown = _event_yards(event)
