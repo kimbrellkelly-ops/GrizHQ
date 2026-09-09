@@ -26,6 +26,9 @@
 .latest-press{display:grid;grid-template-columns:minmax(260px,.75fr) minmax(360px,1.25fr);gap:22px;margin:0 0 26px;padding:22px;border:1px solid rgba(107,0,56,.18);background:#f7f4f1}
 .latest-press-copy h3{margin:5px 0 8px;font-size:clamp(22px,3vw,34px);line-height:1.05}.latest-press-copy p{margin:0 0 16px;color:#666}.latest-press-video{min-height:280px;background:#111;display:flex;align-items:center;justify-content:center}.latest-press-video iframe{width:100%;height:315px;border:0}.press-video-placeholder{padding:30px;text-align:center;color:#eee;line-height:1.5}@media(max-width:800px){.latest-press{grid-template-columns:1fr}.latest-press-video iframe{height:240px}}
 </style>
+<style id="officiating-tab-style">
+.officiating-tab-shell{padding:0 0 30px}.officiating-tab-frame{display:block;width:100%;height:2400px;border:0;background:#f5f2ef}.officiating-tab-open{display:inline-flex;margin:0 0 16px;padding:11px 15px;background:#6b0038;color:#fff;text-decoration:none;font-weight:900;letter-spacing:.3px}.officiating-tab-open:hover{text-decoration:underline}@media(max-width:800px){.officiating-tab-frame{height:3000px}}
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -66,6 +69,7 @@
 <a data-tab-link="roster" href="#roster">ROSTER</a>
 <a data-tab-link="stats" href="#stats">STATS</a>
 <a data-tab-link="history" href="#history">HISTORY</a>
+<a data-tab-link="officiating" href="#officiating">OFFICIATING</a>
 </nav>
 </header>
 <main id="home">
@@ -605,6 +609,13 @@
 
 </div>
 <!-- GRIZ TRANSFERS END -->
+</section>
+<section class="section tab-panel" data-tab="officiating" id="officiating">
+<div class="panel-title"><h2>OFFICIATING INTELLIGENCE</h2></div>
+<div class="officiating-tab-shell">
+<a class="officiating-tab-open" href="officiating.html" target="_blank" rel="noopener">OPEN FULL OFFICIATING INTELLIGENCE ↗</a>
+<iframe class="officiating-tab-frame" src="officiating.html" title="Griz HQ Officiating Intelligence" loading="lazy"></iframe>
+</div>
 </section>
 <section class="section tab-panel" data-tab="stats" id="stats">
 <div class="section-head"><div class="eyebrow">NUMBERS</div><h2>Griz Stats Central</h2><span id="stats-through">Through Week 1</span></div>
