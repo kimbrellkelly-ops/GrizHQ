@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-09T04:04:15.786281+00:00",
+  "updated": "2026-09-09T04:25:06.267093+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 45,
+  "story_count": 46,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Cat-Griz Insider Podcast: Injury, penalties, Jeff Choate headline 3rd week",
+      "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/cat-griz-insider-podcast-injury-penalties-jeff-choate/article_33983564-3bd2-43cd-b40b-233d778d80c7.html",
+      "date": "Sep. 9, 2026",
+      "published_at": "2026-09-09T03:30:00+00:00",
+      "description": "Cat-Griz Insider Podcast: Injury, penalties, Jeff Choate headline 3rd week",
+      "source": "406 MT Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/39/33983564-3bd2-43cd-b40b-233d778d80c7/6aa0d2178c8a2.preview.png?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": true,
+      "youtube_id": "",
+      "video_url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/cat-griz-insider-podcast-injury-penalties-jeff-choate/article_33983564-3bd2-43cd-b40b-233d778d80c7.html",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/39/33983564-3bd2-43cd-b40b-233d778d80c7/6aa0d2178c8a2.preview.png?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Montana hosts Utah Tech in Saturday showdown",
       "url": "https://gogriz.com/news/2026/9/8/football-montana-hosts-utah-tech-in-saturday-showdown",
