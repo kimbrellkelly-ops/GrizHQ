@@ -265,7 +265,7 @@ def update_index(text,players,photos,coaches,coach_photos):
     # Preserve the generated Sidearm fallback for players without a specific
     # verified mapping.  This is important for newly added players and for
     # temporary profile/scrape failures.
-    fallback_js="""const rosterPhotoBase='https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/22/';
+    fallback_js=r"""const rosterPhotoBase='https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/22/';
 function generatedRosterPhoto(p){
   if(!p || !/^\d+$/.test(String(p.n))) return '';
   const parts=p.name.trim().split(/\s+/); if(parts.length<2) return '';
@@ -278,7 +278,7 @@ function photoFor(p){return rosterPhotos[p.name]||generatedRosterPhoto(p);}
 """
     photo_pattern=r"(?:const rosterPhotoBase='[^']*';\n)?function generatedRosterPhoto\(p\)\{.*?\}\nfunction photoFor\(p\)\{return rosterPhotos\[p\.name\]\|\|(?:generatedRosterPhoto\(p\)|'')\;\}\n"
     if re.search(photo_pattern,text,flags=re.S):
-        text=re.sub(photo_pattern,lambda m:fallback_js,text,count=1,flags=re.S)
+        text=re.sub(photo_pattern,lambda m: fallback_js,text,count=1,flags=re.S)
     else:
         marker='const rosterPhotos='+json.dumps(merged_photos,ensure_ascii=False,indent=2)+';\n'
         text=text.replace(marker,marker+fallback_js,1)
