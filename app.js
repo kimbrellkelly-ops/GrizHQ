@@ -1285,12 +1285,12 @@ async function renderFCSScoreboard(){
     Nevada:'2440',Colorado:'38','South Dakota':'233','Wyoming':'2751','Colorado State':'36',Utah:'254',Oregon:'2483','Oregon State':'204','Washington State':'265',Washington:'264','San Jose State':'23','San José State':'23','Utah State':'328','Boise State':'68','Fresno State':'278','San Diego State':'21','South Dakota State':'2569','North Dakota State':'2449','Montana State (57)':'147','North Dakota':'155','Lamar':'2320','Incarnate Word':'2916','SMU':'256'
   };
   const bigSkyAliases={
-    montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanast','montanastatebobcats'],idaho:['idaho','idahovandals'],
-    weberstate:['weberstate','weberst','weberstatewildcats'],easternwashington:['easternwashington','ewashington','easternwash','easternwashingtoneagles'],
-    northernarizona:['northernarizona','narizona','northernaz','northernarizonalumberjacks'],northerncolorado:['northerncolorado','ncolorado','northerncoloradobears'],
-    idahostate:['idahostate','idahost','idst','idahostatebengals'],calpoly:['calpoly','calpolytechnic','calpolymustangs'],
-    southernutah:['southernutah','soutah','soututah','southernutahthunderbirds'],utahtech:['utahtech','utahtechuniversity','utahtechtrailblazers'],
-    ucdavis:['ucdavis','ucdavisaggies'],portlandstate:['portlandstate','portlandst','portlandstatevikings']
+    montana:['montana','montanagrizzlies','grizzlies'],montanastate:['montanastate','montanast','montanastatebobcats','bobcats'],idaho:['idaho','idahovandals','vandals'],
+    weberstate:['weberstate','weberst','weberstatewildcats','wildcats'],easternwashington:['easternwashington','ewashington','easternwash','easternwashingtoneagles','eagles'],
+    northernarizona:['northernarizona','narizona','northernaz','northernarizonalumberjacks','lumberjacks'],northerncolorado:['northerncolorado','ncolorado','northerncoloradobears','bears'],
+    idahostate:['idahostate','idahost','idst','idahostatebengals','bengals'],calpoly:['calpoly','calpolytechnic','calpolymustangs','mustangs'],
+    southernutah:['southernutah','soutah','soututah','southernutahthunderbirds','thunderbirds'],utahtech:['utahtech','utahtechuniversity','utahtechtrailblazers','trailblazers'],
+    ucdavis:['ucdavis','ucdavisaggies','aggies'],portlandstate:['portlandstate','portlandst','portlandstatevikings','vikings']
   };
   function canonicalBigSky(s){const n=norm(s);for(const [k,v] of Object.entries(bigSkyAliases))if(v.some(x=>norm(x)===n))return k;return null;}
   function teamMatch(a,b){
@@ -1371,8 +1371,9 @@ async function renderFCSScoreboard(){
   }
   function eventMatchesGame(ev,g){
     const ts=eventTeams(ev);if(ts.length<2)return false;
-    const a=ts.find(t=>t.homeAway==='away')||ts[0],h=ts.find(t=>t.homeAway==='home')||ts[1];
-    return teamMatch(g.displayAway,a)&&teamMatch(g.displayHome,h);
+    // Match the scheduled matchup by team identity, not ESPN's competitor order.
+    // The Griz HQ schedule remains the source of truth for home/away.
+    return ts.some(t=>teamMatch(g.displayAway,t))&&ts.some(t=>teamMatch(g.displayHome,t));
   }
   function findTeamEvent(team,events){return events.find(ev=>eventTeams(ev).some(t=>teamObjMatch(team,t)))||null;}
   const HISTORICAL_BIG_SKY_SCORES={
@@ -1486,7 +1487,7 @@ async function renderFCSScoreboard(){
       .ghq-fcs-top-team-row .fcs-team-rank{display:flex!important;align-items:center!important;justify-content:center!important;background:#8c1531!important;color:#fff!important;border-radius:5px!important;font-size:12px!important;font-weight:900!important;min-height:25px!important;padding:0 4px!important}
       .ghq-fcs-top-team-row .fcs-team-rank-empty{background:transparent!important}
       .ghq-fcs-top-team-row img{width:28px!important;height:28px!important;object-fit:contain!important}
-      .ghq-fcs-top-team-row>span:not(.fcs-team-rank){font-size:15px!important;font-weight:750!important;line-height:1.15!important;min-width:0!important;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:anywhere!important}
+      .ghq-fcs-top-team-row>span:not(.fcs-team-rank){font-size:15px!important;font-weight:750!important;line-height:1.15!important;min-width:0!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
       .ghq-fcs-top-team-row strong{font-size:18px!important;font-weight:900!important;margin-left:auto!important}
       .ghq-fcs-top-meta{display:flex!important;justify-content:flex-end!important;align-items:center!important;gap:8px!important;padding-top:6px!important;font-size:11px!important;color:#666!important;text-transform:uppercase!important;letter-spacing:.03em!important}
       .ghq-fcs-top-meta small{font-size:10px!important;color:#777!important}
