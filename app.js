@@ -288,7 +288,7 @@ async function fetchLiveFCSCoachesPoll() {
   if (!poll || !Array.isArray(poll.ranks) || !poll.ranks.length) throw new Error("No FCS Coaches Poll returned");
   const teams = poll.ranks.slice(0, 25).map(r => {
     const t = r.team || {};
-    const name = t.displayName || t.shortDisplayName || t.name || t.abbreviation || "Team";
+    const name = t.location || t.displayName || t.shortDisplayName || t.name || t.abbreviation || "Team";
     const rank = Number(r.current ?? r.rank);
     const previous = Number(r.previous ?? r.previousRank);
     const hasPrevious = Number.isFinite(previous) && previous > 0;
@@ -348,42 +348,6 @@ function normalizeRankingEntry(t) {
   return { rank, previous: delta == null ? null : rank + delta, delta, name: m[2], record: m[3] || "" };
 }
 
-const RANKING_TEAM_NAME_MAP = {
-  "Bobcats": "Montana State",
-  "Grizzlies": "Montana",
-  "Jackrabbits": "South Dakota State",
-  "Redbirds": "Illinois State",
-  "Texans": "Tarleton State",
-  "Aggies": "UC Davis",
-  "Fighting Hawks": "North Dakota",
-  "Mountain Hawks": "Lehigh",
-  "Lumberjacks": "Northern Arizona",
-  "Penguins": "Youngstown State",
-  "Golden Eagles": "Tennessee Tech",
-  "Coyotes": "South Dakota",
-  "Rams": "Rhode Island",
-  "Bears": "Central Arkansas",
-  "Governors": "Austin Peay",
-  "Tribe": "William & Mary",
-  "Cardinals": "Lamar",
-  "Wildcats": "Villanova",
-  "Bulldogs": "Yale",
-  "Bulldogs": "Yale",
-  "Dukes": "James Madison",
-  "Colonials": "Robert Morris",
-  "Paladins": "Furman",
-  "Phoenix": "Elon",
-  "Spiders": "Richmond",
-  "Bison": "Howard",
-  "Crimson": "Harvard",
-  "Bulldogs": "Samford"
-};
-
-function displayRankingTeamName(name) {
-  const raw = String(name ?? "").trim();
-  return RANKING_TEAM_NAME_MAP[raw] || raw;
-}
-
 function renderPoll(id, teams) {
   const el = document.getElementById(id);
   if (!el || !Array.isArray(teams)) return;
@@ -391,8 +355,7 @@ function renderPoll(id, teams) {
     const t = normalizeRankingEntry(t0);
     const rank = Number.isFinite(t.rank) ? t.rank + "." : "";
     const record = t.record ? ` <small class="rank-record">(${escapeHtml(t.record)})</small>` : "";
-    const teamName = displayRankingTeamName(t.name);
-    return `<li><span class="rank-number">${escapeHtml(rank)}</span><span class="rank-team-name">${escapeHtml(teamName)}</span>${record}${rankingMovementMarkup(t)}</li>`;
+    return `<li><span class="rank-number">${escapeHtml(rank)}</span><span class="rank-team-name">${escapeHtml(t.name)}</span>${record}${rankingMovementMarkup(t)}</li>`;
   }).join("");
 }
 
@@ -402,8 +365,7 @@ function renderMiniPolls(coaches, media) {
   wrap.innerHTML = [coaches, media].map(poll => `<ol>${poll.slice(0,10).map(t0 => {
     const t = normalizeRankingEntry(t0);
     const rank = Number.isFinite(t.rank) ? t.rank + "." : "";
-    const teamName = displayRankingTeamName(t.name);
-    return `<li><span class="rank-number">${escapeHtml(rank)}</span><span class="rank-team-name">${escapeHtml(teamName)}</span>${rankingMovementMarkup(t)}</li>`;
+    return `<li><span class="rank-number">${escapeHtml(rank)}</span><span class="rank-team-name">${escapeHtml(t.name)}</span>${rankingMovementMarkup(t)}</li>`;
   }).join("")}</ol>`).join("");
 }
 function escapeHtml(s) { return String(s ?? "").replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c])); }
