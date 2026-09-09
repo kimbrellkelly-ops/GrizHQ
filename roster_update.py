@@ -278,7 +278,7 @@ function photoFor(p){return rosterPhotos[p.name]||generatedRosterPhoto(p);}
 """
     photo_pattern=r"(?:const rosterPhotoBase='[^']*';\n)?function generatedRosterPhoto\(p\)\{.*?\}\nfunction photoFor\(p\)\{return rosterPhotos\[p\.name\]\|\|(?:generatedRosterPhoto\(p\)|'')\;\}\n"
     if re.search(photo_pattern,text,flags=re.S):
-        text=re.sub(photo_pattern,fallback_js,text,count=1,flags=re.S)
+        text=re.sub(photo_pattern,lambda m:fallback_js,text,count=1,flags=re.S)
     else:
         marker='const rosterPhotos='+json.dumps(merged_photos,ensure_ascii=False,indent=2)+';\n'
         text=text.replace(marker,marker+fallback_js,1)
@@ -293,9 +293,6 @@ function photoFor(p){return rosterPhotos[p.name]||generatedRosterPhoto(p);}
         if pos in {'QB','RB','WR','TE','OL','OT','ATH'}: return 'offense'
         return 'defense'
     def class_key(value):
-        # Official GoGriz currently uses labels such as "Fr.", "So.",
-        # "Jr.", "Sr.", "5th", and "Gr.". Normalize punctuation
-        # and spacing so the count logic is resilient to presentation changes.
         v=re.sub(r'[^a-z0-9]+','',str(value or '').lower())
         return {
             'fr':'FRESHMEN', 'freshman':'FRESHMEN',
@@ -380,8 +377,6 @@ def main():
                 u=absolute_url(im['src'],profile)
                 if valid_image_url(u) and key and (key==alt or key==title or key in alt or key in title):
                     return name,u
-            # Coach profile pages are dedicated to one coach; the first valid
-            # Sidearm/Cloudfront image is therefore a safe fallback.
             for im in ip.images:
                 u=absolute_url(im['src'],profile)
                 if valid_image_url(u): return name,u
