@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-09T18:52:14.901123+00:00",
+  "updated": "2026-09-09T19:03:46.102490+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 48,
+  "story_count": 49,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,22 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Griz Game Day 9-10-26",
+      "url": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/2/0c/20cdb1e6-bc02-4f3c-8502-2da52aeb33f5/6aa1a4f47887d.pdf.pdf",
+      "date": "Sep. 9, 2026",
+      "published_at": "2026-09-09T18:27:00+00:00",
+      "description": "Latest Montana football coverage.",
+      "source": "Missoulian",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/30/20260829_fbvssouthernutah_0125.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/30/20260829_fbvssouthernutah_0125.jpg",
+      "image_fallback": true
+    },
     {
       "title": "Grizzlies WR Landon Ransom-Goelz thriving after blood clot in brain, injuries",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_0e875c0b-728f-530b-96de-5668b6c2826f.html",
