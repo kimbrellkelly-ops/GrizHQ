@@ -1,7 +1,8 @@
 {
-  "schema_version":"1.0",
-  "publication_status":"SUBSET_ONLY",
-  "note":"These are source-visible penalty events extracted from verified GoGriz play-by-play. They are not a complete game ledger unless the game's event reconciliation status is PASS. Missing yardage is NULL; compound and offsetting fouls are preserved.",
+  "schema_version":"1.1",
+  "publication_status":"PARTIAL_SOURCE_LEDGER",
+  "note":"These are source-visible penalty events extracted from verified GoGriz play-by-play. They may be published as a documented subset even when a game does not yet fully reconcile to the official team summary. Official team totals remain authoritative. Missing fields stay NULL; compound and offsetting fouls are preserved. A reconciliation mismatch creates a coverage/research flag, not a reason to discard otherwise supported events. No inferred yardage is published.",
+  "publication_policy":{"official_team_totals":"authoritative","source_visible_events":"publish_when_independently_supported","full_game_ledger":"requires_exact_reconciliation","missing_data":"NULL","inference":"never","assessment":"manual_evidence_only"},
   "events":[
     {"id":"2026-SUU-001","game_id":"2026-SUU","quarter":1,"clock":"11:24","team":"Southern Utah","type":"False Start","yards":5,"no_play":true,"player":"Joshua Acord"},
     {"id":"2026-SUU-002","game_id":"2026-SUU","quarter":1,"clock":"10:??","team":"Montana","type":"Unsportsmanlike Conduct","yards":12,"automatic_first_down":true,"player":"Tyler King"},
@@ -38,6 +39,8 @@
     {"id":"2025-IDAHO-STATE-001","game_id":"2025-IDAHO-STATE","quarter":1,"clock":"??","team":"Montana","type":"Pass Interference","yards":15,"no_play":true,"player":"Brooks Davis"},
     {"id":"2025-IDAHO-STATE-002","game_id":"2025-IDAHO-STATE","quarter":1,"clock":"??","team":"Montana","type":"Pass Interference","yards":15,"no_play":true,"player":"Kenzel Lawler"},
     {"id":"2025-IDAHO-STATE-003","game_id":"2025-IDAHO-STATE","quarter":2,"clock":"??","team":"Idaho State","type":"Unnecessary Roughness","yards":13,"player":"Maka Tu'akoi"},
-    {"id":"2025-IDAHO-STATE-004","game_id":"2025-IDAHO-STATE","quarter":2,"clock":"??","team":"Idaho State","type":"Holding","yards":10,"no_play":true,"player":"Tei(or) Tuioti"}
+    {"id":"2025-IDAHO-STATE-004","game_id":"2025-IDAHO-STATE","quarter":2,"clock":"??","team":"Idaho State","type":"Holding","yards":10,"no_play":true,"player":"Tei(or) Tuioti"},
+    {"id":"2025-INDIANA-STATE-001","game_id":"2025-INDIANA-STATE","quarter":1,"clock":"11:54","team":"Indiana State","type":"False Start","yards":5,"no_play":true,"player":"Lance Rees"},
+    {"id":"2025-INDIANA-STATE-002","game_id":"2025-INDIANA-STATE","quarter":1,"clock":"08:13","team":"Indiana State","type":"Holding","yards":10,"no_play":false,"player":"Larry Stephens III"}
   ]
 }
