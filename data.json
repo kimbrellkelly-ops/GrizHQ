@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09T00:39:55.553119+00:00",
+  "updated": "2026-09-09T00:55:00.890777+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Montana hosts Utah Tech in Saturday showdown",
+      "url": "https://gogriz.com/news/2026/9/8/football-montana-hosts-utah-tech-in-saturday-showdown",
+      "date": "Tue, 8 Sep 2026 18:34:00 MST",
+      "description": "The Montana Grizzlies return to action this week inside the friendly confines of Washington-Grizzly Stadium on Saturday for their second of three nonconference matchups in 2026, ho"
+    },
+    {
       "title": "Gillman sets records as Griz roll past Bulldogs, 45-10",
       "url": "https://gogriz.com/news/2026/9/5/football-gillman-sets-records-as-griz-roll-past-bulldogs-45-10",
       "date": "Sat, 5 Sep 2026 19:45:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/8/26/football-missoula-named-best-college-sports-town-in-usa-today-poll",
       "date": "Wed, 26 Aug 2026 13:00:00 MST",
       "description": "MISSOULA – Missoula, the home of the University of Montana Grizzlies, recently came out on top in the USA TODAY Sports Readers' Choice 2026 for 'Best College Sports Town."
-    },
-    {
-      "title": "Coach Kennedy Radio Show premieres Wednesday, live from The Den",
-      "url": "https://gogriz.com/news/2026/8/26/football-coach-kennedy-radio-show-premieres-wednesday-live-from-the-den",
-      "date": "Wed, 26 Aug 2026 08:22:00 MST",
-      "description": "MISSOULA - The Montana Grizzly Coaches Radio Show returns to The Den each Wednesday at 7 p.m. in 2026, giving fans an exclusive inside look at Griz football with first year head co"
     }
   ],
   "depth_chart": {
@@ -27396,5 +27396,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-09T00:40:28.576292+00:00"
+  "fcs_scores_updated": "2026-09-09T00:55:36.126818+00:00"
 }
