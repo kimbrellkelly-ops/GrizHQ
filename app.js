@@ -1370,8 +1370,12 @@ async function renderFCSScoreboard(){
   }
   function eventMatchesGame(ev,g){
     const ts=eventTeams(ev);if(ts.length<2)return false;
-    const a=ts.find(t=>t.homeAway==='away')||ts[0],h=ts.find(t=>t.homeAway==='home')||ts[1];
-    return teamMatch(g.displayAway,a)&&teamMatch(g.displayHome,h);
+    // Match the scheduled matchup by team names/IDs only. ESPN has returned
+    // inconsistent homeAway flags/order for some FCS events, so using that
+    // flag to identify the game can select/reject the wrong orientation.
+    // The Griz HQ schedule is the source of truth for who is away/home; this
+    // helper only needs to identify the correct two-team event.
+    return ts.some(t=>teamMatch(g.displayAway,t))&&ts.some(t=>teamMatch(g.displayHome,t));
   }
   function findTeamEvent(team,events){return events.find(ev=>eventTeams(ev).some(t=>teamObjMatch(team,t)))||null;}
   const HISTORICAL_BIG_SKY_SCORES={
