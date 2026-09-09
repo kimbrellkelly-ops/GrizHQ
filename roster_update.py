@@ -95,7 +95,17 @@ def validate_roster(players):
 def absolute_url(src,base): return urllib.parse.urljoin(base,src)
 def valid_image_url(u):
     low=u.lower()
-    return ('sidearm' in low or 'gogriz.com' in low or 'cloudfront.net' in low) and not low.startswith('data:')
+    if low.startswith('data:'): return False
+    if any(x in low for x in ('nav_main.svg','logo.svg','favicon','sprite','icon.svg')): return False
+    return 'sidearm' in low or 'gogriz.com' in low or 'cloudfront.net' in low
+
+def name_matches(name,label):
+    key=norm(name); other=norm(label)
+    if not key or not other: return False
+    if key==other or key in other: return True
+    parts=[norm(x) for x in str(name).split() if norm(x)]
+    reversed_key=''.join(reversed(parts))
+    return bool(reversed_key and reversed_key==other)
 
 def verified_photos(roster_page, players):
     """Resolve player headshots from each player's official GoGriz profile page.
@@ -131,7 +141,7 @@ def verified_photos(roster_page, players):
             # Prefer an image whose alt/title names the player exactly.
             for im in ip.images:
                 alt=norm(im['alt']); title=norm(im['title'])
-                if key and (key==alt or key==title or key in alt or key in title):
+                if key and (name_matches(name,im['alt']) or name_matches(name,im['title'])):
                     u=absolute_url(im['src'],url)
                     if valid_image_url(u): return name,u
             # Official player pages have the player portrait as the primary
@@ -163,7 +173,7 @@ def verified_photos(roster_page, players):
         if p['name'] in out: continue
         key=norm(p['name'])
         for im in imgs:
-            if key and (norm(im['alt'])==key or norm(im['title'])==key or key in norm(im['alt']) or key in norm(im['title'])):
+            if key and (name_matches(p['name'],im['alt']) or name_matches(p['name'],im['title'])):
                 out[p['name']]=im['url']; break
     return out
 
@@ -216,6 +226,14 @@ KNOWN_PLAYER_PHOTOS = {
     "Chris Johnson II": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Johnson_II__Chris_6.jpg&width=180",
     "Legend Lyons": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Lyons__Legend_6.jpg&width=180",
     "Keali'i Ah Yat": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Ah_Yat__Kealii_8.jpg&width=180",
+    "Luke Flowers": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Flowers__Luke_4.jpg&width=180",
+    "Gage Sliter": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Sliter__Gage_12.jpg&width=180",
+    "Cody Schweikert": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Schweikert__Cody_18.jpg&width=180",
+    "Logan Knaevelsrud": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Knaevelsrud__Logan_96.jpg&width=180",
+}
+
+KNOWN_COACH_PHOTOS = {
+    "Jaylen Johnson": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Johnson__Jaylen.jpg&width=180",
 }
 
 def update_index(text,players,photos,coaches,coach_photos):
@@ -248,7 +266,7 @@ def update_index(text,players,photos,coaches,coach_photos):
     # official 2026 GoGriz roster. These are recovery anchors: an automated
     # scrape must never be able to erase them.
     for name,url in KNOWN_PLAYER_PHOTOS.items():
-        merged_photos.setdefault(name,url)
+        merged_photos[name]=url
     for name,url in photos.items():
         if url: merged_photos[name]=url
     missing_known=[name for name in KNOWN_PLAYER_PHOTOS if name in {p['name'] for p in players} and not merged_photos.get(name)]
@@ -265,7 +283,7 @@ def update_index(text,players,photos,coaches,coach_photos):
     # Preserve the generated Sidearm fallback for players without a specific
     # verified mapping.  This is important for newly added players and for
     # temporary profile/scrape failures.
-    fallback_js=r"""const rosterPhotoBase='https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/22/';
+    fallback_js="""const rosterPhotoBase='https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/22/';
 function generatedRosterPhoto(p){
   if(!p || !/^\d+$/.test(String(p.n))) return '';
   const parts=p.name.trim().split(/\s+/); if(parts.length<2) return '';
@@ -278,7 +296,7 @@ function photoFor(p){return rosterPhotos[p.name]||generatedRosterPhoto(p);}
 """
     photo_pattern=r"(?:const rosterPhotoBase='[^']*';\n)?function generatedRosterPhoto\(p\)\{.*?\}\nfunction photoFor\(p\)\{return rosterPhotos\[p\.name\]\|\|(?:generatedRosterPhoto\(p\)|'')\;\}\n"
     if re.search(photo_pattern,text,flags=re.S):
-        text=re.sub(photo_pattern,lambda m: fallback_js,text,count=1,flags=re.S)
+        text=re.sub(photo_pattern,lambda m:fallback_js,text,count=1,flags=re.S)
     else:
         marker='const rosterPhotos='+json.dumps(merged_photos,ensure_ascii=False,indent=2)+';\n'
         text=text.replace(marker,marker+fallback_js,1)
@@ -378,7 +396,7 @@ def main():
             for im in ip.images:
                 alt=norm(im['alt']); title=norm(im['title'])
                 u=absolute_url(im['src'],profile)
-                if valid_image_url(u) and key and (key==alt or key==title or key in alt or key in title):
+                if valid_image_url(u) and key and (name_matches(name,im['alt']) or name_matches(name,im['title'])):
                     return name,u
             # Coach profile pages are dedicated to one coach; the first valid
             # Sidearm/Cloudfront image is therefore a safe fallback.
@@ -395,7 +413,14 @@ def main():
         for fut in as_completed(futures):
             name,url=fut.result()
             if url: coach_photos[name]=url
-    if len(coach_photos)<10: raise RuntimeError(f'Safety stop: only {len(coach_photos)} core coach photos verified')
+    # Recovery anchor for the one official coach profile whose page can expose
+    # the site navigation SVG before the actual portrait. Never allow a generic
+    # site asset to replace a verified coach portrait.
+    for name,url in KNOWN_COACH_PHOTOS.items():
+        coach_photos[name]=url
+    if len(coach_photos)<len(coaches):
+        missing=[c['name'] for c in coaches if not coach_photos.get(c['name'])]
+        raise RuntimeError('Safety stop: missing coach photos: '+', '.join(missing))
     print(f'Roster: {len(players)} players; verified photos: {len(photos)}; coaches: {len(coaches)}; coach photos: {len(coach_photos)}')
     current=INDEX.read_text(encoding='utf-8'); updated=update_index(current,players,photos,coaches,coach_photos)
     if updated==current: print('No roster/coach changes detected.'); return
