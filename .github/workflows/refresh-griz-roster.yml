@@ -1,4 +1,4 @@
-name: Refresh Griz Roster HQ
+        name: Refresh Griz Roster HQ
 
 on:
   workflow_dispatch:
