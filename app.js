@@ -288,7 +288,17 @@ async function fetchLiveFCSCoachesPoll() {
   if (!poll || !Array.isArray(poll.ranks) || !poll.ranks.length) throw new Error("No FCS Coaches Poll returned");
   const teams = poll.ranks.slice(0, 25).map(r => {
     const t = r.team || {};
-    const name = t.displayName || t.shortDisplayName || t.name || t.abbreviation || "Team";
+    const rawName = t.displayName || t.shortDisplayName || t.name || t.abbreviation || "Team";
+    // ESPN often returns the school plus mascot (for example,
+    // "Montana State Bobcats"). Griz HQ's rankings use school names,
+    // so normalize the live poll to the same naming convention.
+    const canonicalNames = RANKING_SNAPSHOTS?.coaches?.teams?.map(x => x.name) || [];
+    const rawNorm = String(rawName).toLowerCase().replace(/[^a-z0-9]/g, "");
+    const matchedCanonical = canonicalNames.find(c => {
+      const cn = String(c).toLowerCase().replace(/[^a-z0-9]/g, "");
+      return rawNorm === cn || rawNorm.startsWith(cn);
+    });
+    const name = matchedCanonical || rawName;
     const rank = Number(r.current ?? r.rank);
     const previous = Number(r.previous ?? r.previousRank);
     const hasPrevious = Number.isFinite(previous) && previous > 0;
@@ -1282,7 +1292,8 @@ async function renderFCSScoreboard(){
   const teamIds={montana:'149',montanastate:'147',idaho:'70',weberstate:'2692',easternwashington:'331',northernarizona:'2464',northerncolorado:'2458',idahostate:'304',calpoly:'13',southernutah:'253',utahtech:'3101',ucdavis:'302',portlandstate:'2502'};
   const FCS_LOGO_IDS={
     Montana:'149','Montana State':'147',Idaho:'70','Weber State':'2692','Eastern Washington':'331','Northern Arizona':'2464','Northern Colorado':'2458','Idaho State':'304','Cal Poly':'13','Southern Utah':'253','Utah Tech':'3101','UC Davis':'302','Portland State':'2502',
-    Nevada:'2440',Colorado:'38','South Dakota':'233','Wyoming':'2751','Colorado State':'36',Utah:'254',Oregon:'2483','Oregon State':'204','Washington State':'265',Washington:'264','San Jose State':'23','San José State':'23','Utah State':'328','Boise State':'68','Fresno State':'278','San Diego State':'21','South Dakota State':'2569','North Dakota State':'2449','Montana State (57)':'147','North Dakota':'155','Lamar':'2320','Incarnate Word':'2916','SMU':'256',Yale:'43','William & Mary':'2729','Southern Illinois':'79','Sacramento State':'16',Harvard:'108','Western Carolina':'2717','West Florida':'110242','Abilene Christian':'2000',Mercer:'2382','Austin Peay':'2046',Villanova:'222',Louisville:'97',Lehigh:'2329','Illinois State':'2287','Tarleton State':'348','Rhode Island':'227','Youngstown State':'2754','Tennessee Tech':'2633','Stephen F. Austin':'2617','Northern Iowa':'2448',Richmond:'2678','New Hampshire':'160',Maine:'311'  };
+    Nevada:'2440',Colorado:'38','South Dakota':'233','Wyoming':'2751','Colorado State':'36',Utah:'254',Oregon:'2483','Oregon State':'204','Washington State':'265',Washington:'264','San Jose State':'23','San José State':'23','Utah State':'328','Boise State':'68','Fresno State':'278','San Diego State':'21','South Dakota State':'2569','North Dakota State':'2449','Montana State (57)':'147','North Dakota':'155','Lamar':'2320','Incarnate Word':'2916','SMU':'256'
+  };
   const bigSkyAliases={
     montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanast','montanastatebobcats'],idaho:['idaho','idahovandals'],
     weberstate:['weberstate','weberst','weberstatewildcats'],easternwashington:['easternwashington','ewashington','easternwash','easternwashingtoneagles'],
@@ -1370,12 +1381,8 @@ async function renderFCSScoreboard(){
   }
   function eventMatchesGame(ev,g){
     const ts=eventTeams(ev);if(ts.length<2)return false;
-    // Match the scheduled matchup by team names/IDs only. ESPN has returned
-    // inconsistent homeAway flags/order for some FCS events, so using that
-    // flag to identify the game can select/reject the wrong orientation.
-    // The Griz HQ schedule is the source of truth for who is away/home; this
-    // helper only needs to identify the correct two-team event.
-    return ts.some(t=>teamMatch(g.displayAway,t))&&ts.some(t=>teamMatch(g.displayHome,t));
+    const a=ts.find(t=>t.homeAway==='away')||ts[0],h=ts.find(t=>t.homeAway==='home')||ts[1];
+    return teamMatch(g.displayAway,a)&&teamMatch(g.displayHome,h);
   }
   function findTeamEvent(team,events){return events.find(ev=>eventTeams(ev).some(t=>teamObjMatch(team,t)))||null;}
   const HISTORICAL_BIG_SKY_SCORES={
@@ -1422,8 +1429,7 @@ async function renderFCSScoreboard(){
   function top25TeamRow(t, fallback, rank, isRanked, showScore){
     const name=teamName(t,fallback), logo=logoFor(t,fallback);
     const rankHtml=isRanked?`<span class="fcs-team-rank">#${escapeHtml(rank)}</span>`:'<span class="fcs-team-rank fcs-team-rank-empty"></span>';
-    const logoClass=logo?'has-logo':'no-logo';
-    return `<div class="ghq-fcs-top-team-row ${logoClass}">${rankHtml}${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}<span>${escapeHtml(name)}</span>${showScore?`<strong>${escapeHtml(t?.score??'—')}</strong>`:''}</div>`;
+    return `<div class="ghq-fcs-top-team-row">${rankHtml}${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}<span>${escapeHtml(name)}</span>${showScore?`<strong>${escapeHtml(t?.score??'—')}</strong>`:''}</div>`;
   }
   function top25Card(t,events,scheduled){
     const rank=String(t.rank||''),name=cleanTeamLabel(t.team||'Team');
@@ -1432,10 +1438,8 @@ async function renderFCSScoreboard(){
     const ev=sg ? (events.find(e=>eventMatchesGame(e,sg)) || rawEv && eventMatchesGame(rawEv,sg) ? (events.find(e=>eventMatchesGame(e,sg)) || rawEv) : null) : rawEv;
     if(ev){
       const ts=eventTeams(ev);
-      // The verified Griz HQ schedule controls visible home/away order.
-      // ESPN homeAway is only a fallback if a team cannot be matched.
-      const a=sg ? (ts.find(x=>teamMatch(sg.displayAway,x))||ts.find(x=>x.homeAway==='away')||null) : (ts.find(x=>x.homeAway==='away')||ts[0]||null);
-      const h=sg ? (ts.find(x=>teamMatch(sg.displayHome,x))||ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||null) : (ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]||null);
+      const a=sg? (ts.find(x=>teamMatch(sg.displayAway,x))||ts.find(x=>x.homeAway==='away')||ts[0]) : (ts.find(x=>x.homeAway==='away')||ts[0]);
+      const h=sg? (ts.find(x=>teamMatch(sg.displayHome,x))||ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]) : (ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]);
       const playing=ev.completed||ev.state==='in';
       const rankedAway=teamMatch(name,a), rankedHome=teamMatch(name,h);
       const awayRow=top25TeamRow(a,sg?.displayAway||'Away',rank,rankedAway,playing);
@@ -1488,8 +1492,6 @@ async function renderFCSScoreboard(){
       .ghq-fcs-rank-card{overflow:hidden!important}.ghq-fcs-top-matchup{min-width:0!important}.ghq-fcs-rank-heading{display:flex!important;align-items:center!important;gap:10px!important;width:100%!important;min-height:30px!important}.ghq-fcs-rank-heading b{display:inline-block!important;visibility:visible!important;opacity:1!important;color:#151515!important;font-size:17px!important;font-weight:800!important;line-height:1.2!important;white-space:normal!important}.ghq-fcs-rank-heading strong{margin-left:auto!important;color:#151515!important}.ghq-fcs-scheduled{display:flex!important;gap:8px!important;align-items:center!important;margin:9px 0 4px!important;font-size:14px!important;color:#151515!important}.ghq-fcs-scheduled span{opacity:.55!important}.ghq-fcs-team-row{display:flex!important;align-items:center!important;min-width:0!important;gap:8px!important}.ghq-fcs-team-row span{display:block!important;visibility:visible!important;opacity:1!important;color:#151515!important;font-weight:700!important;white-space:normal!important}.ghq-fcs-team-row img{width:26px!important;height:26px!important;object-fit:contain!important;flex:0 0 26px!important}.ghq-fcs-team-row strong{margin-left:auto!important}.ghq-fcs-scheduled-teams{display:flex!important;align-items:center!important;gap:8px!important}.ghq-fcs-scheduled-teams .ghq-fcs-team-row{min-width:0!important;flex:1 1 0!important}.ghq-fcs-scheduled-teams .ghq-fcs-team-row span{font-size:13px!important}.ghq-fcs-game .bigsky-betting{min-width:180px!important}.ghq-fcs-game .fcs-matchup{min-width:0!important}
       .ghq-fcs-top-scorecard{display:flex!important;flex-direction:column!important;gap:0!important;padding:8px 10px!important;min-width:0!important}
       .ghq-fcs-top-team-row{display:grid!important;grid-template-columns:34px 30px minmax(0,1fr) auto!important;align-items:center!important;min-height:42px!important;gap:7px!important;border-bottom:1px solid #e6e6e6!important;color:#151515!important}
-      .ghq-fcs-top-team-row.no-logo{grid-template-columns:34px minmax(0,1fr) auto!important}
-      .ghq-fcs-top-team-row.no-logo>span:not(.fcs-team-rank){white-space:normal!important;overflow:visible!important;text-overflow:clip!important}
       .ghq-fcs-top-team-row:last-of-type{border-bottom:0!important}
       .ghq-fcs-top-team-row .fcs-team-rank{display:flex!important;align-items:center!important;justify-content:center!important;background:#8c1531!important;color:#fff!important;border-radius:5px!important;font-size:12px!important;font-weight:900!important;min-height:25px!important;padding:0 4px!important}
       .ghq-fcs-top-team-row .fcs-team-rank-empty{background:transparent!important}
