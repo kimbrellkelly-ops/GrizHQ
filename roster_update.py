@@ -12,6 +12,7 @@ schedule, transfer tracker, depth chart, or honors/watchlist content.
 from __future__ import annotations
 import argparse, html, json, re, sys, urllib.parse, urllib.request
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -97,26 +98,73 @@ def valid_image_url(u):
     return ('sidearm' in low or 'gogriz.com' in low or 'cloudfront.net' in low) and not low.startswith('data:')
 
 def verified_photos(roster_page, players):
+    """Resolve player headshots from each player's official GoGriz profile page.
+
+    Sidearm's roster index currently does not expose every player photo as a plain
+    <img> on the roster landing page. The reliable source is the official player
+    bio page, which exposes the current headshot image directly.
+    """
+    lp=LinkParser(); lp.feed(roster_page)
+    profile_links={}
+    player_keys={norm(p['name']):p['name'] for p in players}
+    for href,label in lp.links:
+        if '/sports/football/roster/' not in href or '/coaches/' in href or not href: continue
+        key=norm(label)
+        if key in player_keys:
+            profile_links[player_keys[key]]=absolute_url(href,ROSTER_PAGE_URL)
+    # Keep a second pass for labels such as "Full Bio for Monte Gillman".
+    for href,label in lp.links:
+        if '/sports/football/roster/' not in href or '/coaches/' in href or not href: continue
+        low=norm(label)
+        for p in players:
+            if p['name'] in profile_links: continue
+            key=norm(p['name'])
+            if key and key in low:
+                profile_links[p['name']]=absolute_url(href,ROSTER_PAGE_URL); break
+
+    def resolve(item):
+        name,url=item
+        try:
+            page=fetch(url)
+            ip=ImageParser(); ip.feed(page)
+            key=norm(name)
+            # Prefer an image whose alt/title names the player exactly.
+            for im in ip.images:
+                alt=norm(im['alt']); title=norm(im['title'])
+                if key and (key==alt or key==title or key in alt or key in title):
+                    u=absolute_url(im['src'],url)
+                    if valid_image_url(u): return name,u
+            # Official player pages have the player portrait as the primary
+            # Sidearm image. Use the first valid Sidearm/Cloudfront image only
+            # when the alt/title is not populated.
+            for im in ip.images:
+                u=absolute_url(im['src'],url)
+                if valid_image_url(u): return name,u
+        except Exception as exc:
+            print(f'Player photo warning: {name}: {exc}')
+        return name,''
+
+    out={}
+    items=[(p['name'],profile_links[p['name']]) for p in players if p['name'] in profile_links]
+    with ThreadPoolExecutor(max_workers=10) as pool:
+        futures=[pool.submit(resolve,item) for item in items]
+        for fut in as_completed(futures):
+            name,url=fut.result()
+            if url: out[name]=url
+
+    # If the roster landing page itself exposes matching images, use those as a
+    # fallback for any player profile we could not resolve.
     ip=ImageParser(); ip.feed(roster_page)
     imgs=[]
     for x in ip.images:
         u=absolute_url(x['src'],ROSTER_PAGE_URL)
         if valid_image_url(u): imgs.append({'url':u,'alt':x['alt'],'title':x['title']})
-    out={}
     for p in players:
+        if p['name'] in out: continue
         key=norm(p['name'])
         for im in imgs:
             if key and (norm(im['alt'])==key or norm(im['title'])==key or key in norm(im['alt']) or key in norm(im['title'])):
                 out[p['name']]=im['url']; break
-    for p in players:
-        if p['name'] in out: continue
-        idx=roster_page.lower().find(p['name'].lower())
-        if idx<0: continue
-        window=roster_page[max(0,idx-4500):idx+1500]
-        candidates=re.findall(r'<img\b[^>]*(?:src|data-src|data-lazy-src)=["\']([^"\']+)["\'][^>]*>',window,re.I)
-        for src in candidates:
-            u=absolute_url(src,ROSTER_PAGE_URL)
-            if valid_image_url(u): out[p['name']]=u; break
     return out
 
 CORE_COACHES = [
@@ -248,46 +296,49 @@ def main():
     roster_page=fetch(ROSTER_PAGE_URL); roster_print=fetch(ROSTER_PRINT_URL); coaches_page=fetch(COACHES_URL)
     players=parse_roster(roster_print); validate_roster(players)
     photos=verified_photos(roster_page,players)
-    if len(photos)<max(70,int(len(players)*0.65)):
+    print(f'Player profile links: {len(photos)} headshots resolved')
+    if len(photos)<max(90,int(len(players)*0.90)):
         raise RuntimeError(f'Safety stop: only {len(photos)} verified player photos found for {len(players)} players')
     raw_coaches=parse_coaches(coaches_page); coaches=validate_coaches(raw_coaches)
     linkp=LinkParser(); linkp.feed(coaches_page)
     profile_links={}
     for href,label in linkp.links:
         if '/sports/football/roster/coaches/' not in href: continue
-        n=norm(label)
+        label_key=norm(label)
+        href_key=norm(href)
         for c in coaches:
             ck=norm(c['name'])
-            if ck and ck in n:
+            parts=[norm(x) for x in c['name'].split()]
+            if (ck and ck in label_key) or (parts and all(part in href_key for part in parts[-1:])):
                 profile_links[c['name']]=absolute_url(href,COACHES_URL); break
-    coach_photos={}
-    for c in coaches:
-        profile=profile_links.get(c['name'])
-        if not profile: continue
+
+    def resolve_coach(c):
+        name=c['name']; profile=profile_links.get(name)
+        if not profile: return name,''
         try:
             profile_page=fetch(profile)
-        except Exception as exc:
-            print(f'Coach photo warning: could not fetch {c["name"]} profile: {exc}'); continue
-        key=norm(c['name'])
-        lp=LinkParser(); lp.feed(profile_page)
-        for href,label in lp.links:
-            if not valid_image_url(absolute_url(href,profile)): continue
-            low=norm(label)
-            if low.startswith('image') and key and key in low:
-                coach_photos[c['name']]=absolute_url(href,profile); break
-        if c['name'] in coach_photos: continue
-        ip=ImageParser(); ip.feed(profile_page)
-        for im in ip.images:
-            alt=norm(im['alt']); title=norm(im['title'])
-            if key and (key==alt or key==title or key in alt or key in title):
+            ip=ImageParser(); ip.feed(profile_page); key=norm(name)
+            for im in ip.images:
+                alt=norm(im['alt']); title=norm(im['title'])
                 u=absolute_url(im['src'],profile)
-                if valid_image_url(u): coach_photos[c['name']]=u; break
-        if c['name'] in coach_photos: continue
-        surname=norm(c['name'].split()[-1])
-        for im in ip.images:
-            u=absolute_url(im['src'],profile)
-            if valid_image_url(u) and surname and surname in norm(u): coach_photos[c['name']]=u; break
-    if len(coach_photos)<5: print(f'Warning: only {len(coach_photos)} coach photos verified; continuing with placeholders')
+                if valid_image_url(u) and key and (key==alt or key==title or key in alt or key in title):
+                    return name,u
+            # Coach profile pages are dedicated to one coach; the first valid
+            # Sidearm/Cloudfront image is therefore a safe fallback.
+            for im in ip.images:
+                u=absolute_url(im['src'],profile)
+                if valid_image_url(u): return name,u
+        except Exception as exc:
+            print(f'Coach photo warning: {name}: {exc}')
+        return name,''
+
+    coach_photos={}
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        futures=[pool.submit(resolve_coach,c) for c in coaches]
+        for fut in as_completed(futures):
+            name,url=fut.result()
+            if url: coach_photos[name]=url
+    if len(coach_photos)<10: raise RuntimeError(f'Safety stop: only {len(coach_photos)} core coach photos verified')
     print(f'Roster: {len(players)} players; verified photos: {len(photos)}; coaches: {len(coaches)}; coach photos: {len(coach_photos)}')
     current=INDEX.read_text(encoding='utf-8'); updated=update_index(current,players,photos,coaches,coach_photos)
     if updated==current: print('No roster/coach changes detected.'); return
