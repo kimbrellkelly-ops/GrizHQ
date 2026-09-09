@@ -288,7 +288,7 @@ async function fetchLiveFCSCoachesPoll() {
   if (!poll || !Array.isArray(poll.ranks) || !poll.ranks.length) throw new Error("No FCS Coaches Poll returned");
   const teams = poll.ranks.slice(0, 25).map(r => {
     const t = r.team || {};
-    const name = t.displayName || t.shortDisplayName || t.name || t.abbreviation || "Team";
+    const name = t.location || t.school?.name || t.displayName || t.shortDisplayName || t.name || t.abbreviation || "Team";
     const rank = Number(r.current ?? r.rank);
     const previous = Number(r.previous ?? r.previousRank);
     const hasPrevious = Number.isFinite(previous) && previous > 0;
