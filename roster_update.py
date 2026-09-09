@@ -204,6 +204,20 @@ def coach_html(coaches, coach_photos):
         cards.append(f'<article class="griz-coach-card"><div class="griz-coach-photo">{pic}</div><div class="griz-coach-info"><span class="eyebrow">COACHING STAFF</span><h4>{html_escape(c["name"])}</h4><p>{html_escape(c["title"])}</p><a href="https://gogriz.com/sports/football/coaches/2026" target="_blank" rel="noopener">OFFICIAL STAFF PROFILE ↗</a></div></article>')
     return '\n'.join(cards)
 
+KNOWN_PLAYER_PHOTOS = {
+    "Monte Gillman": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Gillman__Monte_0.jpg&width=180",
+    "Gabe Stroud": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Stroud__Gabe_0.jpg&width=180",
+    "Hunter Haines": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Haines__Hunter_2.jpg&width=180",
+    "Landon Ransom-Goelz": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Ransom-Goelz__Landon_2.jpg&width=180",
+    "Brooks Davis": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Davis__Brooks_3.jpg&width=180",
+    "Luke Flowers": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Flowers__Luke_4.jpg&width=180",
+    "Dane Parker": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Parker__Dane_4.jpg&width=180",
+    "Ian Finch": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Finch__Ian_5.jpg&width=180",
+    "Chris Johnson II": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Johnson_II__Chris_6.jpg&width=180",
+    "Legend Lyons": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Lyons__Legend_6.jpg&width=180",
+    "Keali'i Ah Yat": "https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Ah_Yat__Kealii_8.jpg&width=180",
+}
+
 def update_index(text,players,photos,coaches,coach_photos):
     a=text.find('const raw=`')
     if a<0: raise RuntimeError('Safety stop: roster raw marker missing')
@@ -213,18 +227,61 @@ def update_index(text,players,photos,coaches,coach_photos):
 
     ps=text.find('const rosterPhotos=')
     if ps<0: raise RuntimeError('Safety stop: roster photo marker missing')
-    # The updater intentionally removes filename-guessing logic.  Older versions
-    # expected a rosterPhotoBase marker here, but current index.html now has only
-    # `};` followed directly by photoFor().  Locate the actual object terminator
-    # instead of depending on a removed legacy marker.
+    # Preserve the existing verified photo library.  A roster scrape is allowed to
+    # ADD/refresh photos, but it is never allowed to erase photos simply because
+    # Sidearm failed to expose them on one run.
     pe=text.find('};',ps)
     if pe<0: raise RuntimeError('Safety stop: roster photo map end marker missing')
-    photo_js='const rosterPhotos='+json.dumps(photos,ensure_ascii=False,indent=2)+';'
+    existing_blob=text[ps+len('const rosterPhotos='):pe+1]
+    try:
+        existing_photos=json.loads(existing_blob)
+    except Exception:
+        try:
+            import ast
+            existing_photos=ast.literal_eval(existing_blob)
+        except Exception as exc:
+            raise RuntimeError(f'Safety stop: existing roster photo map could not be parsed: {exc}')
+    if not isinstance(existing_photos,dict):
+        raise RuntimeError('Safety stop: existing roster photo map is not an object')
+    merged_photos=dict(existing_photos)
+    # Seed the small set of player URLs that were manually verified against the
+    # official 2026 GoGriz roster. These are recovery anchors: an automated
+    # scrape must never be able to erase them.
+    for name,url in KNOWN_PLAYER_PHOTOS.items():
+        merged_photos.setdefault(name,url)
+    for name,url in photos.items():
+        if url: merged_photos[name]=url
+    missing_known=[name for name in KNOWN_PLAYER_PHOTOS if name in {p['name'] for p in players} and not merged_photos.get(name)]
+    if missing_known:
+        raise RuntimeError('Safety stop: verified player photo anchors missing: '+', '.join(missing_known))
+    # Keep the entire existing verified library. A player can temporarily disappear
+    # from the current print roster (or be listed under a changed name) without
+    # making a previously verified image unsafe to retain. New/current entries are
+    # added above; nothing already verified is deleted by an automatic refresh.
+    if len(merged_photos) < len(existing_photos):
+        raise RuntimeError('Safety stop: player photo coverage would decrease')
+    photo_js='const rosterPhotos='+json.dumps(merged_photos,ensure_ascii=False,indent=2)+';'
     text=text[:ps]+photo_js+'\n'+text[pe+2:]
-    # Disable filename guessing; photos are verified URLs only.
-    text=re.sub(r"const rosterPhotoBase='[^']*';\nfunction generatedRosterPhoto\(p\)\{.*?\}\nfunction photoFor\(p\)\{return rosterPhotos\[p.name\]\|\|generatedRosterPhoto\(p\);\}","function photoFor(p){return rosterPhotos[p.name]||'';}",text,count=1,flags=re.S)
-    # Also normalize an already-modern photoFor function without changing any other JS.
-    text=re.sub(r"function photoFor\(p\)\{return rosterPhotos\[p\.name\]\|\|'';\}","function photoFor(p){return rosterPhotos[p.name]||'';}",text,count=1)
+    # Preserve the generated Sidearm fallback for players without a specific
+    # verified mapping.  This is important for newly added players and for
+    # temporary profile/scrape failures.
+    fallback_js="""const rosterPhotoBase='https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/22/';
+function generatedRosterPhoto(p){
+  if(!p || !/^\d+$/.test(String(p.n))) return '';
+  const parts=p.name.trim().split(/\s+/); if(parts.length<2) return '';
+  const first=parts[0].replace(/['’]/g,'');
+  const last=parts.slice(1).join('_').replace(/['’]/g,'_').replace(/[^A-Za-z0-9_-]/g,'_');
+  const file=`Cropped_${last}__${first}_${p.n}.jpg`;
+  return `https://images.sidearmdev.com/crop?height=270&type=webp&url=${encodeURIComponent(rosterPhotoBase+file)}&width=180`;
+}
+function photoFor(p){return rosterPhotos[p.name]||generatedRosterPhoto(p);}
+"""
+    photo_pattern=r"(?:const rosterPhotoBase='[^']*';\n)?function generatedRosterPhoto\(p\)\{.*?\}\nfunction photoFor\(p\)\{return rosterPhotos\[p\.name\]\|\|(?:generatedRosterPhoto\(p\)|'')\;\}\n"
+    if re.search(photo_pattern,text,flags=re.S):
+        text=re.sub(photo_pattern,fallback_js,text,count=1,flags=re.S)
+    else:
+        marker='const rosterPhotos='+json.dumps(merged_photos,ensure_ascii=False,indent=2)+';\n'
+        text=text.replace(marker,marker+fallback_js,1)
 
     start='<!-- ROSTER_COACHES_START -->'; end='<!-- ROSTER_COACHES_END -->'
     if start not in text or end not in text: raise RuntimeError('Safety stop: coach section markers missing')
