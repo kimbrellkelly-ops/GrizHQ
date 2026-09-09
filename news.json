@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-08T23:48:01.848971+00:00",
+  "updated": "2026-09-09T00:05:33.567977+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 42,
+  "story_count": 44,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "ISIAH CHILDS TALKS GRIZ FOOTBALL CAREER, BECOMING THE TEAM’S OFFICIAL BARBER, & DEALING W/ ADVERSITY",
+      "url": "https://skylinesportsmt.com/isiah-childs-talks-griz-football-career-becoming-the-teams-official-barber-dealing-w-adversity/",
+      "date": "Sep. 8, 2026",
+      "published_at": "2026-09-08T23:49:04+00:00",
+      "description": "September 8, 2026 ISIAH CHILDS TALKS GRIZ FOOTBALL CAREER, BECOMING THE TEAM’S OFFICIAL BARBER, & DEALING W/ ADVERSITY",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/09/DBP.-ISIAH-CHILDS-INTERVIEW-THUMBNAIL.png",
+      "is_video": true,
+      "youtube_id": "9uOciIKI-cM",
+      "video_url": "https://www.youtube.com/watch?v=9uOciIKI-cM",
+      "video_thumbnail": "https://i.ytimg.com/vi/9uOciIKI-cM/hqdefault.jpg"
+    },
     {
       "title": "Jeff Choate drags Griz into Bobcats-Wolf Pack conversation",
       "url": "https://missoulian.com/sports/college/big-sky-conference/montana-state-university/article_11cc629c-1815-53ff-a710-805f708e8595.html",
@@ -374,6 +389,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/8/30/20260829_fbvssouthernutah_0134.jpg"
+    },
+    {
+      "title": "Southern Utah head coach DeLane Fitzgerald & SUU defensive coordinator Shay McClure on Montana Griz",
+      "url": "https://skylinesportsmt.com/southern-utah-head-coach-delane-fitzgerald-suu-defensive-coordinator-shay-mcclure-on-montana-griz/",
+      "date": "Aug. 27, 2026",
+      "published_at": "2026-08-27T13:43:16+00:00",
+      "description": "Southern Utah head coach DeLane Fitzgerald & SUU defensive coordinator Shay McClure on Montana Griz August 27, 2026",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Fitzgerald-1.webp",
+      "is_video": true,
+      "youtube_id": "eyfcruefW6E",
+      "video_url": "https://www.youtube.com/watch?v=eyfcruefW6E",
+      "video_thumbnail": "https://i.ytimg.com/vi/eyfcruefW6E/hqdefault.jpg"
     },
     {
       "title": "Grizzly Insider returns in 2026",
