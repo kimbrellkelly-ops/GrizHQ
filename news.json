@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09T19:22:48.150988+00:00",
+  "updated": "2026-09-09T19:35:05.827342+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 49,
   "sources": [
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Jeff Choate drags Griz into Bobcats-Wolf Pack conversation",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/montana-state-university/article_11cc629c-1815-53ff-a710-805f708e8595.html",
+      "date": "Sep. 9, 2026",
+      "published_at": "2026-09-09T19:15:00+00:00",
+      "description": "Former Montana State head coach Jeff Choate claimed the Montana Grizzlies “weren't interested” in playing Nevada. UM athletic director Kent Haslam said Choate was “not telling the truth.”",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/a3/ea355b9a-dd11-5c1c-a6a7-1cba6c43dd26/6aa05ba7db1ef.image.jpg?resize=300%2C240",
+      "is_video": true,
+      "youtube_id": "wLVk0UNe3tc",
+      "video_url": "https://www.youtube.com/watch?v=wLVk0UNe3tc",
+      "video_thumbnail": "https://i.ytimg.com/vi/wLVk0UNe3tc/hqdefault.jpg"
+    },
     {
       "title": "Griz Game Day 9-10-26",
       "url": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/2/0c/20cdb1e6-bc02-4f3c-8502-2da52aeb33f5/6aa1a4f47887d.pdf.pdf",
@@ -104,21 +119,6 @@
       "youtube_id": "9uOciIKI-cM",
       "video_url": "https://www.youtube.com/watch?v=9uOciIKI-cM",
       "video_thumbnail": "https://i.ytimg.com/vi/9uOciIKI-cM/hqdefault.jpg"
-    },
-    {
-      "title": "Jeff Choate drags Griz into Bobcats-Wolf Pack conversation",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/montana-state-university/article_11cc629c-1815-53ff-a710-805f708e8595.html",
-      "date": "Sep. 8, 2026",
-      "published_at": "2026-09-08T19:15:00+00:00",
-      "description": "Former Montana State head coach Jeff Choate claimed the Montana Grizzlies “weren't interested” in playing Nevada. UM athletic director Kent Haslam said Choate was “not telling the truth.”",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/a3/ea355b9a-dd11-5c1c-a6a7-1cba6c43dd26/6aa05ba7db1ef.image.jpg?resize=300%2C240",
-      "is_video": true,
-      "youtube_id": "wLVk0UNe3tc",
-      "video_url": "https://www.youtube.com/watch?v=wLVk0UNe3tc",
-      "video_thumbnail": "https://i.ytimg.com/vi/wLVk0UNe3tc/hqdefault.jpg"
     },
     {
       "title": "WEEK 1 REACTION: ELI GILLMAN IS THE GREATEST RUNNING BACK IN MONTANA HISTORY, WE ARE ALL WITNESSES",
