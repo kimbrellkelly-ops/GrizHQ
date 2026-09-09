@@ -7,7 +7,7 @@
 <title>Griz HQ | Montana Football</title>
 <meta content="Griz HQ — a fan-built Montana Grizzlies football information hub." name="description"/>
 <link href="styles.css?v=20260906-news3" rel="stylesheet"/>
-<script defer="" src="app.js?v=20260908-rank-team-names3"></script>
+<script defer="" src="app.js?v=20260908-rank-team-names2"></script>
 <style id="griz-tabs-critical">
 .tab-panel{display:none!important}
 .tab-panel.is-active{display:block!important}
@@ -341,8 +341,95 @@
 <a class="button maroon" href="https://gogriz.com/sports/football/roster" rel="noopener" target="_blank">FULL OFFICIAL ROSTER ↗</a>
 <a class="button outline-maroon" id="depth-chart-source" href="https://gogriz.com/news/2026/8/25/football-kennedy-era-opens-as-griz-host-t-birds" rel="noopener" target="_blank">OFFICIAL GAME NOTES / TWO-DEEP ↗</a>
 </div>
+<div class="roster-hq-intro">
+  <div class="roster-hq-copy">
+    <div class="eyebrow">ROSTER HQ</div>
+    <h3>Meet the 2026 Griz</h3>
+    <p>One place to see the roster, current two-deep, position groups, experience and new arrivals. Use the explorer below instead of jumping around the page.</p>
+  </div>
+  <div class="roster-hq-stats">
+    <div class="roster-hq-stat"><b>107</b><span>PLAYERS</span><small>Official 2026 roster</small></div>
+    <div class="roster-hq-stat"><b>3</b><span>UNITS</span><small>Offense · Defense · ST</small></div>
+    <div class="roster-hq-stat"><b>11</b><span>GROUPS</span><small>QB through specialists</small></div>
+    <div class="roster-hq-stat accent"><b>2-DEEP</b><span>NOW</span><small>Latest published depth chart</small></div>
+  </div>
+</div>
+
+<div class="roster-feature-grid">
+  <section class="roster-feature-panel captains-panel">
+    <div class="roster-feature-head"><span class="feature-icon">C</span><div><div class="eyebrow">LEADERSHIP</div><h3>Team Captains</h3></div></div>
+    <div class="roster-feature-players" id="roster-captains"></div>
+  </section>
+  <section class="roster-feature-panel watch-panel">
+    <div class="roster-feature-head"><span class="feature-icon">★</span><div><div class="eyebrow">2026 WATCH</div><h3>Players to Watch</h3></div></div>
+    <div class="roster-feature-players" id="roster-watch"></div>
+  </section>
+  <section class="roster-feature-panel honors-panel">
+    <div class="roster-feature-head"><span class="feature-icon">✦</span><div><div class="eyebrow">PRESEASON RECOGNITION</div><h3>Honors &amp; Watchlists</h3></div></div>
+    <div class="roster-honors-list" id="roster-honors"></div>
+  </section>
+</div>
+
+<div class="roster-section-nav" aria-label="Roster HQ sections">
+  <button type="button" class="roster-section-nav-btn active" data-roster-jump="roster-explorer">👥 <span>ROSTER EXPLORER</span></button>
+  <button type="button" class="roster-section-nav-btn" data-roster-jump="roster-depth-chart">☷ <span>DEPTH CHART</span></button>
+  <button type="button" class="roster-section-nav-btn" data-roster-jump="roster-position-groups">▦ <span>POSITION GROUPS</span></button>
+  <button type="button" class="roster-section-nav-btn" data-roster-jump="roster-transfers">↔ <span>TRANSFERS</span></button>
+</div>
+
+<div class="roster-snapshot-grid">
+  <div class="roster-snapshot-card"><span>47</span><strong>OFFENSE</strong><small>QB · RB · WR · TE · OL</small></div>
+  <div class="roster-snapshot-card"><span>56</span><strong>DEFENSE</strong><small>DL · LB · DB</small></div>
+  <div class="roster-snapshot-card"><span>4</span><strong>SPECIALISTS</strong><small>K · P/KP · LS</small></div>
+  <div class="roster-snapshot-card"><span>21</span><strong>FRESHMEN</strong><small>New freshman entries on roster</small></div>
+  <div class="roster-snapshot-card"><span>18</span><strong>R-JUNIORS</strong><small>Experience concentrated in the core</small></div>
+  <div class="roster-snapshot-card"><span>12</span><strong>R-SENIORS</strong><small>Plus graduate-level veterans</small></div>
+</div>
+
+<div class="roster-explorer" id="roster-explorer">
+  <div class="roster-explorer-head">
+    <div><div class="eyebrow">ROSTER EXPLORER</div><h3>Find any Griz in seconds</h3><p>Filter by unit, position or class. Click a player for the full roster card.</p></div>
+    <div class="roster-count" id="roster-count">107 PLAYERS</div>
+  </div>
+  <div class="roster-filters" role="tablist" aria-label="Roster filters">
+    <button class="roster-filter active" data-filter="all">ALL</button>
+    <button class="roster-filter" data-filter="offense">OFFENSE</button>
+    <button class="roster-filter" data-filter="defense">DEFENSE</button>
+    <button class="roster-filter" data-filter="special">SPECIAL TEAMS</button>
+    <button class="roster-filter" data-filter="qb">QB</button>
+    <button class="roster-filter" data-filter="rb">RB</button>
+    <button class="roster-filter" data-filter="wr">WR</button>
+    <button class="roster-filter" data-filter="te">TE</button>
+    <button class="roster-filter" data-filter="ol">OL</button>
+    <button class="roster-filter" data-filter="dl">DL</button>
+    <button class="roster-filter" data-filter="lb">LB</button>
+    <button class="roster-filter" data-filter="db">DB</button>
+    <button class="roster-filter" data-filter="new">NEW</button>
+  </div>
+  <div class="roster-search-row"><input id="roster-search" type="search" placeholder="Search by player, position, school or hometown…" aria-label="Search roster"><span id="roster-filter-note">Showing all 107 players</span></div>
+  <div class="roster-grid" id="roster-grid"></div>
+</div>
+
+<div class="roster-player-modal" id="roster-player-modal" aria-hidden="true">
+  <div class="roster-modal-backdrop" data-close-roster></div>
+  <div class="roster-modal-card" role="dialog" aria-modal="true" aria-labelledby="roster-modal-name">
+    <button class="roster-modal-close" data-close-roster aria-label="Close player card">×</button>
+    <div class="roster-modal-number" id="roster-modal-number"></div>
+    <div class="roster-modal-kicker" id="roster-modal-kicker"></div>
+    <div class="roster-modal-photo-wrap"><img id="roster-modal-photo" class="roster-modal-photo" alt="" loading="lazy"></div>
+    <h3 id="roster-modal-name"></h3>
+    <div class="roster-modal-meta" id="roster-modal-meta"></div>
+    <div class="roster-modal-body" id="roster-modal-body"></div>
+    <a id="roster-modal-official" class="button outline-maroon" href="https://gogriz.com/sports/football/roster" target="_blank" rel="noopener">OFFICIAL ROSTER ↗</a>
+  </div>
+</div>
+
+<div class="depth-switchbar" id="roster-depth-chart">
+  <div><span class="eyebrow">THE CURRENT TWO-DEEP</span><strong>Depth Chart</strong></div>
+  <span>Use the unit cards below to jump around the roster.</span>
+</div>
 <div class="depth-note" id="depth-chart-note">The depth chart below is the latest published two-deep. The official GoGriz roster is the authority for the complete player list and player details.</div>
-<div class="depth-grid">
+<div class="depth-grid" id="roster-position-groups">
 <div class="depth-card"><div class="depth-title">OFFENSE</div><div class="depth-table" id="depth-offense">
 <div class="depth-head"><span>POS</span><span>1ST TEAM</span><span>2ND TEAM</span></div>
 <div class="depth-row"><b>QB</b><span>Keali'i Ah Yat</span><span>Luke Flowers</span></div>
@@ -381,6 +468,118 @@
 <div class="depth-row"><b>KR</b><span>Landon Ransom-Goelz / Monte Gillman</span><span>—</span></div>
 </div></div>
 </div>
+<!-- GRIZ TRANSFERS START -->
+<div class="griz-transfers" id="roster-transfers">
+<div class="griz-transfers-head">
+  <div><div class="eyebrow">WHAT THE GRIZ LOST</div><h3>Griz Transfers</h3><p>Former Montana players who transferred out after the 2025 season. 2026 performance is updated from currently published destination-school statistics; “No stats posted” means the destination has not published player stats yet.</p></div>
+  <div class="griz-transfer-legend"><span>🟢 Thriving</span><span>🟡 Contributing</span><span>⚪ Limited role</span><span>🔴 Not playing</span></div>
+</div>
+<div class="griz-transfer-summary">
+  <div><b>11</b><span>TRACKED DEPARTURES</span></div>
+  <div><b>7</b><span>FBS DESTINATIONS</span></div>
+  <div><b>3</b><span>IOWA STATE CYCLONES</span></div>
+  <div><b>2025</b><span>BASELINE SEASON</span></div>
+</div>
+<div class="griz-transfer-grid">
+  <article class="griz-transfer-card status-yellow">
+    <div class="griz-transfer-top"><span class="griz-transfer-status">🟡 CONTRIBUTING</span><span class="griz-loss">GRIZ LOSS <b>A-</b></span></div>
+    <h4>Malae Fonoti</h4><div class="griz-transfer-dest">Missouri · RB · Junior</div>
+    <div class="griz-transfer-line"><b>Montana 2025</b><span>11 G · 48 rush · 184 yds · 4 TD · 10 rec · 97 yds</span></div>
+    <div class="griz-transfer-line current"><b>2026</b><span>1 G · 3 rush · 18 yds · 6.0 avg · 0 TD</span></div>
+    <p>Limited early workload, but he has already produced an explosive 6.0-yard average in his first game.</p>
+    <a href="https://mutigers.com/sports/football/roster/season/2026/player/malae-fonoti" target="_blank" rel="noopener">MISSOURI PROFILE ↗</a>
+  </article>
+  <article class="griz-transfer-card status-white">
+    <div class="griz-transfer-top"><span class="griz-transfer-status">⚪ LIMITED ROLE</span><span class="griz-loss">GRIZ LOSS <b>B+</b></span></div>
+    <h4>Colin Amick</h4><div class="griz-transfer-dest">Iowa State · OL · R-So.</div>
+    <div class="griz-transfer-line"><b>Montana 2025</b><span>11 G · 7 starts · FCS Freshman All-American</span></div>
+    <div class="griz-transfer-line current"><b>2026</b><span>No player stats posted</span></div>
+    <p>Important young tackle for the 2025 Griz. Iowa State has not published individual 2026 statistics yet.</p>
+    <a href="https://cyclones.com/sports/football/roster/colin-amick/14373" target="_blank" rel="noopener">IOWA STATE PROFILE ↗</a>
+  </article>
+  <article class="griz-transfer-card status-white">
+    <div class="griz-transfer-top"><span class="griz-transfer-status">⚪ LIMITED ROLE</span><span class="griz-loss">GRIZ LOSS <b>B</b></span></div>
+    <h4>Jose Balver-Mendoza</h4><div class="griz-transfer-dest">Nevada · OL · Junior</div>
+    <div class="griz-transfer-line"><b>Montana 2025</b><span>4 games</span></div>
+    <div class="griz-transfer-line current"><b>2026</b><span>No player stats posted</span></div>
+    <p>Depth offensive-line departure. Nevada lists him on the 2026 roster but has no individual season stats posted.</p>
+    <a href="https://nevadawolfpack.com/sports/football/roster/jose-balver-mendoza/12794" target="_blank" rel="noopener">NEVADA PROFILE ↗</a>
+  </article>
+  <article class="griz-transfer-card status-white">
+    <div class="griz-transfer-top"><span class="griz-transfer-status">⚪ LIMITED ROLE</span><span class="griz-loss">GRIZ LOSS <b>B+</b></span></div>
+    <h4>Jareb Ramos</h4><div class="griz-transfer-dest">Iowa State · DT · R-Sr.</div>
+    <div class="griz-transfer-line"><b>Montana 2025</b><span>15 G · 15 starts · 31 tackles · 2.5 TFL · 2 sacks · 2 FF</span></div>
+    <div class="griz-transfer-line current"><b>2026</b><span>No player stats posted</span></div>
+    <p>A full-season starter and disruptive nose tackle for Montana in 2025; Iowa State has not posted individual 2026 stats.</p>
+    <a href="https://cyclones.com/sports/football/roster/jareb-ramos/14402" target="_blank" rel="noopener">IOWA STATE PROFILE ↗</a>
+  </article>
+  <article class="griz-transfer-card status-white">
+    <div class="griz-transfer-top"><span class="griz-transfer-status">⚪ LIMITED ROLE</span><span class="griz-loss">GRIZ LOSS <b>A</b></span></div>
+    <h4>Caleb Otlewski</h4><div class="griz-transfer-dest">Colorado State · LB · R-Jr.</div>
+    <div class="griz-transfer-line"><b>Montana 2025</b><span>79 tackles · 9.5 TFL · 2 sacks · 2 INT · 2 PBU</span></div>
+    <div class="griz-transfer-line current"><b>2026</b><span>No player stats posted</span></div>
+    <p>Montana's leading tackler in 2025. The Rams currently have no individual 2026 statistics posted for him.</p>
+    <a href="https://csurams.com/sports/football/roster/caleb-otlewski/14912" target="_blank" rel="noopener">COLORADO STATE PROFILE ↗</a>
+  </article>
+  <article class="griz-transfer-card status-white">
+    <div class="griz-transfer-top"><span class="griz-transfer-status">⚪ LIMITED ROLE</span><span class="griz-loss">GRIZ LOSS <b>A</b></span></div>
+    <h4>Diezel Wilkinson</h4><div class="griz-transfer-dest">UAB · DB · Junior</div>
+    <div class="griz-transfer-line"><b>Montana 2025</b><span>15 G · 78 tackles · 2.5 TFL · 2 sacks · 2 PBU</span></div>
+    <div class="griz-transfer-line current"><b>2026</b><span>No player stats posted</span></div>
+    <p>One of Montana's biggest defensive losses. UAB lists him on the roster but has not posted 2026 individual stats.</p>
+    <a href="https://uabsports.com/sports/football/roster/diezel-wilkinson/12181" target="_blank" rel="noopener">UAB PROFILE ↗</a>
+  </article>
+  <article class="griz-transfer-card status-white">
+    <div class="griz-transfer-top"><span class="griz-transfer-status">⚪ LIMITED ROLE</span><span class="griz-loss">GRIZ LOSS <b>A-</b></span></div>
+    <h4>Kyon Loud</h4><div class="griz-transfer-dest">Duke · CB · R-So.</div>
+    <div class="griz-transfer-line"><b>Montana 2025</b><span>7 G · 7 starts · 25 tackles · 2 TFL · 4 PBU</span></div>
+    <div class="griz-transfer-line current"><b>2026</b><span>No player stats posted</span></div>
+    <p>A starting corner when healthy in 2025. Duke's current player page has no 2026 individual stats posted.</p>
+    <a href="https://goduke.com/sports/football/roster/kyon-loud/24477" target="_blank" rel="noopener">DUKE PROFILE ↗</a>
+  </article>
+  <article class="griz-transfer-card status-white">
+    <div class="griz-transfer-top"><span class="griz-transfer-status">⚪ LIMITED ROLE</span><span class="griz-loss">GRIZ LOSS <b>C+</b></span></div>
+    <h4>Rashid Mansour</h4><div class="griz-transfer-dest">Houston Christian · CB · Junior</div>
+    <div class="griz-transfer-line"><b>Montana 2025</b><span>Did not appear</span></div>
+    <div class="griz-transfer-line current"><b>2026</b><span>No player stats posted</span></div>
+    <p>Mansour did not play for Montana in 2025; HCU lists him on its 2026 roster.</p>
+    <a href="https://hcuhuskies.com/sports/football/roster/2026" target="_blank" rel="noopener">HCU ROSTER ↗</a>
+  </article>
+  <article class="griz-transfer-card status-yellow">
+    <div class="griz-transfer-top"><span class="griz-transfer-status">🟡 CONTRIBUTING</span><span class="griz-loss">GRIZ LOSS <b>B+</b></span></div>
+    <h4>Terahiti Wolfe</h4><div class="griz-transfer-dest">Portland State · S · Junior</div>
+    <div class="griz-transfer-line"><b>Montana 2025</b><span>11 G · 11 tackles · 1 INT</span></div>
+    <div class="griz-transfer-line current"><b>2026</b><span>2 G · 4 tackles</span></div>
+    <p>He's already seeing the field for Portland State and has recorded four tackles through two games.</p>
+    <a href="https://goviks.com/sports/football/roster/terahiti-wolfe/6908" target="_blank" rel="noopener">PORTLAND STATE PROFILE ↗</a>
+  </article>
+  <article class="griz-transfer-card status-white">
+    <div class="griz-transfer-top"><span class="griz-transfer-status">⚪ LIMITED ROLE</span><span class="griz-loss">GRIZ LOSS <b>C</b></span></div>
+    <h4>Justus Breston</h4><div class="griz-transfer-dest">Mary · DB · 5th Year</div>
+    <div class="griz-transfer-line"><b>Montana 2025</b><span>4 G · no recorded stats</span></div>
+    <div class="griz-transfer-line current"><b>2026</b><span>No player stats posted</span></div>
+    <p>Returned to Mary after one season at Montana. His 2024 Mary season included 20 tackles, 3 INT and 7 PBU.</p>
+    <a href="https://goumary.com/sports/football/roster/justus-breston/9415" target="_blank" rel="noopener">MARY PROFILE ↗</a>
+  </article>
+  <article class="griz-transfer-card status-white">
+    <div class="griz-transfer-top"><span class="griz-transfer-status">⚪ LIMITED ROLE</span><span class="griz-loss">GRIZ LOSS <b>A-</b></span></div>
+    <h4>Micah Harper</h4><div class="griz-transfer-dest">Iowa State · S · R-Sr.</div>
+    <div class="griz-transfer-line"><b>Montana 2025</b><span>15 G · 15 starts · 45 tackles · 1 TFL · 2 INT · 7 PBU</span></div>
+    <div class="griz-transfer-line current"><b>2026</b><span>No player stats posted</span></div>
+    <p>One of Montana's starting safeties in 2025. Iowa State's current cumulative stats do not list individual production yet.</p>
+    <a href="https://cyclones.com/sports/football/roster/micah-harper/14418" target="_blank" rel="noopener">IOWA STATE PROFILE ↗</a>
+  </article>
+</div>
+<div class="griz-transfer-coach">
+  <div><span class="griz-transfer-status">🏈 COACH DEPARTURE</span><h4>Bobby Hauck</h4><div class="griz-transfer-dest">Illinois · Defensive Coordinator</div></div>
+  <div><b>GRIZ LOSS: A+</b><span>Former Montana head coach · Illinois staff in 2026</span></div>
+  <p>Tracked separately from player transfers. Hauck left Montana after the 2025 season and joined Illinois as defensive coordinator.</p>
+  <div class="griz-transfer-line current"><span>2026 Illinois defense: 1 G · 23 pts allowed · 413 total yds allowed · 194 rush yds allowed · 219 pass yds allowed · 1 INT · 1 sack</span></div>
+  <div class="griz-transfer-note"><b>Through Week 1:</b> Illinois beat UAB 42-23 on Sept. 3. The Illini defense also recorded a pick-six by Ismael Kante.</div>
+</div>
+<div class="griz-transfer-note"><b>Data note:</b> This first version is a verified snapshot, not the automated weekly tracker yet. “No player stats posted” is intentional when the destination school has not published individual 2026 statistics. That prevents us from inventing numbers. Derek Moreland is not included in the tracker yet because I could not verify his 2026 destination from a reliable source.</div>
+</div>
+<!-- GRIZ TRANSFERS END -->
 </section>
 <section class="section tab-panel" data-tab="stats" id="stats">
 <div class="section-head"><div class="eyebrow">NUMBERS</div><h2>Griz Stats Central</h2><span id="stats-through">Through Week 1</span></div>
@@ -518,6 +717,32 @@
 </section>
 </main>
 <script>
+(function initRosterHQLinks(){
+  const root=document.getElementById('roster');
+  if(!root)return;
+  root.querySelectorAll('.roster-pulse-card').forEach(card=>{
+    card.addEventListener('click',e=>{
+      e.preventDefault();
+      const target=document.querySelector(card.getAttribute('href'));
+      if(target){target.scrollIntoView({behavior:'smooth',block:'start'});}
+    });
+  });
+  root.querySelectorAll('.roster-intel-card').forEach(card=>{
+    const link=card.querySelector('a[href]');
+    if(!link)return;
+    card.setAttribute('role','link');
+    card.setAttribute('tabindex','0');
+    card.addEventListener('click',e=>{
+      if(e.target.closest('a'))return;
+      window.open(link.href,'_blank','noopener');
+    });
+    card.addEventListener('keydown',e=>{
+      if(e.key==='Enter' || e.key===' '){e.preventDefault();window.open(link.href,'_blank','noopener');}
+    });
+  });
+})();
+</script>
+<script>
 (function(){
   const root=document.getElementById('history'); if(!root)return;
   const filters=[...root.querySelectorAll('[data-ghx-filter]')];
@@ -625,6 +850,190 @@
   };
   const bind=()=>document.querySelectorAll('[data-news-filter]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-news-filter]').forEach(x=>x.classList.remove('is-active'));btn.classList.add('is-active');render(btn.dataset.newsFilter);}));
   fetch('news.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(data=>{stories=Array.isArray(data.stories)?data.stories:[];if(!stories.length)throw new Error('No stories');renderHome();render('ALL');bind();const u=document.getElementById('news-updated-time');if(u)u.textContent=data.updated?`Updated ${new Date(data.updated).toLocaleString([], {month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}`:'Updated automatically';}).catch(()=>{const u=document.getElementById('news-updated-time');if(u)u.textContent='Using latest available headlines';});
+})();
+</script>
+<script>
+(function(){
+const raw=`0|Monte Gillman|R-So|WR|5'8|162|Dassel, Minn.|Dassel-Cokato HS
+0|Gabe Stroud|R-So|CB|5'11|186|Whitehouse, Texas|Whitehouse HS / North Texas
+2|Hunter Haines|R-So|S|6'2|205|West Linn, Ore.|West Linn HS / San Diego St.
+2|Landon Ransom-Goelz|R-Jr|WR|6'1|185|Trophy Club, Texas|Byron Nelson HS / Rice
+3|Brooks Davis|R-So|WR|6'0|174|Brentwood, Calif.|Heritage HS
+3|Jeilani Davis|R-So|CB|6'0|204|Inglewood, Calif.|Mater Dei HS / Utah
+4|Dane Parker|R-So|S|6'1|175|Puyallup, Wash.|Puyallup HS / Air Force Prep
+5|Ian Finch|R-Sr|WR|6'3|209|Missoula, Mont.|Hellgate HS
+6|Chris Johnson|R-So|CB|6'1|200|Fort Worth, Texas|Aledo HS / Arizona St.
+6|Legend Lyons|R-Fr|WR|6'2|180|Covina, Calif.|Charter Oak HS / Minnesota
+7|Kash Goicoechea|R-So|S|6'1|197|Kalispell, Mont.|Glacier HS
+8|Keali'i Ah Yat|R-Jr|QB|6'1|200|Kaneohe, Hawaii|Kamehameha HS
+8|Adama Fall|Gr.S|S|6'3|210|Simi Valley, Calif.|Simi Valley HS / Arizona St.
+9|Jordan Dever|R-Jr|WR|6'0|174|Spokane, Wash.|Shadle Park HS
+10|Eli Gillman|R-Sr|RB|6'0|213|Dassel, Minn.|Dassel-Cokato HS
+11|Cameron Gurnsey|R-Jr|WR|6'1|197|Butte, Mont.|Butte HS
+12|Elijah Brady|R-Jr|CB|6'1|172|Seattle, Wash.|West Seattle HS
+12|Gage Sliter|R-Jr|QB|6'1|193|Kalispell, Mont.|Glacier HS
+13|Brock Beaner|R-Fr|S|6'0|193|Anacortes, Wash.|Anacortes HS
+13|Lekeldrick Bridges|R-So|WR|5'11|170|Cedar Hill, Texas|Cedar Hill
+14|DeAnte Gentry|R-Fr|CB|5'11|169|Fort Worth, Texas|Lamar HS
+14|Korbin Hendrix|R-Jr|WR|6'3|192|McKinney, Texas|McKinney North HS / Arizona St.
+16|Braeden Orlandi|R-Jr|S|6'1|205|Valley Springs, Calif.|Calaveras HS / Carroll
+17|Kade Boyd|R-Jr|S|6'0|197|Billings, Mont.|Central HS
+17|Luke Flowers|R-So|QB|6'1|188|Rigby, Idaho|Rigby HS
+18|Devin Dunn|R-Sr|DB|5'10|189|Chandler, Ariz.|Chandler HS / Arizona
+18|Cody Schweikert|R-So|ATH|6'3|212|Columbia Falls, Mont.|Columbia Falls HS
+19|Drew Price|R-Fr|QB|5'10|171|Jacksonville, Fla.|Ponte Vedra HS
+20|Sage Salopek|R-Fr|CB|6'0|168|Seattle, Wash.|O'dea HS
+21|Ashton Paine|R-Jr|DB|6'1|195|Olympia, Wash.|Tumwater HS / South Dakota
+23|Dylan Paine|Gr|RB|5'9|202|Olympia, Wash.|Tumwater HS / Washington St.
+24|Justin Eklund|R-Sr|LB|6'2|235|Rocklin, Calif.|Folsom HS / Bowling Green
+25|Brady Beaner|So|S|6'0|187|Anacortes, Wash.|Anacortes HS
+26|Chase Cook|R-Fr|RB|5'11|198|Red Lodge, Mont.|Red Lodge HS
+28|Hashim Jones|R-Fr|RB|6'0|208|Hartford, Conn.|Capital Prep
+29|Tanner Huff|Gr|S|6'0|210|Butte, Mont.|Butte HS
+30|Kade Cutler|R-Sr|S|6'0|200|Phillipsburg, Mont.|Flint Creek HS / Montana St.
+31|Tanner Williams|R-So|LB|6'1|225|Orange, Calif.|Mater Dei HS / San Diego St.
+32|Peyton Wing|Sr|LB|6'0|229|Sumner, Wash.|Sumner HS / Portland St.
+33|Taylor Jones|R-Fr|LB|6'1|205|Missoula, Mont.|Loyola Sacred Heart HS
+36|Garrett Speer|R-So|DB|6'0|191|Sherwood, Ore.|Jesuit HS
+37|Clay Oven|R-Jr|LB|6'2|216|Billings, Mont.|Central HS
+39|Fynn Ridgeway|R-Jr|RB|6'1|204|Whitefish, Mont.|Whitefish HS / Minn. St. Moorhead
+40|Colton Lentz|R-Fr|LB|6'3|213|Nooksack, Wash.|Nooksack Valley HS
+41|Ryder Barinowski|Jr|K|6'0|210|Whitefish, Mont.|Whitefish HS / Montana Tech
+42|Giovanni Pifferini|R-Jr|DL|6'4|230|Placerville, Calif.|El Dorado HS / Fresno City
+44|Titus Rohrer|R-Sr|TE|6'7|240|Bryan, Ohio|Bryan HS / Tennessee
+45|Wyatt Redding|R-Sr|KP|6'1|196|Sumner, Wash.|Sumner HS / Central Washington
+46|Jo Silver|R-Sr|KP|6'0|213|Fremont, Ohio|Fremont-Ross HS / Kent St.
+47|Jace Eastlick|R-So|LS|6'3|225|Coeur d'Alene, Idaho|Coeur d'Alene HS / Fort Lewis
+48|Styles Goodman|So|LB|6'2|234|Austin, Texas|Weiss HS / Air Force Prep
+49|Isaac Keim|R-So|DL|6'4|265|Kalispell, Mont.|Glacier HS
+50|Sam Merriman|R-Fr|LB|6'0|225|Seattle, Wash.|Bishop Blanchet HS
+51|Spencer Tripp|R-Fr|DL|5'11|264|Missoula, Mont.|Big Sky HS
+55|Austin Buehler|R-Jr|OL|6'5|285|Helena, Mont.|Capital HS
+56|Naiteitei Mose|R-Sr|LB|6'0|230|Euless, Texas|Trinity HS / Georgetown HS
+57|Jake Mason|R-Jr|DL|6'2|250|Ferndale, Wash.|Ferndale HS / Washington
+58|Solomon Tuliaupupu|Gr|LB|6'3|242|Pomona, Calif.|Mater Dei HS / USC
+59|Nui Tovey|So|DE|6'3|240|Lake Oswego, Ore.|Lakeridge HS / Utah Tech
+61|Lincoln Hoefer|R-Fr|OL|6'6|279|Everson, Wash.|Meridian HS
+63|Kaikoa Kanakaole|R-Fr|OL|6'5|335|Kapa'a, Hawaii|Saint Louis HS
+64|Matt Hilden|R-So|OL|6'6|309|Santa Rosa, Calif.|Cardinal Newman HS
+65|Dylan Jemtegaard|Gr|OL|6'4|281|Yelm, Wash.|Yelm HS / Cal
+66|Ezra Meyer|R-Fr|OL|6'5|290|Missoula, Mont.|Big Sky HS
+68|Torin Jeske|R-So|OL|6'6|271|Bozeman, Mont.|Bozeman HS
+71|Quinlan Hyatt|R-Fr|OL|6'7|285|Spokane, Wash.|West Valley HS
+72|Jack D'Ambra|Gr|OL|6'3|290|Wildomar, Calif.|Vista Murrieta HS / San Diego
+73|Trevor Steinbach|R-So|OL|6'5|300|Sammamish, Wash.|Skyline HS
+75|Dyllan Drummond|R-So|OL|6'4|305|Tyler, Texas|Chapel Hill HS / UNLV
+76|Campbell Vandiver|R-Jr|OT|6'8|280|Nashville, Tenn.|Lipscomb Academy / South Carolina
+77|Carter Bowen|Sr|OL|6'7|318|Dawson, Minn.|Dawson-Boyd HS / Butler CC
+78|Lucas Freitas|R-Jr|OL|6'6|318|Snoqualmie, Wash.|Mount Si HS
+80|Malaki Davis|Fr|TE|6'5|230|Tacoma, Wash.|Roosevelt HS
+81|Mariano Birdno|R-So|TE|6'5|260|Flagstaff, Ariz.|Flagstaff HS / St. Thomas
+84|Grady Walker|R-So|TE|6'4|224|Missoula, Mont.|Sentinel HS
+85|Bridger Smith|R-Fr|WR|6'1|170|Kalispell, Mont.|Glacier HS
+86|Weston Adams|R-Sr|WR|5'11|192|Shell, Wyo.|IMG Academy / Illinois
+88|Reese Brooks|R-Fr|TE|6'4|240|Round Rock, Texas|Cedar Ridge HS / Cal Poly
+89|Danny Sirmon|R-So|TE|6'6|255|Missoula, Mont.|Sentinel HS
+90|Tyler King|R-Jr|DL|6'5|250|Happy Valley, Ore.|Clackamas HS / Central Washington
+91|Cooper Buffington|R-Fr|DL|6'4|252|Winfield, Iowa|Winfield-Mt. Union
+92|Zekiel Seumalo|Sr|DL|6'0|265|Kent, Wash.|Kentwood HS / Allan Hancock
+93|Cole Muilenburg|R-So|DL|6'5|246|Gig Harbor, Wash.|Peninsula HS / Valparaiso
+94|Cole Harpole|R-Fr|DL|6'3|221|Gunter, Texas|Gunter HS
+96|Logan Knaevelsrud|R-Fr|DL|6'4|235|Snoqualmie, Wash.|Mount Si
+97|Hayden Schwartz|R-Sr|DL|6'4|248|Jacksonville, Fla.|The Bolles School / Minnesota
+99|Braydon Bailey|R-Sr|DT|6'2|280|Kona, Hawaii|Kahuku HS / Utah St.
+TBD|Cooper Cyphers|Fr|DL|6'2|230|Aledo, Texas|Aledo HS
+TBD|Wesley Ehret|Fr|WR|6'2|180|Belgrade, Mont.|Belgrade HS
+TBD|Merek Fisher|Fr|TE|6'6|230|Billings, Mont.|Skyview HS
+TBD|Dawson Hammond|Fr|ATH|6'0|170|Malta, Mont.|Malta HS
+TBD|Brady Jay|Fr|QB|6'1|180|Moses Lake, Wash.|Moses Lake HS
+TBD|Kougar Kappel|Fr|S|6'0|180|Red Lodge, Mont.|Red Lodge HS
+TBD|Dane Kellner|Fr|S|5'11|170|Honolulu, Hawaii|Punahou HS
+TBD|Owen Liechti|Fr|OL|6'7|285|Ankeny, Iowa|Ankeny HS
+TBD|Parker Link|Fr|ATH|5'10|170|Missoula, Mont.|Hellgate HS
+TBD|Cooper Neer|Fr|LB|6'3|205|Kennewick, Wash.|Kennewick HS
+TBD|Jayden Nicholas|Fr|CB|6'0|170|Suisun City, Calif.|De La Salle HS
+TBD|Mac Olsen|Fr|DL|6'4|245|Manti, Utah|Manti HS
+TBD|Derek Opitz|Fr|DT|6'3|250|Helena, Mont.|Capital HS
+TBD|Evan Pyron|Fr|DE|6'3|225|Missoula, Mont.|Hellgate HS
+TBD|Elijah Rincon|Fr|DE|6'3|230|Hacienda Heights, Calif.|Downey HS
+TBD|Courtney Rogers|Fr|RB|6'2|200|Blytheville, Ark.|Blytheville HS
+TBD|Lincoln Senter|Fr|ATH|6'5|250|Great Falls, Mont.|C.M. Russell HS
+TBD|William Snell|Fr|WR|6'4|195|Billings, Mont.|Central HS
+TBD|Rodney Weatherspoon|Fr|CB|6'0|175|Forth Worth, Texas|Byron Nelson HS
+TBD|Josiah West|Fr|OL|6'6|260|Prosser, Wash.|Prosser HS`;
+const roster=raw.split('\n').map(x=>{const [n,name,year,pos,ht,wt,home,school]=x.split('|');return{n,name,year,pos,ht,wt,home,school:school||home};});
+const offense=['QB','RB','WR','TE','OL','OT']; const defense=['DL','DE','DT','LB','CB','S','DB','ATH']; const special=['K','KP','LS'];
+const twoDeep=new Set(['Keali\'i Ah Yat','Luke Flowers','Eli Gillman','Dylan Paine','Landon Ransom-Goelz','Weston Adams','Brooks Davis','Jordan Dever','Lekeldrick Bridges','Korbin Hendrix','Titus Rohrer','Mariano Birdno','Reese Brooks','Torin Jeske','Lucas Freitas','Jack D\'Ambra','Matt Hilden','Dyllan Drummond','Austin Buehler','Carter Bowen','Tyler King','Manase Tupou','Cooper Buffington','Zekiel Seumalo','Jake Mason','Hayden Schwartz','Solomon Tuliaupupu','Justin Eklund','Peyton Wing','Nai Mose','Clay Oven','Tanner Williams','Chris Johnson II','Chris Johnson','Gabe Stroud','Brady Beaner','Sage Salopek','Kade Boyd','Ashton Paine','Kade Cutler','Brock Beaner','Tanner Huff','Jo Silver','Ryder Barinowski','Jace Eastlick','Brooks Davis','Monte Gillman','Everett O\'Donnell']);
+function unit(p){if(special.includes(p))return'special';if(offense.includes(p))return'offense';return'defense'}
+const transferNames=new Set(['Gabe Stroud','Hunter Haines','Landon Ransom-Goelz','Jeilani Davis','Chris Johnson','Adama Fall','Devin Dunn','Ashton Paine','Dylan Paine','Justin Eklund','Fynn Ridgeway','Ryder Barinowski','Giovanni Pifferini','Titus Rohrer','Jo Silver','Jace Eastlick','Styles Goodman','Jake Mason','Solomon Tuliaupupu','Nui Tovey','Dylan Jemtegaard','Jack D\'Ambra','Dyllan Drummond','Campbell Vandiver','Carter Bowen','Mariano Birdno','Reese Brooks','Tyler King','Zekiel Seumalo','Cole Muilenburg','Hayden Schwartz','Braydon Bailey','Weston Adams','Korbin Hendrix','Braeden Orlandi','Kade Cutler','Tanner Williams']);
+function isFreshman(p){return p.year==='Fr'}
+function isTransfer(p){return transferNames.has(p.name)}
+const statProfiles={
+  "Keali'i Ah Yat":{now:'2026: 547 passing yards through Week 2',prior:'2025: 4,070 passing yards · 33 TD · 325 completions',note:'Started 2025 as a sophomore and became only the second Griz QB to top 4,000 passing yards in a season.'},
+  'Eli Gillman':{now:'2026: 181 rushing yards through Week 2',prior:'2025: 1,104 rushing yards · 28 total TDs entering 2026',note:'Two-time All-Big Sky back and one of Montana’s most experienced offensive anchors.'},
+  'Brooks Davis':{now:'2026: 160 receiving yards through Week 2',prior:'2025: 54 catches · 698 yards · 5 TD',note:'Set Montana and Big Sky freshman receiving records in 2025 and was a Jerry Rice Award finalist.'},
+  'Peyton Wing':{now:'2026: Returning defensive centerpiece',prior:'2025: 78 tackles · 8.5 TFL · 4 INT',note:'2025 second-team All-Big Sky selection and Montana’s leading returning tackler.'},
+  'Jake Mason':{now:'2026: Returning starting D-line candidate',prior:'2025: 26 tackles · 5.5 TFL · 2 sacks',note:'Earned All-Big Sky honorable mention after a breakout 2025 season.'},
+  'Jordan Dever':{now:'2026: Current roster / 2-deep WR',prior:'2025: 11 catches · 197 yards · 1 TD through the 2025 midseason notes',note:'Veteran receiver who brings prior production to the current wideout room.'},
+  'Korbin Hendrix':{now:'2026: Current roster / 2-deep WR',prior:'2025: 10 catches · 153 yards · 3 TD through seven games',note:'Explosive transfer/returner with big-play production.'}
+};
+function rosterStatus(p){if(isFreshman(p))return'Freshman entry';if(isTransfer(p))return'Transfer / previous college experience';return'Returning Griz'}
+function card(p){const badges=[]; if(twoDeep.has(p.name))badges.push('<span class="roster-badge depth">2-DEEP</span>'); if(isFreshman(p))badges.push('<span class="roster-badge new">FRESHMAN</span>'); else if(isTransfer(p))badges.push('<span class="roster-badge transfer">TRANSFER</span>'); else badges.push('<span class="roster-badge returner">RETURNER</span>'); return `<button class="roster-player" data-name="${p.name.replace(/"/g,'&quot;')}"><span class="roster-photo">${photoMarkup(p)}</span><span class="roster-jersey">${p.n}</span><span class="roster-player-main"><strong>${p.name}</strong><small>${p.year} · ${p.pos} · ${p.ht} · ${p.wt}</small><em>${p.home}</em></span><span class="roster-badges">${badges.join('')}</span></button>`}
+const rosterPhotos={
+  "Monte Gillman":"https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Gillman__Monte_0.jpg&width=180",
+  "Gabe Stroud":"https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Stroud__Gabe_0.jpg&width=180",
+  "Hunter Haines":"https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Haines__Hunter_2.jpg&width=180",
+  "Landon Ransom-Goelz":"https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Ransom-Goelz__Landon_2.jpg&width=180",
+  "Brooks Davis":"https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Davis__Brooks_3.jpg&width=180",
+  "Luke Flowers":"https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Flowers__Luke_4.jpg&width=180",
+  "Dane Parker":"https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Parker__Dane_4.jpg&width=180",
+  "Ian Finch":"https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Finch__Ian_5.jpg&width=180",
+  "Chris Johnson II":"https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Johnson_II__Chris_6.jpg&width=180",
+  "Legend Lyons":"https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Lyons__Legend_6.jpg&width=180",
+  "Keali'i Ah Yat":"https://images.sidearmdev.com/crop?height=270&type=webp&url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgogriz.com%2Fimages%2F2026%2F8%2F22%2FCropped_Ah_Yat__Kealii_8.jpg&width=180"
+};
+const rosterPhotoBase='https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/22/';
+function generatedRosterPhoto(p){
+  if(!p || !/^\d+$/.test(String(p.n))) return '';
+  const parts=p.name.trim().split(/\s+/); if(parts.length<2) return '';
+  const first=parts[0].replace(/['’]/g,'');
+  const last=parts.slice(1).join('_').replace(/['’]/g,'_').replace(/[^A-Za-z0-9_-]/g,'_');
+  const file=`Cropped_${last}__${first}_${p.n}.jpg`;
+  return `https://images.sidearmdev.com/crop?height=270&type=webp&url=${encodeURIComponent(rosterPhotoBase+file)}&width=180`;
+}
+function photoFor(p){return rosterPhotos[p.name]||generatedRosterPhoto(p);}
+function photoMarkup(p){const src=photoFor(p); return src?`<img src="${src}" alt="${p.name}" loading="lazy" data-roster-photo="1">`:`<span class="roster-photo-placeholder">${p.n==='TBD'?'':p.n}</span>`;}
+const featureCaptains=['Keali\'i Ah Yat','Eli Gillman','Solomon Tuliaupupu','Peyton Wing'];
+const featureWatch=[
+  {name:'Keali\'i Ah Yat',tag:'Walter Payton Watch List'},
+  {name:'Eli Gillman',tag:'Walter Payton Watch List'},
+  {name:'Peyton Wing',tag:'Buck Buchanan Watch List'},
+  {name:'Brooks Davis',tag:'2025 Freshman Record-Setter'}
+];
+const featureHonors=[
+  {name:'Eli Gillman',honor:'Stats Perform First Team Preseason All-American',mark:'STATS'},
+  {name:'Peyton Wing',honor:'Stats Perform First Team Preseason All-American',mark:'STATS'},
+  {name:'Keali\'i Ah Yat',honor:'Stats Perform Second Team Preseason All-American',mark:'STATS'},
+  {name:'Eli Gillman',honor:'Big Sky Preseason Offensive MVP',mark:'BIG SKY'},
+  {name:'Eli Gillman',honor:'Walter Payton Award Watch List',mark:'PAYTON'},
+  {name:'Keali\'i Ah Yat',honor:'Walter Payton Award Watch List',mark:'PAYTON'},
+  {name:'Peyton Wing',honor:'Buck Buchanan Award Watch List',mark:'BUCHANAN'}
+];
+function featurePhoto(name){const p=roster.find(x=>x.name===name);const src=p?photoFor(p):'';return src?`<img src="${src}" alt="${name}" loading="lazy">`:`<span class="feature-photo-placeholder">${p?.n||''}</span>`;}
+function renderRosterFeatures(){
+  const cap=document.getElementById('roster-captains');
+  const watch=document.getElementById('roster-watch');
+  const honors=document.getElementById('roster-honors');
+  if(cap) cap.innerHTML=featureCaptains.map(name=>{const p=roster.find(x=>x.name===name);return p?`<button type="button" class="roster-feature-player" data-feature-player="${p.name.replace(/"/g,'&quot;')}"><span class="feature-photo">${featurePhoto(p.name)}</span><strong>${p.name}</strong><small>${p.pos} · #${p.n}</small></button>`:''}).join('');
+  if(watch) watch.innerHTML=featureWatch.map(item=>{const p=roster.find(x=>x.name===item.name);return p?`<button type="button" class="roster-feature-player watch-player" data-feature-player="${p.name.replace(/"/g,'&quot;')}"><span class="feature-photo">${featurePhoto(p.name)}</span><strong>${p.name}</strong><small>🏆 ${item.tag}</small></button>`:''}).join('');
+  if(honors) honors.innerHTML=featureHonors.map(item=>`<button type="button" class="roster-honor-row" data-feature-player="${item.name.replace(/"/g,'&quot;')}"><strong>${item.name}</strong><span>${item.honor}</span><b>${item.mark}</b></button>`).join('');
+  document.querySelectorAll('[data-feature-player]').forEach(b=>b.addEventListener('click',()=>openPlayer(b.dataset.featurePlayer)));
+}
+const grid=document.getElementById('roster-grid'), search=document.getElementById('roster-search'), count=document.getElementById('roster-count'), note=document.getElementById('roster-filter-note'); let active='all';
+function render(){const q=search.value.trim().toLowerCase();const arr=roster.filter(p=>{const text=[p.name,p.year,p.pos,p.home,p.school].join(' ').toLowerCase();const matchQ=!q||text.includes(q);let match=true;if(active==='offense')match=offense.includes(p.pos);else if(active==='defense')match=defense.includes(p.pos);else if(active==='special')match=special.includes(p.pos);else if(['qb','rb','wr','te','ol','dl','lb','db'].includes(active))match=active==='db'?['CB','S','DB'].includes(p.pos):(active==='ol'?['OL','OT'].includes(p.pos):active.toUpperCase()===p.pos|| (active==='dl'&&['DL','DE','DT'].includes(p.pos)));else if(active==='new')match=isFreshman(p);return match&&matchQ});grid.innerHTML=arr.map(card).join('');count.textContent=`${arr.length} PLAYER${arr.length===1?'':'S'}`;note.textContent=q||active!=='all'?`Showing ${arr.length} matching players`:`Showing all ${roster.length} players`;grid.querySelectorAll('.roster-player').forEach(b=>b.addEventListener('click',()=>openPlayer(b.dataset.name)));grid.querySelectorAll('img[data-roster-photo]').forEach(img=>img.addEventListener('error',()=>{const wrap=img.parentElement;const num=img.closest('.roster-player')?.querySelector('.roster-jersey')?.textContent?.trim()||'';wrap.innerHTML=`<span class="roster-photo-placeholder">${num==='TBD'?'':num}</span>`;}));}
+function openPlayer(name){const p=roster.find(x=>x.name===name);if(!p)return;const prof=statProfiles[p.name];document.getElementById('roster-modal-number').textContent=`#${p.n}`;document.getElementById('roster-modal-kicker').textContent=`${unit(p.pos).toUpperCase()} · ${p.pos} · ${rosterStatus(p).toUpperCase()}`;document.getElementById('roster-modal-name').textContent=p.name;document.getElementById('roster-modal-meta').textContent=`${p.year} · ${p.ht} · ${p.wt}`;const mp=document.getElementById('roster-modal-photo');const pphoto=photoFor(p);mp.src=pphoto||'';mp.alt=pphoto?`${p.name} official roster photo`:'';mp.style.display=pphoto?'block':'none';mp.onerror=()=>{mp.style.display='none';};document.getElementById('roster-modal-body').innerHTML=`<div><b>Hometown</b><span>${p.home}</span></div><div><b>Previous school</b><span>${p.school}</span></div><div><b>Roster status</b><span>${rosterStatus(p)}${twoDeep.has(p.name)?' · Listed in current two-deep':''}</span></div>${prof?`<div class="stat-feature"><b>2026 SNAPSHOT</b><span>${prof.now}</span></div><div class="stat-feature"><b>2025 / PRIOR PROFILE</b><span>${prof.prior}</span></div><div class="stat-feature wide"><b>GRIZ HQ TAKE</b><span>${prof.note}</span></div>`:''}`;const official=document.getElementById('roster-modal-official');official.href='https://gogriz.com/sports/football/roster';const m=document.getElementById('roster-player-modal');m.classList.add('open');m.setAttribute('aria-hidden','false');document.body.classList.add('roster-modal-open')}
+function close(){const m=document.getElementById('roster-player-modal');m.classList.remove('open');m.setAttribute('aria-hidden','true');document.body.classList.remove('roster-modal-open')}
+document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.roster-filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');active=b.dataset.filter;render()}));search.addEventListener('input',render);document.querySelectorAll('[data-close-roster]').forEach(x=>x.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});document.querySelectorAll('[data-roster-jump]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.roster-section-nav-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');const target=document.getElementById(b.dataset.rosterJump);if(target)target.scrollIntoView({behavior:'smooth',block:'start'});}));renderRosterFeatures();render();
 })();
 </script>
 </body>
