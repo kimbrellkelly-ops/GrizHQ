@@ -288,17 +288,9 @@ async function fetchLiveFCSCoachesPoll() {
   if (!poll || !Array.isArray(poll.ranks) || !poll.ranks.length) throw new Error("No FCS Coaches Poll returned");
   const teams = poll.ranks.slice(0, 25).map(r => {
     const t = r.team || {};
-    const rawName = t.displayName || t.shortDisplayName || t.name || t.abbreviation || "Team";
-    // ESPN often returns the school plus mascot (for example,
-    // "Montana State Bobcats"). Griz HQ's rankings use school names,
-    // so normalize the live poll to the same naming convention.
-    const canonicalNames = RANKING_SNAPSHOTS?.coaches?.teams?.map(x => x.name) || [];
-    const rawNorm = String(rawName).toLowerCase().replace(/[^a-z0-9]/g, "");
-    const matchedCanonical = canonicalNames.find(c => {
-      const cn = String(c).toLowerCase().replace(/[^a-z0-9]/g, "");
-      return rawNorm === cn || rawNorm.startsWith(cn);
-    });
-    const name = matchedCanonical || rawName;
+    // ESPN's live FCS rankings can expose the mascot as displayName/shortDisplayName
+    // (for example, "Bobcats" or "Grizzlies"). The location field is the school name.
+    const name = t.location || t.displayName || t.shortDisplayName || t.name || t.abbreviation || "Team";
     const rank = Number(r.current ?? r.rank);
     const previous = Number(r.previous ?? r.previousRank);
     const hasPrevious = Number.isFinite(previous) && previous > 0;
