@@ -438,8 +438,8 @@ function renderDepthChart(d) {
   const note = document.getElementById("depth-chart-note");
   const updated = document.getElementById("depth-chart-updated");
   const sourceButton = document.getElementById("depth-chart-source");
-  if (note) note.innerHTML = `${escapeHtml(dc.note || "Latest official two-deep")} <a href="${dc.source_url || "#"}" target="_blank" rel="noopener">Official source ↗</a>`;
-  if (updated) updated.textContent = dc.published ? `Published ${dc.published}${dc.checked_at ? ` • Checked ${new Date(dc.checked_at).toLocaleDateString([], {month:"short",day:"numeric"})}` : ""}` : "2026 season";
+  if (note) note.innerHTML = `${escapeHtml(dc.note || "Latest published two-deep")} <a href="${dc.source_url || "#"}" target="_blank" rel="noopener">Source ↗</a>`;
+  if (updated) updated.textContent = dc.published ? `Published ${dc.published}` : "2026 season";
   if (sourceButton && dc.source_url) sourceButton.href = dc.source_url;
   ["offense","defense","special_teams"].forEach(section => {
     const el = document.getElementById("depth-" + (section === "special_teams" ? "special" : section));
@@ -1486,7 +1486,7 @@ async function renderFCSScoreboard(){
       .ghq-fcs-top-team-row .fcs-team-rank{display:flex!important;align-items:center!important;justify-content:center!important;background:#8c1531!important;color:#fff!important;border-radius:5px!important;font-size:12px!important;font-weight:900!important;min-height:25px!important;padding:0 4px!important}
       .ghq-fcs-top-team-row .fcs-team-rank-empty{background:transparent!important}
       .ghq-fcs-top-team-row img{width:28px!important;height:28px!important;object-fit:contain!important}
-      .ghq-fcs-top-team-row>span:not(.fcs-team-rank){font-size:15px!important;font-weight:750!important;line-height:1.15!important;min-width:0!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+      .ghq-fcs-top-team-row>span:not(.fcs-team-rank){font-size:15px!important;font-weight:750!important;line-height:1.15!important;min-width:0!important;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:anywhere!important}
       .ghq-fcs-top-team-row strong{font-size:18px!important;font-weight:900!important;margin-left:auto!important}
       .ghq-fcs-top-meta{display:flex!important;justify-content:flex-end!important;align-items:center!important;gap:8px!important;padding-top:6px!important;font-size:11px!important;color:#666!important;text-transform:uppercase!important;letter-spacing:.03em!important}
       .ghq-fcs-top-meta small{font-size:10px!important;color:#777!important}
