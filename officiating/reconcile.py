@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Griz HQ Officiating Intelligence — event/summary reconciliation v0.1."""
+"""Griz HQ Officiating Intelligence — event/summary reconciliation v0.2."""
 from __future__ import annotations
 
 import re
@@ -50,8 +50,10 @@ def _offsetting(event: dict[str, Any]) -> bool:
 def reconcile(official_summary: dict[str, Any], events: Iterable[dict[str, Any]], first_team: str, second_team: str) -> ReconciliationResult:
     """Compare normalized events with the official two-team summary.
 
-    first_team/second_team explicitly map the source summary's order. The
-    engine never guesses that mapping.
+    The official summary represents accepted team penalties. Offsetting fouls
+    remain visible as events and are counted separately, but are excluded from
+    accepted-penalty count and accepted-yard totals. Source-order team mapping
+    is explicit; the engine never guesses it.
     """
     flags: set[str] = set()
     if not official_summary.get("found"):
@@ -76,17 +78,18 @@ def reconcile(official_summary: dict[str, Any], events: Iterable[dict[str, Any]]
             declined[team] += 1
             continue
 
-        counts[team] += 1
-        is_offsetting = _offsetting(event)
-        if is_offsetting:
+        if _offsetting(event):
             offsetting[team] += 1
             continue
 
+        counts[team] += 1
+
         group = event.get("compound_group")
         if group:
+            group = str(group)
             if group in seen_compound:
                 continue
-            seen_compound.add(str(group))
+            seen_compound.add(group)
             combined = event.get("compound_yards")
             if combined is None:
                 unknown[team] += 1
