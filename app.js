@@ -288,6 +288,8 @@ async function fetchLiveFCSCoachesPoll() {
   if (!poll || !Array.isArray(poll.ranks) || !poll.ranks.length) throw new Error("No FCS Coaches Poll returned");
   const teams = poll.ranks.slice(0, 25).map(r => {
     const t = r.team || {};
+    // ESPN's live FCS rankings can expose the mascot as displayName/shortDisplayName
+    // (for example, "Bobcats" or "Grizzlies"). The location field is the school name.
     const name = t.location || t.displayName || t.shortDisplayName || t.name || t.abbreviation || "Team";
     const rank = Number(r.current ?? r.rank);
     const previous = Number(r.previous ?? r.previousRank);
