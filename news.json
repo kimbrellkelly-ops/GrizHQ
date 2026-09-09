@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-09T00:34:45.570305+00:00",
+  "updated": "2026-09-09T00:54:39.462155+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 44,
+  "story_count": 45,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Montana hosts Utah Tech in Saturday showdown",
+      "url": "https://gogriz.com/news/2026/9/8/football-montana-hosts-utah-tech-in-saturday-showdown",
+      "date": "Sep. 9, 2026",
+      "published_at": "2026-09-09T01:34:00+00:00",
+      "description": "The Montana Grizzlies return to action this week inside the friendly confines of Washington-Grizzly Stadium on Saturday for their second of three nonconference matchups in 2026, hosing the Utah Tech Trailblazers.",
+      "source": "GoGriz",
+      "badge": "OPPONENT",
+      "short": "OPPONE",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/5/20260905_grizvsdrake3511_kg.JPG",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/5/20260905_grizvsdrake3511_kg.JPG"
+    },
     {
       "title": "ISIAH CHILDS TALKS GRIZ FOOTBALL CAREER, BECOMING THE TEAM’S OFFICIAL BARBER, & DEALING W/ ADVERSITY",
       "url": "https://skylinesportsmt.com/isiah-childs-talks-griz-football-career-becoming-the-teams-official-barber-dealing-w-adversity/",
