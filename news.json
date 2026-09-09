@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09T14:03:48.819735+00:00",
+  "updated": "2026-09-09T14:26:26.195647+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 48,
   "sources": [
@@ -17,21 +17,6 @@
   "stories": [
     {
       "title": "Grizzlies WR Landon Ransom-Goelz thriving after blood clot in brain, injuries",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_0e875c0b-728f-530b-96de-5668b6c2826f.html",
-      "date": "Sep. 9, 2026",
-      "published_at": "2026-09-09T12:00:00+00:00",
-      "description": "\"It was just a tough period for me. I'm hoping to stay healthy here and just produce the most I can.\" —Griz WR Landon Ransom-Goelz",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/9/63/9634d022-117c-5145-8559-db2923e9b988/6aa0781b2db68.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/9/63/9634d022-117c-5145-8559-db2923e9b988/6aa0781b2db68.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Grizzlies WR Landon Ransom-Goelz thriving after blood clot in brain, injuries",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-wr-landon-ransom-goelz-thriving-after-blood-clot-in-brain-injuries/article_1c9e10a8-b18b-4a62-b695-1a8c600c1b12.html",
       "date": "Sep. 9, 2026",
       "published_at": "2026-09-09T12:00:00+00:00",
@@ -44,6 +29,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/c9/1c9e10a8-b18b-4a62-b695-1a8c600c1b12/6a9f3d9af149c.preview.jpg?crop=1763%2C926%2C0%2C113&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Grizzlies WR Landon Ransom-Goelz thriving after blood clot in brain, injuries",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_0e875c0b-728f-530b-96de-5668b6c2826f.html",
+      "date": "Sep. 9, 2026",
+      "published_at": "2026-09-09T12:00:00+00:00",
+      "description": "\"It was just a tough period for me. I'm hoping to stay healthy here and just produce the most I can.\" —Griz WR Landon Ransom-Goelz",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/9/63/9634d022-117c-5145-8559-db2923e9b988/6aa0781b2db68.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/9/63/9634d022-117c-5145-8559-db2923e9b988/6aa0781b2db68.image.jpg?resize=300%2C200"
     },
     {
       "title": "Cat-Griz Insider Podcast: Injury, penalties, Jeff Choate headline 3rd week",
