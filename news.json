@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09T19:03:46.102490+00:00",
+  "updated": "2026-09-09T19:22:48.150988+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 49,
   "sources": [
@@ -28,8 +28,7 @@
       "is_video": false,
       "youtube_id": "",
       "video_url": "",
-      "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/30/20260829_fbvssouthernutah_0125.jpg",
-      "image_fallback": true
+      "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/30/20260829_fbvssouthernutah_0125.jpg"
     },
     {
       "title": "Grizzlies WR Landon Ransom-Goelz thriving after blood clot in brain, injuries",
