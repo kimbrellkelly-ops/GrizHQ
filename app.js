@@ -288,9 +288,7 @@ async function fetchLiveFCSCoachesPoll() {
   if (!poll || !Array.isArray(poll.ranks) || !poll.ranks.length) throw new Error("No FCS Coaches Poll returned");
   const teams = poll.ranks.slice(0, 25).map(r => {
     const t = r.team || {};
-    // ESPN's live FCS rankings can expose the mascot as displayName/shortDisplayName
-    // (for example, "Bobcats" or "Grizzlies"). The location field is the school name.
-    const name = t.location || t.displayName || t.shortDisplayName || t.name || t.abbreviation || "Team";
+    const name = t.displayName || t.shortDisplayName || t.name || t.abbreviation || "Team";
     const rank = Number(r.current ?? r.rank);
     const previous = Number(r.previous ?? r.previousRank);
     const hasPrevious = Number.isFinite(previous) && previous > 0;
@@ -440,8 +438,8 @@ function renderDepthChart(d) {
   const note = document.getElementById("depth-chart-note");
   const updated = document.getElementById("depth-chart-updated");
   const sourceButton = document.getElementById("depth-chart-source");
-  if (note) note.innerHTML = `${escapeHtml(dc.note || "Latest published two-deep")} <a href="${dc.source_url || "#"}" target="_blank" rel="noopener">Source ↗</a>`;
-  if (updated) updated.textContent = dc.published ? `Published ${dc.published}` : "2026 season";
+  if (note) note.innerHTML = `${escapeHtml(dc.note || "Latest official two-deep")} <a href="${dc.source_url || "#"}" target="_blank" rel="noopener">Official source ↗</a>`;
+  if (updated) updated.textContent = dc.published ? `Published ${dc.published}${dc.checked_at ? ` • Checked ${new Date(dc.checked_at).toLocaleDateString([], {month:"short",day:"numeric"})}` : ""}` : "2026 season";
   if (sourceButton && dc.source_url) sourceButton.href = dc.source_url;
   ["offense","defense","special_teams"].forEach(section => {
     const el = document.getElementById("depth-" + (section === "special_teams" ? "special" : section));

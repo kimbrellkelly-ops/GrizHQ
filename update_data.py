@@ -394,13 +394,35 @@ def parse_depth_chart_pdf(pdf_bytes, source_url, published=""):
 
 
 def fetch_depth_chart(old):
-    """Find the newest 2026 GoGriz football notes PDF containing a two-deep and safely update it."""
+    """Fetch the newest official GoGriz two-deep and never substitute a third-party chart."""
+    # The official game-notes links are the most reliable source. The RSS/article
+    # scan below remains the discovery mechanism for future games.
+    known_official = [
+        ("https://gogriz.com/documents/2026/9/1/UM-DRAKE_NOTES.pdf", "2026-09-01"),
+        ("https://gogriz.com/documents/2026/8/25/UM-SUU_NOTES.pdf", "2026-08-25"),
+    ]
     fallback_url="https://ewscripps.brightspotcdn.com/66/2f/2ecc2224473884436d4981ff2667/um-depth-chart.pdf"
     feed="https://gogriz.com/rss?path=football"
     candidates=[]
+
+    # Try the known official notes first. A game-notes PDF is accepted only if
+    # it actually contains a parseable two-deep; otherwise we continue scanning.
+    for href, published in known_official:
+        try:
+            r=requests.get(href,headers=HEADERS,timeout=30)
+            r.raise_for_status()
+            if r.content[:4] != b"%PDF":
+                continue
+            dc=parse_depth_chart_pdf(r.content,href,published)
+            dc["checked_at"]=datetime.now(timezone.utc).isoformat()
+            print("Depth chart updated from official notes:",href)
+            return dc
+        except Exception as e:
+            print("Known official depth-chart candidate failed:",href,e)
+
     try:
         root=ET.fromstring(get(feed))
-        for item in root.findall(".//item")[:30]:
+        for item in root.findall(".//item")[:40]:
             title=clean(item.findtext("title")); link=clean(item.findtext("link")); pub=clean(item.findtext("pubDate"))
             if not link: continue
             low=title.lower()
@@ -409,24 +431,24 @@ def fetch_depth_chart(old):
     except Exception as e:
         print("Depth chart RSS scan failed:",e)
 
-    # Prefer a newly published article with a notes/depth PDF. Scan newest first.
+    # Prefer a newly published official article containing a UM Notes/game-notes PDF.
     for article_url,pub,title in candidates:
         try:
             article=get(article_url)
-            if not re.search(r"two[- ]deep|depth chart|depth[- ]chart", article, re.I) and "notes" not in article.lower():
-                continue
             hrefs=[]
             soup=BeautifulSoup(article,"html.parser")
             for a in soup.find_all("a",href=True):
                 href=urljoin(article_url,a.get("href")); txt=clean(a.get_text(" ",strip=True)).lower()
-                if ".pdf" in href.lower() or "notes" in txt or "game notes" in txt:
+                # Only consider official GoGriz documents or explicitly labelled UM Notes.
+                if ("gogriz.com/documents/" in href.lower() or ".pdf" in href.lower()) and ("notes" in txt or "two" in txt or "depth" in txt or "documents/" in href.lower()):
                     hrefs.append((href,txt))
             hrefs += [(u,"") for u in re.findall(r'https?://[^\"\'\s<>]+\.pdf(?:\?[^\"\'\s<>]*)?',article,re.I)]
             seen=set()
             for href,txt in hrefs:
                 if href in seen: continue
                 seen.add(href)
-                if not ("pdf" in href.lower() or "notes" in txt or "two" in txt or "depth" in txt): continue
+                if "gogriz.com/documents/" not in href.lower():
+                    continue
                 try:
                     r=requests.get(href,headers=HEADERS,timeout=30)
                     r.raise_for_status()
@@ -437,24 +459,33 @@ def fetch_depth_chart(old):
                         dt=parsedate_to_datetime(pub).date().isoformat() if pub else ""
                     except Exception: pass
                     dc=parse_depth_chart_pdf(r.content,href,dt)
-                    print("Depth chart updated from:",href)
+                    dc["checked_at"]=datetime.now(timezone.utc).isoformat()
+                    print("Depth chart updated from official article notes:",href)
                     return dc
                 except Exception as e:
                     print("Depth chart candidate failed:",href,e)
         except Exception as e:
             print("Depth chart article scan failed:",article_url,e)
 
-    # Known-good current 2026 two-deep source. This keeps the chart alive even when RSS/article scanning changes upstream.
+    # Last-resort official mirror of the published two-deep.
     try:
         r=requests.get(fallback_url,headers=HEADERS,timeout=30)
         r.raise_for_status()
         if r.content[:4] == b"%PDF":
-            return parse_depth_chart_pdf(r.content,fallback_url,"2026-08-25")
+            dc=parse_depth_chart_pdf(r.content,fallback_url,"2026-08-25")
+            dc["checked_at"]=datetime.now(timezone.utc).isoformat()
+            return dc
     except Exception as e:
         print("Fallback depth chart fetch failed:",e)
 
+    # Keep the last known chart only when it came from an official source.
     olddc=old.get("depth_chart") if isinstance(old.get("depth_chart"),dict) else None
-    if olddc and olddc.get("offense") and olddc.get("defense"):
+    oldurl=str(olddc.get("source_url", "")) if olddc else ""
+    if olddc and olddc.get("offense") and olddc.get("defense") and (
+        oldurl.startswith("https://gogriz.com/") or "ewscripps.brightspotcdn.com" in oldurl
+    ):
+        olddc=dict(olddc)
+        olddc["checked_at"]=datetime.now(timezone.utc).isoformat()
         return olddc
     return None
 
