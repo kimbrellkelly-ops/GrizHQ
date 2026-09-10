@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-10T14:38:29.397061+00:00",
+  "updated": "2026-09-10T14:52:19.030601+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 56,
   "sources": [
@@ -17,21 +17,6 @@
   "stories": [
     {
       "title": "Golden Finch: Grizzlies WR Ian Finch proud to represent hometown",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_05b2583f-6b6f-50b6-907f-fe081c521e69.html",
-      "date": "Sep. 10, 2026",
-      "published_at": "2026-09-10T13:00:00+00:00",
-      "description": "\"I think coming here just showed me that it takes a lot more discipline to consistently win.\" —Griz WR Ian Finch",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/a4/ea4809d6-32af-55d4-b935-7800d19b627a/6a9f420e91c51.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/a4/ea4809d6-32af-55d4-b935-7800d19b627a/6a9f420e91c51.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Golden Finch: Grizzlies WR Ian Finch proud to represent hometown",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/golden-finch-grizzlies-wr-ian-finch-proud-to-represent-hometown/article_1bc5828a-c1ab-4912-a297-7aa97693fbc8.html",
       "date": "Sep. 10, 2026",
       "published_at": "2026-09-10T13:00:00+00:00",
@@ -44,6 +29,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/bc/1bc5828a-c1ab-4912-a297-7aa97693fbc8/6a9a2c1a7f9ac.preview.jpg?crop=1760%2C924%2C0%2C105&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Golden Finch: Grizzlies WR Ian Finch proud to represent hometown",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_05b2583f-6b6f-50b6-907f-fe081c521e69.html",
+      "date": "Sep. 10, 2026",
+      "published_at": "2026-09-10T13:00:00+00:00",
+      "description": "\"I think coming here just showed me that it takes a lot more discipline to consistently win.\" —Griz WR Ian Finch",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/a4/ea4809d6-32af-55d4-b935-7800d19b627a/6a9f420e91c51.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/a4/ea4809d6-32af-55d4-b935-7800d19b627a/6a9f420e91c51.image.jpg?resize=300%2C200"
     },
     {
       "title": "Griz Game Day 9-10-26",
