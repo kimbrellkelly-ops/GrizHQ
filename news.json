@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-10T05:51:29.087991+00:00",
+  "updated": "2026-09-10T06:06:08.883669+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 53,
+  "story_count": 54,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Griz Game Day 9-10-26",
+      "url": "https://missoulian.com/special-section/pdf_20cdb1e6-bc02-4f3c-8502-2da52aeb33f5.html",
+      "date": "Sep. 10, 2026",
+      "published_at": "2026-09-10T06:00:00+00:00",
+      "description": "Latest Montana football coverage.",
+      "source": "Missoulian",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/2/0c/20cdb1e6-bc02-4f3c-8502-2da52aeb33f5/6aa1a4f456269.preview.jpg?resize=300%2C303",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/2/0c/20cdb1e6-bc02-4f3c-8502-2da52aeb33f5/6aa1a4f456269.preview.jpg?resize=300%2C303"
+    },
     {
       "title": "Talkin’ Schmidt – Griz penalties, Eli Gillman’s greatest, Jeff Choate’s smack talk and Zelda",
       "url": "https://skylinesportsmt.com/talkin-schmidt-griz-penalties-eli-gillmans-greatest-jeff-choates-smack-talk-and-zelda/",
