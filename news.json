@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-10T04:03:58.600296+00:00",
+  "updated": "2026-09-10T04:25:21.436360+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 52,
+  "story_count": 53,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Talkin’ Schmidt – Griz penalties, Eli Gillman’s greatest, Jeff Choate’s smack talk and Zelda",
+      "url": "https://skylinesportsmt.com/talkin-schmidt-griz-penalties-eli-gillmans-greatest-jeff-choates-smack-talk-and-zelda/",
+      "date": "Sep. 10, 2026",
+      "published_at": "2026-09-10T04:11:54+00:00",
+      "description": "September 9, 2026 Talkin’ Schmidt – Griz penalties, Eli Gillman’s greatest, Jeff Choate’s smack talk and Zelda",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2018/11/Jeff-Choate-and-Bobby-Hauck-shake-hands.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2018/11/Jeff-Choate-and-Bobby-Hauck-shake-hands.jpg"
+    },
     {
       "title": "Nuanez brothers on Gold Rush, Gillman’s records, Griz penalties, the Choate Bowl in Reno",
       "url": "https://skylinesportsmt.com/nuanez-brothers-on-gold-rush-gillmans-records-griz-penalties-the-choate-bowl-in-reno/",
