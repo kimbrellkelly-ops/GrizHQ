@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-10T02:25:02.845643+00:00",
+  "updated": "2026-09-10T02:37:34.537863+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 51,
+  "story_count": 52,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Nuanez brothers on Gold Rush, Gillman’s records, Griz penalties, the Choate Bowl in Reno",
+      "url": "https://skylinesportsmt.com/nuanez-brothers-on-gold-rush-gillmans-records-griz-penalties-the-choate-bowl-in-reno/",
+      "date": "Sep. 10, 2026",
+      "published_at": "2026-09-10T02:26:39+00:00",
+      "description": "September 9, 2026 Nuanez brothers on Gold Rush, Gillman’s records, Griz penalties, the Choate Bowl in Reno",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Eli-Gillman-flashes-to-the-outside-looks-for-the-edge.jpeg",
+      "is_video": true,
+      "youtube_id": "nVYxSKV4bAw",
+      "video_url": "https://www.youtube.com/watch?v=nVYxSKV4bAw",
+      "video_thumbnail": "https://i.ytimg.com/vi/nVYxSKV4bAw/hqdefault.jpg"
+    },
     {
       "title": "FCS Weekly – Akem & Nuanez talk about former Griz & Cats who transferred, Gillman’s greatness & more",
       "url": "https://skylinesportsmt.com/fcs-weekly-akem-nuanez-talk-about-former-griz-cats-who-transferred-gillmans-greatness-more/",
