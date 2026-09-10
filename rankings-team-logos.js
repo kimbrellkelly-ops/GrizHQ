@@ -25,10 +25,11 @@
     "Richmond":"https://a.espncdn.com/i/teamlogos/ncaa/500/257.png",
     "Central Arkansas":"https://a.espncdn.com/i/teamlogos/ncaa/500/2110.png",
     "Southern Illinois":"https://a.espncdn.com/i/teamlogos/ncaa/500/79.png",
-    "West Florida":"https://a.espncdn.com/i/teamlogos/ncaa/500/2918.png",
+    "West Florida":"https://a.espncdn.com/i/teamlogos/ncaa/500/110242.png",
+    "Idaho State":"https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
     "Harvard":"https://a.espncdn.com/i/teamlogos/ncaa/500/108.png"
   };
-  const aliases={"Montana St.":"Montana State","South Dakota St.":"South Dakota State"};
+  const aliases={"Montana St.":"Montana State","South Dakota St.":"South Dakota State","Idaho St.":"Idaho State"};
   function key(name){const n=String(name||'').trim();return aliases[n]||n;}
   function addLogos(root){
     if(!root)return;
