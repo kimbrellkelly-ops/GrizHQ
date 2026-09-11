@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-11T23:48:54.582017+00:00",
+  "updated": "2026-09-11T23:56:57.212084+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-11T23:49:51.255265+00:00"
+    "checked_at": "2026-09-11T23:57:37.017647+00:00"
   },
   "resources": [
     {
@@ -7807,7 +7807,7 @@
             "short": "Louisville",
             "abbrev": "LOU",
             "homeAway": "home",
-            "score": "17"
+            "score": "24"
           },
           {
             "id": "222",
@@ -7820,7 +7820,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:50 - 2nd",
+        "detail": "11:56 - 2nd",
         "broadcasts": [
           "ACC Network"
         ]
@@ -7849,7 +7849,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 1st",
+        "detail": "11:31 - 2nd",
         "broadcasts": [
           "ACCNX"
         ]
@@ -7865,7 +7865,7 @@
             "short": "NC State",
             "abbrev": "NCSU",
             "homeAway": "home",
-            "score": "21"
+            "score": "28"
           },
           {
             "id": "257",
@@ -7878,7 +7878,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 1st",
+        "detail": "11:33 - 2nd",
         "broadcasts": [
           "ESPNU"
         ]
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-11T23:49:55.235892+00:00"
+  "fcs_scores_updated": "2026-09-11T23:57:40.544879+00:00"
 }
