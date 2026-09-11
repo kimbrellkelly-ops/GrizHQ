@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-11T04:07:10.135656+00:00",
+  "updated": "2026-09-11T04:23:19.813115+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-11T04:07:36.294928+00:00"
+    "checked_at": "2026-09-11T04:23:50.829355+00:00"
   },
   "resources": [
     {
@@ -7797,35 +7797,6 @@
     ],
     "2026-09-10": [
       {
-        "id": "401858213",
-        "date": "2026-09-11T00:00Z",
-        "name": "Florida A&M Rattlers at Miami Hurricanes",
-        "teams": [
-          {
-            "id": "2390",
-            "name": "Miami Hurricanes",
-            "short": "Miami",
-            "abbrev": "MIA",
-            "homeAway": "home",
-            "score": "77"
-          },
-          {
-            "id": "50",
-            "name": "Florida A&M Rattlers",
-            "short": "Florida A&M",
-            "abbrev": "FAMU",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ACC Network"
-        ]
-      },
-      {
         "id": "401858215",
         "date": "2026-09-11T23:00Z",
         "name": "Villanova Wildcats at Louisville Cardinals",
@@ -7910,6 +7881,35 @@
         "detail": "9/11 - 7:00 PM EDT",
         "broadcasts": [
           "ESPNU"
+        ]
+      },
+      {
+        "id": "401858213",
+        "date": "2026-09-11T00:00Z",
+        "name": "Florida A&M Rattlers at Miami Hurricanes",
+        "teams": [
+          {
+            "id": "2390",
+            "name": "Miami Hurricanes",
+            "short": "Miami",
+            "abbrev": "MIA",
+            "homeAway": "home",
+            "score": "77"
+          },
+          {
+            "id": "50",
+            "name": "Florida A&M Rattlers",
+            "short": "Florida A&M",
+            "abbrev": "FAMU",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ACC Network"
         ]
       },
       {
@@ -27488,5 +27488,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-11T04:07:38.127047+00:00"
+  "fcs_scores_updated": "2026-09-11T04:23:52.960519+00:00"
 }
