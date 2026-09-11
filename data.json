@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-11T14:23:05.154106+00:00",
+  "updated": "2026-09-11T14:39:27.640753+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-11T14:24:12.230116+00:00"
+    "checked_at": "2026-09-11T14:40:03.009422+00:00"
   },
   "resources": [
     {
@@ -9210,7 +9210,7 @@
       },
       {
         "id": "401868187",
-        "date": "2026-09-12T22:00Z",
+        "date": "2026-09-12T16:00Z",
         "name": "Gardner-Webb Runnin' Bulldogs at Liberty Flames",
         "teams": [
           {
@@ -27154,14 +27154,33 @@
         ]
       },
       {
-        "id": "",
-        "date": "",
-        "name": "",
-        "teams": [],
-        "state": "",
+        "id": "401868947",
+        "date": "2026-11-21T20:30Z",
+        "name": "Florida A&M Rattlers at Bethune-Cookman Wildcats",
+        "teams": [
+          {
+            "id": "2065",
+            "name": "Bethune-Cookman Wildcats",
+            "short": "Bethune",
+            "abbrev": "BCU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "50",
+            "name": "Florida A&M Rattlers",
+            "short": "Florida A&M",
+            "abbrev": "FAMU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
         "completed": false,
-        "detail": "",
-        "broadcasts": []
+        "detail": "11/21 - 3:30 PM EST",
+        "broadcasts": [
+          "ESPN+"
+        ]
       },
       {
         "id": "401868083",
@@ -27488,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-11T14:24:14.911975+00:00"
+  "fcs_scores_updated": "2026-09-11T14:40:07.165084+00:00"
 }
