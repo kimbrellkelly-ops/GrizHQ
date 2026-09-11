@@ -245,7 +245,8 @@ async function loadGrizData() {
     // Use a verified poll snapshot immediately so the page never falls back
     // to the stale preseason data.json rankings. Each entry carries the
     // previous-week rank, so movement is calculated/displayed correctly.
-    applyRankingSnapshotFallback();
+    if (Array.isArray(d.coaches_poll) && d.coaches_poll.length) renderPoll("coaches-poll", d.coaches_poll);
+    if (Array.isArray(d.media_poll) && d.media_poll.length) { renderPoll("media-poll", d.media_poll); window.__grizMediaPoll = d.media_poll; }
     const rankDate = document.getElementById("rankings-date");
 
     try {
@@ -257,7 +258,7 @@ async function loadGrizData() {
       if (liveBadge) liveBadge.textContent = "LIVE FCS COACHES POLL";
     } catch (rankErr) {
       console.warn("Live FCS rankings unavailable; using verified ranking snapshot", rankErr);
-      applyRankingSnapshotFallback();
+      if (!(Array.isArray(d.coaches_poll) && d.coaches_poll.length) || !(Array.isArray(d.media_poll) && d.media_poll.length)) applyRankingSnapshotFallback();
     }
     const updated = document.getElementById("data-updated");
     if (updated) updated.textContent = d.updated ? "DATA UPDATED " + new Date(d.updated).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}) : "";
@@ -288,7 +289,7 @@ async function fetchLiveFCSCoachesPoll() {
   if (!poll || !Array.isArray(poll.ranks) || !poll.ranks.length) throw new Error("No FCS Coaches Poll returned");
   const teams = poll.ranks.slice(0, 25).map(r => {
     const t = r.team || {};
-    const name = t.displayName || t.shortDisplayName || t.name || t.abbreviation || "Team";
+    const name = t.location || t.school || t.name || t.displayName || t.shortDisplayName || t.abbreviation || "Team";
     const rank = Number(r.current ?? r.rank);
     const previous = Number(r.previous ?? r.previousRank);
     const hasPrevious = Number.isFinite(previous) && previous > 0;
@@ -429,7 +430,7 @@ setInterval(async () => {
     if (currentMedia) renderMiniPolls(livePoll.teams, currentMedia);
     const rankDate = document.getElementById("rankings-date");
     if (rankDate) rankDate.textContent = "LIVE • " + (livePoll.date ? new Date(livePoll.date).toLocaleDateString([], {month:"short", day:"numeric", year:"numeric"}) : "Current poll");
-  } catch (e) { console.warn("Scheduled rankings refresh failed; retaining verified snapshot", e); applyRankingSnapshotFallback(); }
+  } catch (e) { console.warn("Scheduled rankings refresh failed; retaining current rankings", e); }
 }, 30 * 60 * 1000);
 
 function renderDepthChart(d) {
