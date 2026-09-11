@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-11T23:18:44.455710+00:00",
+  "updated": "2026-09-11T23:29:19.216301+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-11T23:19:21.777230+00:00"
+    "checked_at": "2026-09-11T23:29:52.477494+00:00"
   },
   "resources": [
     {
@@ -7807,7 +7807,7 @@
             "short": "Louisville",
             "abbrev": "LOU",
             "homeAway": "home",
-            "score": "3"
+            "score": "10"
           },
           {
             "id": "222",
@@ -7815,12 +7815,12 @@
             "short": "Villanova",
             "abbrev": "VILL",
             "homeAway": "away",
-            "score": "0"
+            "score": "3"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:49 - 1st",
+        "detail": "4:33 - 1st",
         "broadcasts": [
           "ACC Network"
         ]
@@ -7836,7 +7836,7 @@
             "short": "Virginia",
             "abbrev": "UVA",
             "homeAway": "home",
-            "score": "6"
+            "score": "14"
           },
           {
             "id": "2450",
@@ -7849,7 +7849,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:39 - 1st",
+        "detail": "5:30 - 1st",
         "broadcasts": [
           "ACCNX"
         ]
@@ -7865,7 +7865,7 @@
             "short": "NC State",
             "abbrev": "NCSU",
             "homeAway": "home",
-            "score": "7"
+            "score": "14"
           },
           {
             "id": "257",
@@ -7878,7 +7878,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:55 - 1st",
+        "detail": "8:50 - 1st",
         "broadcasts": [
           "ESPNU"
         ]
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-11T23:19:24.199981+00:00"
+  "fcs_scores_updated": "2026-09-11T23:29:54.883402+00:00"
 }
