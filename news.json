@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-11T18:04:05.552866+00:00",
+  "updated": "2026-09-11T18:27:08.363201+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 58,
+  "story_count": 59,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "3 questions: No. 3 Montana Grizzlies seek 3-0 start against Utah Tech",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-3-montana-grizzlies-seek-3-0-start-against-utah-tech/article_6e16a730-bc4b-4cd9-bffd-c7269b62e14a.html",
+      "date": "Sep. 11, 2026",
+      "published_at": "2026-09-11T18:00:00+00:00",
+      "description": "3 questions: No. 3 Montana Grizzlies seek 3-0 start against Utah Tech",
+      "source": "406 MT Sports",
+      "badge": "OPPONENT",
+      "short": "OPPONE",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/e1/6e16a730-bc4b-4cd9-bffd-c7269b62e14a/6aa239f8db5c2.preview.jpg?crop=1762%2C925%2C0%2C215&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/e1/6e16a730-bc4b-4cd9-bffd-c7269b62e14a/6aa239f8db5c2.preview.jpg?crop=1762%2C925%2C0%2C215&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Big Sky Breakdown – Jordan Tripp on Drake win, team discipline, defensive standouts, Eli Gillman",
       "url": "https://skylinesportsmt.com/big-sky-breakdown-jordan-tripp-on-drake-win-team-discipline-defensive-standouts-eli-gillman/",
