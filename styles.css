@@ -4170,3 +4170,37 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   .griz-coaches-grid{grid-template-columns:1fr}
   .griz-coach-photo{height:240px}
 }
+
+/* GRIZ HQ COMMAND CENTER — homepage hero layer */
+.ghq-command-hero{
+  position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:34px;min-height:520px;padding:58px clamp(24px,5vw,72px);margin:0;background:linear-gradient(115deg,#170d13 0%,#2b101d 52%,#100c12 100%);color:#fff;border-bottom:1px solid rgba(255,255,255,.12)
+}
+.ghq-command-hero-art{position:absolute;inset:0;z-index:-1;overflow:hidden;background:radial-gradient(circle at 78% 48%,rgba(190,158,92,.16),transparent 26%),linear-gradient(90deg,rgba(20,8,15,.98) 0%,rgba(40,12,27,.88) 50%,rgba(13,9,15,.78) 100%)}
+.ghq-command-grid{position:absolute;inset:-30%;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:42px 42px;transform:perspective(500px) rotateX(58deg) rotateZ(-12deg);transform-origin:center;opacity:.5}
+.ghq-command-ring{position:absolute;border:1px solid rgba(204,174,104,.3);border-radius:50%;right:-110px;top:40px;width:570px;height:570px;box-shadow:0 0 0 26px rgba(204,174,104,.025),0 0 0 52px rgba(204,174,104,.02)}
+.ghq-command-ring-two{width:390px;height:390px;right:0;top:130px;border-color:rgba(255,255,255,.16)}
+.ghq-command-watermark{position:absolute;right:-18px;bottom:-88px;font:900 270px/.8 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.08em;color:rgba(255,255,255,.045);transform:skewX(-8deg)}
+.ghq-command-art-label{position:absolute;right:30px;top:28px;font-size:10px;font-weight:900;letter-spacing:.2em;color:rgba(255,255,255,.5)}
+.ghq-command-copy{position:relative;z-index:2;max-width:650px;align-self:center}
+.ghq-command-copy .eyebrow{color:#d2b77a;margin-bottom:18px}
+.ghq-command-copy h1{margin:0;font:900 clamp(58px,8vw,112px)/.84 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.035em;text-transform:uppercase}
+.ghq-command-copy h1 span{color:#d2b77a}
+.ghq-command-copy p{max-width:540px;margin:28px 0 24px;color:rgba(255,255,255,.75);font-size:clamp(15px,1.5vw,19px);line-height:1.55}
+.ghq-command-actions{display:flex;flex-wrap:wrap;gap:10px}
+.ghq-command-actions a,.ghq-command-panel-link{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;padding:14px 17px;font-size:12px;font-weight:950;letter-spacing:.08em;text-decoration:none;transition:transform .18s ease,background .18s ease}
+.ghq-command-primary{background:#d2b77a;color:#1c1017}.ghq-command-secondary{border:1px solid rgba(255,255,255,.35);color:#fff;background:rgba(255,255,255,.04)}
+.ghq-command-actions a:hover,.ghq-command-panel-link:hover{transform:translateY(-2px);text-decoration:none}
+.ghq-command-microcopy{display:flex;align-items:center;gap:9px;margin-top:24px;font-size:10px;font-weight:900;letter-spacing:.13em;color:rgba(255,255,255,.48)}
+.ghq-command-microcopy span{width:7px;height:7px;border-radius:50%;background:#8bd39b;box-shadow:0 0 0 4px rgba(139,211,155,.12)}
+.ghq-command-panel{align-self:center;justify-self:end;width:min(100%,360px);padding:25px;background:linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(8px);box-shadow:0 24px 70px rgba(0,0,0,.25)}
+.ghq-command-panel-top{display:flex;justify-content:space-between;color:#d2b77a;font-size:11px;font-weight:950;letter-spacing:.16em}.ghq-command-panel-top b{color:rgba(255,255,255,.55)}
+.ghq-command-panel-title{margin:55px 0 28px;font:900 42px/.86 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.02em}.ghq-command-panel-title strong{color:#d2b77a}
+.ghq-command-panel-rule{height:1px;background:rgba(255,255,255,.2)}
+.ghq-command-metrics{display:grid;grid-template-columns:1fr 1fr;gap:18px 12px;padding:23px 0}.ghq-command-metrics b{display:block;color:#d2b77a;font:900 27px/.9 'Barlow Condensed',Impact,sans-serif}.ghq-command-metrics span{display:block;margin-top:5px;color:rgba(255,255,255,.58);font-size:9px;font-weight:900;letter-spacing:.1em}
+.ghq-command-panel-link{width:100%;border-top:1px solid rgba(255,255,255,.2);padding:16px 0 0;color:#fff}
+.ghq-command-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#d8d1ca;border-bottom:1px solid #d8d1ca}
+.ghq-command-tiles a{position:relative;display:flex;flex-direction:column;gap:8px;min-height:145px;padding:24px;background:#f5f1ed;color:#21171c;text-decoration:none;transition:background .18s ease,transform .18s ease}
+.ghq-command-tiles a:hover{background:#fff;transform:translateY(-2px);text-decoration:none;z-index:1}
+.ghq-tile-index{font-size:10px;font-weight:950;letter-spacing:.12em;color:#9a8c82}.ghq-command-tiles strong{font:900 27px/.9 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.01em}.ghq-command-tiles small{color:#746a65;font-size:12px}.ghq-command-tiles em{position:absolute;right:22px;bottom:20px;font-style:normal;font-size:18px;color:#6b0038}
+@media(max-width:900px){.ghq-command-hero{grid-template-columns:1fr;min-height:0;padding:45px 24px}.ghq-command-panel{justify-self:stretch;width:auto;max-width:none}.ghq-command-panel-title{margin-top:30px}.ghq-command-ring{right:-260px}.ghq-command-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.ghq-command-copy h1{font-size:68px}.ghq-command-hero{padding:36px 18px}.ghq-command-tiles a{min-height:128px;padding:18px}.ghq-command-tiles strong{font-size:23px}.ghq-command-tiles small{font-size:11px}.ghq-command-art-label{right:18px}.ghq-command-panel{padding:20px}}
