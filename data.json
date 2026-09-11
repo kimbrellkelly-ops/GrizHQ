@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-11T21:12:53.059231+00:00",
+  "updated": "2026-09-11T21:27:05.567161+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-11T21:13:19.290648+00:00"
+    "checked_at": "2026-09-11T21:27:47.612466+00:00"
   },
   "resources": [
     {
@@ -8087,6 +8087,35 @@
         ]
       },
       {
+        "id": "401867929",
+        "date": "2026-09-12T16:00Z",
+        "name": "Wagner Seahawks at James Madison Dukes",
+        "teams": [
+          {
+            "id": "256",
+            "name": "James Madison Dukes",
+            "short": "James Madison",
+            "abbrev": "JMU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2681",
+            "name": "Wagner Seahawks",
+            "short": "Wagner",
+            "abbrev": "WAG",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "9/12 - 12:00 PM EDT",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
         "id": "401868187",
         "date": "2026-09-12T16:00Z",
         "name": "Gardner-Webb Runnin' Bulldogs at Liberty Flames",
@@ -8162,35 +8191,6 @@
             "name": "Dickinson (PA) Red Devils",
             "short": "Dickinson",
             "abbrev": "DCK",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "9/12 - 12:00 PM EDT",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401867929",
-        "date": "2026-09-12T16:00Z",
-        "name": "Wagner Seahawks at James Madison Dukes",
-        "teams": [
-          {
-            "id": "256",
-            "name": "James Madison Dukes",
-            "short": "James Madison",
-            "abbrev": "JMU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2681",
-            "name": "Wagner Seahawks",
-            "short": "Wagner",
-            "abbrev": "WAG",
             "homeAway": "away",
             "score": "0"
           }
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-11T21:13:22.893970+00:00"
+  "fcs_scores_updated": "2026-09-11T21:27:51.065220+00:00"
 }
