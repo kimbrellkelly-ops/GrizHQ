@@ -245,8 +245,7 @@ async function loadGrizData() {
     // Use a verified poll snapshot immediately so the page never falls back
     // to the stale preseason data.json rankings. Each entry carries the
     // previous-week rank, so movement is calculated/displayed correctly.
-    if (Array.isArray(d.coaches_poll) && d.coaches_poll.length) renderPoll("coaches-poll", d.coaches_poll);
-    if (Array.isArray(d.media_poll) && d.media_poll.length) { renderPoll("media-poll", d.media_poll); window.__grizMediaPoll = d.media_poll; }
+    applyRankingSnapshotFallback();
     const rankDate = document.getElementById("rankings-date");
 
     try {
@@ -258,7 +257,7 @@ async function loadGrizData() {
       if (liveBadge) liveBadge.textContent = "LIVE FCS COACHES POLL";
     } catch (rankErr) {
       console.warn("Live FCS rankings unavailable; using verified ranking snapshot", rankErr);
-      if (!(Array.isArray(d.coaches_poll) && d.coaches_poll.length) || !(Array.isArray(d.media_poll) && d.media_poll.length)) applyRankingSnapshotFallback();
+      applyRankingSnapshotFallback();
     }
     const updated = document.getElementById("data-updated");
     if (updated) updated.textContent = d.updated ? "DATA UPDATED " + new Date(d.updated).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}) : "";
@@ -289,7 +288,7 @@ async function fetchLiveFCSCoachesPoll() {
   if (!poll || !Array.isArray(poll.ranks) || !poll.ranks.length) throw new Error("No FCS Coaches Poll returned");
   const teams = poll.ranks.slice(0, 25).map(r => {
     const t = r.team || {};
-    const name = t.school || t.location || t.name || t.displayName || t.shortDisplayName || t.abbreviation || "Team";
+    const name = t.school || t.location || t.displayName || t.shortDisplayName || t.name || t.abbreviation || "Team";
     const rank = Number(r.current ?? r.rank);
     const previous = Number(r.previous ?? r.previousRank);
     const hasPrevious = Number.isFinite(previous) && previous > 0;
@@ -339,24 +338,29 @@ function rankingMovementMarkup(t) {
   return '<span class="rank-movement rank-same">—</span>';
 }
 
-function normalizeRankingEntry(t) {
-  if (t && typeof t === "object") return t;
-  const raw = String(t ?? "");
-  const m = raw.match(/^\s*(\d+)\.\s*(.*?)(?:\s*\(([^)]*)\))?(?:\s*(?:↑|▲)(\d+)|\s*(?:↓|▼)(\d+))?\s*$/);
-  if (!m) return { rank: null, previous: null, delta: null, name: raw, record: "" };
-  const rank = Number(m[1]);
+function normalizeRankingEntry(t, fallbackRank) {
+  if (t && typeof t === "object") {
+    const copy = { ...t };
+    if (!Number.isFinite(Number(copy.rank)) && Number.isFinite(Number(fallbackRank))) copy.rank = Number(fallbackRank);
+    return copy;
+  }
+  const raw = String(t ?? "").trim();
+  const m = raw.match(/^\s*(?:(\d+)\.\s*)?(.*?)(?:\s*\(([^)]*)\))?(?:\s*(?:↑|▲)(\d+)|\s*(?:↓|▼)(\d+))?\s*$/);
+  if (!m) return { rank: Number(fallbackRank) || null, previous: null, delta: null, name: raw, record: "" };
+  const rank = Number(m[1] || fallbackRank);
   const delta = m[4] ? Number(m[4]) : (m[5] ? -Number(m[5]) : null);
-  return { rank, previous: delta == null ? null : rank + delta, delta, name: m[2], record: m[3] || "" };
+  return { rank: Number.isFinite(rank) ? rank : null, previous: delta == null ? null : rank + delta, delta, name: m[2].trim(), record: m[3] || "" };
 }
 
 function renderPoll(id, teams) {
   const el = document.getElementById(id);
   if (!el || !Array.isArray(teams)) return;
-  el.innerHTML = teams.slice(0, 25).map(t0 => {
-    const t = normalizeRankingEntry(t0);
-    const rank = Number.isFinite(t.rank) ? t.rank + "." : "";
+  el.innerHTML = teams.slice(0, 25).map((t0, i) => {
+    const t = normalizeRankingEntry(t0, i + 1);
+    const rank = Number.isFinite(t.rank) ? t.rank + "." : (i + 1) + ".";
+    const cleanName = String(t.name || "Team").replace(/\s*\([^)]*\)\s*$/, "").trim();
     const record = t.record ? ` <small class="rank-record">(${escapeHtml(t.record)})</small>` : "";
-    return `<li><span class="rank-number">${escapeHtml(rank)}</span><span class="rank-team-name">${escapeHtml(t.name)}</span>${record}${rankingMovementMarkup(t)}</li>`;
+    return `<li><span class="rank-number">${escapeHtml(rank)}</span><span class="rank-team-name">${escapeHtml(cleanName)}</span>${record}${rankingMovementMarkup(t)}</li>`;
   }).join("");
 }
 
@@ -430,7 +434,7 @@ setInterval(async () => {
     if (currentMedia) renderMiniPolls(livePoll.teams, currentMedia);
     const rankDate = document.getElementById("rankings-date");
     if (rankDate) rankDate.textContent = "LIVE • " + (livePoll.date ? new Date(livePoll.date).toLocaleDateString([], {month:"short", day:"numeric", year:"numeric"}) : "Current poll");
-  } catch (e) { console.warn("Scheduled rankings refresh failed; retaining current rankings", e); }
+  } catch (e) { console.warn("Scheduled rankings refresh failed; retaining verified snapshot", e); applyRankingSnapshotFallback(); }
 }, 30 * 60 * 1000);
 
 function renderDepthChart(d) {
