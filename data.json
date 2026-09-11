@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-11T00:36:10.060810+00:00",
+  "updated": "2026-09-11T00:49:02.952771+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-11T00:36:48.489812+00:00"
+    "checked_at": "2026-09-11T00:49:25.823136+00:00"
   },
   "resources": [
     {
@@ -7807,7 +7807,7 @@
             "short": "Miami",
             "abbrev": "MIA",
             "homeAway": "home",
-            "score": "21"
+            "score": "28"
           },
           {
             "id": "50",
@@ -7820,7 +7820,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:47 - 1st",
+        "detail": "14:54 - 2nd",
         "broadcasts": [
           "ACC Network"
         ]
@@ -27488,5 +27488,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-11T00:36:51.118900+00:00"
+  "fcs_scores_updated": "2026-09-11T00:49:27.876323+00:00"
 }
