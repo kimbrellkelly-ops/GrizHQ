@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-11T19:22:03.470785+00:00",
+  "updated": "2026-09-11T19:34:15.488690+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 60,
   "sources": [
@@ -17,21 +17,6 @@
   "stories": [
     {
       "title": "3 questions: No. 3 Montana Grizzlies seek 3-0 start against Utah Tech",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_f3328fda-94f3-5ba4-b83f-bdc99ed7dffe.html",
-      "date": "Sep. 11, 2026",
-      "published_at": "2026-09-11T18:00:00+00:00",
-      "description": "\"In the past we've dropped games where we might have been looking ahead in the future, so we really can't overlook any opponent.\"",
-      "source": "Missoulian",
-      "badge": "OPPONENT",
-      "short": "OPPONE",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/9b/59b14a77-06f0-56a9-ac36-8edcbf69ddda/6aa23d2508eb9.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/9b/59b14a77-06f0-56a9-ac36-8edcbf69ddda/6aa23d2508eb9.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "3 questions: No. 3 Montana Grizzlies seek 3-0 start against Utah Tech",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-3-montana-grizzlies-seek-3-0-start-against-utah-tech/article_6e16a730-bc4b-4cd9-bffd-c7269b62e14a.html",
       "date": "Sep. 11, 2026",
       "published_at": "2026-09-11T18:00:00+00:00",
@@ -44,6 +29,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/e1/6e16a730-bc4b-4cd9-bffd-c7269b62e14a/6aa239f8db5c2.preview.jpg?crop=1762%2C925%2C0%2C215&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "3 questions: No. 3 Montana Grizzlies seek 3-0 start against Utah Tech",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_f3328fda-94f3-5ba4-b83f-bdc99ed7dffe.html",
+      "date": "Sep. 11, 2026",
+      "published_at": "2026-09-11T18:00:00+00:00",
+      "description": "\"In the past we've dropped games where we might have been looking ahead in the future, so we really can't overlook any opponent.\"",
+      "source": "Missoulian",
+      "badge": "OPPONENT",
+      "short": "OPPONE",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/9b/59b14a77-06f0-56a9-ac36-8edcbf69ddda/6aa23d2508eb9.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/9b/59b14a77-06f0-56a9-ac36-8edcbf69ddda/6aa23d2508eb9.image.jpg?resize=300%2C200"
     },
     {
       "title": "Big Sky Breakdown – Jordan Tripp on Drake win, team discipline, defensive standouts, Eli Gillman",
