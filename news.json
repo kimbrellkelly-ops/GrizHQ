@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-11T02:24:45.303128+00:00",
+  "updated": "2026-09-11T02:37:22.729660+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 57,
+  "story_count": 58,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Big Sky Breakdown – Jordan Tripp on Drake win, team discipline, defensive standouts, Eli Gillman",
+      "url": "https://skylinesportsmt.com/big-sky-breakdown-jordan-tripp-on-drake-win-team-discipline-defensive-standouts-eli-gillman/",
+      "date": "Sep. 11, 2026",
+      "published_at": "2026-09-11T02:26:24+00:00",
+      "description": "September 10, 2026 Big Sky Breakdown – Jordan Tripp on Drake win, team discipline, defensive standouts, Eli Gillman",
+      "source": "Skyline Sports",
+      "badge": "ANALYSIS",
+      "short": "ANALYS",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Peyton-Wing-flexes-it-out-celebrates-after-big-hit.jpeg",
+      "is_video": true,
+      "youtube_id": "0GTivnvCsBw",
+      "video_url": "https://www.youtube.com/watch?v=0GTivnvCsBw",
+      "video_thumbnail": "https://i.ytimg.com/vi/0GTivnvCsBw/hqdefault.jpg"
+    },
     {
       "title": "Facebook-famous grizzly bears euthanized in Lincoln after 10 days of conflicts over food",
       "url": "https://missoulian.com/news/state-regional/article_ed1282eb-973a-5323-92f3-903020754aef.html",
