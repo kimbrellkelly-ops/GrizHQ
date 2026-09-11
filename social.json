@@ -1,6 +1,45 @@
 {
-  "updated": "2026-09-11T04:06:14.304890+00:00",
+  "updated": "2026-09-11T04:25:54.160192+00:00",
   "posts": [
+    {
+      "title": "Was Jeff Choate taking shots at the Griz?",
+      "url": "https://www.youtube.com/watch?v=x1r8Z_i5x74",
+      "image": "https://i.ytimg.com/vi/x1r8Z_i5x74/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Sep. 11, 2026",
+      "platform": "youtube",
+      "youtube_id": "x1r8Z_i5x74",
+      "published_at": "2026-09-11T00:00:00+00:00"
+    },
+    {
+      "title": "Big Sky Breakdown - Jordan Tripp on Drake win, team discipline, defensive standouts, Eli Gillman",
+      "url": "https://www.youtube.com/watch?v=0GTivnvCsBw",
+      "image": "https://i.ytimg.com/vi/0GTivnvCsBw/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Sep. 11, 2026",
+      "platform": "youtube",
+      "youtube_id": "0GTivnvCsBw",
+      "published_at": "2026-09-11T00:00:00+00:00"
+    },
+    {
+      "title": "Ridin' with Rider - Mikey Rider on safety play, stars on special teams, Montana State at Nevada",
+      "url": "https://www.youtube.com/watch?v=BGuYuccPf_o",
+      "image": "https://i.ytimg.com/vi/BGuYuccPf_o/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Sep. 11, 2026",
+      "platform": "youtube",
+      "youtube_id": "BGuYuccPf_o",
+      "published_at": "2026-09-11T00:00:00+00:00"
+    },
     {
       "title": "Big Sky Breakdown with JP Flynn talking Bobcat run game, Dahlke vs Dowler 2.0, NIL & Jeff Choate",
       "url": "https://www.youtube.com/watch?v=ZbpWxVkA0HU",
