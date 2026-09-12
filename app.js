@@ -1523,14 +1523,32 @@ async function renderFCSScoreboard(){
   }
   function top25Card(t,events,scheduled){
     const rank=String(t.rank||''),name=cleanTeamLabel(t.team||'Team');
-    const sg=scheduled.find(g=>teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome)) || fullSchedule.map(g=>{ const dt=scheduleDate(g.date); const start=new Date(weeks[Number(weekEl.value)||0][0]+'T00:00:00'); const end=new Date(weeks[Number(weekEl.value)||0][1]+'T23:59:59'); if(!dt||dt<start||dt>end)return null; const away=g.location==='Away'?g.opponent:g.team; const home=g.location==='Away'?g.team:g.opponent; return {...g,displayAway:away,displayHome:home,matchupKey:`${g.date}|${[norm(away),norm(home)].sort().join('|')}`}; }).find(g=>g && (teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome)));
-    const rawEv=findTeamEvent(name,events);
-    const ev=sg ? (events.find(e=>eventMatchesGame(e,sg)) || rawEv && eventMatchesGame(rawEv,sg) ? (events.find(e=>eventMatchesGame(e,sg)) || rawEv) : null) : rawEv;
+    const currentWeek=weeks[Number(weekEl.value)||0];
+    const sg=scheduled.find(g=>teamMatch(name,g.displayAway)||teamMatch(name,g.displayHome))||null;
+    const weekStart=new Date(currentWeek[0]+'T00:00:00');
+    const weekEnd=new Date(currentWeek[1]+'T23:59:59');
+    const inCurrentWeek=(ev)=>{
+      const rawDate=ev?.date||ev?.raw?.date||'';
+      if(!rawDate)return true;
+      const d=new Date(rawDate);
+      return Number.isNaN(d.getTime())||d>=weekStart&&d<=new Date(weekEnd.getTime()+24*60*60*1000);
+    };
+    const teamEvents=events.filter(ev=>inCurrentWeek(ev)&&eventTeams(ev).some(x=>teamMatch(name,x)));
+    const exact=sg?events.find(e=>eventMatchesGame(e,sg)):null;
+    const paired=sg?teamEvents.find(e=>{
+      const ts=eventTeams(e);
+      return ts.some(x=>teamMatch(sg.displayAway,x))&&ts.some(x=>teamMatch(sg.displayHome,x));
+    }):null;
+    const preferred=exact||paired||teamEvents.find(e=>{
+      const st=String(e.state||e.raw?.status?.type?.state||'');
+      return e.completed||st==='in'||st==='live';
+    })||teamEvents[0]||null;
+    const ev=preferred;
     if(ev){
       const ts=eventTeams(ev);
-      const a=sg? (ts.find(x=>teamMatch(sg.displayAway,x))||ts.find(x=>x.homeAway==='away')||ts[0]) : (ts.find(x=>x.homeAway==='away')||ts[0]);
-      const h=sg? (ts.find(x=>teamMatch(sg.displayHome,x))||ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]) : (ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]);
-      const playing=ev.completed||ev.state==='in';
+      const a=sg?(ts.find(x=>teamMatch(sg.displayAway,x))||ts.find(x=>x.homeAway==='away')||ts[0]):(ts.find(x=>x.homeAway==='away')||ts[0]);
+      const h=sg?(ts.find(x=>teamMatch(sg.displayHome,x))||ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]):(ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]);
+      const playing=!!(ev.completed||ev.state==='in'||ev.state==='live');
       const awayRank=rankForTeam(a,sg?.displayAway||'Away');
       const homeRank=rankForTeam(h,sg?.displayHome||'Home');
       const awayRow=top25TeamRow(a,sg?.displayAway||'Away',awayRank,!!awayRank,playing);
@@ -1606,38 +1624,29 @@ async function renderFCSScoreboard(){
     if(statusEl)statusEl.textContent='Loading FCS scores…';
     const scheduled=scheduleGamesForWeek(w);
     const cached=cachedEventsForWeek(w);
-    const renderFromEvents=(normalizedLive)=>{
-      // Cached/local data renders immediately. ESPN is an enhancement, never
-      // a gate that can leave the entire FCS scoreboard blank.
-      const eventMap=new Map();
-      cached.forEach(e=>eventMap.set(String(e.id||JSON.stringify(e)),e));
-      normalizedLive.forEach(e=>eventMap.set(String(e.id||JSON.stringify(e)),e));
-      const eventPool=[...eventMap.values()];
-      const merged=scheduled.map(g=>({g,ev:liveOrCachedForGame(g,normalizedLive,cached)}));
-      const covered=new Set();
-      scheduled.forEach(g=>{
-        for(const team of [g.displayAway,g.displayHome]){
-          const key=canonicalBigSky(team);
-          if(key)covered.add(key);
-        }
-      });
-      const uniqueBigSkyGames=scheduled.length;
-      if(bigSkyLabelEl)bigSkyLabelEl.textContent=`${uniqueBigSkyGames} games • ${covered.size}/13 Big Sky teams scheduled`;
-      if(statusEl)statusEl.textContent=`${uniqueBigSkyGames} Big Sky games • ${covered.size}/13 teams scheduled`;
-      topEl.innerHTML=top25.slice(0,25).map(t=>top25Card(t,eventPool,scheduled)).join('')||'<div class="fcs-loading">Rankings unavailable.</div>';
-      if(bigSkyEl)bigSkyEl.innerHTML=merged.map(x=>gameCard(x.g,x.ev)).join('')||'<div class="fcs-loading">No Big Sky games scheduled this week.</div>';
-      return {eventPool,merged};
-    };
-    renderFromEvents([]);
-    let normalizedLive=[];
-    try{
-      const rawLive=await Promise.race([
-        fetchESPNEvents(w),
-        new Promise(resolve=>setTimeout(()=>resolve([]),8000))
-      ]);
-      normalizedLive=Array.isArray(rawLive)?rawLive.map(normalizeEvent):[];
-    }catch(e){normalizedLive=[];}
-    renderFromEvents(normalizedLive);
+    const rawLive=await fetchESPNEvents(w);
+    const normalizedLive=rawLive.map(normalizeEvent);
+    // Merge live and cached feeds instead of letting an incomplete live ESPN
+    // response erase cached games. Live data wins when the same event exists.
+    const eventMap=new Map();
+    cached.forEach(e=>eventMap.set(String(e.id||JSON.stringify(e)),e));
+    normalizedLive.forEach(e=>eventMap.set(String(e.id||JSON.stringify(e)),e));
+    const eventPool=[...eventMap.values()];
+    const merged=scheduled.map(g=>({g,ev:liveOrCachedForGame(g,normalizedLive,cached)}));
+
+    const covered=new Set();
+    scheduled.forEach(g=>{
+      for(const team of [g.displayAway,g.displayHome]){
+        const key=canonicalBigSky(team);
+        if(key)covered.add(key);
+      }
+    });
+    const uniqueBigSkyGames=scheduled.length;
+    if(bigSkyLabelEl)bigSkyLabelEl.textContent=`${uniqueBigSkyGames} games • ${covered.size}/13 Big Sky teams scheduled`;
+    if(statusEl)statusEl.textContent=`${uniqueBigSkyGames} Big Sky games • ${covered.size}/13 teams scheduled`;
+
+    topEl.innerHTML=top25.slice(0,25).map(t=>top25Card(t,eventPool,scheduled)).join('')||'<div class="fcs-loading">Rankings unavailable.</div>';
+    if(bigSkyEl)bigSkyEl.innerHTML=merged.map(x=>gameCard(x.g,x.ev)).join('')||'<div class="fcs-loading">No Big Sky games scheduled this week.</div>';
     await enrichScoreCards(scheduled,normalizedLive);
   }
   weekEl.onchange=()=>{weekEl.dataset.userChanged='1';draw();};
