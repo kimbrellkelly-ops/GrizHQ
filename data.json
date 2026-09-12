@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T16:36:37.526802+00:00",
+  "updated": "2026-09-12T16:45:24.084255+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-12T16:37:05.362719+00:00"
+    "checked_at": "2026-09-12T16:45:47.187990+00:00"
   },
   "resources": [
     {
@@ -7820,7 +7820,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:34 - 1st",
+        "detail": "14:15 - 2nd",
         "broadcasts": [
           "BTN"
         ]
@@ -7836,7 +7836,7 @@
             "short": "North Carolina",
             "abbrev": "UNC",
             "homeAway": "home",
-            "score": "7"
+            "score": "13"
           },
           {
             "id": "2193",
@@ -7849,7 +7849,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:41 - 1st",
+        "detail": "12:13 - 2nd",
         "broadcasts": [
           "ACC Network"
         ]
@@ -7873,12 +7873,12 @@
             "short": "Wofford",
             "abbrev": "WOF",
             "homeAway": "away",
-            "score": "0"
+            "score": "3"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:25 - 1st",
+        "detail": "End of 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7907,7 +7907,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:41 - 2nd",
+        "detail": "11:44 - 2nd",
         "broadcasts": [
           "FloSports"
         ]
@@ -7936,7 +7936,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:56 - 1st",
+        "detail": "12:03 - 2nd",
         "broadcasts": [
           "NEC Front Row"
         ]
@@ -7965,7 +7965,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:17 - 1st",
+        "detail": "15:00 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7981,7 +7981,7 @@
             "short": "James Madison",
             "abbrev": "JMU",
             "homeAway": "home",
-            "score": "14"
+            "score": "21"
           },
           {
             "id": "2681",
@@ -7994,7 +7994,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:28 - 1st",
+        "detail": "1:16 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8018,12 +8018,12 @@
             "short": "Gardner-Webb",
             "abbrev": "GWEB",
             "homeAway": "away",
-            "score": "3"
+            "score": "6"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:12 - 1st",
+        "detail": "0:39 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8052,7 +8052,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:19 - 1st",
+        "detail": "14:48 - 2nd",
         "broadcasts": [
           "YouTube"
         ]
@@ -8081,7 +8081,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:30 - 1st",
+        "detail": "15:00 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8110,7 +8110,36 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 1st",
+        "detail": "10:12 - 1st",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401867990",
+        "date": "2026-09-12T17:30Z",
+        "name": "Bucknell Bison at VMI Keydets",
+        "teams": [
+          {
+            "id": "2678",
+            "name": "VMI Keydets",
+            "short": "VMI",
+            "abbrev": "VMI",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2083",
+            "name": "Bucknell Bison",
+            "short": "Bucknell",
+            "abbrev": "BUCK",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "10:43 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8228,35 +8257,6 @@
         "completed": false,
         "detail": "9/12 - 1:00 PM EDT",
         "broadcasts": []
-      },
-      {
-        "id": "401867990",
-        "date": "2026-09-12T17:30Z",
-        "name": "Bucknell Bison at VMI Keydets",
-        "teams": [
-          {
-            "id": "2678",
-            "name": "VMI Keydets",
-            "short": "VMI",
-            "abbrev": "VMI",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2083",
-            "name": "Bucknell Bison",
-            "short": "Bucknell",
-            "abbrev": "BUCK",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "9/12 - 1:30 PM EDT",
-        "broadcasts": [
-          "ESPN+"
-        ]
       },
       {
         "id": "401866413",
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-12T16:37:07.862356+00:00"
+  "fcs_scores_updated": "2026-09-12T16:45:49.342576+00:00"
 }
