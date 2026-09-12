@@ -1254,22 +1254,25 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   let data={};
   try{data=await (await fetch('data.json?scoreboard='+Date.now(),{cache:'no-store'})).json();}catch(e){games.innerHTML='<a class="v2-score-card v2-score-empty" href="'+espnWeek(Number(week.value),group.value)+'" target="_blank" rel="noopener"><strong>Open ESPN scoreboard</strong><small>Local score data unavailable ↗</small></a>';return;}
   const rankedNames=(data.fcs_top25||data.fcs_top20||[]).map(x=>norm(x.team));
-  const sameTeam=(a,b)=>{const ca=canonical(a),cb=canonical(b);return ca&&cb?ca===cb:norm(a)===norm(b)||norm(a).includes(norm(b))||norm(b).includes(norm(a));};
-  const isRanked=name=>{const n=norm(name);return rankedNames.some(r=>n===r||n.includes(r)||r.includes(n)||sameTeam(name,r));};
+  const isRanked=name=>{const n=norm(name);return rankedNames.some(r=>n===r||n.includes(r)||r.includes(n));};
   const allScores=Object.values(data.fcs_scores||{}).flat();
   const schedule=data.big_sky_full_schedules||[];
-  const scoreFor=(away,home,date)=>allScores.find(ev=>dateOnly(ev.date)===date&&(ev.teams||[]).some(t=>sameTeam(teamName(t),away))&&(ev.teams||[]).some(t=>sameTeam(teamName(t),home)));
+  const scoreFor=(away,home,date)=>allScores.find(ev=>dateOnly(ev.date)===date&&(ev.teams||[]).some(t=>norm(teamName(t))===norm(away))&&(ev.teams||[]).some(t=>norm(teamName(t))===norm(home)));
   const formatDate=s=>{const d=new Date(s+'T12:00:00');return d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});};
+  const logoUrl=id=>id?`https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(id)}.png`:'';
+  const teamFor=(ev,side,name)=>ev?.teams?.find(t=>t.homeAway===side)||ev?.teams?.find(t=>norm(teamName(t))===norm(name));
+  const teamMarkup=(name,team,score,record)=>`<div class="v2-score-team"><span class="v2-score-team-name">${logoUrl(team?.id)?`<img src="${logoUrl(team.id)}" alt="" loading="lazy" decoding="async">`:''}<span>${name}</span></span><b>${score||record||'—'}</b></div>`;
   function card(g,w){
     const a=clean(g.away),h=clean(g.home),ev=g.event;
-    const awayScore=ev?.teams?.find(t=>t.homeAway==='away')?.score??'';
-    const homeScore=ev?.teams?.find(t=>t.homeAway==='home')?.score??'';
+    const away=teamFor(ev,'away',a),home=teamFor(ev,'home',h);
+    const awayScore=away?.score??'';
+    const homeScore=home?.score??'';
     const final=!!ev?.completed;
-    const live=!!ev && !final && (ev.state==='in'||ev.status==='in'||/quarter|half|\b\d+:\d+\b|halftime|overtime/i.test(String(ev.detail||'')));
-    const status=final?'FINAL':live?(ev.detail||'LIVE'):(ev?.detail||g.dateLabel||'Scheduled');
+    const live=!!ev&&!final&&['in','halftime','endperiod'].includes(String(ev.state||'').toLowerCase());
+    const status=final?'FINAL':live?(ev.detail||'LIVE'):(ev?.detail||g.network||'Scheduled');
     const href=ev?.id?`https://www.espn.com/college-football/game/_/gameId/${ev.id}`:espnWeek(w,group.value);
     const el=document.createElement('a');el.className='v2-score-card'+(norm(a)==='montana'||norm(h)==='montana'?' featured':'');el.href=href;el.target='_blank';el.rel='noopener';
-    el.innerHTML=`<small>${g.dateLabel||formatDate(g.date)} <b>${status}${ev?.broadcasts?.[0]?' · '+ev.broadcasts[0]:g.network?' · '+g.network:''}</b></small><strong>${a} <span>${awayScore!==''?awayScore:g.awayRecord||'—'}</span></strong><strong>${h} <span>${homeScore!==''?homeScore:g.homeRecord||'—'}</span></strong><em>${ev?.id?'ESPN Gamecast ↗':'ESPN scoreboard ↗'}</em>`;
+    el.innerHTML=`<div class="v2-score-meta"><span>${g.dateLabel||formatDate(g.date)}</span><b>${ev?.broadcasts?.[0]||g.network||'ESPN'}</b></div><div class="v2-score-status ${live?'is-live':''}">${status}</div>${teamMarkup(a,away,awayScore,g.awayRecord)}${teamMarkup(h,home,homeScore,g.homeRecord)}<em>${ev?.id?'ESPN Gamecast ↗':'ESPN scoreboard ↗'}</em>`;
     return el;
   }
   function render(){
@@ -1304,8 +1307,6 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   const currentIndex=weeks.findIndex(([start,end])=>todayKey>=start&&todayKey<=end);
   if(currentIndex>=0) week.value=String(currentIndex+1);
   group.addEventListener('change',render);week.addEventListener('change',render);render();
-  // Refresh only this strip; do not touch the rest of the dashboard.
-  setInterval(async()=>{try{const fresh=await (await fetch('data.json?scoreboard='+Date.now(),{cache:'no-store'})).json();Object.keys(data).forEach(k=>delete data[k]);Object.assign(data,fresh);render();}catch(_){/* keep the last good strip */}},60000);
 })();
 </script>
 

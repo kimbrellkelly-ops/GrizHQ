@@ -4374,3 +4374,21 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .v2-score-games .v2-score-card{flex:0 0 175px!important;min-width:175px!important;}
 .v2-score-prev,.v2-score-next{position:relative!important;z-index:50!important;pointer-events:auto!important;flex:0 0 42px!important;min-width:42px!important;cursor:pointer!important;}
 @media(max-width:800px){.v2-score-games .v2-score-card{flex-basis:155px!important;min-width:155px!important}.v2-score-prev,.v2-score-next{flex-basis:36px!important;min-width:36px!important;}}
+
+/* Score-strip final layout + team-logo pass: scoped only to the home score strip. */
+.v2-scorebar{gap:10px;align-items:stretch;}
+.v2-scorebar>.v2-score-filter{flex:0 0 auto;min-width:150px;}
+.v2-score-games{flex:1 1 0!important;width:0!important;min-width:0!important;display:flex!important;align-items:stretch!important;gap:10px!important;overflow-x:auto!important;overflow-y:hidden!important;padding:0 2px 3px!important;}
+.v2-score-games>.v2-score-card{box-sizing:border-box;flex:0 0 220px!important;min-width:220px!important;width:220px!important;display:flex;flex-direction:column;justify-content:flex-start;gap:0;overflow:hidden;padding:11px 13px 10px!important;}
+.v2-score-card .v2-score-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0;margin-bottom:3px;color:#6d6e76;font-size:11px;font-weight:800;line-height:1.2;}
+.v2-score-card .v2-score-meta span{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.v2-score-card .v2-score-meta b{flex:0 0 auto;white-space:nowrap;font-size:10px;}
+.v2-score-card .v2-score-status{min-height:16px;margin:0 0 7px;color:#760039;font-size:10px;font-weight:900;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.v2-score-card .v2-score-status.is-live{color:#b3261e;}
+.v2-score-card .v2-score-team{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0;font-size:14px;font-weight:900;line-height:1.35;margin:2px 0;}
+.v2-score-card .v2-score-team-name{display:flex;align-items:center;gap:7px;min-width:0;}
+.v2-score-card .v2-score-team-name span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.v2-score-card .v2-score-team img{width:23px;height:23px;object-fit:contain;flex:0 0 23px;}
+.v2-score-card .v2-score-team>b{flex:0 0 auto;color:#17171d;font-size:16px;font-variant-numeric:tabular-nums;}
+.v2-score-card em{margin-top:auto!important;padding-top:7px;font-size:10px;}
+@media(max-width:800px){.v2-scorebar{gap:8px;}.v2-score-games{gap:8px!important;padding-bottom:2px!important;}.v2-score-games>.v2-score-card{flex-basis:195px!important;min-width:195px!important;width:195px!important;}.v2-score-card .v2-score-team{font-size:13px;}.v2-score-card .v2-score-team img{width:21px;height:21px;flex-basis:21px;}}
