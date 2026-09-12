@@ -4453,56 +4453,94 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   }
 }
 
-/* Visual pass 1: premium Montana Griz header treatment. Scoreboard intentionally untouched. */
+
+/* GrizHQ visual pass 2 — premium header refinement only. */
 .v2-header{
-  background:#17171b;
+  background:#17181d;
   color:#fff;
-  border-bottom:1px solid #3a2932;
+  border-bottom:3px solid #760039;
+  box-shadow:0 8px 24px rgba(12,12,18,.14);
 }
 .v2-topbar{
-  background:linear-gradient(115deg,#17171b 0%,#211b20 58%,#3b1028 100%);
-  max-width:none;
-  padding:12px clamp(18px,3vw,42px);
-  gap:24px;
+  min-height:96px;
+  max-width:1520px;
+  padding:12px 30px;
+  gap:28px;
+}
+.v2-brand{
+  flex:0 0 190px;
+  padding:2px 0;
 }
 .v2-brand img{
-  filter:drop-shadow(0 4px 8px rgba(0,0,0,.45));
+  width:190px;
+  filter:drop-shadow(0 5px 8px rgba(0,0,0,.28));
+}
+.v2-nav{
+  gap:3px;
+  align-items:center;
 }
 .v2-nav a{
-  color:#f5f1f3;
-  border:1px solid transparent;
+  position:relative;
+  color:#f5f3f5;
+  font-size:13px;
+  letter-spacing:.15px;
+  padding:14px 11px;
   border-radius:8px;
-  padding:11px 12px;
-  transition:background .18s ease,border-color .18s ease,color .18s ease;
+  transition:background .18s ease,color .18s ease;
 }
-.v2-nav a:hover,
+.v2-nav a::after{
+  content:"";
+  position:absolute;
+  left:11px;
+  right:11px;
+  bottom:6px;
+  height:2px;
+  border-radius:2px;
+  background:#b58a3a;
+  transform:scaleX(0);
+  transform-origin:center;
+  transition:transform .18s ease;
+}
+.v2-nav a:hover{
+  background:#2a2027;
+  color:#fff;
+}
 .v2-nav a.active{
   background:#760039;
-  border-color:#a8758d;
   color:#fff;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.13),0 4px 12px rgba(118,0,57,.22);
 }
+.v2-nav a.active::after{transform:scaleX(1)}
 .v2-more-trigger{
-  background:#760039;
+  background:transparent;
   color:#fff;
-  border:1px solid #a8758d;
+  border:1px solid rgba(255,255,255,.35);
+  font-size:13px;
+  padding:13px 13px;
   border-radius:8px;
 }
-.v2-more-trigger:hover,
-.v2-more-trigger[aria-expanded="true"]{
-  background:#a50950;
-  border-color:#d0a0b5;
+.v2-more-trigger:hover,.v2-more-trigger[aria-expanded="true"]{
+  background:#760039;
+  border-color:#760039;
+  color:#fff;
 }
 .v2-more-dropdown{
-  background:#211b20;
-  border-color:#59404d;
+  top:calc(100% + 10px);
+  background:#202126;
+  border-color:#3a3b43;
+  box-shadow:0 16px 34px rgba(0,0,0,.3);
 }
-.v2-more-dropdown a{
-  color:#f5f1f3!important;
-}
-.v2-more-dropdown a:hover{
-  background:#760039!important;
-  color:#fff!important;
+.v2-more-dropdown a{color:#f5f3f5!important}
+.v2-more-dropdown a:hover{background:#760039!important;color:#fff!important}
+.v2-scorebar{border-top:1px solid #2d2e35}
+@media(max-width:1200px){
+  .v2-topbar{padding:12px 24px}
+  .v2-nav a{padding:12px 9px}
 }
 @media(max-width:800px){
-  .v2-topbar{padding:10px 14px;}
+  .v2-topbar{min-height:82px;padding:10px 16px;gap:14px}
+  .v2-brand{flex-basis:160px}
+  .v2-brand img{width:160px}
+  .v2-nav a{padding:9px 7px;font-size:12px}
+  .v2-more-trigger{font-size:12px;padding:9px 8px}
 }
