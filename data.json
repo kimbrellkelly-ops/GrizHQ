@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T15:53:50.503130+00:00",
+  "updated": "2026-09-12T16:06:51.766060+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-12T15:54:42.517236+00:00"
+    "checked_at": "2026-09-12T16:07:22.524234+00:00"
   },
   "resources": [
     {
@@ -2940,12 +2940,12 @@
         "note": "Official game results"
       },
       {
-        "value": "338",
+        "value": "413",
         "label": "TOTAL OFFENSE",
         "note": "Yards per game"
       },
       {
-        "value": "510",
+        "value": "404",
         "label": "TOTAL DEFENSE",
         "note": "Yards allowed per game"
       }
@@ -7807,7 +7807,7 @@
             "short": "Indiana",
             "abbrev": "IU",
             "homeAway": "home",
-            "score": "0"
+            "score": "7"
           },
           {
             "id": "47",
@@ -7818,9 +7818,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 12:00 PM EDT",
+        "detail": "12:56 - 1st",
         "broadcasts": [
           "BTN"
         ]
@@ -7847,9 +7847,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 12:00 PM EDT",
+        "detail": "14:08 - 1st",
         "broadcasts": [
           "ACC Network"
         ]
@@ -7876,9 +7876,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 12:00 PM EDT",
+        "detail": "11:46 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7905,9 +7905,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 12:00 PM EDT",
+        "detail": "15:00 - 1st",
         "broadcasts": [
           "FloSports"
         ]
@@ -7934,9 +7934,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 12:00 PM EDT",
+        "detail": "14:54 - 1st",
         "broadcasts": [
           "NEC Front Row"
         ]
@@ -7963,9 +7963,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 12:00 PM EDT",
+        "detail": "14:55 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7981,7 +7981,7 @@
             "short": "James Madison",
             "abbrev": "JMU",
             "homeAway": "home",
-            "score": "0"
+            "score": "6"
           },
           {
             "id": "2681",
@@ -7992,9 +7992,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 12:00 PM EDT",
+        "detail": "13:31 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8021,9 +8021,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 12:00 PM EDT",
+        "detail": "14:43 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8079,9 +8079,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 12:00 PM EDT",
+        "detail": "13:27 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-12T15:54:44.615588+00:00"
+  "fcs_scores_updated": "2026-09-12T16:07:25.226757+00:00"
 }
