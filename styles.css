@@ -4465,7 +4465,7 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .v2-topbar{
   min-height:94px;
   padding:12px 30px;
-  gap:30px;
+  gap:18px;
   position:relative;
 }
 .v2-topbar:after{
@@ -4478,7 +4478,8 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   background:linear-gradient(90deg,transparent,rgba(183,147,82,.65),transparent);
 }
 .v2-brand{
-  flex-basis:220px;
+  flex:0 0 198px;
+  flex-basis:198px;
   position:relative;
   z-index:1;
 }
@@ -4491,17 +4492,17 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   pointer-events:none;
 }
 .v2-brand img{
-  width:220px;
+  width:198px;
   filter:drop-shadow(0 5px 8px rgba(0,0,0,.38));
 }
 .v2-nav{
-  gap:2px;
-  justify-content:flex-end;
+  gap:4px;
+  justify-content:flex-start;
 }
 .v2-nav a{
   color:#e9e9ed;
   font-size:13px;
-  letter-spacing:.15px;
+  letter-spacing:.05px;
   padding:14px 11px 13px;
   border-radius:8px;
   position:relative;
@@ -4580,21 +4581,4 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   .v2-brand img{width:170px}
   .v2-nav a{padding:10px 8px 9px}
   .v2-home{padding:16px 12px 34px}
-}
-
-/* GrizHQ visual refinement — Pass 2.
-   Header spacing only; scoreboard markup, data, and selectors are untouched. */
-.v2-topbar{gap:18px;}
-.v2-nav{justify-content:flex-start;gap:4px;}
-.v2-brand{flex:0 0 205px;}
-.v2-brand img{width:205px;}
-.v2-more-trigger{background:rgba(118,0,57,.34);color:#fff;border:1px solid rgba(183,147,82,.45);font-size:13px;padding:14px 12px 13px;border-radius:8px;}
-.v2-more-trigger:hover,.v2-more-trigger[aria-expanded="true"]{background:#760039;color:#fff;border-color:#b79352;}
-.v2-more-dropdown{background:#17181d;border:1px solid rgba(183,147,82,.4);}
-.v2-more-dropdown a{color:#f2f2f4!important;}
-.v2-more-dropdown a:hover{background:rgba(118,0,57,.45)!important;color:#fff!important;}
-@media(max-width:800px){
-  .v2-topbar{gap:12px;}
-  .v2-brand{flex-basis:160px;}
-  .v2-brand img{width:160px;}
 }
