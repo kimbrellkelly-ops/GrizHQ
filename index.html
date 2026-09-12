@@ -46,8 +46,13 @@
       <a data-tab-link="stats" href="#stats">Stats</a>
       <a data-tab-link="schedule" href="#big-sky">Big Sky</a>
       <a data-tab-link="media" href="#media">Media</a>
-      <a data-tab-link="history" href="#history">History</a>
-      <a data-tab-link="officiating" href="#officiating">Officiating</a>
+      <div class="v2-more-menu">
+        <button class="v2-more-trigger" type="button" aria-expanded="false" aria-controls="v2-more-dropdown">More <span aria-hidden="true">⌄</span></button>
+        <div class="v2-more-dropdown" id="v2-more-dropdown" hidden>
+          <a data-tab-link="history" href="#history">History <span aria-hidden="true">›</span></a>
+          <a data-tab-link="officiating" href="#officiating">Officiating <span aria-hidden="true">›</span></a>
+        </div>
+      </div>
     </nav>
   </div>
   <div class="v2-scorebar" aria-label="Football scores and upcoming games">
@@ -61,21 +66,25 @@
 <main id="home">
 <section class="v2-home tab-panel is-active" data-tab="home" id="v2-home" aria-label="Griz HQ home dashboard">
   <div class="v2-dashboard">
-    <aside class="v2-rail v2-card">
-      <div class="v2-card-heading"><span>↗</span><h2>Quick Links</h2></div>
-      <a href="#next-up">Next Game <b>›</b></a>
-      <a href="#schedule">Schedule <b>›</b></a>
-      <a href="#roster">Roster <b>›</b></a>
-      <a href="#roster">Depth Chart <b>›</b></a>
-      <a href="#roster">Recruiting <b>›</b></a>
-      <a href="#roster">Transfer Portal <b>›</b></a>
-      <a href="#big-sky">Big Sky <b>›</b></a>
-      <a href="#rankings">Rankings <b>›</b></a>
-      <a href="#stats">Stats <b>›</b></a>
-      <a href="#news">News <b>›</b></a>
-      <a href="#media">Media <b>›</b></a>
-      <a href="#history">The Vault <b>›</b></a>
-      <a class="v2-rail-cta" href="https://gogriz.com/" target="_blank" rel="noopener">🐾 Go Griz</a>
+    <aside class="v2-rail v2-card v2-team-hub">
+      <section class="v2-home-next">
+        <div class="v2-card-heading"><span>🏈</span><h2>Next Game</h2><a href="#next-up">Game Center →</a></div>
+        <div class="v2-home-next-match">
+          <div><strong>GRIZ</strong><small>MONTANA<br>2–0</small></div>
+          <div><b>Sat, Sep 12<br>12:00 PM MT</b><small>ESPN+</small></div>
+          <div><strong>UT</strong><small>UTAH TECH<br>0–2</small></div>
+        </div>
+        <p>Washington-Grizzly Stadium · Missoula, MT</p>
+      </section>
+      <section class="v2-team-links">
+        <div class="v2-card-heading"><span>✦</span><h2>Griz Football Hub</h2></div>
+        <a href="#roster">Roster <b>›</b></a>
+        <a href="#roster">Depth Chart <b>›</b></a>
+        <a href="#roster">Recruiting <b>›</b></a>
+        <a href="#roster">Transfer Portal <b>›</b></a>
+        <a href="#stats">Team Stats <b>›</b></a>
+        <a class="v2-rail-cta" href="https://gogriz.com/" target="_blank" rel="noopener">🐾 Official GoGriz</a>
+      </section>
     </aside>
     <section class="v2-center">
       <div class="v2-feature v2-card">
@@ -91,7 +100,6 @@
     <aside class="v2-right">
       <section class="v2-card v2-headlines"><div class="v2-card-heading"><span>▤</span><h2>Top Headlines</h2><a href="#news">View All →</a></div><a href="#news">Montana prepares for another ranked matchup <small>2h ago</small></a><a href="#news">Five things to watch before kickoff <small>3h ago</small></a><a href="#news">Big Sky teams enter a pivotal weekend <small>3h ago</small></a><a href="#news">Griz offense looks to build on early-season momentum <small>4h ago</small></a><a href="#news">Opponent report: Utah Tech scouting notes <small>5h ago</small></a><a href="#news">Around Griz Nation: latest media and updates <small>5h ago</small></a></section>
       <section class="v2-card v2-snapshot"><div class="v2-card-heading"><span>▥</span><h2>Montana Snapshot</h2><a href="#stats">Full Stats →</a></div><div class="v2-snapshot-grid"><div><b>2–0</b><small>Record</small></div><div><b>#2</b><small>FCS Rank</small></div><div><b>1–0</b><small>Big Sky</small></div></div></section>
-      <section class="v2-next-card"><div class="v2-next-top"><b>Next Game</b><a href="#next-up">Game Center →</a></div><div class="v2-next-match"><div><strong>GRIZ</strong><small>MONTANA<br>2–0</small></div><div><b>Sat, Sep 12<br>12:00 PM MT</b><small>ESPN+</small></div><div><strong>UT</strong><small>UTAH TECH<br>0–2</small></div></div><small>Washington-Grizzly Stadium · Missoula, MT</small></section>
     </aside>
   </div>
   <section class="v2-lower-news v2-card"><div class="v2-card-heading"><h2>Latest Griz News</h2><a href="#news">Open Newsroom →</a></div><div class="v2-lower-news-grid"><a href="#news">Game week: everything you need to know</a><a href="#news">Depth chart and roster updates</a><a href="#news">Big Sky and FCS news roundup</a><a href="#news">Podcasts, videos and interviews</a></div></section>
@@ -1165,7 +1173,23 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
 })();
 </script>
 
-
+<script>
+(function(){
+  const menu=document.querySelector('.v2-more-menu');
+  const trigger=document.querySelector('.v2-more-trigger');
+  const dropdown=document.getElementById('v2-more-dropdown');
+  if(!menu||!trigger||!dropdown) return;
+  function close(){ dropdown.hidden=true; trigger.setAttribute('aria-expanded','false'); }
+  trigger.addEventListener('click',function(e){
+    e.preventDefault();
+    const open=dropdown.hidden;
+    dropdown.hidden=!open;
+    trigger.setAttribute('aria-expanded',String(open));
+  });
+  document.addEventListener('click',function(e){ if(!menu.contains(e.target)) close(); });
+  dropdown.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+})();
+</script>
 
 <script>
 (function(){

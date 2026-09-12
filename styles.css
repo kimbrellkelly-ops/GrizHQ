@@ -4582,18 +4582,20 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   .v2-home{padding:16px 12px 34px}
 }
 
-
-/* GrizHQ visual pass: full desktop navigation.
-   Keeps the scoreboard markup and score-specific rules untouched. */
-@media (min-width: 1201px){
-  .v2-topbar{gap:18px;padding-left:30px;padding-right:30px}
-  .v2-brand{flex:0 0 198px}
-  .v2-brand img{width:198px}
-  .v2-nav{justify-content:flex-start;flex-wrap:nowrap;gap:0;min-width:0}
-  .v2-nav a{font-size:12px;padding:12px 8px 11px;letter-spacing:0}
-  .v2-nav a:after{left:8px;right:8px}
-}
-@media (min-width: 801px) and (max-width: 1200px){
-  .v2-nav a[data-tab-link="history"],
-  .v2-nav a[data-tab-link="officiating"]{display:none}
-}
+/* Surgical homepage hub refinement: replaces duplicate navigation links with useful team context. */
+.v2-team-hub{overflow:hidden}
+.v2-home-next{background:linear-gradient(145deg,#760039,#4d0026);color:#fff;padding-bottom:16px}
+.v2-home-next .v2-card-heading,.v2-team-links .v2-card-heading{border-bottom-color:#ececf0}
+.v2-home-next .v2-card-heading:after,.v2-team-links .v2-card-heading:after{display:none}
+.v2-home-next .v2-card-heading h2,.v2-home-next .v2-card-heading span{color:#fff}
+.v2-home-next .v2-card-heading a{color:#f2d9e5}
+.v2-home-next-match{display:grid;grid-template-columns:1fr 1.35fr 1fr;gap:5px;align-items:center;text-align:center;background:#fff;color:#17171c;margin:0 16px;padding:15px 7px;border-radius:12px}
+.v2-home-next-match strong{display:block;color:#760039;font-size:21px;font-weight:900}
+.v2-home-next-match b{display:block;font-size:11px;line-height:1.4}
+.v2-home-next-match small{display:block;color:#777;font-size:10px;line-height:1.35;margin-top:4px}
+.v2-home-next p{font-size:10px;line-height:1.4;text-align:center;color:#ead9e2;margin:12px 16px 0}
+.v2-team-links .v2-card-heading{padding-bottom:14px}
+.v2-team-links .v2-card-heading h2{font-size:17px}
+.v2-team-links a{padding:12px 20px}
+.v2-team-links .v2-rail-cta{margin:14px 16px 16px}
+@media(max-width:1200px){.v2-home-next-match{margin-left:12px;margin-right:12px}.v2-home-next p{margin-left:12px;margin-right:12px}}
