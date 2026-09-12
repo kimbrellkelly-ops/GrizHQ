@@ -1250,8 +1250,6 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   const canonical=s=>{const n=norm(s);return Object.keys(aliases).find(k=>aliases[k].includes(n))||null;};
   const teamName=t=>t?.short||t?.shortDisplayName||t?.name||t?.displayName||t?.abbrev||'Team';
   const dateOnly=s=>String(s||'').slice(0,10);
-  const sameTeam=(a,b)=>{const ca=canonical(a),cb=canonical(b);if(ca&&cb)return ca===cb;const na=norm(a),nb=norm(b);return na===nb||na.includes(nb)||nb.includes(na);};
-  const eventDateMatches=(ev,date)=>{const utc=dateOnly(ev?.date);if(utc===date)return true;const detail=String(ev?.detail||'');const m=detail.match(/^(\d{1,2})\/(\d{1,2})/);if(m)return `2026-${String(m[1]).padStart(2,'0')}-${String(m[2]).padStart(2,'0')}`===date;return false;};
   const inWeek=(date,w)=>date>=weeks[w-1][0]&&date<=weeks[w-1][1];
   let data={};
   try{data=await (await fetch('data.json?scoreboard='+Date.now(),{cache:'no-store'})).json();}catch(e){games.innerHTML='<a class="v2-score-card v2-score-empty" href="'+espnWeek(Number(week.value),group.value)+'" target="_blank" rel="noopener"><strong>Open ESPN scoreboard</strong><small>Local score data unavailable ↗</small></a>';return;}
@@ -1259,14 +1257,18 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   const isRanked=name=>{const n=norm(name);return rankedNames.some(r=>n===r||n.includes(r)||r.includes(n));};
   const allScores=Object.values(data.fcs_scores||{}).flat();
   const schedule=data.big_sky_full_schedules||[];
-  const scoreFor=(away,home,date)=>allScores.find(ev=>eventDateMatches(ev,date)&&(ev.teams||[]).some(t=>sameTeam(teamName(t),away))&&(ev.teams||[]).some(t=>sameTeam(teamName(t),home)));
+  const scoreFor=(away,home,date)=>allScores.find(ev=>dateOnly(ev.date)===date&&(ev.teams||[]).some(t=>norm(teamName(t))===norm(away))&&(ev.teams||[]).some(t=>norm(teamName(t))===norm(home)));
   const formatDate=s=>{const d=new Date(s+'T12:00:00');return d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});};
   const logoUrl=id=>id?`https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(id)}.png`:'';
-  const teamFor=(ev,side,name)=>ev?.teams?.find(t=>t.homeAway===side)||ev?.teams?.find(t=>sameTeam(teamName(t),name));
+  const teamFor=(ev,side,name)=>ev?.teams?.find(t=>t.homeAway===side)||ev?.teams?.find(t=>norm(teamName(t))===norm(name));
   const teamMarkup=(name,team,score,record)=>`<div class="v2-score-team"><span class="v2-score-team-name">${logoUrl(team?.id)?`<img src="${logoUrl(team.id)}" alt="" loading="lazy" decoding="async">`:''}<span>${name}</span></span><b>${score||record||'—'}</b></div>`;
   function card(g,w){
     const a=clean(g.away),h=clean(g.home),ev=g.event;
     const away=teamFor(ev,'away',a),home=teamFor(ev,'home',h);
+    // Use the names from the same ESPN team objects that supply the logos/scores.
+    // This prevents a schedule label from being paired with the wrong ESPN team.
+    const awayLabel=away ? teamName(away) : a;
+    const homeLabel=home ? teamName(home) : h;
     const awayScore=away?.score??'';
     const homeScore=home?.score??'';
     const final=!!ev?.completed;
@@ -1274,7 +1276,7 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
     const status=final?'FINAL':live?(ev.detail||'LIVE'):(ev?.detail||g.network||'Scheduled');
     const href=ev?.id?`https://www.espn.com/college-football/game/_/gameId/${ev.id}`:espnWeek(w,group.value);
     const el=document.createElement('a');el.className='v2-score-card'+(norm(a)==='montana'||norm(h)==='montana'?' featured':'');el.href=href;el.target='_blank';el.rel='noopener';
-    el.innerHTML=`<div class="v2-score-meta"><span>${g.dateLabel||formatDate(g.date)}</span><b>${ev?.broadcasts?.[0]||g.network||'ESPN'}</b></div><div class="v2-score-status ${live?'is-live':''}">${status}</div>${teamMarkup(a,away,awayScore,g.awayRecord)}${teamMarkup(h,home,homeScore,g.homeRecord)}<em>${ev?.id?'ESPN Gamecast ↗':'ESPN scoreboard ↗'}</em>`;
+    el.innerHTML=`<div class="v2-score-meta"><span>${g.dateLabel||formatDate(g.date)}</span><b>${ev?.broadcasts?.[0]||g.network||'ESPN'}</b></div><div class="v2-score-status ${live?'is-live':''}">${status}</div>${teamMarkup(awayLabel,away,awayScore,g.awayRecord)}${teamMarkup(homeLabel,home,homeScore,g.homeRecord)}<em>${ev?.id?'ESPN Gamecast ↗':'ESPN scoreboard ↗'}</em>`;
     return el;
   }
   function render(){
