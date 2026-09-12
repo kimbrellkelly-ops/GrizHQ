@@ -1606,41 +1606,38 @@ async function renderFCSScoreboard(){
     if(statusEl)statusEl.textContent='Loading FCS scores…';
     const scheduled=scheduleGamesForWeek(w);
     const cached=cachedEventsForWeek(w);
-
-    // Render from the verified local cache first. The live ESPN request is
-    // supplemental and must never prevent the FCS board from rendering.
-    // Some browsers/networks leave a cross-origin request pending, which
-    // previously blocked every score card behind the await below.
+    const renderFromEvents=(normalizedLive)=>{
+      // Cached/local data renders immediately. ESPN is an enhancement, never
+      // a gate that can leave the entire FCS scoreboard blank.
+      const eventMap=new Map();
+      cached.forEach(e=>eventMap.set(String(e.id||JSON.stringify(e)),e));
+      normalizedLive.forEach(e=>eventMap.set(String(e.id||JSON.stringify(e)),e));
+      const eventPool=[...eventMap.values()];
+      const merged=scheduled.map(g=>({g,ev:liveOrCachedForGame(g,normalizedLive,cached)}));
+      const covered=new Set();
+      scheduled.forEach(g=>{
+        for(const team of [g.displayAway,g.displayHome]){
+          const key=canonicalBigSky(team);
+          if(key)covered.add(key);
+        }
+      });
+      const uniqueBigSkyGames=scheduled.length;
+      if(bigSkyLabelEl)bigSkyLabelEl.textContent=`${uniqueBigSkyGames} games • ${covered.size}/13 Big Sky teams scheduled`;
+      if(statusEl)statusEl.textContent=`${uniqueBigSkyGames} Big Sky games • ${covered.size}/13 teams scheduled`;
+      topEl.innerHTML=top25.slice(0,25).map(t=>top25Card(t,eventPool,scheduled)).join('')||'<div class="fcs-loading">Rankings unavailable.</div>';
+      if(bigSkyEl)bigSkyEl.innerHTML=merged.map(x=>gameCard(x.g,x.ev)).join('')||'<div class="fcs-loading">No Big Sky games scheduled this week.</div>';
+      return {eventPool,merged};
+    };
+    renderFromEvents([]);
     let normalizedLive=[];
     try{
-      const livePromise=fetchESPNEvents(w);
-      const timeout=new Promise(resolve=>setTimeout(()=>resolve([]),8000));
-      const rawLive=await Promise.race([livePromise,timeout]);
-      normalizedLive=(Array.isArray(rawLive)?rawLive:[]).map(normalizeEvent);
-    }catch(e){
-      normalizedLive=[];
-    }
-    // Merge live and cached feeds instead of letting an incomplete live ESPN
-    // response erase cached games. Live data wins when the same event exists.
-    const eventMap=new Map();
-    cached.forEach(e=>eventMap.set(String(e.id||JSON.stringify(e)),e));
-    normalizedLive.forEach(e=>eventMap.set(String(e.id||JSON.stringify(e)),e));
-    const eventPool=[...eventMap.values()];
-    const merged=scheduled.map(g=>({g,ev:liveOrCachedForGame(g,normalizedLive,cached)}));
-
-    const covered=new Set();
-    scheduled.forEach(g=>{
-      for(const team of [g.displayAway,g.displayHome]){
-        const key=canonicalBigSky(team);
-        if(key)covered.add(key);
-      }
-    });
-    const uniqueBigSkyGames=scheduled.length;
-    if(bigSkyLabelEl)bigSkyLabelEl.textContent=`${uniqueBigSkyGames} games • ${covered.size}/13 Big Sky teams scheduled`;
-    if(statusEl)statusEl.textContent=`${uniqueBigSkyGames} Big Sky games • ${covered.size}/13 teams scheduled`;
-
-    topEl.innerHTML=top25.slice(0,25).map(t=>top25Card(t,eventPool,scheduled)).join('')||'<div class="fcs-loading">Rankings unavailable.</div>';
-    if(bigSkyEl)bigSkyEl.innerHTML=merged.map(x=>gameCard(x.g,x.ev)).join('')||'<div class="fcs-loading">No Big Sky games scheduled this week.</div>';
+      const rawLive=await Promise.race([
+        fetchESPNEvents(w),
+        new Promise(resolve=>setTimeout(()=>resolve([]),8000))
+      ]);
+      normalizedLive=Array.isArray(rawLive)?rawLive.map(normalizeEvent):[];
+    }catch(e){normalizedLive=[];}
+    renderFromEvents(normalizedLive);
     await enrichScoreCards(scheduled,normalizedLive);
   }
   weekEl.onchange=()=>{weekEl.dataset.userChanged='1';draw();};
