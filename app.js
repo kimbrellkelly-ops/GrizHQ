@@ -1492,10 +1492,23 @@ async function renderFCSScoreboard(){
     return all;
   }
   function statusText(ev,game){
-    if(!ev)return game?.time||'TBA';
-    if(ev.completed)return ev.detail||'FINAL';
-    if(ev.state==='in'){const period=Number(ev.period||0);const clock=String(ev.clock||'').trim();const quarter=period>4?'OT':(period>0?'Q'+period:'');if(quarter&&clock)return quarter+' • '+clock;if(quarter)return quarter;if(clock)return clock;return ev.detail||'LIVE';}
-    return game?.time|| (ev.date?new Date(ev.date).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'}):'TBA');
+    if(!ev)return game?.status||game?.detail||game?.time||'TBA';
+    const status=ev.status||{};
+    const type=status.type||{};
+    const state=ev.state||status.state||type.state||'';
+    const completed=!!(ev.completed||status.completed||type.completed||type.name==='STATUS_FINAL');
+    const detail=String(ev.detail||status.detail||type.detail||'').trim();
+    if(completed)return detail||'FINAL';
+    if(state==='in'||state==='live'||type.name==='STATUS_IN_PROGRESS'||type.name==='STATUS_HALFTIME'){
+      const period=Number(ev.period||status.period||status.periodNumber||ev.periodNumber||0);
+      const clock=String(ev.clock||status.clock||status.displayClock||ev.displayClock||'').trim();
+      const quarter=period>4?'OT':(period>0?'Q'+period:'');
+      if(quarter&&clock)return quarter+' • '+clock;
+      if(quarter)return quarter;
+      if(clock)return clock;
+      return detail||'LIVE';
+    }
+    return detail||game?.time|| (ev.date?new Date(ev.date).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'}):'TBA');
   }
   function scoreCardTeam(t,fallback,showScore,rank=''){
     const name=teamName(t,fallback),logo=logoFor(t,fallback);
@@ -1539,7 +1552,10 @@ async function renderFCSScoreboard(){
     const scheduledAway=game.displayAway,scheduledHome=game.displayHome;
     const a=ts.find(x=>teamMatch(scheduledAway,x))||ts.find(x=>x.homeAway==='away')||ts[0]||null;
     const h=ts.find(x=>teamMatch(scheduledHome,x))||ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||null;
-    const final=!!ev?.completed,live=ev?.state==='in',state=live?'live':(final?'final':'scheduled');
+    const evStatus=ev?.status||{};const evType=evStatus.type||{};
+    const final=!!(ev?.completed||evStatus.completed||evType.completed||evType.name==='STATUS_FINAL');
+    const live=!!(ev&&(ev.state==='in'||ev.state==='live'||evStatus.state==='in'||evStatus.state==='live'||evType.name==='STATUS_IN_PROGRESS'||evType.name==='STATUS_HALFTIME'));
+    const state=live?'live':(final?'final':'scheduled');
     const label=game.bigSkyGame?'BIG SKY':'NON-CONFERENCE';
     const tv=(ev?.broadcasts||[]).slice(0,2).join(', ');
     const status=statusText(ev,game);
