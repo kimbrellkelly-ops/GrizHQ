@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T01:03:43.750564+00:00",
+  "updated": "2026-09-12T01:21:35.995670+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 60,
   "sources": [
@@ -520,9 +520,9 @@
       "badge": "GRIZ NEWS",
       "short": "GRIZ N",
       "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Austin-Buehler-stanced-at-tackle.jpeg",
-      "is_video": false,
+      "is_video": true,
       "youtube_id": "",
-      "video_url": "",
+      "video_url": "https://skylinesportsmt.com/cussin-discussin-episode-10-eric-austin-buehler/",
       "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Austin-Buehler-stanced-at-tackle.jpeg"
     },
     {
