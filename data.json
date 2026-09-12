@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T01:48:07.066623+00:00",
+  "updated": "2026-09-12T01:56:41.841959+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-12T01:48:45.419200+00:00"
+    "checked_at": "2026-09-12T01:57:13.961434+00:00"
   },
   "resources": [
     {
@@ -7820,7 +7820,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:36 - 4th",
+        "detail": "10:29 - 4th",
         "broadcasts": [
           "ACC Network"
         ]
@@ -7836,7 +7836,7 @@
             "short": "Virginia",
             "abbrev": "UVA",
             "homeAway": "home",
-            "score": "52"
+            "score": "59"
           },
           {
             "id": "2450",
@@ -7849,7 +7849,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:06 - 4th",
+        "detail": "2:41 - 4th",
         "broadcasts": [
           "ACCNX"
         ]
@@ -7878,7 +7878,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:23 - 2nd",
+        "detail": "3:06 - 2nd",
         "broadcasts": [
           "ESPNU"
         ]
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-12T01:48:48.874090+00:00"
+  "fcs_scores_updated": "2026-09-12T01:57:16.403268+00:00"
 }
