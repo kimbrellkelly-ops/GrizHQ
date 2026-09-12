@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T19:05:36.373340+00:00",
+  "updated": "2026-09-12T19:17:33.846434+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-12T19:06:02.529661+00:00"
+    "checked_at": "2026-09-12T19:18:05.127099+00:00"
   },
   "resources": [
     {
@@ -7797,35 +7797,6 @@
     ],
     "2026-09-10": [
       {
-        "id": "401858439",
-        "date": "2026-09-12T16:00Z",
-        "name": "Howard Bison at Indiana Hoosiers",
-        "teams": [
-          {
-            "id": "84",
-            "name": "Indiana Hoosiers",
-            "short": "Indiana",
-            "abbrev": "IU",
-            "homeAway": "home",
-            "score": "55"
-          },
-          {
-            "id": "47",
-            "name": "Howard Bison",
-            "short": "Howard",
-            "abbrev": "HOW",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "BTN"
-        ]
-      },
-      {
         "id": "401858218",
         "date": "2026-09-12T16:00Z",
         "name": "East Tennessee State Buccaneers at North Carolina Tar Heels",
@@ -7876,11 +7847,530 @@
             "score": "15"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "3:34 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
+        ]
+      },
+      {
+        "id": "401866633",
+        "date": "2026-09-12T16:00Z",
+        "name": "North Carolina A&T Aggies at North Carolina Central Eagles",
+        "teams": [
+          {
+            "id": "2428",
+            "name": "North Carolina Central Eagles",
+            "short": "NC Central",
+            "abbrev": "NCCU",
+            "homeAway": "home",
+            "score": "23"
+          },
+          {
+            "id": "2448",
+            "name": "North Carolina A&T Aggies",
+            "short": "NC A&T",
+            "abbrev": "NCAT",
+            "homeAway": "away",
+            "score": "14"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "Delayed",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401867929",
+        "date": "2026-09-12T16:00Z",
+        "name": "Wagner Seahawks at James Madison Dukes",
+        "teams": [
+          {
+            "id": "256",
+            "name": "James Madison Dukes",
+            "short": "James Madison",
+            "abbrev": "JMU",
+            "homeAway": "home",
+            "score": "73"
+          },
+          {
+            "id": "2681",
+            "name": "Wagner Seahawks",
+            "short": "Wagner",
+            "abbrev": "WAG",
+            "homeAway": "away",
+            "score": "3"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "10:02 - 4th",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868187",
+        "date": "2026-09-12T16:00Z",
+        "name": "Gardner-Webb Runnin' Bulldogs at Liberty Flames",
+        "teams": [
+          {
+            "id": "2335",
+            "name": "Liberty Flames",
+            "short": "Liberty",
+            "abbrev": "LIB",
+            "homeAway": "home",
+            "score": "17"
+          },
+          {
+            "id": "2241",
+            "name": "Gardner-Webb Runnin' Bulldogs",
+            "short": "Gardner-Webb",
+            "abbrev": "GWEB",
+            "homeAway": "away",
+            "score": "23"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "4:01 - 4th",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401870822",
+        "date": "2026-09-12T16:00Z",
+        "name": "Dickinson (PA) Red Devils at Davidson Wildcats",
+        "teams": [
+          {
+            "id": "2166",
+            "name": "Davidson Wildcats",
+            "short": "Davidson",
+            "abbrev": "DAV",
+            "homeAway": "home",
+            "score": "28"
+          },
+          {
+            "id": "2175",
+            "name": "Dickinson (PA) Red Devils",
+            "short": "Dickinson",
+            "abbrev": "DCK",
+            "homeAway": "away",
+            "score": "14"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868028",
+        "date": "2026-09-12T16:30Z",
+        "name": "Marist Red Foxes at Lafayette Leopards",
+        "teams": [
+          {
+            "id": "322",
+            "name": "Lafayette Leopards",
+            "short": "Lafayette",
+            "abbrev": "LAF",
+            "homeAway": "home",
+            "score": "13"
+          },
+          {
+            "id": "2368",
+            "name": "Marist Red Foxes",
+            "short": "Marist",
+            "abbrev": "MRST",
+            "homeAway": "away",
+            "score": "9"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "7:11 - 4th",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401856791",
+        "date": "2026-09-12T17:00Z",
+        "name": "UT Martin Skyhawks at West Virginia Mountaineers",
+        "teams": [
+          {
+            "id": "277",
+            "name": "West Virginia Mountaineers",
+            "short": "West Virginia",
+            "abbrev": "WVU",
+            "homeAway": "home",
+            "score": "42"
+          },
+          {
+            "id": "2630",
+            "name": "UT Martin Skyhawks",
+            "short": "UT Martin",
+            "abbrev": "UTM",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "5:06 - 3rd",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401866415",
+        "date": "2026-09-12T17:00Z",
+        "name": "Colgate Raiders at Central Michigan Chippewas",
+        "teams": [
+          {
+            "id": "2117",
+            "name": "Central Michigan Chippewas",
+            "short": "C Michigan",
+            "abbrev": "CMU",
+            "homeAway": "home",
+            "score": "6"
+          },
+          {
+            "id": "2142",
+            "name": "Colgate Raiders",
+            "short": "Colgate",
+            "abbrev": "COLG",
+            "homeAway": "away",
+            "score": "10"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "End of 3rd",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401866417",
+        "date": "2026-09-12T17:00Z",
+        "name": "Holy Cross Crusaders at Miami (OH) RedHawks",
+        "teams": [
+          {
+            "id": "193",
+            "name": "Miami (OH) RedHawks",
+            "short": "Miami OH",
+            "abbrev": "M-OH",
+            "homeAway": "home",
+            "score": "45"
+          },
+          {
+            "id": "107",
+            "name": "Holy Cross Crusaders",
+            "short": "Holy Cross",
+            "abbrev": "HC",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "2:47 - 3rd",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401867685",
+        "date": "2026-09-12T17:00Z",
+        "name": "Kentucky Christian Knights at Chicago State Cougars",
+        "teams": [
+          {
+            "id": "2130",
+            "name": "Chicago State Cougars",
+            "short": "Chicago St",
+            "abbrev": "CHST",
+            "homeAway": "home",
+            "score": "56"
+          },
+          {
+            "id": "3077",
+            "name": "Kentucky Christian Knights",
+            "short": "KCU",
+            "abbrev": "KYCH",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "10:28 - 3rd",
+        "broadcasts": []
+      },
+      {
+        "id": "401867990",
+        "date": "2026-09-12T17:30Z",
+        "name": "Bucknell Bison at VMI Keydets",
+        "teams": [
+          {
+            "id": "2678",
+            "name": "VMI Keydets",
+            "short": "VMI",
+            "abbrev": "VMI",
+            "homeAway": "home",
+            "score": "3"
+          },
+          {
+            "id": "2083",
+            "name": "Bucknell Bison",
+            "short": "Bucknell",
+            "abbrev": "BUCK",
+            "homeAway": "away",
+            "score": "14"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "End of 4th",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401866413",
+        "date": "2026-09-12T18:00Z",
+        "name": "Stony Brook Seawolves at Ball State Cardinals",
+        "teams": [
+          {
+            "id": "2050",
+            "name": "Ball State Cardinals",
+            "short": "Ball State",
+            "abbrev": "BALL",
+            "homeAway": "home",
+            "score": "21"
+          },
+          {
+            "id": "2619",
+            "name": "Stony Brook Seawolves",
+            "short": "Stony Brook",
+            "abbrev": "STBK",
+            "homeAway": "away",
+            "score": "3"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "2:00 - 2nd",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401867884",
+        "date": "2026-09-12T18:00Z",
+        "name": "Eastern Washington Eagles at South Dakota Coyotes",
+        "teams": [
+          {
+            "id": "233",
+            "name": "South Dakota Coyotes",
+            "short": "South Dakota",
+            "abbrev": "SDAK",
+            "homeAway": "home",
+            "score": "10"
+          },
+          {
+            "id": "331",
+            "name": "Eastern Washington Eagles",
+            "short": "E Washington",
+            "abbrev": "EWU",
+            "homeAway": "away",
+            "score": "3"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "0:37 - 2nd",
+        "broadcasts": [
+          "ESPN+",
+          "Midco Sports Net"
+        ]
+      },
+      {
+        "id": "401867895",
+        "date": "2026-09-12T18:00Z",
+        "name": "Duquesne Dukes at Youngstown State Penguins",
+        "teams": [
+          {
+            "id": "2754",
+            "name": "Youngstown State Penguins",
+            "short": "Youngstown St",
+            "abbrev": "YSU",
+            "homeAway": "home",
+            "score": "21"
+          },
+          {
+            "id": "2184",
+            "name": "Duquesne Dukes",
+            "short": "Duquesne",
+            "abbrev": "DUQ",
+            "homeAway": "away",
+            "score": "3"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "11:05 - 2nd",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868033",
+        "date": "2026-09-12T18:00Z",
+        "name": "William & Mary Tribe at Lehigh Mountain Hawks",
+        "teams": [
+          {
+            "id": "2329",
+            "name": "Lehigh Mountain Hawks",
+            "short": "Lehigh",
+            "abbrev": "LEH",
+            "homeAway": "home",
+            "score": "30"
+          },
+          {
+            "id": "2729",
+            "name": "William & Mary Tribe",
+            "short": "William & Mary",
+            "abbrev": "W&M",
+            "homeAway": "away",
+            "score": "6"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "1:54 - 2nd",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868255",
+        "date": "2026-09-12T18:00Z",
+        "name": "Drake Bulldogs at Northern Iowa Panthers",
+        "teams": [
+          {
+            "id": "2460",
+            "name": "Northern Iowa Panthers",
+            "short": "Northern Iowa",
+            "abbrev": "UNI",
+            "homeAway": "home",
+            "score": "21"
+          },
+          {
+            "id": "2181",
+            "name": "Drake Bulldogs",
+            "short": "Drake",
+            "abbrev": "DRKE",
+            "homeAway": "away",
+            "score": "14"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "11:04 - 2nd",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868280",
+        "date": "2026-09-12T18:00Z",
+        "name": "Northern Michigan Wildcats at St. Thomas Tommies",
+        "teams": [
+          {
+            "id": "2900",
+            "name": "St. Thomas Tommies",
+            "short": "St Thomas",
+            "abbrev": "STMN",
+            "homeAway": "home",
+            "score": "15"
+          },
+          {
+            "id": "128",
+            "name": "Northern Michigan Wildcats",
+            "short": "N Michigan",
+            "abbrev": "NMI",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "9:40 - 2nd",
+        "broadcasts": [
+          "Midco Sports Plus"
+        ]
+      },
+      {
+        "id": "401867953",
+        "date": "2026-09-12T19:00Z",
+        "name": "Bowie State Bulldogs at Delaware State Hornets",
+        "teams": [
+          {
+            "id": "2169",
+            "name": "Delaware State Hornets",
+            "short": "Delaware St",
+            "abbrev": "DSU",
+            "homeAway": "home",
+            "score": "7"
+          },
+          {
+            "id": "2075",
+            "name": "Bowie State Bulldogs",
+            "short": "Bowie St",
+            "abbrev": "BSU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "9:58 - 1st",
+        "broadcasts": []
+      },
+      {
+        "id": "401858439",
+        "date": "2026-09-12T16:00Z",
+        "name": "Howard Bison at Indiana Hoosiers",
+        "teams": [
+          {
+            "id": "84",
+            "name": "Indiana Hoosiers",
+            "short": "Indiana",
+            "abbrev": "IU",
+            "homeAway": "home",
+            "score": "55"
+          },
+          {
+            "id": "47",
+            "name": "Howard Bison",
+            "short": "Howard",
+            "abbrev": "HOW",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "BTN"
         ]
       },
       {
@@ -7942,93 +8432,6 @@
         ]
       },
       {
-        "id": "401866633",
-        "date": "2026-09-12T16:00Z",
-        "name": "North Carolina A&T Aggies at North Carolina Central Eagles",
-        "teams": [
-          {
-            "id": "2428",
-            "name": "North Carolina Central Eagles",
-            "short": "NC Central",
-            "abbrev": "NCCU",
-            "homeAway": "home",
-            "score": "23"
-          },
-          {
-            "id": "2448",
-            "name": "North Carolina A&T Aggies",
-            "short": "NC A&T",
-            "abbrev": "NCAT",
-            "homeAway": "away",
-            "score": "14"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "Delayed",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401867929",
-        "date": "2026-09-12T16:00Z",
-        "name": "Wagner Seahawks at James Madison Dukes",
-        "teams": [
-          {
-            "id": "256",
-            "name": "James Madison Dukes",
-            "short": "James Madison",
-            "abbrev": "JMU",
-            "homeAway": "home",
-            "score": "66"
-          },
-          {
-            "id": "2681",
-            "name": "Wagner Seahawks",
-            "short": "Wagner",
-            "abbrev": "WAG",
-            "homeAway": "away",
-            "score": "3"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "End of 3rd",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868187",
-        "date": "2026-09-12T16:00Z",
-        "name": "Gardner-Webb Runnin' Bulldogs at Liberty Flames",
-        "teams": [
-          {
-            "id": "2335",
-            "name": "Liberty Flames",
-            "short": "Liberty",
-            "abbrev": "LIB",
-            "homeAway": "home",
-            "score": "17"
-          },
-          {
-            "id": "2241",
-            "name": "Gardner-Webb Runnin' Bulldogs",
-            "short": "Gardner-Webb",
-            "abbrev": "GWEB",
-            "homeAway": "away",
-            "score": "23"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "8:26 - 4th",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
         "id": "401868227",
         "date": "2026-09-12T16:00Z",
         "name": "Thomas More College Saints at Dayton Flyers",
@@ -8058,409 +8461,6 @@
         ]
       },
       {
-        "id": "401870822",
-        "date": "2026-09-12T16:00Z",
-        "name": "Dickinson (PA) Red Devils at Davidson Wildcats",
-        "teams": [
-          {
-            "id": "2166",
-            "name": "Davidson Wildcats",
-            "short": "Davidson",
-            "abbrev": "DAV",
-            "homeAway": "home",
-            "score": "28"
-          },
-          {
-            "id": "2175",
-            "name": "Dickinson (PA) Red Devils",
-            "short": "Dickinson",
-            "abbrev": "DCK",
-            "homeAway": "away",
-            "score": "14"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "2:15 - 4th",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868028",
-        "date": "2026-09-12T16:30Z",
-        "name": "Marist Red Foxes at Lafayette Leopards",
-        "teams": [
-          {
-            "id": "322",
-            "name": "Lafayette Leopards",
-            "short": "Lafayette",
-            "abbrev": "LAF",
-            "homeAway": "home",
-            "score": "13"
-          },
-          {
-            "id": "2368",
-            "name": "Marist Red Foxes",
-            "short": "Marist",
-            "abbrev": "MRST",
-            "homeAway": "away",
-            "score": "9"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "10:39 - 4th",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401856791",
-        "date": "2026-09-12T17:00Z",
-        "name": "UT Martin Skyhawks at West Virginia Mountaineers",
-        "teams": [
-          {
-            "id": "277",
-            "name": "West Virginia Mountaineers",
-            "short": "West Virginia",
-            "abbrev": "WVU",
-            "homeAway": "home",
-            "score": "42"
-          },
-          {
-            "id": "2630",
-            "name": "UT Martin Skyhawks",
-            "short": "UT Martin",
-            "abbrev": "UTM",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "9:56 - 3rd",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401866415",
-        "date": "2026-09-12T17:00Z",
-        "name": "Colgate Raiders at Central Michigan Chippewas",
-        "teams": [
-          {
-            "id": "2117",
-            "name": "Central Michigan Chippewas",
-            "short": "C Michigan",
-            "abbrev": "CMU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2142",
-            "name": "Colgate Raiders",
-            "short": "Colgate",
-            "abbrev": "COLG",
-            "homeAway": "away",
-            "score": "10"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "2:14 - 3rd",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401866417",
-        "date": "2026-09-12T17:00Z",
-        "name": "Holy Cross Crusaders at Miami (OH) RedHawks",
-        "teams": [
-          {
-            "id": "193",
-            "name": "Miami (OH) RedHawks",
-            "short": "Miami OH",
-            "abbrev": "M-OH",
-            "homeAway": "home",
-            "score": "42"
-          },
-          {
-            "id": "107",
-            "name": "Holy Cross Crusaders",
-            "short": "Holy Cross",
-            "abbrev": "HC",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "6:15 - 3rd",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401867685",
-        "date": "2026-09-12T17:00Z",
-        "name": "Kentucky Christian Knights at Chicago State Cougars",
-        "teams": [
-          {
-            "id": "2130",
-            "name": "Chicago State Cougars",
-            "short": "Chicago St",
-            "abbrev": "CHST",
-            "homeAway": "home",
-            "score": "49"
-          },
-          {
-            "id": "3077",
-            "name": "Kentucky Christian Knights",
-            "short": "KCU",
-            "abbrev": "KYCH",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "Halftime",
-        "broadcasts": []
-      },
-      {
-        "id": "401867990",
-        "date": "2026-09-12T17:30Z",
-        "name": "Bucknell Bison at VMI Keydets",
-        "teams": [
-          {
-            "id": "2678",
-            "name": "VMI Keydets",
-            "short": "VMI",
-            "abbrev": "VMI",
-            "homeAway": "home",
-            "score": "3"
-          },
-          {
-            "id": "2083",
-            "name": "Bucknell Bison",
-            "short": "Bucknell",
-            "abbrev": "BUCK",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "4:22 - 4th",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401866413",
-        "date": "2026-09-12T18:00Z",
-        "name": "Stony Brook Seawolves at Ball State Cardinals",
-        "teams": [
-          {
-            "id": "2050",
-            "name": "Ball State Cardinals",
-            "short": "Ball State",
-            "abbrev": "BALL",
-            "homeAway": "home",
-            "score": "14"
-          },
-          {
-            "id": "2619",
-            "name": "Stony Brook Seawolves",
-            "short": "Stony Brook",
-            "abbrev": "STBK",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "6:49 - 2nd",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401867884",
-        "date": "2026-09-12T18:00Z",
-        "name": "Eastern Washington Eagles at South Dakota Coyotes",
-        "teams": [
-          {
-            "id": "233",
-            "name": "South Dakota Coyotes",
-            "short": "South Dakota",
-            "abbrev": "SDAK",
-            "homeAway": "home",
-            "score": "10"
-          },
-          {
-            "id": "331",
-            "name": "Eastern Washington Eagles",
-            "short": "E Washington",
-            "abbrev": "EWU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "2:35 - 2nd",
-        "broadcasts": [
-          "ESPN+",
-          "Midco Sports Net"
-        ]
-      },
-      {
-        "id": "401867895",
-        "date": "2026-09-12T18:00Z",
-        "name": "Duquesne Dukes at Youngstown State Penguins",
-        "teams": [
-          {
-            "id": "2754",
-            "name": "Youngstown State Penguins",
-            "short": "Youngstown St",
-            "abbrev": "YSU",
-            "homeAway": "home",
-            "score": "14"
-          },
-          {
-            "id": "2184",
-            "name": "Duquesne Dukes",
-            "short": "Duquesne",
-            "abbrev": "DUQ",
-            "homeAway": "away",
-            "score": "3"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "0:56 - 1st",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868033",
-        "date": "2026-09-12T18:00Z",
-        "name": "William & Mary Tribe at Lehigh Mountain Hawks",
-        "teams": [
-          {
-            "id": "2329",
-            "name": "Lehigh Mountain Hawks",
-            "short": "Lehigh",
-            "abbrev": "LEH",
-            "homeAway": "home",
-            "score": "30"
-          },
-          {
-            "id": "2729",
-            "name": "William & Mary Tribe",
-            "short": "William & Mary",
-            "abbrev": "W&M",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "7:46 - 2nd",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868255",
-        "date": "2026-09-12T18:00Z",
-        "name": "Drake Bulldogs at Northern Iowa Panthers",
-        "teams": [
-          {
-            "id": "2460",
-            "name": "Northern Iowa Panthers",
-            "short": "Northern Iowa",
-            "abbrev": "UNI",
-            "homeAway": "home",
-            "score": "21"
-          },
-          {
-            "id": "2181",
-            "name": "Drake Bulldogs",
-            "short": "Drake",
-            "abbrev": "DRKE",
-            "homeAway": "away",
-            "score": "13"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "11:04 - 2nd",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868280",
-        "date": "2026-09-12T18:00Z",
-        "name": "Northern Michigan Wildcats at St. Thomas Tommies",
-        "teams": [
-          {
-            "id": "2900",
-            "name": "St. Thomas Tommies",
-            "short": "St Thomas",
-            "abbrev": "STMN",
-            "homeAway": "home",
-            "score": "15"
-          },
-          {
-            "id": "128",
-            "name": "Northern Michigan Wildcats",
-            "short": "N Michigan",
-            "abbrev": "NMI",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "9:40 - 2nd",
-        "broadcasts": [
-          "Midco Sports Plus"
-        ]
-      },
-      {
-        "id": "401867953",
-        "date": "2026-09-12T19:00Z",
-        "name": "Bowie State Bulldogs at Delaware State Hornets",
-        "teams": [
-          {
-            "id": "2169",
-            "name": "Delaware State Hornets",
-            "short": "Delaware St",
-            "abbrev": "DSU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2075",
-            "name": "Bowie State Bulldogs",
-            "short": "Bowie St",
-            "abbrev": "BSU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "14:58 - 1st",
-        "broadcasts": []
-      },
-      {
         "id": "401868112",
         "date": "2026-09-12T19:00Z",
         "name": "Utah Tech Trailblazers at Montana Grizzlies",
@@ -8471,7 +8471,7 @@
             "short": "Montana",
             "abbrev": "MONT",
             "homeAway": "home",
-            "score": "0"
+            "score": "7"
           },
           {
             "id": "3101",
@@ -8482,9 +8482,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 3:00 PM EDT",
+        "detail": "10:00 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-12T19:06:06.321190+00:00"
+  "fcs_scores_updated": "2026-09-12T19:18:09.078117+00:00"
 }
