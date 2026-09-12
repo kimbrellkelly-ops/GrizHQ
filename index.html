@@ -46,13 +46,8 @@
       <a data-tab-link="stats" href="#stats">Stats</a>
       <a data-tab-link="schedule" href="#big-sky">Big Sky</a>
       <a data-tab-link="media" href="#media">Media</a>
-      <div class="v2-more-menu">
-        <button class="v2-more-trigger" type="button" aria-expanded="false" aria-controls="v2-more-dropdown">More <span aria-hidden="true">⌄</span></button>
-        <div class="v2-more-dropdown" id="v2-more-dropdown" hidden>
-          <a data-tab-link="history" href="#history">History <span aria-hidden="true">›</span></a>
-          <a data-tab-link="officiating" href="#officiating">Officiating <span aria-hidden="true">›</span></a>
-        </div>
-      </div>
+      <a data-tab-link="history" href="#history">History</a>
+      <a data-tab-link="officiating" href="#officiating">Officiating</a>
     </nav>
   </div>
   <div class="v2-scorebar" aria-label="Football scores and upcoming games">
@@ -1170,23 +1165,7 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
 })();
 </script>
 
-<script>
-(function(){
-  const menu=document.querySelector('.v2-more-menu');
-  const trigger=document.querySelector('.v2-more-trigger');
-  const dropdown=document.getElementById('v2-more-dropdown');
-  if(!menu||!trigger||!dropdown) return;
-  function close(){ dropdown.hidden=true; trigger.setAttribute('aria-expanded','false'); }
-  trigger.addEventListener('click',function(e){
-    e.preventDefault();
-    const open=dropdown.hidden;
-    dropdown.hidden=!open;
-    trigger.setAttribute('aria-expanded',String(open));
-  });
-  document.addEventListener('click',function(e){ if(!menu.contains(e.target)) close(); });
-  dropdown.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
-})();
-</script>
+
 
 <script>
 (function(){
