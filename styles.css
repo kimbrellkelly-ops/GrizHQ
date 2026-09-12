@@ -4453,139 +4453,56 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   }
 }
 
-/* GRIZ HQ VISUAL POLISH — scoped to the V2 shell; scoreboard styles untouched */
+/* Visual pass 1: premium Montana Griz header treatment. Scoreboard intentionally untouched. */
 .v2-header{
-  background:linear-gradient(180deg,#17181c 0%,#202127 100%);
+  background:#17171b;
   color:#fff;
-  border-bottom:4px solid #760039;
-  box-shadow:0 8px 24px rgba(18,18,24,.12);
+  border-bottom:1px solid #3a2932;
 }
 .v2-topbar{
-  min-height:92px;
-  padding:14px 28px;
-  gap:30px;
-}
-.v2-brand{
-  flex-basis:224px;
-  padding:4px 0;
+  background:linear-gradient(115deg,#17171b 0%,#211b20 58%,#3b1028 100%);
+  max-width:none;
+  padding:12px clamp(18px,3vw,42px);
+  gap:24px;
 }
 .v2-brand img{
-  width:224px;
-  filter:drop-shadow(0 4px 5px rgba(0,0,0,.28));
-}
-.v2-nav{
-  gap:3px;
+  filter:drop-shadow(0 4px 8px rgba(0,0,0,.45));
 }
 .v2-nav a{
-  color:#f4f2f4;
-  font-size:13px;
-  letter-spacing:.015em;
-  padding:12px 11px;
+  color:#f5f1f3;
   border:1px solid transparent;
   border-radius:8px;
+  padding:11px 12px;
+  transition:background .18s ease,border-color .18s ease,color .18s ease;
 }
-.v2-nav a:hover{
-  background:rgba(255,255,255,.09);
-  color:#fff;
-  border-color:rgba(255,255,255,.12);
-}
+.v2-nav a:hover,
 .v2-nav a.active{
   background:#760039;
+  border-color:#a8758d;
   color:#fff;
-  border-color:#9b2b61;
-  box-shadow:0 4px 12px rgba(118,0,57,.28);
 }
 .v2-more-trigger{
-  background:#fff0f6;
-  color:#760039;
-  border:1px solid #f2c8da;
-  box-shadow:none;
+  background:#760039;
+  color:#fff;
+  border:1px solid #a8758d;
+  border-radius:8px;
 }
 .v2-more-trigger:hover,
 .v2-more-trigger[aria-expanded="true"]{
-  background:#760039;
-  color:#fff;
-  border-color:#9b2b61;
+  background:#a50950;
+  border-color:#d0a0b5;
 }
-.v2-home{
-  background:
-    radial-gradient(circle at 12% 0%,rgba(118,0,57,.07),transparent 30%),
-    linear-gradient(180deg,#ececf0 0%,#e4e5e9 100%);
-  padding:28px 28px 52px;
+.v2-more-dropdown{
+  background:#211b20;
+  border-color:#59404d;
 }
-.v2-dashboard{
-  gap:22px;
+.v2-more-dropdown a{
+  color:#f5f1f3!important;
 }
-.v2-card{
-  border:1px solid #d8d9df;
-  border-radius:16px;
-  box-shadow:0 8px 24px rgba(24,25,34,.07);
-}
-.v2-card-heading{
-  background:linear-gradient(180deg,#fff 0%,#faf9fb 100%);
-  padding:19px 20px 15px;
-  border-bottom:3px solid #760039;
-}
-.v2-card-heading span{
-  color:#760039;
-}
-.v2-card-heading h2{
-  letter-spacing:-.02em;
-}
-.v2-rail a{
-  padding:15px 20px;
-  background:#fff;
-  transition:background .16s ease,color .16s ease,padding .16s ease;
-}
-.v2-rail a:hover{
-  background:#fff2f7;
-  color:#760039;
-  padding-left:24px;
-}
-.v2-rail-cta{
-  background:linear-gradient(135deg,#760039,#4d0828)!important;
-  box-shadow:0 6px 14px rgba(118,0,57,.2);
-}
-.v2-feature{
-  border:1px solid #303039;
-  box-shadow:0 10px 28px rgba(24,25,34,.12);
-}
-.v2-feature:after{
-  background:linear-gradient(0deg,rgba(12,5,12,.94) 0%,rgba(18,7,15,.5) 52%,rgba(18,7,15,.08) 100%);
-}
-.v2-tag{
-  background:#b20b5e;
-  box-shadow:0 4px 12px rgba(0,0,0,.18);
-}
-.v2-button{
-  background:linear-gradient(135deg,#a50950,#760039);
-  box-shadow:0 5px 14px rgba(118,0,57,.24);
-}
-.v2-headlines a{
-  background:#fff;
-  transition:background .16s ease,color .16s ease,padding .16s ease;
-}
-.v2-headlines a:hover{
-  background:#fff2f7;
-  padding-left:23px;
-}
-.v2-next-card{
-  background:linear-gradient(135deg,#760039 0%,#4b0828 100%);
-  box-shadow:0 8px 22px rgba(118,0,57,.16);
-}
-.v2-lower-news-grid a{
-  background:#fff;
-  transition:background .16s ease,color .16s ease;
-}
-.v2-lower-news-grid a:hover{
-  background:#fff2f7;
-}
-@media(max-width:1200px){
-  .v2-topbar{padding:14px 22px}
+.v2-more-dropdown a:hover{
+  background:#760039!important;
+  color:#fff!important;
 }
 @media(max-width:800px){
-  .v2-topbar{min-height:84px;padding:12px 16px;gap:18px}
-  .v2-brand{flex-basis:170px}
-  .v2-brand img{width:170px}
-  .v2-home{padding:16px 12px 34px}
+  .v2-topbar{padding:10px 14px;}
 }
