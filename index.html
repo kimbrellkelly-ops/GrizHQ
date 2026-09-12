@@ -1245,7 +1245,7 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
     : `https://www.espn.com/college-football/scoreboard/_/week/${w}/year/2026/seasontype/2`;
   const clean=s=>String(s||'').replace(/\s*\([^)]*\)\s*$/,'').replace(/\s+/g,' ').trim();
   const norm=s=>clean(s).toLowerCase().replace(/[^a-z0-9]/g,'');
-  const aliases={montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanastatebobcats'],idaho:['idaho','idahovandals'],weberstate:['weberstate','weberstatewildcats'],easternwashington:['easternwashington','easternwashingtoneagles'],northernarizona:['northernarizona','northernarizonalumberjacks'],northerncolorado:['northerncolorado','northerncoloradobears'],idahostate:['idahostate','idahostatebengals'],calpoly:['calpoly','calpolytechnic','calpolymustangs'],southernutah:['southernutah','southernutahthunderbirds'],utahtech:['utahtech','utahtechtrailblazers'],ucdavis:['ucdavis','ucdavisaggies'],portlandstate:['portlandstate','portlandstatevikings']};
+  const aliases={montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanastatebobcats'],idaho:['idaho','idahovandals'],weberstate:['weberstate','weberstatewildcats','weberst'],easternwashington:['easternwashington','easternwashingtoneagles','ewashington'],northernarizona:['northernarizona','northernarizonalumberjacks','n arizona'],northerncolorado:['northerncolorado','northerncoloradobears','n colorado'],idahostate:['idahostate','idahostatebengals','idahost'],calpoly:['calpoly','calpolytechnic','calpolymustangs'],southernutah:['southernutah','southernutahthunderbirds'],utahtech:['utahtech','utahtechtrailblazers'],ucdavis:['ucdavis','ucdavisaggies'],portlandstate:['portlandstate','portlandstatevikings','portlandst']};
   const bigSkyKeys=new Set(Object.keys(aliases));
   const canonical=s=>{const n=norm(s);return Object.keys(aliases).find(k=>aliases[k].includes(n))||null;};
   const teamName=t=>t?.short||t?.shortDisplayName||t?.name||t?.displayName||t?.abbrev||'Team';
@@ -1257,11 +1257,18 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   const isRanked=name=>{const n=norm(name);return rankedNames.some(r=>n===r||n.includes(r)||r.includes(n));};
   const allScores=Object.values(data.fcs_scores||{}).flat();
   const schedule=data.big_sky_full_schedules||[];
-  const scoreFor=(away,home,date)=>allScores.find(ev=>dateOnly(ev.date)===date&&(ev.teams||[]).some(t=>norm(teamName(t))===norm(away))&&(ev.teams||[]).some(t=>norm(teamName(t))===norm(home)));
+  const sameTeam=(a,b)=>{const ca=canonical(a),cb=canonical(b);return ca&&cb?ca===cb:norm(a)===norm(b);};
+  const scoreFor=(away,home,date)=>allScores.find(ev=>{
+    if(dateOnly(ev.date)!==date)return false;
+    const ts=ev.teams||[];
+    const at=ts.find(t=>t.homeAway==='away')||ts[0];
+    const ht=ts.find(t=>t.homeAway==='home')||ts[1];
+    return !!at&&!!ht&&sameTeam(teamName(at),away)&&sameTeam(teamName(ht),home);
+  });
   const formatDate=s=>{const d=new Date(s+'T12:00:00');return d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});};
   const logoUrl=id=>id?`https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(id)}.png`:'';
   const teamFor=(ev,side,name)=>ev?.teams?.find(t=>t.homeAway===side)||ev?.teams?.find(t=>norm(teamName(t))===norm(name));
-  const teamMarkup=(name,team,score,record)=>`<div class="v2-score-team"><span class="v2-score-team-name">${logoUrl(team?.id)?`<img src="${logoUrl(team.id)}" alt="" loading="lazy" decoding="async">`:''}<span>${name}</span></span><b>${score||record||'—'}</b></div>`;
+  const teamMarkup=(name,team,score,record)=>{const shown=score!==undefined&&score!==null&&String(score)!==''?score:(record||'—');return `<div class="v2-score-team"><span class="v2-score-team-name">${logoUrl(team?.id)?`<img src="${logoUrl(team.id)}" alt="" loading="lazy" decoding="async">`:''}<span>${name}</span></span><b>${shown}</b></div>`;};
   function card(g,w){
     const a=clean(g.away),h=clean(g.home),ev=g.event;
     const away=teamFor(ev,'away',a),home=teamFor(ev,'home',h);

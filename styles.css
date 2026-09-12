@@ -4392,3 +4392,63 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .v2-score-card .v2-score-team>b{flex:0 0 auto;color:#17171d;font-size:16px;font-variant-numeric:tabular-nums;}
 .v2-score-card em{margin-top:auto!important;padding-top:7px;font-size:10px;}
 @media(max-width:800px){.v2-scorebar{gap:8px;}.v2-score-games{gap:8px!important;padding-bottom:2px!important;}.v2-score-games>.v2-score-card{flex-basis:195px!important;min-width:195px!important;width:195px!important;}.v2-score-card .v2-score-team{font-size:13px;}.v2-score-card .v2-score-team img{width:21px;height:21px;flex-basis:21px;}}
+
+/* Score strip final isolation: logos stay small and cards never compress their rows. */
+.v2-score-games > .v2-score-card {
+  flex: 0 0 236px !important;
+  min-width: 236px !important;
+  width: 236px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+.v2-score-card .v2-score-meta {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  align-items: start !important;
+  gap: 8px !important;
+  white-space: normal !important;
+}
+.v2-score-card .v2-score-meta span,
+.v2-score-card .v2-score-meta b,
+.v2-score-card .v2-score-status {
+  overflow-wrap: anywhere !important;
+  white-space: normal !important;
+}
+.v2-score-card .v2-score-team {
+  min-height: 30px !important;
+  align-items: center !important;
+}
+.v2-score-card .v2-score-team-name {
+  min-width: 0 !important;
+  flex: 1 1 auto !important;
+}
+.v2-score-card .v2-score-team-name img {
+  display: block !important;
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  max-width: 24px !important;
+  min-height: 24px !important;
+  max-height: 24px !important;
+  object-fit: contain !important;
+  flex: 0 0 24px !important;
+}
+.v2-score-card .v2-score-team-name > span {
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+.v2-score-card .v2-score-team > b {
+  flex: 0 0 24px !important;
+  width: 24px !important;
+  text-align: right !important;
+  font-variant-numeric: tabular-nums !important;
+}
+@media (max-width: 800px) {
+  .v2-score-games > .v2-score-card {
+    flex-basis: 214px !important;
+    min-width: 214px !important;
+    width: 214px !important;
+  }
+}
