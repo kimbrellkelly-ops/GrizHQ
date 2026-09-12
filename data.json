@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T22:06:30.214168+00:00",
+  "updated": "2026-09-12T22:20:02.381875+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-12T22:06:59.750454+00:00"
+    "checked_at": "2026-09-12T22:20:25.140735+00:00"
   },
   "resources": [
     {
@@ -7797,35 +7797,6 @@
     ],
     "2026-09-10": [
       {
-        "id": "401867895",
-        "date": "2026-09-12T18:00Z",
-        "name": "Duquesne Dukes at Youngstown State Penguins",
-        "teams": [
-          {
-            "id": "2754",
-            "name": "Youngstown State Penguins",
-            "short": "Youngstown St",
-            "abbrev": "YSU",
-            "homeAway": "home",
-            "score": "70"
-          },
-          {
-            "id": "2184",
-            "name": "Duquesne Dukes",
-            "short": "Duquesne",
-            "abbrev": "DUQ",
-            "homeAway": "away",
-            "score": "13"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
         "id": "401868280",
         "date": "2026-09-12T18:00Z",
         "name": "Northern Michigan Wildcats at St. Thomas Tommies",
@@ -7847,9 +7818,9 @@
             "score": "14"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "End of 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "Midco Sports Plus"
         ]
@@ -7876,9 +7847,9 @@
             "score": "6"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "2:02 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": []
       },
       {
@@ -7900,12 +7871,12 @@
             "short": "Utah Tech",
             "abbrev": "UTU",
             "homeAway": "away",
-            "score": "7"
+            "score": "14"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:40 - 4th",
+        "detail": "0:18 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7934,7 +7905,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:10 - 3rd",
+        "detail": "2:05 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7950,7 +7921,7 @@
             "short": "Akron",
             "abbrev": "AKR",
             "homeAway": "home",
-            "score": "31"
+            "score": "38"
           },
           {
             "id": "2523",
@@ -7963,7 +7934,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 4th",
+        "detail": "11:45 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7979,7 +7950,7 @@
             "short": "Toledo",
             "abbrev": "TOL",
             "homeAway": "home",
-            "score": "49"
+            "score": "56"
           },
           {
             "id": "2115",
@@ -7992,7 +7963,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:39 - 3rd",
+        "detail": "13:27 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8016,12 +7987,12 @@
             "short": "Sacred Heart",
             "abbrev": "SHU",
             "homeAway": "away",
-            "score": "3"
+            "score": "10"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "9:56 - 4th",
+        "detail": "2:00 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8037,7 +8008,7 @@
             "short": "SMU",
             "abbrev": "SMU",
             "homeAway": "home",
-            "score": "42"
+            "score": "48"
           },
           {
             "id": "302",
@@ -8050,7 +8021,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "9:20 - 3rd",
+        "detail": "6:12 - 3rd",
         "broadcasts": [
           "ACCNX"
         ]
@@ -8079,7 +8050,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:59 - 3rd",
+        "detail": "15:00 - 4th",
         "broadcasts": [
           "MW+"
         ]
@@ -8108,7 +8079,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "12:35 - 3rd",
         "broadcasts": [
           "MW+"
         ]
@@ -8137,7 +8108,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:28 - 3rd",
+        "detail": "4:32 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8161,12 +8132,12 @@
             "short": "Alabama St",
             "abbrev": "ALST",
             "homeAway": "away",
-            "score": "7"
+            "score": "17"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:10 - 3rd",
+        "detail": "8:41 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8182,7 +8153,7 @@
             "short": "Miss Valley St",
             "abbrev": "MVSU",
             "homeAway": "home",
-            "score": "23"
+            "score": "24"
           },
           {
             "id": "2339",
@@ -8190,12 +8161,12 @@
             "short": "Lincoln (PA)",
             "abbrev": "LINP",
             "homeAway": "away",
-            "score": "14"
+            "score": "20"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:30 - 3rd",
+        "detail": "1:15 - 3rd",
         "broadcasts": []
       },
       {
@@ -8222,7 +8193,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:46 - 2nd",
+        "detail": "2:47 - 2nd",
         "broadcasts": [
           "FloSports"
         ]
@@ -8238,7 +8209,7 @@
             "short": "Austin Peay",
             "abbrev": "APSU",
             "homeAway": "home",
-            "score": "28"
+            "score": "35"
           },
           {
             "id": "2413",
@@ -8251,7 +8222,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "9:42 - 2nd",
+        "detail": "3:40 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8267,7 +8238,7 @@
             "short": "N Arizona",
             "abbrev": "NAU",
             "homeAway": "home",
-            "score": "10"
+            "score": "17"
           },
           {
             "id": "2916",
@@ -8280,7 +8251,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:45 - 2nd",
+        "detail": "10:16 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8309,7 +8280,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:14 - 2nd",
+        "detail": "5:48 - 2nd",
         "broadcasts": [
           "SWAC TV"
         ]
@@ -8325,7 +8296,7 @@
             "short": "Florida",
             "abbrev": "FLA",
             "homeAway": "home",
-            "score": "10"
+            "score": "17"
           },
           {
             "id": "2097",
@@ -8338,7 +8309,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:13 - 1st",
+        "detail": "12:13 - 2nd",
         "broadcasts": [
           "SECN+"
         ]
@@ -8865,6 +8836,35 @@
         ]
       },
       {
+        "id": "401867895",
+        "date": "2026-09-12T18:00Z",
+        "name": "Duquesne Dukes at Youngstown State Penguins",
+        "teams": [
+          {
+            "id": "2754",
+            "name": "Youngstown State Penguins",
+            "short": "Youngstown St",
+            "abbrev": "YSU",
+            "homeAway": "home",
+            "score": "70"
+          },
+          {
+            "id": "2184",
+            "name": "Duquesne Dukes",
+            "short": "Duquesne",
+            "abbrev": "DUQ",
+            "homeAway": "away",
+            "score": "13"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
         "id": "401868033",
         "date": "2026-09-12T18:00Z",
         "name": "William & Mary Tribe at Lehigh Mountain Hawks",
@@ -8944,9 +8944,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 6:00 PM EDT",
+        "detail": "Delayed",
         "broadcasts": [
           "FloSports"
         ]
@@ -8970,12 +8970,12 @@
             "short": "Stonehill",
             "abbrev": "STO",
             "homeAway": "away",
-            "score": "0"
+            "score": "7"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:47 - 1st",
+        "detail": "10:57 - 1st",
         "broadcasts": [
           "FloSports"
         ]
@@ -9004,7 +9004,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:02 - 1st",
+        "detail": "12:31 - 1st",
         "broadcasts": []
       },
       {
@@ -9018,7 +9018,7 @@
             "short": "SC State",
             "abbrev": "SCST",
             "homeAway": "home",
-            "score": "0"
+            "score": "7"
           },
           {
             "id": "330",
@@ -9031,7 +9031,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 1st",
+        "detail": "8:07 - 1st",
         "broadcasts": []
       },
       {
@@ -9045,7 +9045,7 @@
             "short": "Idaho St",
             "abbrev": "IDST",
             "homeAway": "home",
-            "score": "0"
+            "score": "7"
           },
           {
             "id": "301",
@@ -9058,7 +9058,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:46 - 1st",
+        "detail": "7:11 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -9074,7 +9074,7 @@
             "short": "E Kentucky",
             "abbrev": "EKU",
             "homeAway": "home",
-            "score": "0"
+            "score": "6"
           },
           {
             "id": "236",
@@ -9087,7 +9087,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 1st",
+        "detail": "9:16 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -9103,7 +9103,7 @@
             "short": "The Citadel",
             "abbrev": "CIT",
             "homeAway": "home",
-            "score": "0"
+            "score": "7"
           },
           {
             "id": "2127",
@@ -9116,7 +9116,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:55 - 1st",
+        "detail": "8:22 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -9132,7 +9132,7 @@
             "short": "Butler",
             "abbrev": "BTLR",
             "homeAway": "home",
-            "score": "0"
+            "score": "7"
           },
           {
             "id": "2233",
@@ -9143,9 +9143,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 6:00 PM EDT",
+        "detail": "6:05 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -9169,12 +9169,12 @@
             "short": "Furman",
             "abbrev": "FUR",
             "homeAway": "away",
-            "score": "0"
+            "score": "3"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:48 - 1st",
+        "detail": "6:27 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-12T22:07:02.307540+00:00"
+  "fcs_scores_updated": "2026-09-12T22:20:28.948465+00:00"
 }
