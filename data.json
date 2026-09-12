@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T18:41:45.856599+00:00",
+  "updated": "2026-09-12T18:53:50.257294+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-12T18:42:08.661661+00:00"
+    "checked_at": "2026-09-12T18:54:24.291037+00:00"
   },
   "resources": [
     {
@@ -7818,9 +7818,9 @@
             "score": "0"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "3:46 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "BTN"
         ]
@@ -7865,7 +7865,7 @@
             "short": "Kent State",
             "abbrev": "KENT",
             "homeAway": "home",
-            "score": "22"
+            "score": "29"
           },
           {
             "id": "2747",
@@ -7878,7 +7878,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:12 - 4th",
+        "detail": "8:27 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7894,7 +7894,7 @@
             "short": "Rhode Island",
             "abbrev": "URI",
             "homeAway": "home",
-            "score": "24"
+            "score": "31"
           },
           {
             "id": "2210",
@@ -7905,40 +7905,11 @@
             "score": "10"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "2:42 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "FloSports"
-        ]
-      },
-      {
-        "id": "401866632",
-        "date": "2026-09-12T16:00Z",
-        "name": "UAlbany Great Danes at Long Island University Sharks",
-        "teams": [
-          {
-            "id": "2341",
-            "name": "Long Island University Sharks",
-            "short": "Long Island",
-            "abbrev": "LIU",
-            "homeAway": "home",
-            "score": "13"
-          },
-          {
-            "id": "399",
-            "name": "UAlbany Great Danes",
-            "short": "UAlbany",
-            "abbrev": "ALB",
-            "homeAway": "away",
-            "score": "35"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "2:27 - 4th",
-        "broadcasts": [
-          "NEC Front Row"
         ]
       },
       {
@@ -7981,7 +7952,7 @@
             "short": "James Madison",
             "abbrev": "JMU",
             "homeAway": "home",
-            "score": "63"
+            "score": "66"
           },
           {
             "id": "2681",
@@ -7994,7 +7965,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:12 - 3rd",
+        "detail": "1:52 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8023,7 +7994,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:53 - 3rd",
+        "detail": "13:23 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8039,7 +8010,7 @@
             "short": "Dayton",
             "abbrev": "DAY",
             "homeAway": "home",
-            "score": "23"
+            "score": "30"
           },
           {
             "id": "2646",
@@ -8050,9 +8021,9 @@
             "score": "7"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "6:47 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "YouTube"
         ]
@@ -8081,7 +8052,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:48 - 4th",
+        "detail": "12:24 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8110,7 +8081,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:03 - 3rd",
+        "detail": "14:10 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8139,7 +8110,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "13:29 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8168,7 +8139,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "8:52 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8197,7 +8168,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "15:00 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8226,7 +8197,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 2nd",
+        "detail": "Halftime",
         "broadcasts": []
       },
       {
@@ -8248,12 +8219,12 @@
             "short": "Bucknell",
             "abbrev": "BUCK",
             "homeAway": "away",
-            "score": "0"
+            "score": "7"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:00 - 4th",
+        "detail": "6:51 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8282,7 +8253,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:15 - 1st",
+        "detail": "10:46 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8298,7 +8269,7 @@
             "short": "South Dakota",
             "abbrev": "SDAK",
             "homeAway": "home",
-            "score": "7"
+            "score": "10"
           },
           {
             "id": "331",
@@ -8311,7 +8282,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:52 - 2nd",
+        "detail": "8:04 - 2nd",
         "broadcasts": [
           "ESPN+",
           "Midco Sports Net"
@@ -8328,7 +8299,7 @@
             "short": "Youngstown St",
             "abbrev": "YSU",
             "homeAway": "home",
-            "score": "0"
+            "score": "7"
           },
           {
             "id": "2184",
@@ -8341,7 +8312,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "9:37 - 1st",
+        "detail": "5:34 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8357,7 +8328,7 @@
             "short": "Lehigh",
             "abbrev": "LEH",
             "homeAway": "home",
-            "score": "16"
+            "score": "23"
           },
           {
             "id": "2729",
@@ -8370,7 +8341,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:53 - 2nd",
+        "detail": "11:45 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8386,7 +8357,7 @@
             "short": "Northern Iowa",
             "abbrev": "UNI",
             "homeAway": "home",
-            "score": "14"
+            "score": "21"
           },
           {
             "id": "2181",
@@ -8399,7 +8370,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:50 - 1st",
+        "detail": "15:00 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8423,14 +8394,43 @@
             "short": "N Michigan",
             "abbrev": "NMI",
             "homeAway": "away",
-            "score": "0"
+            "score": "7"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:46 - 1st",
+        "detail": "13:24 - 2nd",
         "broadcasts": [
           "Midco Sports Plus"
+        ]
+      },
+      {
+        "id": "401866632",
+        "date": "2026-09-12T16:00Z",
+        "name": "UAlbany Great Danes at Long Island University Sharks",
+        "teams": [
+          {
+            "id": "2341",
+            "name": "Long Island University Sharks",
+            "short": "Long Island",
+            "abbrev": "LIU",
+            "homeAway": "home",
+            "score": "13"
+          },
+          {
+            "id": "399",
+            "name": "UAlbany Great Danes",
+            "short": "UAlbany",
+            "abbrev": "ALB",
+            "homeAway": "away",
+            "score": "35"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "NEC Front Row"
         ]
       },
       {
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-12T18:42:11.194880+00:00"
+  "fcs_scores_updated": "2026-09-12T18:54:28.108260+00:00"
 }
