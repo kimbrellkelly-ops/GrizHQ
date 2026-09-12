@@ -476,6 +476,7 @@ async function renderLatestPressConference(){
 }
 
 installRankingMovementStyles();
+loadHomepageNews();
 loadGrizData();
 renderLatestPressConference();
 
