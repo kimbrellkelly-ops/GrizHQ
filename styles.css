@@ -4298,14 +4298,35 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 @media(max-width:1100px){.ghq-score-strip{grid-template-columns:repeat(4,minmax(0,1fr))}.ghq-news-shell{grid-template-columns:180px minmax(0,1fr)!important;grid-template-areas:"head head" "left center" "right right" "bottom bottom"}.ghq-network-rail-right{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.ghq-network-rail-right .ghq-network-rail-title{grid-column:1/-1}}
 @media(max-width:760px){.ghq-score-strip{display:flex;overflow-x:auto}.ghq-score-card{flex:0 0 210px}.ghq-command-hero{grid-template-columns:1fr!important}.ghq-command-panel{display:none!important}.ghq-news-shell{display:flex!important;flex-direction:column!important}.ghq-network-rail,.ghq-home-news-grid,.ghq-news-head,.ghq-news-bottom{width:100%}.ghq-home-news-side{grid-template-columns:1fr!important}.ghq-network-rail-right{width:100%}}
 
-
-/* GRIZ HQ ESPN-STYLE HOMEPAGE REBUILD */
-.ghq-command-hero,.ghq-command-tiles{display:none!important}
-.ghq-score-strip{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:0!important;padding:0!important;border-top:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9;background:#fff}
-.ghq-score-card{min-height:92px!important;padding:15px 18px!important;border-radius:0!important;border-right:1px solid #ddd!important;background:#fff!important;color:#161616!important;transition:background .18s ease,transform .18s ease!important}
-.ghq-score-card:last-child{border-right:0!important}.ghq-score-card:hover{background:#f3f3f3!important;transform:translateY(-2px)}
-.ghq-score-card strong{font-size:22px!important;letter-spacing:-.02em}.ghq-score-card small{color:#6d0035!important}
-.ghq-home-news{padding:28px clamp(18px,3vw,48px) 34px!important;background:#f1f2f4!important}
-.ghq-news-shell{max-width:1440px!important;margin:0 auto!important}.ghq-news-head{display:flex!important;align-items:end!important;justify-content:space-between!important;gap:20px!important;margin-bottom:18px!important;padding:0!important}.ghq-news-head h2{font-size:clamp(30px,3vw,46px)!important;letter-spacing:-.04em!important;margin:4px 0!important}.ghq-news-head p{margin:0!important;color:#62666b!important}.ghq-espn-grid{display:grid!important;grid-template-columns:205px minmax(0,1fr) 255px!important;gap:16px!important;align-items:start!important}.ghq-rail{background:#fff!important;border:1px solid #dfe1e5!important;border-radius:0!important;overflow:hidden!important}.ghq-rail-title{font:900 17px/1.1 'Barlow Condensed',sans-serif!important;letter-spacing:.04em!important;padding:18px!important;border-bottom:1px solid #e1e1e1!important;color:#202124!important}.ghq-rail a{display:flex!important;justify-content:space-between!important;gap:10px!important;padding:14px 16px!important;border-bottom:1px solid #e7e7e7!important;color:#202124!important;font-weight:700!important;font-size:14px!important;line-height:1.2!important;text-decoration:none!important}.ghq-rail a:last-child{border-bottom:0!important}.ghq-rail a:hover{background:#f7eaf0!important;color:#6d0035!important}.ghq-news-center{min-width:0!important}.ghq-home-news-grid,.ghq-home-news-grid-simple,.ghq-home-news-side{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important}.ghq-news-card{display:block!important;background:#fff!important;border:1px solid #dedfe2!important;border-radius:0!important;overflow:hidden!important;min-width:0!important;transition:transform .18s ease,box-shadow .18s ease!important}.ghq-news-card:hover{transform:translateY(-3px)!important;box-shadow:0 8px 20px rgba(0,0,0,.12)!important}.ghq-card-art{height:155px!important}.ghq-card-copy{padding:14px!important}.ghq-card-copy h3{font-size:21px!important;line-height:1.08!important;margin:0 0 8px!important}.ghq-card-copy p{font-size:14px!important;line-height:1.35!important;margin:0 0 12px!important;color:#60646a!important}.ghq-news-bottom{margin-top:18px!important;padding-top:16px!important;border-top:1px solid #d7d9dd!important}
-@media(max-width:1050px){.ghq-espn-grid{grid-template-columns:180px minmax(0,1fr)!important}.ghq-headline-rail{display:none!important}}
-@media(max-width:700px){.ghq-score-strip{grid-template-columns:repeat(2,minmax(0,1fr))!important}.ghq-score-card:nth-child(2){border-right:0!important}.ghq-espn-grid{grid-template-columns:1fr!important}.ghq-quick-rail{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}.ghq-rail-title{grid-column:1/-1}.ghq-home-news-grid,.ghq-home-news-grid-simple,.ghq-home-news-side{grid-template-columns:1fr!important}.ghq-news-head{display:block!important}.ghq-news-live{margin-top:10px!important}}
+/* GRIZ HQ ESPN CLEAN HOMEPAGE — replaces oversized command-center layout */
+.espn-home{display:block!important;background:#f1f2f4;padding:26px clamp(18px,3vw,48px) 44px;}
+.espn-home-grid{max-width:1440px;margin:0 auto;display:grid;grid-template-columns:245px minmax(0,1fr) 285px;gap:18px;align-items:start;}
+.espn-rail,.espn-main-news{background:#fff;border:1px solid #dfe1e5;min-width:0;}
+.espn-rail-head{padding:18px 18px 14px;border-bottom:1px solid #e1e3e6;}
+.espn-rail-head span,.espn-kicker,.espn-news-row span{font-size:10px;font-weight:900;letter-spacing:1.2px;color:#6b0038;}
+.espn-rail-head h2{font-size:22px;line-height:1.05;margin:6px 0 0;color:#151515;}
+.espn-rail a{display:block;position:relative;padding:15px 34px 14px 18px;border-bottom:1px solid #e5e6e8;text-decoration:none;color:#151515;transition:background .16s ease,border-color .16s ease;}
+.espn-rail a:last-child{border-bottom:0;}
+.espn-rail a b{display:block;font-size:15px;line-height:1.15;}
+.espn-rail a span{display:block;font-size:12px;color:#7b7f86;margin-top:5px;}
+.espn-rail a em,.espn-news-row em{position:absolute;right:15px;top:17px;font-style:normal;color:#6b0038;font-weight:900;}
+.espn-rail a:hover{background:#f7eef3;border-left:4px solid #6b0038;padding-left:14px;}
+.espn-section-head{display:flex;justify-content:space-between;gap:18px;align-items:end;padding:22px 24px 18px;border-bottom:1px solid #e1e3e6;}
+.espn-section-head h1{font-size:clamp(25px,2.6vw,38px);line-height:1;margin:7px 0 8px;color:#111;}
+.espn-section-head p{margin:0;color:#777d86;font-size:14px;max-width:560px;}
+.espn-section-head>a{white-space:nowrap;color:#6b0038;font-size:12px;font-weight:900;text-decoration:none;}
+.espn-feature-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:0;}
+.espn-feature-card{display:flex;flex-direction:column;text-decoration:none;color:#111;border-right:1px solid #e1e3e6;min-width:0;}
+.espn-feature-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;}
+.espn-feature-card>div{padding:20px 22px 22px;}
+.espn-feature-card h2{font-size:clamp(24px,2.3vw,34px);line-height:1.02;margin:8px 0 10px;}
+.espn-feature-card p{font-size:14px;line-height:1.45;color:#666;margin:0 0 18px;}
+.espn-feature-card b{font-size:11px;letter-spacing:.7px;color:#6b0038;}
+.espn-news-list{min-width:0;}
+.espn-news-row{display:block;position:relative;min-height:116px;padding:17px 38px 15px 19px;border-bottom:1px solid #e1e3e6;text-decoration:none;color:#111;}
+.espn-news-row:last-child{border-bottom:0;}
+.espn-news-row h3{font-size:18px;line-height:1.12;margin:6px 0 7px;}
+.espn-news-row p{font-size:12px;color:#777;margin:0;line-height:1.35;}
+.espn-news-row:hover{background:#f7eef3;}
+@media(max-width:1050px){.espn-home-grid{grid-template-columns:210px minmax(0,1fr);}.espn-headlines{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));}.espn-headlines .espn-rail-head{grid-column:1/-1}.espn-headlines a{border-right:1px solid #e1e3e6}.espn-headlines a:nth-last-child(-n+1){border-right:0}}
+@media(max-width:760px){.espn-home{padding:14px 10px 28px}.espn-home-grid{grid-template-columns:1fr;gap:12px}.espn-quick-links,.espn-headlines{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));}.espn-rail-head{grid-column:1/-1}.espn-main-news{order:-1}.espn-feature-grid{grid-template-columns:1fr}.espn-feature-card{border-right:0;border-bottom:1px solid #e1e3e6}.espn-section-head{display:block;padding:18px}.espn-section-head>a{display:inline-block;margin-top:12px}.espn-news-row{min-height:96px}}
