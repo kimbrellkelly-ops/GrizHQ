@@ -4391,3 +4391,9 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
  .ghq-home-news-side{grid-template-columns:1fr!important}
  .ghq-network-rail-right{display:block!important}
 }
+
+/* GRIZ HQ NAV DEDUPE — one primary navigation path */
+.ghq-command-actions{gap:0}
+.ghq-command-primary{display:inline-flex}
+.ghq-command-panel{padding-bottom:22px}
+@media(max-width:820px){.ghq-command-hero{min-height:330px}}
