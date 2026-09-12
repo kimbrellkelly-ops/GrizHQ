@@ -1356,6 +1356,14 @@ async function renderFCSScoreboard(){
 
   function cleanTeamLabel(s){return String(s||'').replace(/\s*\([^)]*\)\s*$/,'').replace(/\s+/g,' ').trim();}
   function norm(s){return cleanTeamLabel(s).toLowerCase().replace(/[^a-z0-9]/g,'');}
+  const rankLookup=top25.reduce((map,t)=>{const rank=String(t?.rank||'').trim();const name=cleanTeamLabel(t?.team||t?.name||'');if(rank&&name)map.set(norm(name),rank);return map;},new Map());
+  function rankForTeam(t,fallback=''){
+    const name=teamName(t,fallback);
+    const direct=rankLookup.get(norm(name));
+    if(direct)return direct;
+    const hit=top25.find(item=>teamMatch(name,item?.team||item?.name||''));
+    return hit?.rank!=null?String(hit.rank):'';
+  }
   const teamIds={montana:'149',montanastate:'147',idaho:'70',weberstate:'2692',easternwashington:'331',northernarizona:'2464',northerncolorado:'2458',idahostate:'304',calpoly:'13',southernutah:'253',utahtech:'3101',ucdavis:'302',portlandstate:'2502'};
   const FCS_LOGO_IDS={
     Montana:'149','Montana State':'147',Idaho:'70','Weber State':'2692','Eastern Washington':'331','Northern Arizona':'2464','Northern Colorado':'2458','Idaho State':'304','Cal Poly':'13','Southern Utah':'253','Utah Tech':'3101','UC Davis':'302','Portland State':'2502',
@@ -1444,7 +1452,7 @@ async function renderFCSScoreboard(){
     const teams=(c.competitors||[]).map(x=>({id:String(x.id||x.team?.id||''),name:x.team?.displayName||'',short:x.team?.shortDisplayName||x.team?.displayName||'',abbreviation:x.team?.abbreviation||'',homeAway:x.homeAway||'',score:x.score??'',logo:x.team?.logo||'',team:x.team||{}}));
     const st=c.status?.type||{};const broadcasts=[];(c.broadcasts||[]).forEach(b=>(b.names||[]).forEach(n=>broadcasts.push(n)));
     const odds=Array.isArray(c.odds)?c.odds[0]:(c.odds||null);
-    return {id:String(ev.id||''),date:ev.date||c.date||'',teams,state:st.state||'',completed:!!st.completed,detail:st.shortDetail||st.detail||'',broadcasts:broadcasts.slice(0,3),odds,raw:ev};
+    return {id:String(ev.id||''),date:ev.date||c.date||'',teams,state:st.state||'',completed:!!st.completed,period:Number(st.period||0),clock:st.displayClock||'',detail:st.shortDetail||st.detail||'',broadcasts:broadcasts.slice(0,3),odds,raw:ev};
   }
   function eventMatchesGame(ev,g){
     const ts=eventTeams(ev);if(ts.length<2)return false;
@@ -1486,15 +1494,11 @@ async function renderFCSScoreboard(){
   function statusText(ev,game){
     if(!ev)return game?.time||'TBA';
     if(ev.completed)return ev.detail||'FINAL';
-    if(ev.state==='in')return ev.detail||'LIVE';
+    if(ev.state==='in'){const period=Number(ev.period||0);const clock=String(ev.clock||'').trim();const quarter=period>4?'OT':(period>0?'Q'+period:'');if(quarter&&clock)return quarter+' • '+clock;if(quarter)return quarter;if(clock)return clock;return ev.detail||'LIVE';}
     return game?.time|| (ev.date?new Date(ev.date).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'}):'TBA');
   }
-  function rankForTeam(name){
-    const found=top25.find(t=>teamMatch(name,t?.team||t?.name||''));
-    return found?.rank!=null?String(found.rank):'';
-  }
-  function scoreCardTeam(t,fallback,showScore){
-    const name=teamName(t,fallback),logo=logoFor(t,fallback),rank=rankForTeam(name);
+  function scoreCardTeam(t,fallback,showScore,rank=''){
+    const name=teamName(t,fallback),logo=logoFor(t,fallback);
     const rankHtml=rank?`<span class="fcs-team-rank">#${escapeHtml(rank)}</span>`:'';
     return `<div class="score-team-row ghq-fcs-team-row">${rankHtml}${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}<span>${escapeHtml(name)}</span>${showScore?`<strong>${escapeHtml(t?.score??'—')}</strong>`:''}</div>`;
   }
@@ -1514,16 +1518,17 @@ async function renderFCSScoreboard(){
       const a=sg? (ts.find(x=>teamMatch(sg.displayAway,x))||ts.find(x=>x.homeAway==='away')||ts[0]) : (ts.find(x=>x.homeAway==='away')||ts[0]);
       const h=sg? (ts.find(x=>teamMatch(sg.displayHome,x))||ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]) : (ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]);
       const playing=ev.completed||ev.state==='in';
-      const rankedAway=teamMatch(name,a), rankedHome=teamMatch(name,h);
-      const awayRow=top25TeamRow(a,sg?.displayAway||'Away',rank,rankedAway,playing);
-      const homeRow=top25TeamRow(h,sg?.displayHome||'Home',rank,rankedHome,playing);
+      const awayRank=rankForTeam(a,sg?.displayAway||'Away');
+      const homeRank=rankForTeam(h,sg?.displayHome||'Home');
+      const awayRow=top25TeamRow(a,sg?.displayAway||'Away',awayRank,!!awayRank,playing);
+      const homeRow=top25TeamRow(h,sg?.displayHome||'Home',homeRank,!!homeRank,playing);
       return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${awayRow}${homeRow}<div class="ghq-fcs-top-meta"><span>${escapeHtml(statusText(ev,sg))}</span>${ev?.broadcasts?.length?`<small>${escapeHtml(ev.broadcasts.slice(0,2).flatMap(b=>b.names||[]).join(', '))}</small>`:''}</div></div></div>`;
     }
     if(sg){
-      const rankedAway=teamMatch(name,sg.displayAway), rankedHome=teamMatch(name,sg.displayHome);
-      return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${top25TeamRow(null,sg.displayAway,rank,rankedAway,false)}${top25TeamRow(null,sg.displayHome,rank,rankedHome,false)}<div class="ghq-fcs-top-meta"><span>${escapeHtml(sg.time||'TBA')}</span>${sg.network?`<small>${escapeHtml(sg.network)}</small>`:''}</div></div></div>`;
+      const awayRank=rankForTeam(null,sg.displayAway),homeRank=rankForTeam(null,sg.displayHome);
+      return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${top25TeamRow(null,sg.displayAway,awayRank,!!awayRank,false)}${top25TeamRow(null,sg.displayHome,homeRank,!!homeRank,false)}<div class="ghq-fcs-top-meta"><span>${escapeHtml(sg.time||'TBA')}</span>${sg.network?`<small>${escapeHtml(sg.network)}</small>`:''}</div></div></div>`;
     }
-    return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${top25TeamRow(null,name,rank,true,false)}<div class="ghq-fcs-top-meta"><span>BYE / NO GAME THIS WEEK</span></div></div></div>`;
+    return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${top25TeamRow(null,name,rankForTeam(null,name)||rank,!!(rankForTeam(null,name)||rank),false)}<div class="ghq-fcs-top-meta"><span>BYE / NO GAME THIS WEEK</span></div></div></div>`;
   }
   function gameCard(game,ev){
     const ts=eventTeams(ev);
@@ -1540,7 +1545,7 @@ async function renderFCSScoreboard(){
     const status=statusText(ev,game);
     const awayName=a?teamName(a,scheduledAway):scheduledAway;
     const homeName=h?teamName(h,scheduledHome):scheduledHome;
-    return `<div class="fcs-game ${state} bigsky-row ghq-fcs-game" data-fcs-game-key="${escapeHtml(game.matchupKey)}"><div class="fcs-time"><b>${escapeHtml(game.date)}</b><small>${escapeHtml(label)}</small></div><div class="fcs-matchup">${scoreCardTeam(a,awayName,final||live)}${scoreCardTeam(h,homeName,final||live)}<small class="score-game-status">${escapeHtml(status)}${tv?' • '+escapeHtml(tv):''}</small></div><div class="fcs-score score-status">${final||live?`<span class="score-big">${escapeHtml(a?.score??'—')}–${escapeHtml(h?.score??'—')}</span><small>${escapeHtml(final?'FINAL':status)}</small>`:`<small>${escapeHtml(status)}</small>`}</div><div class="fcs-tv">${escapeHtml(tv)}</div><div class="bigsky-info bigsky-betting"><b>CHECKING…</b><small>MARKET LINES</small></div></div>`;
+    return `<div class="fcs-game ${state} bigsky-row ghq-fcs-game" data-fcs-game-key="${escapeHtml(game.matchupKey)}"><div class="fcs-time"><b>${escapeHtml(game.date)}</b><small>${escapeHtml(label)}</small></div><div class="fcs-matchup">${scoreCardTeam(a,awayName,final||live,rankForTeam(a,awayName))}${scoreCardTeam(h,homeName,final||live,rankForTeam(h,homeName))}<small class="score-game-status">${escapeHtml(status)}${tv?' • '+escapeHtml(tv):''}</small></div><div class="fcs-score score-status">${final||live?`<span class="score-big">${escapeHtml(a?.score??'—')}–${escapeHtml(h?.score??'—')}</span><small>${escapeHtml(final?'FINAL':status)}</small>`:`<small>${escapeHtml(status)}</small>`}</div><div class="fcs-tv">${escapeHtml(tv)}</div><div class="bigsky-info bigsky-betting"><b>CHECKING…</b><small>MARKET LINES</small></div></div>`;
   }
   function liveOrCachedForGame(game,liveEvents,cachedEvents){
     return liveEvents.find(e=>eventMatchesGame(e,game))||cachedEvents.find(e=>{const ts=eventTeams(e);return ts.some(t=>teamMatch(game.displayAway,t))&&ts.some(t=>teamMatch(game.displayHome,t));})||null;
@@ -1562,7 +1567,7 @@ async function renderFCSScoreboard(){
   function injectStyles(){
     if(document.getElementById('ghq-fcs-scoreboard-surgical-styles'))return;
     const s=document.createElement('style');s.id='ghq-fcs-scoreboard-surgical-styles';s.textContent=`
-      .ghq-fcs-rank-card{overflow:hidden!important}.ghq-fcs-top-matchup{min-width:0!important}.ghq-fcs-rank-heading{display:flex!important;align-items:center!important;gap:10px!important;width:100%!important;min-height:30px!important}.ghq-fcs-rank-heading b{display:inline-block!important;visibility:visible!important;opacity:1!important;color:#151515!important;font-size:17px!important;font-weight:800!important;line-height:1.2!important;white-space:normal!important}.ghq-fcs-rank-heading strong{margin-left:auto!important;color:#151515!important}.ghq-fcs-scheduled{display:flex!important;gap:8px!important;align-items:center!important;margin:9px 0 4px!important;font-size:14px!important;color:#151515!important}.ghq-fcs-scheduled span{opacity:.55!important}.ghq-fcs-team-row{display:flex!important;align-items:center!important;min-width:0!important;gap:8px!important}.ghq-fcs-team-row .fcs-team-rank{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;min-width:28px!important;padding:2px 4px!important;border-radius:5px!important;background:#8c1531!important;color:#fff!important;font-size:12px!important;font-weight:900!important;line-height:1.2!important}.ghq-fcs-team-row span{display:block!important;visibility:visible!important;opacity:1!important;color:#151515!important;font-weight:700!important;white-space:normal!important}.ghq-fcs-team-row img{width:26px!important;height:26px!important;object-fit:contain!important;flex:0 0 26px!important}.ghq-fcs-team-row strong{margin-left:auto!important}.ghq-fcs-scheduled-teams{display:flex!important;align-items:center!important;gap:8px!important}.ghq-fcs-scheduled-teams .ghq-fcs-team-row{min-width:0!important;flex:1 1 0!important}.ghq-fcs-scheduled-teams .ghq-fcs-team-row span{font-size:13px!important}.ghq-fcs-game .bigsky-betting{min-width:180px!important}.ghq-fcs-game .fcs-matchup{min-width:0!important}
+      .ghq-fcs-rank-card{overflow:hidden!important}.ghq-fcs-top-matchup{min-width:0!important}.ghq-fcs-rank-heading{display:flex!important;align-items:center!important;gap:10px!important;width:100%!important;min-height:30px!important}.ghq-fcs-rank-heading b{display:inline-block!important;visibility:visible!important;opacity:1!important;color:#151515!important;font-size:17px!important;font-weight:800!important;line-height:1.2!important;white-space:normal!important}.ghq-fcs-rank-heading strong{margin-left:auto!important;color:#151515!important}.ghq-fcs-scheduled{display:flex!important;gap:8px!important;align-items:center!important;margin:9px 0 4px!important;font-size:14px!important;color:#151515!important}.ghq-fcs-scheduled span{opacity:.55!important}.ghq-fcs-team-row{display:flex!important;align-items:center!important;min-width:0!important;gap:8px!important}.ghq-fcs-team-row span{display:block!important;visibility:visible!important;opacity:1!important;color:#151515!important;font-weight:700!important;white-space:normal!important}.ghq-fcs-team-row img{width:26px!important;height:26px!important;object-fit:contain!important;flex:0 0 26px!important}.ghq-fcs-team-row .fcs-team-rank{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;min-width:27px!important;height:22px!important;padding:0 5px!important;border-radius:5px!important;background:#8c1531!important;color:#fff!important;font-size:12px!important;font-weight:900!important;line-height:1!important;white-space:nowrap!important}.ghq-fcs-team-row strong{margin-left:auto!important}.ghq-fcs-scheduled-teams{display:flex!important;align-items:center!important;gap:8px!important}.ghq-fcs-scheduled-teams .ghq-fcs-team-row{min-width:0!important;flex:1 1 0!important}.ghq-fcs-scheduled-teams .ghq-fcs-team-row span{font-size:13px!important}.ghq-fcs-game .bigsky-betting{min-width:180px!important}.ghq-fcs-game .fcs-matchup{min-width:0!important}
       .ghq-fcs-top-scorecard{display:flex!important;flex-direction:column!important;gap:0!important;padding:8px 10px!important;min-width:0!important}
       .ghq-fcs-top-team-row{display:grid!important;grid-template-columns:34px 30px minmax(0,1fr) auto!important;align-items:center!important;min-height:42px!important;gap:7px!important;border-bottom:1px solid #e6e6e6!important;color:#151515!important}
       .ghq-fcs-top-team-row:last-of-type{border-bottom:0!important}
