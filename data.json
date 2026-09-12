@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T01:27:03.061966+00:00",
+  "updated": "2026-09-12T01:38:23.844113+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-12T01:27:36.236376+00:00"
+    "checked_at": "2026-09-12T01:38:58.636004+00:00"
   },
   "resources": [
     {
@@ -7807,7 +7807,7 @@
             "short": "Louisville",
             "abbrev": "LOU",
             "homeAway": "home",
-            "score": "38"
+            "score": "45"
           },
           {
             "id": "222",
@@ -7815,12 +7815,12 @@
             "short": "Villanova",
             "abbrev": "VILL",
             "homeAway": "away",
-            "score": "10"
+            "score": "13"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:36 - 3rd",
+        "detail": "0:07 - 3rd",
         "broadcasts": [
           "ACC Network"
         ]
@@ -7836,7 +7836,7 @@
             "short": "Virginia",
             "abbrev": "UVA",
             "homeAway": "home",
-            "score": "42"
+            "score": "49"
           },
           {
             "id": "2450",
@@ -7849,7 +7849,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 3rd",
+        "detail": "11:23 - 4th",
         "broadcasts": [
           "ACCNX"
         ]
@@ -7865,7 +7865,7 @@
             "short": "NC State",
             "abbrev": "NCSU",
             "homeAway": "home",
-            "score": "28"
+            "score": "35"
           },
           {
             "id": "257",
@@ -7878,7 +7878,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:29 - 2nd",
+        "detail": "8:30 - 2nd",
         "broadcasts": [
           "ESPNU"
         ]
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-12T01:27:40.387832+00:00"
+  "fcs_scores_updated": "2026-09-12T01:39:02.646061+00:00"
 }
