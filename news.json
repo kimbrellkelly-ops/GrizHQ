@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T22:33:43.277813+00:00",
+  "updated": "2026-09-12T22:49:32.148279+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 62,
   "sources": [
@@ -16,6 +16,21 @@
   ],
   "stories": [
     {
+      "title": "Recap: Eli Gillman’s 3 TDs lead No. 3 Montana past Utah Tech",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_c4c10a04-6003-5a8f-88ee-69e4ce35dc6c.html",
+      "date": "Sep. 12, 2026",
+      "published_at": "2026-09-12T22:25:00+00:00",
+      "description": "Eli Gillman tied the all-time Big Sky Conference rushing touchdown record as the No. 3 Grizzlies improved to 3-0 against the Utah Tech Trailblazers (0-3).",
+      "source": "Missoulian",
+      "badge": "OPPONENT",
+      "short": "OPPONE",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/60/f60d2b4d-221c-5aeb-a37a-a7a16a52d3f1/6aa5a1f65b7d9.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/60/f60d2b4d-221c-5aeb-a37a-a7a16a52d3f1/6aa5a1f65b7d9.image.jpg?resize=300%2C200"
+    },
+    {
       "title": "Live updates: No. 3 Montana Grizzlies host Utah Tech",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-football-host-utah-tech-live-updates/article_f10e93d1-5828-4c69-a791-94ad254e47f1.html",
       "date": "Sep. 12, 2026",
@@ -29,21 +44,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/10/f10e93d1-5828-4c69-a791-94ad254e47f1/6aa5af548daa4.preview.jpg?crop=1716%2C901%2C0%2C80&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Live updates: No. 3 Montana Grizzlies host Utah Tech",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_c4c10a04-6003-5a8f-88ee-69e4ce35dc6c.html",
-      "date": "Sep. 12, 2026",
-      "published_at": "2026-09-12T19:15:00+00:00",
-      "description": "The No. 3 Grizzlies (2-0) host the Utah Tech Trailblazers (0-2) in the final of three home games to open their 2026 season.",
-      "source": "Missoulian",
-      "badge": "OPPONENT",
-      "short": "OPPONE",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/60/f60d2b4d-221c-5aeb-a37a-a7a16a52d3f1/6aa5a1f65b7d9.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/60/f60d2b4d-221c-5aeb-a37a-a7a16a52d3f1/6aa5a1f65b7d9.image.jpg?resize=300%2C200"
     },
     {
       "title": "3 questions: No. 3 Montana Grizzlies seek 3-0 start against Utah Tech",
