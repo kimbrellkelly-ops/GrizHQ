@@ -478,6 +478,23 @@ async function renderLatestPressConference(){
 installRankingMovementStyles();
 loadHomepageNews();
 loadGrizData();
+
+// Add the official Griz Gameday hub to the Next Up section without changing
+// the existing matchup layout.
+function addOfficialGamedayLink() {
+  const quicklinks = document.querySelector('.ghq-nu-quicklinks');
+  if (!quicklinks || quicklinks.querySelector('[data-official-gameday]')) return;
+  const grid = quicklinks.querySelector('.ghq-nu-link-grid');
+  if (!grid) return;
+  const link = document.createElement('a');
+  link.href = 'https://gogriz.com/gameday/football-vs-utah-tech/football/99/';
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.dataset.officialGameday = 'true';
+  link.innerHTML = '<strong>OFFICIAL GAMEDAY HUB</strong><span>Tickets, parking, promotions & more</span><em>↗</em>';
+  grid.prepend(link);
+}
+addOfficialGamedayLink();
 renderLatestPressConference();
 
 // Re-check the national FCS Coaches Poll every 30 minutes while the page is open.
