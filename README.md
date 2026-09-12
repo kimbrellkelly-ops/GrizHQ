@@ -1,18 +1,21 @@
-# Griz HQ automatic updates
+# Griz HQ Live Score Updater
 
-Upload the files in this package to the root of your GitHub Pages repository.
+Upload the contents of this package into the root of the `GrizTestHQ` repository.
 
-The GitHub Action refreshes `data.json` twice per hour from official/public sources. It updates:
-- Montana schedule and completed results
-- overall and Big Sky record
-- next opponent/date/time
-- AFCA Coaches Poll and Stats Perform Top 25
-- FCS Top 25 data used by the Scores tab
-- official Montana football news
-- core cumulative stats from GoGriz
+## Files
 
-The site also checks `data.json` every 5 minutes while a visitor has the site open, so the updated information can appear without a manual browser refresh.
+- `.github/workflows/update-live-scores.yml` — runs every 10 minutes and can also be run manually.
+- `update_data.py` — refreshes Montana data.
+- `score_refresh.py` — refreshes the FCS/Big Sky scoreboard data in `data.json`.
+- Supporting updater scripts are included for compatibility with the existing project.
 
-The workflow can also be run manually from GitHub: Actions -> Refresh Griz HQ data -> Run workflow.
+## GitHub upload
 
-Keep your existing `CNAME` and any other repository files not included here.
+1. Upload the `.github` folder and the Python files to the repository root.
+2. Commit the changes.
+3. Open the repository's **Actions** tab.
+4. Select **Update Griz HQ live scores**.
+5. Click **Run workflow** once to test it.
+6. Confirm that `data.json` changes after the workflow completes.
+
+The website must already be coded to read the refreshed scoreboard data from `data.json`.

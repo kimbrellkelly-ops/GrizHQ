@@ -1,0 +1,52 @@
+name: Refresh Griz HQ News
+
+on:
+  schedule:
+    # GitHub may delay scheduled jobs during busy periods. Fifteen minutes gives
+    # Griz HQ frequent updates without hammering publishers.
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: griz-hq-repo-writes
+  cancel-in-progress: false
+
+jobs:
+  refresh-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install news dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Refresh news.json
+        run: python news_update.py
+
+      - name: Commit news.json only
+        run: |
+          git config user.name "griz-hq-news-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news.json
+          if git diff --cached --quiet; then
+            echo "No news changes to commit."
+            exit 0
+          fi
+          git commit -m "Auto-update Griz HQ news"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            echo "Push attempt ${attempt} failed; retrying after refetch..."
+            git rebase --abort || true
+            git fetch origin main
+          done
+          echo "Unable to push refreshed Griz HQ news after 3 attempts."
+          exit 1
