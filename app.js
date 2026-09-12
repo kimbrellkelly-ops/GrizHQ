@@ -142,6 +142,58 @@ async function enrichScheduleCards(schedule, games) {
   });
 }
 
+
+function renderHomepageNews(stories) {
+  if (!Array.isArray(stories) || !stories.length) return;
+  const clean = stories.filter(x => x && x.title && x.url);
+  if (!clean.length) return;
+  const featured = clean[0];
+  const feature = document.querySelector('.espn-feature-card');
+  if (feature) {
+    feature.href = featured.url;
+    feature.target = '_blank';
+    feature.rel = 'noopener';
+    const image = feature.querySelector('img');
+    const kicker = feature.querySelector('.espn-kicker');
+    const title = feature.querySelector('h2');
+    const description = feature.querySelector('p');
+    const readMore = feature.querySelector('b');
+    if (image) {
+      if (featured.image) image.src = featured.image;
+      image.alt = featured.title;
+    }
+    if (kicker) kicker.textContent = featured.source || featured.badge || 'LATEST';
+    if (title) title.textContent = featured.title;
+    if (description) description.textContent = featured.description || 'Latest Montana football news and coverage.';
+    if (readMore) readMore.textContent = 'READ ARTICLE ↗';
+  }
+  const rows = document.querySelectorAll('#home-news-side .espn-news-row');
+  clean.slice(1, 5).forEach((story, i) => {
+    const row = rows[i];
+    if (!row) return;
+    row.href = story.url;
+    row.target = '_blank';
+    row.rel = 'noopener';
+    const source = row.querySelector('span');
+    const title = row.querySelector('h3');
+    const description = row.querySelector('p');
+    if (source) source.textContent = story.source || story.badge || 'NEWS';
+    if (title) title.textContent = story.title;
+    if (description) description.textContent = story.description || story.date || '';
+  });
+}
+
+async function loadHomepageNews() {
+  try {
+    const response = await fetch('news.json?ts=' + Date.now(), {cache: 'no-store'});
+    if (!response.ok) return;
+    const payload = await response.json();
+    renderHomepageNews(payload.stories || payload.news || payload);
+  } catch (error) {
+    console.warn('Homepage news feed unavailable; using fallback content.', error);
+  }
+}
+
 async function loadGrizData() {
   try {
     const res = await fetch("data.json?ts=" + Date.now(), {cache: "no-store"});
@@ -1657,7 +1709,8 @@ function renderStatList(id, rows, situational=false) {
 // appear without requiring the visitor to manually reload the page.
 setInterval(async () => {
   try {
-    await loadGrizData();
+    await loadHomepageNews();
+loadGrizData();
     await renderBigSkyAndOpponent();
     await renderFCSScoreboard();
   } catch (e) {
