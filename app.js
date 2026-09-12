@@ -1606,8 +1606,20 @@ async function renderFCSScoreboard(){
     if(statusEl)statusEl.textContent='Loading FCS scores…';
     const scheduled=scheduleGamesForWeek(w);
     const cached=cachedEventsForWeek(w);
-    const rawLive=await fetchESPNEvents(w);
-    const normalizedLive=rawLive.map(normalizeEvent);
+
+    // Render from the verified local cache first. The live ESPN request is
+    // supplemental and must never prevent the FCS board from rendering.
+    // Some browsers/networks leave a cross-origin request pending, which
+    // previously blocked every score card behind the await below.
+    let normalizedLive=[];
+    try{
+      const livePromise=fetchESPNEvents(w);
+      const timeout=new Promise(resolve=>setTimeout(()=>resolve([]),8000));
+      const rawLive=await Promise.race([livePromise,timeout]);
+      normalizedLive=(Array.isArray(rawLive)?rawLive:[]).map(normalizeEvent);
+    }catch(e){
+      normalizedLive=[];
+    }
     // Merge live and cached feeds instead of letting an incomplete live ESPN
     // response erase cached games. Live data wins when the same event exists.
     const eventMap=new Map();
