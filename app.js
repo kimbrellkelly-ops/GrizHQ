@@ -148,16 +148,16 @@ function renderHomepageNews(stories) {
   const clean = stories.filter(x => x && x.title && x.url);
   if (!clean.length) return;
   const featured = clean[0];
-  const feature = document.querySelector('.espn-feature-card');
+  const feature = document.querySelector('.espn-feature-card, .v2-feature');
   if (feature) {
     feature.href = featured.url;
     feature.target = '_blank';
     feature.rel = 'noopener';
     const image = feature.querySelector('img');
-    const kicker = feature.querySelector('.espn-kicker');
-    const title = feature.querySelector('h2');
+    const kicker = feature.querySelector('.espn-kicker, .v2-tag');
+    const title = feature.querySelector('h2, h1');
     const description = feature.querySelector('p');
-    const readMore = feature.querySelector('b');
+    const readMore = feature.querySelector('b, a.v2-button');
     if (image) {
       if (featured.image) image.src = featured.image;
       image.alt = featured.title;
@@ -167,16 +167,18 @@ function renderHomepageNews(stories) {
     if (description) description.textContent = featured.description || 'Latest Montana football news and coverage.';
     if (readMore) readMore.textContent = 'READ ARTICLE ↗';
   }
-  const rows = document.querySelectorAll('#home-news-side .espn-news-row');
+  const rows = document.querySelectorAll('#home-news-side .espn-news-row, #home-news-side .v2-story');
   clean.slice(1, 5).forEach((story, i) => {
     const row = rows[i];
     if (!row) return;
     row.href = story.url;
     row.target = '_blank';
     row.rel = 'noopener';
+    const rowImage = row.querySelector('img');
+    if (rowImage && story.image) { rowImage.src = story.image; rowImage.alt = story.title; }
     const source = row.querySelector('span');
     const title = row.querySelector('h3');
-    const description = row.querySelector('p');
+    const description = row.querySelector('p, small');
     if (source) source.textContent = story.source || story.badge || 'NEWS';
     if (title) title.textContent = story.title;
     if (description) description.textContent = story.description || story.date || '';
