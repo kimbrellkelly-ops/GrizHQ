@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T23:29:53.906605+00:00",
+  "updated": "2026-09-12T23:39:56.177549+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-12T23:30:21.405719+00:00"
+    "checked_at": "2026-09-12T23:40:18.181344+00:00"
   },
   "resources": [
     {
@@ -7807,7 +7807,7 @@
             "short": "Wyoming",
             "abbrev": "WYO",
             "homeAway": "home",
-            "score": "7"
+            "score": "14"
           },
           {
             "id": "2458",
@@ -7820,67 +7820,9 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:50 - 4th",
+        "detail": "2:33 - 4th",
         "broadcasts": [
           "MW+"
-        ]
-      },
-      {
-        "id": "401868093",
-        "date": "2026-09-12T20:00Z",
-        "name": "Lamar Cardinals at Idaho Vandals",
-        "teams": [
-          {
-            "id": "70",
-            "name": "Idaho Vandals",
-            "short": "Idaho",
-            "abbrev": "IDHO",
-            "homeAway": "home",
-            "score": "17"
-          },
-          {
-            "id": "2320",
-            "name": "Lamar Cardinals",
-            "short": "Lamar",
-            "abbrev": "LAM",
-            "homeAway": "away",
-            "score": "23"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868326",
-        "date": "2026-09-12T20:00Z",
-        "name": "Alabama State Hornets at Troy Trojans",
-        "teams": [
-          {
-            "id": "2653",
-            "name": "Troy Trojans",
-            "short": "Troy",
-            "abbrev": "TROY",
-            "homeAway": "home",
-            "score": "34"
-          },
-          {
-            "id": "2011",
-            "name": "Alabama State Hornets",
-            "short": "Alabama St",
-            "abbrev": "ALST",
-            "homeAway": "away",
-            "score": "17"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "0:20 - 4th",
-        "broadcasts": [
-          "ESPN+"
         ]
       },
       {
@@ -7894,7 +7836,7 @@
             "short": "Maine",
             "abbrev": "ME",
             "homeAway": "home",
-            "score": "11"
+            "score": "14"
           },
           {
             "id": "2771",
@@ -7907,7 +7849,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:30 - 4th",
+        "detail": "6:22 - 4th",
         "broadcasts": [
           "FloSports"
         ]
@@ -7936,7 +7878,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 3rd",
+        "detail": "11:02 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7952,7 +7894,7 @@
             "short": "N Arizona",
             "abbrev": "NAU",
             "homeAway": "home",
-            "score": "24"
+            "score": "31"
           },
           {
             "id": "2916",
@@ -7965,7 +7907,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:18 - 3rd",
+        "detail": "4:04 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8023,7 +7965,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:59 - 3rd",
+        "detail": "9:38 - 3rd",
         "broadcasts": [
           "SECN+"
         ]
@@ -8039,7 +7981,7 @@
             "short": "Hampton",
             "abbrev": "HAMP",
             "homeAway": "home",
-            "score": "0"
+            "score": "3"
           },
           {
             "id": "2803",
@@ -8052,7 +7994,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:24 - 1st",
+        "detail": "3:46 - 1st",
         "broadcasts": [
           "FloSports"
         ]
@@ -8097,7 +8039,7 @@
             "short": "Morgan St",
             "abbrev": "MORG",
             "homeAway": "home",
-            "score": "21"
+            "score": "28"
           },
           {
             "id": "2355",
@@ -8110,7 +8052,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:14 - 2nd",
+        "detail": "Halftime",
         "broadcasts": []
       },
       {
@@ -8137,7 +8079,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:54 - 2nd",
+        "detail": "1:39 - 2nd",
         "broadcasts": []
       },
       {
@@ -8164,7 +8106,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:22 - 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8222,7 +8164,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:15 - 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8309,7 +8251,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:53 - 2nd",
+        "detail": "6:58 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8325,7 +8267,7 @@
             "short": "Houston",
             "abbrev": "HOU",
             "homeAway": "home",
-            "score": "14"
+            "score": "21"
           },
           {
             "id": "2582",
@@ -8338,7 +8280,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:08 - 1st",
+        "detail": "4:11 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8367,7 +8309,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:51 - 1st",
+        "detail": "4:03 - 1st",
         "broadcasts": [
           "SECN+"
         ]
@@ -8396,7 +8338,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:34 - 1st",
+        "detail": "15:00 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8412,7 +8354,7 @@
             "short": "Colorado St",
             "abbrev": "CSU",
             "homeAway": "home",
-            "score": "14"
+            "score": "17"
           },
           {
             "id": "253",
@@ -8425,7 +8367,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:46 - 1st",
+        "detail": "3:21 - 1st",
         "broadcasts": [
           "CBSSN"
         ]
@@ -8454,7 +8396,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:27 - 1st",
+        "detail": "15:00 - 1st",
         "broadcasts": [
           "MW+"
         ]
@@ -8478,12 +8420,12 @@
             "short": "Indiana St",
             "abbrev": "INST",
             "homeAway": "away",
-            "score": "13"
+            "score": "14"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:27 - 1st",
+        "detail": "0:10 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8512,7 +8454,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:51 - 1st",
+        "detail": "2:14 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8528,7 +8470,7 @@
             "short": "S Illinois",
             "abbrev": "SIU",
             "homeAway": "home",
-            "score": "0"
+            "score": "7"
           },
           {
             "id": "2546",
@@ -8541,7 +8483,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:59 - 1st",
+        "detail": "1:03 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8599,7 +8541,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:31 - 1st",
+        "detail": "3:48 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8615,7 +8557,7 @@
             "short": "Alabama A&M",
             "abbrev": "AAMU",
             "homeAway": "home",
-            "score": "7"
+            "score": "14"
           },
           {
             "id": "2634",
@@ -8628,7 +8570,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:49 - 1st",
+        "detail": "1:41 - 1st",
         "broadcasts": [
           "SWAC TV"
         ]
@@ -8657,7 +8599,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:08 - 1st",
+        "detail": "13:39 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8686,7 +8628,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:49 - 1st",
+        "detail": "End of 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8702,7 +8644,7 @@
             "short": "Alcorn St",
             "abbrev": "ALCN",
             "homeAway": "home",
-            "score": "6"
+            "score": "12"
           },
           {
             "id": "2029",
@@ -8715,7 +8657,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:06 - 1st",
+        "detail": "4:31 - 1st",
         "broadcasts": []
       },
       {
@@ -8737,12 +8679,12 @@
             "short": "Samford",
             "abbrev": "SAM",
             "homeAway": "away",
-            "score": "0"
+            "score": "3"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:20 - 1st",
+        "detail": "0:55 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8758,7 +8700,7 @@
             "short": "East Texas A&M",
             "abbrev": "ETAM",
             "homeAway": "home",
-            "score": "0"
+            "score": "7"
           },
           {
             "id": "2466",
@@ -8771,7 +8713,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:53 - 1st",
+        "detail": "0:25 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8787,7 +8729,7 @@
             "short": "Hou Christian",
             "abbrev": "HCU",
             "homeAway": "home",
-            "score": "14"
+            "score": "20"
           },
           {
             "id": "124386",
@@ -8800,7 +8742,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:05 - 1st",
+        "detail": "5:04 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8816,7 +8758,7 @@
             "short": "Missouri St",
             "abbrev": "MOST",
             "homeAway": "home",
-            "score": "7"
+            "score": "13"
           },
           {
             "id": "2815",
@@ -8829,7 +8771,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:04 - 1st",
+        "detail": "0:06 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8876,7 +8818,7 @@
             "short": "Wisconsin",
             "abbrev": "WIS",
             "homeAway": "home",
-            "score": "7"
+            "score": "17"
           },
           {
             "id": "2710",
@@ -8889,9 +8831,38 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:17 - 1st",
+        "detail": "7:54 - 1st",
         "broadcasts": [
           "BTN"
+        ]
+      },
+      {
+        "id": "401868008",
+        "date": "2026-09-12T23:30Z",
+        "name": "Fordham Rams at Coastal Carolina Chanticleers",
+        "teams": [
+          {
+            "id": "324",
+            "name": "Coastal Carolina Chanticleers",
+            "short": "Coastal",
+            "abbrev": "CCU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2230",
+            "name": "Fordham Rams",
+            "short": "Fordham",
+            "abbrev": "FOR",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "10:58 - 1st",
+        "broadcasts": [
+          "ESPN+"
         ]
       },
       {
@@ -9762,6 +9733,64 @@
         ]
       },
       {
+        "id": "401868093",
+        "date": "2026-09-12T20:00Z",
+        "name": "Lamar Cardinals at Idaho Vandals",
+        "teams": [
+          {
+            "id": "70",
+            "name": "Idaho Vandals",
+            "short": "Idaho",
+            "abbrev": "IDHO",
+            "homeAway": "home",
+            "score": "17"
+          },
+          {
+            "id": "2320",
+            "name": "Lamar Cardinals",
+            "short": "Lamar",
+            "abbrev": "LAM",
+            "homeAway": "away",
+            "score": "23"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868326",
+        "date": "2026-09-12T20:00Z",
+        "name": "Alabama State Hornets at Troy Trojans",
+        "teams": [
+          {
+            "id": "2653",
+            "name": "Troy Trojans",
+            "short": "Troy",
+            "abbrev": "TROY",
+            "homeAway": "home",
+            "score": "34"
+          },
+          {
+            "id": "2011",
+            "name": "Alabama State Hornets",
+            "short": "Alabama St",
+            "abbrev": "ALST",
+            "homeAway": "away",
+            "score": "17"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
         "id": "401868963",
         "date": "2026-09-12T20:00Z",
         "name": "Lincoln (PA) Lions at Mississippi Valley State Delta Devils",
@@ -9813,35 +9842,6 @@
         "state": "pre",
         "completed": false,
         "detail": "9/12 - 8:00 PM EDT",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868008",
-        "date": "2026-09-12T23:30Z",
-        "name": "Fordham Rams at Coastal Carolina Chanticleers",
-        "teams": [
-          {
-            "id": "324",
-            "name": "Coastal Carolina Chanticleers",
-            "short": "Coastal",
-            "abbrev": "CCU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2230",
-            "name": "Fordham Rams",
-            "short": "Fordham",
-            "abbrev": "FOR",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "9/12 - 7:30 PM EDT",
         "broadcasts": [
           "ESPN+"
         ]
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-12T23:30:25.652594+00:00"
+  "fcs_scores_updated": "2026-09-12T23:40:21.635466+00:00"
 }
