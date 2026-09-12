@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T21:20:39.370151+00:00",
+  "updated": "2026-09-12T21:35:42.944728+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-12T21:21:09.514279+00:00"
+    "checked_at": "2026-09-12T21:36:15.375901+00:00"
   },
   "resources": [
     {
@@ -7797,94 +7797,6 @@
     ],
     "2026-09-10": [
       {
-        "id": "401866633",
-        "date": "2026-09-12T16:00Z",
-        "name": "North Carolina A&T Aggies at North Carolina Central Eagles",
-        "teams": [
-          {
-            "id": "2428",
-            "name": "North Carolina Central Eagles",
-            "short": "NC Central",
-            "abbrev": "NCCU",
-            "homeAway": "home",
-            "score": "30"
-          },
-          {
-            "id": "2448",
-            "name": "North Carolina A&T Aggies",
-            "short": "NC A&T",
-            "abbrev": "NCAT",
-            "homeAway": "away",
-            "score": "22"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401866413",
-        "date": "2026-09-12T18:00Z",
-        "name": "Stony Brook Seawolves at Ball State Cardinals",
-        "teams": [
-          {
-            "id": "2050",
-            "name": "Ball State Cardinals",
-            "short": "Ball State",
-            "abbrev": "BALL",
-            "homeAway": "home",
-            "score": "41"
-          },
-          {
-            "id": "2619",
-            "name": "Stony Brook Seawolves",
-            "short": "Stony Brook",
-            "abbrev": "STBK",
-            "homeAway": "away",
-            "score": "17"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401867884",
-        "date": "2026-09-12T18:00Z",
-        "name": "Eastern Washington Eagles at South Dakota Coyotes",
-        "teams": [
-          {
-            "id": "233",
-            "name": "South Dakota Coyotes",
-            "short": "South Dakota",
-            "abbrev": "SDAK",
-            "homeAway": "home",
-            "score": "41"
-          },
-          {
-            "id": "331",
-            "name": "Eastern Washington Eagles",
-            "short": "E Washington",
-            "abbrev": "EWU",
-            "homeAway": "away",
-            "score": "23"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+",
-          "Midco Sports Net"
-        ]
-      },
-      {
         "id": "401867895",
         "date": "2026-09-12T18:00Z",
         "name": "Duquesne Dukes at Youngstown State Penguins",
@@ -7895,7 +7807,7 @@
             "short": "Youngstown St",
             "abbrev": "YSU",
             "homeAway": "home",
-            "score": "63"
+            "score": "70"
           },
           {
             "id": "2184",
@@ -7903,70 +7815,12 @@
             "short": "Duquesne",
             "abbrev": "DUQ",
             "homeAway": "away",
-            "score": "10"
+            "score": "13"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:01 - 4th",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868033",
-        "date": "2026-09-12T18:00Z",
-        "name": "William & Mary Tribe at Lehigh Mountain Hawks",
-        "teams": [
-          {
-            "id": "2329",
-            "name": "Lehigh Mountain Hawks",
-            "short": "Lehigh",
-            "abbrev": "LEH",
-            "homeAway": "home",
-            "score": "44"
-          },
-          {
-            "id": "2729",
-            "name": "William & Mary Tribe",
-            "short": "William & Mary",
-            "abbrev": "W&M",
-            "homeAway": "away",
-            "score": "20"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868255",
-        "date": "2026-09-12T18:00Z",
-        "name": "Drake Bulldogs at Northern Iowa Panthers",
-        "teams": [
-          {
-            "id": "2460",
-            "name": "Northern Iowa Panthers",
-            "short": "Northern Iowa",
-            "abbrev": "UNI",
-            "homeAway": "home",
-            "score": "56"
-          },
-          {
-            "id": "2181",
-            "name": "Drake Bulldogs",
-            "short": "Drake",
-            "abbrev": "DRKE",
-            "homeAway": "away",
-            "score": "14"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
+        "detail": "8:09 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7982,7 +7836,7 @@
             "short": "St Thomas",
             "abbrev": "STMN",
             "homeAway": "home",
-            "score": "42"
+            "score": "49"
           },
           {
             "id": "128",
@@ -7995,7 +7849,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:54 - 4th",
+        "detail": "10:17 - 4th",
         "broadcasts": [
           "Midco Sports Plus"
         ]
@@ -8011,7 +7865,7 @@
             "short": "Delaware St",
             "abbrev": "DSU",
             "homeAway": "home",
-            "score": "14"
+            "score": "21"
           },
           {
             "id": "2075",
@@ -8024,7 +7878,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:05 - 3rd",
+        "detail": "15:00 - 4th",
         "broadcasts": []
       },
       {
@@ -8051,7 +7905,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:17 - 3rd",
+        "detail": "13:35 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8080,7 +7934,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:23 - 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8109,7 +7963,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "11:26 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8138,7 +7992,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "11:19 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8154,7 +8008,7 @@
             "short": "UMass",
             "abbrev": "MASS",
             "homeAway": "home",
-            "score": "29"
+            "score": "37"
           },
           {
             "id": "2529",
@@ -8167,7 +8021,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:51 - 3rd",
+        "detail": "6:14 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8183,7 +8037,7 @@
             "short": "SMU",
             "abbrev": "SMU",
             "homeAway": "home",
-            "score": "28"
+            "score": "41"
           },
           {
             "id": "302",
@@ -8196,7 +8050,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:37 - 2nd",
+        "detail": "0:24 - 2nd",
         "broadcasts": [
           "ACCNX"
         ]
@@ -8220,12 +8074,12 @@
             "short": "N Colorado",
             "abbrev": "UNCO",
             "homeAway": "away",
-            "score": "3"
+            "score": "10"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:23 - 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "MW+"
         ]
@@ -8241,7 +8095,7 @@
             "short": "New Mexico",
             "abbrev": "UNM",
             "homeAway": "home",
-            "score": "20"
+            "score": "42"
           },
           {
             "id": "2385",
@@ -8254,7 +8108,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:09 - 2nd",
+        "detail": "2:00 - 2nd",
         "broadcasts": [
           "MW+"
         ]
@@ -8278,12 +8132,12 @@
             "short": "Lamar",
             "abbrev": "LAM",
             "homeAway": "away",
-            "score": "13"
+            "score": "20"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:08 - 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8299,7 +8153,7 @@
             "short": "Troy",
             "abbrev": "TROY",
             "homeAway": "home",
-            "score": "24"
+            "score": "30"
           },
           {
             "id": "2011",
@@ -8312,7 +8166,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:42 - 2nd",
+        "detail": "0:15 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8328,7 +8182,7 @@
             "short": "Miss Valley St",
             "abbrev": "MVSU",
             "homeAway": "home",
-            "score": "14"
+            "score": "17"
           },
           {
             "id": "2339",
@@ -8341,8 +8195,124 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:17 - 2nd",
+        "detail": "Halftime",
         "broadcasts": []
+      },
+      {
+        "id": "401866630",
+        "date": "2026-09-12T21:00Z",
+        "name": "Merrimack Warriors at Maine Black Bears",
+        "teams": [
+          {
+            "id": "311",
+            "name": "Maine Black Bears",
+            "short": "Maine",
+            "abbrev": "ME",
+            "homeAway": "home",
+            "score": "3"
+          },
+          {
+            "id": "2771",
+            "name": "Merrimack Warriors",
+            "short": "Merrimack",
+            "abbrev": "MRMK",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "End of 1st",
+        "broadcasts": [
+          "FloSports"
+        ]
+      },
+      {
+        "id": "401868061",
+        "date": "2026-09-12T21:00Z",
+        "name": "Morehead State Eagles at Austin Peay Governors",
+        "teams": [
+          {
+            "id": "2046",
+            "name": "Austin Peay Governors",
+            "short": "Austin Peay",
+            "abbrev": "APSU",
+            "homeAway": "home",
+            "score": "14"
+          },
+          {
+            "id": "2413",
+            "name": "Morehead State Eagles",
+            "short": "Morehead St",
+            "abbrev": "MORE",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "6:29 - 1st",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868123",
+        "date": "2026-09-12T21:00Z",
+        "name": "Incarnate Word Cardinals at Northern Arizona Lumberjacks",
+        "teams": [
+          {
+            "id": "2464",
+            "name": "Northern Arizona Lumberjacks",
+            "short": "N Arizona",
+            "abbrev": "NAU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2916",
+            "name": "Incarnate Word Cardinals",
+            "short": "Incarnate Word",
+            "abbrev": "UIW",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "7:39 - 1st",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868285",
+        "date": "2026-09-12T21:15Z",
+        "name": "Stetson Hatters at Bethune-Cookman Wildcats",
+        "teams": [
+          {
+            "id": "2065",
+            "name": "Bethune-Cookman Wildcats",
+            "short": "Bethune",
+            "abbrev": "BCU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "56",
+            "name": "Stetson Hatters",
+            "short": "Stetson",
+            "abbrev": "STET",
+            "homeAway": "away",
+            "score": "3"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "6:24 - 1st",
+        "broadcasts": [
+          "SWAC TV"
+        ]
       },
       {
         "id": "401858439",
@@ -8487,6 +8457,35 @@
         "detail": "Final",
         "broadcasts": [
           "NEC Front Row"
+        ]
+      },
+      {
+        "id": "401866633",
+        "date": "2026-09-12T16:00Z",
+        "name": "North Carolina A&T Aggies at North Carolina Central Eagles",
+        "teams": [
+          {
+            "id": "2428",
+            "name": "North Carolina Central Eagles",
+            "short": "NC Central",
+            "abbrev": "NCCU",
+            "homeAway": "home",
+            "score": "30"
+          },
+          {
+            "id": "2448",
+            "name": "North Carolina A&T Aggies",
+            "short": "NC A&T",
+            "abbrev": "NCAT",
+            "homeAway": "away",
+            "score": "22"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
         ]
       },
       {
@@ -8778,119 +8777,120 @@
         ]
       },
       {
-        "id": "401866630",
-        "date": "2026-09-12T21:00Z",
-        "name": "Merrimack Warriors at Maine Black Bears",
+        "id": "401866413",
+        "date": "2026-09-12T18:00Z",
+        "name": "Stony Brook Seawolves at Ball State Cardinals",
         "teams": [
           {
-            "id": "311",
-            "name": "Maine Black Bears",
-            "short": "Maine",
-            "abbrev": "ME",
+            "id": "2050",
+            "name": "Ball State Cardinals",
+            "short": "Ball State",
+            "abbrev": "BALL",
             "homeAway": "home",
-            "score": "0"
+            "score": "41"
           },
           {
-            "id": "2771",
-            "name": "Merrimack Warriors",
-            "short": "Merrimack",
-            "abbrev": "MRMK",
+            "id": "2619",
+            "name": "Stony Brook Seawolves",
+            "short": "Stony Brook",
+            "abbrev": "STBK",
             "homeAway": "away",
-            "score": "0"
+            "score": "17"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "7:58 - 1st",
-        "broadcasts": [
-          "FloSports"
-        ]
-      },
-      {
-        "id": "401868061",
-        "date": "2026-09-12T21:00Z",
-        "name": "Morehead State Eagles at Austin Peay Governors",
-        "teams": [
-          {
-            "id": "2046",
-            "name": "Austin Peay Governors",
-            "short": "Austin Peay",
-            "abbrev": "APSU",
-            "homeAway": "home",
-            "score": "7"
-          },
-          {
-            "id": "2413",
-            "name": "Morehead State Eagles",
-            "short": "Morehead St",
-            "abbrev": "MORE",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "9:42 - 1st",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
       },
       {
-        "id": "401868123",
-        "date": "2026-09-12T21:00Z",
-        "name": "Incarnate Word Cardinals at Northern Arizona Lumberjacks",
+        "id": "401867884",
+        "date": "2026-09-12T18:00Z",
+        "name": "Eastern Washington Eagles at South Dakota Coyotes",
         "teams": [
           {
-            "id": "2464",
-            "name": "Northern Arizona Lumberjacks",
-            "short": "N Arizona",
-            "abbrev": "NAU",
+            "id": "233",
+            "name": "South Dakota Coyotes",
+            "short": "South Dakota",
+            "abbrev": "SDAK",
             "homeAway": "home",
-            "score": "0"
+            "score": "41"
           },
           {
-            "id": "2916",
-            "name": "Incarnate Word Cardinals",
-            "short": "Incarnate Word",
-            "abbrev": "UIW",
+            "id": "331",
+            "name": "Eastern Washington Eagles",
+            "short": "E Washington",
+            "abbrev": "EWU",
             "homeAway": "away",
-            "score": "0"
+            "score": "23"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "10:12 - 1st",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+",
+          "Midco Sports Net"
+        ]
+      },
+      {
+        "id": "401868033",
+        "date": "2026-09-12T18:00Z",
+        "name": "William & Mary Tribe at Lehigh Mountain Hawks",
+        "teams": [
+          {
+            "id": "2329",
+            "name": "Lehigh Mountain Hawks",
+            "short": "Lehigh",
+            "abbrev": "LEH",
+            "homeAway": "home",
+            "score": "44"
+          },
+          {
+            "id": "2729",
+            "name": "William & Mary Tribe",
+            "short": "William & Mary",
+            "abbrev": "W&M",
+            "homeAway": "away",
+            "score": "20"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
       },
       {
-        "id": "401868285",
-        "date": "2026-09-12T21:15Z",
-        "name": "Stetson Hatters at Bethune-Cookman Wildcats",
+        "id": "401868255",
+        "date": "2026-09-12T18:00Z",
+        "name": "Drake Bulldogs at Northern Iowa Panthers",
         "teams": [
           {
-            "id": "2065",
-            "name": "Bethune-Cookman Wildcats",
-            "short": "Bethune",
-            "abbrev": "BCU",
+            "id": "2460",
+            "name": "Northern Iowa Panthers",
+            "short": "Northern Iowa",
+            "abbrev": "UNI",
             "homeAway": "home",
-            "score": "0"
+            "score": "56"
           },
           {
-            "id": "56",
-            "name": "Stetson Hatters",
-            "short": "Stetson",
-            "abbrev": "STET",
+            "id": "2181",
+            "name": "Drake Bulldogs",
+            "short": "Drake",
+            "abbrev": "DRKE",
             "homeAway": "away",
-            "score": "0"
+            "score": "14"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "14:53 - 1st",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
-          "SWAC TV"
+          "ESPN+"
         ]
       },
       {
@@ -8915,9 +8915,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 5:30 PM EDT",
+        "detail": "13:05 - 1st",
         "broadcasts": [
           "SECN+"
         ]
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-12T21:21:11.985687+00:00"
+  "fcs_scores_updated": "2026-09-12T21:36:19.124768+00:00"
 }
