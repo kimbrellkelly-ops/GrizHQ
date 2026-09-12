@@ -4204,3 +4204,58 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .ghq-tile-index{font-size:10px;font-weight:950;letter-spacing:.12em;color:#9a8c82}.ghq-command-tiles strong{font:900 27px/.9 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.01em}.ghq-command-tiles small{color:#746a65;font-size:12px}.ghq-command-tiles em{position:absolute;right:22px;bottom:20px;font-style:normal;font-size:18px;color:#6b0038}
 @media(max-width:900px){.ghq-command-hero{grid-template-columns:1fr;min-height:0;padding:45px 24px}.ghq-command-panel{justify-self:stretch;width:auto;max-width:none}.ghq-command-panel-title{margin-top:30px}.ghq-command-ring{right:-260px}.ghq-command-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.ghq-command-copy h1{font-size:68px}.ghq-command-hero{padding:36px 18px}.ghq-command-tiles a{min-height:128px;padding:18px}.ghq-command-tiles strong{font-size:23px}.ghq-command-tiles small{font-size:11px}.ghq-command-art-label{right:18px}.ghq-command-panel{padding:20px}}
+
+/* GRIZ HQ VISUAL CORRECTION — maroon / black / white only */
+:root{
+  --ghq-maroon:#6b0038;
+  --ghq-maroon-dark:#3f0826;
+  --ghq-ink:#171717;
+  --ghq-paper:#f7f7f7;
+  --ghq-line:#dedede;
+  --ghq-muted:#737373;
+}
+
+.ghq-command-hero{
+  grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);
+  gap:clamp(22px,4vw,56px);
+  min-height:clamp(430px,58vw,560px);
+  padding:clamp(34px,5vw,68px) clamp(18px,5vw,72px);
+  background:linear-gradient(115deg,#111 0%,#24121c 55%,#410523 100%);
+}
+.ghq-command-hero-art{
+  background:radial-gradient(circle at 80% 45%,rgba(107,0,56,.34),transparent 30%),linear-gradient(90deg,rgba(10,10,10,.98),rgba(35,12,27,.88),rgba(20,8,17,.9));
+}
+.ghq-command-ring{border-color:rgba(255,255,255,.18);box-shadow:0 0 0 26px rgba(255,255,255,.025),0 0 0 52px rgba(255,255,255,.018)}
+.ghq-command-copy .eyebrow{color:#d9d9d9}
+.ghq-command-copy h1 span,.ghq-command-panel-title strong,.ghq-command-panel-top span,.ghq-command-metrics b{color:#d9d9d9}
+.ghq-command-primary{background:var(--ghq-maroon);color:#fff}
+.ghq-command-secondary{border-color:rgba(255,255,255,.35);background:transparent;color:#fff}
+.ghq-command-panel{width:min(100%,390px);background:rgba(0,0,0,.28);border-color:rgba(255,255,255,.18);box-shadow:none;backdrop-filter:none}
+.ghq-command-tiles{grid-template-columns:repeat(4,minmax(0,1fr));gap:0;background:var(--ghq-line)}
+.ghq-command-tiles a{min-height:128px;padding:clamp(17px,2.5vw,28px);background:#fff;border:0}
+.ghq-command-tiles a:hover{background:#f1f1f1;transform:none}
+.ghq-command-tiles strong{font-size:clamp(22px,2.5vw,29px)}
+.ghq-command-tiles small{color:#666}
+.ghq-command-tiles em{color:var(--ghq-maroon)}
+
+/* Keep the homepage fluid instead of forcing rigid desktop cards. */
+.ghq-news-shell,.ghq-social-shell{max-width:1400px;margin-inline:auto}
+.ghq-home-news-grid,.ghq-social-grid{min-width:0}
+.ghq-home-news-side{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.ghq-news-card{min-width:0}
+
+@media(max-width:1050px){
+  .ghq-command-hero{grid-template-columns:1fr}
+  .ghq-command-panel{justify-self:stretch;width:100%;max-width:none}
+  .ghq-command-panel-title{margin:30px 0 22px}
+  .ghq-command-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+  .ghq-command-hero{padding:32px 18px}
+  .ghq-command-copy h1{font-size:clamp(58px,17vw,78px)}
+  .ghq-command-copy p{font-size:15px;margin:20px 0}
+  .ghq-command-actions a{width:100%;justify-content:space-between}
+  .ghq-command-panel{padding:20px}
+  .ghq-command-tiles a{min-height:118px;padding:17px}
+  .ghq-command-tiles strong{font-size:22px}
+}
