@@ -4259,3 +4259,27 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   .ghq-command-tiles a{min-height:118px;padding:17px}
   .ghq-command-tiles strong{font-size:22px}
 }
+
+/* GRIZ HQ FINAL POLISH — tighter, sharper, more dynamic */
+.ghq-command-hero{min-height:410px;padding:34px clamp(18px,3.5vw,52px);gap:28px;grid-template-columns:minmax(0,1.5fr) minmax(250px,.7fr)}
+.ghq-command-copy h1{font-size:clamp(52px,6.8vw,92px);line-height:.86}
+.ghq-command-copy p{max-width:500px;margin:18px 0;font-size:16px;line-height:1.4}
+.ghq-command-copy .eyebrow{margin-bottom:12px}
+.ghq-command-microcopy{margin-top:16px}
+.ghq-command-panel{padding:20px;width:min(100%,330px)}
+.ghq-command-panel-title{margin:28px 0 20px;font-size:35px}
+.ghq-command-metrics{gap:13px 10px;padding:17px 0}
+.ghq-command-metrics b{font-size:23px}
+.ghq-command-tiles a{min-height:104px;padding:18px 20px;gap:5px}
+.ghq-command-tiles strong{font-size:clamp(20px,2.1vw,26px)}
+.ghq-command-tiles small{font-size:11px}
+.ghq-command-tiles em{right:16px;bottom:15px}
+.ghq-home-news,.ghq-social-section{padding-top:28px!important;padding-bottom:28px!important}
+.ghq-news-head,.ghq-social-head{margin-bottom:18px!important}
+.ghq-news-head h2,.ghq-social-head h2{margin-top:4px!important;margin-bottom:6px!important}
+.ghq-news-head p,.ghq-social-head p{margin:0!important;max-width:620px}
+.ghq-home-news-grid,.ghq-social-grid{gap:14px!important}
+.ghq-news-card{box-shadow:none!important;border:1px solid #e3e3e3!important}
+@media(max-width:1050px){.ghq-command-hero{grid-template-columns:1fr 300px;min-height:370px}.ghq-command-panel{width:auto}.ghq-command-tiles{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:820px){.ghq-command-hero{grid-template-columns:1fr}.ghq-command-panel{display:none}.ghq-command-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.ghq-command-hero{min-height:330px;padding:28px 18px}.ghq-command-copy h1{font-size:clamp(50px,15vw,72px)}.ghq-command-tiles a{min-height:100px;padding:15px}.ghq-command-tiles strong{font-size:21px}}
