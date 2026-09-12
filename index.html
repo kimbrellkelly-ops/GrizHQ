@@ -1275,12 +1275,32 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   const canonicalTeam=s=>{const n=norm(s);for(const [key,vals] of Object.entries(teamAliases)){if(vals.includes(n))return key;}return n;};
   const sameTeam=(a,b)=>{const na=norm(a),nb=norm(b);if(!na||!nb)return false;if(na===nb)return true;const ca=canonicalTeam(a),cb=canonicalTeam(b);if(ca===cb)return true;return na.includes(nb)||nb.includes(na);};
   const dayDistance=(a,b)=>{const da=new Date(a+'T12:00:00Z'),db=new Date(b+'T12:00:00Z');return Math.abs(Math.round((da-db)/86400000));};
-  const scoreFor=(away,home,date)=>allScores.find(ev=>{
-    const evDate=dateOnly(ev.date),ts=ev.teams||[];
-    if(dayDistance(evDate,date)>1||ts.length<2)return false;
-    const evAway=ts.find(t=>t.homeAway==='away')||ts[0],evHome=ts.find(t=>t.homeAway==='home')||ts[1];
-    return sameTeam(teamName(evAway),away)&&sameTeam(teamName(evHome),home);
+  // Build a stable matchup index from the ESPN event objects.  The schedule is
+  // only used to decide which games belong in the strip; scores, logos, names,
+  // and status must all come from the same ESPN event.
+  const scoreIndex=new Map();
+  const addScoreIndex=(key,ev)=>{if(!scoreIndex.has(key))scoreIndex.set(key,[]);scoreIndex.get(key).push(ev);};
+  allScores.forEach(ev=>{
+    const ts=ev.teams||[];if(ts.length<2)return;
+    const away=ts.find(t=>t.homeAway==='away')||ts[0],home=ts.find(t=>t.homeAway==='home')||ts[1];
+    const pair=`${canonicalTeam(teamName(away))}|${canonicalTeam(teamName(home))}`;
+    addScoreIndex(`${dateOnly(ev.date)}|${pair}`,ev);
+    // Also index the adjacent dates because the schedule uses local dates while
+    // ESPN event timestamps are UTC.
+    const d=new Date(dateOnly(ev.date)+'T12:00:00Z');
+    [-1,1].forEach(offset=>{const copy=new Date(d);copy.setUTCDate(copy.getUTCDate()+offset);addScoreIndex(`${copy.toISOString().slice(0,10)}|${pair}`,ev);});
   });
+  const scoreFor=(away,home,date)=>{
+    const pair=`${canonicalTeam(away)}|${canonicalTeam(home)}`;
+    const indexed=scoreIndex.get(`${date}|${pair}`)||[];
+    if(indexed.length)return indexed.slice().sort((a,b)=>Number(!!b.completed)-Number(!!a.completed))[0];
+    // Defensive fallback for older data files with incomplete team labels.
+    return allScores.find(ev=>{
+      const ts=ev.teams||[];if(ts.length<2||dayDistance(dateOnly(ev.date),date)>1)return false;
+      const evAway=ts.find(t=>t.homeAway==='away')||ts[0],evHome=ts.find(t=>t.homeAway==='home')||ts[1];
+      return sameTeam(teamName(evAway),away)&&sameTeam(teamName(evHome),home);
+    });
+  };
   const formatDate=s=>{const d=new Date(s+'T12:00:00');return d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});};
   const logoUrl=id=>id?`https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(id)}.png`:'';
   const teamFor=(ev,side,name)=>ev?.teams?.find(t=>t.homeAway===side)||ev?.teams?.find(t=>norm(teamName(t))===norm(name));
