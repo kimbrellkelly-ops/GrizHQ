@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T22:45:45.819769+00:00",
+  "updated": "2026-09-12T22:54:05.052876+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-12T22:46:11.943018+00:00"
+    "checked_at": "2026-09-12T22:54:41.961016+00:00"
   },
   "resources": [
     {
@@ -7797,35 +7797,6 @@
     ],
     "2026-09-10": [
       {
-        "id": "401868112",
-        "date": "2026-09-12T19:00Z",
-        "name": "Utah Tech Trailblazers at Montana Grizzlies",
-        "teams": [
-          {
-            "id": "149",
-            "name": "Montana Grizzlies",
-            "short": "Montana",
-            "abbrev": "MONT",
-            "homeAway": "home",
-            "score": "35"
-          },
-          {
-            "id": "3101",
-            "name": "Utah Tech Trailblazers",
-            "short": "Utah Tech",
-            "abbrev": "UTU",
-            "homeAway": "away",
-            "score": "14"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
         "id": "401856785",
         "date": "2026-09-12T19:30Z",
         "name": "Weber State Wildcats at Colorado Buffaloes",
@@ -7849,7 +7820,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:42 - 4th",
+        "detail": "6:13 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7876,9 +7847,9 @@
             "score": "10"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "End of 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7907,36 +7878,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:03 - 4th",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401866420",
-        "date": "2026-09-12T19:30Z",
-        "name": "Sacred Heart Pioneers at Massachusetts Minutemen",
-        "teams": [
-          {
-            "id": "113",
-            "name": "Massachusetts Minutemen",
-            "short": "UMass",
-            "abbrev": "MASS",
-            "homeAway": "home",
-            "score": "37"
-          },
-          {
-            "id": "2529",
-            "name": "Sacred Heart Pioneers",
-            "short": "Sacred Heart",
-            "abbrev": "SHU",
-            "homeAway": "away",
-            "score": "10"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
+        "detail": "End of 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7952,7 +7894,7 @@
             "short": "SMU",
             "abbrev": "SMU",
             "homeAway": "home",
-            "score": "49"
+            "score": "56"
           },
           {
             "id": "302",
@@ -7965,7 +7907,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:18 - 4th",
+        "detail": "9:01 - 4th",
         "broadcasts": [
           "ACCNX"
         ]
@@ -8023,7 +7965,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 3rd",
+        "detail": "12:14 - 4th",
         "broadcasts": [
           "MW+"
         ]
@@ -8052,7 +7994,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:38 - 4th",
+        "detail": "6:32 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8081,7 +8023,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 3rd",
+        "detail": "12:34 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8110,7 +8052,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "9:07 - 4th",
+        "detail": "4:22 - 4th",
         "broadcasts": []
       },
       {
@@ -8137,7 +8079,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:55 - 3rd",
+        "detail": "9:19 - 3rd",
         "broadcasts": [
           "FloSports"
         ]
@@ -8195,7 +8137,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:16 - 2nd",
+        "detail": "End of 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8240,7 +8182,7 @@
             "short": "Florida",
             "abbrev": "FLA",
             "homeAway": "home",
-            "score": "31"
+            "score": "38"
           },
           {
             "id": "2097",
@@ -8253,7 +8195,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:35 - 2nd",
+        "detail": "1:55 - 2nd",
         "broadcasts": [
           "SECN+"
         ]
@@ -8306,12 +8248,12 @@
             "short": "Stonehill",
             "abbrev": "STO",
             "homeAway": "away",
-            "score": "7"
+            "score": "14"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 2nd",
+        "detail": "10:51 - 2nd",
         "broadcasts": [
           "FloSports"
         ]
@@ -8340,7 +8282,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:30 - 1st",
+        "detail": "15:00 - 2nd",
         "broadcasts": []
       },
       {
@@ -8362,12 +8304,12 @@
             "short": "Virginia St",
             "abbrev": "VIR",
             "homeAway": "away",
-            "score": "6"
+            "score": "0"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:06 - 1st",
+        "detail": "15:00 - 2nd",
         "broadcasts": []
       },
       {
@@ -8394,7 +8336,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:00 - 2nd",
+        "detail": "11:04 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8418,12 +8360,12 @@
             "short": "Chattanooga",
             "abbrev": "UTC",
             "homeAway": "away",
-            "score": "0"
+            "score": "3"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 1st",
+        "detail": "10:35 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8452,7 +8394,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:38 - 1st",
+        "detail": "15:00 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8468,7 +8410,7 @@
             "short": "Butler",
             "abbrev": "BTLR",
             "homeAway": "home",
-            "score": "13"
+            "score": "14"
           },
           {
             "id": "2233",
@@ -8481,7 +8423,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:23 - 2nd",
+        "detail": "9:30 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8510,7 +8452,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:32 - 2nd",
+        "detail": "11:14 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -9180,6 +9122,64 @@
         "broadcasts": []
       },
       {
+        "id": "401868112",
+        "date": "2026-09-12T19:00Z",
+        "name": "Utah Tech Trailblazers at Montana Grizzlies",
+        "teams": [
+          {
+            "id": "149",
+            "name": "Montana Grizzlies",
+            "short": "Montana",
+            "abbrev": "MONT",
+            "homeAway": "home",
+            "score": "35"
+          },
+          {
+            "id": "3101",
+            "name": "Utah Tech Trailblazers",
+            "short": "Utah Tech",
+            "abbrev": "UTU",
+            "homeAway": "away",
+            "score": "14"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401866420",
+        "date": "2026-09-12T19:30Z",
+        "name": "Sacred Heart Pioneers at Massachusetts Minutemen",
+        "teams": [
+          {
+            "id": "113",
+            "name": "Massachusetts Minutemen",
+            "short": "UMass",
+            "abbrev": "MASS",
+            "homeAway": "home",
+            "score": "37"
+          },
+          {
+            "id": "2529",
+            "name": "Sacred Heart Pioneers",
+            "short": "Sacred Heart",
+            "abbrev": "SHU",
+            "homeAway": "away",
+            "score": "10"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
         "id": "401866421",
         "date": "2026-09-12T22:30Z",
         "name": "Monmouth Hawks at Western Michigan Broncos",
@@ -9203,7 +9203,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:45 - 1st",
+        "detail": "9:26 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-12T22:46:15.962891+00:00"
+  "fcs_scores_updated": "2026-09-12T22:54:45.593934+00:00"
 }
