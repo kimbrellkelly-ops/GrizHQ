@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T19:48:02.517709+00:00",
+  "updated": "2026-09-12T19:56:08.029675+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-12T19:48:42.730253+00:00"
+    "checked_at": "2026-09-12T19:56:31.072895+00:00"
   },
   "resources": [
     {
@@ -7820,7 +7820,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Delayed",
+        "detail": "11:24 - 4th",
         "broadcasts": [
           "ACCNX"
         ]
@@ -7836,7 +7836,7 @@
             "short": "NC Central",
             "abbrev": "NCCU",
             "homeAway": "home",
-            "score": "23"
+            "score": "30"
           },
           {
             "id": "2448",
@@ -7855,93 +7855,6 @@
         ]
       },
       {
-        "id": "401867929",
-        "date": "2026-09-12T16:00Z",
-        "name": "Wagner Seahawks at James Madison Dukes",
-        "teams": [
-          {
-            "id": "256",
-            "name": "James Madison Dukes",
-            "short": "James Madison",
-            "abbrev": "JMU",
-            "homeAway": "home",
-            "score": "87"
-          },
-          {
-            "id": "2681",
-            "name": "Wagner Seahawks",
-            "short": "Wagner",
-            "abbrev": "WAG",
-            "homeAway": "away",
-            "score": "3"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868187",
-        "date": "2026-09-12T16:00Z",
-        "name": "Gardner-Webb Runnin' Bulldogs at Liberty Flames",
-        "teams": [
-          {
-            "id": "2335",
-            "name": "Liberty Flames",
-            "short": "Liberty",
-            "abbrev": "LIB",
-            "homeAway": "home",
-            "score": "24"
-          },
-          {
-            "id": "2241",
-            "name": "Gardner-Webb Runnin' Bulldogs",
-            "short": "Gardner-Webb",
-            "abbrev": "GWEB",
-            "homeAway": "away",
-            "score": "23"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868028",
-        "date": "2026-09-12T16:30Z",
-        "name": "Marist Red Foxes at Lafayette Leopards",
-        "teams": [
-          {
-            "id": "322",
-            "name": "Lafayette Leopards",
-            "short": "Lafayette",
-            "abbrev": "LAF",
-            "homeAway": "home",
-            "score": "13"
-          },
-          {
-            "id": "2368",
-            "name": "Marist Red Foxes",
-            "short": "Marist",
-            "abbrev": "MRST",
-            "homeAway": "away",
-            "score": "9"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
         "id": "401856791",
         "date": "2026-09-12T17:00Z",
         "name": "UT Martin Skyhawks at West Virginia Mountaineers",
@@ -7952,7 +7865,7 @@
             "short": "West Virginia",
             "abbrev": "WVU",
             "homeAway": "home",
-            "score": "45"
+            "score": "52"
           },
           {
             "id": "2630",
@@ -7965,7 +7878,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:43 - 4th",
+        "detail": "5:10 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7994,7 +7907,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:45 - 4th",
+        "detail": "1:13 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8021,9 +7934,9 @@
             "score": "7"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "0:34 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8039,7 +7952,7 @@
             "short": "Chicago St",
             "abbrev": "CHST",
             "homeAway": "home",
-            "score": "64"
+            "score": "71"
           },
           {
             "id": "3077",
@@ -8052,7 +7965,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:58 - 4th",
+        "detail": "6:19 - 4th",
         "broadcasts": []
       },
       {
@@ -8079,7 +7992,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "11:21 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8095,7 +8008,7 @@
             "short": "South Dakota",
             "abbrev": "SDAK",
             "homeAway": "home",
-            "score": "17"
+            "score": "24"
           },
           {
             "id": "331",
@@ -8108,7 +8021,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 3rd",
+        "detail": "13:04 - 3rd",
         "broadcasts": [
           "ESPN+",
           "Midco Sports Net"
@@ -8125,7 +8038,7 @@
             "short": "Youngstown St",
             "abbrev": "YSU",
             "homeAway": "home",
-            "score": "35"
+            "score": "42"
           },
           {
             "id": "2184",
@@ -8138,7 +8051,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:18 - 2nd",
+        "detail": "3:14 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8167,7 +8080,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "13:06 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8196,7 +8109,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "15:00 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8212,7 +8125,7 @@
             "short": "St Thomas",
             "abbrev": "STMN",
             "homeAway": "home",
-            "score": "22"
+            "score": "29"
           },
           {
             "id": "128",
@@ -8225,7 +8138,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:14 - 2nd",
+        "detail": "4:48 - 2nd",
         "broadcasts": [
           "Midco Sports Plus"
         ]
@@ -8281,7 +8194,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:13 - 2nd",
+        "detail": "10:10 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8297,7 +8210,7 @@
             "short": "Colorado",
             "abbrev": "COLO",
             "homeAway": "home",
-            "score": "13"
+            "score": "14"
           },
           {
             "id": "2692",
@@ -8310,7 +8223,36 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:54 - 1st",
+        "detail": "10:25 - 1st",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401866412",
+        "date": "2026-09-12T19:30Z",
+        "name": "Robert Morris Colonials at Akron Zips",
+        "teams": [
+          {
+            "id": "2006",
+            "name": "Akron Zips",
+            "short": "Akron",
+            "abbrev": "AKR",
+            "homeAway": "home",
+            "score": "7"
+          },
+          {
+            "id": "2523",
+            "name": "Robert Morris Colonials",
+            "short": "Robert Morris",
+            "abbrev": "RMU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "3:52 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8339,7 +8281,36 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:56 - 1st",
+        "detail": "6:10 - 1st",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401866420",
+        "date": "2026-09-12T19:30Z",
+        "name": "Sacred Heart Pioneers at Massachusetts Minutemen",
+        "teams": [
+          {
+            "id": "113",
+            "name": "Massachusetts Minutemen",
+            "short": "UMass",
+            "abbrev": "MASS",
+            "homeAway": "home",
+            "score": "14"
+          },
+          {
+            "id": "2529",
+            "name": "Sacred Heart Pioneers",
+            "short": "Sacred Heart",
+            "abbrev": "SHU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "6:07 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8461,6 +8432,64 @@
         ]
       },
       {
+        "id": "401867929",
+        "date": "2026-09-12T16:00Z",
+        "name": "Wagner Seahawks at James Madison Dukes",
+        "teams": [
+          {
+            "id": "256",
+            "name": "James Madison Dukes",
+            "short": "James Madison",
+            "abbrev": "JMU",
+            "homeAway": "home",
+            "score": "87"
+          },
+          {
+            "id": "2681",
+            "name": "Wagner Seahawks",
+            "short": "Wagner",
+            "abbrev": "WAG",
+            "homeAway": "away",
+            "score": "3"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868187",
+        "date": "2026-09-12T16:00Z",
+        "name": "Gardner-Webb Runnin' Bulldogs at Liberty Flames",
+        "teams": [
+          {
+            "id": "2335",
+            "name": "Liberty Flames",
+            "short": "Liberty",
+            "abbrev": "LIB",
+            "homeAway": "home",
+            "score": "24"
+          },
+          {
+            "id": "2241",
+            "name": "Gardner-Webb Runnin' Bulldogs",
+            "short": "Gardner-Webb",
+            "abbrev": "GWEB",
+            "homeAway": "away",
+            "score": "23"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
         "id": "401868227",
         "date": "2026-09-12T16:00Z",
         "name": "Thomas More College Saints at Dayton Flyers",
@@ -8519,6 +8548,35 @@
         ]
       },
       {
+        "id": "401868028",
+        "date": "2026-09-12T16:30Z",
+        "name": "Marist Red Foxes at Lafayette Leopards",
+        "teams": [
+          {
+            "id": "322",
+            "name": "Lafayette Leopards",
+            "short": "Lafayette",
+            "abbrev": "LAF",
+            "homeAway": "home",
+            "score": "13"
+          },
+          {
+            "id": "2368",
+            "name": "Marist Red Foxes",
+            "short": "Marist",
+            "abbrev": "MRST",
+            "homeAway": "away",
+            "score": "9"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
         "id": "401867990",
         "date": "2026-09-12T17:30Z",
         "name": "Bucknell Bison at VMI Keydets",
@@ -8543,64 +8601,6 @@
         "state": "post",
         "completed": true,
         "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401866412",
-        "date": "2026-09-12T19:30Z",
-        "name": "Robert Morris Colonials at Akron Zips",
-        "teams": [
-          {
-            "id": "2006",
-            "name": "Akron Zips",
-            "short": "Akron",
-            "abbrev": "AKR",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2523",
-            "name": "Robert Morris Colonials",
-            "short": "Robert Morris",
-            "abbrev": "RMU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "8:31 - 1st",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401866420",
-        "date": "2026-09-12T19:30Z",
-        "name": "Sacred Heart Pioneers at Massachusetts Minutemen",
-        "teams": [
-          {
-            "id": "113",
-            "name": "Massachusetts Minutemen",
-            "short": "UMass",
-            "abbrev": "MASS",
-            "homeAway": "home",
-            "score": "14"
-          },
-          {
-            "id": "2529",
-            "name": "Sacred Heart Pioneers",
-            "short": "Sacred Heart",
-            "abbrev": "SHU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "10:36 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-12T19:48:47.026235+00:00"
+  "fcs_scores_updated": "2026-09-12T19:56:33.585081+00:00"
 }
