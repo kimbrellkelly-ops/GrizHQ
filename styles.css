@@ -4581,3 +4581,20 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   .v2-nav a{padding:10px 8px 9px}
   .v2-home{padding:16px 12px 34px}
 }
+
+/* GrizHQ visual refinement — Pass 2.
+   Header spacing only; scoreboard markup, data, and selectors are untouched. */
+.v2-topbar{gap:18px;}
+.v2-nav{justify-content:flex-start;gap:4px;}
+.v2-brand{flex:0 0 205px;}
+.v2-brand img{width:205px;}
+.v2-more-trigger{background:rgba(118,0,57,.34);color:#fff;border:1px solid rgba(183,147,82,.45);font-size:13px;padding:14px 12px 13px;border-radius:8px;}
+.v2-more-trigger:hover,.v2-more-trigger[aria-expanded="true"]{background:#760039;color:#fff;border-color:#b79352;}
+.v2-more-dropdown{background:#17181d;border:1px solid rgba(183,147,82,.4);}
+.v2-more-dropdown a{color:#f2f2f4!important;}
+.v2-more-dropdown a:hover{background:rgba(118,0,57,.45)!important;color:#fff!important;}
+@media(max-width:800px){
+  .v2-topbar{gap:12px;}
+  .v2-brand{flex-basis:160px;}
+  .v2-brand img{width:160px;}
+}
