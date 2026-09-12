@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T17:19:06.494662+00:00",
+  "updated": "2026-09-12T17:29:22.407841+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-12T17:19:37.412841+00:00"
+    "checked_at": "2026-09-12T17:29:40.964578+00:00"
   },
   "resources": [
     {
@@ -7807,7 +7807,7 @@
             "short": "Indiana",
             "abbrev": "IU",
             "homeAway": "home",
-            "score": "34"
+            "score": "41"
           },
           {
             "id": "47",
@@ -7820,7 +7820,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:48 - 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "BTN"
         ]
@@ -7849,7 +7849,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:20 - 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "ACC Network"
         ]
@@ -7865,7 +7865,7 @@
             "short": "Kent State",
             "abbrev": "KENT",
             "homeAway": "home",
-            "score": "7"
+            "score": "13"
           },
           {
             "id": "2747",
@@ -7873,12 +7873,12 @@
             "short": "Wofford",
             "abbrev": "WOF",
             "homeAway": "away",
-            "score": "10"
+            "score": "12"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:14 - 2nd",
+        "detail": "1:50 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7936,7 +7936,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:36 - 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "NEC Front Row"
         ]
@@ -7952,7 +7952,7 @@
             "short": "NC Central",
             "abbrev": "NCCU",
             "homeAway": "home",
-            "score": "16"
+            "score": "23"
           },
           {
             "id": "2448",
@@ -7965,7 +7965,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:07 - 2nd",
+        "detail": "0:44 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7994,7 +7994,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:53 - 2nd",
+        "detail": "5:21 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8023,7 +8023,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:54 - 2nd",
+        "detail": "1:43 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8081,7 +8081,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:48 - 2nd",
+        "detail": "End of 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8105,7 +8105,7 @@
             "short": "Marist",
             "abbrev": "MRST",
             "homeAway": "away",
-            "score": "3"
+            "score": "9"
           }
         ],
         "state": "in",
@@ -8114,6 +8114,120 @@
         "broadcasts": [
           "ESPN+"
         ]
+      },
+      {
+        "id": "401856791",
+        "date": "2026-09-12T17:00Z",
+        "name": "UT Martin Skyhawks at West Virginia Mountaineers",
+        "teams": [
+          {
+            "id": "277",
+            "name": "West Virginia Mountaineers",
+            "short": "West Virginia",
+            "abbrev": "WVU",
+            "homeAway": "home",
+            "score": "14"
+          },
+          {
+            "id": "2630",
+            "name": "UT Martin Skyhawks",
+            "short": "UT Martin",
+            "abbrev": "UTM",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "5:51 - 1st",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401866415",
+        "date": "2026-09-12T17:00Z",
+        "name": "Colgate Raiders at Central Michigan Chippewas",
+        "teams": [
+          {
+            "id": "2117",
+            "name": "Central Michigan Chippewas",
+            "short": "C Michigan",
+            "abbrev": "CMU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2142",
+            "name": "Colgate Raiders",
+            "short": "Colgate",
+            "abbrev": "COLG",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "0:40 - 1st",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401866417",
+        "date": "2026-09-12T17:00Z",
+        "name": "Holy Cross Crusaders at Miami (OH) RedHawks",
+        "teams": [
+          {
+            "id": "193",
+            "name": "Miami (OH) RedHawks",
+            "short": "Miami OH",
+            "abbrev": "M-OH",
+            "homeAway": "home",
+            "score": "7"
+          },
+          {
+            "id": "107",
+            "name": "Holy Cross Crusaders",
+            "short": "Holy Cross",
+            "abbrev": "HC",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "4:24 - 1st",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401867685",
+        "date": "2026-09-12T17:00Z",
+        "name": "Kentucky Christian Knights at Chicago State Cougars",
+        "teams": [
+          {
+            "id": "2130",
+            "name": "Chicago State Cougars",
+            "short": "Chicago St",
+            "abbrev": "CHST",
+            "homeAway": "home",
+            "score": "14"
+          },
+          {
+            "id": "3077",
+            "name": "Kentucky Christian Knights",
+            "short": "KCU",
+            "abbrev": "KYCH",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "7:50 - 1st",
+        "broadcasts": []
       },
       {
         "id": "401867990",
@@ -8143,120 +8257,6 @@
         "broadcasts": [
           "ESPN+"
         ]
-      },
-      {
-        "id": "401856791",
-        "date": "2026-09-12T17:00Z",
-        "name": "UT Martin Skyhawks at West Virginia Mountaineers",
-        "teams": [
-          {
-            "id": "277",
-            "name": "West Virginia Mountaineers",
-            "short": "West Virginia",
-            "abbrev": "WVU",
-            "homeAway": "home",
-            "score": "7"
-          },
-          {
-            "id": "2630",
-            "name": "UT Martin Skyhawks",
-            "short": "UT Martin",
-            "abbrev": "UTM",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "10:15 - 1st",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401866415",
-        "date": "2026-09-12T17:00Z",
-        "name": "Colgate Raiders at Central Michigan Chippewas",
-        "teams": [
-          {
-            "id": "2117",
-            "name": "Central Michigan Chippewas",
-            "short": "C Michigan",
-            "abbrev": "CMU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2142",
-            "name": "Colgate Raiders",
-            "short": "Colgate",
-            "abbrev": "COLG",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "5:08 - 1st",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401866417",
-        "date": "2026-09-12T17:00Z",
-        "name": "Holy Cross Crusaders at Miami (OH) RedHawks",
-        "teams": [
-          {
-            "id": "193",
-            "name": "Miami (OH) RedHawks",
-            "short": "Miami OH",
-            "abbrev": "M-OH",
-            "homeAway": "home",
-            "score": "7"
-          },
-          {
-            "id": "107",
-            "name": "Holy Cross Crusaders",
-            "short": "Holy Cross",
-            "abbrev": "HC",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "9:31 - 1st",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401867685",
-        "date": "2026-09-12T17:00Z",
-        "name": "Kentucky Christian Knights at Chicago State Cougars",
-        "teams": [
-          {
-            "id": "2130",
-            "name": "Chicago State Cougars",
-            "short": "Chicago St",
-            "abbrev": "CHST",
-            "homeAway": "home",
-            "score": "6"
-          },
-          {
-            "id": "3077",
-            "name": "Kentucky Christian Knights",
-            "short": "KCU",
-            "abbrev": "KYCH",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "9:16 - 1st",
-        "broadcasts": []
       },
       {
         "id": "401866413",
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-12T17:19:41.612707+00:00"
+  "fcs_scores_updated": "2026-09-12T17:29:43.885779+00:00"
 }
