@@ -1,0 +1,1 @@
+Scoreboard patch prepared from the uploaded MASTER baseline on 2026-09-12. Changes are limited to app.js: individual team ranks and live quarter/clock formatting.
