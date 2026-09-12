@@ -1356,6 +1356,14 @@ async function renderFCSScoreboard(){
 
   function cleanTeamLabel(s){return String(s||'').replace(/\s*\([^)]*\)\s*$/,'').replace(/\s+/g,' ').trim();}
   function norm(s){return cleanTeamLabel(s).toLowerCase().replace(/[^a-z0-9]/g,'');}
+  const rankLookup=top25.reduce((map,t)=>{const rank=String(t?.rank||'').trim();const name=cleanTeamLabel(t?.team||t?.name||'');if(rank&&name)map.set(norm(name),rank);return map;},new Map());
+  function rankForTeam(t,fallback=''){
+    const name=teamName(t,fallback);
+    const direct=rankLookup.get(norm(name));
+    if(direct)return direct;
+    const hit=top25.find(item=>teamMatch(name,item?.team||item?.name||''));
+    return hit?.rank!=null?String(hit.rank):'';
+  }
   const teamIds={montana:'149',montanastate:'147',idaho:'70',weberstate:'2692',easternwashington:'331',northernarizona:'2464',northerncolorado:'2458',idahostate:'304',calpoly:'13',southernutah:'253',utahtech:'3101',ucdavis:'302',portlandstate:'2502'};
   const FCS_LOGO_IDS={
     Montana:'149','Montana State':'147',Idaho:'70','Weber State':'2692','Eastern Washington':'331','Northern Arizona':'2464','Northern Colorado':'2458','Idaho State':'304','Cal Poly':'13','Southern Utah':'253','Utah Tech':'3101','UC Davis':'302','Portland State':'2502',
@@ -1444,7 +1452,7 @@ async function renderFCSScoreboard(){
     const teams=(c.competitors||[]).map(x=>({id:String(x.id||x.team?.id||''),name:x.team?.displayName||'',short:x.team?.shortDisplayName||x.team?.displayName||'',abbreviation:x.team?.abbreviation||'',homeAway:x.homeAway||'',score:x.score??'',logo:x.team?.logo||'',team:x.team||{}}));
     const st=c.status?.type||{};const broadcasts=[];(c.broadcasts||[]).forEach(b=>(b.names||[]).forEach(n=>broadcasts.push(n)));
     const odds=Array.isArray(c.odds)?c.odds[0]:(c.odds||null);
-    return {id:String(ev.id||''),date:ev.date||c.date||'',teams,state:st.state||'',completed:!!st.completed,detail:st.shortDetail||st.detail||'',broadcasts:broadcasts.slice(0,3),odds,raw:ev};
+    return {id:String(ev.id||''),date:ev.date||c.date||'',teams,state:st.state||'',completed:!!st.completed,period:Number(st.period||0),clock:st.displayClock||'',detail:st.shortDetail||st.detail||'',broadcasts:broadcasts.slice(0,3),odds,raw:ev};
   }
   function eventMatchesGame(ev,g){
     const ts=eventTeams(ev);if(ts.length<2)return false;
@@ -1486,12 +1494,13 @@ async function renderFCSScoreboard(){
   function statusText(ev,game){
     if(!ev)return game?.time||'TBA';
     if(ev.completed)return ev.detail||'FINAL';
-    if(ev.state==='in')return ev.detail||'LIVE';
+    if(ev.state==='in'){const period=Number(ev.period||0);const clock=String(ev.clock||'').trim();const quarter=period>4?'OT':(period>0?'Q'+period:'');if(quarter&&clock)return quarter+' • '+clock;if(quarter)return quarter;if(clock)return clock;return ev.detail||'LIVE';}
     return game?.time|| (ev.date?new Date(ev.date).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'}):'TBA');
   }
-  function scoreCardTeam(t,fallback,showScore){
+  function scoreCardTeam(t,fallback,showScore,rank=''){
     const name=teamName(t,fallback),logo=logoFor(t,fallback);
-    return `<div class="score-team-row ghq-fcs-team-row">${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}<span>${escapeHtml(name)}</span>${showScore?`<strong>${escapeHtml(t?.score??'—')}</strong>`:''}</div>`;
+    const rankHtml=rank?`<span class="fcs-team-rank">#${escapeHtml(rank)}</span>`:'';
+    return `<div class="score-team-row ghq-fcs-team-row">${rankHtml}${logo?`<img src="${escapeHtml(logo)}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}<span>${escapeHtml(name)}</span>${showScore?`<strong>${escapeHtml(t?.score??'—')}</strong>`:''}</div>`;
   }
   function top25TeamRow(t, fallback, rank, isRanked, showScore){
     const name=teamName(t,fallback), logo=logoFor(t,fallback);
@@ -1509,16 +1518,17 @@ async function renderFCSScoreboard(){
       const a=sg? (ts.find(x=>teamMatch(sg.displayAway,x))||ts.find(x=>x.homeAway==='away')||ts[0]) : (ts.find(x=>x.homeAway==='away')||ts[0]);
       const h=sg? (ts.find(x=>teamMatch(sg.displayHome,x))||ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]) : (ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]);
       const playing=ev.completed||ev.state==='in';
-      const rankedAway=teamMatch(name,a), rankedHome=teamMatch(name,h);
-      const awayRow=top25TeamRow(a,sg?.displayAway||'Away',rank,rankedAway,playing);
-      const homeRow=top25TeamRow(h,sg?.displayHome||'Home',rank,rankedHome,playing);
+      const awayRank=rankForTeam(a,sg?.displayAway||'Away');
+      const homeRank=rankForTeam(h,sg?.displayHome||'Home');
+      const awayRow=top25TeamRow(a,sg?.displayAway||'Away',awayRank,!!awayRank,playing);
+      const homeRow=top25TeamRow(h,sg?.displayHome||'Home',homeRank,!!homeRank,playing);
       return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${awayRow}${homeRow}<div class="ghq-fcs-top-meta"><span>${escapeHtml(statusText(ev,sg))}</span>${ev?.broadcasts?.length?`<small>${escapeHtml(ev.broadcasts.slice(0,2).flatMap(b=>b.names||[]).join(', '))}</small>`:''}</div></div></div>`;
     }
     if(sg){
-      const rankedAway=teamMatch(name,sg.displayAway), rankedHome=teamMatch(name,sg.displayHome);
-      return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${top25TeamRow(null,sg.displayAway,rank,rankedAway,false)}${top25TeamRow(null,sg.displayHome,rank,rankedHome,false)}<div class="ghq-fcs-top-meta"><span>${escapeHtml(sg.time||'TBA')}</span>${sg.network?`<small>${escapeHtml(sg.network)}</small>`:''}</div></div></div>`;
+      const awayRank=rankForTeam(null,sg.displayAway),homeRank=rankForTeam(null,sg.displayHome);
+      return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${top25TeamRow(null,sg.displayAway,awayRank,!!awayRank,false)}${top25TeamRow(null,sg.displayHome,homeRank,!!homeRank,false)}<div class="ghq-fcs-top-meta"><span>${escapeHtml(sg.time||'TBA')}</span>${sg.network?`<small>${escapeHtml(sg.network)}</small>`:''}</div></div></div>`;
     }
-    return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${top25TeamRow(null,name,rank,true,false)}<div class="ghq-fcs-top-meta"><span>BYE / NO GAME THIS WEEK</span></div></div></div>`;
+    return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${top25TeamRow(null,name,rankForTeam(null,name)||rank,!!(rankForTeam(null,name)||rank),false)}<div class="ghq-fcs-top-meta"><span>BYE / NO GAME THIS WEEK</span></div></div></div>`;
   }
   function gameCard(game,ev){
     const ts=eventTeams(ev);
@@ -1535,7 +1545,7 @@ async function renderFCSScoreboard(){
     const status=statusText(ev,game);
     const awayName=a?teamName(a,scheduledAway):scheduledAway;
     const homeName=h?teamName(h,scheduledHome):scheduledHome;
-    return `<div class="fcs-game ${state} bigsky-row ghq-fcs-game" data-fcs-game-key="${escapeHtml(game.matchupKey)}"><div class="fcs-time"><b>${escapeHtml(game.date)}</b><small>${escapeHtml(label)}</small></div><div class="fcs-matchup">${scoreCardTeam(a,awayName,final||live)}${scoreCardTeam(h,homeName,final||live)}<small class="score-game-status">${escapeHtml(status)}${tv?' • '+escapeHtml(tv):''}</small></div><div class="fcs-score score-status">${final||live?`<span class="score-big">${escapeHtml(a?.score??'—')}–${escapeHtml(h?.score??'—')}</span><small>${escapeHtml(final?'FINAL':status)}</small>`:`<small>${escapeHtml(status)}</small>`}</div><div class="fcs-tv">${escapeHtml(tv)}</div><div class="bigsky-info bigsky-betting"><b>CHECKING…</b><small>MARKET LINES</small></div></div>`;
+    return `<div class="fcs-game ${state} bigsky-row ghq-fcs-game" data-fcs-game-key="${escapeHtml(game.matchupKey)}"><div class="fcs-time"><b>${escapeHtml(game.date)}</b><small>${escapeHtml(label)}</small></div><div class="fcs-matchup">${scoreCardTeam(a,awayName,final||live,rankForTeam(a,awayName))}${scoreCardTeam(h,homeName,final||live,rankForTeam(h,homeName))}<small class="score-game-status">${escapeHtml(status)}${tv?' • '+escapeHtml(tv):''}</small></div><div class="fcs-score score-status">${final||live?`<span class="score-big">${escapeHtml(a?.score??'—')}–${escapeHtml(h?.score??'—')}</span><small>${escapeHtml(final?'FINAL':status)}</small>`:`<small>${escapeHtml(status)}</small>`}</div><div class="fcs-tv">${escapeHtml(tv)}</div><div class="bigsky-info bigsky-betting"><b>CHECKING…</b><small>MARKET LINES</small></div></div>`;
   }
   function liveOrCachedForGame(game,liveEvents,cachedEvents){
     return liveEvents.find(e=>eventMatchesGame(e,game))||cachedEvents.find(e=>{const ts=eventTeams(e);return ts.some(t=>teamMatch(game.displayAway,t))&&ts.some(t=>teamMatch(game.displayHome,t));})||null;
