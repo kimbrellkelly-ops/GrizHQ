@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T19:56:08.029675+00:00",
+  "updated": "2026-09-12T20:08:51.886885+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-12T19:56:31.072895+00:00"
+    "checked_at": "2026-09-12T20:09:19.932541+00:00"
   },
   "resources": [
     {
@@ -7815,12 +7815,12 @@
             "short": "ETSU",
             "abbrev": "ETSU",
             "homeAway": "away",
-            "score": "0"
+            "score": "3"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:24 - 4th",
+        "detail": "3:44 - 4th",
         "broadcasts": [
           "ACCNX"
         ]
@@ -7873,70 +7873,12 @@
             "short": "UT Martin",
             "abbrev": "UTM",
             "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "5:10 - 4th",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401866415",
-        "date": "2026-09-12T17:00Z",
-        "name": "Colgate Raiders at Central Michigan Chippewas",
-        "teams": [
-          {
-            "id": "2117",
-            "name": "Central Michigan Chippewas",
-            "short": "C Michigan",
-            "abbrev": "CMU",
-            "homeAway": "home",
-            "score": "13"
-          },
-          {
-            "id": "2142",
-            "name": "Colgate Raiders",
-            "short": "Colgate",
-            "abbrev": "COLG",
-            "homeAway": "away",
-            "score": "10"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "1:13 - 4th",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401866417",
-        "date": "2026-09-12T17:00Z",
-        "name": "Holy Cross Crusaders at Miami (OH) RedHawks",
-        "teams": [
-          {
-            "id": "193",
-            "name": "Miami (OH) RedHawks",
-            "short": "Miami OH",
-            "abbrev": "M-OH",
-            "homeAway": "home",
-            "score": "45"
-          },
-          {
-            "id": "107",
-            "name": "Holy Cross Crusaders",
-            "short": "Holy Cross",
-            "abbrev": "HC",
-            "homeAway": "away",
             "score": "7"
           }
         ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
+        "state": "in",
+        "completed": false,
+        "detail": "2:00 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7952,7 +7894,7 @@
             "short": "Chicago St",
             "abbrev": "CHST",
             "homeAway": "home",
-            "score": "71"
+            "score": "78"
           },
           {
             "id": "3077",
@@ -7965,7 +7907,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:19 - 4th",
+        "detail": "5:15 - 4th",
         "broadcasts": []
       },
       {
@@ -7992,7 +7934,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:21 - 3rd",
+        "detail": "7:24 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8008,7 +7950,7 @@
             "short": "South Dakota",
             "abbrev": "SDAK",
             "homeAway": "home",
-            "score": "24"
+            "score": "31"
           },
           {
             "id": "331",
@@ -8021,7 +7963,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:04 - 3rd",
+        "detail": "8:15 - 3rd",
         "broadcasts": [
           "ESPN+",
           "Midco Sports Net"
@@ -8051,7 +7993,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:14 - 2nd",
+        "detail": "1:08 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8080,7 +8022,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:06 - 3rd",
+        "detail": "4:46 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8096,7 +8038,7 @@
             "short": "Northern Iowa",
             "abbrev": "UNI",
             "homeAway": "home",
-            "score": "28"
+            "score": "42"
           },
           {
             "id": "2181",
@@ -8109,7 +8051,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 3rd",
+        "detail": "8:50 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8125,7 +8067,7 @@
             "short": "St Thomas",
             "abbrev": "STMN",
             "homeAway": "home",
-            "score": "29"
+            "score": "32"
           },
           {
             "id": "128",
@@ -8138,7 +8080,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:48 - 2nd",
+        "detail": "2:28 - 2nd",
         "broadcasts": [
           "Midco Sports Plus"
         ]
@@ -8167,7 +8109,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:44 - 2nd",
+        "detail": "6:14 - 2nd",
         "broadcasts": []
       },
       {
@@ -8194,7 +8136,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:10 - 2nd",
+        "detail": "6:04 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8218,12 +8160,12 @@
             "short": "Weber St",
             "abbrev": "WEB",
             "homeAway": "away",
-            "score": "0"
+            "score": "7"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:25 - 1st",
+        "detail": "5:33 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8252,7 +8194,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:52 - 1st",
+        "detail": "End of 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8268,7 +8210,7 @@
             "short": "Toledo",
             "abbrev": "TOL",
             "homeAway": "home",
-            "score": "7"
+            "score": "13"
           },
           {
             "id": "2115",
@@ -8281,7 +8223,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:10 - 1st",
+        "detail": "0:52 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8297,7 +8239,7 @@
             "short": "UMass",
             "abbrev": "MASS",
             "homeAway": "home",
-            "score": "14"
+            "score": "17"
           },
           {
             "id": "2529",
@@ -8310,10 +8252,66 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:07 - 1st",
+        "detail": "0:27 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
+      },
+      {
+        "id": "401858223",
+        "date": "2026-09-12T20:00Z",
+        "name": "UC Davis Aggies at SMU Mustangs",
+        "teams": [
+          {
+            "id": "2567",
+            "name": "SMU Mustangs",
+            "short": "SMU",
+            "abbrev": "SMU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "302",
+            "name": "UC Davis Aggies",
+            "short": "UC Davis",
+            "abbrev": "UCD",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "12:06 - 1st",
+        "broadcasts": [
+          "ACCNX"
+        ]
+      },
+      {
+        "id": "401868963",
+        "date": "2026-09-12T20:00Z",
+        "name": "Lincoln (PA) Lions at Mississippi Valley State Delta Devils",
+        "teams": [
+          {
+            "id": "2400",
+            "name": "Mississippi Valley State Delta Devils",
+            "short": "Miss Valley St",
+            "abbrev": "MVSU",
+            "homeAway": "home",
+            "score": "7"
+          },
+          {
+            "id": "2339",
+            "name": "Lincoln (PA) Lions",
+            "short": "Lincoln (PA)",
+            "abbrev": "LINP",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "10:57 - 1st",
+        "broadcasts": []
       },
       {
         "id": "401858439",
@@ -8577,6 +8575,64 @@
         ]
       },
       {
+        "id": "401866415",
+        "date": "2026-09-12T17:00Z",
+        "name": "Colgate Raiders at Central Michigan Chippewas",
+        "teams": [
+          {
+            "id": "2117",
+            "name": "Central Michigan Chippewas",
+            "short": "C Michigan",
+            "abbrev": "CMU",
+            "homeAway": "home",
+            "score": "13"
+          },
+          {
+            "id": "2142",
+            "name": "Colgate Raiders",
+            "short": "Colgate",
+            "abbrev": "COLG",
+            "homeAway": "away",
+            "score": "10"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401866417",
+        "date": "2026-09-12T17:00Z",
+        "name": "Holy Cross Crusaders at Miami (OH) RedHawks",
+        "teams": [
+          {
+            "id": "193",
+            "name": "Miami (OH) RedHawks",
+            "short": "Miami OH",
+            "abbrev": "M-OH",
+            "homeAway": "home",
+            "score": "45"
+          },
+          {
+            "id": "107",
+            "name": "Holy Cross Crusaders",
+            "short": "Holy Cross",
+            "abbrev": "HC",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
         "id": "401867990",
         "date": "2026-09-12T17:30Z",
         "name": "Bucknell Bison at VMI Keydets",
@@ -8606,35 +8662,6 @@
         ]
       },
       {
-        "id": "401858223",
-        "date": "2026-09-12T20:00Z",
-        "name": "UC Davis Aggies at SMU Mustangs",
-        "teams": [
-          {
-            "id": "2567",
-            "name": "SMU Mustangs",
-            "short": "SMU",
-            "abbrev": "SMU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "302",
-            "name": "UC Davis Aggies",
-            "short": "UC Davis",
-            "abbrev": "UCD",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "9/12 - 4:00 PM EDT",
-        "broadcasts": [
-          "ACCNX"
-        ]
-      },
-      {
         "id": "401864506",
         "date": "2026-09-12T20:00Z",
         "name": "Northern Colorado Bears at Wyoming Cowboys",
@@ -8656,9 +8683,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 4:00 PM EDT",
+        "detail": "15:00 - 1st",
         "broadcasts": [
           "MW+"
         ]
@@ -8685,9 +8712,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 4:00 PM EDT",
+        "detail": "14:02 - 1st",
         "broadcasts": [
           "MW+"
         ]
@@ -8714,9 +8741,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 4:00 PM EDT",
+        "detail": "11:31 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8761,7 +8788,7 @@
             "short": "Troy",
             "abbrev": "TROY",
             "homeAway": "home",
-            "score": "0"
+            "score": "7"
           },
           {
             "id": "2011",
@@ -8772,39 +8799,12 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 4:00 PM EDT",
+        "detail": "13:25 - 1st",
         "broadcasts": [
           "ESPN+"
         ]
-      },
-      {
-        "id": "401868963",
-        "date": "2026-09-12T20:00Z",
-        "name": "Lincoln (PA) Lions at Mississippi Valley State Delta Devils",
-        "teams": [
-          {
-            "id": "2400",
-            "name": "Mississippi Valley State Delta Devils",
-            "short": "Miss Valley St",
-            "abbrev": "MVSU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2339",
-            "name": "Lincoln (PA) Lions",
-            "short": "Lincoln (PA)",
-            "abbrev": "LINP",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "9/12 - 4:00 PM EDT",
-        "broadcasts": []
       },
       {
         "id": "401866630",
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-12T19:56:33.585081+00:00"
+  "fcs_scores_updated": "2026-09-12T20:09:22.437763+00:00"
 }
