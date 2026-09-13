@@ -67,22 +67,21 @@ def main():
         elif row and row[0] == "Yards Allowed":
             row[1] = "1212"
 
-    # Keep the visible leader cards aligned with Montana's official 2026
-    # cumulative statistics. The official page currently reports 3 games.
+    # Official Montana cumulative player leaders after three completed games.
     leaders = stats.setdefault("leaders", {})
     leaders["passing"] = [{
         "player": "Keali'i Ah Yat",
-        "line": "67-106 • 793 YDS • 5 TD • 1 INT",
+        "line": "67-103 • 793 YDS • 5 TD • 1 INT",
         "extra": "Long: 85",
     }]
     leaders["rushing"] = [{
         "player": "Eli Gillman",
-        "line": "32 CAR • 181 YDS • 4 TD",
-        "extra": "Avg: 5.7",
+        "line": "49 CAR • 328 YDS • 7 TD",
+        "extra": "Avg: 6.7",
     }, {
         "player": "Dylan Paine",
-        "line": "15 CAR • 79 YDS • 1 TD",
-        "extra": "Avg: 5.3",
+        "line": "20 CAR • 162 YDS • 2 TD",
+        "extra": "Avg: 8.1",
     }]
     leaders["receiving"] = [{
         "player": "Brooks Davis",
