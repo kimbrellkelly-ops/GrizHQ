@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-13T03:03:37.637569+00:00",
+  "updated": "2026-09-13T03:23:41.590389+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 74,
+  "story_count": 75,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -224,6 +224,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/60/f60d2b4d-221c-5aeb-a37a-a7a16a52d3f1/6aa5a1f65b7d9.image.jpg?resize=300%2C200"
+    },
+    {
+      "title": "PHOTOS: Grizzlies roll to 35-14 victory over Utah Tech",
+      "url": "https://dailyinterlake.com/news/2026/sep/12/photos-grizzlies-roll-to-35-14-victory-over-utah-tech/",
+      "date": "Sep. 12, 2026",
+      "published_at": "2026-09-12T08:15:00+00:00",
+      "description": "Updated 1 minute ago PHOTOS: Grizzlies roll to 35-14 victory over Utah Tech The Montana Grizzlies rolled to a 35-14 victory over the Utah Tech Trailblazers at Washington-Grizzly Stadium on S…",
+      "source": "Daily Inter Lake",
+      "badge": "OPPONENT",
+      "short": "OPPONE",
+      "image": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/09/12/0913_SPO_DIL_football_Montana_vs_Utah_Tech-1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/09/12/0913_SPO_DIL_football_Montana_vs_Utah_Tech-1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698"
     },
     {
       "title": "3 questions: No. 3 Montana Grizzlies seek 3-0 start against Utah Tech",
