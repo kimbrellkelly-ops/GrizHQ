@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T05:44:55.577755+00:00",
+  "updated": "2026-09-13T05:53:49.959370+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-13T05:45:30.643871+00:00"
+    "checked_at": "2026-09-13T05:54:27.926378+00:00"
   },
   "resources": [
     {
@@ -7815,12 +7815,12 @@
             "short": "Montana St",
             "abbrev": "MTST",
             "homeAway": "away",
-            "score": "17"
+            "score": "20"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:00 - 4th",
+        "detail": "End of 4th",
         "broadcasts": [
           "CW"
         ]
@@ -27594,5 +27594,5 @@
     "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-tanner-williams-kealii-ah-yat-after-utah-tech-win/",
     "youtube_id": "kUA6VfnmPKI"
   },
-  "fcs_scores_updated": "2026-09-13T05:45:34.395506+00:00"
+  "fcs_scores_updated": "2026-09-13T05:54:30.434330+00:00"
 }
