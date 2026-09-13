@@ -8,8 +8,8 @@
 <meta content="Griz HQ — a fan-built Montana Grizzlies football information hub." name="description"/>
 <link href="styles.css?v=20260906-news3" rel="stylesheet"/>
 <script defer src="app.js?v=20260912-scorestrip-live-ranks-clock1"></script>
-<script defer src="score-scroll.js?v=20260913-score-scroll-authoritative"></script>
 <script defer="" src="rankings-team-logos.js"></script>
+<script defer src="score-scroll.js"></script>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
@@ -1169,53 +1169,6 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
 })();
 </script>
 
-<script>
-(function(){
-  const bar=document.querySelector('.v2-scorebar');
-  const scroller=document.getElementById('score-games');
-  if(!bar || !scroller || scroller.dataset.scrollReady==='1') return;
-  scroller.dataset.scrollReady='1';
-  scroller.addEventListener('wheel',function(e){
-    if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){
-      e.preventDefault();
-      scroller.scrollLeft += e.deltaY;
-    }
-  },{passive:false});
-  let dragging=false,startX=0,startScroll=0,moved=false;
-  scroller.addEventListener('pointerdown',function(e){
-    if(e.target.closest('a,button') && e.pointerType==='mouse') return;
-    dragging=true;moved=false;startX=e.clientX;startScroll=scroller.scrollLeft;
-    bar.setPointerCapture?.(e.pointerId);
-  });
-  scroller.addEventListener('pointermove',function(e){
-    if(!dragging) return;
-    const dx=e.clientX-startX;
-    if(Math.abs(dx)>4) moved=true;
-    scroller.scrollLeft=startScroll-dx;
-  });
-  function stop(e){if(!dragging)return;dragging=false;try{bar.releasePointerCapture?.(e.pointerId)}catch(_){} }
-  scroller.addEventListener('pointerup',stop);
-  scroller.addEventListener('pointercancel',stop);
-  scroller.addEventListener('mouseleave',function(){if(dragging) dragging=false;});
-  const prev=bar.querySelector('.v2-score-prev');
-  const next=bar.querySelector('.v2-score-next');
-  if(prev) prev.onclick=function(e){e.preventDefault();e.stopImmediatePropagation();scroller.scrollBy({left:-430,behavior:'smooth'});};
-  if(next) next.onclick=function(e){e.preventDefault();e.stopImmediatePropagation();scroller.scrollBy({left:430,behavior:'smooth'});};
-  function updateArrows(){
-    const max=Math.max(0,scroller.scrollWidth-scroller.clientWidth);
-    const canScroll=max>2;
-    if(prev){prev.disabled=!canScroll || scroller.scrollLeft<=2;}
-    if(next){next.disabled=!canScroll || scroller.scrollLeft>=max-2;}
-  }
-  scroller.addEventListener('scroll',updateArrows,{passive:true});
-  window.addEventListener('resize',updateArrows);
-  if(window.ResizeObserver){new ResizeObserver(updateArrows).observe(scroller);}
-  new MutationObserver(updateArrows).observe(scroller,{childList:true,subtree:true});
-  requestAnimationFrame(()=>requestAnimationFrame(updateArrows));
-  setTimeout(updateArrows,250);
-  setTimeout(updateArrows,1000);
-})();
-</script>
 
 </body>
 </html>
