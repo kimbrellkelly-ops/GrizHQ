@@ -1219,9 +1219,9 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   const weeks=[
     ['2026-08-27','2026-08-30'],['2026-09-03','2026-09-06'],['2026-09-10','2026-09-13'],['2026-09-17','2026-09-20'],['2026-09-24','2026-09-27'],['2026-10-01','2026-10-04'],['2026-10-08','2026-10-11'],['2026-10-15','2026-10-18'],['2026-10-22','2026-10-25'],['2026-10-29','2026-11-01'],['2026-11-05','2026-11-08'],['2026-11-12','2026-11-15'],['2026-11-19','2026-11-22']
   ];
-  const espnWeek=(w,g)=>g==='bigsky'
-    ? `https://www.espn.com/college-football/scoreboard/_/week/${w+1}/year/2026/seasontype/2/group/20`
-    : `https://www.espn.com/college-football/scoreboard/_/week/${w+1}/year/2026/seasontype/2`;
+  const espnWeek=(w,g)=>{const espnW=Number(w)+1;return g==='bigsky'
+    ? `https://www.espn.com/college-football/scoreboard/_/week/${espnW}/year/2026/seasontype/2/group/20`
+    : `https://www.espn.com/college-football/scoreboard/_/week/${espnW}/year/2026/seasontype/2`;};
   const clean=s=>String(s||'').replace(/\s*\([^)]*\)\s*$/,'').replace(/\s+/g,' ').trim();
   const norm=s=>clean(s).toLowerCase().replace(/[^a-z0-9]/g,'');
   const aliases={montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanastatebobcats'],idaho:['idaho','idahovandals'],weberstate:['weberstate','weberstatewildcats'],easternwashington:['easternwashington','easternwashingtoneagles'],northernarizona:['northernarizona','northernarizonalumberjacks'],northerncolorado:['northerncolorado','northerncoloradobears'],idahostate:['idahostate','idahostatebengals'],calpoly:['calpoly','calpolytechnic','calpolymustangs'],southernutah:['southernutah','southernutahthunderbirds'],utahtech:['utahtech','utahtechtrailblazers'],ucdavis:['ucdavis','ucdavisaggies'],portlandstate:['portlandstate','portlandstatevikings']};
