@@ -1229,7 +1229,7 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   const canonical=s=>{const n=norm(s);return Object.keys(aliases).find(k=>aliases[k].includes(n))||null;};
   const teamName=t=>t?.short||t?.shortDisplayName||t?.name||t?.displayName||t?.abbrev||'Team';
   const dateOnly=s=>String(s||'').slice(0,10);
-  const inWeek=(date,w)=>!!weeks[w]&&date>=weeks[w][0]&&date<=weeks[w][1];
+  const inWeek=(date,w)=>Boolean(weeks[w])&&date>=weeks[w][0]&&date<=weeks[w][1];
   let data={};
   try{data=await (await fetch('data.json?scoreboard='+Date.now(),{cache:'no-store'})).json();}catch(e){games.innerHTML='<a class="v2-score-card v2-score-empty" href="'+espnWeek(Number(week.value),group.value)+'" target="_blank" rel="noopener"><strong>Open ESPN scoreboard</strong><small>Local score data unavailable ↗</small></a>';return;}
   const rankedNames=(data.fcs_top25||data.fcs_top20||[]).map(x=>norm(x.team));
