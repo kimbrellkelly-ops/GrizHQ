@@ -157,8 +157,8 @@ function renderHomepageNews(stories) {
     const kicker = feature.querySelector('.espn-kicker, .v2-tag');
     const title = feature.querySelector('h2, h1');
     const description = feature.querySelector('p');
-    const readMore = feature.querySelector('b, a.v2-button');
-    if (readMore && readMore.tagName === 'A') {
+    const readMore = feature.querySelector('a.v2-button');
+    if (readMore) {
       readMore.href = featured.url;
       readMore.target = '_blank';
       readMore.rel = 'noopener';
