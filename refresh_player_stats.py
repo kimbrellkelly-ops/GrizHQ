@@ -11,6 +11,7 @@ BAD = {
     'player', 'players', 'total', 'team', 'team totals', 'opponents',
     'opponent', 'montana', 'individual', 'individual statistics'
 }
+CATEGORIES = ('passing', 'rushing', 'receiving', 'tackles', 'pressure', 'special')
 
 
 def clean(value):
@@ -28,12 +29,9 @@ def first_index(headers, *names):
 def table_headers(table):
     rows = table.find_all('tr')
     if not rows:
-        return [], rows
-    # StatCrew/Sidearm tables sometimes use a two-row header. Include both
-    # rows for classification, but use the first row with the most columns
-    # as the actual data header.
+        return [], rows, ''
     candidates = []
-    for row in rows[:3]:
+    for row in rows[:6]:
         values = [clean(cell.get_text(' ', strip=True)).upper()
                   for cell in row.find_all(['th', 'td'])]
         if values:
@@ -43,20 +41,29 @@ def table_headers(table):
     return headers, rows, all_header_text
 
 
+def surrounding_text(table):
+    parts = []
+    for node in (table.find_previous(['h1', 'h2', 'h3', 'h4', 'h5', 'caption']),
+                 table.find_parent(['section', 'div'])):
+        if node:
+            parts.append(clean(node.get_text(' ', strip=True)).upper())
+    return ' '.join(parts)
+
+
 def category_for(table):
     headers, rows, all_text = table_headers(table)
-    text = all_text
-    if ('CMP' in text or 'COMP' in text) and 'ATT' in text:
+    text = f'{surrounding_text(table)} {all_text}'
+    if ('PASSING' in text or 'CMP' in text or 'COMP' in text) and 'ATT' in text:
         return 'passing'
-    if 'PUNTS' in text or 'PUNT' in text or 'FGM' in text or 'FGA' in text:
+    if any(token in text for token in ('PUNTING', 'PUNTS', 'PUNT', 'FIELD GOALS', 'FGM', 'FGA')):
         return 'special'
-    if 'REC' in text and 'YDS' in text and ('LONG' in text or 'NO' in text):
+    if ('RECEIVING' in text or 'REC' in text) and 'YDS' in text and ('LONG' in text or 'NO' in text):
         return 'receiving'
-    if ('ATT' in text or 'CAR' in text) and 'YDS' in text and ('GAIN' in text or 'NET' in text or 'AVG' in text):
+    if ('RUSHING' in text or 'CAR' in text or 'ATT' in text) and 'YDS' in text and any(token in text for token in ('GAIN', 'NET', 'AVG')):
         return 'rushing'
-    if 'SOLO' in text and ('AST' in text or 'ASSIST' in text or 'TOT' in text):
+    if ('TACKLES' in text or 'SOLO' in text) and any(token in text for token in ('AST', 'ASSIST', 'TOT', 'TOTAL')):
         return 'tackles'
-    if any(token in text for token in ('TFL', 'SACK', 'FF', 'PBU', 'PASSES DEFENDED')):
+    if any(token in text for token in ('DEFENSE', 'DEFENSIVE', 'TFL', 'SACK', 'FF', 'PBU', 'PASSES DEFENDED')):
         return 'pressure'
     return None
 
@@ -130,10 +137,7 @@ def parse_table(table, category):
             attempts = value(cells, 'FGA', 'ATT')
             if punts:
                 line = f'{punts} PUNTS • {yards or "0"} YDS • {average or "0"} AVG'
-                extra = ' • '.join(part for part in [
-                    f'Long: {longest}' if longest else '',
-                    f'{inside20} inside 20' if inside20 else ''
-                ] if part)
+                extra = ' • '.join(part for part in [f'Long: {longest}' if longest else '', f'{inside20} inside 20' if inside20 else ''] if part)
             elif made or attempts:
                 line = f'{made or "0"}/{attempts or "0"} FG'
                 extra = ''
@@ -151,7 +155,7 @@ def main():
     response.raise_for_status()
     soup = BeautifulSoup(response.text, 'html.parser')
 
-    leaders = {key: [] for key in ('passing', 'rushing', 'receiving', 'tackles', 'pressure', 'special')}
+    leaders = {key: [] for key in CATEGORIES}
     detected = []
     for table in soup.find_all('table'):
         category = category_for(table)
@@ -167,10 +171,7 @@ def main():
             if category not in detected:
                 detected.append(category)
 
-    # Do not silently publish partial data. The previous parser only found
-    # passing/special and then the safety script restored stale placeholders.
-    required = ('passing', 'rushing', 'receiving', 'tackles', 'pressure', 'special')
-    missing = [key for key in required if not leaders[key]]
+    missing = [key for key in CATEGORIES if not leaders[key]]
     if missing:
         raise RuntimeError('Official player-stat categories missing: ' + ', '.join(missing))
 
