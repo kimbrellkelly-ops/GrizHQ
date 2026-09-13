@@ -4600,37 +4600,72 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .v2-team-links .v2-rail-cta{margin:14px 16px 16px}
 @media(max-width:1200px){.v2-home-next-match{margin-left:12px;margin-right:12px}.v2-home-next p{margin-left:12px;margin-right:12px}}
 
-
-/* Surgical header completion — full primary navigation, no overflow menu.
-   Scoped to v2 header only; scoreboard selectors intentionally untouched. */
-@media(min-width:1201px){
-  .v2-topbar{
-    min-height:112px;
-    padding:12px 30px;
-    gap:18px;
-    flex-wrap:nowrap;
-  }
-  .v2-brand{flex:0 0 205px;min-width:205px}
-  .v2-brand img{width:205px}
-  .v2-nav{
-    flex:1 1 auto;
-    min-width:0;
-    justify-content:space-between;
-    gap:0;
-    flex-wrap:nowrap;
-  }
-  .v2-nav a{
-    font-size:12px;
-    letter-spacing:0;
-    padding:13px 8px 12px;
-    border-radius:8px;
-  }
-  .v2-nav a:after{left:8px;right:8px;bottom:4px}
+/* GRIZ HQ — surgical featured-story polish (hero only) */
+.v2-feature{
+  min-height:500px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:18px;
+  box-shadow:0 18px 42px rgba(24,12,20,.18);
+  isolation:isolate;
 }
-@media(min-width:1201px) and (max-width:1350px){
-  .v2-topbar{padding-left:22px;padding-right:22px;gap:12px}
-  .v2-brand{flex-basis:190px;min-width:190px}
-  .v2-brand img{width:190px}
-  .v2-nav a{font-size:11px;padding-left:6px;padding-right:6px}
-  .v2-nav a:after{left:6px;right:6px}
+.v2-feature-image img{
+  filter:saturate(.9) contrast(1.06);
+  transform:scale(1.015);
+  transition:transform .35s ease;
+}
+.v2-feature:hover .v2-feature-image img{transform:scale(1.04)}
+.v2-feature:before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto;
+  height:5px;
+  background:linear-gradient(90deg,#760039 0%,#a97832 52%,rgba(169,120,50,0) 100%);
+  z-index:2;
+}
+.v2-feature:after{
+  background:linear-gradient(0deg,rgba(12,5,12,.96) 0%,rgba(28,8,22,.72) 42%,rgba(18,7,15,.12) 78%,rgba(18,7,15,0) 100%);
+}
+.v2-feature-overlay{
+  left:32px;
+  right:32px;
+  bottom:30px;
+  max-width:760px;
+}
+.v2-tag{
+  background:#760039;
+  border:1px solid rgba(255,255,255,.24);
+  box-shadow:0 5px 16px rgba(0,0,0,.18);
+  letter-spacing:1px;
+  padding:8px 12px;
+}
+.v2-feature h1{
+  font-size:clamp(32px,3.35vw,52px);
+  line-height:1.01;
+  letter-spacing:-.035em;
+  text-wrap:balance;
+  text-shadow:0 2px 18px rgba(0,0,0,.2);
+  margin:16px 0 12px;
+}
+.v2-feature p{
+  max-width:620px;
+  color:rgba(255,255,255,.84);
+  font-size:15px;
+  line-height:1.55;
+  margin-bottom:20px;
+}
+.v2-button{
+  background:#fff;
+  color:#760039;
+  border:1px solid rgba(255,255,255,.5);
+  border-radius:10px;
+  padding:12px 17px;
+  box-shadow:0 7px 18px rgba(0,0,0,.16);
+  transition:background .18s ease,color .18s ease,transform .18s ease;
+}
+.v2-button:hover{background:#f2dce6;color:#5b002d;transform:translateY(-2px)}
+@media(max-width:700px){
+  .v2-feature{min-height:430px;border-radius:14px}
+  .v2-feature-overlay{left:22px;right:22px;bottom:22px}
+  .v2-feature h1{font-size:clamp(30px,8vw,40px)}
+  .v2-feature p{font-size:13px}
 }
