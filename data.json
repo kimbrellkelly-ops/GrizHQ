@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T03:38:14.943923+00:00",
+  "updated": "2026-09-13T03:48:34.931186+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-13T03:38:46.487315+00:00"
+    "checked_at": "2026-09-13T03:48:56.766799+00:00"
   },
   "resources": [
     {
@@ -7797,35 +7797,6 @@
     ],
     "2026-09-10": [
       {
-        "id": "401856680",
-        "date": "2026-09-12T23:00Z",
-        "name": "Towson Tigers at South Carolina Gamecocks",
-        "teams": [
-          {
-            "id": "2579",
-            "name": "South Carolina Gamecocks",
-            "short": "South Carolina",
-            "abbrev": "SC",
-            "homeAway": "home",
-            "score": "45"
-          },
-          {
-            "id": "119",
-            "name": "Towson Tigers",
-            "short": "Towson",
-            "abbrev": "TOW",
-            "homeAway": "away",
-            "score": "9"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "SECN+"
-        ]
-      },
-      {
         "id": "401868355",
         "date": "2026-09-12T23:00Z",
         "name": "Arkansas-Pine Bluff Golden Lions at Alcorn State Braves",
@@ -7853,64 +7824,6 @@
         "broadcasts": []
       },
       {
-        "id": "401868236",
-        "date": "2026-09-13T00:00Z",
-        "name": "Tarleton State Texans at McNeese Cowboys",
-        "teams": [
-          {
-            "id": "2377",
-            "name": "McNeese Cowboys",
-            "short": "McNeese",
-            "abbrev": "MCN",
-            "homeAway": "home",
-            "score": "24"
-          },
-          {
-            "id": "2627",
-            "name": "Tarleton State Texans",
-            "short": "Tarleton St",
-            "abbrev": "TAR",
-            "homeAway": "away",
-            "score": "27"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401856789",
-        "date": "2026-09-13T00:00Z",
-        "name": "Grambling Tigers at TCU Horned Frogs",
-        "teams": [
-          {
-            "id": "2628",
-            "name": "TCU Horned Frogs",
-            "short": "TCU",
-            "abbrev": "TCU",
-            "homeAway": "home",
-            "score": "63"
-          },
-          {
-            "id": "2755",
-            "name": "Grambling Tigers",
-            "short": "Grambling",
-            "abbrev": "GRAM",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
         "id": "401856784",
         "date": "2026-09-13T00:08Z",
         "name": "Prairie View A&M Panthers at Baylor Bears",
@@ -7932,9 +7845,9 @@
             "score": "3"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "End of 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7950,7 +7863,7 @@
             "short": "San José St",
             "abbrev": "SJSU",
             "homeAway": "home",
-            "score": "23"
+            "score": "30"
           },
           {
             "id": "13",
@@ -7963,7 +7876,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:14 - 4th",
+        "detail": "6:05 - 4th",
         "broadcasts": [
           "MW+"
         ]
@@ -7992,7 +7905,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:23 - 3rd",
+        "detail": "2:04 - 3rd",
         "broadcasts": [
           "MW+"
         ]
@@ -8045,12 +7958,12 @@
             "short": "Montana St",
             "abbrev": "MTST",
             "homeAway": "away",
-            "score": "10"
+            "score": "17"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:04 - 2nd",
+        "detail": "5:39 - 2nd",
         "broadcasts": [
           "CW"
         ]
@@ -9497,6 +9410,35 @@
         ]
       },
       {
+        "id": "401856680",
+        "date": "2026-09-12T23:00Z",
+        "name": "Towson Tigers at South Carolina Gamecocks",
+        "teams": [
+          {
+            "id": "2579",
+            "name": "South Carolina Gamecocks",
+            "short": "South Carolina",
+            "abbrev": "SC",
+            "homeAway": "home",
+            "score": "45"
+          },
+          {
+            "id": "119",
+            "name": "Towson Tigers",
+            "short": "Towson",
+            "abbrev": "TOW",
+            "homeAway": "away",
+            "score": "9"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "SECN+"
+        ]
+      },
+      {
         "id": "401856786",
         "date": "2026-09-12T23:00Z",
         "name": "Western Carolina Catamounts at Cincinnati Bearcats",
@@ -10009,6 +9951,64 @@
             "name": "Fordham Rams",
             "short": "Fordham",
             "abbrev": "FOR",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868236",
+        "date": "2026-09-13T00:00Z",
+        "name": "Tarleton State Texans at McNeese Cowboys",
+        "teams": [
+          {
+            "id": "2377",
+            "name": "McNeese Cowboys",
+            "short": "McNeese",
+            "abbrev": "MCN",
+            "homeAway": "home",
+            "score": "24"
+          },
+          {
+            "id": "2627",
+            "name": "Tarleton State Texans",
+            "short": "Tarleton St",
+            "abbrev": "TAR",
+            "homeAway": "away",
+            "score": "27"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401856789",
+        "date": "2026-09-13T00:00Z",
+        "name": "Grambling Tigers at TCU Horned Frogs",
+        "teams": [
+          {
+            "id": "2628",
+            "name": "TCU Horned Frogs",
+            "short": "TCU",
+            "abbrev": "TCU",
+            "homeAway": "home",
+            "score": "63"
+          },
+          {
+            "id": "2755",
+            "name": "Grambling Tigers",
+            "short": "Grambling",
+            "abbrev": "GRAM",
             "homeAway": "away",
             "score": "7"
           }
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-tanner-williams-kealii-ah-yat-after-utah-tech-win/",
     "youtube_id": "kUA6VfnmPKI"
   },
-  "fcs_scores_updated": "2026-09-13T03:38:50.508478+00:00"
+  "fcs_scores_updated": "2026-09-13T03:49:02.311291+00:00"
 }
