@@ -49,7 +49,15 @@
       nameEl.parentNode.insertBefore(img,nameEl);
     });
   }
-  function run(){addLogos(document.getElementById('coaches-poll'));addLogos(document.getElementById('media-poll'));}
+  function fixRankingsTitle(){
+    const title=document.querySelector('#rankings .section-head h2');
+    if(title) title.textContent='Top 25 — Coaches & Media';
+  }
+  function run(){
+    addLogos(document.getElementById('coaches-poll'));
+    addLogos(document.getElementById('media-poll'));
+    fixRankingsTitle();
+  }
   const style=document.createElement('style');
   style.textContent='.ranking-team-logo{width:26px;height:26px;object-fit:contain;flex:0 0 26px;margin-right:.15rem}.rank-team-name{min-width:0}';
   document.head.appendChild(style);
