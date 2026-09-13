@@ -1311,7 +1311,7 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   const today=new Date();
   const todayKey=`${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
   const currentIndex=weeks.findIndex(([start,end])=>todayKey>=start&&todayKey<=end);
-  if(currentIndex>=0) week.value=String(currentIndex+1);
+  if(currentIndex>=0) week.value=String(currentIndex);
   group.addEventListener('change',render);week.addEventListener('change',render);render();
 })();
 </script>
