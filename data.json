@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T10:31:24.152962+00:00",
+  "updated": "2026-09-13T10:45:56.380691+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-13T10:32:03.743437+00:00"
+    "checked_at": "2026-09-13T10:46:14.671842+00:00"
   },
   "resources": [
     {
@@ -9934,35 +9934,6 @@
         ]
       },
       {
-        "id": "401868236",
-        "date": "2026-09-13T00:00Z",
-        "name": "Tarleton State Texans at McNeese Cowboys",
-        "teams": [
-          {
-            "id": "2377",
-            "name": "McNeese Cowboys",
-            "short": "McNeese",
-            "abbrev": "MCN",
-            "homeAway": "home",
-            "score": "24"
-          },
-          {
-            "id": "2627",
-            "name": "Tarleton State Texans",
-            "short": "Tarleton St",
-            "abbrev": "TAR",
-            "homeAway": "away",
-            "score": "27"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
         "id": "401856789",
         "date": "2026-09-13T00:00Z",
         "name": "Grambling Tigers at TCU Horned Frogs",
@@ -10011,6 +9982,35 @@
             "abbrev": "SFA",
             "homeAway": "away",
             "score": "26"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868236",
+        "date": "2026-09-13T00:00Z",
+        "name": "Tarleton State Texans at McNeese Cowboys",
+        "teams": [
+          {
+            "id": "2377",
+            "name": "McNeese Cowboys",
+            "short": "McNeese",
+            "abbrev": "MCN",
+            "homeAway": "home",
+            "score": "24"
+          },
+          {
+            "id": "2627",
+            "name": "Tarleton State Texans",
+            "short": "Tarleton St",
+            "abbrev": "TAR",
+            "homeAway": "away",
+            "score": "27"
           }
         ],
         "state": "post",
@@ -27594,5 +27594,5 @@
     "url": "https://skylinesportsmt.com/nevada-head-coach-jeff-choate-press-conference-following-20-7-loss-to-montana-state/",
     "youtube_id": "EyqaAcm3nvU"
   },
-  "fcs_scores_updated": "2026-09-13T10:32:06.405409+00:00"
+  "fcs_scores_updated": "2026-09-13T10:46:16.775694+00:00"
 }
