@@ -34,21 +34,33 @@ jobs:
       - name: Repair and refresh FCS scoreboard cache
         run: python score_refresh.py
 
-      - name: Commit updated data
+      - name: Commit updated data safely
         run: |
+          set -e
           git config user.name "griz-hq-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data.json
-          if git diff --cached --quiet; then
-            echo "No Griz HQ data changes to commit."
-            exit 0
-          fi
-          git commit -m "Auto-update Griz HQ data"
+
           for attempt in 1 2 3; do
-            git pull --rebase origin main && git push origin HEAD:main && exit 0
-            echo "Push attempt ${attempt} failed; retrying after refetch..."
-            git rebase --abort || true
             git fetch origin main
+            git reset --hard origin/main
+            python update_data.py
+            python score_refresh.py
+            git add data.json
+
+            if git diff --cached --quiet; then
+              echo "No Griz HQ data changes to commit."
+              exit 0
+            fi
+
+            git commit -m "Auto-update Griz HQ data"
+            if git push origin HEAD:main; then
+              echo "Updated Griz HQ data pushed successfully."
+              exit 0
+            fi
+
+            echo "Push attempt ${attempt} failed; retrying from latest main."
+            git reset --hard origin/main
           done
-          echo "Unable to push the refreshed Griz HQ data after 3 attempts."
+
+          echo "Unable to push refreshed Griz HQ data after 3 attempts."
           exit 1
