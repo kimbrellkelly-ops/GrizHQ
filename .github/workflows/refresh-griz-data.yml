@@ -34,6 +34,9 @@ jobs:
       - name: Repair and refresh FCS scoreboard cache
         run: python score_refresh.py
 
+      - name: Repair missing completed-game stats
+        run: python repair_stats.py
+
       - name: Commit updated data safely
         run: |
           set -e
@@ -45,6 +48,7 @@ jobs:
             git reset --hard origin/main
             python update_data.py
             python score_refresh.py
+            python repair_stats.py
             git add data.json
 
             if git diff --cached --quiet; then
