@@ -1201,12 +1201,18 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   if(prev) prev.onclick=function(e){e.preventDefault();e.stopImmediatePropagation();scroller.scrollBy({left:-430,behavior:'smooth'});};
   if(next) next.onclick=function(e){e.preventDefault();e.stopImmediatePropagation();scroller.scrollBy({left:430,behavior:'smooth'});};
   function updateArrows(){
-    if(prev) prev.disabled=scroller.scrollLeft<=2;
-    if(next) next.disabled=scroller.scrollLeft+scroller.clientWidth>=scroller.scrollWidth-2;
+    const max=Math.max(0,scroller.scrollWidth-scroller.clientWidth);
+    const canScroll=max>2;
+    if(prev){prev.disabled=!canScroll || scroller.scrollLeft<=2;}
+    if(next){next.disabled=!canScroll || scroller.scrollLeft>=max-2;}
   }
   scroller.addEventListener('scroll',updateArrows,{passive:true});
   window.addEventListener('resize',updateArrows);
-  updateArrows();
+  if(window.ResizeObserver){new ResizeObserver(updateArrows).observe(scroller);}
+  new MutationObserver(updateArrows).observe(scroller,{childList:true,subtree:true});
+  requestAnimationFrame(()=>requestAnimationFrame(updateArrows));
+  setTimeout(updateArrows,250);
+  setTimeout(updateArrows,1000);
 })();
 </script>
 <script id="scoreboard-filter-script">
