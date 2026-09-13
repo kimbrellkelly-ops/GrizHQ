@@ -11,7 +11,7 @@ URL = f'{BASE}/sports/football/stats/2026'
 SCHEDULE_URL = f'{BASE}/sports/football/schedule/2026'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (compatible; GrizHQ/1.0; +https://grizhq.com)'}
 CATEGORIES = ('passing', 'rushing', 'receiving', 'tackles', 'pressure', 'special')
-BAD = {'player', 'players', 'total', 'team', 'team totals', 'opponents', 'opponent', 'montana'}
+BAD = {'player', 'players', 'total', 'totals', 'team', 'team totals', 'opponents', 'opponent', 'montana'}
 
 
 def clean(value):
@@ -38,35 +38,34 @@ def table_info(table):
         if vals:
             candidates.append(vals)
     headers = max(candidates, key=len, default=[])
-    context = []
-    for node in (table.find_previous(['h1', 'h2', 'h3', 'h4', 'h5', 'caption']), table.find_parent(['section', 'div'])):
-        if node:
-            context.append(norm(node.get_text(' ', strip=True)))
-    return headers, rows, ' '.join(context + [' '.join(' '.join(x) for x in candidates)])
+    return headers, rows
 
 
-def category_for(table):
-    headers, rows, text = table_info(table)
-    if ('PASSING' in text or 'CMP' in text or 'COMP' in text) and 'ATT' in text:
-        return 'passing'
-    if any(x in text for x in ('PUNTING', 'PUNTS', 'FIELD GOAL', 'FGM', 'FGA', 'KICKING')):
-        return 'special'
-    if ('RECEIVING' in text or 'REC' in text or 'RECEPTIONS' in text) and 'YDS' in text:
-        return 'receiving'
-    if ('RUSHING' in text or 'CARRIES' in text or 'CAR' in text) and 'YDS' in text:
-        return 'rushing'
-    if any(x in text for x in ('TACKLES', 'SOLO', 'ASSIST', 'AST')) and any(x in text for x in ('TOT', 'TOTAL', 'AST', 'ASSIST')):
-        return 'tackles'
-    if any(x in text for x in ('DEFENSE', 'DEFENSIVE', 'TFL', 'SACK', 'PBU', 'PASSES DEFENDED', 'FORCED FUMBLE')):
-        return 'pressure'
-    return None
+def categories_for(table):
+    headers, _ = table_info(table)
+    h = set(headers)
+    joined = ' '.join(headers)
+    result = []
+    if ('CMP' in h or 'COMP' in h) and 'ATT' in h and ('YDS' in h or 'YARD' in h):
+        result.append('passing')
+    if 'ATT' in h and ('GAIN' in h or 'NET' in h) and ('LOSS' in h or 'AVG' in h):
+        result.append('rushing')
+    if ('REC' in h or 'RECEPTIONS' in h) and ('YDS' in h or 'YARD' in h):
+        result.append('receiving')
+    if 'SOLO' in h and ('AST' in h or 'ASSIST' in h) and ('TOT' in h or 'TOTAL' in h):
+        result.extend(['tackles', 'pressure'])
+    if 'PUNTS' in h or 'PUNTS' in joined or 'FGM' in h or 'FGA' in h or 'RESULT' in h and 'YDS' in h:
+        result.append('special')
+    return list(dict.fromkeys(result))
 
 
 def parse_table(table, category):
-    headers, rows, _ = table_info(table)
+    headers, rows = table_info(table)
     if len(headers) < 3:
         return []
-    name_index = first_index(headers, 'PLAYER', 'NAME') or 0
+    name_index = first_index(headers, 'PLAYER', 'NAME')
+    if name_index is None:
+        name_index = 0
 
     def value(cells, *names):
         i = first_index(headers, *names)
@@ -78,31 +77,31 @@ def parse_table(table, category):
         if len(cells) <= name_index:
             continue
         player = cells[name_index]
-        if player.lower() in BAD or len(player.split()) < 2 or not re.search('[A-Za-z]', player):
+        if not re.search('[A-Za-z]', player) or player.lower() in BAD or len(player.split()) < 2:
             continue
         if category == 'passing':
-            comp = value(cells, 'C A', 'CMP ATT', 'COMP ATT', 'COMP')
-            line = f'{comp or "0"} • {value(cells, "YDS", "YARD") or "0"} YDS • {value(cells, "TD") or "0"} TD • {value(cells, "INT") or "0"} INT'
-            extra = f'Long: {value(cells, "LONG")}' if value(cells, "LONG") else ''
+            line = f'{value(cells, "CMP", "COMP") or "0"} CMP • {value(cells, "YDS", "YARD") or "0"} YDS • {value(cells, "TD") or "0"} TD • {value(cells, "INT") or "0"} INT'
+            extra = f'Long: {value(cells, "LONG")}' if value(cells, 'LONG') else ''
         elif category == 'rushing':
-            line = f'{value(cells, "ATT", "CAR", "CARRIES") or "0"} CAR • {value(cells, "YDS", "YARD", "NET") or "0"} YDS • {value(cells, "TD") or "0"} TD'
-            extra = f'Avg: {value(cells, "AVG")}' if value(cells, "AVG") else ''
+            line = f'{value(cells, "ATT", "CAR", "CARRIES") or "0"} CAR • {value(cells, "NET", "YDS", "YARD") or "0"} YDS • {value(cells, "TD") or "0"} TD'
+            extra = f'Avg: {value(cells, "AVG")}' if value(cells, 'AVG') else ''
         elif category == 'receiving':
             line = f'{value(cells, "REC", "RECEPTIONS", "NO") or "0"} REC • {value(cells, "YDS", "YARD") or "0"} YDS • {value(cells, "TD") or "0"} TD'
-            extra = f'Long: {value(cells, "LONG")}' if value(cells, "LONG") else ''
+            extra = f'Long: {value(cells, "LONG")}' if value(cells, 'LONG') else ''
         elif category == 'tackles':
             total = value(cells, 'TOT', 'TKL', 'TOTAL')
             line = f'{total or "0"} TKL • {value(cells, "SOLO") or "0"} SOLO'
             extra = f'{value(cells, "AST", "ASSIST") or "0"} AST'
         elif category == 'pressure':
-            line = f'{value(cells, "TFL") or "0"} TFL • {value(cells, "SACK", "SACKS") or "0"} SACK • {value(cells, "FF") or "0"} FF'
-            extra = f'{value(cells, "INT") or "0"} INT • {value(cells, "PBU") or "0"} PBU'
+            line = f'{value(cells, "TFL YDS", "TFL") or "0"} TFL • {value(cells, "SACK YDS", "SACK", "SACKS") or "0"} SACK • {value(cells, "FF") or "0"} FF'
+            extra = f'{value(cells, "INT") or "0"} INT • {value(cells, "BRUP", "PBU") or "0"} PBU'
         else:
-            punts = value(cells, 'PUNTS', 'PUNT')
-            made, attempts = value(cells, 'FGM', 'MADE'), value(cells, 'FGA', 'ATT')
+            punts = value(cells, 'PUNTS', 'PUNTS')
+            made = value(cells, 'FGM', 'MADE')
+            attempts = value(cells, 'FGA', 'ATT')
             if punts:
                 line = f'{punts} PUNTS • {value(cells, "YDS", "YARD") or "0"} YDS • {value(cells, "AVG") or "0"} AVG'
-                extra = f'Long: {value(cells, "LONG")}' if value(cells, "LONG") else ''
+                extra = f'Long: {value(cells, "LONG")}' if value(cells, 'LONG') else ''
             elif made or attempts:
                 line, extra = f'{made or "0"}/{attempts or "0"} FG', ''
             else:
@@ -138,20 +137,17 @@ def main():
     leaders = {key: [] for key in CATEGORIES}
     for soup in soups:
         for table in soup.find_all('table'):
-            category = category_for(table)
-            if not category:
-                continue
-            parsed = parse_table(table, category)
-            if not parsed:
-                continue
-            if category == 'special':
-                leaders[category].extend(parsed)
-            elif not leaders[category]:
-                leaders[category] = parsed
+            for category in categories_for(table):
+                parsed = parse_table(table, category)
+                if not parsed:
+                    continue
+                if category == 'special':
+                    leaders[category].extend(parsed)
+                elif not leaders[category]:
+                    leaders[category] = parsed
 
     for category in CATEGORIES:
-        unique = []
-        seen = set()
+        unique, seen = [], set()
         for item in leaders[category]:
             key = (item['player'], item['line'], item['extra'])
             if key not in seen:
