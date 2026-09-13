@@ -158,6 +158,11 @@ function renderHomepageNews(stories) {
     const title = feature.querySelector('h2, h1');
     const description = feature.querySelector('p');
     const readMore = feature.querySelector('b, a.v2-button');
+    if (readMore && readMore.tagName === 'A') {
+      readMore.href = featured.url;
+      readMore.target = '_blank';
+      readMore.rel = 'noopener';
+    }
     if (image) {
       if (featured.image) image.src = featured.image;
       image.alt = featured.title;
