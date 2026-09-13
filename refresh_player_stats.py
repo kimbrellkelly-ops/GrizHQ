@@ -18,12 +18,12 @@ def first_index(headers,*names):
 def category_for(table):
     text=clean(' '.join([table.get('aria-label',''),table.get_text(' ',strip=True)[:500]])).lower()
     node=table
-    for _ in range(6):
+    for _ in range(8):
         node=node.find_previous(['h1','h2','h3','h4','h5','h6','caption','strong'])
         if not node: break
         text += ' '+clean(node.get_text(' ',strip=True)).lower()
     if 'passing' in text or ('cmp' in text and 'att' in text): return 'passing'
-    if 'receiving' in text or 'receptions' in text: return 'receiving'
+    if 'receiving' in text or 'receptions' in text or ('yds' in text and 'long' in text and 'no' in text): return 'receiving'
     if 'rushing' in text or ('gain' in text and 'loss' in text and 'att' in text): return 'rushing'
     if 'tackles' in text or ('solo' in text and ('ast' in text or 'assist' in text)): return 'tackles'
     if any(x in text for x in ('sacks','tfl','forced fumbles','passes defended')): return 'pressure'
@@ -53,7 +53,7 @@ def parse_table(table,cat):
             att=v(cells,'ATT','CAR'); y=v(cells,'YDS','YARD','NET'); td=v(cells,'TD'); avg=v(cells,'AVG'); lg=v(cells,'LONG')
             line=f'{att or "0"} CAR • {y or "0"} YDS • {td or "0"} TD'; extra=f'Avg: {avg}' if avg else (f'Long: {lg}' if lg else '')
         elif cat=='receiving':
-            rec=v(cells,'REC','RECEPTIONS'); y=v(cells,'YDS','YARD'); td=v(cells,'TD'); lg=v(cells,'LONG')
+            rec=v(cells,'REC','RECEPTIONS','NO'); y=v(cells,'YDS','YARD'); td=v(cells,'TD'); lg=v(cells,'LONG')
             line=f'{rec or "0"} REC • {y or "0"} YDS • {td or "0"} TD'; extra=f'Long: {lg}' if lg else ''
         elif cat=='tackles':
             total=v(cells,'TOT','TKL','TOTAL'); solo=v(cells,'SOLO'); ast=v(cells,'AST','ASSIST')
@@ -72,12 +72,17 @@ def main():
     leaders={k:[] for k in ('passing','rushing','receiving','tackles','pressure','special')}
     for table in soup.find_all('table'):
         cat=category_for(table)
-        if cat and not leaders[cat]: leaders[cat]=parse_table(table,cat)
-    if not any(leaders.values()): raise RuntimeError('No official player-stat tables detected')
-    stats=data.setdefault('stats',{}); old=stats.setdefault('leaders',{})
-    for k,v in leaders.items():
-        if v: old[k]=v
-    stats['leaders']=old; stats['leaders_source']=URL; stats['leaders_updated']=data.get('updated')
+        if cat and not leaders[cat]:
+            parsed=parse_table(table,cat)
+            if parsed: leaders[cat]=parsed
+    found=[k for k,v in leaders.items() if v]
+    if not found: raise RuntimeError('No official player-stat tables detected')
+    stats=data.setdefault('stats',{})
+    # Replace the leader groups atomically. Never retain stale values when a
+    # category is absent or its column layout changes.
+    stats['leaders']=leaders
+    stats['leaders_source']=URL
+    stats['leaders_updated']=data.get('updated')
     DATA.write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-    print('Refreshed official player stats:',', '.join(k for k,v in leaders.items() if v))
+    print('Refreshed official player stats:',', '.join(found))
 if __name__=='__main__': main()
