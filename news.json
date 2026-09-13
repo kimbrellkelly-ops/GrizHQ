@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-13T00:05:16.193018+00:00",
+  "updated": "2026-09-13T00:31:26.958088+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 72,
+  "story_count": 73,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Gillman races to more records in Griz win over ‘Blazers",
+      "url": "https://gogriz.com/news/2026/9/12/football-gillman-races-to-more-records-in-griz-win-over-blazers",
+      "date": "Sep. 13, 2026",
+      "published_at": "2026-09-13T01:09:00+00:00",
+      "description": "MISSOULA – Another week, another chapter in Eli Gillman's record-setting career.",
+      "source": "GoGriz",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/12/20260912_fbvsutahtech_132.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/12/20260912_fbvsutahtech_132.jpg"
+    },
     {
       "title": "Montana vs. Utah Tech football 34.JPG",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/image_039ac5dc-f872-5ff3-a2c1-8f62c55632ca.html",
