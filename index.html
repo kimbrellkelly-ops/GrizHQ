@@ -1209,6 +1209,15 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   updateArrows();
 })();
 </script>
+<script id="scoreboard-week-normalizer">
+(function(){
+  const select=document.getElementById('score-week-select');
+  if(!select)return;
+  const current=select.value;
+  select.replaceChildren(...Array.from({length:13},(_,i)=>{const o=document.createElement('option');o.value=String(i);o.textContent=`Week ${i}`;return o;}));
+  select.value=/^(?:0|[1-9]|1[0-2])$/.test(current)?current:'0';
+})();
+</script>
 <script id="scoreboard-filter-script">
 (async function(){
   const games=document.getElementById('score-games');
