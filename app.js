@@ -143,6 +143,19 @@ async function enrichScheduleCards(schedule, games) {
 }
 
 
+function normalizeNewsImageUrl(url) {
+  const value = String(url || '').trim();
+  if (!value) return '';
+  // GoGriz image-handler URLs can include a thumbnail preset that makes the
+  // lead story look soft when it is enlarged in the homepage hero.
+  if (/gogriz\.com\/common\/controls\/image_handler\.aspx/i.test(value)) {
+    return value
+      .replace(/([?&])thumb_prefix=[^&]*&?/i, '$1')
+      .replace(/[?&]$/, '');
+  }
+  return value;
+}
+
 function renderHomepageNews(stories) {
   if (!Array.isArray(stories) || !stories.length) return;
   const clean = stories.filter(x => x && x.title && x.url);
@@ -157,14 +170,9 @@ function renderHomepageNews(stories) {
     const kicker = feature.querySelector('.espn-kicker, .v2-tag');
     const title = feature.querySelector('h2, h1');
     const description = feature.querySelector('p');
-    const readMore = feature.querySelector('a.v2-button');
-    if (readMore) {
-      readMore.href = featured.url;
-      readMore.target = '_blank';
-      readMore.rel = 'noopener';
-    }
+    const readMore = feature.querySelector('b, a.v2-button');
     if (image) {
-      if (featured.image) image.src = featured.image;
+      if (featured.image) image.src = normalizeNewsImageUrl(featured.image);
       image.alt = featured.title;
     }
     if (kicker) kicker.textContent = featured.source || featured.badge || 'LATEST';
