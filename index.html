@@ -1216,7 +1216,8 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   const week=document.getElementById('score-week-select');
   const bar=document.querySelector('.v2-scorebar');
   if(!games||!group||!week)return;
-  // Definitive score-scroll week normalization: one option for Week 0–Week 14.
+  // The top score scroll owns this selector. Rebuild it once so no stale or
+  // previously injected option can create a duplicate Week 0.
   week.replaceChildren(...Array.from({length:15},(_,i)=>{
     const option=document.createElement('option');
     option.value=String(i);
@@ -1228,7 +1229,7 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   ];
   const espnWeek=(w,g)=>g==='bigsky'
     ? `https://www.espn.com/college-football/scoreboard/_/week/${Number(w)+1}/year/2026/seasontype/2/group/20`
-    : `https://www.espn.com/college-football/scoreboard/_/week/${w}/year/2026/seasontype/2`;
+    : `https://www.espn.com/college-football/scoreboard/_/week/${Number(w)+1}/year/2026/seasontype/2`;
   const clean=s=>String(s||'').replace(/\s*\([^)]*\)\s*$/,'').replace(/\s+/g,' ').trim();
   const norm=s=>clean(s).toLowerCase().replace(/[^a-z0-9]/g,'');
   const aliases={montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanastatebobcats'],idaho:['idaho','idahovandals'],weberstate:['weberstate','weberstatewildcats'],easternwashington:['easternwashington','easternwashingtoneagles'],northernarizona:['northernarizona','northernarizonalumberjacks'],northerncolorado:['northerncolorado','northerncoloradobears'],idahostate:['idahostate','idahostatebengals'],calpoly:['calpoly','calpolytechnic','calpolymustangs'],southernutah:['southernutah','southernutahthunderbirds'],utahtech:['utahtech','utahtechtrailblazers'],ucdavis:['ucdavis','ucdavisaggies'],portlandstate:['portlandstate','portlandstatevikings']};
