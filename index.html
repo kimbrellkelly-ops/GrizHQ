@@ -53,7 +53,7 @@
   <div class="v2-scorebar" aria-label="Football scores and upcoming games">
     <button class="v2-score-prev" type="button" aria-label="Previous scores">‹</button>
     <label class="v2-score-filter v2-score-select"> <span class="sr-only">Scoreboard group</span><select id="score-group-select" aria-label="Scoreboard group"><option value="fcs">Top 25 FCS</option><option value="bigsky">Big Sky</option></select></label>
-    <label class="v2-score-filter v2-score-select"> <span class="sr-only">Scoreboard week</span><select id="score-week-select" aria-label="Scoreboard week"><option value="0">Week 0</option><option value="1">Week 1</option><option value="2">Week 2</option><option value="3">Week 3</option><option value="4">Week 4</option><option value="5">Week 5</option><option value="6">Week 6</option><option value="7">Week 7</option><option value="8">Week 8</option><option value="9">Week 9</option><option value="10">Week 10</option><option value="11">Week 11</option><option value="12">Week 12</option><option value="13">Week 13</option><option value="14">Week 14</option><option value="15">Week 15</option></select></label>
+    <label class="v2-score-filter v2-score-select"> <span class="sr-only">Scoreboard week</span><select id="score-week-select" aria-label="Scoreboard week"><option value="0">Week 0</option><option value="1">Week 1</option><option value="2">Week 2</option><option value="3">Week 3</option><option value="4">Week 4</option><option value="5">Week 5</option><option value="6">Week 6</option><option value="7">Week 7</option><option value="8">Week 8</option><option value="9">Week 9</option><option value="10">Week 10</option><option value="11">Week 11</option><option value="12">Week 12</option></select></label>
     <div class="v2-score-games" id="score-games" aria-live="polite"></div>
     <button class="v2-score-next" type="button" aria-label="More scores">›</button>
   </div>
@@ -1229,7 +1229,7 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   const canonical=s=>{const n=norm(s);return Object.keys(aliases).find(k=>aliases[k].includes(n))||null;};
   const teamName=t=>t?.short||t?.shortDisplayName||t?.name||t?.displayName||t?.abbrev||'Team';
   const dateOnly=s=>String(s||'').slice(0,10);
-  const inWeek=(date,w)=>date>=weeks[w][0]&&date<=weeks[w][1];
+  const inWeek=(date,w)=>!!weeks[w]&&date>=weeks[w][0]&&date<=weeks[w][1];
   let data={};
   try{data=await (await fetch('data.json?scoreboard='+Date.now(),{cache:'no-store'})).json();}catch(e){games.innerHTML='<a class="v2-score-card v2-score-empty" href="'+espnWeek(Number(week.value),group.value)+'" target="_blank" rel="noopener"><strong>Open ESPN scoreboard</strong><small>Local score data unavailable ↗</small></a>';return;}
   const rankedNames=(data.fcs_top25||data.fcs_top20||[]).map(x=>norm(x.team));
