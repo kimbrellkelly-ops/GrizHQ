@@ -222,6 +222,34 @@ function getDynamicNextGame(data) {
   return next ? {...next, date: next.date, time: next.time, venue: next.location === 'Away' ? 'Away' : 'Washington-Grizzly Stadium'} : (data.next_game || {});
 }
 
+function getAuthoritativeNextGame(data) {
+  const schedule = Array.isArray(data?.schedule) ? data.schedule : [];
+  const unfinished = schedule.find(game => !String(game?.result || '').trim());
+  if (unfinished) {
+    return { ...unfinished, venue: unfinished.location === 'Away' ? 'Away' : 'Washington-Grizzly Stadium', url: unfinished.url || data?.next_game?.url || '' };
+  }
+  return data?.next_game || {};
+}
+
+function refreshNextGameText(next) {
+  const opponent = String(next?.opponent || 'Opponent');
+  const upper = opponent.toUpperCase();
+  const replacements = [
+    ['UTAH TECH', upper], ['Utah Tech', opponent], ['utahtechtrailblazers.com', '']
+  ];
+  document.querySelectorAll('body *').forEach(el => {
+    if (el.children.length === 0 && el.textContent) {
+      let text = el.textContent;
+      replacements.forEach(([from,to]) => { if (to) text = text.split(from).join(to); });
+      if (text !== el.textContent) el.textContent = text;
+    }
+  });
+  document.querySelectorAll('a[href*="utahtechtrailblazers.com"], a[href*="game-center/6483"]').forEach(a => {
+    if (a.href.includes('game-center/6483')) a.href = next.url || a.href;
+    else if (opponent === 'Oregon State') a.href = 'https://osubeavers.com/sports/football';
+  });
+}
+
 async function loadGrizData() {
   try {
     const res = await fetch("data.json?ts=" + Date.now(), {cache: "no-store"});
@@ -1290,7 +1318,7 @@ async function renderBigSkyAndOpponent(){
       table.innerHTML = '<div class="bigsky-empty"><b>Schedule data unavailable.</b><span>Try refreshing the page.</span></div>';
     }
 
-    const opponent = d.next_game?.opponent || "Drake";
+    const opponent = getAuthoritativeNextGame(d)?.opponent || "Drake";
 
     // Keep the Game Center focused on Montana's NEXT game, not the game just played.
     const gameCenterTitle = document.getElementById("game-center-title");
@@ -1299,9 +1327,9 @@ async function renderBigSkyAndOpponent(){
       gameCenterTitle.textContent = `${opponent} at Montana`;
     }
     if (gameCenterMeta) {
-      const nextDate = d.next_game?.date || "";
-      const nextTime = d.next_game?.time || "";
-      const nextVenue = String(d.next_game?.venue || "Washington-Grizzly Stadium").split(",")[0];
+      const nextDate = next?.date || "";
+      const nextTime = next?.time || "";
+      const nextVenue = String(next?.venue || "Washington-Grizzly Stadium").split(",")[0];
       gameCenterMeta.textContent = [nextDate, nextTime, nextVenue].filter(Boolean).join(" • ");
     }
 
@@ -1320,9 +1348,9 @@ async function renderBigSkyAndOpponent(){
     };
     if (nextLogo && nextLogos[opponent]) { nextLogo.src = nextLogos[opponent]; nextLogo.alt = `${opponent} logo`; }
     const nextDateEl=document.getElementById("next-game-date"), nextTimeEl=document.getElementById("next-game-time"), nextVenueEl=document.getElementById("next-game-venue");
-    if(nextDateEl && d.next_game?.date) nextDateEl.textContent=String(d.next_game.date).toUpperCase();
-    if(nextTimeEl && d.next_game?.time) nextTimeEl.textContent=String(d.next_game.time).toUpperCase();
-    if(nextVenueEl && d.next_game?.venue) nextVenueEl.textContent=String(d.next_game.venue).split(",")[0].toUpperCase();
+    if(nextDateEl && next?.date) nextDateEl.textContent=String(d.next_game.date).toUpperCase();
+    if(nextTimeEl && next?.time) nextTimeEl.textContent=String(d.next_game.time).toUpperCase();
+    if(nextVenueEl && next?.venue) nextVenueEl.textContent=String(d.next_game.venue).split(",")[0].toUpperCase();
 
     const resources = d.opponent_resources?.[opponent];
     if (resources) {
@@ -1811,3 +1839,5 @@ loadGrizData();
     console.warn("Automatic Griz HQ refresh failed", e);
   }
 }, 60 * 1000);
+
+setInterval(() => { loadGrizData(); }, 60000);
