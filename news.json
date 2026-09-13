@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-13T05:22:17.532378+00:00",
+  "updated": "2026-09-13T05:35:15.589597+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 75,
+  "story_count": 76,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Gillman continues assault on the record books as Griz use big plays to bury Utah Tech",
+      "url": "https://skylinesportsmt.com/gillman-continues-assault-on-the-record-books-as-griz-use-big-plays-to-bury-utah-tech/",
+      "date": "Sep. 13, 2026",
+      "published_at": "2026-09-13T03:08:12+00:00",
+      "description": "September 12, 2026 Gillman continues assault on the record books as Griz use big plays to bury Utah Tech",
+      "source": "Skyline Sports",
+      "badge": "OPPONENT",
+      "short": "OPPONE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/09/Eli-Gillman-Touchdown-scaled.jpg",
+      "is_video": true,
+      "youtube_id": "kUA6VfnmPKI",
+      "video_url": "https://www.youtube.com/watch?v=kUA6VfnmPKI",
+      "video_thumbnail": "https://i.ytimg.com/vi/kUA6VfnmPKI/hqdefault.jpg"
+    },
     {
       "title": "Gillman races to more records in Griz win over ‘Blazers",
       "url": "https://gogriz.com/news/2026/9/12/football-gillman-races-to-more-records-in-griz-win-over-blazers",
