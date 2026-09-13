@@ -209,12 +209,26 @@ async function loadHomepageNews() {
   }
 }
 
+function getDynamicNextGame(data) {
+  const schedule = Array.isArray(data.schedule) ? data.schedule : [];
+  const monthIndex = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+  const now = new Date();
+  const upcoming = schedule.map((game, index) => {
+    const match = String(game.date || '').match(/^([A-Za-z]{3})\s+(\d{1,2})/);
+    const date = match ? new Date(now.getFullYear(), monthIndex[match[1]], Number(match[2]), 23, 59, 59) : null;
+    return {...game, _date: date, _index: index};
+  }).filter(game => game._date && game._date >= new Date(now.getFullYear(), now.getMonth(), now.getDate()) && !String(game.result || '').trim());
+  const next = upcoming.sort((a,b) => a._date - b._date || a._index - b._index)[0];
+  return next ? {...next, date: next.date, time: next.time, venue: next.location === 'Away' ? 'Away' : 'Washington-Grizzly Stadium'} : (data.next_game || {});
+}
+
 async function loadGrizData() {
   try {
     const res = await fetch("data.json?ts=" + Date.now(), {cache: "no-store"});
     const d = await res.json();
 
-    const next = d.next_game || {};
+    const next = getDynamicNextGame(d);
+    d.next_game = next;
     const dateEl = document.getElementById("next-game-date");
     const venueEl = document.getElementById("next-game-venue");
     const oppEl = document.getElementById("next-opponent-name");
