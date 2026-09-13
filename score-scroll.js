@@ -27,7 +27,18 @@
     const team = t => t?.shortDisplayName || t?.short || t?.displayName || t?.name || t?.abbreviation || 'Team';
     const ESPN_LOGOS = {
       calpoly:'13',
-      easternwashington:'331'
+      easternwashington:'331',
+      idaho:'70',
+      montana:'149',
+      montanastate:'147',
+      weberstate:'2692',
+      northernarizona:'246',
+      northerncolorado:'2458',
+      idahostate:'304',
+      utahtech:'3101',
+      ucdavis:'302',
+      portlandstate:'250',
+      southernutah:'253')
     };
     const logo = (id, name) => {
       const resolved = id || ESPN_LOGOS[canonical(name)] || '';
@@ -48,7 +59,10 @@
       const ts = ev.teams || []; if (ts.length < 2) return false;
       const a = ts.find(t => t.homeAway === 'away') || ts[0];
       const h = ts.find(t => t.homeAway === 'home') || ts[1];
-      return Math.abs((new Date(date)-new Date(dateOnly(ev.date))) / 86400000) <= 1 && sameTeam(team(a), away) && sameTeam(team(h), home);
+      const eventName = norm(ev.name || '');
+      const pairMatch = sameTeam(team(a), away) && sameTeam(team(h), home);
+      const nameMatch = eventName.includes(norm(away)) && eventName.includes(norm(home));
+      return Math.abs((new Date(date)-new Date(dateOnly(ev.date))) / 86400000) <= 1 && (pairMatch || nameMatch);
     });
     const espn = i => `https://www.espn.com/college-football/scoreboard/_/week/${i+1}/year/2026/seasontype/2`;
     const show = (title, detail, link) => {
