@@ -25,31 +25,13 @@
     const dateOnly = v => String(v || '').slice(0, 10);
     const dateLabel = v => new Date(v + 'T12:00:00Z').toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
     const team = t => t?.shortDisplayName || t?.short || t?.displayName || t?.name || t?.abbreviation || 'Team';
-    const ESPN_LOGOS = {
-      calpoly:'13',
-      easternwashington:'331',
-      idaho:'70',
-      montana:'149',
-      montanastate:'147',
-      weberstate:'2692',
-      northernarizona:'246',
-      northerncolorado:'2458',
-      idahostate:'304',
-      utahtech:'3101',
-      ucdavis:'302',
-      portlandstate:'250',
-      southernutah:'253')
-    };
-    const logo = (id, name) => {
-      const resolved = id || ESPN_LOGOS[canonical(name)] || '';
-      return resolved ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(resolved)}.png` : '';
-    };
+    const logo = id => id ? `https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(id)}.png` : '';
     const aliases = {
       montana:['montana','montanagrizzlies'], montanastate:['montanastate','montanastatebobcats'],
       idaho:['idaho','idahovandals'], weberstate:['weberstate','weberstatewildcats'],
-      easternwashington:['easternwashington','easternwashingtoneagles','easternwash','ewu','eagles'], northernarizona:['northernarizona','northernarizonalumberjacks'],
+      easternwashington:['easternwashington','easternwashingtoneagles'], northernarizona:['northernarizona','northernarizonalumberjacks'],
       northerncolorado:['northerncolorado','northerncoloradobears'], idahostate:['idahostate','idahostatebengals'],
-      calpoly:['calpoly','calpolytechnic','calpolymustangs','calpolymustang','mustangs'], southernutah:['southernutah','southernutahthunderbirds'],
+      calpoly:['calpoly','calpolytechnic','calpolymustangs'], southernutah:['southernutah','southernutahthunderbirds'],
       utahtech:['utahtech','utahtechtrailblazers'], ucdavis:['ucdavis','ucdavisaggies'], portlandstate:['portlandstate','portlandstatevikings']
     };
     const canonical = value => { const n = norm(value); return Object.keys(aliases).find(k => aliases[k].includes(n)) || null; };
@@ -59,10 +41,7 @@
       const ts = ev.teams || []; if (ts.length < 2) return false;
       const a = ts.find(t => t.homeAway === 'away') || ts[0];
       const h = ts.find(t => t.homeAway === 'home') || ts[1];
-      const eventName = norm(ev.name || '');
-      const pairMatch = sameTeam(team(a), away) && sameTeam(team(h), home);
-      const nameMatch = eventName.includes(norm(away)) && eventName.includes(norm(home));
-      return Math.abs((new Date(date)-new Date(dateOnly(ev.date))) / 86400000) <= 1 && (pairMatch || nameMatch);
+      return Math.abs((new Date(date)-new Date(dateOnly(ev.date))) / 86400000) <= 1 && sameTeam(team(a), away) && sameTeam(team(h), home);
     });
     const espn = i => `https://www.espn.com/college-football/scoreboard/_/week/${i+1}/year/2026/seasontype/2`;
     const show = (title, detail, link) => {
@@ -77,7 +56,7 @@
       const status=completed?'FINAL':live?(ev.detail||'LIVE'):(ev?.detail||item.network||'SCHEDULED');
       const a=document.createElement('a'); a.className='v2-score-card'+(canonical(awayName)==='montana'||canonical(homeName)==='montana'?' featured':'');
       a.href=ev?.id?`https://www.espn.com/college-football/game/_/gameId/${ev.id}`:espn(state.index); a.target='_blank'; a.rel='noopener';
-      a.innerHTML=`<div class="v2-score-meta"><span>${esc(item.dateLabel)}</span><b>${esc(ev?.broadcasts?.[0]||item.network||'ESPN')}</b></div><div class="v2-score-status ${live?'is-live':''}">${esc(status)}</div><div class="v2-score-team"><span class="v2-score-team-name">${(away?.id||logo('',awayName))?`<img src="${logo(away?.id,awayName)}" alt="" loading="lazy" decoding="async">`:''}<span>${esc(awayName)}</span></span><b>${esc(away?.score ?? '—')}</b></div><div class="v2-score-team"><span class="v2-score-team-name">${(home?.id||logo('',homeName))?`<img src="${logo(home?.id,homeName)}" alt="" loading="lazy" decoding="async">`:''}<span>${esc(homeName)}</span></span><b>${esc(home?.score ?? '—')}</b></div>`;
+      a.innerHTML=`<div class="v2-score-meta"><span>${esc(item.dateLabel)}</span><b>${esc(ev?.broadcasts?.[0]||item.network||'ESPN')}</b></div><div class="v2-score-status ${live?'is-live':''}">${esc(status)}</div><div class="v2-score-team"><span class="v2-score-team-name">${away?.id?`<img src="${logo(away.id)}" alt="" loading="lazy" decoding="async">`:''}<span>${esc(awayName)}</span></span><b>${esc(away?.score ?? '—')}</b></div><div class="v2-score-team"><span class="v2-score-team-name">${home?.id?`<img src="${logo(home.id)}" alt="" loading="lazy" decoding="async">`:''}<span>${esc(homeName)}</span></span><b>${esc(home?.score ?? '—')}</b></div>`;
       return a;
     };
     const state={index:0,group:group.value||'fcs',data:null,request:0};
