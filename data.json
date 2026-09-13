@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T21:09:10.825101+00:00",
+  "updated": "2026-09-13T23:09:16.321345+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-13T21:09:30.094325+00:00"
+    "checked_at": "2026-09-13T23:09:34.064079+00:00"
   },
   "resources": [
     {
@@ -3062,98 +3062,143 @@
       "passing": [
         {
           "player": "Ah Yat, Keali'i",
-          "line": "67 • 793 YDS • 5 TD • 1 INT",
+          "line": "67 CMP • 793 YDS • 5 TD • 1 INT",
           "extra": "Long: 85"
         },
         {
           "player": "Flowers, Luke",
-          "line": "0 • 0 YDS • 0 TD • 0 INT",
+          "line": "0 CMP • 0 YDS • 0 TD • 0 INT",
           "extra": "Long: 0"
         }
       ],
       "rushing": [
         {
-          "player": "Eli Gillman",
-          "line": "32 CAR • 181 YDS • 4 TD",
-          "extra": "Avg: 5.7"
+          "player": "Burns, Will",
+          "line": "15 CAR • 119 YDS • 0 TD",
+          "extra": "Avg: 7.9"
         },
         {
-          "player": "Dylan Paine",
-          "line": "15 CAR • 79 YDS • 1 TD",
-          "extra": "Avg: 5.3"
+          "player": "Chalk, Floyd",
+          "line": "25 CAR • 100 YDS • 1 TD",
+          "extra": "Avg: 4"
+        },
+        {
+          "player": "Reid, Camury",
+          "line": "4 CAR • 29 YDS • 0 TD",
+          "extra": "Avg: 7.2"
+        },
+        {
+          "player": "Alailefaleula, Niko",
+          "line": "5 CAR • 11 YDS • 0 TD",
+          "extra": "Avg: 2.2"
         }
       ],
       "receiving": [
         {
-          "player": "Brooks Davis",
-          "line": "12 REC • 154 YDS • 1 TD",
-          "extra": "Long: 33"
+          "player": "Acord, Joshua",
+          "line": "6 REC • 86 YDS • 2 TD",
+          "extra": "Long: 58"
         },
         {
-          "player": "Lekeldrick Bridges",
-          "line": "8 REC • 110 YDS • 1 TD",
-          "extra": "Long: 53"
+          "player": "Downing, Devin",
+          "line": "5 REC • 61 YDS • 0 TD",
+          "extra": "Long: 15"
         },
         {
-          "player": "Landon Ransom-Goelz",
-          "line": "7 REC • 115 YDS • 0 TD",
-          "extra": "Long: 37"
+          "player": "Spjut, David",
+          "line": "3 REC • 29 YDS • 0 TD",
+          "extra": "Long: 12"
         },
         {
-          "player": "Eli Gillman",
-          "line": "4 REC • 99 YDS • 2 TD",
-          "extra": "Long: 85"
+          "player": "Chalk, Floyd",
+          "line": "3 REC • 24 YDS • 0 TD",
+          "extra": "Long: 18"
+        },
+        {
+          "player": "Bails Jr., Mark",
+          "line": "3 REC • 21 YDS • 0 TD",
+          "extra": "Long: 14"
         }
       ],
       "tackles": [
         {
-          "player": "Sage Salopek",
-          "line": "11 TKL • 10 SOLO",
+          "player": "Vance, Parker",
+          "line": "7 TKL • 4 SOLO",
+          "extra": "3 AST"
+        },
+        {
+          "player": "Sampson, Christian",
+          "line": "5 TKL • 2 SOLO",
+          "extra": "3 AST"
+        },
+        {
+          "player": "Lesa, Logalima",
+          "line": "4 TKL • - SOLO",
+          "extra": "4 AST"
+        },
+        {
+          "player": "Spence, Jakobi",
+          "line": "3 TKL • 2 SOLO",
           "extra": "1 AST"
         },
         {
-          "player": "Braeden Orlandi",
-          "line": "11 TKL • 5 SOLO",
-          "extra": "6 AST"
-        },
-        {
-          "player": "Tanner Huff",
-          "line": "11 TKL • 5 SOLO",
-          "extra": "6 AST"
-        },
-        {
-          "player": "Kade Cutler",
-          "line": "7 TKL • 4 SOLO",
-          "extra": "3 AST"
+          "player": "Amey, Myles",
+          "line": "2 TKL • 1 SOLO",
+          "extra": "1 AST"
         }
       ],
       "pressure": [
         {
-          "player": "Peyton Wing",
-          "line": "1 TFL • 0 SACK • 0 FF",
-          "extra": "1 INT • 2 PBU"
+          "player": "Vance, Parker",
+          "line": "1 / 2 TFL • - / - SACK • - FF",
+          "extra": "1-0 INT • - PBU"
         },
         {
-          "player": "Tyler King",
-          "line": "1.0 TFL • 1 SACK • 1 FF",
-          "extra": "10 sack yards"
+          "player": "Sampson, Christian",
+          "line": "- / - TFL • - / - SACK • - FF",
+          "extra": "- INT • - PBU"
         },
         {
-          "player": "Styles Goodman",
-          "line": "1 TFL • 0 SACK • 1 FF",
-          "extra": "1 TFL"
+          "player": "Lesa, Logalima",
+          "line": "- / - TFL • - / - SACK • - FF",
+          "extra": "- INT • - PBU"
+        },
+        {
+          "player": "Spence, Jakobi",
+          "line": "1 / 6 TFL • - / - SACK • - FF",
+          "extra": "- INT • - PBU"
+        },
+        {
+          "player": "Amey, Myles",
+          "line": "0.5 / 4 TFL • 0.5 / 4 SACK • - FF",
+          "extra": "- INT • - PBU"
         }
       ],
       "special": [
         {
-          "player": "Everett O'Donnell",
-          "line": "6 PUNTS • 275 YDS • 45.8 AVG",
-          "extra": "Long: 68 • 2 inside 20"
+          "player": "Valencia, Daniel",
+          "line": "2 PUNTS • 87 YDS • 43.5 AVG",
+          "extra": "Long: 45"
         },
         {
-          "player": "Jo Silver",
-          "line": "1/3 FG",
-          "extra": ""
+          "player": "O'donnell, Everett",
+          "line": "3 PUNTS • 136 YDS • 45.3 AVG",
+          "extra": "Long: 48"
+        },
+        {
+          "player": "Bruno, Sam",
+          "line": "4 PUNTS • 166 YDS • 41.5 AVG",
+          "extra": "Long: 46"
+        },
+        {
+          "player": "O'donnell, Everett",
+          "line": "3 PUNTS • 139 YDS • 46.3 AVG",
+          "extra": "Long: 68"
+        },
+        {
+          "player": "Marks, Ryan",
+          "line": "7 PUNTS • 345 YDS • 49.3 AVG",
+          "extra": "Long: 55"
         }
       ]
     },
@@ -3225,7 +3270,7 @@
       }
     ],
     "leaders_source": "https://gogriz.com/sports/football/stats/2026",
-    "leaders_updated": "2026-09-13T21:09:10.825101+00:00"
+    "leaders_updated": "2026-09-13T23:09:16.321345+00:00"
   },
   "rankings_date": "Sep 9, 2026",
   "fcs_scores": {
@@ -27610,5 +27655,5 @@
     "url": "https://skylinesportsmt.com/nevada-head-coach-jeff-choate-press-conference-following-20-7-loss-to-montana-state/",
     "youtube_id": "EyqaAcm3nvU"
   },
-  "fcs_scores_updated": "2026-09-13T21:09:32.415187+00:00"
+  "fcs_scores_updated": "2026-09-13T23:09:39.483086+00:00"
 }
