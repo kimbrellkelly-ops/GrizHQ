@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T04:53:50.513182+00:00",
+  "updated": "2026-09-13T05:06:30.202437+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-13T04:54:18.603825+00:00"
+    "checked_at": "2026-09-13T05:07:00.254123+00:00"
   },
   "resources": [
     {
@@ -7807,7 +7807,7 @@
             "short": "Portland St",
             "abbrev": "PRST",
             "homeAway": "home",
-            "score": "16"
+            "score": "23"
           },
           {
             "id": "155",
@@ -7820,7 +7820,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:01 - 4th",
+        "detail": "6:23 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7849,7 +7849,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:30 - 3rd",
+        "detail": "End of 3rd",
         "broadcasts": [
           "CW"
         ]
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-tanner-williams-kealii-ah-yat-after-utah-tech-win/",
     "youtube_id": "kUA6VfnmPKI"
   },
-  "fcs_scores_updated": "2026-09-13T04:54:21.244604+00:00"
+  "fcs_scores_updated": "2026-09-13T05:07:02.749646+00:00"
 }
