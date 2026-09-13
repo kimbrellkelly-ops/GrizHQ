@@ -50,8 +50,12 @@
     });
   }
   function fixRankingsTitle(){
-    const title=document.querySelector('#rankings .section-head h2');
-    if(title) title.textContent='Top 25 — Coaches & Media';
+    document.querySelectorAll('h1,h2,h3').forEach(title=>{
+      const text=String(title.textContent||'').replace(/\s+/g,' ').trim();
+      if(/^Top 20\s*[—-]\s*Coaches & Media$/i.test(text)){
+        title.textContent='Top 25 — Coaches & Media';
+      }
+    });
   }
   function run(){
     addLogos(document.getElementById('coaches-poll'));
