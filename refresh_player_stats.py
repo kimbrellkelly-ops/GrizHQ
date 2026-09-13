@@ -6,7 +6,8 @@ import requests
 from bs4 import BeautifulSoup
 
 DATA = Path("data.json")
-URL = "https://gogriz.com/sports/football/stats/2026"
+STATS_URL = "https://gogriz.com/sports/football/stats/2026"
+ROSTER_URL = "https://gogriz.com/sports/football/roster/2026"
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; GrizHQ/1.0)"}
 CATEGORIES = ("passing", "rushing", "receiving", "tackles", "pressure", "special")
 
@@ -16,7 +17,16 @@ def clean(value):
 
 
 def norm(value):
-    return re.sub(r"[^A-Z0-9%]+", " ", clean(value).upper()).strip()
+    return re.sub(r"[^a-z0-9]+", "-", clean(value).lower()).strip("-")
+
+
+def header_info(table):
+    rows = table.find_all("tr")
+    for row_index, row in enumerate(rows[:12]):
+        headers = [clean(cell.get_text(" ", strip=True)).upper() for cell in row.find_all(["th", "td"])]
+        if "PLAYER" in headers and len(headers) >= 3:
+            return headers, rows, row_index
+    return [], [], -1
 
 
 def first_index(headers, *names):
@@ -27,60 +37,67 @@ def first_index(headers, *names):
     return None
 
 
-def get_headers(table):
-    rows = table.find_all("tr")
-    for row_index, row in enumerate(rows[:12]):
-        headers = [norm(cell.get_text(" ", strip=True)) for cell in row.find_all(["th", "td"])]
-        if "PLAYER" in headers and len(headers) >= 3:
-            return headers, rows, row_index
-    return [], rows, -1
-
-
 def categories_for(headers):
-    header_set = set(headers)
     joined = " ".join(headers)
     result = []
-    if ("CMP" in header_set or "COMP" in header_set) and "ATT" in header_set and ("YDS" in header_set or "YARD" in header_set):
+    if ("CMP" in headers or "COMP" in headers) and "ATT" in headers and "YDS" in headers:
         result.append("passing")
-    if "ATT" in header_set and ("GAIN" in header_set or "NET" in header_set) and ("LOSS" in header_set or "AVG" in header_set):
+    if "ATT" in headers and ("GAIN" in headers or "NET" in headers) and ("LOSS" in headers or "AVG" in headers):
         result.append("rushing")
-    if ("REC" in header_set or "RECEPTIONS" in header_set or "NO" in header_set) and ("YDS" in header_set or "YARD" in header_set):
+    if ("REC" in headers or "RECEPTIONS" in headers or "NO" in headers) and "YDS" in headers:
         result.append("receiving")
-    if "SOLO" in header_set and ("AST" in header_set or "ASSIST" in header_set) and ("TOT" in header_set or "TOTAL" in header_set):
+    if "SOLO" in headers and ("AST" in headers or "ASSIST" in headers) and ("TOT" in headers or "TOTAL" in headers):
         result.extend(["tackles", "pressure"])
-    if "PUNTS" in header_set or "FGM" in header_set or "FGA" in header_set or ("KICK" in joined and "YDS" in header_set):
+    if "PUNTS" in headers or "FGM" in headers or "FGA" in headers or ("KICK" in joined and "YDS" in headers):
         result.append("special")
     return list(dict.fromkeys(result))
 
 
-def player_name(cell):
-    value = clean(cell.get_text(" ", strip=True))
-    if value:
-        return value
-    for element in cell.find_all(["a", "img"]):
-        for attribute in ("title", "aria-label", "alt"):
-            candidate = clean(element.get(attribute, ""))
-            if candidate:
-                return candidate
+def roster_identities(soup):
+    identities = set()
+    for element in soup.find_all(["a", "td", "span"]):
         href = element.get("href", "")
-        match = re.search(r"/roster/[^/]+/([^/?#]+)/?", href)
+        text = clean(element.get_text(" ", strip=True))
+        candidates = [text, element.get("title", ""), element.get("aria-label", "")]
+        match = re.search(r"/player/([^/?#]+)/?", href)
         if match:
-            return clean(match.group(1).replace("-", " "))
-    return ""
+            candidates.append(match.group(1).replace("-", " "))
+        for candidate in candidates:
+            key = norm(candidate)
+            if key and len(key.split("-")) >= 2:
+                identities.add(key)
+    return identities
 
 
-def parse_table(table, category):
-    headers, rows, header_row = get_headers(table)
+def player_identity(cell):
+    text = clean(cell.get_text(" ", strip=True))
+    candidates = [text, cell.get("title", ""), cell.get("aria-label", "")]
+    for element in cell.find_all(["a", "img"]):
+        candidates.extend([element.get("title", ""), element.get("aria-label", ""), element.get("alt", "")])
+        match = re.search(r"/player/([^/?#]+)/?", element.get("href", ""))
+        if match:
+            candidates.append(match.group(1).replace("-", " "))
+    for candidate in candidates:
+        key = norm(candidate)
+        if key and len(key.split("-")) >= 2:
+            return clean(candidate.replace("-", " ")), key
+    return "", ""
+
+
+def parse_table(table, category, roster):
+    headers, rows, header_row = header_info(table)
     if not headers:
         return []
     player_column = headers.index("PLAYER")
-    result = []
+    parsed = []
     for row in rows[header_row + 1:]:
         cells = row.find_all(["td", "th"])
         if len(cells) <= player_column:
             continue
-        player = player_name(cells[player_column])
+        player, identity = player_identity(cells[player_column])
         if not player or player.lower() in {"player", "total", "opponents", "team", "montana"}:
+            continue
+        if roster and identity not in roster:
             continue
         values = [clean(cell.get_text(" ", strip=True)) for cell in cells]
 
@@ -89,65 +106,69 @@ def parse_table(table, category):
             return values[index] if index is not None and index < len(values) else ""
 
         if category == "passing":
-            line = f'{value("CMP", "COMP") or "0"} CMP • {value("YDS", "YARD") or "0"} YDS • {value("TD") or "0"} TD • {value("INT") or "0"} INT'
+            line = f'{value("CMP", "COMP") or "0"} CMP • {value("YDS") or "0"} YDS • {value("TD") or "0"} TD • {value("INT") or "0"} INT'
             extra = f'Long: {value("LONG")}' if value("LONG") else ""
         elif category == "rushing":
-            line = f'{value("ATT", "CAR", "CARRIES") or "0"} CAR • {value("NET", "YDS", "YARD") or "0"} YDS • {value("TD") or "0"} TD'
+            line = f'{value("ATT", "CAR", "CARRIES") or "0"} CAR • {value("NET", "YDS") or "0"} YDS • {value("TD") or "0"} TD'
             extra = f'Avg: {value("AVG")}' if value("AVG") else ""
         elif category == "receiving":
-            line = f'{value("REC", "RECEPTIONS", "NO") or "0"} REC • {value("YDS", "YARD") or "0"} YDS • {value("TD") or "0"} TD'
+            line = f'{value("REC", "RECEPTIONS", "NO") or "0"} REC • {value("YDS") or "0"} YDS • {value("TD") or "0"} TD'
             extra = f'Long: {value("LONG")}' if value("LONG") else ""
         elif category == "tackles":
             line = f'{value("TOT", "TKL", "TOTAL") or "0"} TKL • {value("SOLO") or "0"} SOLO'
             extra = f'{value("AST", "ASSIST") or "0"} AST'
         elif category == "pressure":
             line = f'{value("TFL YDS", "TFL") or "0"} TFL • {value("SACK YDS", "SACK", "SACKS") or "0"} SACK • {value("FF") or "0"} FF'
-            extra = f'{value("INT") or "0"} INT • {value("BRUP", "PBU") or "0"} PBU'
+            extra = f'{value("INT") or "0"} INT • {value("PBU", "BRUP") or "0"} PBU'
         else:
             punts = value("PUNTS")
             made = value("FGM", "MADE")
             attempts = value("FGA", "ATT")
             if punts:
-                line = f'{punts} PUNTS • {value("YDS", "YARD") or "0"} YDS • {value("AVG") or "0"} AVG'
+                line = f'{punts} PUNTS • {value("YDS") or "0"} YDS • {value("AVG") or "0"} AVG'
                 extra = f'Long: {value("LONG")}' if value("LONG") else ""
             elif made or attempts:
                 line, extra = f'{made or "0"}/{attempts or "0"} FG', ""
             else:
                 continue
-        result.append({"player": player, "line": line, "extra": extra})
-    return result
+        parsed.append({"player": player, "line": line, "extra": extra})
+    return parsed
 
 
 def main():
-    response = requests.get(URL, headers=HEADERS, timeout=45)
-    response.raise_for_status()
-    soup = BeautifulSoup(response.text, "html.parser")
+    stats_response = requests.get(STATS_URL, headers=HEADERS, timeout=45)
+    stats_response.raise_for_status()
+    roster_response = requests.get(ROSTER_URL, headers=HEADERS, timeout=45)
+    roster_response.raise_for_status()
+    roster = roster_identities(BeautifulSoup(roster_response.text, "html.parser"))
+    if len(roster) < 20:
+        raise RuntimeError(f"Montana roster identity check failed: only {len(roster)} identities found")
+
+    soup = BeautifulSoup(stats_response.text, "html.parser")
     data = json.loads(DATA.read_text(encoding="utf-8"))
     stats = data.setdefault("stats", {})
     existing = stats.get("leaders", {})
     leaders = {category: [] for category in CATEGORIES}
 
     for table in soup.find_all("table"):
-        headers, _, _ = get_headers(table)
+        headers, _, _ = header_info(table)
         for category in categories_for(headers):
-            parsed = parse_table(table, category)
+            parsed = parse_table(table, category, roster)
             if parsed and not leaders[category]:
                 leaders[category] = parsed[:5]
 
-    # Never erase a working category because a provider temporarily changes markup.
     for category in CATEGORIES:
         if not leaders[category] and existing.get(category):
             leaders[category] = existing[category]
 
-    available = [category for category in CATEGORIES if leaders[category]]
-    if not available:
-        raise RuntimeError("No usable player-stat tables were found")
+    if not any(leaders.values()):
+        raise RuntimeError("No Montana player-stat categories were found")
 
     stats["leaders"] = leaders
-    stats["leaders_source"] = URL
+    stats["leaders_source"] = STATS_URL
     stats["leaders_updated"] = data.get("updated")
     DATA.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print("Player-stat categories refreshed or safely preserved:", ", ".join(available))
+    print("Montana-only player categories refreshed or safely preserved:", ", ".join(c for c in CATEGORIES if leaders[c]))
 
 
 if __name__ == "__main__":
