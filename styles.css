@@ -4599,3 +4599,38 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .v2-team-links a{padding:12px 20px}
 .v2-team-links .v2-rail-cta{margin:14px 16px 16px}
 @media(max-width:1200px){.v2-home-next-match{margin-left:12px;margin-right:12px}.v2-home-next p{margin-left:12px;margin-right:12px}}
+
+
+/* Surgical header completion — full primary navigation, no overflow menu.
+   Scoped to v2 header only; scoreboard selectors intentionally untouched. */
+@media(min-width:1201px){
+  .v2-topbar{
+    min-height:112px;
+    padding:12px 30px;
+    gap:18px;
+    flex-wrap:nowrap;
+  }
+  .v2-brand{flex:0 0 205px;min-width:205px}
+  .v2-brand img{width:205px}
+  .v2-nav{
+    flex:1 1 auto;
+    min-width:0;
+    justify-content:space-between;
+    gap:0;
+    flex-wrap:nowrap;
+  }
+  .v2-nav a{
+    font-size:12px;
+    letter-spacing:0;
+    padding:13px 8px 12px;
+    border-radius:8px;
+  }
+  .v2-nav a:after{left:8px;right:8px;bottom:4px}
+}
+@media(min-width:1201px) and (max-width:1350px){
+  .v2-topbar{padding-left:22px;padding-right:22px;gap:12px}
+  .v2-brand{flex-basis:190px;min-width:190px}
+  .v2-brand img{width:190px}
+  .v2-nav a{font-size:11px;padding-left:6px;padding-right:6px}
+  .v2-nav a:after{left:6px;right:6px}
+}

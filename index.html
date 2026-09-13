@@ -46,13 +46,8 @@
       <a data-tab-link="stats" href="#stats">Stats</a>
       <a data-tab-link="schedule" href="#big-sky">Big Sky</a>
       <a data-tab-link="media" href="#media">Media</a>
-      <div class="v2-more-menu">
-        <button class="v2-more-trigger" type="button" aria-expanded="false" aria-controls="v2-more-dropdown">More <span aria-hidden="true">⌄</span></button>
-        <div class="v2-more-dropdown" id="v2-more-dropdown" hidden>
-          <a data-tab-link="history" href="#history">History <span aria-hidden="true">›</span></a>
-          <a data-tab-link="officiating" href="#officiating">Officiating <span aria-hidden="true">›</span></a>
-        </div>
-      </div>
+      <a data-tab-link="history" href="#history">History</a>
+      <a data-tab-link="officiating" href="#officiating">Officiating</a>
     </nav>
   </div>
   <div class="v2-scorebar" aria-label="Football scores and upcoming games">
@@ -1170,24 +1165,6 @@ function render(){const q=search.value.trim().toLowerCase();const arr=roster.fil
 function openPlayer(name){const p=roster.find(x=>x.name===name);if(!p)return;const prof=statProfiles[p.name];document.getElementById('roster-modal-number').textContent=`#${p.n}`;document.getElementById('roster-modal-kicker').textContent=`${unit(p.pos).toUpperCase()} · ${p.pos} · ${rosterStatus(p).toUpperCase()}`;document.getElementById('roster-modal-name').textContent=p.name;document.getElementById('roster-modal-meta').textContent=`${p.year} · ${p.ht} · ${p.wt}`;const mp=document.getElementById('roster-modal-photo');const pphoto=photoFor(p);mp.src=pphoto||'';mp.alt=pphoto?`${p.name} official roster photo`:'';mp.style.display=pphoto?'block':'none';mp.onerror=()=>{mp.style.display='none';};document.getElementById('roster-modal-body').innerHTML=`<div><b>Hometown</b><span>${p.home}</span></div><div><b>Previous school</b><span>${p.school}</span></div><div><b>Roster status</b><span>${rosterStatus(p)}${twoDeep.has(p.name)?' · Listed in current two-deep':''}</span></div>${prof?`<div class="stat-feature"><b>2026 SNAPSHOT</b><span>${prof.now}</span></div><div class="stat-feature"><b>2025 / PRIOR PROFILE</b><span>${prof.prior}</span></div><div class="stat-feature wide"><b>GRIZ HQ TAKE</b><span>${prof.note}</span></div>`:''}`;const official=document.getElementById('roster-modal-official');official.href='https://gogriz.com/sports/football/roster';const m=document.getElementById('roster-player-modal');m.classList.add('open');m.setAttribute('aria-hidden','false');document.body.classList.add('roster-modal-open')}
 function close(){const m=document.getElementById('roster-player-modal');m.classList.remove('open');m.setAttribute('aria-hidden','true');document.body.classList.remove('roster-modal-open')}
 document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.roster-filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');active=b.dataset.filter;render()}));search.addEventListener('input',render);document.querySelectorAll('[data-close-roster]').forEach(x=>x.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});document.querySelectorAll('[data-roster-jump]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.roster-section-nav-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');const target=document.getElementById(b.dataset.rosterJump);if(target)target.scrollIntoView({behavior:'smooth',block:'start'});}));renderRosterFeatures();render();
-})();
-</script>
-
-<script>
-(function(){
-  const menu=document.querySelector('.v2-more-menu');
-  const trigger=document.querySelector('.v2-more-trigger');
-  const dropdown=document.getElementById('v2-more-dropdown');
-  if(!menu||!trigger||!dropdown) return;
-  function close(){ dropdown.hidden=true; trigger.setAttribute('aria-expanded','false'); }
-  trigger.addEventListener('click',function(e){
-    e.preventDefault();
-    const open=dropdown.hidden;
-    dropdown.hidden=!open;
-    trigger.setAttribute('aria-expanded',String(open));
-  });
-  document.addEventListener('click',function(e){ if(!menu.contains(e.target)) close(); });
-  dropdown.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
 })();
 </script>
 
