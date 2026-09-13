@@ -4670,9 +4670,11 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   .v2-feature p{font-size:13px}
 }
 
-/* Final score-scroll isolation: arrows scroll cards only; week changes only through selects. */
-.v2-scorebar{display:flex!important;align-items:stretch!important;overflow:hidden!important;min-width:0!important;}
-.v2-score-games{flex:1 1 auto!important;min-width:0!important;width:auto!important;overflow-x:auto!important;overflow-y:hidden!important;display:flex!important;gap:10px!important;scroll-behavior:smooth!important;overscroll-behavior-x:contain!important;touch-action:pan-x!important;}
-.v2-score-prev,.v2-score-next{position:relative!important;z-index:20!important;flex:0 0 42px!important;min-width:42px!important;pointer-events:auto!important;}
+/* Authoritative score-scroll behavior: only the game track scrolls. */
+.v2-scorebar{display:flex!important;align-items:stretch!important;gap:10px!important;overflow:hidden!important;min-width:0!important;}
+.v2-scorebar>.v2-score-filter,.v2-scorebar>.v2-score-prev,.v2-scorebar>.v2-score-next{flex:0 0 auto!important;position:relative!important;left:auto!important;right:auto!important;}
+.v2-score-games{display:flex!important;align-items:stretch!important;flex:1 1 auto!important;width:auto!important;min-width:0!important;max-width:none!important;overflow-x:auto!important;overflow-y:hidden!important;gap:10px!important;scroll-behavior:smooth!important;scrollbar-width:none!important;-ms-overflow-style:none!important;touch-action:pan-x!important;}
+.v2-score-games::-webkit-scrollbar{display:none!important;}
 .v2-score-games>.v2-score-card{flex:0 0 220px!important;min-width:220px!important;}
-@media(max-width:800px){.v2-score-prev,.v2-score-next{flex-basis:36px!important;min-width:36px!important}.v2-score-games>.v2-score-card{flex-basis:195px!important;min-width:195px!important;}}
+.v2-score-prev,.v2-score-next{cursor:pointer!important;pointer-events:auto!important;}
+@media(max-width:800px){.v2-score-games>.v2-score-card{flex-basis:155px!important;min-width:155px!important;}.v2-score-prev,.v2-score-next{flex-basis:36px!important;min-width:36px!important;}}

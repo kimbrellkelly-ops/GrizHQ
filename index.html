@@ -1198,8 +1198,8 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   scroller.addEventListener('mouseleave',function(){if(dragging) dragging=false;});
   const prev=bar.querySelector('.v2-score-prev');
   const next=bar.querySelector('.v2-score-next');
-  if(prev) prev.addEventListener('click',function(){scroller.scrollBy({left:-430,behavior:'smooth'});});
-  if(next) next.addEventListener('click',function(){scroller.scrollBy({left:430,behavior:'smooth'});});
+  if(prev) prev.onclick=function(e){e.preventDefault();e.stopImmediatePropagation();scroller.scrollBy({left:-430,behavior:'smooth'});};
+  if(next) next.onclick=function(e){e.preventDefault();e.stopImmediatePropagation();scroller.scrollBy({left:430,behavior:'smooth'});};
   function updateArrows(){
     if(prev) prev.disabled=scroller.scrollLeft<=2;
     if(next) next.disabled=scroller.scrollLeft+scroller.clientWidth>=scroller.scrollWidth-2;
@@ -1250,45 +1250,6 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   }
   async function load(){const token=++state.request;setLoading();try{const r=await fetch(`data.json?scoreboard=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw new Error('score data request failed');state.data=await r.json();if(token===state.request)render();}catch(e){if(token!==state.request)return;state.data={};games.innerHTML='<div class="v2-score-card v2-score-empty"><strong>Score data unavailable</strong><small>Refresh the page or open ESPN below</small></div>';const a=games.firstElementChild;a?.addEventListener('click',()=>{});}}
   state.index=currentIndex();week.value=String(state.index);if(group)group.addEventListener('change',()=>{state.group=group.value;load();});week.addEventListener('change',()=>{state.index=Math.max(0,Math.min(WEEKS.length-1,Number(week.value)||0));load();});load();
-})();
-</script>
-
-<script id="griz-score-scroll-final-controller">
-(function(){
-  'use strict';
-  function init(){
-    const bar=document.querySelector('.v2-scorebar');
-    const scroller=document.getElementById('score-games');
-    if(!bar||!scroller||bar.dataset.finalScrollController==='1') return;
-    bar.dataset.finalScrollController='1';
-    const replace=(selector,direction)=>{
-      const old=bar.querySelector(selector);
-      if(!old)return null;
-      const fresh=old.cloneNode(true);
-      fresh.removeAttribute('disabled');
-      old.replaceWith(fresh);
-      fresh.addEventListener('click',function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-        const amount=Math.max(240,Math.floor(scroller.clientWidth*.8));
-        scroller.scrollBy({left:direction*amount,behavior:'smooth'});
-      },true);
-      return fresh;
-    };
-    const prev=replace('.v2-score-prev',-1);
-    const next=replace('.v2-score-next',1);
-    function update(){
-      if(prev)prev.disabled=scroller.scrollLeft<=2;
-      if(next)next.disabled=scroller.scrollLeft+scroller.clientWidth>=scroller.scrollWidth-2;
-    }
-    scroller.addEventListener('scroll',update,{passive:true});
-    window.addEventListener('resize',update,{passive:true});
-    update();
-  }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});
-  else init();
-  window.addEventListener('load',init,{once:true});
 })();
 </script>
 </body>
