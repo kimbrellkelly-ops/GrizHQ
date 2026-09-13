@@ -9,7 +9,7 @@
 <link href="styles.css?v=20260906-news3" rel="stylesheet"/>
 <script defer src="app.js?v=20260912-scorestrip-live-ranks-clock1"></script>
 <script defer="" src="rankings-team-logos.js"></script>
-<script defer src="score-scroll.js"></script>
+<script defer src="score-scroll.js?v=20260913-single-controller"></script>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
@@ -1168,6 +1168,7 @@ function close(){const m=document.getElementById('roster-player-modal');m.classL
 document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.roster-filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');active=b.dataset.filter;render()}));search.addEventListener('input',render);document.querySelectorAll('[data-close-roster]').forEach(x=>x.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});document.querySelectorAll('[data-roster-jump]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.roster-section-nav-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');const target=document.getElementById(b.dataset.rosterJump);if(target)target.scrollIntoView({behavior:'smooth',block:'start'});}));renderRosterFeatures();render();
 })();
 </script>
+
 
 
 </body>
