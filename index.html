@@ -53,7 +53,7 @@
   <div class="v2-scorebar" aria-label="Football scores and upcoming games">
     <button class="v2-score-prev" type="button" aria-label="Previous scores">‹</button>
     <label class="v2-score-filter v2-score-select"> <span class="sr-only">Scoreboard group</span><select id="score-group-select" aria-label="Scoreboard group"><option value="fcs">Top 25 FCS</option><option value="bigsky">Big Sky</option></select></label>
-    <label class="v2-score-filter v2-score-select"> <span class="sr-only">Scoreboard week</span><select id="score-week-select" aria-label="Scoreboard week"><option value="0">Week 0</option><option value="1">Week 1</option><option value="2">Week 2</option><option value="3">Week 3</option><option value="4">Week 4</option><option value="5">Week 5</option><option value="6">Week 6</option><option value="7">Week 7</option><option value="8">Week 8</option><option value="9">Week 9</option><option value="10">Week 10</option><option value="11">Week 11</option><option value="12">Week 12</option></select></label>
+    <label class="v2-score-filter v2-score-select"> <span class="sr-only">Scoreboard week</span><select id="score-week-select" aria-label="Scoreboard week"><option value="1">Week 1</option><option value="2">Week 2</option><option value="3">Week 3</option><option value="4">Week 4</option><option value="5">Week 5</option><option value="6">Week 6</option><option value="7">Week 7</option><option value="8">Week 8</option><option value="9">Week 9</option><option value="10">Week 10</option><option value="11">Week 11</option><option value="12">Week 12</option><option value="13">Week 13</option><option value="14">Week 14</option><option value="15">Week 15</option></select></label>
     <div class="v2-score-games" id="score-games" aria-live="polite"></div>
     <button class="v2-score-next" type="button" aria-label="More scores">›</button>
   </div>
@@ -1220,8 +1220,8 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
     ['2026-08-27','2026-08-30'],['2026-09-03','2026-09-06'],['2026-09-10','2026-09-13'],['2026-09-17','2026-09-20'],['2026-09-24','2026-09-27'],['2026-10-01','2026-10-04'],['2026-10-08','2026-10-11'],['2026-10-15','2026-10-18'],['2026-10-22','2026-10-25'],['2026-10-29','2026-11-01'],['2026-11-05','2026-11-08'],['2026-11-12','2026-11-15'],['2026-11-19','2026-11-22']
   ];
   const espnWeek=(w,g)=>g==='bigsky'
-    ? `https://www.espn.com/college-football/scoreboard/_/week/${Number(w)+1}/year/2026/seasontype/2/group/20`
-    : `https://www.espn.com/college-football/scoreboard/_/week/${Number(w)+1}/year/2026/seasontype/2`;
+    ? `https://www.espn.com/college-football/scoreboard/_/week/${w}/year/2026/seasontype/2/group/20`
+    : `https://www.espn.com/college-football/scoreboard/_/week/${w}/year/2026/seasontype/2`;
   const clean=s=>String(s||'').replace(/\s*\([^)]*\)\s*$/,'').replace(/\s+/g,' ').trim();
   const norm=s=>clean(s).toLowerCase().replace(/[^a-z0-9]/g,'');
   const aliases={montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanastatebobcats'],idaho:['idaho','idahovandals'],weberstate:['weberstate','weberstatewildcats'],easternwashington:['easternwashington','easternwashingtoneagles'],northernarizona:['northernarizona','northernarizonalumberjacks'],northerncolorado:['northerncolorado','northerncoloradobears'],idahostate:['idahostate','idahostatebengals'],calpoly:['calpoly','calpolytechnic','calpolymustangs'],southernutah:['southernutah','southernutahthunderbirds'],utahtech:['utahtech','utahtechtrailblazers'],ucdavis:['ucdavis','ucdavisaggies'],portlandstate:['portlandstate','portlandstatevikings']};
@@ -1311,7 +1311,7 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   const today=new Date();
   const todayKey=`${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
   const currentIndex=weeks.findIndex(([start,end])=>todayKey>=start&&todayKey<=end);
-  if(currentIndex>=0) week.value=String(currentIndex);
+  if(currentIndex>=0) week.value=String(currentIndex+1);
   group.addEventListener('change',render);week.addEventListener('change',render);render();
 })();
 </script>
