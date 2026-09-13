@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 
 DATA = Path('data.json')
 URL = 'https://gogriz.com/sports/football/stats/2026'
+ROSTER_URL = 'https://gogriz.com/sports/football/roster/2026'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (compatible; GrizHQ/1.0; +https://grizhq.com)'}
 CATEGORIES = ('passing', 'rushing', 'receiving', 'tackles', 'pressure', 'special')
 BAD_NAMES = {'player', 'players', 'total', 'totals', 'team', 'team totals', 'opponents', 'opponent', 'montana'}
@@ -17,6 +18,11 @@ def clean(value):
 
 def norm(value):
     return re.sub(r'[^A-Z0-9%]+', ' ', clean(value).upper()).strip()
+
+
+def name_key(value):
+    words = re.findall(r'[A-Z0-9]+', norm(value))
+    return ' '.join(sorted(words))
 
 
 def first_index(headers, *names):
@@ -31,18 +37,12 @@ def table_info(table):
     rows = table.find_all('tr')
     candidates = []
     for row in rows[:10]:
-        cells = row.find_all(['th', 'td'])
-        vals = [norm(cell.get_text(' ', strip=True)) for cell in cells]
+        vals = [norm(cell.get_text(' ', strip=True)) for cell in row.find_all(['th', 'td'])]
         if vals:
             candidates.append(vals)
-    # Prefer the row containing known column labels. Never use a player data row
-    # as the header merely because it has the most cells.
-    header_tokens = {'PLAYER', 'NAME', 'GP', 'ATT', 'YDS', 'REC', 'SOLO', 'PUNTS', 'FGM'}
-    matching = [row for row in candidates if len(set(row) & header_tokens) >= 2]
-    headers = max(matching, key=len, default=[])
-    if not headers:
-        headers = candidates[0] if candidates else []
-    return headers, rows
+    tokens = {'PLAYER', 'NAME', 'GP', 'ATT', 'YDS', 'REC', 'SOLO', 'PUNTS', 'FGM'}
+    matching = [row for row in candidates if len(set(row) & tokens) >= 2]
+    return max(matching, key=len, default=(candidates[0] if candidates else [])), rows
 
 
 def categories_for(table):
@@ -65,17 +65,16 @@ def categories_for(table):
 
 def player_index(headers, cells):
     index = first_index(headers, 'PLAYER', 'NAME')
-    if index is not None:
+    if index is not None and index < len(cells):
         return index
-    # GoGriz tables often begin with jersey number and put the player in cell 2.
     for i, cell in enumerate(cells[:4]):
         value = clean(cell)
-        if re.search(r'[A-Za-z]', value) and (',' in value or len(value.split()) >= 2) and not value.isdigit():
+        if re.search('[A-Za-z]', value) and (',' in value or len(value.split()) >= 2) and not value.isdigit():
             return i
     return None
 
 
-def parse_table(table, category):
+def parse_table(table, category, roster_keys):
     headers, rows = table_info(table)
     if len(headers) < 3:
         return []
@@ -84,19 +83,22 @@ def parse_table(table, category):
         cells = [clean(c.get_text(' ', strip=True)) for c in tr.find_all(['td', 'th'])]
         if len(cells) < 3:
             continue
-        name_index = player_index(headers, cells)
-        if name_index is None or name_index >= len(cells):
+        index = player_index(headers, cells)
+        if index is None or index >= len(cells):
             continue
-        player = clean(cells[name_index])
+        player = clean(cells[index])
+        key = name_key(player)
         if not re.search('[A-Za-z]', player) or player.lower() in BAD_NAMES or len(player.split()) < 2:
             continue
-        # Exclude team summary/opponent rows and rows whose apparent name is a number.
-        if player.lower().startswith(('total ', 'opponent')) or player.isdigit():
+        if player.isdigit() or player.lower().startswith(('total ', 'opponent')):
+            continue
+        # Critical guard: never publish opponent/team rows or names not on Montana's roster.
+        if roster_keys and key not in roster_keys:
             continue
 
         def value(*names):
-            index = first_index(headers, *names)
-            return cells[index] if index is not None and index < len(cells) else ''
+            i = first_index(headers, *names)
+            return cells[i] if i is not None and i < len(cells) else ''
 
         if category == 'passing':
             line = f'{value("CMP", "COMP") or "0"} CMP • {value("YDS", "YARD") or "0"} YDS • {value("TD") or "0"} TD • {value("INT") or "0"} INT'
@@ -129,26 +131,46 @@ def parse_table(table, category):
     return result
 
 
-def main():
-    response = requests.get(URL, headers=HEADERS, timeout=45)
+def fetch(url):
+    response = requests.get(url, headers=HEADERS, timeout=45)
     response.raise_for_status()
-    soup = BeautifulSoup(response.text, 'html.parser')
+    return BeautifulSoup(response.text, 'html.parser')
+
+
+def roster_keys_from(soup):
+    keys = set()
+    for text in soup.stripped_strings:
+        value = clean(text)
+        if ',' in value and len(value.split()) >= 2:
+            keys.add(name_key(value))
+        elif len(value.split()) >= 2 and re.search(r'[A-Za-z]', value):
+            # Roster names are commonly rendered as "First Last".
+            if not any(token in value.lower() for token in ('roster', 'coaches', 'height', 'weight', 'year', 'position')):
+                keys.add(name_key(value))
+    return keys
+
+
+def main():
+    data = json.loads(DATA.read_text(encoding='utf-8'))
+    stats = data.setdefault('stats', {})
+    stats_soup = fetch(URL)
+    roster_keys = roster_keys_from(fetch(ROSTER_URL))
     leaders = {key: [] for key in CATEGORIES}
-    for table in soup.find_all('table'):
+    for table in stats_soup.find_all('table'):
         for category in categories_for(table):
-            parsed = parse_table(table, category)
+            parsed = parse_table(table, category, roster_keys)
             if parsed and not leaders[category]:
                 leaders[category] = parsed
 
     missing = [key for key in CATEGORIES if not leaders[key]]
     if missing:
-        raise RuntimeError('Official player-stat categories missing: ' + ', '.join(missing))
+        raise RuntimeError('Official player-stat categories missing after roster validation: ' + ', '.join(missing))
 
-    stats = json.loads(DATA.read_text(encoding='utf-8')).setdefault('stats', {})
     stats['leaders'] = {key: values[:5] for key, values in leaders.items()}
     stats['leaders_source'] = URL
-    DATA.write_text(json.dumps(json.loads(DATA.read_text(encoding='utf-8')), indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
-    print('Official player-stat categories refreshed:', ', '.join(CATEGORIES))
+    stats['leaders_updated'] = data.get('updated')
+    DATA.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+    print('Official player-stat categories refreshed and roster-validated:', ', '.join(CATEGORIES))
 
 
 if __name__ == '__main__':
