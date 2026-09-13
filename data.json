@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T03:08:29.538221+00:00",
+  "updated": "2026-09-13T03:23:56.701560+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-13T03:09:07.554174+00:00"
+    "checked_at": "2026-09-13T03:24:33.736456+00:00"
   },
   "resources": [
     {
@@ -7807,7 +7807,7 @@
             "short": "South Carolina",
             "abbrev": "SC",
             "homeAway": "home",
-            "score": "38"
+            "score": "45"
           },
           {
             "id": "119",
@@ -7820,7 +7820,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:28 - 4th",
+        "detail": "1:55 - 4th",
         "broadcasts": [
           "SECN+"
         ]
@@ -7836,7 +7836,7 @@
             "short": "Alcorn St",
             "abbrev": "ALCN",
             "homeAway": "home",
-            "score": "38"
+            "score": "53"
           },
           {
             "id": "2029",
@@ -7849,37 +7849,8 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "OT",
+        "detail": "2OT",
         "broadcasts": []
-      },
-      {
-        "id": "401868008",
-        "date": "2026-09-12T23:30Z",
-        "name": "Fordham Rams at Coastal Carolina Chanticleers",
-        "teams": [
-          {
-            "id": "324",
-            "name": "Coastal Carolina Chanticleers",
-            "short": "Coastal",
-            "abbrev": "CCU",
-            "homeAway": "home",
-            "score": "45"
-          },
-          {
-            "id": "2230",
-            "name": "Fordham Rams",
-            "short": "Fordham",
-            "abbrev": "FOR",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
       },
       {
         "id": "401868236",
@@ -7900,12 +7871,12 @@
             "short": "Tarleton St",
             "abbrev": "TAR",
             "homeAway": "away",
-            "score": "24"
+            "score": "27"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "3:48 - 4th",
+        "detail": "End of 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7921,7 +7892,7 @@
             "short": "TCU",
             "abbrev": "TCU",
             "homeAway": "home",
-            "score": "56"
+            "score": "63"
           },
           {
             "id": "2755",
@@ -7934,7 +7905,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:57 - 4th",
+        "detail": "1:21 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7961,9 +7932,9 @@
             "score": "26"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "3:30 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7979,7 +7950,7 @@
             "short": "Baylor",
             "abbrev": "BAY",
             "homeAway": "home",
-            "score": "41"
+            "score": "44"
           },
           {
             "id": "2504",
@@ -7992,7 +7963,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:35 - 4th",
+        "detail": "7:00 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8008,7 +7979,7 @@
             "short": "San José St",
             "abbrev": "SJSU",
             "homeAway": "home",
-            "score": "19"
+            "score": "20"
           },
           {
             "id": "13",
@@ -8016,12 +7987,12 @@
             "short": "Cal Poly",
             "abbrev": "CP",
             "homeAway": "away",
-            "score": "13"
+            "score": "20"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:29 - 3rd",
+        "detail": "5:56 - 4th",
         "broadcasts": [
           "MW+"
         ]
@@ -8037,7 +8008,7 @@
             "short": "UTEP",
             "abbrev": "UTEP",
             "homeAway": "home",
-            "score": "21"
+            "score": "35"
           },
           {
             "id": "2640",
@@ -8050,7 +8021,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:06 - 3rd",
+        "detail": "10:09 - 3rd",
         "broadcasts": [
           "MW+"
         ]
@@ -8074,12 +8045,12 @@
             "short": "North Dakota",
             "abbrev": "UND",
             "homeAway": "away",
-            "score": "17"
+            "score": "24"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "4:14 - 2nd",
+        "detail": "1:46 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8103,12 +8074,12 @@
             "short": "Montana St",
             "abbrev": "MTST",
             "homeAway": "away",
-            "score": "7"
+            "score": "10"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:11 - 1st",
+        "detail": "End of 1st",
         "broadcasts": [
           "CW"
         ]
@@ -10047,6 +10018,35 @@
         "detail": "Final",
         "broadcasts": [
           "BTN"
+        ]
+      },
+      {
+        "id": "401868008",
+        "date": "2026-09-12T23:30Z",
+        "name": "Fordham Rams at Coastal Carolina Chanticleers",
+        "teams": [
+          {
+            "id": "324",
+            "name": "Coastal Carolina Chanticleers",
+            "short": "Coastal",
+            "abbrev": "CCU",
+            "homeAway": "home",
+            "score": "45"
+          },
+          {
+            "id": "2230",
+            "name": "Fordham Rams",
+            "short": "Fordham",
+            "abbrev": "FOR",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
         ]
       },
       {
@@ -27502,9 +27502,10 @@
     ]
   },
   "latest_press_conference": {
-    "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker",
-    "date": "September 5, 2026",
-    "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/"
+    "title": "WATCH – Griz press conference – Bobby Kennedy, Tanner Williams, Keali’i Ah Yat after Utah Tech win",
+    "date": "Sun, 13 Sep 2026 00:10:26 +0000",
+    "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-tanner-williams-kealii-ah-yat-after-utah-tech-win/",
+    "youtube_id": "kUA6VfnmPKI"
   },
-  "fcs_scores_updated": "2026-09-13T03:09:39.917321+00:00"
+  "fcs_scores_updated": "2026-09-13T03:24:36.275485+00:00"
 }
