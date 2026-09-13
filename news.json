@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-13T01:22:09.208726+00:00",
+  "updated": "2026-09-13T01:36:09.721037+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 73,
+  "story_count": 74,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -29,6 +29,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/12/20260912_fbvsutahtech_132.jpg"
+    },
+    {
+      "title": "WATCH – Griz press conference – Bobby Kennedy, Tanner Williams, Keali’i Ah Yat after Utah Tech win",
+      "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-tanner-williams-kealii-ah-yat-after-utah-tech-win/",
+      "date": "Sep. 13, 2026",
+      "published_at": "2026-09-13T00:10:26+00:00",
+      "description": "September 12, 2026 WATCH – Griz press conference – Bobby Kennedy, Tanner Williams, Keali’i Ah Yat after Utah Tech win",
+      "source": "Skyline Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2025/12/Kealii-Ah-Yat-throws-from-a-clean-pcket-2.jpeg",
+      "is_video": true,
+      "youtube_id": "kUA6VfnmPKI",
+      "video_url": "https://www.youtube.com/watch?v=kUA6VfnmPKI",
+      "video_thumbnail": "https://i.ytimg.com/vi/kUA6VfnmPKI/hqdefault.jpg"
     },
     {
       "title": "Montana vs. Utah Tech football 34.JPG",
