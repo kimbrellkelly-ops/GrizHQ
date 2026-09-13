@@ -14,36 +14,34 @@ def clean(value):
     return re.sub(r"\s+", " ", value or "").strip()
 
 
-def number(value):
-    return clean(value).replace(",", "")
-
-
 def parse():
     response = requests.get(URL, headers=HEADERS, timeout=30)
     response.raise_for_status()
     soup = BeautifulSoup(response.text, "html.parser")
     leaders = {"passing": [], "rushing": [], "receiving": [], "tackles": [], "pressure": [], "special": []}
 
-    # SIDEARM pages expose the active category tables in HTML. We identify each
-    # table by its column headings and preserve the first four Montana players.
     for table in soup.find_all("table"):
         headers = [clean(x.get_text(" ", strip=True)).lower() for x in table.find_all("th")]
         if not headers:
             continue
         text = " ".join(headers)
         category = None
-        if "passing yards" in text or ("comp" in text and "att" in text and "int" in text and "rating" in text):
+
+        # Sidearm has changed the exact header labels over time. Use broad,
+        # column-based detection instead of relying on one page wording.
+        if (("cmp" in text or "comp" in text or "completion" in text) and "att" in text) or "passing yards" in text:
             category = "passing"
-        elif "rushing yards" in text or ("gain" in text and "loss" in text and "att" in text and "net" in text):
+        elif "rushing yards" in text or all(x in text for x in ("att", "gain", "loss")) or all(x in text for x in ("att", "net", "td")):
             category = "rushing"
-        elif "receiving yards" in text or ("rec" in text and "long" in text and "yds" in text):
+        elif "receiving yards" in text or ("rec" in text and ("long" in text or "yds" in text)):
             category = "receiving"
-        elif "tackles" in text or ("solo" in text and "assist" in text):
+        elif ("solo" in text and ("ast" in text or "assist" in text)) or "tackles" in text or "tot" in text and "solo" in text:
             category = "tackles"
-        elif "sacks" in text or "tfl" in text or "forced fumbles" in text:
+        elif "sacks" in text or "tfl" in text or "forced fumbles" in text or "interceptions" in text and "passes defended" in text:
             category = "pressure"
-        elif "punts" in text or "field goals" in text or "kicking" in text:
+        elif ("punts" in text or "punting" in text or "field goals" in text or "fgm" in text or "fga" in text or "kicking" in text):
             category = "special"
+
         if not category:
             continue
 
@@ -54,9 +52,7 @@ def parse():
                 continue
             player_cell = cells[1] if len(cells) > 1 else cells[0]
             player = clean(player_cell.get_text(" ", strip=True))
-            if not player or player.lower() in {"player", "total", "opponents"}:
-                continue
-            if not re.search(r"[A-Za-z]", player):
+            if not player or player.lower() in {"player", "total", "opponents"} or not re.search(r"[A-Za-z]", player):
                 continue
             values = [clean(c.get_text(" ", strip=True)) for c in cells[2:]]
             rows.append((player, values))
@@ -74,8 +70,6 @@ def main():
     data = json.loads(DATA.read_text(encoding="utf-8"))
     stats = data.setdefault("stats", {})
     leaders = parse()
-    # Only replace categories that were successfully parsed; never blank an
-    # existing category because the athletics site temporarily hid a tab.
     old = stats.setdefault("leaders", {})
     for key, value in leaders.items():
         if value:
