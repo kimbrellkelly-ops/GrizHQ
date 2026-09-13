@@ -209,54 +209,12 @@ async function loadHomepageNews() {
   }
 }
 
-function getDynamicNextGame(data) {
-  const schedule = Array.isArray(data.schedule) ? data.schedule : [];
-  const monthIndex = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
-  const now = new Date();
-  const upcoming = schedule.map((game, index) => {
-    const match = String(game.date || '').match(/^([A-Za-z]{3})\s+(\d{1,2})/);
-    const date = match ? new Date(now.getFullYear(), monthIndex[match[1]], Number(match[2]), 23, 59, 59) : null;
-    return {...game, _date: date, _index: index};
-  }).filter(game => game._date && game._date >= new Date(now.getFullYear(), now.getMonth(), now.getDate()) && !String(game.result || '').trim());
-  const next = upcoming.sort((a,b) => a._date - b._date || a._index - b._index)[0];
-  return next ? {...next, date: next.date, time: next.time, venue: next.location === 'Away' ? 'Away' : 'Washington-Grizzly Stadium'} : (data.next_game || {});
-}
-
-function getAuthoritativeNextGame(data) {
-  const schedule = Array.isArray(data?.schedule) ? data.schedule : [];
-  const unfinished = schedule.find(game => !String(game?.result || '').trim());
-  if (unfinished) {
-    return { ...unfinished, venue: unfinished.location === 'Away' ? 'Away' : 'Washington-Grizzly Stadium', url: unfinished.url || data?.next_game?.url || '' };
-  }
-  return data?.next_game || {};
-}
-
-function refreshNextGameText(next) {
-  const opponent = String(next?.opponent || 'Opponent');
-  const upper = opponent.toUpperCase();
-  const replacements = [
-    ['UTAH TECH', upper], ['Utah Tech', opponent], ['utahtechtrailblazers.com', '']
-  ];
-  document.querySelectorAll('body *').forEach(el => {
-    if (el.children.length === 0 && el.textContent) {
-      let text = el.textContent;
-      replacements.forEach(([from,to]) => { if (to) text = text.split(from).join(to); });
-      if (text !== el.textContent) el.textContent = text;
-    }
-  });
-  document.querySelectorAll('a[href*="utahtechtrailblazers.com"], a[href*="game-center/6483"]').forEach(a => {
-    if (a.href.includes('game-center/6483')) a.href = next.url || a.href;
-    else if (opponent === 'Oregon State') a.href = 'https://osubeavers.com/sports/football';
-  });
-}
-
 async function loadGrizData() {
   try {
     const res = await fetch("data.json?ts=" + Date.now(), {cache: "no-store"});
     const d = await res.json();
 
-    const next = getDynamicNextGame(d);
-    d.next_game = next;
+    const next = d.next_game || {};
     const dateEl = document.getElementById("next-game-date");
     const venueEl = document.getElementById("next-game-venue");
     const oppEl = document.getElementById("next-opponent-name");
@@ -1318,7 +1276,7 @@ async function renderBigSkyAndOpponent(){
       table.innerHTML = '<div class="bigsky-empty"><b>Schedule data unavailable.</b><span>Try refreshing the page.</span></div>';
     }
 
-    const opponent = getAuthoritativeNextGame(d)?.opponent || "Drake";
+    const opponent = d.next_game?.opponent || "Drake";
 
     // Keep the Game Center focused on Montana's NEXT game, not the game just played.
     const gameCenterTitle = document.getElementById("game-center-title");
@@ -1327,9 +1285,9 @@ async function renderBigSkyAndOpponent(){
       gameCenterTitle.textContent = `${opponent} at Montana`;
     }
     if (gameCenterMeta) {
-      const nextDate = next?.date || "";
-      const nextTime = next?.time || "";
-      const nextVenue = String(next?.venue || "Washington-Grizzly Stadium").split(",")[0];
+      const nextDate = d.next_game?.date || "";
+      const nextTime = d.next_game?.time || "";
+      const nextVenue = String(d.next_game?.venue || "Washington-Grizzly Stadium").split(",")[0];
       gameCenterMeta.textContent = [nextDate, nextTime, nextVenue].filter(Boolean).join(" • ");
     }
 
@@ -1348,9 +1306,9 @@ async function renderBigSkyAndOpponent(){
     };
     if (nextLogo && nextLogos[opponent]) { nextLogo.src = nextLogos[opponent]; nextLogo.alt = `${opponent} logo`; }
     const nextDateEl=document.getElementById("next-game-date"), nextTimeEl=document.getElementById("next-game-time"), nextVenueEl=document.getElementById("next-game-venue");
-    if(nextDateEl && next?.date) nextDateEl.textContent=String(d.next_game.date).toUpperCase();
-    if(nextTimeEl && next?.time) nextTimeEl.textContent=String(d.next_game.time).toUpperCase();
-    if(nextVenueEl && next?.venue) nextVenueEl.textContent=String(d.next_game.venue).split(",")[0].toUpperCase();
+    if(nextDateEl && d.next_game?.date) nextDateEl.textContent=String(d.next_game.date).toUpperCase();
+    if(nextTimeEl && d.next_game?.time) nextTimeEl.textContent=String(d.next_game.time).toUpperCase();
+    if(nextVenueEl && d.next_game?.venue) nextVenueEl.textContent=String(d.next_game.venue).split(",")[0].toUpperCase();
 
     const resources = d.opponent_resources?.[opponent];
     if (resources) {
@@ -1840,4 +1798,107 @@ loadGrizData();
   }
 }, 60 * 1000);
 
-setInterval(() => { loadGrizData(); }, 60000);
+
+/* AUTHORITATIVE NEXT-GAME CONTROLLER
+   Every Next Game / Next Up / Game Center surface is driven from the first
+   Montana schedule entry that does not have a final result. */
+(function installAuthoritativeNextGameController(){
+  const NEXT_GAME_LOGOS = {
+    "Southern Utah":"https://a.espncdn.com/i/teamlogos/ncaa/500/253.png",
+    "Drake":"https://a.espncdn.com/i/teamlogos/ncaa/500/2181.png",
+    "Utah Tech":"https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png",
+    "Oregon State":"https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
+    "UC Davis":"https://a.espncdn.com/i/teamlogos/ncaa/500/302.png",
+    "Northern Colorado":"https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png",
+    "Northern Arizona":"https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png",
+    "Idaho":"https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
+    "Eastern Washington":"https://a.espncdn.com/i/teamlogos/ncaa/500/331.png",
+    "Portland State":"https://a.espncdn.com/i/teamlogos/ncaa/500/279.png",
+    "Idaho State":"https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
+    "Montana State":"https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
+  };
+  const NEXT_GAME_VENUES = {
+    "Oregon State":"Reser Stadium, Corvallis, Ore.",
+    "UC Davis":"UC Davis Health Stadium, Davis, Calif.",
+    "Northern Arizona":"J. Lawrence Walkup Skydome, Flagstaff, Ariz.",
+    "Eastern Washington":"Roos Field, Cheney, Wash.",
+    "Montana State":"Bobcat Stadium, Bozeman, Mont."
+  };
+  const NEXT_GAME_RESOURCES = {
+    "Oregon State":{
+      official:"https://osubeavers.com/sports/football",
+      roster:"https://osubeavers.com/sports/football/roster",
+      news:"https://osubeavers.com/news?path=football",
+      stats:"https://osubeavers.com/sports/football/stats/2026",
+      schedule:"https://osubeavers.com/sports/football/schedule/2026",
+      coaches:"https://osubeavers.com/sports/football/coaches"
+    }
+  };
+  function finished(game){ return !!String(game && game.result || '').trim(); }
+  function chooseNext(data){
+    const schedule=Array.isArray(data && data.schedule) ? data.schedule : [];
+    return schedule.find(g=>g && g.opponent && !finished(g)) || data.next_game || {};
+  }
+  function text(el,value){ if(el && value!=null) el.textContent=String(value); }
+  function attr(el,name,value){ if(el && value) el.setAttribute(name,value); }
+  function replaceWithin(scope, from, to){
+    if(!scope || !from || !to || from===to) return;
+    const walker=document.createTreeWalker(scope, NodeFilter.SHOW_TEXT);
+    const nodes=[]; let n; while(n=walker.nextNode()) nodes.push(n);
+    nodes.forEach(node=>{ if(node.nodeValue && node.nodeValue.includes(from)) node.nodeValue=node.nodeValue.split(from).join(to); });
+  }
+  function renderAuthoritativeNextGame(data){
+    const game=chooseNext(data); if(!game || !game.opponent) return;
+    const opponent=String(game.opponent);
+    const location=String(game.location || game.venue || '').toLowerCase();
+    const away=location.includes('away') || location.includes('at ');
+    const venue=NEXT_GAME_VENUES[opponent] || (game.venue && game.venue!=='Away' ? game.venue : (away ? `Away at ${opponent}` : 'Washington-Grizzly Stadium, Missoula, Mont.'));
+    const logo=NEXT_GAME_LOGOS[opponent] || '';
+    const resources=NEXT_GAME_RESOURCES[opponent] || {};
+    const date=String(game.date || '').toUpperCase();
+    const time=String(game.time || '').toUpperCase();
+    const opponentUpper=opponent.toUpperCase();
+    const nextSection=document.getElementById('next-up');
+    const oldNames=['UTAH TECH','Utah Tech','UT'];
+    if(nextSection){
+      oldNames.forEach(old=>replaceWithin(nextSection,old,old==='UT'?'OSU':opponentUpper));
+      const h=nextSection.querySelector('.ghq-nu-hero h1 span'); text(h,opponentUpper);
+      const pill=nextSection.querySelector('.ghq-nu-game-pill');
+      if(pill){ text(pill.querySelector('b'),date); text(pill.querySelector('span'),time); text(pill.querySelector('small'),String(venue).split(',')[0].toUpperCase()); }
+      const oppTeam=nextSection.querySelector('.ghq-nu-team.is-opponent');
+      if(oppTeam){ text(oppTeam.querySelector('h2'),opponentUpper); text(oppTeam.querySelector('p'),game.opponent_record || 'UPCOMING'); const img=oppTeam.querySelector('img'); attr(img,'src',logo); attr(img,'alt',`${opponent} logo`); }
+      nextSection.querySelectorAll('a[href]').forEach(a=>{
+        const label=(a.textContent||'').toLowerCase();
+        if(resources.official && (label.includes('football') || label.includes('official'))) a.href=resources.official;
+        if(resources.roster && label.includes('roster')) a.href=resources.roster;
+        if(resources.news && label.includes('news')) a.href=resources.news;
+        if(resources.stats && label.includes('stats')) a.href=resources.stats;
+        if(resources.schedule && label.includes('schedule')) a.href=resources.schedule;
+        if(resources.coaches && label.includes('coach')) a.href=resources.coaches;
+      });
+      nextSection.dataset.nextOpponent=opponent;
+    }
+    text(document.getElementById('next-opponent-name'),opponentUpper);
+    text(document.getElementById('next-game-date'),date);
+    text(document.getElementById('next-game-time'),time);
+    text(document.getElementById('next-game-venue'),String(venue).split(',')[0].toUpperCase());
+    const mainLogo=document.getElementById('next-opponent-logo'); attr(mainLogo,'src',logo); attr(mainLogo,'alt',`${opponent} logo`);
+    text(document.getElementById('game-center-title'),away ? `Montana at ${opponent}` : `Montana vs. ${opponent}`);
+    text(document.getElementById('game-center-meta'),[game.date,game.time,venue].filter(Boolean).join(' • '));
+    const homeNext=document.querySelector('.v2-home-next');
+    if(homeNext){
+      const cols=homeNext.querySelectorAll('.v2-home-next-match > div');
+      if(cols[1]) text(cols[1].querySelector('b'),`${game.date || ''}\n${game.time || ''}`);
+      if(cols[2]){ text(cols[2].querySelector('strong'),opponent==='Oregon State'?'OSU':opponentUpper); text(cols[2].querySelector('small'),`${opponentUpper}\n${game.opponent_record || 'UPCOMING'}`); }
+      text(homeNext.querySelector('p'),venue);
+    }
+    const feature=document.querySelector('.v2-feature-overlay h1');
+    if(feature) text(feature,`Montana ${away?'travels to':'hosts'} ${opponent}`);
+  }
+  async function refreshAuthoritativeNextGame(){
+    try{ const r=await fetch('data.json?next-game-controller='+Date.now(),{cache:'no-store'}); if(!r.ok) return; renderAuthoritativeNextGame(await r.json()); }
+    catch(e){ console.warn('Authoritative next-game refresh failed',e); }
+  }
+  refreshAuthoritativeNextGame();
+  setInterval(refreshAuthoritativeNextGame,60000);
+})();
