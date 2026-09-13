@@ -1216,14 +1216,6 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   const week=document.getElementById('score-week-select');
   const bar=document.querySelector('.v2-scorebar');
   if(!games||!group||!week)return;
-  // The top score scroll owns this selector. Rebuild it once so no stale or
-  // previously injected option can create a duplicate Week 0.
-  week.replaceChildren(...Array.from({length:15},(_,i)=>{
-    const option=document.createElement('option');
-    option.value=String(i);
-    option.textContent='Week '+i;
-    return option;
-  }));
   const weeks=[
     ['2026-08-27','2026-08-30'],['2026-09-03','2026-09-06'],['2026-09-10','2026-09-13'],['2026-09-17','2026-09-20'],['2026-09-24','2026-09-27'],['2026-10-01','2026-10-04'],['2026-10-08','2026-10-11'],['2026-10-15','2026-10-18'],['2026-10-22','2026-10-25'],['2026-10-29','2026-11-01'],['2026-11-05','2026-11-08'],['2026-11-12','2026-11-15'],['2026-11-19','2026-11-22'],['2026-11-26','2026-11-29'],['2026-12-03','2026-12-06']
   ];
@@ -1323,89 +1315,5 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   group.addEventListener('change',render);week.addEventListener('change',render);render();
 })();
 </script>
-
-<script id="final-scoreboard-scroll-repair">
-(function(){
-  function wire(){
-    const games=document.getElementById('score-games');
-    const bar=document.querySelector('.v2-scorebar');
-    if(!games||!bar||games.dataset.finalScroll==='1') return;
-    games.dataset.finalScroll='1';
-    const prev=bar.querySelector('.v2-score-prev');
-    const next=bar.querySelector('.v2-score-next');
-    const amount=()=>Math.max(260,Math.floor(games.clientWidth*.8));
-    function move(n){games.scrollBy({left:n,behavior:'smooth'});}
-    prev?.addEventListener('click',()=>move(-amount()),true);
-    next?.addEventListener('click',()=>move(amount()),true);
-    games.addEventListener('wheel',e=>{
-      if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){e.preventDefault();games.scrollLeft+=e.deltaY;}
-    },{passive:false});
-    let down=false,x=0,left=0;
-    games.addEventListener('pointerdown',e=>{if(e.target.closest('a'))return;down=true;x=e.clientX;left=games.scrollLeft;games.setPointerCapture?.(e.pointerId);});
-    games.addEventListener('pointermove',e=>{if(!down)return;games.scrollLeft=left-(e.clientX-x);});
-    const stop=()=>{down=false;};
-    games.addEventListener('pointerup',stop);games.addEventListener('pointercancel',stop);
-  }
-  wire();
-  setTimeout(wire,500);setTimeout(wire,1500);
-})();
-</script>
 </body>
 </html>
-
-<script id="scoreboard-scroll-final-fix">
-(function(){
-  function setup(){
-    const bar=document.querySelector('.v2-scorebar');
-    const scroller=document.getElementById('score-games');
-    if(!bar||!scroller||scroller.dataset.finalScrollFix==='1') return;
-    scroller.dataset.finalScrollFix='1';
-    const prev=bar.querySelector('.v2-score-prev');
-    const next=bar.querySelector('.v2-score-next');
-    const move=(amount)=>scroller.scrollBy({left:amount,behavior:'smooth'});
-    prev&&prev.addEventListener('click',()=>move(-430));
-    next&&next.addEventListener('click',()=>move(430));
-    scroller.addEventListener('wheel',e=>{if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){e.preventDefault();scroller.scrollLeft+=e.deltaY;}},{passive:false});
-    let down=false,startX=0,startLeft=0;
-    scroller.addEventListener('pointerdown',e=>{if(e.target.closest('a,button')&&e.pointerType==='mouse')return;down=true;startX=e.clientX;startLeft=scroller.scrollLeft;scroller.setPointerCapture&&scroller.setPointerCapture(e.pointerId);});
-    scroller.addEventListener('pointermove',e=>{if(!down)return;scroller.scrollLeft=startLeft-(e.clientX-startX);});
-    const stop=e=>{down=false;try{scroller.releasePointerCapture&&scroller.releasePointerCapture(e.pointerId);}catch(_) {}};
-    scroller.addEventListener('pointerup',stop);scroller.addEventListener('pointercancel',stop);scroller.addEventListener('pointerleave',()=>{down=false;});
-  }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setup);else setup();
-})();
-</script>
-<script id="scoreboard-button-final-repair">
-(function(){
-  function install(){
-    const bar=document.querySelector('.v2-scorebar');
-    const games=document.getElementById('score-games');
-    if(!bar||!games||bar.dataset.buttonRepair==='1') return;
-    bar.dataset.buttonRepair='1';
-    const prev=bar.querySelector('.v2-score-prev');
-    const next=bar.querySelector('.v2-score-next');
-    const amount=()=>Math.max(260,Math.round(games.clientWidth*.78));
-    function move(delta){
-      games.scrollLeft=Math.max(0,Math.min(games.scrollWidth-games.clientWidth,games.scrollLeft+delta));
-      games.dispatchEvent(new Event('scroll'));
-    }
-    bar.addEventListener('click',function(e){
-      const b=e.target.closest('.v2-score-prev, .v2-score-next');
-      if(!b) return;
-      e.preventDefault();
-      e.stopPropagation();
-      move(b.classList.contains('v2-score-prev')?-amount():amount());
-    },true);
-    function update(){
-      const max=Math.max(0,games.scrollWidth-games.clientWidth);
-      if(prev) prev.disabled=games.scrollLeft<=1;
-      if(next) next.disabled=games.scrollLeft>=max-1;
-    }
-    games.addEventListener('scroll',update,{passive:true});
-    window.addEventListener('resize',update);
-    setTimeout(update,50);setTimeout(update,500);
-  }
-  install();
-  setTimeout(install,300);setTimeout(install,1000);
-})();
-</script>
