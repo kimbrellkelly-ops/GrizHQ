@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T04:28:46.606130+00:00",
+  "updated": "2026-09-13T04:41:07.978221+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-13T04:29:09.035465+00:00"
+    "checked_at": "2026-09-13T04:41:44.576438+00:00"
   },
   "resources": [
     {
@@ -7797,35 +7797,6 @@
     ],
     "2026-09-10": [
       {
-        "id": "401864504",
-        "date": "2026-09-13T01:00Z",
-        "name": "Cal Poly Mustangs at San José State Spartans",
-        "teams": [
-          {
-            "id": "23",
-            "name": "San José State Spartans",
-            "short": "San José St",
-            "abbrev": "SJSU",
-            "homeAway": "home",
-            "score": "30"
-          },
-          {
-            "id": "13",
-            "name": "Cal Poly Mustangs",
-            "short": "Cal Poly",
-            "abbrev": "CP",
-            "homeAway": "away",
-            "score": "20"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "MW+"
-        ]
-      },
-      {
         "id": "401864505",
         "date": "2026-09-13T01:00Z",
         "name": "Texas Southern Tigers at UTEP Miners",
@@ -7836,7 +7807,7 @@
             "short": "UTEP",
             "abbrev": "UTEP",
             "homeAway": "home",
-            "score": "45"
+            "score": "51"
           },
           {
             "id": "2640",
@@ -7847,9 +7818,9 @@
             "score": "10"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "2:00 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "MW+"
         ]
@@ -7865,7 +7836,7 @@
             "short": "Portland St",
             "abbrev": "PRST",
             "homeAway": "home",
-            "score": "8"
+            "score": "16"
           },
           {
             "id": "155",
@@ -7873,12 +7844,12 @@
             "short": "North Dakota",
             "abbrev": "UND",
             "homeAway": "away",
-            "score": "26"
+            "score": "33"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "13:10 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7907,9 +7878,125 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 2nd",
+        "detail": "11:16 - 3rd",
         "broadcasts": [
           "CW"
+        ]
+      },
+      {
+        "id": "401858213",
+        "date": "2026-09-11T00:00Z",
+        "name": "Florida A&M Rattlers at Miami Hurricanes",
+        "teams": [
+          {
+            "id": "2390",
+            "name": "Miami Hurricanes",
+            "short": "Miami",
+            "abbrev": "MIA",
+            "homeAway": "home",
+            "score": "77"
+          },
+          {
+            "id": "50",
+            "name": "Florida A&M Rattlers",
+            "short": "Florida A&M",
+            "abbrev": "FAMU",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ACC Network"
+        ]
+      },
+      {
+        "id": "401858215",
+        "date": "2026-09-11T23:00Z",
+        "name": "Villanova Wildcats at Louisville Cardinals",
+        "teams": [
+          {
+            "id": "97",
+            "name": "Louisville Cardinals",
+            "short": "Louisville",
+            "abbrev": "LOU",
+            "homeAway": "home",
+            "score": "59"
+          },
+          {
+            "id": "222",
+            "name": "Villanova Wildcats",
+            "short": "Villanova",
+            "abbrev": "VILL",
+            "homeAway": "away",
+            "score": "13"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ACC Network"
+        ]
+      },
+      {
+        "id": "401858220",
+        "date": "2026-09-11T23:00Z",
+        "name": "Norfolk State Spartans at Virginia Cavaliers",
+        "teams": [
+          {
+            "id": "258",
+            "name": "Virginia Cavaliers",
+            "short": "Virginia",
+            "abbrev": "UVA",
+            "homeAway": "home",
+            "score": "59"
+          },
+          {
+            "id": "2450",
+            "name": "Norfolk State Spartans",
+            "short": "Norfolk St",
+            "abbrev": "NORF",
+            "homeAway": "away",
+            "score": "3"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ACCNX"
+        ]
+      },
+      {
+        "id": "401858222",
+        "date": "2026-09-11T23:00Z",
+        "name": "Richmond Spiders at NC State Wolfpack",
+        "teams": [
+          {
+            "id": "152",
+            "name": "NC State Wolfpack",
+            "short": "NC State",
+            "abbrev": "NCSU",
+            "homeAway": "home",
+            "score": "73"
+          },
+          {
+            "id": "257",
+            "name": "Richmond Spiders",
+            "short": "Richmond",
+            "abbrev": "RICH",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPNU"
         ]
       },
       {
@@ -10050,119 +10137,32 @@
         ]
       },
       {
-        "id": "401858213",
-        "date": "2026-09-11T00:00Z",
-        "name": "Florida A&M Rattlers at Miami Hurricanes",
+        "id": "401864504",
+        "date": "2026-09-13T01:00Z",
+        "name": "Cal Poly Mustangs at San José State Spartans",
         "teams": [
           {
-            "id": "2390",
-            "name": "Miami Hurricanes",
-            "short": "Miami",
-            "abbrev": "MIA",
+            "id": "23",
+            "name": "San José State Spartans",
+            "short": "San José St",
+            "abbrev": "SJSU",
             "homeAway": "home",
-            "score": "77"
+            "score": "30"
           },
           {
-            "id": "50",
-            "name": "Florida A&M Rattlers",
-            "short": "Florida A&M",
-            "abbrev": "FAMU",
+            "id": "13",
+            "name": "Cal Poly Mustangs",
+            "short": "Cal Poly",
+            "abbrev": "CP",
             "homeAway": "away",
-            "score": "7"
+            "score": "20"
           }
         ],
         "state": "post",
         "completed": true,
         "detail": "Final",
         "broadcasts": [
-          "ACC Network"
-        ]
-      },
-      {
-        "id": "401858215",
-        "date": "2026-09-11T23:00Z",
-        "name": "Villanova Wildcats at Louisville Cardinals",
-        "teams": [
-          {
-            "id": "97",
-            "name": "Louisville Cardinals",
-            "short": "Louisville",
-            "abbrev": "LOU",
-            "homeAway": "home",
-            "score": "59"
-          },
-          {
-            "id": "222",
-            "name": "Villanova Wildcats",
-            "short": "Villanova",
-            "abbrev": "VILL",
-            "homeAway": "away",
-            "score": "13"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ACC Network"
-        ]
-      },
-      {
-        "id": "401858220",
-        "date": "2026-09-11T23:00Z",
-        "name": "Norfolk State Spartans at Virginia Cavaliers",
-        "teams": [
-          {
-            "id": "258",
-            "name": "Virginia Cavaliers",
-            "short": "Virginia",
-            "abbrev": "UVA",
-            "homeAway": "home",
-            "score": "59"
-          },
-          {
-            "id": "2450",
-            "name": "Norfolk State Spartans",
-            "short": "Norfolk St",
-            "abbrev": "NORF",
-            "homeAway": "away",
-            "score": "3"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ACCNX"
-        ]
-      },
-      {
-        "id": "401858222",
-        "date": "2026-09-11T23:00Z",
-        "name": "Richmond Spiders at NC State Wolfpack",
-        "teams": [
-          {
-            "id": "152",
-            "name": "NC State Wolfpack",
-            "short": "NC State",
-            "abbrev": "NCSU",
-            "homeAway": "home",
-            "score": "73"
-          },
-          {
-            "id": "257",
-            "name": "Richmond Spiders",
-            "short": "Richmond",
-            "abbrev": "RICH",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPNU"
+          "MW+"
         ]
       }
     ],
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-tanner-williams-kealii-ah-yat-after-utah-tech-win/",
     "youtube_id": "kUA6VfnmPKI"
   },
-  "fcs_scores_updated": "2026-09-13T04:29:11.008276+00:00"
+  "fcs_scores_updated": "2026-09-13T04:41:47.040007+00:00"
 }
