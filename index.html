@@ -1217,11 +1217,11 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   const bar=document.querySelector('.v2-scorebar');
   if(!games||!group||!week)return;
   const weeks=[
-    ['2026-08-27','2026-08-30'],['2026-09-03','2026-09-06'],['2026-09-10','2026-09-13'],['2026-09-17','2026-09-20'],['2026-09-24','2026-09-27'],['2026-10-01','2026-10-04'],['2026-10-08','2026-10-11'],['2026-10-15','2026-10-18'],['2026-10-22','2026-10-25'],['2026-10-29','2026-11-01'],['2026-11-05','2026-11-08'],['2026-11-12','2026-11-15'],['2026-11-19','2026-11-22']
+    ['2026-08-27','2026-08-30'],['2026-09-03','2026-09-06'],['2026-09-10','2026-09-13'],['2026-09-17','2026-09-20'],['2026-09-24','2026-09-27'],['2026-10-01','2026-10-04'],['2026-10-08','2026-10-11'],['2026-10-15','2026-10-18'],['2026-10-22','2026-10-25'],['2026-10-29','2026-11-01'],['2026-11-05','2026-11-08'],['2026-11-12','2026-11-15'],['2026-11-19','2026-11-22'],['2026-11-26','2026-11-29'],['2026-12-03','2026-12-06']
   ];
   const espnWeek=(w,g)=>g==='bigsky'
     ? `https://www.espn.com/college-football/scoreboard/_/week/${Number(w)+1}/year/2026/seasontype/2/group/20`
-    : `https://www.espn.com/college-football/scoreboard/_/week/${Number(w)+1}/year/2026/seasontype/2`;
+    : `https://www.espn.com/college-football/scoreboard/_/week/${w}/year/2026/seasontype/2`;
   const clean=s=>String(s||'').replace(/\s*\([^)]*\)\s*$/,'').replace(/\s+/g,' ').trim();
   const norm=s=>clean(s).toLowerCase().replace(/[^a-z0-9]/g,'');
   const aliases={montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanastatebobcats'],idaho:['idaho','idahovandals'],weberstate:['weberstate','weberstatewildcats'],easternwashington:['easternwashington','easternwashingtoneagles'],northernarizona:['northernarizona','northernarizonalumberjacks'],northerncolorado:['northerncolorado','northerncoloradobears'],idahostate:['idahostate','idahostatebengals'],calpoly:['calpoly','calpolytechnic','calpolymustangs'],southernutah:['southernutah','southernutahthunderbirds'],utahtech:['utahtech','utahtechtrailblazers'],ucdavis:['ucdavis','ucdavisaggies'],portlandstate:['portlandstate','portlandstatevikings']};
@@ -1229,7 +1229,7 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   const canonical=s=>{const n=norm(s);return Object.keys(aliases).find(k=>aliases[k].includes(n))||null;};
   const teamName=t=>t?.short||t?.shortDisplayName||t?.name||t?.displayName||t?.abbrev||'Team';
   const dateOnly=s=>String(s||'').slice(0,10);
-  const inWeek=(date,w)=>{const i=Number(w);return !!weeks[i]&&date>=weeks[i][0]&&date<=weeks[i][1];};
+  const inWeek=(date,w)=>{const i=Number(w);return !!weeks[i]&&date>=weeks[i][0]&&date<=weeks[i][1];}
   let data={};
   try{data=await (await fetch('data.json?scoreboard='+Date.now(),{cache:'no-store'})).json();}catch(e){games.innerHTML='<a class="v2-score-card v2-score-empty" href="'+espnWeek(Number(week.value),group.value)+'" target="_blank" rel="noopener"><strong>Open ESPN scoreboard</strong><small>Local score data unavailable ↗</small></a>';return;}
   const rankedNames=(data.fcs_top25||data.fcs_top20||[]).map(x=>norm(x.team));
