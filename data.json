@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T02:55:48.206800+00:00",
+  "updated": "2026-09-13T03:08:29.538221+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-13T02:56:14.957892+00:00"
+    "checked_at": "2026-09-13T03:09:07.554174+00:00"
   },
   "resources": [
     {
@@ -7807,7 +7807,7 @@
             "short": "South Carolina",
             "abbrev": "SC",
             "homeAway": "home",
-            "score": "31"
+            "score": "38"
           },
           {
             "id": "119",
@@ -7820,125 +7820,9 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:46 - 4th",
+        "detail": "8:28 - 4th",
         "broadcasts": [
           "SECN+"
-        ]
-      },
-      {
-        "id": "401860882",
-        "date": "2026-09-12T23:00Z",
-        "name": "Southern Utah Thunderbirds at Colorado State Rams",
-        "teams": [
-          {
-            "id": "36",
-            "name": "Colorado State Rams",
-            "short": "Colorado St",
-            "abbrev": "CSU",
-            "homeAway": "home",
-            "score": "58"
-          },
-          {
-            "id": "253",
-            "name": "Southern Utah Thunderbirds",
-            "short": "Southern Utah",
-            "abbrev": "SUU",
-            "homeAway": "away",
-            "score": "24"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "CBSSN"
-        ]
-      },
-      {
-        "id": "401867856",
-        "date": "2026-09-12T23:00Z",
-        "name": "Indiana State Sycamores at Eastern Illinois Panthers",
-        "teams": [
-          {
-            "id": "2197",
-            "name": "Eastern Illinois Panthers",
-            "short": "E Illinois",
-            "abbrev": "EIU",
-            "homeAway": "home",
-            "score": "35"
-          },
-          {
-            "id": "282",
-            "name": "Indiana State Sycamores",
-            "short": "Indiana St",
-            "abbrev": "INST",
-            "homeAway": "away",
-            "score": "42"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401867867",
-        "date": "2026-09-12T23:00Z",
-        "name": "Valparaiso Beacons at Murray State Racers",
-        "teams": [
-          {
-            "id": "93",
-            "name": "Murray State Racers",
-            "short": "Murray St",
-            "abbrev": "MUR",
-            "homeAway": "home",
-            "score": "27"
-          },
-          {
-            "id": "2674",
-            "name": "Valparaiso Beacons",
-            "short": "Valparaiso",
-            "abbrev": "VAL",
-            "homeAway": "away",
-            "score": "18"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868195",
-        "date": "2026-09-12T23:00Z",
-        "name": "Tennessee State Tigers at Alabama A&M Bulldogs",
-        "teams": [
-          {
-            "id": "2010",
-            "name": "Alabama A&M Bulldogs",
-            "short": "Alabama A&M",
-            "abbrev": "AAMU",
-            "homeAway": "home",
-            "score": "30"
-          },
-          {
-            "id": "2634",
-            "name": "Tennessee State Tigers",
-            "short": "Tennessee St",
-            "abbrev": "TNST",
-            "homeAway": "away",
-            "score": "3"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "SWAC TV"
         ]
       },
       {
@@ -7960,7 +7844,7 @@
             "short": "AR-Pine Bluff",
             "abbrev": "UAPB",
             "homeAway": "away",
-            "score": "38"
+            "score": "45"
           }
         ],
         "state": "in",
@@ -8021,7 +7905,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:10 - 4th",
+        "detail": "3:48 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8037,7 +7921,7 @@
             "short": "TCU",
             "abbrev": "TCU",
             "homeAway": "home",
-            "score": "49"
+            "score": "56"
           },
           {
             "id": "2755",
@@ -8050,7 +7934,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "11:28 - 4th",
+        "detail": "7:57 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8079,7 +7963,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:57 - 4th",
+        "detail": "3:30 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8108,7 +7992,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:17 - 3rd",
+        "detail": "10:35 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8124,7 +8008,7 @@
             "short": "San José St",
             "abbrev": "SJSU",
             "homeAway": "home",
-            "score": "13"
+            "score": "19"
           },
           {
             "id": "13",
@@ -8137,7 +8021,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:56 - 3rd",
+        "detail": "4:29 - 3rd",
         "broadcasts": [
           "MW+"
         ]
@@ -8166,7 +8050,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "13:06 - 3rd",
         "broadcasts": [
           "MW+"
         ]
@@ -8182,7 +8066,7 @@
             "short": "Portland St",
             "abbrev": "PRST",
             "homeAway": "home",
-            "score": "0"
+            "score": "8"
           },
           {
             "id": "155",
@@ -8195,9 +8079,38 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "9:35 - 2nd",
+        "detail": "4:14 - 2nd",
         "broadcasts": [
           "ESPN+"
+        ]
+      },
+      {
+        "id": "401864500",
+        "date": "2026-09-13T02:30Z",
+        "name": "Montana State Bobcats at Nevada Wolf Pack",
+        "teams": [
+          {
+            "id": "2440",
+            "name": "Nevada Wolf Pack",
+            "short": "Nevada",
+            "abbrev": "NEV",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "147",
+            "name": "Montana State Bobcats",
+            "short": "Montana St",
+            "abbrev": "MTST",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "in",
+        "completed": false,
+        "detail": "5:11 - 1st",
+        "broadcasts": [
+          "CW"
         ]
       },
       {
@@ -9671,6 +9584,35 @@
         ]
       },
       {
+        "id": "401860882",
+        "date": "2026-09-12T23:00Z",
+        "name": "Southern Utah Thunderbirds at Colorado State Rams",
+        "teams": [
+          {
+            "id": "36",
+            "name": "Colorado State Rams",
+            "short": "Colorado St",
+            "abbrev": "CSU",
+            "homeAway": "home",
+            "score": "58"
+          },
+          {
+            "id": "253",
+            "name": "Southern Utah Thunderbirds",
+            "short": "Southern Utah",
+            "abbrev": "SUU",
+            "homeAway": "away",
+            "score": "24"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "CBSSN"
+        ]
+      },
+      {
         "id": "401864503",
         "date": "2026-09-12T23:00Z",
         "name": "Illinois State Redbirds at Northern Illinois Huskies",
@@ -9697,6 +9639,64 @@
         "detail": "Final",
         "broadcasts": [
           "MW+"
+        ]
+      },
+      {
+        "id": "401867856",
+        "date": "2026-09-12T23:00Z",
+        "name": "Indiana State Sycamores at Eastern Illinois Panthers",
+        "teams": [
+          {
+            "id": "2197",
+            "name": "Eastern Illinois Panthers",
+            "short": "E Illinois",
+            "abbrev": "EIU",
+            "homeAway": "home",
+            "score": "35"
+          },
+          {
+            "id": "282",
+            "name": "Indiana State Sycamores",
+            "short": "Indiana St",
+            "abbrev": "INST",
+            "homeAway": "away",
+            "score": "42"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401867867",
+        "date": "2026-09-12T23:00Z",
+        "name": "Valparaiso Beacons at Murray State Racers",
+        "teams": [
+          {
+            "id": "93",
+            "name": "Murray State Racers",
+            "short": "Murray St",
+            "abbrev": "MUR",
+            "homeAway": "home",
+            "score": "27"
+          },
+          {
+            "id": "2674",
+            "name": "Valparaiso Beacons",
+            "short": "Valparaiso",
+            "abbrev": "VAL",
+            "homeAway": "away",
+            "score": "18"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
         ]
       },
       {
@@ -9784,6 +9784,35 @@
         "detail": "Final",
         "broadcasts": [
           "ESPN+"
+        ]
+      },
+      {
+        "id": "401868195",
+        "date": "2026-09-12T23:00Z",
+        "name": "Tennessee State Tigers at Alabama A&M Bulldogs",
+        "teams": [
+          {
+            "id": "2010",
+            "name": "Alabama A&M Bulldogs",
+            "short": "Alabama A&M",
+            "abbrev": "AAMU",
+            "homeAway": "home",
+            "score": "30"
+          },
+          {
+            "id": "2634",
+            "name": "Tennessee State Tigers",
+            "short": "Tennessee St",
+            "abbrev": "TNST",
+            "homeAway": "away",
+            "score": "3"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "SWAC TV"
         ]
       },
       {
@@ -10018,35 +10047,6 @@
         "detail": "Final",
         "broadcasts": [
           "BTN"
-        ]
-      },
-      {
-        "id": "401864500",
-        "date": "2026-09-13T02:30Z",
-        "name": "Montana State Bobcats at Nevada Wolf Pack",
-        "teams": [
-          {
-            "id": "2440",
-            "name": "Nevada Wolf Pack",
-            "short": "Nevada",
-            "abbrev": "NEV",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "147",
-            "name": "Montana State Bobcats",
-            "short": "Montana St",
-            "abbrev": "MTST",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "9:25 - 1st",
-        "broadcasts": [
-          "CW"
         ]
       },
       {
@@ -27502,10 +27502,9 @@
     ]
   },
   "latest_press_conference": {
-    "title": "WATCH – Griz press conference – Bobby Kennedy, Tanner Williams, Keali’i Ah Yat after Utah Tech win",
-    "date": "Sun, 13 Sep 2026 00:10:26 +0000",
-    "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-tanner-williams-kealii-ah-yat-after-utah-tech-win/",
-    "youtube_id": "kUA6VfnmPKI"
+    "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker",
+    "date": "September 5, 2026",
+    "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/"
   },
-  "fcs_scores_updated": "2026-09-13T02:56:17.308680+00:00"
+  "fcs_scores_updated": "2026-09-13T03:09:39.917321+00:00"
 }
