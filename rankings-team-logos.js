@@ -57,10 +57,31 @@
       }
     });
   }
+  function fixScoreboardWeekLabels(){
+    const select=document.getElementById('score-week-select');
+    if(!select || select.dataset.weekZeroFixed==='1')return;
+    const options=[...select.options];
+    if(!options.length)return;
+    const hasWeekZero=options.some(o=>/^Week 0\b/i.test(o.textContent.trim()));
+    if(!hasWeekZero){
+      const zero=document.createElement('option');
+      zero.value='0';
+      zero.textContent='Week 0';
+      select.insertBefore(zero,select.firstChild);
+    }
+    [...select.options].forEach(option=>{
+      const value=Number(option.value);
+      if(Number.isFinite(value) && value>=1 && value<=15){
+        option.textContent=`Week ${value-1}`;
+      }
+    });
+    select.dataset.weekZeroFixed='1';
+  }
   function run(){
     addLogos(document.getElementById('coaches-poll'));
     addLogos(document.getElementById('media-poll'));
     fixRankingsTitle();
+    fixScoreboardWeekLabels();
   }
   const style=document.createElement('style');
   style.textContent='.ranking-team-logo{width:26px;height:26px;object-fit:contain;flex:0 0 26px;margin-right:.15rem}.rank-team-name{min-width:0}';
@@ -68,4 +89,6 @@
   const observer=new MutationObserver(run);
   function start(){run();const a=document.getElementById('coaches-poll'),b=document.getElementById('media-poll');if(a)observer.observe(a,{childList:true,subtree:true});if(b)observer.observe(b,{childList:true,subtree:true});}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+  const pageObserver=new MutationObserver(fixScoreboardWeekLabels);
+  pageObserver.observe(document.documentElement,{childList:true,subtree:true});
 })();
