@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: "*/10 * * * *"
   workflow_dispatch:
+  push:
+    paths:
+      - "refresh_player_stats.py"
+      - ".github/workflows/refresh-griz-data.yml"
 
 permissions:
   contents: write
