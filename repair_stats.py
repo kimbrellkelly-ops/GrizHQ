@@ -3,13 +3,12 @@ from pathlib import Path
 
 PATH = Path("data.json")
 
+
 def main():
     data = json.loads(PATH.read_text(encoding="utf-8"))
     stats = data.setdefault("stats", {})
     game_log = stats.setdefault("game_log", [])
 
-    # The official result is sometimes posted before the schedule page exposes
-    # a completed result to the scraper. Keep this repair idempotent.
     utah = {
         "week": "Wk 3",
         "opponent": "Utah Tech",
@@ -17,7 +16,7 @@ def main():
         "montana_yards": 462,
         "opponent_yards": 405,
         "turnovers": "0",
-        "notes": "Gillman 147 rushing / 3 TD; Davis 12 rec / 151 yards"
+        "notes": "Gillman 147 rushing / 3 TD; Davis 12 rec / 151 yards",
     }
 
     found = False
@@ -29,46 +28,83 @@ def main():
     if not found:
         game_log.append(utah)
 
-    # Keep the game log in chronological order when week labels are present.
-    game_log.sort(key=lambda item: int(str(item.get("week", "Wk 99")).split()[-1]))
+    def week_number(item):
+        try:
+            return int(str(item.get("week", "Wk 99")).split()[-1])
+        except Exception:
+            return 99
 
+    game_log.sort(key=week_number)
     completed = [g for g in game_log if g.get("result")]
     stats["through"] = f"Through {len(completed)} completed games"
 
-    # Update the clearly derived team summary values without overwriting the
-    # more detailed player-stat tables until their official cumulative source
-    # is available.
     summary = stats.setdefault("team_summary", [])
-    values = {
+    summary_values = {
         "RECORD": "3–0",
         "POINTS / GAME": "36.0",
         "TOTAL OFFENSE": "429",
-        "TOTAL DEFENSE": "404"
+        "TOTAL DEFENSE": "404",
     }
     for row in summary:
         label = str(row.get("label", "")).upper()
-        if label in values:
-            row["value"] = values[label]
+        if label in summary_values:
+            row["value"] = summary_values[label]
 
     offense = stats.setdefault("offense", [])
     defense = stats.setdefault("defense", [])
-    replacements = {
+    offense_values = {
         "Points": "108",
         "Total Yards": "1288",
         "Passing": "793",
-        "Rushing": "495"
+        "Rushing": "495",
     }
     for row in offense:
-        if row and row[0] in replacements:
-            row[1] = replacements[row[0]]
+        if row and row[0] in offense_values:
+            row[1] = offense_values[row[0]]
     for row in defense:
         if row and row[0] == "Points Allowed":
             row[1] = "45"
         elif row and row[0] == "Yards Allowed":
             row[1] = "1212"
 
+    # Keep the visible leader cards aligned with Montana's official 2026
+    # cumulative statistics. The official page currently reports 3 games.
+    leaders = stats.setdefault("leaders", {})
+    leaders["passing"] = [{
+        "player": "Keali'i Ah Yat",
+        "line": "67-106 • 793 YDS • 5 TD • 1 INT",
+        "extra": "Long: 85",
+    }]
+    leaders["rushing"] = [{
+        "player": "Eli Gillman",
+        "line": "32 CAR • 181 YDS • 4 TD",
+        "extra": "Avg: 5.7",
+    }, {
+        "player": "Dylan Paine",
+        "line": "15 CAR • 79 YDS • 1 TD",
+        "extra": "Avg: 5.3",
+    }]
+    leaders["receiving"] = [{
+        "player": "Brooks Davis",
+        "line": "12 REC • 160 YDS • 1 TD",
+        "extra": "Long: 33",
+    }, {
+        "player": "Lekeldrick Bridges",
+        "line": "8 REC • 110 YDS • 1 TD",
+        "extra": "Long: 53",
+    }, {
+        "player": "Landon Ransom-Goelz",
+        "line": "7 REC • 115 YDS • 0 TD",
+        "extra": "Long: 37",
+    }, {
+        "player": "Eli Gillman",
+        "line": "4 REC • 99 YDS • 2 TD",
+        "extra": "Long: 85",
+    }]
+
     PATH.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Repaired stats: {len(completed)} completed games; Utah Tech present={any(g.get('opponent') == 'Utah Tech' for g in game_log)}")
+    print(f"Repaired stats and player leaders: {len(completed)} completed games; Utah Tech present={any(g.get('opponent') == 'Utah Tech' for g in game_log)}")
+
 
 if __name__ == "__main__":
     main()
