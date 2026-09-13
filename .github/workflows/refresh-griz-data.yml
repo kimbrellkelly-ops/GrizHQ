@@ -31,6 +31,9 @@ jobs:
       - name: Update Griz HQ data
         run: python update_data.py
 
+      - name: Refresh official cumulative player stats
+        run: python refresh_player_stats.py
+
       - name: Repair and refresh FCS scoreboard cache
         run: python score_refresh.py
 
@@ -47,6 +50,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python update_data.py
+            python refresh_player_stats.py
             python score_refresh.py
             python repair_stats.py
             git add data.json
