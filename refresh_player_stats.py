@@ -61,6 +61,16 @@ def parse_table(table,cat):
         elif cat=='pressure':
             tfl=v(cells,'TFL'); sack=v(cells,'SACK','SACKS'); ff=v(cells,'FF'); inte=v(cells,'INT'); pbu=v(cells,'PBU')
             line=f'{tfl or "0"} TFL • {sack or "0"} SACK • {ff or "0"} FF'; extra=f'{inte or "0"} INT • {pbu or "0"} PBU'
+        elif cat=='special':
+            punts=v(cells,'PUNTS','PUNT'); y=v(cells,'YDS','YARD'); avg=v(cells,'AVG'); lg=v(cells,'LONG'); in20=v(cells,'IN20','INSIDE 20','I20')
+            fgm=v(cells,'FGM','MADE'); fga=v(cells,'FGA','ATT')
+            if punts:
+                line=f'{punts} PUNTS • {y or "0"} YDS • {avg or "0"} AVG'
+                extra=' • '.join(x for x in [f'Long: {lg}' if lg else '',f'{in20} inside 20' if in20 else ''] if x)
+            elif fgm or fga:
+                line=f'{fgm or "0"}/{fga or "0"} FG'; extra=''
+            else:
+                continue
         else: continue
         out.append({'player':name,'line':line,'extra':extra})
     return out[:5]
@@ -72,14 +82,17 @@ def main():
     leaders={k:[] for k in ('passing','rushing','receiving','tackles','pressure','special')}
     for table in soup.find_all('table'):
         cat=category_for(table)
-        if cat and not leaders[cat]:
-            parsed=parse_table(table,cat)
-            if parsed: leaders[cat]=parsed
+        if not cat: continue
+        parsed=parse_table(table,cat)
+        if not parsed: continue
+        if cat=='special':
+            leaders[cat].extend(parsed)
+            leaders[cat]=leaders[cat][:5]
+        elif not leaders[cat]:
+            leaders[cat]=parsed
     found=[k for k,v in leaders.items() if v]
     if not found: raise RuntimeError('No official player-stat tables detected')
     stats=data.setdefault('stats',{})
-    # Replace the leader groups atomically. Never retain stale values when a
-    # category is absent or its column layout changes.
     stats['leaders']=leaders
     stats['leaders_source']=URL
     stats['leaders_updated']=data.get('updated')
