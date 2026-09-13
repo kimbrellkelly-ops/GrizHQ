@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-13T20:04:13.551766+00:00",
+  "updated": "2026-09-13T20:23:31.067159+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 78,
+  "story_count": 79,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Week 2: No. 3 Montana Grizzlies down Utah Tech",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-2-no-3-montana-grizzlies-down-utah-tech/collection_cbc7550b-d7a8-4d37-81f1-38d8e91958ef.html",
+      "date": "Sep. 13, 2026",
+      "published_at": "2026-09-13T20:00:00+00:00",
+      "description": "Week 2: No. 3 Montana Grizzlies down Utah Tech",
+      "source": "406 MT Sports",
+      "badge": "OPPONENT",
+      "short": "OPPONE",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/bc/cbc7550b-d7a8-4d37-81f1-38d8e91958ef/6aa625e078671.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/bc/cbc7550b-d7a8-4d37-81f1-38d8e91958ef/6aa625e078671.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "3 takeaways: Grizzlies still seeking growth after 3-0 start",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-grizzlies-still-seeking-growth-after-3-0-start/article_b45bbd23-4f03-4fc7-8129-156776a2bb63.html",
