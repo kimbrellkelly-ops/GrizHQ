@@ -72,8 +72,8 @@
   state.index=currentIndex(); weekSelect.value=String(state.index); setIndex(state.index);
   weekSelect.addEventListener('change',()=>{setIndex(Number(weekSelect.value)||0);});
   groupSelect?.addEventListener('change',()=>{state.group=groupSelect.value;load();});
-  previous?.addEventListener('click',()=>{setIndex(state.index-1);});
-  next?.addEventListener('click',()=>{setIndex(state.index+1);});
+  // The side arrows belong to the horizontal card scroller. They must never change weeks.
+  // Week changes are controlled only by the week dropdown.
   load();
   window.setInterval(load, 60000);
 })();
