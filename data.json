@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T02:37:07.405781+00:00",
+  "updated": "2026-09-13T02:47:39.060582+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-13T02:37:41.573438+00:00"
+    "checked_at": "2026-09-13T02:48:10.487977+00:00"
   },
   "resources": [
     {
@@ -7797,6 +7797,35 @@
     ],
     "2026-09-10": [
       {
+        "id": "401866629",
+        "date": "2026-09-12T22:00Z",
+        "name": "Bryant Bulldogs at Hampton Pirates",
+        "teams": [
+          {
+            "id": "2261",
+            "name": "Hampton Pirates",
+            "short": "Hampton",
+            "abbrev": "HAMP",
+            "homeAway": "home",
+            "score": "3"
+          },
+          {
+            "id": "2803",
+            "name": "Bryant Bulldogs",
+            "short": "Bryant",
+            "abbrev": "BRY",
+            "homeAway": "away",
+            "score": "31"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "FloSports"
+        ]
+      },
+      {
         "id": "401856680",
         "date": "2026-09-12T23:00Z",
         "name": "Towson Tigers at South Carolina Gamecocks",
@@ -7807,7 +7836,7 @@
             "short": "South Carolina",
             "abbrev": "SC",
             "homeAway": "home",
-            "score": "24"
+            "score": "30"
           },
           {
             "id": "119",
@@ -7820,9 +7849,38 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:28 - 3rd",
+        "detail": "0:03 - 3rd",
         "broadcasts": [
           "SECN+"
+        ]
+      },
+      {
+        "id": "401856786",
+        "date": "2026-09-12T23:00Z",
+        "name": "Western Carolina Catamounts at Cincinnati Bearcats",
+        "teams": [
+          {
+            "id": "2132",
+            "name": "Cincinnati Bearcats",
+            "short": "Cincinnati",
+            "abbrev": "CIN",
+            "homeAway": "home",
+            "score": "62"
+          },
+          {
+            "id": "2717",
+            "name": "Western Carolina Catamounts",
+            "short": "W Carolina",
+            "abbrev": "WCU",
+            "homeAway": "away",
+            "score": "10"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
         ]
       },
       {
@@ -7894,7 +7952,7 @@
             "short": "Murray St",
             "abbrev": "MUR",
             "homeAway": "home",
-            "score": "21"
+            "score": "27"
           },
           {
             "id": "2674",
@@ -7905,9 +7963,96 @@
             "score": "18"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "2:46 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401867890",
+        "date": "2026-09-12T23:00Z",
+        "name": "Southeast Missouri State Redhawks at Southern Illinois Salukis",
+        "teams": [
+          {
+            "id": "79",
+            "name": "Southern Illinois Salukis",
+            "short": "S Illinois",
+            "abbrev": "SIU",
+            "homeAway": "home",
+            "score": "34"
+          },
+          {
+            "id": "2546",
+            "name": "Southeast Missouri State Redhawks",
+            "short": "SE Missouri",
+            "abbrev": "SEMO",
+            "homeAway": "away",
+            "score": "20"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868072",
+        "date": "2026-09-12T23:00Z",
+        "name": "Central Oklahoma Bronchos at Central Arkansas Bears",
+        "teams": [
+          {
+            "id": "2110",
+            "name": "Central Arkansas Bears",
+            "short": "C Arkansas",
+            "abbrev": "CARK",
+            "homeAway": "home",
+            "score": "59"
+          },
+          {
+            "id": "2122",
+            "name": "Central Oklahoma Bronchos",
+            "short": "C Oklahoma",
+            "abbrev": "CENO",
+            "homeAway": "away",
+            "score": "20"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868150",
+        "date": "2026-09-12T23:00Z",
+        "name": "North Alabama Lions at SE Louisiana Lions",
+        "teams": [
+          {
+            "id": "2545",
+            "name": "SE Louisiana Lions",
+            "short": "SE Louisiana",
+            "abbrev": "SELA",
+            "homeAway": "home",
+            "score": "30"
+          },
+          {
+            "id": "2453",
+            "name": "North Alabama Lions",
+            "short": "North Alabama",
+            "abbrev": "UNA",
+            "homeAway": "away",
+            "score": "25"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7942,6 +8087,64 @@
         ]
       },
       {
+        "id": "401868241",
+        "date": "2026-09-12T23:00Z",
+        "name": "West Georgia Wolves at Arkansas State Red Wolves",
+        "teams": [
+          {
+            "id": "2032",
+            "name": "Arkansas State Red Wolves",
+            "short": "Arkansas St",
+            "abbrev": "ARST",
+            "homeAway": "home",
+            "score": "52"
+          },
+          {
+            "id": "2698",
+            "name": "West Georgia Wolves",
+            "short": "West Georgia",
+            "abbrev": "WES",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868246",
+        "date": "2026-09-12T23:00Z",
+        "name": "UT Rio Grande Valley Vaqueros at Nicholls Colonels",
+        "teams": [
+          {
+            "id": "2447",
+            "name": "Nicholls Colonels",
+            "short": "Nicholls",
+            "abbrev": "NICH",
+            "homeAway": "home",
+            "score": "31"
+          },
+          {
+            "id": "292",
+            "name": "UT Rio Grande Valley Vaqueros",
+            "short": "UT Rio Grande",
+            "abbrev": "RGV",
+            "homeAway": "away",
+            "score": "28"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
         "id": "401868355",
         "date": "2026-09-12T23:00Z",
         "name": "Arkansas-Pine Bluff Golden Lions at Alcorn State Braves",
@@ -7952,7 +8155,7 @@
             "short": "Alcorn St",
             "abbrev": "ALCN",
             "homeAway": "home",
-            "score": "31"
+            "score": "38"
           },
           {
             "id": "2029",
@@ -7965,8 +8168,184 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:54 - 4th",
+        "detail": "1:52 - 4th",
         "broadcasts": []
+      },
+      {
+        "id": "401868386",
+        "date": "2026-09-12T23:00Z",
+        "name": "Samford Bulldogs at Tennessee Tech Golden Eagles",
+        "teams": [
+          {
+            "id": "2635",
+            "name": "Tennessee Tech Golden Eagles",
+            "short": "Tennessee Tech",
+            "abbrev": "TNTC",
+            "homeAway": "home",
+            "score": "45"
+          },
+          {
+            "id": "2535",
+            "name": "Samford Bulldogs",
+            "short": "Samford",
+            "abbrev": "SAM",
+            "homeAway": "away",
+            "score": "19"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401869130",
+        "date": "2026-09-12T23:00Z",
+        "name": "Northwestern State Demons at East Texas A&M Lions",
+        "teams": [
+          {
+            "id": "2837",
+            "name": "East Texas A&M Lions",
+            "short": "East Texas A&M",
+            "abbrev": "ETAM",
+            "homeAway": "home",
+            "score": "38"
+          },
+          {
+            "id": "2466",
+            "name": "Northwestern State Demons",
+            "short": "N'Western St",
+            "abbrev": "NWST",
+            "homeAway": "away",
+            "score": "14"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401869150",
+        "date": "2026-09-12T23:00Z",
+        "name": "Arkansas Baptist Buffaloes at Houston Christian Huskies",
+        "teams": [
+          {
+            "id": "2277",
+            "name": "Houston Christian Huskies",
+            "short": "Hou Christian",
+            "abbrev": "HCU",
+            "homeAway": "home",
+            "score": "88"
+          },
+          {
+            "id": "124386",
+            "name": "Arkansas Baptist Buffaloes",
+            "short": "Ark Baptist",
+            "abbrev": "ARBA",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401871046",
+        "date": "2026-09-12T23:00Z",
+        "name": "Lindenwood Lions at Missouri State Bears",
+        "teams": [
+          {
+            "id": "2623",
+            "name": "Missouri State Bears",
+            "short": "Missouri St",
+            "abbrev": "MOST",
+            "homeAway": "home",
+            "score": "48"
+          },
+          {
+            "id": "2815",
+            "name": "Lindenwood Lions",
+            "short": "Lindenwood",
+            "abbrev": "LIN",
+            "homeAway": "away",
+            "score": "14"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401872616",
+        "date": "2026-09-12T23:00Z",
+        "name": "New Haven Chargers at South Dakota State Jackrabbits",
+        "teams": [
+          {
+            "id": "2571",
+            "name": "South Dakota State Jackrabbits",
+            "short": "S Dakota St",
+            "abbrev": "SDST",
+            "homeAway": "home",
+            "score": "57"
+          },
+          {
+            "id": "2441",
+            "name": "New Haven Chargers",
+            "short": "New Haven",
+            "abbrev": "NH",
+            "homeAway": "away",
+            "score": "14"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+",
+          "Midco Sports Net",
+          "KELO-TV"
+        ]
+      },
+      {
+        "id": "401858447",
+        "date": "2026-09-12T23:15Z",
+        "name": "Western Illinois Leathernecks at Wisconsin Badgers",
+        "teams": [
+          {
+            "id": "275",
+            "name": "Wisconsin Badgers",
+            "short": "Wisconsin",
+            "abbrev": "WIS",
+            "homeAway": "home",
+            "score": "36"
+          },
+          {
+            "id": "2710",
+            "name": "Western Illinois Leathernecks",
+            "short": "W Illinois",
+            "abbrev": "WIU",
+            "homeAway": "away",
+            "score": "9"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "BTN"
+        ]
       },
       {
         "id": "401868008",
@@ -7992,7 +8371,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:30 - 4th",
+        "detail": "1:55 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8016,12 +8395,12 @@
             "short": "Tarleton St",
             "abbrev": "TAR",
             "homeAway": "away",
-            "score": "21"
+            "score": "24"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 4th",
+        "detail": "12:10 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8050,7 +8429,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:20 - 3rd",
+        "detail": "13:50 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8074,12 +8453,12 @@
             "short": "SF Austin",
             "abbrev": "SFA",
             "homeAway": "away",
-            "score": "20"
+            "score": "26"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 3rd",
+        "detail": "12:08 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8108,7 +8487,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "8:34 - 3rd",
+        "detail": "2:17 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8169,35 +8548,6 @@
         "detail": "Halftime",
         "broadcasts": [
           "MW+"
-        ]
-      },
-      {
-        "id": "401867876",
-        "date": "2026-09-13T02:00Z",
-        "name": "North Dakota Fighting Hawks at Portland State Vikings",
-        "teams": [
-          {
-            "id": "2502",
-            "name": "Portland State Vikings",
-            "short": "Portland St",
-            "abbrev": "PRST",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "155",
-            "name": "North Dakota Fighting Hawks",
-            "short": "North Dakota",
-            "abbrev": "UND",
-            "homeAway": "away",
-            "score": "14"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "4:01 - 1st",
-        "broadcasts": [
-          "ESPN+"
         ]
       },
       {
@@ -9356,35 +9706,6 @@
         ]
       },
       {
-        "id": "401866629",
-        "date": "2026-09-12T22:00Z",
-        "name": "Bryant Bulldogs at Hampton Pirates",
-        "teams": [
-          {
-            "id": "2261",
-            "name": "Hampton Pirates",
-            "short": "Hampton",
-            "abbrev": "HAMP",
-            "homeAway": "home",
-            "score": "3"
-          },
-          {
-            "id": "2803",
-            "name": "Bryant Bulldogs",
-            "short": "Bryant",
-            "abbrev": "BRY",
-            "homeAway": "away",
-            "score": "31"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "FloSports"
-        ]
-      },
-      {
         "id": "401866631",
         "date": "2026-09-12T22:00Z",
         "name": "Stonehill Skyhawks at New Hampshire Wildcats",
@@ -9642,35 +9963,6 @@
         ]
       },
       {
-        "id": "401856786",
-        "date": "2026-09-12T23:00Z",
-        "name": "Western Carolina Catamounts at Cincinnati Bearcats",
-        "teams": [
-          {
-            "id": "2132",
-            "name": "Cincinnati Bearcats",
-            "short": "Cincinnati",
-            "abbrev": "CIN",
-            "homeAway": "home",
-            "score": "62"
-          },
-          {
-            "id": "2717",
-            "name": "Western Carolina Catamounts",
-            "short": "W Carolina",
-            "abbrev": "WCU",
-            "homeAway": "away",
-            "score": "10"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
         "id": "401864503",
         "date": "2026-09-12T23:00Z",
         "name": "Illinois State Redbirds at Northern Illinois Huskies",
@@ -9700,324 +9992,32 @@
         ]
       },
       {
-        "id": "401867890",
-        "date": "2026-09-12T23:00Z",
-        "name": "Southeast Missouri State Redhawks at Southern Illinois Salukis",
+        "id": "401867876",
+        "date": "2026-09-13T02:00Z",
+        "name": "North Dakota Fighting Hawks at Portland State Vikings",
         "teams": [
           {
-            "id": "79",
-            "name": "Southern Illinois Salukis",
-            "short": "S Illinois",
-            "abbrev": "SIU",
+            "id": "2502",
+            "name": "Portland State Vikings",
+            "short": "Portland St",
+            "abbrev": "PRST",
             "homeAway": "home",
-            "score": "34"
-          },
-          {
-            "id": "2546",
-            "name": "Southeast Missouri State Redhawks",
-            "short": "SE Missouri",
-            "abbrev": "SEMO",
-            "homeAway": "away",
-            "score": "20"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868072",
-        "date": "2026-09-12T23:00Z",
-        "name": "Central Oklahoma Bronchos at Central Arkansas Bears",
-        "teams": [
-          {
-            "id": "2110",
-            "name": "Central Arkansas Bears",
-            "short": "C Arkansas",
-            "abbrev": "CARK",
-            "homeAway": "home",
-            "score": "59"
-          },
-          {
-            "id": "2122",
-            "name": "Central Oklahoma Bronchos",
-            "short": "C Oklahoma",
-            "abbrev": "CENO",
-            "homeAway": "away",
-            "score": "20"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868150",
-        "date": "2026-09-12T23:00Z",
-        "name": "North Alabama Lions at SE Louisiana Lions",
-        "teams": [
-          {
-            "id": "2545",
-            "name": "SE Louisiana Lions",
-            "short": "SE Louisiana",
-            "abbrev": "SELA",
-            "homeAway": "home",
-            "score": "30"
-          },
-          {
-            "id": "2453",
-            "name": "North Alabama Lions",
-            "short": "North Alabama",
-            "abbrev": "UNA",
-            "homeAway": "away",
-            "score": "25"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868241",
-        "date": "2026-09-12T23:00Z",
-        "name": "West Georgia Wolves at Arkansas State Red Wolves",
-        "teams": [
-          {
-            "id": "2032",
-            "name": "Arkansas State Red Wolves",
-            "short": "Arkansas St",
-            "abbrev": "ARST",
-            "homeAway": "home",
-            "score": "52"
-          },
-          {
-            "id": "2698",
-            "name": "West Georgia Wolves",
-            "short": "West Georgia",
-            "abbrev": "WES",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868246",
-        "date": "2026-09-12T23:00Z",
-        "name": "UT Rio Grande Valley Vaqueros at Nicholls Colonels",
-        "teams": [
-          {
-            "id": "2447",
-            "name": "Nicholls Colonels",
-            "short": "Nicholls",
-            "abbrev": "NICH",
-            "homeAway": "home",
-            "score": "31"
-          },
-          {
-            "id": "292",
-            "name": "UT Rio Grande Valley Vaqueros",
-            "short": "UT Rio Grande",
-            "abbrev": "RGV",
-            "homeAway": "away",
-            "score": "28"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868386",
-        "date": "2026-09-12T23:00Z",
-        "name": "Samford Bulldogs at Tennessee Tech Golden Eagles",
-        "teams": [
-          {
-            "id": "2635",
-            "name": "Tennessee Tech Golden Eagles",
-            "short": "Tennessee Tech",
-            "abbrev": "TNTC",
-            "homeAway": "home",
-            "score": "45"
-          },
-          {
-            "id": "2535",
-            "name": "Samford Bulldogs",
-            "short": "Samford",
-            "abbrev": "SAM",
-            "homeAway": "away",
-            "score": "19"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401869130",
-        "date": "2026-09-12T23:00Z",
-        "name": "Northwestern State Demons at East Texas A&M Lions",
-        "teams": [
-          {
-            "id": "2837",
-            "name": "East Texas A&M Lions",
-            "short": "East Texas A&M",
-            "abbrev": "ETAM",
-            "homeAway": "home",
-            "score": "38"
-          },
-          {
-            "id": "2466",
-            "name": "Northwestern State Demons",
-            "short": "N'Western St",
-            "abbrev": "NWST",
-            "homeAway": "away",
-            "score": "14"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401869150",
-        "date": "2026-09-12T23:00Z",
-        "name": "Arkansas Baptist Buffaloes at Houston Christian Huskies",
-        "teams": [
-          {
-            "id": "2277",
-            "name": "Houston Christian Huskies",
-            "short": "Hou Christian",
-            "abbrev": "HCU",
-            "homeAway": "home",
-            "score": "88"
-          },
-          {
-            "id": "124386",
-            "name": "Arkansas Baptist Buffaloes",
-            "short": "Ark Baptist",
-            "abbrev": "ARBA",
-            "homeAway": "away",
             "score": "0"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401871046",
-        "date": "2026-09-12T23:00Z",
-        "name": "Lindenwood Lions at Missouri State Bears",
-        "teams": [
-          {
-            "id": "2623",
-            "name": "Missouri State Bears",
-            "short": "Missouri St",
-            "abbrev": "MOST",
-            "homeAway": "home",
-            "score": "48"
           },
           {
-            "id": "2815",
-            "name": "Lindenwood Lions",
-            "short": "Lindenwood",
-            "abbrev": "LIN",
+            "id": "155",
+            "name": "North Dakota Fighting Hawks",
+            "short": "North Dakota",
+            "abbrev": "UND",
             "homeAway": "away",
             "score": "14"
           }
         ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
+        "state": "in",
+        "completed": false,
+        "detail": "13:31 - 2nd",
         "broadcasts": [
           "ESPN+"
-        ]
-      },
-      {
-        "id": "401872616",
-        "date": "2026-09-12T23:00Z",
-        "name": "New Haven Chargers at South Dakota State Jackrabbits",
-        "teams": [
-          {
-            "id": "2571",
-            "name": "South Dakota State Jackrabbits",
-            "short": "S Dakota St",
-            "abbrev": "SDST",
-            "homeAway": "home",
-            "score": "57"
-          },
-          {
-            "id": "2441",
-            "name": "New Haven Chargers",
-            "short": "New Haven",
-            "abbrev": "NH",
-            "homeAway": "away",
-            "score": "14"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+",
-          "Midco Sports Net",
-          "KELO-TV"
-        ]
-      },
-      {
-        "id": "401858447",
-        "date": "2026-09-12T23:15Z",
-        "name": "Western Illinois Leathernecks at Wisconsin Badgers",
-        "teams": [
-          {
-            "id": "275",
-            "name": "Wisconsin Badgers",
-            "short": "Wisconsin",
-            "abbrev": "WIS",
-            "homeAway": "home",
-            "score": "36"
-          },
-          {
-            "id": "2710",
-            "name": "Western Illinois Leathernecks",
-            "short": "W Illinois",
-            "abbrev": "WIU",
-            "homeAway": "away",
-            "score": "9"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "BTN"
         ]
       },
       {
@@ -10039,12 +10039,12 @@
             "short": "Montana St",
             "abbrev": "MTST",
             "homeAway": "away",
-            "score": "0"
+            "score": "7"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 10:30 PM EDT",
+        "detail": "12:05 - 1st",
         "broadcasts": [
           "CW"
         ]
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-tanner-williams-kealii-ah-yat-after-utah-tech-win/",
     "youtube_id": "kUA6VfnmPKI"
   },
-  "fcs_scores_updated": "2026-09-13T02:37:45.225686+00:00"
+  "fcs_scores_updated": "2026-09-13T02:48:12.878235+00:00"
 }
