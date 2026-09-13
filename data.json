@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T03:23:56.701560+00:00",
+  "updated": "2026-09-13T03:38:14.943923+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-13T03:24:33.736456+00:00"
+    "checked_at": "2026-09-13T03:38:46.487315+00:00"
   },
   "resources": [
     {
@@ -7818,9 +7818,9 @@
             "score": "9"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "1:55 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "SECN+"
         ]
@@ -7844,12 +7844,12 @@
             "short": "AR-Pine Bluff",
             "abbrev": "UAPB",
             "homeAway": "away",
-            "score": "45"
+            "score": "51"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "2OT",
+        "state": "post",
+        "completed": true,
+        "detail": "Final/2OT",
         "broadcasts": []
       },
       {
@@ -7874,9 +7874,9 @@
             "score": "27"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "End of 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7901,35 +7901,6 @@
             "abbrev": "GRAM",
             "homeAway": "away",
             "score": "7"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "1:21 - 4th",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401868050",
-        "date": "2026-09-13T00:00Z",
-        "name": "Stephen F. Austin Lumberjacks at Abilene Christian Wildcats",
-        "teams": [
-          {
-            "id": "2000",
-            "name": "Abilene Christian Wildcats",
-            "short": "Abilene Chrstn",
-            "abbrev": "ACU",
-            "homeAway": "home",
-            "score": "7"
-          },
-          {
-            "id": "2617",
-            "name": "Stephen F. Austin Lumberjacks",
-            "short": "SF Austin",
-            "abbrev": "SFA",
-            "homeAway": "away",
-            "score": "26"
           }
         ],
         "state": "post",
@@ -7963,7 +7934,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:00 - 4th",
+        "detail": "End of 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -7979,7 +7950,7 @@
             "short": "San José St",
             "abbrev": "SJSU",
             "homeAway": "home",
-            "score": "20"
+            "score": "23"
           },
           {
             "id": "13",
@@ -7992,7 +7963,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:56 - 4th",
+        "detail": "10:14 - 4th",
         "broadcasts": [
           "MW+"
         ]
@@ -8008,7 +7979,7 @@
             "short": "UTEP",
             "abbrev": "UTEP",
             "homeAway": "home",
-            "score": "35"
+            "score": "42"
           },
           {
             "id": "2640",
@@ -8021,7 +7992,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:09 - 3rd",
+        "detail": "6:23 - 3rd",
         "broadcasts": [
           "MW+"
         ]
@@ -8045,12 +8016,12 @@
             "short": "North Dakota",
             "abbrev": "UND",
             "homeAway": "away",
-            "score": "24"
+            "score": "26"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "1:46 - 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8079,7 +8050,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "End of 1st",
+        "detail": "8:04 - 2nd",
         "broadcasts": [
           "CW"
         ]
@@ -10040,6 +10011,35 @@
             "abbrev": "FOR",
             "homeAway": "away",
             "score": "7"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868050",
+        "date": "2026-09-13T00:00Z",
+        "name": "Stephen F. Austin Lumberjacks at Abilene Christian Wildcats",
+        "teams": [
+          {
+            "id": "2000",
+            "name": "Abilene Christian Wildcats",
+            "short": "Abilene Chrstn",
+            "abbrev": "ACU",
+            "homeAway": "home",
+            "score": "7"
+          },
+          {
+            "id": "2617",
+            "name": "Stephen F. Austin Lumberjacks",
+            "short": "SF Austin",
+            "abbrev": "SFA",
+            "homeAway": "away",
+            "score": "26"
           }
         ],
         "state": "post",
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-tanner-williams-kealii-ah-yat-after-utah-tech-win/",
     "youtube_id": "kUA6VfnmPKI"
   },
-  "fcs_scores_updated": "2026-09-13T03:24:36.275485+00:00"
+  "fcs_scores_updated": "2026-09-13T03:38:50.508478+00:00"
 }
