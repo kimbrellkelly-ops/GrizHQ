@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13T00:50:37.111582+00:00",
+  "updated": "2026-09-13T01:06:07.799467+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-13T00:51:04.044074+00:00"
+    "checked_at": "2026-09-13T01:06:36.796204+00:00"
   },
   "resources": [
     {
@@ -7797,64 +7797,6 @@
     ],
     "2026-09-10": [
       {
-        "id": "401868123",
-        "date": "2026-09-12T21:00Z",
-        "name": "Incarnate Word Cardinals at Northern Arizona Lumberjacks",
-        "teams": [
-          {
-            "id": "2464",
-            "name": "Northern Arizona Lumberjacks",
-            "short": "N Arizona",
-            "abbrev": "NAU",
-            "homeAway": "home",
-            "score": "38"
-          },
-          {
-            "id": "2916",
-            "name": "Incarnate Word Cardinals",
-            "short": "Incarnate Word",
-            "abbrev": "UIW",
-            "homeAway": "away",
-            "score": "28"
-          }
-        ],
-        "state": "in",
-        "completed": false,
-        "detail": "4:03 - 4th",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401856672",
-        "date": "2026-09-12T21:30Z",
-        "name": "Campbell Fighting Camels at Florida Gators",
-        "teams": [
-          {
-            "id": "57",
-            "name": "Florida Gators",
-            "short": "Florida",
-            "abbrev": "FLA",
-            "homeAway": "home",
-            "score": "52"
-          },
-          {
-            "id": "2097",
-            "name": "Campbell Fighting Camels",
-            "short": "Campbell",
-            "abbrev": "CAM",
-            "homeAway": "away",
-            "score": "3"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "SECN+"
-        ]
-      },
-      {
         "id": "401866629",
         "date": "2026-09-12T22:00Z",
         "name": "Bryant Bulldogs at Hampton Pirates",
@@ -7873,12 +7815,12 @@
             "short": "Bryant",
             "abbrev": "BRY",
             "homeAway": "away",
-            "score": "17"
+            "score": "24"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "9:40 - 3rd",
         "broadcasts": [
           "FloSports"
         ]
@@ -7907,7 +7849,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "5:41 - 4th",
+        "detail": "0:55 - 4th",
         "broadcasts": [
           "FloSports"
         ]
@@ -7923,7 +7865,7 @@
             "short": "Morgan St",
             "abbrev": "MORG",
             "homeAway": "home",
-            "score": "48"
+            "score": "55"
           },
           {
             "id": "2355",
@@ -7936,7 +7878,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:05 - 4th",
+        "detail": "8:52 - 4th",
         "broadcasts": []
       },
       {
@@ -7950,7 +7892,7 @@
             "short": "SC State",
             "abbrev": "SCST",
             "homeAway": "home",
-            "score": "59"
+            "score": "66"
           },
           {
             "id": "330",
@@ -7963,7 +7905,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:28 - 4th",
+        "detail": "4:05 - 4th",
         "broadcasts": []
       },
       {
@@ -7977,7 +7919,7 @@
             "short": "Idaho St",
             "abbrev": "IDST",
             "homeAway": "home",
-            "score": "45"
+            "score": "52"
           },
           {
             "id": "301",
@@ -7990,7 +7932,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "7:20 - 4th",
+        "detail": "2:00 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8048,7 +7990,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "6:14 - 4th",
+        "detail": "1:52 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8064,7 +8006,7 @@
             "short": "Butler",
             "abbrev": "BTLR",
             "homeAway": "home",
-            "score": "45"
+            "score": "52"
           },
           {
             "id": "2233",
@@ -8075,9 +8017,9 @@
             "score": "0"
           }
         ],
-        "state": "in",
-        "completed": false,
-        "detail": "3:01 - 4th",
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8106,7 +8048,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:20 - 4th",
+        "detail": "5:35 - 4th",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8122,7 +8064,7 @@
             "short": "W Michigan",
             "abbrev": "WMU",
             "homeAway": "home",
-            "score": "35"
+            "score": "42"
           },
           {
             "id": "2405",
@@ -8135,7 +8077,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "9:10 - 3rd",
+        "detail": "0:39 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8180,7 +8122,7 @@
             "short": "South Carolina",
             "abbrev": "SC",
             "homeAway": "home",
-            "score": "17"
+            "score": "24"
           },
           {
             "id": "119",
@@ -8193,7 +8135,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "12:07 - 3rd",
         "broadcasts": [
           "SECN+"
         ]
@@ -8209,7 +8151,7 @@
             "short": "Cincinnati",
             "abbrev": "CIN",
             "homeAway": "home",
-            "score": "28"
+            "score": "35"
           },
           {
             "id": "2717",
@@ -8222,7 +8164,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "13:34 - 3rd",
+        "detail": "9:04 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8238,7 +8180,7 @@
             "short": "Colorado St",
             "abbrev": "CSU",
             "homeAway": "home",
-            "score": "45"
+            "score": "48"
           },
           {
             "id": "253",
@@ -8251,7 +8193,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "0:08 - 2nd",
+        "detail": "Halftime",
         "broadcasts": [
           "CBSSN"
         ]
@@ -8280,7 +8222,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:00 - 3rd",
+        "detail": "4:43 - 3rd",
         "broadcasts": [
           "MW+"
         ]
@@ -8304,12 +8246,12 @@
             "short": "Indiana St",
             "abbrev": "INST",
             "homeAway": "away",
-            "score": "28"
+            "score": "35"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "11:11 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8338,7 +8280,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "12:53 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8367,7 +8309,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "8:39 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8383,7 +8325,7 @@
             "short": "C Arkansas",
             "abbrev": "CARK",
             "homeAway": "home",
-            "score": "24"
+            "score": "38"
           },
           {
             "id": "2122",
@@ -8396,7 +8338,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "14:18 - 3rd",
+        "detail": "12:05 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8412,7 +8354,7 @@
             "short": "SE Louisiana",
             "abbrev": "SELA",
             "homeAway": "home",
-            "score": "14"
+            "score": "21"
           },
           {
             "id": "2453",
@@ -8425,7 +8367,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "11:45 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8454,7 +8396,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "15:00 - 3rd",
         "broadcasts": [
           "SWAC TV"
         ]
@@ -8470,7 +8412,7 @@
             "short": "Arkansas St",
             "abbrev": "ARST",
             "homeAway": "home",
-            "score": "21"
+            "score": "28"
           },
           {
             "id": "2698",
@@ -8483,7 +8425,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:21 - 3rd",
+        "detail": "8:30 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8499,7 +8441,7 @@
             "short": "Nicholls",
             "abbrev": "NICH",
             "homeAway": "home",
-            "score": "17"
+            "score": "24"
           },
           {
             "id": "292",
@@ -8512,7 +8454,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "6:31 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8541,7 +8483,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "15:00 - 3rd",
         "broadcasts": []
       },
       {
@@ -8563,12 +8505,12 @@
             "short": "Samford",
             "abbrev": "SAM",
             "homeAway": "away",
-            "score": "9"
+            "score": "12"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "11:21 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8597,7 +8539,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "14:12 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8655,7 +8597,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "11:06 - 3rd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8684,7 +8626,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "15:00 - 3rd",
         "broadcasts": [
           "ESPN+",
           "Midco Sports Net",
@@ -8715,7 +8657,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "Halftime",
+        "detail": "13:12 - 3rd",
         "broadcasts": [
           "BTN"
         ]
@@ -8744,7 +8686,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:38 - 2nd",
+        "detail": "0:42 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8773,7 +8715,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "12:45 - 2nd",
+        "detail": "5:10 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8789,7 +8731,7 @@
             "short": "TCU",
             "abbrev": "TCU",
             "homeAway": "home",
-            "score": "14"
+            "score": "21"
           },
           {
             "id": "2755",
@@ -8802,7 +8744,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "10:53 - 2nd",
+        "detail": "8:26 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8826,12 +8768,12 @@
             "short": "SF Austin",
             "abbrev": "SFA",
             "homeAway": "away",
-            "score": "0"
+            "score": "14"
           }
         ],
         "state": "in",
         "completed": false,
-        "detail": "15:00 - 2nd",
+        "detail": "10:16 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -8847,7 +8789,7 @@
             "short": "Baylor",
             "abbrev": "BAY",
             "homeAway": "home",
-            "score": "10"
+            "score": "17"
           },
           {
             "id": "2504",
@@ -8860,7 +8802,7 @@
         ],
         "state": "in",
         "completed": false,
-        "detail": "2:09 - 1st",
+        "detail": "13:51 - 2nd",
         "broadcasts": [
           "ESPN+"
         ]
@@ -9905,6 +9847,35 @@
         ]
       },
       {
+        "id": "401868123",
+        "date": "2026-09-12T21:00Z",
+        "name": "Incarnate Word Cardinals at Northern Arizona Lumberjacks",
+        "teams": [
+          {
+            "id": "2464",
+            "name": "Northern Arizona Lumberjacks",
+            "short": "N Arizona",
+            "abbrev": "NAU",
+            "homeAway": "home",
+            "score": "38"
+          },
+          {
+            "id": "2916",
+            "name": "Incarnate Word Cardinals",
+            "short": "Incarnate Word",
+            "abbrev": "UIW",
+            "homeAway": "away",
+            "score": "28"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
         "id": "401868285",
         "date": "2026-09-12T21:15Z",
         "name": "Stetson Hatters at Bethune-Cookman Wildcats",
@@ -9934,6 +9905,35 @@
         ]
       },
       {
+        "id": "401856672",
+        "date": "2026-09-12T21:30Z",
+        "name": "Campbell Fighting Camels at Florida Gators",
+        "teams": [
+          {
+            "id": "57",
+            "name": "Florida Gators",
+            "short": "Florida",
+            "abbrev": "FLA",
+            "homeAway": "home",
+            "score": "52"
+          },
+          {
+            "id": "2097",
+            "name": "Campbell Fighting Camels",
+            "short": "Campbell",
+            "abbrev": "CAM",
+            "homeAway": "away",
+            "score": "3"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "SECN+"
+        ]
+      },
+      {
         "id": "401864504",
         "date": "2026-09-13T01:00Z",
         "name": "Cal Poly Mustangs at San José State Spartans",
@@ -9955,9 +9955,9 @@
             "score": "0"
           }
         ],
-        "state": "pre",
+        "state": "in",
         "completed": false,
-        "detail": "9/12 - 9:00 PM EDT",
+        "detail": "14:54 - 1st",
         "broadcasts": [
           "MW+"
         ]
@@ -27507,5 +27507,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-montanas-bobby-kennedy-s-kade-boyd-wr-landon-ransom-goelz-on-utah-tech/",
     "youtube_id": ""
   },
-  "fcs_scores_updated": "2026-09-13T00:51:07.641101+00:00"
+  "fcs_scores_updated": "2026-09-13T01:06:39.283814+00:00"
 }
