@@ -11,7 +11,8 @@ URLS = [
     "https://new.cbssports.com/college-football/teams/MT/montana-grizzlies/stats/",
 ]
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130 Safari/537.36"}
-CATEGORIES = ("passing", "rushing", "receiving")
+OFFENSE = ("passing", "rushing", "receiving")
+ALL = OFFENSE + ("tackles", "pressure", "special")
 
 
 def clean(value):
@@ -56,7 +57,6 @@ def player_name(cell):
         if candidate.lower() in {"player", "player on team", "team", "opponents", "total", "totals"}:
             continue
         words = candidate.split()
-        # CBS combines abbreviated and full names. The full name is at the end.
         if len(words) >= 4:
             words = words[-3:]
             if len(words) == 3 and re.fullmatch(r"[A-Za-z]\\.?", words[0]):
@@ -102,7 +102,8 @@ def parse_table(table, category):
 
 def main():
     data = json.loads(DATA.read_text(encoding="utf-8"))
-    leaders = {"passing": [], "rushing": [], "receiving": [], "tackles": [], "pressure": [], "special": []}
+    previous = data.get("stats", {}).get("leaders", {})
+    leaders = {name: [] for name in ALL}
     source_used = None
 
     for url in URLS:
@@ -110,7 +111,7 @@ def main():
             response = requests.get(url, headers=HEADERS, timeout=45)
             response.raise_for_status()
             soup = BeautifulSoup(response.text, "html.parser")
-            candidate = {"passing": [], "rushing": [], "receiving": []}
+            candidate = {name: [] for name in OFFENSE}
             for table in soup.find_all("table"):
                 headers, _, _ = table_header(table)
                 if not headers:
@@ -121,30 +122,33 @@ def main():
                     candidate["receiving"] = parse_table(table, "receiving")[:5]
                 elif index_of(headers, "ATT") is not None and index_of(headers, "YDS") is not None and index_of(headers, "AVG") is not None:
                     candidate["rushing"] = parse_table(table, "rushing")[:5]
-            if all(candidate[name] for name in CATEGORIES):
+            if all(candidate[name] for name in OFFENSE):
                 leaders.update(candidate)
                 source_used = url
                 break
         except requests.RequestException as exc:
             print(f"Source unavailable: {url}: {exc}")
 
-    # If CBS is temporarily blocked, retain the last verified offensive data rather
-    # than failing the entire refresh or publishing opponent/garbage rows.
     if source_used is None:
-        previous = data.get("stats", {}).get("leaders", {})
-        if not all(previous.get(name) for name in CATEGORIES):
-            raise RuntimeError("No complete verified offensive leaders were available from CBS or the existing data")
-        for name in CATEGORIES:
+        if not all(previous.get(name) for name in OFFENSE):
+            raise RuntimeError("No complete verified offensive leaders were available from CBS or existing data")
+        for name in OFFENSE:
             leaders[name] = previous[name]
-        source_used = "existing verified CBS offensive leaders (CBS temporarily unavailable)"
-        print("CBS unavailable; preserved existing verified offensive leaders")
+        source_used = "existing verified CBS offensive leaders"
+        print("CBS unavailable; preserved existing offensive leaders")
+
+    # Never carry forward the known-bad opponent defensive/special-teams rows.
+    # These categories will remain empty until a separate verified Montana
+    # box-score aggregation is installed.
+    for name in ("tackles", "pressure", "special"):
+        leaders[name] = []
 
     stats = data.setdefault("stats", {})
     stats["leaders"] = leaders
     stats["leaders_source"] = source_used
     stats["leaders_updated"] = data.get("updated")
     DATA.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print("Updated Montana offensive leaders safely; unverified defense and special teams remain empty")
+    print("Updated verified offensive leaders; cleared unverified defensive and special-teams leaders")
 
 
 if __name__ == "__main__":
