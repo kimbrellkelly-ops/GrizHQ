@@ -8,6 +8,7 @@ on:
     paths:
       - "refresh_player_stats.py"
       - "stats_safety.py"
+      - "validate_stats.py"
       - ".github/workflows/refresh-griz-data.yml"
 
 permissions:
@@ -48,6 +49,9 @@ jobs:
       - name: Restore empty stats categories safely
         run: python stats_safety.py
 
+      - name: Validate generated stats
+        run: python validate_stats.py
+
       - name: Commit updated data safely
         run: |
           set -e
@@ -62,6 +66,7 @@ jobs:
             python score_refresh.py
             python repair_stats.py
             python stats_safety.py
+            python validate_stats.py
             git add data.json
 
             if git diff --cached --quiet; then
