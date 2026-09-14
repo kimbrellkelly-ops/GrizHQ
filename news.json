@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-14T19:06:09.948840+00:00",
+  "updated": "2026-09-14T19:24:33.513159+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 81,
+  "story_count": 82,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -29,6 +29,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/50/0505ed27-6000-5e9a-b5b9-6b0fec681bad/6aa5dd47ee65b.image.jpg?resize=300%2C240"
+    },
+    {
+      "title": "Montana's Eli Gillman, Everett O’Donnell earn Big Sky weekly honors",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montanas-eli-gillman-everett-o-donnell-earn-big-sky-weekly-honors/article_00a8db7d-0126-4235-8127-93e81b3e1a43.html",
+      "date": "Sep. 14, 2026",
+      "published_at": "2026-09-14T18:45:00+00:00",
+      "description": "Montana's Eli Gillman, Everett O’Donnell earn Big Sky weekly honors",
+      "source": "406 MT Sports",
+      "badge": "HONOR",
+      "short": "HONOR",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/0a/00a8db7d-0126-4235-8127-93e81b3e1a43/6aa840de90bdd.preview.jpg?crop=1308%2C687%2C266%2C24&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/0a/00a8db7d-0126-4235-8127-93e81b3e1a43/6aa840de90bdd.preview.jpg?crop=1308%2C687%2C266%2C24&resize=1200%2C630&order=crop%2Cresize"
     },
     {
       "title": "Gillman and O’Donnell earn Big Sky weekly honors",
