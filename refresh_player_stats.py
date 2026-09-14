@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-"""Rebuild Montana player leaders from official GoGriz cumulative tables.
+"""Rebuild Montana player leaders from the rendered official GoGriz page.
 
-Fail closed: never replace valid player leaders with a partially parsed result.
+The GoGriz stats tabs are client-rendered. A plain requests/BeautifulSoup scrape
+sees blank player cells, so this script uses Playwright to render the page before
+parsing it. It fails closed and never publishes a partial leaders object.
 """
 from __future__ import annotations
 
@@ -11,12 +13,11 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-import requests
 from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright
 
 DATA = Path("data.json")
 URL = "https://gogriz.com/sports/football/stats/2026"
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; GrizHQ/1.0)"}
 CATEGORIES = ("passing", "rushing", "receiving", "tackles", "pressure", "special")
 
 
@@ -29,10 +30,15 @@ def number(value):
     return float(match.group()) if match else 0.0
 
 
-def soup(url):
-    response = requests.get(url, headers=HEADERS, timeout=45)
-    response.raise_for_status()
-    return BeautifulSoup(response.text, "html.parser")
+def rendered_soup():
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=True)
+        page = browser.new_page()
+        page.goto(URL, wait_until="networkidle", timeout=90000)
+        page.wait_for_timeout(3000)
+        html = page.content()
+        browser.close()
+    return BeautifulSoup(html, "html.parser")
 
 
 def table_header(table):
@@ -155,7 +161,7 @@ def output(totals):
 
 
 def main():
-    page = soup(URL)
+    page = rendered_soup()
     totals = {category: defaultdict(lambda: defaultdict(float)) for category in CATEGORIES}
     for table in page.find_all("table"):
         headers, _, _ = table_header(table)
@@ -166,7 +172,7 @@ def main():
     leaders = output(totals)
     missing = [category for category in CATEGORIES if not leaders[category]]
     if missing:
-        raise RuntimeError("Official GoGriz player tables were only partially parsed; refusing to publish. Missing: " + ", ".join(missing))
+        raise RuntimeError("Rendered GoGriz player tables were only partially parsed; refusing to publish. Missing: " + ", ".join(missing))
 
     data = json.loads(DATA.read_text(encoding="utf-8"))
     stats = data.setdefault("stats", {})
