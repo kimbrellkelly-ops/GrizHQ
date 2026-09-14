@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14T16:09:50.890435+00:00",
+  "updated": "2026-09-14T16:25:50.300647+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-14T16:10:17.802222+00:00"
+    "checked_at": "2026-09-14T16:26:21.577246+00:00"
   },
   "resources": [
     {
@@ -2935,7 +2935,7 @@
       "pending": []
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-14T16:09:55.303879+00:00",
+    "source_checked_at": "2026-09-14T16:25:56.900905+00:00",
     "team_summary": [
       {
         "value": "3–0",
@@ -12305,33 +12305,6 @@
         ]
       },
       {
-        "id": "401858237",
-        "date": "2026-09-26T04:00Z",
-        "name": "Central Arkansas Bears at Florida State Seminoles",
-        "teams": [
-          {
-            "id": "52",
-            "name": "Florida State Seminoles",
-            "short": "Florida St",
-            "abbrev": "FSU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2110",
-            "name": "Central Arkansas Bears",
-            "short": "C Arkansas",
-            "abbrev": "CARK",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
         "id": "401867687",
         "date": "2026-09-26T04:00Z",
         "name": "Norfolk State Spartans at Chicago State Cougars",
@@ -13044,6 +13017,35 @@
         "detail": "9/26 - 2:30 PM EDT",
         "broadcasts": [
           "ESPN+"
+        ]
+      },
+      {
+        "id": "401858237",
+        "date": "2026-09-26T04:00Z",
+        "name": "Central Arkansas Bears at Florida State Seminoles",
+        "teams": [
+          {
+            "id": "52",
+            "name": "Florida State Seminoles",
+            "short": "Florida St",
+            "abbrev": "FSU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2110",
+            "name": "Central Arkansas Bears",
+            "short": "C Arkansas",
+            "abbrev": "CARK",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": [
+          "ACC Network"
         ]
       },
       {
@@ -27607,5 +27609,5 @@
     "url": "https://skylinesportsmt.com/nevada-head-coach-jeff-choate-press-conference-following-20-7-loss-to-montana-state/",
     "youtube_id": "EyqaAcm3nvU"
   },
-  "fcs_scores_updated": "2026-09-14T16:10:20.466999+00:00"
+  "fcs_scores_updated": "2026-09-14T16:26:25.652372+00:00"
 }
