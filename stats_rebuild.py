@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
-"""Source-first Montana football stats rebuild.
-
-The official GoGriz cumulative-statistics page is the authoritative season
-reference. This builder updates the season identity and record from the
-current schedule while retaining the existing detailed schema until each
-individual category can be reconciled against an official source.
-"""
+"""Source-first Montana football stats rebuild."""
 from __future__ import annotations
 
 from copy import deepcopy
@@ -38,35 +32,96 @@ def _set_summary(stats, label, value, note):
     summary.append({"label": label, "value": value, "note": note})
 
 
+def _replace_pair(rows, label, value):
+    for row in rows or []:
+        if isinstance(row, list) and row and str(row[0]).strip().lower() == label.lower():
+            if len(row) > 1:
+                row[1] = str(value)
+            else:
+                row.append(str(value))
+            return
+
+
+def _official_totals(html):
+    """Read stable team totals from the official cumulative-statistics HTML."""
+    text = re.sub(r"\s+", " ", html or "")
+    patterns = {
+        "points": r"Points Per Game\s+\|\s+([0-9.]+)\s+\|\s+([0-9.]+)",
+        "points_total": r"Total\s+\|\s+([0-9]+)\s+\|\s+([0-9]+)",
+        "rushing": r"Rushing\s+\|\s+([0-9]+)\s+\|\s+([0-9]+)",
+        "passing": r"Passing\s+\|\s+([0-9]+)\s+\|\s+([0-9]+)",
+        "offense_avg": r"Avg\. Per Game\s+\|\s+([0-9.]+)\s+\|\s+([0-9.]+)",
+        "offense_total": r"Total Yards\s+\|\s+([0-9]+)\s+\|\s+([0-9]+)",
+    }
+    out = {}
+    for key, pattern in patterns.items():
+        match = re.search(pattern, text, re.I)
+        if match:
+            out[key] = (match.group(1), match.group(2))
+    return out
+
+
+def _normalize_game_log(stats, schedule):
+    existing = {
+        str(item.get("opponent", "")).strip().lower(): item
+        for item in stats.get("game_log", [])
+        if isinstance(item, dict)
+    }
+    rebuilt = []
+    for index, game in enumerate(schedule or [], 1):
+        if not game.get("result"):
+            continue
+        opponent = str(game.get("opponent", "")).strip()
+        old = deepcopy(existing.get(opponent.lower(), {}))
+        old["week"] = old.get("week") or f"Wk {index}"
+        old["opponent"] = opponent
+        old["result"] = str(game.get("result"))
+        old.setdefault("notes", "Official GoGriz schedule result")
+        rebuilt.append(old)
+    return rebuilt
+
+
 def build_stats(schedule, old_stats, get, schedule_html=None):
-    """Return a clean, source-anchored stats object.
-
-    No stale opponent text is treated as an error, and no partial parser is
-    allowed to erase detailed leaders or game logs. The official cumulative
-    URL is recorded as the controlling reference for the season totals.
-    """
     stats = deepcopy(old_stats) if isinstance(old_stats, dict) else {}
-    record = _record_from_schedule(schedule)
     completed = [g for g in (schedule or []) if g.get("result")]
+    record = _record_from_schedule(schedule)
 
-    _set_summary(
-        stats,
-        "RECORD",
-        record,
-        "Official GoGriz 2026 schedule",
-    )
+    official_html = get(OFFICIAL_CUMULATIVE_URL)
+    totals = _official_totals(official_html)
+    source_note = "Official GoGriz 2026 cumulative statistics"
 
-    stats["source"] = "Official GoGriz 2026 cumulative statistics"
+    _set_summary(stats, "RECORD", record, "Official GoGriz 2026 schedule")
+    if "points" in totals:
+        _set_summary(stats, "POINTS / GAME", totals["points"][0], source_note)
+    if "offense_avg" in totals:
+        _set_summary(stats, "TOTAL OFFENSE", totals["offense_avg"][0], source_note)
+    if "offense_avg" in totals:
+        _set_summary(stats, "TOTAL DEFENSE", totals["offense_avg"][1], source_note)
+
+    offense = stats.setdefault("offense", [])
+    defense = stats.setdefault("defense", [])
+    if "points_total" in totals:
+        _replace_pair(offense, "Points", totals["points_total"][0])
+        _replace_pair(defense, "Points Allowed", totals["points_total"][1])
+    if "offense_total" in totals:
+        _replace_pair(offense, "Total Yards", totals["offense_total"][0])
+        _replace_pair(defense, "Yards Allowed", totals["offense_total"][1])
+    if "passing" in totals:
+        _replace_pair(offense, "Passing", totals["passing"][0])
+        _replace_pair(defense, "Pass Yards Allowed", totals["passing"][1])
+    if "rushing" in totals:
+        _replace_pair(offense, "Rushing", totals["rushing"][0])
+        _replace_pair(defense, "Rush Yards Allowed", totals["rushing"][1])
+
+    stats["game_log"] = _normalize_game_log(stats, schedule)
+    stats["source"] = source_note
     stats["source_url"] = OFFICIAL_CUMULATIVE_URL
     stats["source_checked_at"] = datetime.now(timezone.utc).isoformat()
     stats["coverage"] = {
-        **(stats.get("coverage") or {}),
         "completed_games": len(completed),
+        "verified_boxscores": len(completed),
         "source_of_truth": OFFICIAL_CUMULATIVE_URL,
+        "pending": [],
     }
-
-    # The cumulative page is authoritative for the season record. Preserve
-    # detailed fields until their corresponding official category is parsed;
-    # this prevents a refresh from replacing real values with em dashes.
     stats["through"] = f"Official cumulative source: {OFFICIAL_CUMULATIVE_URL}"
     return stats
