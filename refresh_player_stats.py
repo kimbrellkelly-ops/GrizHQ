@@ -30,7 +30,8 @@ def table_header(table):
     rows = table.find_all("tr")
     for row_index, row in enumerate(rows[:15]):
         headers = [norm(cell.get_text(" ", strip=True)) for cell in row.find_all(["th", "td"])]
-        if "PLAYER" in headers and len(headers) >= 3:
+        # CBS sometimes renders this as PLAYER, PLAYER ON TEAM, or similar.
+        if any(header == "PLAYER" or header.startswith("PLAYER ") for header in headers) and len(headers) >= 3:
             return headers, rows, row_index
     return [], [], -1
 
@@ -46,23 +47,20 @@ def player_name(cell):
         if value:
             candidates.append(value)
 
+    positions = {"QB", "RB", "WR", "TE", "OL", "DL", "LB", "DB", "S", "CB", "FB", "K", "P", "LS"}
     for candidate in candidates:
-        candidate = re.sub(r"\b(?:QB|RB|WR|TE|OL|DL|LB|DB|S|CB|FB|K|P|LS)\b", "", candidate, flags=re.I)
+        candidate = re.sub(r"\b(?:QB|RB|WR|TE|OL|DL|LB|DB|S|CB|FB|K|P|LS)\b", " ", candidate, flags=re.I)
         candidate = re.sub(r"^\s*[A-Z0-9]+[.)]?\s+", "", clean(candidate))
         candidate = clean(candidate)
         if candidate.lower() in {"player", "team", "opponents", "total", "totals"}:
             continue
         words = candidate.split()
-        # CBS exposes both abbreviated and full names in one cell, e.g.
-        # "B. Davis WR Brooks Davis WR". Prefer the full name after the position.
         if len(words) >= 4:
-            positions = {"QB", "RB", "WR", "TE", "OL", "DL", "LB", "DB", "S", "CB", "FB", "K", "P", "LS"}
-            for i, word in enumerate(words):
-                if word.upper() in positions and i + 1 < len(words):
-                    tail = words[i + 1:]
-                    if len(tail) >= 2:
-                        words = tail
-                        break
+            # CBS commonly combines abbreviated and full names, e.g.
+            # “B. Davis Brooks Davis” or “Ransom-Goelz Landon Ransom-Goelz”.
+            words = words[-3:]
+            if len(words) == 3 and re.fullmatch(r"[A-Za-z]\.?", words[0]):
+                words = words[1:]
         if len(words) >= 2:
             return " ".join(words)
     return ""
@@ -72,7 +70,9 @@ def parse_table(table, category):
     headers, rows, header_row = table_header(table)
     if not headers:
         return []
-    player_column = headers.index("PLAYER")
+    player_column = next((i for i, header in enumerate(headers) if header == "PLAYER" or header.startswith("PLAYER ")), None)
+    if player_column is None:
+        return []
 
     def value(values, *names):
         index = index_of(headers, *names)
@@ -111,10 +111,8 @@ def main():
         headers, _, _ = table_header(table)
         if not headers:
             continue
-        if index_of(headers, "CMP", "COMP") is not None and index_of(headers, "YDS") is not None:
-            category = "passing" if index_of(headers, "ATT PASS", "PASS ATTEMPTS") is not None else None
-            if category:
-                leaders[category] = parse_table(table, category)[:5]
+        if index_of(headers, "CMP", "COMP") is not None and index_of(headers, "YDS") is not None and index_of(headers, "ATT") is not None:
+            leaders["passing"] = parse_table(table, "passing")[:5]
         elif index_of(headers, "REC", "RECEPTIONS") is not None and index_of(headers, "YDS") is not None:
             leaders["receiving"] = parse_table(table, "receiving")[:5]
         elif index_of(headers, "ATT") is not None and index_of(headers, "YDS") is not None and index_of(headers, "AVG") is not None:
@@ -126,10 +124,10 @@ def main():
 
     stats = data.setdefault("stats", {})
     stats["leaders"] = leaders
-    stats["leaders_source"] = URL + " (verified offense; defense and special teams intentionally withheld until a reliable structured feed is available)"
+    stats["leaders_source"] = URL + " (CBS verified offense; defensive and special-teams categories withheld until separately verified)"
     stats["leaders_updated"] = data.get("updated")
     DATA.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print("Updated verified Montana offensive leaders; withheld unverified defense and special teams")
+    print("Updated CBS Montana offensive leaders; defensive and special teams withheld")
 
 
 if __name__ == "__main__":
