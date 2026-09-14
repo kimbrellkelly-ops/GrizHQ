@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-14T16:03:49.816152+00:00",
+  "updated": "2026-09-14T16:24:55.047731+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 79,
+  "story_count": 80,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Gillman and O’Donnell earn Big Sky weekly honors",
+      "url": "https://gogriz.com/news/2026/9/14/football-gillman-and-o-donnell-earn-big-sky-weekly-honors",
+      "date": "Sep. 14, 2026",
+      "published_at": "2026-09-14T16:53:00+00:00",
+      "description": "MISSOULA - Eli Gillman and punter Everett O'Donnell each earned Big Sky Conference Player of the Week honors Monday after a pair of standout performances in Montana's 35-14 victory over Utah Tech at Washington-Grizzly Stadium.",
+      "source": "GoGriz",
+      "badge": "HONOR",
+      "short": "HONOR",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/14/Player_of_the_Week_-_Web_-_two_people.png",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/14/Player_of_the_Week_-_Web_-_two_people.png"
+    },
     {
       "title": "Week 2: No. 3 Montana Grizzlies down Utah Tech",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-2-no-3-montana-grizzlies-down-utah-tech/collection_cbc7550b-d7a8-4d37-81f1-38d8e91958ef.html",
