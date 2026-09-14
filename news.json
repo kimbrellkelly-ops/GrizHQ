@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-14T22:37:57.454063+00:00",
+  "updated": "2026-09-14T22:51:19.933128+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 82,
+  "story_count": 83,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "First look: No. 3 Montana Grizzlies at Oregon State Beavers",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_df55c928-851e-558c-bea9-4605644dc96f.html",
+      "date": "Sep. 14, 2026",
+      "published_at": "2026-09-14T22:45:00+00:00",
+      "description": "The Montana Grizzlies will hit the road for the first time this season when they play at Oregon State this weekend.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/e4/6e47c0bb-e060-58d7-a6e0-d90831c134bc/6aa5dd51efe75.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/e4/6e47c0bb-e060-58d7-a6e0-d90831c134bc/6aa5dd51efe75.image.jpg?resize=300%2C200"
+    },
     {
       "title": "Montana's Eli Gillman, Everett O’Donnell earn Big Sky weekly honors",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montanas-eli-gillman-everett-o-donnell-earn-big-sky-weekly-honors/article_00a8db7d-0126-4235-8127-93e81b3e1a43.html",
