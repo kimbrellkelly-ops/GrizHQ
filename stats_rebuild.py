@@ -42,23 +42,31 @@ def _replace_pair(rows, label, value):
             return
 
 
+def _row(text, label):
+    match = re.search(rf"{re.escape(label)}\s+\|\s+([^|]+)\s+\|\s+([^|]+)", text, re.I)
+    return (match.group(1).strip(), match.group(2).strip()) if match else None
+
+
+def _section(text, heading, next_heading):
+    match = re.search(rf"{re.escape(heading)}(.*?){re.escape(next_heading)}", text, re.I)
+    return match.group(1) if match else ""
+
+
 def _official_totals(html):
-    """Read stable team totals from the official cumulative-statistics HTML."""
+    """Read totals from the named sections of the official GoGriz page."""
     text = re.sub(r"\s+", " ", html or "")
-    patterns = {
-        "points": r"Points Per Game\s+\|\s+([0-9.]+)\s+\|\s+([0-9.]+)",
-        "points_total": r"Total\s+\|\s+([0-9]+)\s+\|\s+([0-9]+)",
-        "rushing": r"Rushing\s+\|\s+([0-9]+)\s+\|\s+([0-9]+)",
-        "passing": r"Passing\s+\|\s+([0-9]+)\s+\|\s+([0-9]+)",
-        "offense_avg": r"Avg\. Per Game\s+\|\s+([0-9.]+)\s+\|\s+([0-9.]+)",
-        "offense_total": r"Total Yards\s+\|\s+([0-9]+)\s+\|\s+([0-9]+)",
-    }
+    scoring = _section(text, "Scoring", "First Downs")
+    rushing = _section(text, "Rushing", "Passing")
+    passing = _section(text, "Passing", "Total Offense")
+    offense = _section(text, "Total Offense", "Returns")
     out = {}
-    for key, pattern in patterns.items():
-        match = re.search(pattern, text, re.I)
-        if match:
-            out[key] = (match.group(1), match.group(2))
-    return out
+    out["points"] = _row(scoring, "Points Per Game")
+    out["points_total"] = _row(scoring, "Total")
+    out["rushing"] = _row(rushing, "Total")
+    out["passing"] = _row(passing, "Total")
+    out["offense_avg"] = _row(offense, "Avg. Per Game")
+    out["offense_total"] = _row(offense, "Total Yards")
+    return {key: value for key, value in out.items() if value}
 
 
 def _normalize_game_log(stats, schedule):
@@ -84,18 +92,14 @@ def _normalize_game_log(stats, schedule):
 def build_stats(schedule, old_stats, get, schedule_html=None):
     stats = deepcopy(old_stats) if isinstance(old_stats, dict) else {}
     completed = [g for g in (schedule or []) if g.get("result")]
-    record = _record_from_schedule(schedule)
-
-    official_html = get(OFFICIAL_CUMULATIVE_URL)
-    totals = _official_totals(official_html)
+    totals = _official_totals(get(OFFICIAL_CUMULATIVE_URL))
     source_note = "Official GoGriz 2026 cumulative statistics"
 
-    _set_summary(stats, "RECORD", record, "Official GoGriz 2026 schedule")
+    _set_summary(stats, "RECORD", _record_from_schedule(schedule), "Official GoGriz 2026 schedule")
     if "points" in totals:
         _set_summary(stats, "POINTS / GAME", totals["points"][0], source_note)
     if "offense_avg" in totals:
         _set_summary(stats, "TOTAL OFFENSE", totals["offense_avg"][0], source_note)
-    if "offense_avg" in totals:
         _set_summary(stats, "TOTAL DEFENSE", totals["offense_avg"][1], source_note)
 
     offense = stats.setdefault("offense", [])
