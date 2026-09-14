@@ -2,15 +2,13 @@ import json
 import re
 from collections import defaultdict
 from pathlib import Path
-from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
 
 DATA = Path("data.json")
-BASE = "https://gogriz.com"
-SCHEDULE = f"{BASE}/sports/football/schedule/2026"
-ROSTER = f"{BASE}/sports/football/roster/2026"
+URL = "https://gogriz.com/sports/football/stats/2026"
+ROSTER_URL = "https://gogriz.com/sports/football/roster/2026"
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; GrizHQ/1.0)"}
 CATEGORIES = ("passing", "rushing", "receiving", "tackles", "pressure", "special")
 
@@ -25,15 +23,16 @@ def key(value):
     return " ".join(sorted(value.split()))
 
 
-def get(url):
+def soup(url):
     response = requests.get(url, headers=HEADERS, timeout=45)
     response.raise_for_status()
     return BeautifulSoup(response.text, "html.parser")
 
 
-def name_candidates(cell):
+def candidates(cell):
     values = []
-    for node in [cell] + cell.find_all(["a", "span", "img"]):
+    nodes = [cell] + cell.find_all(["a", "span", "img"])
+    for node in nodes:
         for attr in ("data-name", "aria-label", "title", "alt"):
             value = clean(node.get(attr, ""))
             if value:
@@ -45,56 +44,55 @@ def name_candidates(cell):
         match = re.search(r"/roster/[^/]+/([^/?#]+)/?", href)
         if match:
             values.append(match.group(1).replace("-", " "))
-    return values
+    return list(dict.fromkeys(values))
 
 
-def roster_keys(soup):
-    result = set()
-    for anchor in soup.find_all("a", href=True):
+def roster_map(page):
+    result = {}
+    for anchor in page.find_all("a", href=True):
         if "/roster/" not in anchor["href"]:
             continue
-        for value in name_candidates(anchor):
+        for value in candidates(anchor):
             if len(value.split()) >= 2:
-                result.add(key(value))
+                result.setdefault(key(value), value)
     if not result:
-        raise RuntimeError("Could not establish the official Montana roster")
+        raise RuntimeError("Could not read the official Montana roster")
     return result
 
 
-def player_name(cell, roster):
-    for value in name_candidates(cell):
+def player(cell, roster):
+    for value in candidates(cell):
         value = re.sub(r"\b(?:QB|RB|WR|TE|OL|DL|LB|DB|S|CB|FB|K|P|LS)\b", " ", value, flags=re.I)
         value = clean(value)
         if key(value) in roster:
-            return value
+            return roster[key(value)]
     return ""
 
 
-def headers_for(table):
+def headers(table):
     rows = table.find_all("tr")
     for index, row in enumerate(rows[:20]):
-        headers = [clean(cell.get_text(" ", strip=True)).upper() for cell in row.find_all(["th", "td"])]
-        if any(h == "PLAYER" or h.startswith("PLAYER ") for h in headers):
-            return headers, rows, index
+        values = [clean(c.get_text(" ", strip=True)).upper() for c in row.find_all(["th", "td"])]
+        if any(v == "PLAYER" or v.startswith("PLAYER ") for v in values):
+            return values, rows, index
     return [], [], -1
 
 
-def col(headers, *wanted):
-    for name in wanted:
-        for index, value in enumerate(headers):
-            if value == name or value.startswith(name + " "):
+def column(values, *wanted):
+    for wanted_name in wanted:
+        for index, value in enumerate(values):
+            if value == wanted_name or value.startswith(wanted_name + " "):
                 return index
     return None
 
 
 def number(value):
-    value = clean(value).replace(",", "")
-    match = re.search(r"-?\d+(?:\.\d+)?", value)
+    match = re.search(r"-?\d+(?:\.\d+)?", clean(value).replace(",", ""))
     return float(match.group()) if match else 0.0
 
 
-def classify(headers):
-    has = lambda *names: col(headers, *names) is not None
+def classify(h):
+    has = lambda *names: column(h, *names) is not None
     if has("CMP", "COMP") and has("ATT") and has("YDS") and has("TD"):
         return "passing"
     if has("REC", "RECEPTIONS") and has("YDS") and has("TD"):
@@ -110,24 +108,24 @@ def classify(headers):
     return None
 
 
-def parse_table(table, category, roster, totals):
-    headers, rows, header_index = headers_for(table)
-    if not headers:
+def parse(table, category, roster, totals):
+    h, rows, header_index = headers(table)
+    if not h:
         return
-    player_index = col(headers, "PLAYER")
-    if player_index is None:
+    p = column(h, "PLAYER")
+    if p is None:
         return
     for row in rows[header_index + 1:]:
         cells = row.find_all(["td", "th"])
-        if len(cells) <= player_index:
+        if len(cells) <= p:
             continue
-        player = player_name(cells[player_index], roster)
-        if not player:
+        name = player(cells[p], roster)
+        if not name:
             continue
-        values = [clean(cell.get_text(" ", strip=True)) for cell in cells]
+        values = [clean(c.get_text(" ", strip=True)) for c in cells]
         def v(*names):
-            index = col(headers, *names)
-            return number(values[index]) if index is not None and index < len(values) else 0.0
+            i = column(h, *names)
+            return number(values[i]) if i is not None and i < len(values) else 0.0
         if category == "passing":
             metrics = {"cmp": v("CMP", "COMP"), "yds": v("YDS"), "td": v("TD"), "int": v("INT")}
         elif category == "rushing":
@@ -140,74 +138,50 @@ def parse_table(table, category, roster, totals):
             metrics = {"tfl": v("TFL"), "sacks": v("SACK", "SACKS"), "ff": v("FF"), "int": v("INT")}
         else:
             metrics = {"made": v("FGM", "XPM"), "attempts": v("FGA", "XPA"), "punts": v("PUNTS"), "yds": v("YDS")}
-        bucket = totals[category][key(player)]
-        bucket["player"] = player
+        bucket = totals[category][key(name)]
+        bucket["player"] = name
         for metric, amount in metrics.items():
             bucket[metric] += amount
 
 
-def format_leaders(totals):
-    output = {category: [] for category in CATEGORIES}
-    sort_fields = {"passing": "yds", "rushing": "yds", "receiving": "yds", "tackles": "tot", "pressure": "tfl", "special": "made"}
+def output(totals):
+    result = {c: [] for c in CATEGORIES}
+    order = {"passing": "yds", "rushing": "yds", "receiving": "yds", "tackles": "tot", "pressure": "tfl", "special": "made"}
     for category in CATEGORIES:
-        field = sort_fields[category]
-        rows = sorted(totals[category].values(), key=lambda row: (-row[field], row["player"]))
-        rows = [row for row in rows if row[field] > 0]
-        for row in rows[:5]:
+        rows = sorted(totals[category].values(), key=lambda r: (-r[order[category]], r["player"]))
+        for row in [r for r in rows if r[order[category]] > 0][:5]:
             if category == "passing":
-                line = f'{int(row["cmp"])} CMP • {int(row["yds"])} YDS • {int(row["td"])} TD • {int(row["int"])} INT'
-                extra = ""
+                line = f'{int(row["cmp"])} CMP • {int(row["yds"])} YDS • {int(row["td"])} TD • {int(row["int"])} INT'; extra = ""
             elif category == "rushing":
-                line = f'{int(row["att"])} CAR • {int(row["yds"])} YDS • {int(row["td"])} TD'
-                extra = ""
+                line = f'{int(row["att"])} CAR • {int(row["yds"])} YDS • {int(row["td"])} TD'; extra = ""
             elif category == "receiving":
-                line = f'{int(row["rec"])} REC • {int(row["yds"])} YDS • {int(row["td"])} TD'
-                extra = ""
+                line = f'{int(row["rec"])} REC • {int(row["yds"])} YDS • {int(row["td"])} TD'; extra = ""
             elif category == "tackles":
-                line = f'{row["tot"]:.1f} TKL • {row["solo"]:.1f} SOLO'
-                extra = f'{row["ast"]:.1f} AST'
+                line = f'{row["tot"]:.1f} TKL • {row["solo"]:.1f} SOLO'; extra = f'{row["ast"]:.1f} AST'
             elif category == "pressure":
-                line = f'{row["tfl"]:.1f} TFL • {row["sacks"]:.1f} SACK • {row["ff"]:.1f} FF'
-                extra = f'{row["int"]:.1f} INT'
+                line = f'{row["tfl"]:.1f} TFL • {row["sacks"]:.1f} SACK • {row["ff"]:.1f} FF'; extra = f'{row["int"]:.1f} INT'
             else:
-                line = f'{int(row["made"])} MADE • {int(row["attempts"])} ATT'
-                extra = f'{int(row["punts"])} PUNTS • {int(row["yds"])} YDS' if row["punts"] else ""
-            output[category].append({"player": row["player"], "line": line, "extra": extra})
-    return output
+                line = f'{int(row["made"])} MADE • {int(row["attempts"])} ATT'; extra = f'{int(row["punts"])} PUNTS • {int(row["yds"])} YDS' if row["punts"] else ""
+            result[category].append({"player": row["player"], "line": line, "extra": extra})
+    return result
 
 
 def main():
-    roster = roster_keys(get(ROSTER))
-    schedule = get(SCHEDULE)
-    boxscores = []
-    for anchor in schedule.find_all("a", href=True):
-        href = urljoin(BASE, anchor["href"])
-        if "/stats/2026/" in href and "/boxscore/" in href and href not in boxscores:
-            boxscores.append(href)
-    if not boxscores:
-        raise RuntimeError("Could not find official 2026 Montana box-score links")
-
-    totals = {category: defaultdict(lambda: defaultdict(float)) for category in CATEGORIES}
-    for url in boxscores:
-        soup = get(url)
-        for table in soup.find_all("table"):
-            headers, _, _ = headers_for(table)
-            category = classify(headers)
-            if category:
-                parse_table(table, category, roster, totals)
-
-    leaders = format_leaders(totals)
-    missing = [category for category in CATEGORIES if not leaders[category]]
-    if missing:
-        raise RuntimeError("Official Montana box-score aggregation missing: " + ", ".join(missing))
-
+    roster = roster_map(soup(ROSTER_URL))
+    totals = {c: defaultdict(lambda: defaultdict(float)) for c in CATEGORIES}
+    page = soup(URL)
+    for table in page.find_all("table"):
+        h, _, _ = headers(table)
+        category = classify(h)
+        if category:
+            parse(table, category, roster, totals)
+    leaders = output(totals)
     data = json.loads(DATA.read_text(encoding="utf-8"))
     stats = data.setdefault("stats", {})
     stats["leaders"] = leaders
-    stats["leaders_source"] = "Official Montana roster + 2026 Montana box scores"
-    stats["leaders_updated"] = data.get("updated")
+    stats["leaders_source"] = "Official GoGriz 2026 cumulative statistics, restricted to official Montana roster"
     DATA.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"Aggregated verified Montana player leaders from {len(boxscores)} official box scores")
+    print("Published official-roster-filtered cumulative Montana player leaders")
 
 
 if __name__ == "__main__":
