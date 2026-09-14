@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild Montana player leaders from the rendered official GoGriz page.
-
-The GoGriz stats tabs are client-rendered. A plain requests/BeautifulSoup scrape
-sees blank player cells, so this script uses Playwright to render the page before
-parsing it. It fails closed and never publishes a partial leaders object.
-"""
+"""Build player leaders from the rendered official GoGriz statistics page."""
 from __future__ import annotations
 
 import json
@@ -25,155 +20,156 @@ def clean(value):
     return re.sub(r"\s+", " ", value or "").strip()
 
 
-def number(value):
+def num(value):
     match = re.search(r"-?\d+(?:\.\d+)?", clean(value).replace(",", ""))
     return float(match.group()) if match else 0.0
 
 
-def rendered_soup():
-    with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(headless=True)
-        page = browser.new_page()
-        page.goto(URL, wait_until="networkidle", timeout=90000)
-        page.wait_for_timeout(3000)
-        html = page.content()
-        browser.close()
-    return BeautifulSoup(html, "html.parser")
-
-
-def table_header(table):
+def headers_and_rows(table):
     rows = table.find_all("tr")
-    for index, row in enumerate(rows[:20]):
-        cells = row.find_all(["th", "td"])
-        values = [clean(c.get_text(" ", strip=True)).upper() for c in cells]
-        if any(v == "PLAYER" or v.startswith("PLAYER ") for v in values):
-            return values, rows, index
+    for i, row in enumerate(rows[:25]):
+        headers = [clean(c.get_text(" ", strip=True)).upper() for c in row.find_all(["th", "td"])]
+        if "PLAYER" in headers:
+            return headers, rows, i
     return [], [], -1
 
 
-def column(headers, *wanted):
-    for wanted_name in wanted:
-        for index, value in enumerate(headers):
-            if value == wanted_name or value.startswith(wanted_name + " "):
-                return index
+def col(headers, *names):
+    for name in names:
+        for i, header in enumerate(headers):
+            if header == name or header.startswith(name + " "):
+                return i
     return None
 
 
 def classify(headers):
-    has = lambda *names: column(headers, *names) is not None
-    if has("CMP", "COMP") and has("ATT") and has("YDS") and has("TD"):
+    has = lambda *names: col(headers, *names) is not None
+    if has("COMP", "CMP") and has("ATT") and has("YDS") and has("TD"):
         return "passing"
     if has("REC", "RECEPTIONS") and has("YDS") and has("TD"):
         return "receiving"
-    if has("CAR", "ATT") and has("YDS") and has("TD"):
+    if has("CAR", "RUSH", "ATT") and has("YDS") and has("TD"):
         return "rushing"
-    if has("SOLO") and has("AST") and has("TOT"):
+    if has("TOT") and has("SOLO") and has("AST"):
         return "tackles"
     if has("TFL") or has("SACK", "SACKS") or has("FF"):
         return "pressure"
-    if has("PUNTS") or has("FGM") or has("FGA") or has("XPM") or has("XPA"):
+    if has("PUNTS") or has("FGM") or has("XPM") or has("FGA") or has("XPA"):
         return "special"
     return None
 
 
-def player_name(cell):
-    values = []
-    for node in [cell] + cell.find_all(["a", "span"]):
-        for attr in ("data-name", "aria-label", "title"):
-            value = clean(node.get(attr, ""))
-            if value:
-                values.append(value)
-        value = clean(node.get_text(" ", strip=True))
-        if value:
-            values.append(value)
-    for value in values:
-        value = re.sub(r"^\d+\s+", "", value)
-        value = re.sub(r"\b(?:QB|RB|WR|TE|OL|DL|LB|DB|S|CB|FB|K|P|LS)\b", " ", value, flags=re.I)
-        value = clean(value)
-        if len(value.split()) >= 2 and not value.lower().startswith(("total", "opponents")):
-            return value
+def player_name(cells):
+    # GoGriz places the real player name in an anchor; do not depend on the
+    # visual text extraction of the first/# column.
+    for cell in cells:
+        for anchor in cell.find_all("a"):
+            text = clean(anchor.get_text(" ", strip=True))
+            if len(text.split()) >= 2 and text.lower() not in {"total", "opponents"}:
+                return text
+    for cell in cells:
+        text = clean(cell.get_text(" ", strip=True))
+        text = re.sub(r"^\d+\s+", "", text)
+        if len(text.split()) >= 2 and text.lower() not in {"total", "opponents"}:
+            return text
     return ""
 
 
 def parse_table(table, category, totals):
-    headers, rows, header_index = table_header(table)
-    player_col = column(headers, "PLAYER")
-    if player_col is None:
+    headers, rows, header_index = headers_and_rows(table)
+    if not headers:
+        return
+    player_index = col(headers, "PLAYER")
+    if player_index is None:
         return
     for row in rows[header_index + 1:]:
         cells = row.find_all(["td", "th"])
-        if len(cells) <= player_col:
+        if len(cells) <= player_index:
             continue
-        name = player_name(cells[player_col])
+        name = player_name(cells)
         if not name:
             continue
-        values = [clean(cell.get_text(" ", strip=True)) for cell in cells]
+        values = [clean(c.get_text(" ", strip=True)) for c in cells]
 
-        def v(*names):
-            index = column(headers, *names)
-            return number(values[index]) if index is not None and index < len(values) else 0.0
+        def value(*names):
+            index = col(headers, *names)
+            return num(values[index]) if index is not None and index < len(values) else 0.0
 
         if category == "passing":
-            metrics = {"cmp": v("CMP", "COMP"), "yds": v("YDS"), "td": v("TD"), "int": v("INT")}
+            metrics = {"cmp": value("COMP", "CMP"), "yds": value("YDS"), "td": value("TD"), "int": value("INT")}
         elif category == "rushing":
-            metrics = {"att": v("CAR", "ATT"), "yds": v("YDS"), "td": v("TD")}
+            metrics = {"att": value("CAR", "RUSH", "ATT"), "yds": value("YDS"), "td": value("TD")}
         elif category == "receiving":
-            metrics = {"rec": v("REC", "RECEPTIONS"), "yds": v("YDS"), "td": v("TD")}
+            metrics = {"rec": value("REC", "RECEPTIONS"), "yds": value("YDS"), "td": value("TD")}
         elif category == "tackles":
-            metrics = {"tot": v("TOT"), "solo": v("SOLO"), "ast": v("AST")}
+            metrics = {"tot": value("TOT"), "solo": value("SOLO"), "ast": value("AST")}
         elif category == "pressure":
-            metrics = {"tfl": v("TFL"), "sacks": v("SACK", "SACKS"), "ff": v("FF"), "int": v("INT")}
+            metrics = {"tfl": value("TFL"), "sacks": value("SACK", "SACKS"), "ff": value("FF"), "int": value("INT")}
         else:
-            metrics = {"made": v("FGM", "XPM"), "attempts": v("FGA", "XPA"), "punts": v("PUNTS"), "yds": v("YDS")}
+            metrics = {"made": value("FGM", "XPM"), "attempts": value("FGA", "XPA"), "punts": value("PUNTS"), "yds": value("YDS")}
 
         bucket = totals[category][name]
         bucket["player"] = name
-        for metric, amount in metrics.items():
-            bucket[metric] += amount
+        for key, amount in metrics.items():
+            bucket[key] += amount
 
 
-def output(totals):
+def parse_rendered_page():
+    totals = {category: defaultdict(lambda: defaultdict(float)) for category in CATEGORIES}
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=True)
+        page = browser.new_page(viewport={"width": 1440, "height": 1200})
+        page.goto(URL, wait_until="networkidle", timeout=90000)
+        page.wait_for_timeout(1500)
+
+        # The page exposes the categories as client-side tabs. Visit each tab
+        # so its table is actually rendered before reading the DOM.
+        labels = ["Passing", "Rushing", "Receiving", "Defense", "Special Teams", "Offense"]
+        for label in labels:
+            try:
+                locator = page.get_by_text(label, exact=True).first
+                if locator.count():
+                    locator.click(timeout=5000)
+                    page.wait_for_timeout(500)
+                    soup = BeautifulSoup(page.content(), "html.parser")
+                    for table in soup.find_all("table"):
+                        headers, _, _ = headers_and_rows(table)
+                        category = classify(headers)
+                        if category:
+                            parse_table(table, category, totals)
+            except Exception as exc:
+                print(f"NOTICE: could not open {label} tab: {exc}")
+        browser.close()
+    return totals
+
+
+def build_leaders(totals):
     result = {category: [] for category in CATEGORIES}
-    sort_metric = {"passing": "yds", "rushing": "yds", "receiving": "yds", "tackles": "tot", "pressure": "tfl", "special": "made"}
+    sort_key = {"passing": "yds", "rushing": "yds", "receiving": "yds", "tackles": "tot", "pressure": "tfl", "special": "made"}
     for category in CATEGORIES:
-        rows = sorted(totals[category].values(), key=lambda row: (-row[sort_metric[category]], row["player"]))
-        for row in [row for row in rows if row[sort_metric[category]] > 0][:5]:
+        rows = sorted(totals[category].values(), key=lambda r: (-r[sort_key[category]], r["player"]))
+        for row in [r for r in rows if r[sort_key[category]] > 0][:5]:
             if category == "passing":
-                line = f'{int(row["cmp"])} CMP • {int(row["yds"])} YDS • {int(row["td"])} TD • {int(row["int"])} INT'
-                extra = ""
+                line = f'{int(row["cmp"])} CMP • {int(row["yds"])} YDS • {int(row["td"])} TD • {int(row["int"])} INT'; extra = ""
             elif category == "rushing":
-                line = f'{int(row["att"])} CAR • {int(row["yds"])} YDS • {int(row["td"])} TD'
-                extra = ""
+                line = f'{int(row["att"])} CAR • {int(row["yds"])} YDS • {int(row["td"])} TD'; extra = ""
             elif category == "receiving":
-                line = f'{int(row["rec"])} REC • {int(row["yds"])} YDS • {int(row["td"])} TD'
-                extra = ""
+                line = f'{int(row["rec"])} REC • {int(row["yds"])} YDS • {int(row["td"])} TD'; extra = ""
             elif category == "tackles":
-                line = f'{row["tot"]:.1f} TKL • {row["solo"]:.1f} SOLO'
-                extra = f'{row["ast"]:.1f} AST'
+                line = f'{row["tot"]:.1f} TKL • {row["solo"]:.1f} SOLO'; extra = f'{row["ast"]:.1f} AST'
             elif category == "pressure":
-                line = f'{row["tfl"]:.1f} TFL • {row["sacks"]:.1f} SACK • {row["ff"]:.1f} FF'
-                extra = f'{row["int"]:.1f} INT'
+                line = f'{row["tfl"]:.1f} TFL • {row["sacks"]:.1f} SACK • {row["ff"]:.1f} FF'; extra = f'{row["int"]:.1f} INT'
             else:
-                line = f'{int(row["made"])} MADE • {int(row["attempts"])} ATT'
-                extra = f'{int(row["punts"])} PUNTS • {int(row["yds"])} YDS' if row["punts"] else ""
+                line = f'{int(row["made"])} MADE • {int(row["attempts"])} ATT'; extra = f'{int(row["punts"])} PUNTS • {int(row["yds"])} YDS' if row["punts"] else ""
             result[category].append({"player": row["player"], "line": line, "extra": extra})
     return result
 
 
 def main():
-    page = rendered_soup()
-    totals = {category: defaultdict(lambda: defaultdict(float)) for category in CATEGORIES}
-    for table in page.find_all("table"):
-        headers, _, _ = table_header(table)
-        category = classify(headers)
-        if category:
-            parse_table(table, category, totals)
-
-    leaders = output(totals)
+    leaders = build_leaders(parse_rendered_page())
     missing = [category for category in CATEGORIES if not leaders[category]]
     if missing:
-        raise RuntimeError("Rendered GoGriz player tables were only partially parsed; refusing to publish. Missing: " + ", ".join(missing))
-
+        raise RuntimeError("Rendered GoGriz player tables were only partially parsed; missing: " + ", ".join(missing))
     data = json.loads(DATA.read_text(encoding="utf-8"))
     stats = data.setdefault("stats", {})
     stats["leaders"] = leaders
