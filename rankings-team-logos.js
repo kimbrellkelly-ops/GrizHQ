@@ -1,8 +1,8 @@
 (function(){
   const LOGOS={
+    "Montana":"https://a.espncdn.com/i/teamlogos/ncaa/500/149.png",
     "Montana State":"https://a.espncdn.com/i/teamlogos/ncaa/500/147.png",
     "South Dakota State":"https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png",
-    "Montana":"https://a.espncdn.com/i/teamlogos/ncaa/500/149.png",
     "Illinois State":"https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png",
     "Tarleton State":"https://a.espncdn.com/i/teamlogos/ncaa/500/2627.png",
     "UC Davis":"https://a.espncdn.com/i/teamlogos/ncaa/500/302.png",
@@ -27,45 +27,94 @@
     "Southern Illinois":"https://a.espncdn.com/i/teamlogos/ncaa/500/79.png",
     "West Florida":"https://a.espncdn.com/i/teamlogos/ncaa/500/110242.png",
     "Idaho State":"https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
-    "Harvard":"https://a.espncdn.com/i/teamlogos/ncaa/500/108.png"
+    "Harvard":"https://a.espncdn.com/i/teamlogos/ncaa/500/108.png",
+    "Southern Utah":"https://a.espncdn.com/i/teamlogos/ncaa/500/253.png",
+    "Drake":"https://a.espncdn.com/i/teamlogos/ncaa/500/2181.png",
+    "Utah Tech":"https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png",
+    "Oregon State":"https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
+    "Northern Colorado":"https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png",
+    "Idaho":"https://a.espncdn.com/i/teamlogos/ncaa/500/70.png",
+    "Eastern Washington":"https://a.espncdn.com/i/teamlogos/ncaa/500/331.png",
+    "Portland State":"https://a.espncdn.com/i/teamlogos/ncaa/500/279.png",
+    "Incarnate Word":"https://a.espncdn.com/i/teamlogos/ncaa/500/2916.png",
+    "Monmouth":"https://a.espncdn.com/i/teamlogos/ncaa/500/2405.png",
+    "Cal Poly":"https://a.espncdn.com/i/teamlogos/ncaa/500/13.png",
+    "Weber State":"https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png",
+    "Sacramento State":"https://a.espncdn.com/i/teamlogos/ncaa/500/16.png"
   };
-  const aliases={"Montana St.":"Montana State","South Dakota St.":"South Dakota State","Idaho St.":"Idaho State"};
-  function key(name){const n=String(name||'').trim();return aliases[n]||n;}
+  const aliases={
+    "Montana St.":"Montana State",
+    "South Dakota St.":"South Dakota State",
+    "Idaho St.":"Idaho State",
+    "UC-Davis":"UC Davis",
+    "N. Colorado":"Northern Colorado",
+    "N. Arizona":"Northern Arizona",
+    "E. Washington":"Eastern Washington",
+    "Portland St.":"Portland State",
+    "Cal Poly SLO":"Cal Poly",
+    "Incarnate Word Cardinals":"Incarnate Word"
+  };
+  function key(name){const n=String(name||'').replace(/\s+/g,' ').trim();return aliases[n]||n;}
+  function addImage(parent,url,className,alt){
+    if(!parent||!url||parent.querySelector('.'+className))return;
+    const img=document.createElement('img');
+    img.className=className;
+    img.src=url;
+    img.alt=alt||'';
+    img.loading='lazy';
+    img.width=26;img.height=26;
+    img.addEventListener('error',()=>img.remove(),{once:true});
+    parent.insertBefore(img,parent.firstChild);
+  }
   function addLogos(root){
     if(!root)return;
     root.querySelectorAll('li').forEach(li=>{
-      if(li.querySelector('.ranking-team-logo'))return;
       const nameEl=li.querySelector('.rank-team-name');
       if(!nameEl)return;
       const url=LOGOS[key(nameEl.textContent)];
-      if(!url)return;
-      const img=document.createElement('img');
-      img.className='ranking-team-logo';
-      img.src=url;
-      img.alt='';
-      img.loading='lazy';
-      img.width=26; img.height=26;
-      img.addEventListener('error',()=>img.remove(),{once:true});
-      nameEl.parentNode.insertBefore(img,nameEl);
+      if(url)addImage(nameEl.parentNode,url,'ranking-team-logo','');
+    });
+  }
+  function addScheduleLogos(root){
+    if(!root)return;
+    root.querySelectorAll('.schedule-team-line').forEach(line=>{
+      const nameEl=line.querySelector('b');
+      if(!nameEl)return;
+      const name=String(nameEl.textContent||'').replace(/^@\s*/,'').trim();
+      const url=LOGOS[key(name)];
+      if(url)addImage(line,url,'schedule-team-logo',name+' logo');
+    });
+  }
+  function addScoreLogos(root){
+    if(!root)return;
+    root.querySelectorAll('[data-team-name],.score-team,.score-team-name,.team-name').forEach(el=>{
+      const raw=el.getAttribute('data-team-name')||el.textContent||'';
+      const name=String(raw).replace(/^@\s*/,'').trim();
+      const url=LOGOS[key(name)];
+      if(url&&el.parentElement)addImage(el.parentElement,url,'score-team-logo','');
     });
   }
   function fixRankingsTitle(){
     document.querySelectorAll('h1,h2,h3').forEach(title=>{
       const text=String(title.textContent||'').replace(/\s+/g,' ').trim();
-      if(/^Top 20\s*[—-]\s*Coaches & Media$/i.test(text)){
-        title.textContent='Top 25 — Coaches & Media';
-      }
+      if(/^Top 20\s*[—-]\s*Coaches & Media$/i.test(text))title.textContent='Top 25 — Coaches & Media';
     });
   }
   function run(){
     addLogos(document.getElementById('coaches-poll'));
     addLogos(document.getElementById('media-poll'));
+    addScheduleLogos(document.getElementById('schedule-list'));
+    addScoreLogos(document.getElementById('score-games'));
+    addScoreLogos(document.getElementById('bigsky-table'));
     fixRankingsTitle();
   }
   const style=document.createElement('style');
-  style.textContent='.ranking-team-logo{width:26px;height:26px;object-fit:contain;flex:0 0 26px;margin-right:.15rem}.rank-team-name{min-width:0}';
+  style.textContent='.ranking-team-logo,.schedule-team-logo,.score-team-logo{width:26px;height:26px;object-fit:contain;flex:0 0 26px;margin-right:.35rem}.rank-team-name{min-width:0}.schedule-team-line{display:flex;align-items:center;gap:.25rem}';
   document.head.appendChild(style);
   const observer=new MutationObserver(run);
-  function start(){run();const a=document.getElementById('coaches-poll'),b=document.getElementById('media-poll');if(a)observer.observe(a,{childList:true,subtree:true});if(b)observer.observe(b,{childList:true,subtree:true});}
+  function start(){
+    run();
+    ['coaches-poll','media-poll','schedule-list','score-games','bigsky-table'].forEach(id=>{const el=document.getElementById(id);if(el)observer.observe(el,{childList:true,subtree:true});});
+  }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 })();
