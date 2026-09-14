@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14T04:59:03.735932+00:00",
+  "updated": "2026-09-14T05:13:07.267653+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-14T04:59:19.023387+00:00"
+    "checked_at": "2026-09-14T05:13:23.746770+00:00"
   },
   "resources": [
     {
@@ -2931,15 +2931,16 @@
     "coverage": {
       "completed_games": 3,
       "verified_boxscores": 3,
+      "source_of_truth": "https://gogriz.com/sports/football/stats/2026",
       "pending": []
     },
-    "source": "Official GoGriz schedule and official GoGriz box scores",
-    "source_checked_at": "2026-09-14T04:49:32.162928+00:00",
+    "source": "Official GoGriz 2026 cumulative statistics",
+    "source_checked_at": "2026-09-14T05:13:10.388450+00:00",
     "team_summary": [
       {
         "value": "3–0",
         "label": "RECORD",
-        "note": "Official schedule"
+        "note": "Official GoGriz 2026 schedule"
       },
       {
         "value": "36.0",
@@ -3063,7 +3064,7 @@
     "leaders": {
       "passing": [
         {
-          "player": "Keali'i Ah Yat",
+          "player": "Ah Yat, Keali'i",
           "line": "67 CMP • 793 YDS • 5 TD • 1 INT",
           "extra": ""
         }
@@ -3221,7 +3222,9 @@
         "diff": "—"
       }
     ],
-    "leaders_source": "Official GoGriz 2026 cumulative statistics, restricted to official Montana roster"
+    "leaders_source": "https://gogriz.com/sports/football/stats/2026",
+    "source_url": "https://gogriz.com/sports/football/stats/2026",
+    "leaders_checked_at": "2026-09-14T05:13:25.340676+00:00"
   },
   "rankings_date": "Sep 9, 2026",
   "fcs_scores": {
@@ -27606,5 +27609,5 @@
     "url": "https://skylinesportsmt.com/nevada-head-coach-jeff-choate-press-conference-following-20-7-loss-to-montana-state/",
     "youtube_id": "EyqaAcm3nvU"
   },
-  "fcs_scores_updated": "2026-09-14T04:59:23.283767+00:00"
+  "fcs_scores_updated": "2026-09-14T05:13:26.541356+00:00"
 }
