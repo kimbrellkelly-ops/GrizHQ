@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14T22:40:14.934340+00:00",
+  "updated": "2026-09-14T22:53:13.791099+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-14T22:40:51.469503+00:00"
+    "checked_at": "2026-09-14T22:53:50.577739+00:00"
   },
   "resources": [
     {
@@ -2935,7 +2935,7 @@
       "pending": []
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-14T22:40:22.373426+00:00",
+    "source_checked_at": "2026-09-14T22:53:20.490416+00:00",
     "team_summary": [
       {
         "value": "3–0",
@@ -13564,7 +13564,7 @@
       },
       {
         "id": "401867687",
-        "date": "2026-09-26T04:00Z",
+        "date": "2026-09-26T23:00Z",
         "name": "Norfolk State Spartans at Chicago State Cougars",
         "teams": [
           {
@@ -13586,7 +13586,7 @@
         ],
         "state": "pre",
         "completed": false,
-        "detail": "TBD",
+        "detail": "9/26 - 7:00 PM EDT",
         "broadcasts": []
       },
       {
@@ -27609,5 +27609,5 @@
     "url": "https://skylinesportsmt.com/nevada-head-coach-jeff-choate-press-conference-following-20-7-loss-to-montana-state/",
     "youtube_id": "EyqaAcm3nvU"
   },
-  "fcs_scores_updated": "2026-09-14T22:40:55.661512+00:00"
+  "fcs_scores_updated": "2026-09-14T22:53:54.326931+00:00"
 }
