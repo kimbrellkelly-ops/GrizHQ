@@ -166,6 +166,9 @@ def build_stats(schedule, old_stats, get, schedule_html: str | None = None):
             pending.append({"opponent": opponent, "reason": str(exc)})
 
     verified = len(records)
+    if pending:
+        details = "; ".join(f"{x.get('opponent')}: {x.get('reason')}" for x in pending)
+        raise RuntimeError(f"Stats rebuild blocked: {len(pending)} completed game(s) lack verified official box scores: {details}")
     points_for = _sum([{"v": r["result"]["montana"]} for r in records], "v")
     points_against = _sum([{"v": r["result"]["opponent"]} for r in records], "v")
     yards_for = _sum(records, "total_offense")

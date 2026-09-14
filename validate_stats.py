@@ -19,6 +19,8 @@ def main():
     completed=int(coverage.get("completed_games", verified) or 0)
     if verified != len(log): errors.append(f"verified_boxscores={verified} but game_log={len(log)}")
     if verified > completed: errors.append("verified box scores exceed completed games")
+    if completed != verified: errors.append("all completed games must have verified box scores")
+    if len(log) != completed: errors.append("game_log must contain every completed game")
     for label in ("POINTS / GAME","TOTAL OFFENSE","TOTAL DEFENSE"):
         if label not in summary: errors.append(f"missing summary field: {label}")
     if "—" not in str(stats.get("through","")) and completed and verified < completed:
