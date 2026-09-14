@@ -32,7 +32,9 @@ jobs:
           python-version: "3.x"
 
       - name: Install dependencies
-        run: python -m pip install --disable-pip-version-check requests beautifulsoup4 pdfplumber
+        run: |
+          python -m pip install --disable-pip-version-check requests beautifulsoup4 pdfplumber playwright
+          python -m playwright install --with-deps chromium
 
       - name: Update Griz HQ data
         run: python update_data.py
@@ -45,9 +47,6 @@ jobs:
 
       - name: Repair missing completed-game stats
         run: python repair_stats.py
-
-      - name: Restore empty stats categories safely
-        run: python stats_safety.py
 
       - name: Validate generated stats
         run: python validate_stats.py
@@ -65,7 +64,6 @@ jobs:
             python refresh_player_stats.py
             python score_refresh.py
             python repair_stats.py
-            python stats_safety.py
             python validate_stats.py
             git add data.json
 
