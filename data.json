@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14T15:57:04.651435+00:00",
+  "updated": "2026-09-14T16:09:50.890435+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Gillman and O’Donnell earn Big Sky weekly honors",
+      "url": "https://gogriz.com/news/2026/9/14/football-gillman-and-o-donnell-earn-big-sky-weekly-honors",
+      "date": "Mon, 14 Sep 2026 09:53:00 MST",
+      "description": "MISSOULA - Eli Gillman and punter Everett O'Donnell each earned Big Sky Conference Player of the Week honors Monday after a pair of standout performances in Montana's 35-14 victory"
+    },
+    {
       "title": "Gillman races to more records in Griz win over ‘Blazers",
       "url": "https://gogriz.com/news/2026/9/12/football-gillman-races-to-more-records-in-griz-win-over-blazers",
       "date": "Sat, 12 Sep 2026 18:09:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/8/30/football-griz-outlast-t-birds-in-kennedys-debut",
       "date": "Sun, 30 Aug 2026 01:08:00 MST",
       "description": "MISSOULA - Bobby Kennedy improved to 1-0 as Montana's 38th head coach on Saturday night as the Grizzlies used a late touchdown and big special teams plays to fend off an up-for-it "
-    },
-    {
-      "title": "Grizzly Insider returns in 2026",
-      "url": "https://gogriz.com/news/2026/8/26/football-grizzly-insider-returns-in-2026",
-      "date": "Wed, 26 Aug 2026 18:05:00 MST",
-      "description": "MISSOULA - The Grizzly Insider returns for its fourth season beginning on Wednesday, Aug. 26 for another year of breaking down all things Montana Athletics."
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-14T15:57:35.510376+00:00"
+    "checked_at": "2026-09-14T16:10:17.802222+00:00"
   },
   "resources": [
     {
@@ -2935,7 +2935,7 @@
       "pending": []
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-14T15:57:10.821620+00:00",
+    "source_checked_at": "2026-09-14T16:09:55.303879+00:00",
     "team_summary": [
       {
         "value": "3–0",
@@ -27607,5 +27607,5 @@
     "url": "https://skylinesportsmt.com/nevada-head-coach-jeff-choate-press-conference-following-20-7-loss-to-montana-state/",
     "youtube_id": "EyqaAcm3nvU"
   },
-  "fcs_scores_updated": "2026-09-14T15:57:39.379012+00:00"
+  "fcs_scores_updated": "2026-09-14T16:10:20.466999+00:00"
 }
