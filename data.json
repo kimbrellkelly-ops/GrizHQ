@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14T04:31:41.966319+00:00",
+  "updated": "2026-09-14T04:49:27.767236+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-14T04:31:59.366495+00:00"
+    "checked_at": "2026-09-14T04:49:45.606163+00:00"
   },
   "resources": [
     {
@@ -2928,26 +2928,33 @@
   ],
   "stats": {
     "through": "Through 3 completed games",
+    "coverage": {
+      "completed_games": 3,
+      "verified_boxscores": 3,
+      "pending": []
+    },
+    "source": "Official GoGriz schedule and official GoGriz box scores",
+    "source_checked_at": "2026-09-14T04:49:32.162928+00:00",
     "team_summary": [
       {
         "value": "3–0",
         "label": "RECORD",
-        "note": "2026"
+        "note": "Official schedule"
       },
       {
         "value": "36.0",
         "label": "POINTS / GAME",
-        "note": "Official game results"
+        "note": "Verified box scores only"
       },
       {
         "value": "429",
         "label": "TOTAL OFFENSE",
-        "note": "Yards per game"
+        "note": "Yards per verified game"
       },
       {
         "value": "404",
         "label": "TOTAL DEFENSE",
-        "note": "Yards allowed per game"
+        "note": "Yards allowed per verified game"
       }
     ],
     "offense": [
@@ -2961,31 +2968,31 @@
       ],
       [
         "Yards / Play",
-        "6.4"
+        "—"
       ],
       [
         "Passing",
-        "793"
+        "30"
       ],
       [
         "Rushing",
-        "495"
+        "27"
       ],
       [
         "3rd Down",
-        "10/24 (41.7%)"
+        "—"
       ],
       [
         "4th Down",
-        "3/4 (75.0%)"
+        "—"
       ],
       [
         "Red Zone",
-        "6/8 (75.0%)"
+        "—"
       ],
       [
         "Turnovers",
-        "2"
+        "—"
       ]
     ],
     "defense": [
@@ -2999,63 +3006,58 @@
       ],
       [
         "Yards / Play",
-        "4.8"
+        "—"
       ],
       [
         "Pass Yards Allowed",
-        "503"
+        "37"
       ],
       [
         "Rush Yards Allowed",
-        "304"
+        "27"
       ],
       [
         "3rd Down Allowed",
-        "14/35 (40.0%)"
+        "—"
       ],
       [
         "4th Down Allowed",
-        "1/5 (20.0%)"
+        "—"
       ],
       [
         "Red Zone Allowed",
-        "4/8 (50.0%)"
+        "—"
       ],
       [
         "Takeaways",
-        "3"
+        "—"
       ]
     ],
     "situational": [
       [
         "Turnover Margin",
-        "+1",
-        "2 lost, 3 gained"
+        "—",
+        "Not parsed from current source"
       ],
       [
         "Time of Possession",
-        "49:26",
-        "24:43 min/game"
+        "—"
       ],
       [
         "Penalties",
-        "170",
-        "85.0 yards/game"
+        "—"
       ],
       [
         "Punts",
-        "6",
-        "Cumulative"
+        "—"
       ],
       [
         "Field Goals",
-        "1/3",
-        "Made / attempts"
+        "—"
       ],
       [
         "Sacks",
-        "1",
-        "Team total"
+        "—"
       ]
     ],
     "leaders": {
@@ -3159,8 +3161,8 @@
         "result": "W 28-21",
         "montana_yards": 338,
         "opponent_yards": 510,
-        "turnovers": "-1",
-        "notes": "Gillman 76 rush / 93 receiving; Bridges 91 receiving"
+        "turnovers": "—",
+        "notes": "Official box score verified"
       },
       {
         "week": "Wk 2",
@@ -3168,8 +3170,8 @@
         "result": "W 45-10",
         "montana_yards": 488,
         "opponent_yards": 297,
-        "turnovers": "+2",
-        "notes": "Gillman 105 rushing / 4 total TD; Ransom-Goelz 101 receiving"
+        "turnovers": "—",
+        "notes": "Official box score verified"
       },
       {
         "week": "Wk 3",
@@ -3184,44 +3186,42 @@
     "compare": [
       {
         "label": "Points / Game",
-        "montana": "36.5",
-        "opponents": "15.5",
-        "diff": "+21.0"
+        "montana": "36.0",
+        "opponents": "15.0",
+        "diff": "—"
       },
       {
         "label": "Total Yards / Game",
-        "montana": "413.0",
-        "opponents": "403.5",
-        "diff": "+9.5"
+        "montana": "429.3",
+        "opponents": "404.0",
+        "diff": "—"
       },
       {
         "label": "Passing Yards / Game",
-        "montana": "273.5",
-        "opponents": "251.5",
-        "diff": "+22.0"
+        "montana": "10.0",
+        "opponents": "12.3",
+        "diff": "—"
       },
       {
         "label": "Rushing Yards / Game",
-        "montana": "139.5",
-        "opponents": "152.0",
-        "diff": "-12.5"
+        "montana": "9.0",
+        "opponents": "9.0",
+        "diff": "—"
       },
       {
         "label": "Turnover Margin",
-        "montana": "+1",
+        "montana": "—",
         "opponents": "—",
-        "diff": "+1"
+        "diff": "—"
       },
       {
         "label": "3rd Down",
-        "montana": "41.7%",
-        "opponents": "40.0%",
-        "diff": "+1.7 pts"
+        "montana": "—",
+        "opponents": "—",
+        "diff": "—"
       }
     ],
-    "leaders_source": "Official GoGriz 2026 cumulative statistics, restricted to official Montana roster",
-    "leaders_updated": "2026-09-14T03:31:49.031872+00:00",
-    "leaders_note": "CBS Sports supplies offensive leaders. Defensive and special-teams leaders are withheld when the source does not expose reliable Montana player tables."
+    "leaders_source": "Official GoGriz 2026 cumulative statistics, restricted to official Montana roster"
   },
   "rankings_date": "Sep 9, 2026",
   "fcs_scores": {
@@ -27606,5 +27606,5 @@
     "url": "https://skylinesportsmt.com/nevada-head-coach-jeff-choate-press-conference-following-20-7-loss-to-montana-state/",
     "youtube_id": "EyqaAcm3nvU"
   },
-  "fcs_scores_updated": "2026-09-14T04:32:03.515662+00:00"
+  "fcs_scores_updated": "2026-09-14T04:49:49.308966+00:00"
 }
