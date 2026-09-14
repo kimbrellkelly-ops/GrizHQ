@@ -6,13 +6,11 @@ import requests
 from bs4 import BeautifulSoup
 
 DATA = Path("data.json")
-URLS = [
-    "https://www.cbssports.com/college-football/teams/MT/montana-grizzlies/stats/",
-    "https://new.cbssports.com/college-football/teams/MT/montana-grizzlies/stats/",
-]
-HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130 Safari/537.36"}
-OFFENSE = ("passing", "rushing", "receiving")
-ALL = OFFENSE + ("tackles", "pressure", "special")
+SOURCE = "https://gogriz.com/sports/football/stats/2026"
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130 Safari/537.36"
+}
+CATEGORIES = ("passing", "rushing", "receiving", "tackles", "pressure", "special")
 
 
 def clean(value):
@@ -20,135 +18,146 @@ def clean(value):
 
 
 def norm(value):
-    return re.sub(r"[^A-Z0-9%]+", " ", clean(value).upper()).strip()
+    return re.sub(r"[^A-Z0-9%/.-]+", " ", clean(value).upper()).strip()
 
 
-def index_of(headers, *wanted):
-    for wanted_name in wanted:
-        for index, header in enumerate(headers):
-            if header == wanted_name or header.startswith(wanted_name + " "):
+def header_row(table):
+    rows = table.find_all("tr")
+    for index, row in enumerate(rows[:20]):
+        headers = [norm(cell.get_text(" ", strip=True)) for cell in row.find_all(["th", "td"])]
+        if any(h == "PLAYER" or h.startswith("PLAYER ") for h in headers):
+            return headers, rows, index
+    return [], [], -1
+
+
+def column(headers, *names):
+    for wanted in names:
+        for index, value in enumerate(headers):
+            if value == wanted or value.startswith(wanted + " "):
                 return index
     return None
-
-
-def table_header(table):
-    rows = table.find_all("tr")
-    for row_index, row in enumerate(rows[:20]):
-        headers = [norm(cell.get_text(" ", strip=True)) for cell in row.find_all(["th", "td"])]
-        if any(h == "PLAYER" or h.startswith("PLAYER ") for h in headers) and len(headers) >= 3:
-            return headers, rows, row_index
-    return [], [], -1
 
 
 def player_name(cell):
     candidates = []
     for node in [cell] + cell.find_all(["a", "span"]):
-        for attr in ("data-name", "aria-label", "title"):
+        for attr in ("data-name", "aria-label", "title", "alt"):
             value = clean(node.get(attr, ""))
             if value:
                 candidates.append(value)
-        value = clean(node.get_text(" ", strip=True))
-        if value:
-            candidates.append(value)
+        text = clean(node.get_text(" ", strip=True))
+        if text:
+            candidates.append(text)
 
-    for candidate in candidates:
-        candidate = re.sub(r"\b(?:QB|RB|WR|TE|OL|DL|LB|DB|S|CB|FB|K|P|LS)\b", " ", candidate, flags=re.I)
-        candidate = clean(candidate)
-        if candidate.lower() in {"player", "player on team", "team", "opponents", "total", "totals"}:
+    for value in candidates:
+        value = re.sub(r"\b(?:QB|RB|WR|TE|OL|DL|LB|DB|S|CB|FB|K|P|LS)\b", " ", value, flags=re.I)
+        value = clean(value)
+        if value.lower() in {"player", "player on team", "team", "total", "opponents", "totals"}:
             continue
-        words = candidate.split()
-        if len(words) >= 4:
-            words = words[-3:]
-            if len(words) == 3 and re.fullmatch(r"[A-Za-z]\\.?", words[0]):
-                words = words[1:]
+        # GoGriz normally uses Last, First. Keep that exact display format.
+        if "," in value and len(value.split()) >= 2:
+            return value
+        words = value.split()
         if len(words) >= 2:
-            return " ".join(words)
+            return " ".join(words[-3:]) if len(words) > 3 else value
     return ""
 
 
+def classify(headers):
+    has = lambda *names: column(headers, *names) is not None
+    if has("CMP", "COMP") and has("ATT") and has("YDS") and has("TD"):
+        return "passing"
+    if has("REC", "RECEPTIONS") and has("YDS") and has("TD"):
+        return "receiving"
+    if has("CAR", "ATT") and has("YDS") and has("TD") and has("AVG"):
+        return "rushing"
+    if has("SOLO") and has("AST") and has("TOT"):
+        return "tackles"
+    if has("TFL") or (has("SACK") and has("FF")):
+        return "pressure"
+    if has("PUNTS") or has("FGM") or has("FGA") or has("XPM") or has("XPA"):
+        return "special"
+    return None
+
+
 def parse_table(table, category):
-    headers, rows, header_row = table_header(table)
+    headers, rows, header_index = header_row(table)
     if not headers:
         return []
-    player_column = next((i for i, h in enumerate(headers) if h == "PLAYER" or h.startswith("PLAYER ")), None)
-    if player_column is None:
+    player_index = column(headers, "PLAYER")
+    if player_index is None:
         return []
 
     def value(values, *names):
-        i = index_of(headers, *names)
-        return values[i] if i is not None and i < len(values) else ""
+        index = column(headers, *names)
+        return values[index] if index is not None and index < len(values) else ""
 
-    parsed = []
-    for row in rows[header_row + 1:]:
+    output = []
+    for row in rows[header_index + 1:]:
         cells = row.find_all(["td", "th"])
-        if len(cells) <= player_column:
-            continue
-        player = player_name(cells[player_column])
-        if not player:
+        if len(cells) <= player_index:
             continue
         values = [clean(cell.get_text(" ", strip=True)) for cell in cells]
+        player = player_name(cells[player_index])
+        if not player:
+            continue
+        if player.lower() in {"total", "totals", "opponents", "team"}:
+            continue
+
         if category == "passing":
-            line = f'{value(values, "CMP", "COMP") or "0"} CMP • {value(values, "YDS", "YDS PASS", "PASSING YARDS") or "0"} YDS • {value(values, "TD") or "0"} TD • {value(values, "INT") or "0"} INT'
+            line = f'{value(values, "CMP", "COMP") or "0"} CMP • {value(values, "YDS") or "0"} YDS • {value(values, "TD") or "0"} TD • {value(values, "INT") or "0"} INT'
             extra = f'Long: {value(values, "LONG")}' if value(values, "LONG") else ""
         elif category == "rushing":
-            line = f'{value(values, "ATT", "ATT RUSH", "RUSHING ATTEMPTS") or "0"} CAR • {value(values, "YDS", "YDS RUSH", "RUSHING YARDS") or "0"} YDS • {value(values, "TD") or "0"} TD'
+            line = f'{value(values, "CAR", "ATT") or "0"} CAR • {value(values, "YDS") or "0"} YDS • {value(values, "TD") or "0"} TD'
             extra = f'Avg: {value(values, "AVG")}' if value(values, "AVG") else ""
-        else:
-            line = f'{value(values, "REC", "RECEPTIONS") or "0"} REC • {value(values, "YDS", "YDS REC", "RECEIVING YARDS") or "0"} YDS • {value(values, "TD") or "0"} TD'
+        elif category == "receiving":
+            line = f'{value(values, "REC", "RECEPTIONS") or "0"} REC • {value(values, "YDS") or "0"} YDS • {value(values, "TD") or "0"} TD'
             extra = f'Long: {value(values, "LONG")}' if value(values, "LONG") else ""
-        parsed.append({"player": player, "line": line, "extra": extra})
-    return parsed
+        elif category == "tackles":
+            line = f'{value(values, "TOT") or "0"} TKL • {value(values, "SOLO") or "0"} SOLO'
+            extra = f'{value(values, "AST") or "0"} AST'
+        elif category == "pressure":
+            line = f'{value(values, "TFL") or "0"} TFL • {value(values, "SACK", "SACKS") or "0"} SACK • {value(values, "FF") or "0"} FF'
+            extra = f'{value(values, "INT") or "0"} INT • {value(values, "PBU", "PB") or "0"} PBU'
+        else:
+            if has_punts := (column(headers, "PUNTS") is not None):
+                line = f'{value(values, "PUNTS") or "0"} PUNTS • {value(values, "YDS") or "0"} YDS • {value(values, "AVG") or "0"} AVG'
+                extra = f'Long: {value(values, "LONG")}' if value(values, "LONG") else ""
+            else:
+                line = f'{value(values, "FGM") or "0"}/{value(values, "FGA") or "0"} FG'
+                extra = f'{value(values, "XPM") or "0"}/{value(values, "XPA") or "0"} XP' if column(headers, "XPM") is not None else ""
+        output.append({"player": player, "line": line, "extra": extra})
+    return output
 
 
 def main():
+    response = requests.get(SOURCE, headers=HEADERS, timeout=45)
+    response.raise_for_status()
+    soup = BeautifulSoup(response.text, "html.parser")
+    found = {category: [] for category in CATEGORIES}
+
+    for table in soup.find_all("table"):
+        headers, _, _ = header_row(table)
+        category = classify(headers)
+        if not category:
+            continue
+        rows = parse_table(table, category)
+        # Keep the richest table for each category. Never merge opponent and
+        # Montana tables, which was the source of the previous bad leaders.
+        if len(rows) > len(found[category]):
+            found[category] = rows[:5]
+
+    missing = [category for category in CATEGORIES if not found[category]]
+    if missing:
+        raise RuntimeError("Official Montana cumulative stats missing categories: " + ", ".join(missing))
+
     data = json.loads(DATA.read_text(encoding="utf-8"))
-    previous = data.get("stats", {}).get("leaders", {})
-    leaders = {name: [] for name in ALL}
-    source_used = None
-
-    for url in URLS:
-        try:
-            response = requests.get(url, headers=HEADERS, timeout=45)
-            response.raise_for_status()
-            soup = BeautifulSoup(response.text, "html.parser")
-            candidate = {name: [] for name in OFFENSE}
-            for table in soup.find_all("table"):
-                headers, _, _ = table_header(table)
-                if not headers:
-                    continue
-                if index_of(headers, "CMP", "COMP") is not None and index_of(headers, "ATT") is not None and index_of(headers, "YDS") is not None:
-                    candidate["passing"] = parse_table(table, "passing")[:5]
-                elif index_of(headers, "REC", "RECEPTIONS") is not None and index_of(headers, "YDS") is not None:
-                    candidate["receiving"] = parse_table(table, "receiving")[:5]
-                elif index_of(headers, "ATT") is not None and index_of(headers, "YDS") is not None and index_of(headers, "AVG") is not None:
-                    candidate["rushing"] = parse_table(table, "rushing")[:5]
-            if all(candidate[name] for name in OFFENSE):
-                leaders.update(candidate)
-                source_used = url
-                break
-        except requests.RequestException as exc:
-            print(f"Source unavailable: {url}: {exc}")
-
-    if source_used is None:
-        if not all(previous.get(name) for name in OFFENSE):
-            raise RuntimeError("No complete verified offensive leaders were available from CBS or existing data")
-        for name in OFFENSE:
-            leaders[name] = previous[name]
-        source_used = "existing verified CBS offensive leaders"
-        print("CBS unavailable; preserved existing offensive leaders")
-
-    # Never carry forward the known-bad opponent defensive/special-teams rows.
-    # These categories will remain empty until a separate verified Montana
-    # box-score aggregation is installed.
-    for name in ("tackles", "pressure", "special"):
-        leaders[name] = []
-
     stats = data.setdefault("stats", {})
-    stats["leaders"] = leaders
-    stats["leaders_source"] = source_used
+    stats["leaders"] = found
+    stats["leaders_source"] = SOURCE
     stats["leaders_updated"] = data.get("updated")
     DATA.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print("Updated verified offensive leaders; cleared unverified defensive and special-teams leaders")
+    print("Updated all player-leader categories from official Montana cumulative statistics")
 
 
 if __name__ == "__main__":
