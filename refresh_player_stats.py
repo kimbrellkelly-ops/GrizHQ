@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Rebuild Montana player leaders from the official GoGriz cumulative tables.
+"""Rebuild Montana player leaders from official GoGriz cumulative tables.
 
-This file deliberately replaces the complete leaders object on every run. It never
-merges or preserves stale player leaders from data.json.
+Fail closed: never replace valid player leaders with a partially parsed result.
 """
 from __future__ import annotations
 
 import json
 import re
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
@@ -71,17 +71,16 @@ def classify(headers):
 
 
 def player_name(cell):
-    """Extract the visible player name without requiring a separate roster lookup."""
-    candidates = []
+    values = []
     for node in [cell] + cell.find_all(["a", "span"]):
         for attr in ("data-name", "aria-label", "title"):
             value = clean(node.get(attr, ""))
             if value:
-                candidates.append(value)
+                values.append(value)
         value = clean(node.get_text(" ", strip=True))
         if value:
-            candidates.append(value)
-    for value in candidates:
+            values.append(value)
+    for value in values:
         value = re.sub(r"^\d+\s+", "", value)
         value = re.sub(r"\b(?:QB|RB|WR|TE|OL|DL|LB|DB|S|CB|FB|K|P|LS)\b", " ", value, flags=re.I)
         value = clean(value)
@@ -92,8 +91,6 @@ def player_name(cell):
 
 def parse_table(table, category, totals):
     headers, rows, header_index = table_header(table)
-    if not headers:
-        return
     player_col = column(headers, "PLAYER")
     if player_col is None:
         return
@@ -167,17 +164,17 @@ def main():
             parse_table(table, category, totals)
 
     leaders = output(totals)
-    if not any(leaders.values()):
-        raise RuntimeError("Official GoGriz page produced no player leaders; refusing to overwrite data.json")
+    missing = [category for category in CATEGORIES if not leaders[category]]
+    if missing:
+        raise RuntimeError("Official GoGriz player tables were only partially parsed; refusing to publish. Missing: " + ", ".join(missing))
 
     data = json.loads(DATA.read_text(encoding="utf-8"))
     stats = data.setdefault("stats", {})
     stats["leaders"] = leaders
     stats["leaders_source"] = URL
-    stats["leaders_checked_at"] = __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat()
+    stats["leaders_checked_at"] = datetime.now(timezone.utc).isoformat()
     DATA.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    counts = ", ".join(f"{key}={len(value)}" for key, value in leaders.items())
-    print(f"Published fresh official player leaders: {counts}")
+    print("Published complete official player leaders: " + ", ".join(f"{k}={len(v)}" for k, v in leaders.items()))
 
 
 if __name__ == "__main__":
