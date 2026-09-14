@@ -6,8 +6,12 @@ import requests
 from bs4 import BeautifulSoup
 
 DATA = Path("data.json")
-URL = "https://www.cbssports.com/college-football/teams/MT/montana-grizzlies/stats/"
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; GrizHQ/1.0)"}
+URLS = [
+    "https://www.cbssports.com/college-football/teams/MT/montana-grizzlies/stats/",
+    "https://new.cbssports.com/college-football/teams/MT/montana-grizzlies/stats/",
+]
+HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130 Safari/537.36"}
+CATEGORIES = ("passing", "rushing", "receiving")
 
 
 def clean(value):
@@ -28,10 +32,9 @@ def index_of(headers, *wanted):
 
 def table_header(table):
     rows = table.find_all("tr")
-    for row_index, row in enumerate(rows[:15]):
+    for row_index, row in enumerate(rows[:20]):
         headers = [norm(cell.get_text(" ", strip=True)) for cell in row.find_all(["th", "td"])]
-        # CBS sometimes renders this as PLAYER, PLAYER ON TEAM, or similar.
-        if any(header == "PLAYER" or header.startswith("PLAYER ") for header in headers) and len(headers) >= 3:
+        if any(h == "PLAYER" or h.startswith("PLAYER ") for h in headers) and len(headers) >= 3:
             return headers, rows, row_index
     return [], [], -1
 
@@ -47,19 +50,16 @@ def player_name(cell):
         if value:
             candidates.append(value)
 
-    positions = {"QB", "RB", "WR", "TE", "OL", "DL", "LB", "DB", "S", "CB", "FB", "K", "P", "LS"}
     for candidate in candidates:
         candidate = re.sub(r"\b(?:QB|RB|WR|TE|OL|DL|LB|DB|S|CB|FB|K|P|LS)\b", " ", candidate, flags=re.I)
-        candidate = re.sub(r"^\s*[A-Z0-9]+[.)]?\s+", "", clean(candidate))
         candidate = clean(candidate)
-        if candidate.lower() in {"player", "team", "opponents", "total", "totals"}:
+        if candidate.lower() in {"player", "player on team", "team", "opponents", "total", "totals"}:
             continue
         words = candidate.split()
+        # CBS combines abbreviated and full names. The full name is at the end.
         if len(words) >= 4:
-            # CBS commonly combines abbreviated and full names, e.g.
-            # “B. Davis Brooks Davis” or “Ransom-Goelz Landon Ransom-Goelz”.
             words = words[-3:]
-            if len(words) == 3 and re.fullmatch(r"[A-Za-z]\.?", words[0]):
+            if len(words) == 3 and re.fullmatch(r"[A-Za-z]\\.?", words[0]):
                 words = words[1:]
         if len(words) >= 2:
             return " ".join(words)
@@ -70,13 +70,13 @@ def parse_table(table, category):
     headers, rows, header_row = table_header(table)
     if not headers:
         return []
-    player_column = next((i for i, header in enumerate(headers) if header == "PLAYER" or header.startswith("PLAYER ")), None)
+    player_column = next((i for i, h in enumerate(headers) if h == "PLAYER" or h.startswith("PLAYER ")), None)
     if player_column is None:
         return []
 
     def value(values, *names):
-        index = index_of(headers, *names)
-        return values[index] if index is not None and index < len(values) else ""
+        i = index_of(headers, *names)
+        return values[i] if i is not None and i < len(values) else ""
 
     parsed = []
     for row in rows[header_row + 1:]:
@@ -101,33 +101,50 @@ def parse_table(table, category):
 
 
 def main():
-    response = requests.get(URL, headers=HEADERS, timeout=45)
-    response.raise_for_status()
-    soup = BeautifulSoup(response.text, "html.parser")
     data = json.loads(DATA.read_text(encoding="utf-8"))
     leaders = {"passing": [], "rushing": [], "receiving": [], "tackles": [], "pressure": [], "special": []}
+    source_used = None
 
-    for table in soup.find_all("table"):
-        headers, _, _ = table_header(table)
-        if not headers:
-            continue
-        if index_of(headers, "CMP", "COMP") is not None and index_of(headers, "YDS") is not None and index_of(headers, "ATT") is not None:
-            leaders["passing"] = parse_table(table, "passing")[:5]
-        elif index_of(headers, "REC", "RECEPTIONS") is not None and index_of(headers, "YDS") is not None:
-            leaders["receiving"] = parse_table(table, "receiving")[:5]
-        elif index_of(headers, "ATT") is not None and index_of(headers, "YDS") is not None and index_of(headers, "AVG") is not None:
-            leaders["rushing"] = parse_table(table, "rushing")[:5]
+    for url in URLS:
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=45)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, "html.parser")
+            candidate = {"passing": [], "rushing": [], "receiving": []}
+            for table in soup.find_all("table"):
+                headers, _, _ = table_header(table)
+                if not headers:
+                    continue
+                if index_of(headers, "CMP", "COMP") is not None and index_of(headers, "ATT") is not None and index_of(headers, "YDS") is not None:
+                    candidate["passing"] = parse_table(table, "passing")[:5]
+                elif index_of(headers, "REC", "RECEPTIONS") is not None and index_of(headers, "YDS") is not None:
+                    candidate["receiving"] = parse_table(table, "receiving")[:5]
+                elif index_of(headers, "ATT") is not None and index_of(headers, "YDS") is not None and index_of(headers, "AVG") is not None:
+                    candidate["rushing"] = parse_table(table, "rushing")[:5]
+            if all(candidate[name] for name in CATEGORIES):
+                leaders.update(candidate)
+                source_used = url
+                break
+        except requests.RequestException as exc:
+            print(f"Source unavailable: {url}: {exc}")
 
-    missing = [name for name in ("passing", "rushing", "receiving") if not leaders[name]]
-    if missing:
-        raise RuntimeError("CBS offensive stats missing: " + ", ".join(missing))
+    # If CBS is temporarily blocked, retain the last verified offensive data rather
+    # than failing the entire refresh or publishing opponent/garbage rows.
+    if source_used is None:
+        previous = data.get("stats", {}).get("leaders", {})
+        if not all(previous.get(name) for name in CATEGORIES):
+            raise RuntimeError("No complete verified offensive leaders were available from CBS or the existing data")
+        for name in CATEGORIES:
+            leaders[name] = previous[name]
+        source_used = "existing verified CBS offensive leaders (CBS temporarily unavailable)"
+        print("CBS unavailable; preserved existing verified offensive leaders")
 
     stats = data.setdefault("stats", {})
     stats["leaders"] = leaders
-    stats["leaders_source"] = URL + " (CBS verified offense; defensive and special-teams categories withheld until separately verified)"
+    stats["leaders_source"] = source_used
     stats["leaders_updated"] = data.get("updated")
     DATA.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print("Updated CBS Montana offensive leaders; defensive and special teams withheld")
+    print("Updated Montana offensive leaders safely; unverified defense and special teams remain empty")
 
 
 if __name__ == "__main__":
