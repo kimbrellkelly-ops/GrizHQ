@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14T15:09:23.045351+00:00",
+  "updated": "2026-09-14T15:28:50.657391+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -112,6 +112,33 @@
     }
   ],
   "coaches_poll": [
+    "Montana St. (26)",
+    "Montana",
+    "South Dakota St.",
+    "Illinois St.",
+    "Tarleton St.",
+    "North Dakota",
+    "Lehigh",
+    "Stephen F. Austin",
+    "Youngstown St.",
+    "Tennessee Tech",
+    "UC Davis",
+    "South Dakota",
+    "Rhode Island",
+    "Austin Peay",
+    "Lamar",
+    "South Carolina St.",
+    "West Florida",
+    "Idaho St.",
+    "Northern Arizona",
+    "Yale",
+    "William & Mary",
+    "Mercer",
+    "Villanova",
+    "Furman",
+    "Southern Illinois"
+  ],
+  "media_poll": [
     "Montana State (57)",
     "South Dakota State",
     "Montana",
@@ -136,33 +163,6 @@
     "Villanova",
     "Mercer",
     "Southern Illinois",
-    "Harvard"
-  ],
-  "media_poll": [
-    "Montana State (57)",
-    "South Dakota State",
-    "Montana",
-    "Tarleton State",
-    "Illinois State",
-    "North Dakota",
-    "UC Davis",
-    "Rhode Island",
-    "Lehigh",
-    "Youngstown State",
-    "South Dakota",
-    "Tennessee Tech",
-    "Stephen F. Austin",
-    "Lamar",
-    "Austin Peay",
-    "William & Mary",
-    "Idaho State",
-    "Mercer",
-    "Yale",
-    "West Florida",
-    "Villanova",
-    "South Carolina State",
-    "Abilene Christian",
-    "Northern Arizona",
     "Harvard"
   ],
   "news": [
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-14T15:09:39.748332+00:00"
+    "checked_at": "2026-09-14T15:29:14.868240+00:00"
   },
   "resources": [
     {
@@ -2730,7 +2730,7 @@
     },
     {
       "rank": 7,
-      "team": "UC Davis",
+      "team": "Lehigh",
       "record": "1-0"
     },
     {
@@ -2740,52 +2740,52 @@
     },
     {
       "rank": 9,
-      "team": "Lehigh",
-      "record": "1-0"
-    },
-    {
-      "rank": 10,
       "team": "Youngstown State",
       "record": "1-0"
     },
     {
-      "rank": 11,
+      "rank": 10,
       "team": "South Dakota",
       "record": "1-0"
     },
     {
-      "rank": 12,
-      "team": "Tennessee Tech",
+      "rank": 11,
+      "team": "UC Davis",
       "record": "1-0"
     },
     {
-      "rank": 13,
+      "rank": 12,
       "team": "Stephen F. Austin",
       "record": "1-0"
     },
     {
-      "rank": 14,
-      "team": "Lamar",
+      "rank": 13,
+      "team": "Tennessee Tech",
       "record": "1-0"
     },
     {
-      "rank": 15,
+      "rank": 14,
       "team": "Austin Peay",
       "record": "1-0"
     },
     {
-      "rank": 16,
-      "team": "William & Mary",
+      "rank": 15,
+      "team": "Lamar",
       "record": "1-0"
     },
     {
-      "rank": 17,
+      "rank": 16,
       "team": "Idaho State",
       "record": "1-0"
     },
     {
+      "rank": 17,
+      "team": "West Florida",
+      "record": "1-0"
+    },
+    {
       "rank": 18,
-      "team": "Mercer",
+      "team": "South Carolina State",
       "record": "1-0"
     },
     {
@@ -2795,7 +2795,7 @@
     },
     {
       "rank": 20,
-      "team": "West Florida",
+      "team": "Northern Arizona",
       "record": "1-0"
     }
   ],
@@ -2832,7 +2832,7 @@
     },
     {
       "rank": 7,
-      "team": "UC Davis",
+      "team": "Lehigh",
       "record": "1-0"
     },
     {
@@ -2842,52 +2842,52 @@
     },
     {
       "rank": 9,
-      "team": "Lehigh",
-      "record": "1-0"
-    },
-    {
-      "rank": 10,
       "team": "Youngstown State",
       "record": "1-0"
     },
     {
-      "rank": 11,
+      "rank": 10,
       "team": "South Dakota",
       "record": "1-0"
     },
     {
-      "rank": 12,
-      "team": "Tennessee Tech",
+      "rank": 11,
+      "team": "UC Davis",
       "record": "1-0"
     },
     {
-      "rank": 13,
+      "rank": 12,
       "team": "Stephen F. Austin",
       "record": "1-0"
     },
     {
-      "rank": 14,
-      "team": "Lamar",
+      "rank": 13,
+      "team": "Tennessee Tech",
       "record": "1-0"
     },
     {
-      "rank": 15,
+      "rank": 14,
       "team": "Austin Peay",
       "record": "1-0"
     },
     {
-      "rank": 16,
-      "team": "William & Mary",
+      "rank": 15,
+      "team": "Lamar",
       "record": "1-0"
     },
     {
-      "rank": 17,
+      "rank": 16,
       "team": "Idaho State",
       "record": "1-0"
     },
     {
+      "rank": 17,
+      "team": "West Florida",
+      "record": "1-0"
+    },
+    {
       "rank": 18,
-      "team": "Mercer",
+      "team": "South Carolina State",
       "record": "1-0"
     },
     {
@@ -2897,28 +2897,28 @@
     },
     {
       "rank": 20,
-      "team": "West Florida",
+      "team": "Northern Arizona",
       "record": "1-0"
     },
     {
       "rank": 21,
+      "team": "William & Mary",
+      "record": "1-0"
+    },
+    {
+      "rank": 22,
       "team": "Villanova",
       "record": "0-1"
     },
     {
-      "rank": 22,
-      "team": "South Carolina State",
-      "record": "1-0"
-    },
-    {
       "rank": 23,
-      "team": "Abilene Christian",
-      "record": "0-1"
+      "team": "Mercer",
+      "record": "1-0"
     },
     {
       "rank": 24,
-      "team": "Northern Arizona",
-      "record": "1-0"
+      "team": "Southern Illinois",
+      "record": ""
     },
     {
       "rank": 25,
@@ -2935,7 +2935,7 @@
       "pending": []
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-14T15:09:27.022530+00:00",
+    "source_checked_at": "2026-09-14T15:28:55.082213+00:00",
     "team_summary": [
       {
         "value": "3–0",
@@ -27607,5 +27607,5 @@
     "url": "https://skylinesportsmt.com/nevada-head-coach-jeff-choate-press-conference-following-20-7-loss-to-montana-state/",
     "youtube_id": "EyqaAcm3nvU"
   },
-  "fcs_scores_updated": "2026-09-14T15:09:43.023464+00:00"
+  "fcs_scores_updated": "2026-09-14T15:29:17.507482+00:00"
 }
