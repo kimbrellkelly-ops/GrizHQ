@@ -1859,9 +1859,9 @@ loadGrizData();
     const time=String(game.time || '').toUpperCase();
     const opponentUpper=opponent.toUpperCase();
     const nextSection=document.getElementById('next-up');
-    const oldNames=['UTAH TECH','Utah Tech','UT'];
     if(nextSection){
-      oldNames.forEach(old=>replaceWithin(nextSection,old,old==='UT'?'OSU':opponentUpper));
+      // The Next Up section is authored as a complete opponent dossier. Never perform
+      // broad text replacement inside it; that can contaminate historical data.
       const h=nextSection.querySelector('.ghq-nu-hero h1 span'); text(h,opponentUpper);
       const pill=nextSection.querySelector('.ghq-nu-game-pill');
       if(pill){ text(pill.querySelector('b'),date); text(pill.querySelector('span'),time); text(pill.querySelector('small'),String(venue).split(',')[0].toUpperCase()); }
