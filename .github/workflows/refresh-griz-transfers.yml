@@ -1,6 +1,11 @@
 name: Refresh Griz HQ transfer stats
 
 on:
+  push:
+    paths:
+      - "transfer_update.py"
+      - ".github/workflows/refresh-griz-transfers.yml"
+      - "index.html"
   schedule:
     # Refresh daily so current-season destination stats stay current after games.
     - cron: "0 15 * * *"
