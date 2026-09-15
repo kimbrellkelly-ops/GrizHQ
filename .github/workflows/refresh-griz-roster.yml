@@ -1,13 +1,7 @@
-name: Refresh Griz Roster HQ
+name: Refresh Griz Roster HQ (manual only)
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 15 * * *"
-  push:
-    paths:
-      - "roster_update.py"
-      - ".github/workflows/refresh-griz-roster.yml"
 
 permissions:
   contents: write
@@ -23,51 +17,34 @@ jobs:
       - name: Checkout latest main
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
           persist-credentials: true
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
-      - name: Rebase on latest main before changing files
+          python-version: '3.x'
+      - name: Verify baseline
         run: |
-          git config user.name "griz-hq-bot"
-          git config user.email "griz-hq-bot@users.noreply.github.com"
-          git pull --rebase origin main
-      - name: Diagnose exact updater and commit
-        run: |
-          echo "Workflow commit SHA: $GITHUB_SHA"
-          echo "Workflow file SHA: $GITHUB_WORKFLOW_SHA"
-          echo "Checked-out HEAD: $(git rev-parse HEAD)"
-          echo "roster_update.py SHA256: $(sha256sum roster_update.py | cut -d' ' -f1)"
-          echo "Class-count code lines:"
-          grep -nE 'class_key|class_counts|Raw roster class labels|Normalized class counts|expected class counts' roster_update.py || true
+          test -f roster_update.py
+          test -f index.html
       - name: Refresh roster, verified photos and coaching staff
         run: python roster_update.py
       - name: Validate changed files
         run: |
           python -m py_compile roster_update.py
           git diff --check
-          git status --short
+          git diff --stat
           changed="$(git diff --name-only)"
           if [ -n "$changed" ]; then
             echo "$changed" | grep -E '^(index\.html|roster_update\.py|\.github/workflows/refresh-griz-roster\.yml)$' >/dev/null || {
-              echo "Unexpected changed file detected"; exit 1;
+              echo 'Unexpected changed file detected'; exit 1;
             }
           fi
-      - name: Commit only when roster data changed
+      - name: Commit roster changes only
         run: |
-          if git diff --quiet -- index.html; then
-            echo "No roster changes detected; nothing to commit."
-            exit 0
-          fi
+          git config user.name 'griz-hq-bot'
+          git config user.email 'griz-hq-bot@users.noreply.github.com'
           git add index.html
-          git commit -m "Auto-refresh Griz roster HQ"
-      - name: Push with retry
-        run: |
-          for attempt in 1 2 3; do
-            git pull --rebase origin main && git push origin HEAD:main && exit 0
-            echo "Push attempt $attempt failed; retrying..."
-            sleep 5
-          done
-          exit 1
+          git diff --cached --quiet || git commit -m 'Refresh verified Griz roster data'
+          git push origin HEAD:main
