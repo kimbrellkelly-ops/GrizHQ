@@ -2,8 +2,8 @@ name: Refresh Griz HQ transfer stats
 
 on:
   schedule:
-    # Run once after the weekend games so destination-school cumulative stats have time to post.
-    - cron: "0 15 * * 0"
+    # Refresh daily so current-season destination stats stay current after games.
+    - cron: "0 15 * * *"
   workflow_dispatch:
 
 permissions:
