@@ -1,17 +1,7 @@
-name: Refresh Griz HQ transfer stats
+name: Refresh Griz HQ transfer stats (manual only)
 
 on:
-  schedule:
-    - cron: "0 15 * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - "transfer_stats.json"
-      - "transfer_update_v2.py"
-      - "index.html"
-      - ".github/workflows/refresh-griz-transfers.yml"
 
 permissions:
   contents: write
@@ -24,45 +14,32 @@ jobs:
   refresh-transfers:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Check out latest main
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
-
-      - name: Verify latest transfer updater
-        run: |
-          set -e
-          echo "Checked out commit: $(git rev-parse HEAD)"
-          test -f transfer_update_v2.py
-          test -f transfer_stats.json
-          grep -q "python transfer_update_v2.py" .github/workflows/refresh-griz-transfers.yml
-          echo "Verified: workflow uses transfer_update_v2.py"
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
-
+          python-version: '3.x'
+      - name: Verify transfer updater
+        run: |
+          test -f transfer_update_v2.py
+          test -f transfer_stats.json
       - name: Install transfer dependencies
         run: python -m pip install --disable-pip-version-check requests beautifulsoup4 pandas lxml
-
       - name: Refresh transfer stats
-        shell: bash
+        run: python transfer_update_v2.py
+      - name: Validate changes
         run: |
-          set -o pipefail
-          python transfer_update_v2.py 2>&1 | tee transfer-refresh.log
-          grep -q "Rendered" transfer-refresh.log
-
-      - name: Commit transfer stats only
+          python -m py_compile transfer_update_v2.py
+          git diff --check
+          git diff --stat
+      - name: Commit transfer changes only
         run: |
-          git config user.name "griz-hq-transfers-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          if git diff --cached --quiet; then
-            echo "No rendered transfer-card changes to commit."
-            exit 0
-          fi
-          git commit -m "Render Griz transfer ledger changes"
-          git pull --rebase origin main
+          git config user.name 'griz-hq-bot'
+          git config user.email 'griz-hq-bot@users.noreply.github.com'
+          git add index.html transfer_stats.json
+          git diff --cached --quiet || git commit -m 'Refresh verified Griz transfer stats'
           git push origin HEAD:main
