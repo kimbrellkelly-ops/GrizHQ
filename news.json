@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-15T22:35:25.413218+00:00",
+  "updated": "2026-09-15T22:48:20.959436+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 91,
+  "story_count": 92,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Griz to battle Beavers on Saturday night in Corvallis",
+      "url": "https://gogriz.com/news/2026/9/15/football-griz-to-battle-beavers-on-saturday-night-in-corvallis",
+      "date": "Sep. 15, 2026",
+      "published_at": "2026-09-15T23:20:00+00:00",
+      "description": "MISSOULA - Thirty years and a little over one week ago, the Montana Grizzlies and a gunslinger quarterback named Ah Yat went to Corvallis, Oregon, and returned to Missoula with a 35-14 win over Oregon State.",
+      "source": "GoGriz",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/12/20260912_fbvsutahtech_143.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/12/20260912_fbvsutahtech_143.jpg"
+    },
     {
       "title": "Several weeks of planned prescribed burns in Helena area set to start Wednesday",
       "url": "https://missoulian.com/news/state-regional/article_eb2ab6c9-5ec9-553f-8765-8b8d74143a2a.html",
