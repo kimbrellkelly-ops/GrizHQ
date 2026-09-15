@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-15T03:26:13.619456+00:00",
+  "updated": "2026-09-15T03:39:30.156178+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 84,
+  "story_count": 85,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Griz press conference – Bobby Kennedy, Brooks Davis, Brock Beaner on Oregon State",
+      "url": "https://skylinesportsmt.com/griz-press-conference-bobby-kennedy-brooks-davis-brock-beaner-on-oregon-state/",
+      "date": "Sep. 15, 2026",
+      "published_at": "2026-09-15T02:51:02+00:00",
+      "description": "Colter Nuanez September 14, 2026 Griz press conference – Bobby Kennedy, Brooks Davis, Brock Beaner on Oregon State Montana head coach Bobby Kennedy, wide receiver Brooks Davis and defensive back Brock Beaner helped preview UM’s matchup at O",
+      "source": "Skyline Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Brock-Beaner-goes-up-top-with-Wes-Nurse.jpeg",
+      "is_video": true,
+      "youtube_id": "LCXacLE40UE",
+      "video_url": "https://www.youtube.com/watch?v=LCXacLE40UE",
+      "video_thumbnail": "https://i.ytimg.com/vi/LCXacLE40UE/hqdefault.jpg"
+    },
     {
       "title": "First look: No. 3 Montana Grizzlies at Oregon State Beavers",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_df55c928-851e-558c-bea9-4605644dc96f.html",
