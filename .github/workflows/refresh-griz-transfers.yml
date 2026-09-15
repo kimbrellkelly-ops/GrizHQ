@@ -24,9 +24,11 @@ jobs:
 
       - name: Verify latest transfer updater
         run: |
+          set -e
           echo "Checked out commit: $(git rev-parse HEAD)"
           test -f transfer_update_v2.py
-          ! grep -q "python transfer_update_v2.py" .github/workflows/refresh-griz-transfers.yml
+          grep -q "python transfer_update_v2.py" .github/workflows/refresh-griz-transfers.yml
+          echo "Verified: workflow uses transfer_update_v2.py"
 
       - name: Set up Python
         uses: actions/setup-python@v5
