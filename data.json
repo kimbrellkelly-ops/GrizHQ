@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T20:29:23.083578+00:00",
+  "updated": "2026-09-15T20:41:35.833713+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-15T20:29:46.652870+00:00"
+    "checked_at": "2026-09-15T20:42:08.480097+00:00"
   },
   "resources": [
     {
@@ -2935,7 +2935,7 @@
       "pending": []
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-15T20:29:29.677029+00:00",
+    "source_checked_at": "2026-09-15T20:41:43.120250+00:00",
     "team_summary": [
       {
         "value": "3–0",
@@ -27531,93 +27531,6 @@
           "ESPN+"
         ]
       }
-    ],
-    "2026-11-26": [
-      {
-        "id": "401868354",
-        "date": "2026-11-26T20:00Z",
-        "name": "Tuskegee Golden Tigers at Alabama State Hornets",
-        "teams": [
-          {
-            "id": "2011",
-            "name": "Alabama State Hornets",
-            "short": "Alabama St",
-            "abbrev": "ALST",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2657",
-            "name": "Tuskegee Golden Tigers",
-            "short": "Tuskegee",
-            "abbrev": "TUSK",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "11/26 - 3:00 PM EST",
-        "broadcasts": []
-      },
-      {
-        "id": "401868957",
-        "date": "2026-11-28T19:00Z",
-        "name": "Grambling Tigers at Southern Jaguars",
-        "teams": [
-          {
-            "id": "2582",
-            "name": "Southern Jaguars",
-            "short": "Southern",
-            "abbrev": "SOU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2755",
-            "name": "Grambling Tigers",
-            "short": "Grambling",
-            "abbrev": "GRAM",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "11/28 - 2:00 PM EST",
-        "broadcasts": []
-      }
-    ],
-    "2026-12-03": [
-      {
-        "id": "401872642",
-        "date": "2026-12-05T19:00Z",
-        "name": "TBA  at TBA ",
-        "teams": [
-          {
-            "id": "112351",
-            "name": "TBA",
-            "short": "TBA",
-            "abbrev": "TBA",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "112350",
-            "name": "TBA",
-            "short": "TBA",
-            "abbrev": "TBA",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "12/5 - 2:00 PM EST",
-        "broadcasts": [
-          "ESPN2"
-        ]
-      }
     ]
   },
   "latest_press_conference": {
@@ -27626,5 +27539,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-bobby-kennedy-brooks-davis-brock-beaner-on-oregon-state/",
     "youtube_id": "LCXacLE40UE"
   },
-  "fcs_scores_updated": "2026-09-15T20:29:51.117315+00:00"
+  "fcs_scores_updated": "2026-09-15T20:42:13.596918+00:00"
 }
