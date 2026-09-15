@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T15:24:16.745598+00:00",
+  "updated": "2026-09-15T15:36:55.897074+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 88,
   "sources": [
@@ -17,21 +17,6 @@
   "stories": [
     {
       "title": "Grizzlies DL Tyler King thriving in first year of D-I football",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_234b8f39-ea5b-5e2b-a6f8-6647590e40ed.html",
-      "date": "Sep. 15, 2026",
-      "published_at": "2026-09-15T15:00:00+00:00",
-      "description": "Grizzlies defensive lineman Tyler King recorded two sacks in Montana's win over Drake.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/a0/ca0aec99-2afd-5f8c-be66-f10bc5b7bfa1/6aa5dd4b388a3.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/a0/ca0aec99-2afd-5f8c-be66-f10bc5b7bfa1/6aa5dd4b388a3.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Grizzlies DL Tyler King thriving in first year of D-I football",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-dl-tyler-king-thriving-in-first-year-of-d-i-football/article_6a3a5c97-e0d3-41a7-8597-9f8262f5b43e.html",
       "date": "Sep. 15, 2026",
       "published_at": "2026-09-15T15:00:00+00:00",
@@ -44,6 +29,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/a3/6a3a5c97-e0d3-41a7-8597-9f8262f5b43e/6aa780d906bf1.preview.jpg?crop=1732%2C909%2C31%2C55&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Grizzlies DL Tyler King thriving in first year of D-I football",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_234b8f39-ea5b-5e2b-a6f8-6647590e40ed.html",
+      "date": "Sep. 15, 2026",
+      "published_at": "2026-09-15T15:00:00+00:00",
+      "description": "Grizzlies defensive lineman Tyler King recorded two sacks in Montana's win over Drake.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/a0/ca0aec99-2afd-5f8c-be66-f10bc5b7bfa1/6aa5dd4b388a3.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/a0/ca0aec99-2afd-5f8c-be66-f10bc5b7bfa1/6aa5dd4b388a3.image.jpg?resize=300%2C200"
     },
     {
       "title": "GRIZZLIES STILL SEEKING GROWTH",
