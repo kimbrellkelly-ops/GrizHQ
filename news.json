@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-15T22:24:16.749411+00:00",
+  "updated": "2026-09-15T22:35:25.413218+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 90,
+  "story_count": 91,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Several weeks of planned prescribed burns in Helena area set to start Wednesday",
+      "url": "https://missoulian.com/news/state-regional/article_eb2ab6c9-5ec9-553f-8765-8b8d74143a2a.html",
+      "date": "Sep. 15, 2026",
+      "published_at": "2026-09-15T22:10:00+00:00",
+      "description": "The Helena-Lewis and Clark National Forest is conducting the first of several prescribed burns planned over the next few weeks on Wednesday southwest of Helena and along Grizzly Gulch.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/4b/84bc40b4-3146-532a-ad94-47887874d0af/69d9302d25721.image.jpg?resize=300%2C190",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/4b/84bc40b4-3146-532a-ad94-47887874d0af/69d9302d25721.image.jpg?resize=300%2C190"
+    },
     {
       "title": "FWP confirms bear that attacked hunter south of Augusta was grizzly",
       "url": "https://missoulian.com/news/state-regional/article_3778b52c-1464-555d-9c19-f105d0846a15.html",
