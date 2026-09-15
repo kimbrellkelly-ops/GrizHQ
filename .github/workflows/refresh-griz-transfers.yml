@@ -18,6 +18,15 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Verify latest transfer updater
+        run: |
+          echo "Checked out commit: $(git rev-parse HEAD)"
+          test -f transfer_update_v2.py
+          ! grep -q "python transfer_update.py" .github/workflows/refresh-griz-transfers.yml
 
       - name: Set up Python
         uses: actions/setup-python@v5
