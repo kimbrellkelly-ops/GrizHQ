@@ -26,7 +26,7 @@ jobs:
         run: |
           echo "Checked out commit: $(git rev-parse HEAD)"
           test -f transfer_update_v2.py
-          ! grep -q "python transfer_update.py" .github/workflows/refresh-griz-transfers.yml
+          ! grep -q "python transfer_update_v2.py" .github/workflows/refresh-griz-transfers.yml
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -50,7 +50,7 @@ jobs:
         run: |
           git config user.name "griz-hq-transfers-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html
+          git add index.html transfer_stats.json
           if git diff --cached --quiet; then
             echo "No transfer-stat changes to commit."
             exit 0
