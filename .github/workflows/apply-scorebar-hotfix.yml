@@ -1,0 +1,30 @@
+name: Apply scorebar hotfix
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - scorebar_hotfix.py
+
+permissions:
+  contents: write
+
+jobs:
+  hotfix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Apply hotfix
+        run: python scorebar_hotfix.py
+      - name: Commit hotfix changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html app.js styles.css
+          git diff --cached --quiet || git commit -m 'Fix scorebar scrolling and sync homepage record'
+          git push
