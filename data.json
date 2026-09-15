@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T22:37:41.686455+00:00",
+  "updated": "2026-09-15T22:46:27.392596+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Griz to battle Beavers on Saturday night in Corvallis",
+      "url": "https://gogriz.com/news/2026/9/15/football-griz-to-battle-beavers-on-saturday-night-in-corvallis",
+      "date": "Tue, 15 Sep 2026 16:20:00 MST",
+      "description": "MISSOULA - Thirty years and a little over one week ago, the Montana Grizzlies and a gunslinger quarterback named Ah Yat went to Corvallis, Oregon, and returned to Missoula with a 3"
+    },
+    {
       "title": "Gillman and O’Donnell earn Big Sky weekly honors",
       "url": "https://gogriz.com/news/2026/9/14/football-gillman-and-o-donnell-earn-big-sky-weekly-honors",
       "date": "Mon, 14 Sep 2026 09:53:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/8/31/football-mason-named-big-sky-special-teams-player-of-the-week",
       "date": "Mon, 31 Aug 2026 09:21:00 MST",
       "description": "They call it special teams for a reason… but Grizzly defensive end Jake Mason was a catalyst in the standout day by Montana's third unit on Saturday in UM's 28-21 Big Sky Conferenc"
-    },
-    {
-      "title": "Griz outlast T-Birds in Kennedy’s debut",
-      "url": "https://gogriz.com/news/2026/8/30/football-griz-outlast-t-birds-in-kennedys-debut",
-      "date": "Sun, 30 Aug 2026 01:08:00 MST",
-      "description": "MISSOULA - Bobby Kennedy improved to 1-0 as Montana's 38th head coach on Saturday night as the Grizzlies used a late touchdown and big special teams plays to fend off an up-for-it "
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-15T22:38:22.226044+00:00"
+    "checked_at": "2026-09-15T22:47:08.797226+00:00"
   },
   "resources": [
     {
@@ -2935,7 +2935,7 @@
       "pending": []
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-15T22:37:46.862918+00:00",
+    "source_checked_at": "2026-09-15T22:46:32.229007+00:00",
     "team_summary": [
       {
         "value": "3–0",
