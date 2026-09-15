@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-15T21:48:36.194489+00:00",
+  "updated": "2026-09-15T22:03:59.572946+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 89,
+  "story_count": 90,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "FWP confirms bear that attacked hunter south of Augusta was grizzly",
+      "url": "https://missoulian.com/news/state-regional/article_3778b52c-1464-555d-9c19-f105d0846a15.html",
+      "date": "Sep. 15, 2026",
+      "published_at": "2026-09-15T21:40:00+00:00",
+      "description": "Montana Fish, Wildlife & Parks confirmed Tuesday the bear that attacked a hunter Monday morning south of Augusta was a grizzly bear.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/3/77/3778b52c-1464-555d-9c19-f105d0846a15/6aa9bcd5e5386.preview.jpg?crop=1763%2C926%2C0%2C125&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/3/77/3778b52c-1464-555d-9c19-f105d0846a15/6aa9bcd5e5386.preview.jpg?crop=1763%2C926%2C0%2C125&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Cat-Griz Insider Podcast: Bobcats pass FBS test, Grizzlies prepare for one",
       "url": "https://missoulian.com/sports/college/big-sky-conference/montana-state-university/article_caa28094-7e15-58c8-8451-a9f5a14eace7.html",
