@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T01:05:01.911068+00:00",
+  "updated": "2026-09-15T01:39:24.951362+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 84,
   "sources": [
@@ -17,21 +17,6 @@
   "stories": [
     {
       "title": "First look: No. 3 Montana Grizzlies at Oregon State Beavers",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-3-montana-grizzlies-at-oregon-state-beavers/article_b1a4cedf-3052-436b-8abe-7b6e8dba8bf7.html",
-      "date": "Sep. 14, 2026",
-      "published_at": "2026-09-14T22:45:00+00:00",
-      "description": "First look: No. 3 Montana Grizzlies at Oregon State Beavers",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/1a/b1a4cedf-3052-436b-8abe-7b6e8dba8bf7/6aa843215eb86.preview.jpg?crop=1761%2C925%2C0%2C85&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/1a/b1a4cedf-3052-436b-8abe-7b6e8dba8bf7/6aa843215eb86.preview.jpg?crop=1761%2C925%2C0%2C85&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "First look: No. 3 Montana Grizzlies at Oregon State Beavers",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_df55c928-851e-558c-bea9-4605644dc96f.html",
       "date": "Sep. 14, 2026",
       "published_at": "2026-09-14T22:45:00+00:00",
@@ -44,6 +29,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/e4/6e47c0bb-e060-58d7-a6e0-d90831c134bc/6aa5dd51efe75.image.jpg?resize=300%2C200"
+    },
+    {
+      "title": "First look: No. 3 Montana Grizzlies at Oregon State Beavers",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-3-montana-grizzlies-at-oregon-state-beavers/article_b1a4cedf-3052-436b-8abe-7b6e8dba8bf7.html",
+      "date": "Sep. 14, 2026",
+      "published_at": "2026-09-14T22:45:00+00:00",
+      "description": "First look: No. 3 Montana Grizzlies at Oregon State Beavers",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/1a/b1a4cedf-3052-436b-8abe-7b6e8dba8bf7/6aa843215eb86.preview.jpg?crop=1761%2C925%2C0%2C85&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/1a/b1a4cedf-3052-436b-8abe-7b6e8dba8bf7/6aa843215eb86.preview.jpg?crop=1761%2C925%2C0%2C85&resize=1200%2C630&order=crop%2Cresize"
     },
     {
       "title": "Montana's Eli Gillman, Everett O’Donnell earn Big Sky weekly honors",
