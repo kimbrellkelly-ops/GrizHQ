@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-15T08:55:56.568231+00:00",
+  "updated": "2026-09-15T09:06:38.168924+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 85,
+  "story_count": 86,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "GRIZZLIES STILL SEEKING GROWTH",
+      "url": "https://missoulian.com/article_b75ee762-af2a-56d6-b205-b7f81858321b.html",
+      "date": "Sep. 15, 2026",
+      "published_at": "2026-09-15T08:33:16+00:00",
+      "description": "MONTANA FOOTBALL | SATURDAY IN REVIEW",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/35/435851f6-c94d-5653-bc2f-f41f06575010/6aa902a5ba0d5.image.jpg?resize=300%2C202",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/35/435851f6-c94d-5653-bc2f-f41f06575010/6aa902a5ba0d5.image.jpg?resize=300%2C202"
+    },
     {
       "title": "Griz press conference – Bobby Kennedy, Brooks Davis, Brock Beaner on Oregon State",
       "url": "https://skylinesportsmt.com/griz-press-conference-bobby-kennedy-brooks-davis-brock-beaner-on-oregon-state/",
