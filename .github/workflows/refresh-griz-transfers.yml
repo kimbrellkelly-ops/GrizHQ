@@ -4,6 +4,14 @@ on:
   schedule:
     - cron: "0 15 * * *"
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "transfer_stats.json"
+      - "transfer_update_v2.py"
+      - "index.html"
+      - ".github/workflows/refresh-griz-transfers.yml"
 
 permissions:
   contents: write
@@ -27,6 +35,7 @@ jobs:
           set -e
           echo "Checked out commit: $(git rev-parse HEAD)"
           test -f transfer_update_v2.py
+          test -f transfer_stats.json
           grep -q "python transfer_update_v2.py" .github/workflows/refresh-griz-transfers.yml
           echo "Verified: workflow uses transfer_update_v2.py"
 
@@ -43,26 +52,17 @@ jobs:
         run: |
           set -o pipefail
           python transfer_update_v2.py 2>&1 | tee transfer-refresh.log
-          if grep -q "Transfer tracker: 0/" transfer-refresh.log; then
-            echo "ERROR: The transfer scraper found zero matching player rows."
-            exit 1
-          fi
+          grep -q "Rendered" transfer-refresh.log
 
       - name: Commit transfer stats only
         run: |
           git config user.name "griz-hq-transfers-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html transfer_stats.json
+          git add index.html
           if git diff --cached --quiet; then
-            echo "No transfer-stat changes to commit."
+            echo "No rendered transfer-card changes to commit."
             exit 0
           fi
-          git commit -m "Auto-update Griz transfer stats"
-          for attempt in 1 2 3; do
-            git pull --rebase origin main && git push origin HEAD:main && exit 0
-            echo "Push attempt ${attempt} failed; retrying after refetch..."
-            git rebase --abort || true
-            git fetch origin main
-          done
-          echo "Unable to push refreshed Griz transfer stats after 3 attempts."
-          exit 1
+          git commit -m "Render Griz transfer ledger changes"
+          git pull --rebase origin main
+          git push origin HEAD:main
