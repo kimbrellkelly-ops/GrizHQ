@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T10:24:00.171632+00:00",
+  "updated": "2026-09-15T10:40:10.333795+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-15T10:24:16.622665+00:00"
+    "checked_at": "2026-09-15T10:40:41.408517+00:00"
   },
   "resources": [
     {
@@ -2935,7 +2935,7 @@
       "pending": []
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-15T10:24:02.763656+00:00",
+    "source_checked_at": "2026-09-15T10:40:17.521428+00:00",
     "team_summary": [
       {
         "value": "3–0",
@@ -13590,35 +13590,6 @@
         "broadcasts": []
       },
       {
-        "id": "401868960",
-        "date": "2026-09-26T23:00Z",
-        "name": "Southern Jaguars at Jackson State Tigers",
-        "teams": [
-          {
-            "id": "2296",
-            "name": "Jackson State Tigers",
-            "short": "Jackson St",
-            "abbrev": "JKST",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2582",
-            "name": "Southern Jaguars",
-            "short": "Southern",
-            "abbrev": "SOU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "9/26 - 7:00 PM EDT",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
         "id": "401867868",
         "date": "2026-09-26T23:00Z",
         "name": "Southern Illinois Salukis at Murray State Racers",
@@ -13806,6 +13777,35 @@
             "name": "Prairie View A&M Panthers",
             "short": "Prairie View",
             "abbrev": "PV",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "9/26 - 7:00 PM EDT",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401868960",
+        "date": "2026-09-26T23:00Z",
+        "name": "Southern Jaguars at Jackson State Tigers",
+        "teams": [
+          {
+            "id": "2296",
+            "name": "Jackson State Tigers",
+            "short": "Jackson St",
+            "abbrev": "JKST",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2582",
+            "name": "Southern Jaguars",
+            "short": "Southern",
+            "abbrev": "SOU",
             "homeAway": "away",
             "score": "0"
           }
@@ -27604,10 +27604,9 @@
     ]
   },
   "latest_press_conference": {
-    "title": "Griz press conference – Bobby Kennedy, Brooks Davis, Brock Beaner on Oregon State",
-    "date": "Tue, 15 Sep 2026 02:51:02 +0000",
-    "url": "https://skylinesportsmt.com/griz-press-conference-bobby-kennedy-brooks-davis-brock-beaner-on-oregon-state/",
-    "youtube_id": "LCXacLE40UE"
+    "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker",
+    "date": "September 5, 2026",
+    "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/"
   },
-  "fcs_scores_updated": "2026-09-15T10:24:18.714225+00:00"
+  "fcs_scores_updated": "2026-09-15T10:41:15.539353+00:00"
 }
