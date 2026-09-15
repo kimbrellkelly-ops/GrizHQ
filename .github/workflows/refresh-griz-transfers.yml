@@ -1,11 +1,6 @@
 name: Refresh Griz HQ transfer stats
 
 on:
-  push:
-    paths:
-      - "transfer_update.py"
-      - ".github/workflows/refresh-griz-transfers.yml"
-      - "index.html"
   schedule:
     # Refresh daily so current-season destination stats stay current after games.
     - cron: "0 15 * * *"
@@ -34,7 +29,14 @@ jobs:
         run: python -m pip install --disable-pip-version-check requests beautifulsoup4
 
       - name: Refresh transfer stats
-        run: python transfer_update.py
+        shell: bash
+        run: |
+          set -o pipefail
+          python transfer_update.py 2>&1 | tee transfer-refresh.log
+          if grep -q "No transfer stats sources returned a matching player row" transfer-refresh.log; then
+            echo "ERROR: The transfer scraper found zero matching player rows. The source parser needs repair."
+            exit 1
+          fi
 
       - name: Commit transfer stats only
         run: |
