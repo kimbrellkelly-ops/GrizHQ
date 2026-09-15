@@ -1,0 +1,17 @@
+{
+  "updated": "2026-09-14",
+  "source_policy": "Only verified current-season destination-school statistics belong here. Unknown values remain null rather than being invented.",
+  "players": [
+    {"name":"Malae Fonoti","school":"Missouri","position":"RB","status":"needs_verification","stats":null},
+    {"name":"Colin Amick","school":"Iowa State","position":"OL","status":"needs_verification","stats":null},
+    {"name":"Jose Balver-Mendoza","school":"Nevada","position":"OL","status":"needs_verification","stats":null},
+    {"name":"Jareb Ramos","school":"Iowa State","position":"DT","status":"needs_verification","stats":null},
+    {"name":"Caleb Otlewski","school":"Colorado State","position":"LB","status":"needs_verification","stats":null},
+    {"name":"Diezel Wilkinson","school":"UAB","position":"DB","status":"needs_verification","stats":null},
+    {"name":"Kyon Loud","school":"Duke","position":"CB","status":"needs_verification","stats":null},
+    {"name":"Micah Harper","school":"Iowa State","position":"S","status":"needs_verification","stats":null},
+    {"name":"Rashid Mansour","school":"Houston Christian","position":"CB","status":"needs_verification","stats":null},
+    {"name":"Terahiti Wolfe","school":"Portland State","position":"S","status":"needs_verification","stats":null},
+    {"name":"Justus Breston","school":"Mary","position":"DB","status":"needs_verification","stats":null}
+  ]
+}
