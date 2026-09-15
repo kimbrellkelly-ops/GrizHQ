@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T05:16:49.095769+00:00",
+  "updated": "2026-09-15T05:32:01.248649+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-15T05:17:05.370810+00:00"
+    "checked_at": "2026-09-15T05:32:32.407178+00:00"
   },
   "resources": [
     {
@@ -2935,7 +2935,7 @@
       "pending": []
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-15T05:16:51.767385+00:00",
+    "source_checked_at": "2026-09-15T05:32:07.015677+00:00",
     "team_summary": [
       {
         "value": "3–0",
@@ -27609,5 +27609,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-bobby-kennedy-brooks-davis-brock-beaner-on-oregon-state/",
     "youtube_id": "LCXacLE40UE"
   },
-  "fcs_scores_updated": "2026-09-15T05:17:07.586553+00:00"
+  "fcs_scores_updated": "2026-09-15T05:32:36.530422+00:00"
 }
