@@ -16,7 +16,7 @@ ALIASES={
 "northerncolorado":{"northerncolorado","northerncoloradobears"},"portlandstate":{"portlandstate","portlandstatevikings"},
 "weberstate":{"weberstate","weberstatewildcats"},"southernutah":{"southernutah","southernutahthunderbirds"},
 "utahtech":{"utahtech","utahtechtrailblazers"},"calpoly":{"calpoly","calpolymustangs"},"ucdavis":{"ucdavis","ucdavisaggies"}}
-HEADERS={"User-Agent":"GrizHQ/2.0 (+https://grizhq.com)"}
+HEADERS={}
 BASE="https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard"
 def norm(s): return re.sub(r"[^a-z0-9]","",str(s or "").lower())
 def canonical(s):
@@ -37,9 +37,18 @@ def daterange(a,b):
     d=date.fromisoformat(a); e=date.fromisoformat(b)
     while d<=e: yield d.isoformat(); d+=timedelta(days=1)
 def get(params):
-    r=requests.get(BASE,params=params,headers=HEADERS,timeout=30); r.raise_for_status(); p=r.json()
-    if not isinstance(p,dict) or not isinstance(p.get("events"),list): raise RuntimeError("ESPN response missing events")
-    return p["events"]
+    last=None
+    for base in (BASE, BASE.replace("https://","http://")):
+        try:
+            r=requests.get(base,params=params,headers=HEADERS,timeout=30)
+            r.raise_for_status()
+            p=r.json()
+            if not isinstance(p,dict) or not isinstance(p.get("events"),list):
+                raise RuntimeError("ESPN response missing events")
+            return p["events"]
+        except Exception as exc:
+            last=exc
+    raise RuntimeError(f"ESPN scoreboard request failed: {last}")
 def fetch_week(i,start,end,groups=None):
     q={"year":2026,"seasontype":2,"week":i,"limit":1000}
     if groups:q["groups"]=groups
