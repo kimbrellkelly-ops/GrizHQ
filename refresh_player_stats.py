@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build player leaders from the rendered official GoGriz statistics page."""
+"""Build current-season player leaders from the official GoGriz stats page."""
 from __future__ import annotations
 
 import json
@@ -27,7 +27,7 @@ def num(value):
 
 def headers_and_rows(table):
     rows = table.find_all("tr")
-    for i, row in enumerate(rows[:25]):
+    for i, row in enumerate(rows[:30]):
         headers = [clean(c.get_text(" ", strip=True)).upper() for c in row.find_all(["th", "td"])]
         if "PLAYER" in headers:
             return headers, rows, i
@@ -35,44 +35,42 @@ def headers_and_rows(table):
 
 
 def col(headers, *names):
+    normalized = [re.sub(r"[^A-Z0-9]+", " ", h).strip() for h in headers]
     for name in names:
-        for i, header in enumerate(headers):
-            if header == name or header.startswith(name + " "):
+        wanted = re.sub(r"[^A-Z0-9]+", " ", name.upper()).strip()
+        for i, header in enumerate(normalized):
+            if header == wanted or header.startswith(wanted + " "):
                 return i
     return None
 
 
 def classify(headers):
-    # Normalize punctuation/spacing because GoGriz has used several header
-    # spellings (ATT, CAR, RUSH; CMP, COMP; RECEPTIONS, REC).
-    normalized = {re.sub(r"[^A-Z0-9]", "", h.upper()) for h in headers}
-    has = lambda *names: any(re.sub(r"[^A-Z0-9]", "", n.upper()) in normalized for n in names)
-    if has("COMP", "CMP", "COMPLETIONS") and has("ATT", "ATTEMPTS") and has("YDS", "YARDS") and has("TD", "TOUCHDOWNS"):
-        return "passing"
-    if has("REC", "RECEPTIONS") and has("YDS", "YARDS") and has("TD", "TOUCHDOWNS"):
-        return "receiving"
-    if has("CAR", "RUSH", "RUSHATT", "ATT") and has("YDS", "YARDS") and has("TD", "TOUCHDOWNS"):
-        return "rushing"
-    if has("TOT", "TOTAL", "TACKLES") and has("SOLO") and has("AST", "ASSIST"):
-        return "tackles"
-    if has("TFL", "TACKLESFORLOSS") or has("SACK", "SACKS") or has("FF", "FUMBLESFORCED"):
+    has = lambda *names: col(headers, *names) is not None
+    # Check the most distinctive tables first. Defensive tables often contain
+    # both tackle and pressure columns, so do not classify them as tackles only.
+    if has("TFL") or has("SACK", "SACKS") or has("FF") or has("QH"):
         return "pressure"
-    if has("PUNTS", "PUNT") or has("FGM", "XPM", "MADE") or has("FGA", "XPA", "ATTEMPTS"):
+    if has("SOLO") and has("AST") and has("TOT", "TOTAL"):
+        return "tackles"
+    if has("COMP", "CMP") and has("ATT") and has("YDS") and has("TD"):
+        return "passing"
+    if has("REC", "RECEPTIONS") and has("YDS") and has("TD"):
+        return "receiving"
+    if has("CAR", "RUSH", "ATT") and has("YDS") and has("TD"):
+        return "rushing"
+    if has("PUNTS") or has("FGM") or has("XPM") or has("FGA") or has("XPA") or has("KICK"):
         return "special"
     return None
 
 
 def player_name(cells):
-    # GoGriz places the real player name in an anchor; do not depend on the
-    # visual text extraction of the first/# column.
     for cell in cells:
         for anchor in cell.find_all("a"):
             text = clean(anchor.get_text(" ", strip=True))
             if len(text.split()) >= 2 and text.lower() not in {"total", "opponents"}:
                 return text
     for cell in cells:
-        text = clean(cell.get_text(" ", strip=True))
-        text = re.sub(r"^\d+\s+", "", text)
+        text = re.sub(r"^\d+\s+", "", clean(cell.get_text(" ", strip=True)))
         if len(text.split()) >= 2 and text.lower() not in {"total", "opponents"}:
             return text
     return ""
@@ -105,7 +103,7 @@ def parse_table(table, category, totals):
         elif category == "receiving":
             metrics = {"rec": value("REC", "RECEPTIONS"), "yds": value("YDS"), "td": value("TD")}
         elif category == "tackles":
-            metrics = {"tot": value("TOT"), "solo": value("SOLO"), "ast": value("AST")}
+            metrics = {"tot": value("TOT", "TOTAL"), "solo": value("SOLO"), "ast": value("AST")}
         elif category == "pressure":
             metrics = {"tfl": value("TFL"), "sacks": value("SACK", "SACKS"), "ff": value("FF"), "int": value("INT")}
         else:
@@ -117,40 +115,46 @@ def parse_table(table, category, totals):
             bucket[key] += amount
 
 
+def collect_tables(page, totals):
+    soup = BeautifulSoup(page.content(), "html.parser")
+    for table in soup.find_all("table"):
+        headers, _, _ = headers_and_rows(table)
+        category = classify(headers)
+        if category:
+            parse_table(table, category, totals)
+
+
 def parse_rendered_page():
     totals = {category: defaultdict(lambda: defaultdict(float)) for category in CATEGORIES}
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True)
-        page = browser.new_page(viewport={"width": 1440, "height": 1200})
-        page.goto(URL, wait_until="networkidle", timeout=90000)
-        page.wait_for_timeout(1500)
+        page = browser.new_page(viewport={"width": 1440, "height": 1600})
+        page.goto(URL, wait_until="domcontentloaded", timeout=90000)
+        page.wait_for_timeout(2500)
+        collect_tables(page, totals)
 
-        # Parse any tables already present, then attempt every known tab.
-        # GoGriz has changed the tab markup several times, so use buttons/tabs/
-        # links and a DOM-click fallback rather than one exact text locator.
-        def parse_visible_tables():
-            soup = BeautifulSoup(page.content(), "html.parser")
-            for table in soup.find_all("table"):
-                headers, _, _ = headers_and_rows(table)
-                category = classify(headers)
-                if category:
-                    parse_table(table, category, totals)
-
-        parse_visible_tables()
-        labels = ["Passing", "Rushing", "Receiving", "Defense", "Special Teams", "Offense", "Kicking", "Punting"]
-        for label in labels:
+        # Sidearm renders the tables behind client-side controls. Match the
+        # control by normalized visible text, then use a DOM click fallback.
+        wanted = {"passing", "rushing", "receiving", "defense", "special teams", "offense", "special", "kicking", "punting"}
+        controls = page.locator("button, a, [role='tab'], [role='button']")
+        for i in range(controls.count()):
+            control = controls.nth(i)
             try:
-                candidates = page.locator("button, [role='tab'], a").filter(has_text=label)
-                if candidates.count():
-                    target = candidates.first
-                    try:
-                        target.click(timeout=3000, force=True)
-                    except Exception:
-                        target.evaluate("el => el.click()")
-                    page.wait_for_timeout(700)
-                    parse_visible_tables()
-            except Exception as exc:
-                print(f"NOTICE: could not open {label} tab: {exc}")
+                label = clean(control.inner_text()).lower()
+            except Exception:
+                continue
+            if label not in wanted:
+                continue
+            try:
+                control.click(timeout=2500, force=True)
+            except Exception:
+                try:
+                    control.evaluate("el => el.click()")
+                except Exception:
+                    continue
+            page.wait_for_timeout(700)
+            collect_tables(page, totals)
+
         browser.close()
     return totals
 
