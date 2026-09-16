@@ -8,6 +8,18 @@ from xml.etree import ElementTree as ET
 
 HEADERS = {"User-Agent": "GrizHQ/1.0 (+https://grizhq.com)"}
 DATA = Path("data.json")
+NEXT_GAME_VENUES = {
+    "Oregon State": "Reser Stadium, Corvallis, Ore.",
+    "UC Davis": "UC Davis Health Stadium, Davis, Calif.",
+    "Northern Colorado": "Nottingham Field, Greeley, Colo.",
+    "Northern Arizona": "J. Lawrence Walkup Skydome, Flagstaff, Ariz.",
+    "Idaho": "Kibbie-ASUI Activity Center, Moscow, Idaho",
+    "Eastern Washington": "Roos Field, Cheney, Wash.",
+    "Portland State": "Hillsboro Stadium, Hillsboro, Ore.",
+    "Idaho State": "Holt Arena, Pocatello, Idaho",
+    "Montana State": "Bobcat Stadium, Bozeman, Mont.",
+}
+
 BIG_SKY = {
     "Southern Utah", "UC Davis", "Northern Colorado", "Northern Arizona",
     "Idaho", "Eastern Washington", "Portland State", "Idaho State", "Montana State",
@@ -425,7 +437,7 @@ def main():
         upcoming=[g for g in sched if not g.get("result")]
         if upcoming:
             g=upcoming[0]
-            new["next_game"]={"opponent":g["opponent"],"date":g["date"],"time":g["time"],"venue":"Washington-Grizzly Stadium, Missoula, Mont." if g["location"]=="Home" else g["location"],"url":"https://gogriz.com/sports/football/schedule"}
+            new["next_game"]={"opponent":g["opponent"],"date":g["date"],"time":g["time"],"venue": "Washington-Grizzly Stadium, Missoula, Mont." if g["location"] == "Home" else NEXT_GAME_VENUES.get(g["opponent"], g["location"]),"url":"https://gogriz.com/sports/football/schedule"}
     except Exception as e: print("Schedule update failed:",e)
 
     try:
