@@ -122,15 +122,19 @@ def build_stats(schedule, old_stats, get, schedule_html=None):
     stats["source"] = source_note
     stats["source_url"] = OFFICIAL_CUMULATIVE_URL
     stats["source_checked_at"] = datetime.now(timezone.utc).isoformat()
+    pending = [
+        str(game.get("opponent", "")).strip()
+        for game in completed
+        if str(game.get("opponent", "")).strip()
+    ]
     stats["coverage"] = {
         "completed_games": len(completed),
         "verified_boxscores": 0,
         "source_of_truth": OFFICIAL_CUMULATIVE_URL,
-        "pending": [
-            str(game.get("opponent", "")).strip()
-            for game in completed
-            if str(game.get("opponent", "")).strip()
-        ],
+        "pending": pending,
     }
-    stats["through"] = f"Official cumulative source: {OFFICIAL_CUMULATIVE_URL}"
+    stats["through"] = (
+        f"Official cumulative source: {OFFICIAL_CUMULATIVE_URL}; "
+        f"pending box-score verification for {len(pending)} completed game(s)"
+    )
     return stats
