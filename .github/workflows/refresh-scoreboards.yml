@@ -1,14 +1,55 @@
-name: Validate Scoreboards
+name: Refresh Scoreboards
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'scoreboard/scoreboard-data.json'
   schedule:
-    - cron: "17 * * * *"
+    - cron: '*/15 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: griz-hq-repo-writes
+  cancel-in-progress: false
+
 jobs:
-  validate:
+  refresh:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
-      - run: python refresh_scoreboards.py
+          python-version: '3.x'
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check requests
+      - name: Rebuild scoreboard cache
+        run: python refresh_scoreboards.py
+      - name: Validate scoreboard cache
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('scoreboard/scoreboard-data.json')
+          d=json.loads(p.read_text())
+          assert len(d.get('rankings',[])) == 25
+          assert len(d.get('weeks',[])) == 13
+          assert all(len(w.get('events',[])) >= 0 for w in d['weeks'])
+          print('Scoreboard cache validated:', len(d['rankings']), 'ranked teams;', len(d['weeks']), 'weeks')
+          PY
+      - name: Commit refreshed scoreboard cache
+        run: |
+          set -e
+          git config user.name 'griz-hq-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scoreboard/scoreboard-data.json
+          if git diff --cached --quiet; then
+            echo 'No scoreboard changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Refresh Griz HQ scoreboards'
+          git push origin HEAD:main
