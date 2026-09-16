@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-16T02:20:15.328447+00:00",
+  "updated": "2026-09-16T02:23:31.870827+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-16T02:20:36.656525+00:00"
+    "checked_at": "2026-09-16T02:23:50.202054+00:00"
   },
   "resources": [
     {
@@ -2939,7 +2939,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-16T02:20:18.355477+00:00",
+    "source_checked_at": "2026-09-16T02:23:35.028581+00:00",
     "team_summary": [
       {
         "value": "3–0",
@@ -3228,7 +3228,7 @@
     ],
     "leaders_source": "https://gogriz.com/sports/football/stats/2026",
     "source_url": "https://gogriz.com/sports/football/stats/2026",
-    "leaders_checked_at": "2026-09-16T02:20:46.190798+00:00",
+    "leaders_checked_at": "2026-09-16T02:24:00.082276+00:00",
     "leaders_preserved_categories": [
       "rushing",
       "receiving",
