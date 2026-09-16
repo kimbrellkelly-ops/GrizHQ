@@ -32,8 +32,6 @@ jobs:
       - name: Update Griz HQ data
         run: python update_data.py
 
-      - name: Refresh FCS scoreboard cache
-        run: python score_refresh.py
 
       - name: Validate generated data
         run: python validate_stats.py
