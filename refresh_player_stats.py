@@ -46,8 +46,6 @@ def col(headers, *names):
 
 def classify(headers):
     has = lambda *names: col(headers, *names) is not None
-    # Check the most distinctive tables first. Defensive tables often contain
-    # both tackle and pressure columns, so do not classify them as tackles only.
     if has("TFL") or has("SACK", "SACKS") or has("FF") or has("QH"):
         return "pressure"
     if has("SOLO") and has("AST") and has("TOT", "TOTAL"):
@@ -133,8 +131,6 @@ def parse_rendered_page():
         page.wait_for_timeout(2500)
         collect_tables(page, totals)
 
-        # Sidearm renders the tables behind client-side controls. Match the
-        # control by normalized visible text, then use a DOM click fallback.
         wanted = {"passing", "rushing", "receiving", "defense", "special teams", "offense", "special", "kicking", "punting"}
         controls = page.locator("button, a, [role='tab'], [role='button']")
         for i in range(controls.count()):
@@ -182,17 +178,33 @@ def build_leaders(totals):
 
 
 def main():
-    leaders = build_leaders(parse_rendered_page())
-    missing = [category for category in CATEGORIES if not leaders[category]]
-    if missing:
-        raise RuntimeError("Rendered GoGriz player tables were only partially parsed; missing: " + ", ".join(missing))
     data = json.loads(DATA.read_text(encoding="utf-8"))
     stats = data.setdefault("stats", {})
+    previous = stats.get("leaders", {}) if isinstance(stats.get("leaders", {}), dict) else {}
+    leaders = build_leaders(parse_rendered_page())
+
+    # The GoGriz page can expose only some category tabs to headless browsers.
+    # Never fail the entire data refresh or erase a previously published category
+    # just because one rendered tab was unavailable on this run.
+    preserved = []
+    for category in CATEGORIES:
+        if not leaders[category] and isinstance(previous.get(category), list) and previous[category]:
+            leaders[category] = previous[category]
+            preserved.append(category)
+
+    data_missing = [category for category in CATEGORIES if not leaders[category]]
+    if data_missing:
+        raise RuntimeError("No player leaders available for: " + ", ".join(data_missing))
+
     stats["leaders"] = leaders
     stats["leaders_source"] = URL
     stats["leaders_checked_at"] = datetime.now(timezone.utc).isoformat()
+    stats["leaders_preserved_categories"] = preserved
     DATA.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print("Published complete official player leaders: " + ", ".join(f"{k}={len(v)}" for k, v in leaders.items()))
+    message = "Published official player leaders: " + ", ".join(f"{k}={len(v)}" for k, v in leaders.items())
+    if preserved:
+        message += "; preserved unavailable categories: " + ", ".join(preserved)
+    print(message)
 
 
 if __name__ == "__main__":
