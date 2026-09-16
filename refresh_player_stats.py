@@ -75,11 +75,23 @@ def classify(headers, context=""):
 
 
 def player_name(cells):
+    # GoGriz has used multiple table renderers. Some versions put the player
+    # name in an anchor; others render it as plain text. Support both.
     for cell in cells:
         for a in cell.find_all("a"):
             text = clean(a.get_text(" ", strip=True))
             if len(text.split()) >= 2 and text.lower() not in {"total", "opponents"}:
                 return text
+
+    for cell in cells:
+        text = clean(cell.get_text(" ", strip=True))
+        text = re.sub(r"^\s*#?\d+\s*", "", text)
+        if not text or text.lower() in {"total", "opponents", "player", "name", "athlete"}:
+            continue
+        if re.fullmatch(r"[-+]?\d+(?:\.\d+)?", text):
+            continue
+        if len(text.split()) >= 2 and not re.search(r"\b(?:gp|att|yds|td|int|solo|ast|tot|tfl|sack|ff)\b", text, re.I):
+            return text
     return ""
 
 
@@ -129,14 +141,15 @@ def collect(page, totals):
 
 def click_exact(page, label):
     loc = page.get_by_text(label, exact=True)
-    for i in range(min(loc.count(), 4)):
+    clicked = False
+    for i in range(min(loc.count(), 8)):
         try:
             loc.nth(i).click(timeout=5000, force=True)
-            page.wait_for_timeout(1000)
-            return True
+            page.wait_for_timeout(1200)
+            clicked = True
         except Exception:
             pass
-    return False
+    return clicked
 
 
 def parse_rendered_page():
