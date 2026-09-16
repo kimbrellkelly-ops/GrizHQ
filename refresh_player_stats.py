@@ -9,6 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from bs4 import BeautifulSoup
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
 
 DATA = Path("data.json")
@@ -75,14 +76,11 @@ def classify(headers, context=""):
 
 
 def player_name(cells):
-    # GoGriz has used multiple table renderers. Some versions put the player
-    # name in an anchor; others render it as plain text. Support both.
     for cell in cells:
         for a in cell.find_all("a"):
             text = clean(a.get_text(" ", strip=True))
             if len(text.split()) >= 2 and text.lower() not in {"total", "opponents"}:
                 return text
-
     for cell in cells:
         text = clean(cell.get_text(" ", strip=True))
         text = re.sub(r"^\s*#?\d+\s*", "", text)
@@ -105,9 +103,11 @@ def parse_table(table, category, totals):
         if not name or name.lower() in {"total", "opponents"}:
             continue
         values = [clean(c.get_text(" ", strip=True)) for c in cells]
+
         def value(*names):
             i = col(headers, *names)
             return num(values[i]) if i is not None and i < len(values) else 0.0
+
         if category == "passing":
             metrics = {"cmp": value("COMP", "CMP"), "yds": value("YDS"), "td": value("TD"), "int": value("INT")}
         elif category == "rushing":
@@ -157,29 +157,43 @@ def parse_rendered_page():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page(viewport={"width": 1600, "height": 1800})
-        page.goto(URL, wait_until="networkidle", timeout=90000)
-        page.wait_for_timeout(4000)
-        collect(page, totals)
-        for category in CATEGORIES:
-            for label in TAB_LABELS[category]:
-                click_exact(page, label)
-                collect(page, totals)
-        browser.close()
+        try:
+            # GoGriz keeps background requests open, so networkidle can time out
+            # even after the stats page is fully usable. DOMContentLoaded is the
+            # correct readiness point; the explicit wait below handles rendering.
+            try:
+                page.goto(URL, wait_until="domcontentloaded", timeout=90000)
+            except PlaywrightTimeoutError:
+                print("Warning: GoGriz navigation timed out; using the rendered page that is available.")
+            page.wait_for_timeout(6000)
+            collect(page, totals)
+            for category in CATEGORIES:
+                for label in TAB_LABELS[category]:
+                    click_exact(page, label)
+                    collect(page, totals)
+        finally:
+            browser.close()
     return totals
 
 
 def build_leaders(totals):
     result = {c: [] for c in CATEGORIES}
-    keys = {"passing":"yds", "rushing":"yds", "receiving":"yds", "tackles":"tot", "pressure":"tfl", "special":"made"}
+    keys = {"passing": "yds", "rushing": "yds", "receiving": "yds", "tackles": "tot", "pressure": "tfl", "special": "made"}
     for category in CATEGORIES:
         rows = sorted(totals[category].values(), key=lambda r: (-r[keys[category]], r["player"]))
         for row in [r for r in rows if r[keys[category]] > 0][:5]:
-            if category == "passing": line = f'{int(row["cmp"])} CMP • {int(row["yds"])} YDS • {int(row["td"])} TD • {int(row["int"])} INT'; extra = ""
-            elif category == "rushing": line = f'{int(row["att"])} CAR • {int(row["yds"])} YDS • {int(row["td"])} TD'; extra = ""
-            elif category == "receiving": line = f'{int(row["rec"])} REC • {int(row["yds"])} YDS • {int(row["td"])} TD'; extra = ""
-            elif category == "tackles": line = f'{row["tot"]:.1f} TKL • {row["solo"]:.1f} SOLO'; extra = f'{row["ast"]:.1f} AST'
-            elif category == "pressure": line = f'{row["tfl"]:.1f} TFL • {row["sacks"]:.1f} SACK • {row["ff"]:.1f} FF'; extra = f'{row["int"]:.1f} INT'
-            else: line = f'{int(row["made"])} MADE • {int(row["attempts"])} ATT'; extra = f'{int(row["punts"])} PUNTS • {int(row["yds"])} YDS' if row["punts"] else ""
+            if category == "passing":
+                line = f'{int(row["cmp"])} CMP • {int(row["yds"])} YDS • {int(row["td"])} TD • {int(row["int"])} INT'; extra = ""
+            elif category == "rushing":
+                line = f'{int(row["att"])} CAR • {int(row["yds"])} YDS • {int(row["td"])} TD'; extra = ""
+            elif category == "receiving":
+                line = f'{int(row["rec"])} REC • {int(row["yds"])} YDS • {int(row["td"])} TD'; extra = ""
+            elif category == "tackles":
+                line = f'{row["tot"]:.1f} TKL • {row["solo"]:.1f} SOLO'; extra = f'{row["ast"]:.1f} AST'
+            elif category == "pressure":
+                line = f'{row["tfl"]:.1f} TFL • {row["sacks"]:.1f} SACK • {row["ff"]:.1f} FF'; extra = f'{row["int"]:.1f} INT'
+            else:
+                line = f'{int(row["made"])} MADE • {int(row["attempts"])} ATT'; extra = f'{int(row["punts"])} PUNTS • {int(row["yds"])} YDS' if row["punts"] else ""
             result[category].append({"player": row["player"], "line": line, "extra": extra})
     return result
 
