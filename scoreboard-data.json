@@ -1,8 +1,9 @@
 {
   "season": 2026,
   "generatedAt": null,
-  "source": "ESPN College Football scoreboard API",
+  "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [],
+  "rankingsDate": "",
   "bigSkyTeams": [
     "Montana",
     "Montana State",

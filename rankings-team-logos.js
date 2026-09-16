@@ -85,15 +85,6 @@
       if(url)addImage(line,url,'schedule-team-logo',name+' logo');
     });
   }
-  function addScoreLogos(root){
-    if(!root)return;
-    root.querySelectorAll('[data-team-name],.score-team,.score-team-name,.team-name').forEach(el=>{
-      const raw=el.getAttribute('data-team-name')||el.textContent||'';
-      const name=String(raw).replace(/^@\s*/,'').trim();
-      const url=LOGOS[key(name)];
-      if(url&&el.parentElement)addImage(el.parentElement,url,'score-team-logo','');
-    });
-  }
   function fixRankingsTitle(){
     document.querySelectorAll('h1,h2,h3').forEach(title=>{
       const text=String(title.textContent||'').replace(/\s+/g,' ').trim();
@@ -104,7 +95,6 @@
     addLogos(document.getElementById('coaches-poll'));
     addLogos(document.getElementById('media-poll'));
     addScheduleLogos(document.getElementById('schedule-list'));
-    addScoreLogos(document.getElementById('score-games'));
     addScoreLogos(document.getElementById('bigsky-table'));
     fixRankingsTitle();
   }
@@ -114,7 +104,7 @@
   const observer=new MutationObserver(run);
   function start(){
     run();
-    ['coaches-poll','media-poll','schedule-list','score-games','bigsky-table'].forEach(id=>{const el=document.getElementById(id);if(el)observer.observe(el,{childList:true,subtree:true});});
+    ['coaches-poll','media-poll','schedule-list','bigsky-table'].forEach(id=>{const el=document.getElementById(id);if(el)observer.observe(el,{childList:true,subtree:true});});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 })();

@@ -7,6 +7,10 @@
 <title>Griz HQ | Montana Football</title>
 <meta content="Griz HQ — a fan-built Montana Grizzlies football information hub." name="description"/>
 <link href="styles.css?v=20260906-news3" rel="stylesheet"/>
+<link href="scoreboard/scoreboard.css?v=20260916-clean2" rel="stylesheet"/>
+<script defer src="scoreboard/scoreboard-config.js?v=20260916-clean2"></script>
+<script defer src="scoreboard/scoreboard-render.js?v=20260916-clean2"></script>
+<script defer src="scoreboard/scorebar-render.js?v=20260916-clean2"></script>
 <script defer src="app.js?v=20260913-next-game-authoritative1"></script>
 <script defer="" src="rankings-team-logos.js"></script>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -30,6 +34,7 @@
 <style id="officiating-tab-style">
 .officiating-tab-shell{padding:0 0 30px}.officiating-tab-frame{display:block;width:100%;height:2400px;border:0;background:#f5f2ef}.officiating-tab-open{display:inline-flex;margin:0 0 16px;padding:11px 15px;background:#6b0038;color:#fff;text-decoration:none;font-weight:900;letter-spacing:.3px}.officiating-tab-open:hover{text-decoration:underline}@media(max-width:800px){.officiating-tab-frame{height:3000px}}
 </style>
+<script defer src="live-repair.js?v=20260915-1"></script>
 </head>
 <body>
 <header class="v2-header">
@@ -1191,7 +1196,5 @@ document.querySelectorAll('.roster-filter').forEach(b=>b.addEventListener('click
   setTimeout(updateArrows,1000);
 })();
 </script>
-<script src="scoreboard/scoreboard-config.js?v=20260916"></script>
-<script src="scoreboard/scoreboard-render.js?v=20260916"></script>
 </body>
 </html>

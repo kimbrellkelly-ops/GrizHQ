@@ -25,15 +25,6 @@
     document.querySelectorAll('.v2-snapshot-grid > div:first-child b').forEach(e=>text(e,d.team?.record||'—'));
     document.querySelectorAll('.v2-snapshot-grid > div:nth-child(3) b').forEach(e=>text(e,d.team?.conference_record||'—'));
   }
-  function renderScores(d){
-    const box=document.getElementById('score-games'); if(!box) return;
-    if(box.dataset.repairRendered==='1') return;
-    const all=[];
-    const src=d && d.fcs_scores;
-    if(src && typeof src==='object') Object.values(src).forEach(day=>Array.isArray(day)&&day.forEach(g=>all.push(g)));
-    const cards=all.slice(0,40).map(g=>{const ts=Array.isArray(g.teams)?g.teams:[];const a=ts[0]||{},b=ts[1]||{};return '<div class="repair-score-card"><b>'+esc(a.name||a.team?.displayName||'Team')+' '+esc(a.score||'—')+'</b><span>'+esc(b.name||b.team?.displayName||'Team')+' '+esc(b.score||'—')+'</span></div>';});
-    if(cards.length){box.innerHTML=cards.join('');box.dataset.repairRendered='1';}
-  }
-  function boot(){installScroll();fetch('data.json?repair='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(d=>{renderNext(d);renderScores(d);}).catch(()=>{});}
+  function boot(){installScroll();fetch('data.json?repair='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(d=>{renderNext(d);}).catch(()=>{});}
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot,{once:true}); else boot();
 })();

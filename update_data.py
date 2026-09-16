@@ -21,11 +21,68 @@ NEXT_GAME_VENUES = {
 }
 
 BIG_SKY = {
-    "Montana", "Montana State", "Idaho", "Idaho State", "Eastern Washington",
-    "Northern Arizona", "Northern Colorado", "Portland State", "Weber State",
-    "Southern Utah", "Utah Tech", "Cal Poly", "UC Davis"
+    "Southern Utah", "UC Davis", "Northern Colorado", "Northern Arizona",
+    "Idaho", "Eastern Washington", "Portland State", "Idaho State", "Montana State",
+    "Weber State", "Cal Poly", "Idaho State", "Northern Colorado", "Eastern Washington"
 }
 
+
+FCS_SCORE_WEEKS = [
+    ("2026-08-27", "2026-08-30"),
+    ("2026-09-03", "2026-09-06"),
+    ("2026-09-10", "2026-09-13"),
+    ("2026-09-17", "2026-09-20"),
+    ("2026-09-24", "2026-09-27"),
+    ("2026-10-01", "2026-10-04"),
+    ("2026-10-08", "2026-10-11"),
+    ("2026-10-15", "2026-10-18"),
+    ("2026-10-22", "2026-10-25"),
+    ("2026-10-29", "2026-11-01"),
+    ("2026-11-05", "2026-11-08"),
+    ("2026-11-12", "2026-11-15"),
+    ("2026-11-19", "2026-11-22"),
+    ("2026-11-26", "2026-11-29"),
+    ("2026-12-03", "2026-12-06"),
+]
+
+FCS_SCORE_URLS = [
+    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+    "https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+]
+
+def fetch_fcs_scores():
+    """Cache complete daily ESPN events by week start. Never use the incomplete groups=81 feed."""
+    out = {}
+    for start, end in FCS_SCORE_WEEKS:
+        games = []
+        day = datetime.fromisoformat(start).date()
+        last = datetime.fromisoformat(end).date()
+        while day <= last:
+            ymd = day.strftime("%Y%m%d")
+            payload = None
+            for endpoint in FCS_SCORE_URLS:
+                try:
+                    r = requests.get(endpoint, params={"dates": ymd, "limit": 500}, headers=HEADERS, timeout=20)
+                    r.raise_for_status()
+                    candidate = r.json()
+                    if isinstance(candidate, dict) and isinstance(candidate.get("events"), list):
+                        payload = candidate
+                        break
+                except Exception as exc:
+                    print(f"ESPN {ymd} failed: {exc}")
+            if payload:
+                for ev in payload.get("events", []):
+                    comp = (ev.get("competitions") or [{}])[0]
+                    teams = []
+                    for c in comp.get("competitors", []):
+                        team = c.get("team") or {}
+                        teams.append({"id": str(team.get("id", "")), "name": team.get("displayName") or team.get("shortDisplayName") or "", "short": team.get("shortDisplayName") or team.get("displayName") or "", "abbrev": team.get("abbreviation") or "", "homeAway": c.get("homeAway", ""), "score": c.get("score", ""), "logo": team.get("logo", "")})
+                    st = comp.get("status", {}).get("type", {})
+                    broadcasts = [n for b in comp.get("broadcasts", []) for n in (b.get("names") or [])]
+                    games.append({"id": str(ev.get("id", "")), "date": ev.get("date", ""), "name": ev.get("name", ""), "teams": teams, "state": st.get("state", ""), "completed": bool(st.get("completed")), "detail": st.get("shortDetail") or st.get("detail") or "", "broadcasts": broadcasts[:3]})
+            day = day.fromordinal(day.toordinal()+1)
+        seen = set(); out[start] = [g for g in games if not (g["id"] in seen or seen.add(g["id"]))]
+    return out
 
 def parse_schedule():
     soup = BeautifulSoup(get("https://gogriz.com/sports/football/schedule/text"), "html.parser")
@@ -374,6 +431,8 @@ def main():
         new["fcs_top20"]=new["fcs_top25"][:20]
         new["fcs_rankings_date"]=new["rankings_date"]
     except Exception as e: print("Rankings update failed:",e)
+
+    # Scoreboards are maintained exclusively by refresh_scoreboards.py.
 
     try: new["news"]=parse_news()
     except Exception as e: print("News update failed:",e)

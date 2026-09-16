@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Compatibility wrapper. The authoritative scoreboard pipeline lives in refresh_scoreboards.py."""
-from refresh_scoreboards import main
-
-if __name__ == "__main__":
-    main()
+"""Deprecated compatibility shim.
+The only scoreboard writer is refresh_scoreboards.py.
+This file intentionally does not modify data.json.
+"""
+print("score_refresh.py is deprecated; use refresh_scoreboards.py")
