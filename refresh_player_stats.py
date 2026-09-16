@@ -122,23 +122,42 @@ def parse_rendered_page():
         page.goto(URL, wait_until="networkidle", timeout=90000)
         page.wait_for_timeout(1500)
 
-        # The page exposes the categories as client-side tabs. Visit each tab
-        # so its table is actually rendered before reading the DOM.
+        def parse_visible_dom():
+            soup = BeautifulSoup(page.content(), "html.parser")
+            found = set()
+            for table in soup.find_all("table"):
+                headers, _, _ = headers_and_rows(table)
+                category = classify(headers)
+                if category:
+                    parse_table(table, category, totals)
+                    found.add(category)
+            return found
+
+        # Parse the initial DOM first. Some GoGriz releases render all tables
+        # in the page markup while the tab controls themselves are not visible
+        # to Playwright. The old code only parsed after a successful tab click,
+        # which caused every category to be reported missing.
+        found_categories = parse_visible_dom()
+
+        # Then make best-effort attempts to activate tab controls. A missing or
+        # hidden tab must not prevent parsing tables that are already present.
         labels = ["Passing", "Rushing", "Receiving", "Defense", "Special Teams", "Offense"]
         for label in labels:
             try:
                 locator = page.get_by_text(label, exact=True).first
                 if locator.count():
-                    locator.click(timeout=5000)
-                    page.wait_for_timeout(500)
-                    soup = BeautifulSoup(page.content(), "html.parser")
-                    for table in soup.find_all("table"):
-                        headers, _, _ = headers_and_rows(table)
-                        category = classify(headers)
-                        if category:
-                            parse_table(table, category, totals)
+                    try:
+                        locator.click(timeout=2500)
+                    except Exception:
+                        # React/HTML tab controls may be present but hidden;
+                        # dispatch a normal DOM click as a fallback.
+                        locator.evaluate("el => el.click()")
+                    page.wait_for_timeout(350)
+                    found_categories.update(parse_visible_dom())
             except Exception as exc:
                 print(f"NOTICE: could not open {label} tab: {exc}")
+
+        print("Parsed player-stat categories: " + ", ".join(sorted(found_categories)))
         browser.close()
     return totals
 
