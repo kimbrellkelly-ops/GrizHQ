@@ -43,18 +43,21 @@ def col(headers, *names):
 
 
 def classify(headers):
-    has = lambda *names: col(headers, *names) is not None
-    if has("COMP", "CMP") and has("ATT") and has("YDS") and has("TD"):
+    # Normalize punctuation/spacing because GoGriz has used several header
+    # spellings (ATT, CAR, RUSH; CMP, COMP; RECEPTIONS, REC).
+    normalized = {re.sub(r"[^A-Z0-9]", "", h.upper()) for h in headers}
+    has = lambda *names: any(re.sub(r"[^A-Z0-9]", "", n.upper()) in normalized for n in names)
+    if has("COMP", "CMP", "COMPLETIONS") and has("ATT", "ATTEMPTS") and has("YDS", "YARDS") and has("TD", "TOUCHDOWNS"):
         return "passing"
-    if has("REC", "RECEPTIONS") and has("YDS") and has("TD"):
+    if has("REC", "RECEPTIONS") and has("YDS", "YARDS") and has("TD", "TOUCHDOWNS"):
         return "receiving"
-    if has("CAR", "RUSH", "ATT") and has("YDS") and has("TD"):
+    if has("CAR", "RUSH", "RUSHATT", "ATT") and has("YDS", "YARDS") and has("TD", "TOUCHDOWNS"):
         return "rushing"
-    if has("TOT") and has("SOLO") and has("AST"):
+    if has("TOT", "TOTAL", "TACKLES") and has("SOLO") and has("AST", "ASSIST"):
         return "tackles"
-    if has("TFL") or has("SACK", "SACKS") or has("FF"):
+    if has("TFL", "TACKLESFORLOSS") or has("SACK", "SACKS") or has("FF", "FUMBLESFORCED"):
         return "pressure"
-    if has("PUNTS") or has("FGM") or has("XPM") or has("FGA") or has("XPA"):
+    if has("PUNTS", "PUNT") or has("FGM", "XPM", "MADE") or has("FGA", "XPA", "ATTEMPTS"):
         return "special"
     return None
 
@@ -122,42 +125,32 @@ def parse_rendered_page():
         page.goto(URL, wait_until="networkidle", timeout=90000)
         page.wait_for_timeout(1500)
 
-        def parse_visible_dom():
+        # Parse any tables already present, then attempt every known tab.
+        # GoGriz has changed the tab markup several times, so use buttons/tabs/
+        # links and a DOM-click fallback rather than one exact text locator.
+        def parse_visible_tables():
             soup = BeautifulSoup(page.content(), "html.parser")
-            found = set()
             for table in soup.find_all("table"):
                 headers, _, _ = headers_and_rows(table)
                 category = classify(headers)
                 if category:
                     parse_table(table, category, totals)
-                    found.add(category)
-            return found
 
-        # Parse the initial DOM first. Some GoGriz releases render all tables
-        # in the page markup while the tab controls themselves are not visible
-        # to Playwright. The old code only parsed after a successful tab click,
-        # which caused every category to be reported missing.
-        found_categories = parse_visible_dom()
-
-        # Then make best-effort attempts to activate tab controls. A missing or
-        # hidden tab must not prevent parsing tables that are already present.
-        labels = ["Passing", "Rushing", "Receiving", "Defense", "Special Teams", "Offense"]
+        parse_visible_tables()
+        labels = ["Passing", "Rushing", "Receiving", "Defense", "Special Teams", "Offense", "Kicking", "Punting"]
         for label in labels:
             try:
-                locator = page.get_by_text(label, exact=True).first
-                if locator.count():
+                candidates = page.locator("button, [role='tab'], a").filter(has_text=label)
+                if candidates.count():
+                    target = candidates.first
                     try:
-                        locator.click(timeout=2500)
+                        target.click(timeout=3000, force=True)
                     except Exception:
-                        # React/HTML tab controls may be present but hidden;
-                        # dispatch a normal DOM click as a fallback.
-                        locator.evaluate("el => el.click()")
-                    page.wait_for_timeout(350)
-                    found_categories.update(parse_visible_dom())
+                        target.evaluate("el => el.click()")
+                    page.wait_for_timeout(700)
+                    parse_visible_tables()
             except Exception as exc:
                 print(f"NOTICE: could not open {label} tab: {exc}")
-
-        print("Parsed player-stat categories: " + ", ".join(sorted(found_categories)))
         browser.close()
     return totals
 
