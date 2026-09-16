@@ -1799,9 +1799,11 @@ loadGrizData();
 }, 60 * 1000);
 
 
-/* AUTHORITATIVE NEXT-GAME CONTROLLER
-   Every Next Game / Next Up / Game Center surface is driven from the first
-   Montana schedule entry that does not have a final result. */
+/* AUTHORITATIVE NEXT-GAME CONTROLLER — FULL OPPONENT DOSSIER
+   The matchup shell AND the entire Next Up dossier are driven from the first
+   Montana schedule entry without a final result. The HTML contains a layout
+   only; opponent-specific copy is supplied here so last week's opponent can
+   never remain after the schedule advances. */
 (function installAuthoritativeNextGameController(){
   const NEXT_GAME_LOGOS = {
     "Southern Utah":"https://a.espncdn.com/i/teamlogos/ncaa/500/253.png",
@@ -1822,16 +1824,65 @@ loadGrizData();
     "UC Davis":"UC Davis Health Stadium, Davis, Calif.",
     "Northern Arizona":"J. Lawrence Walkup Skydome, Flagstaff, Ariz.",
     "Eastern Washington":"Roos Field, Cheney, Wash.",
-    "Montana State":"Bobcat Stadium, Bozeman, Mont."
+    "Montana State":"Bobcat Stadium, Bozeman, Mont.",
+    "Portland State":"Hillsboro Stadium, Hillsboro, Ore.",
+    "Idaho State":"Davis Wade Stadium, Pocatello, Idaho",
+    "Idaho":"Washington-Grizzly Stadium, Missoula, Mont.",
+    "Northern Colorado":"Washington-Grizzly Stadium, Missoula, Mont.",
+    "Southern Utah":"Washington-Grizzly Stadium, Missoula, Mont.",
+    "Utah Tech":"Washington-Grizzly Stadium, Missoula, Mont."
   };
-  const NEXT_GAME_RESOURCES = {
-    "Oregon State":{
-      official:"https://osubeavers.com/sports/football",
-      roster:"https://osubeavers.com/sports/football/roster",
-      news:"https://osubeavers.com/news?path=football",
-      stats:"https://osubeavers.com/sports/football/stats/2026",
-      schedule:"https://osubeavers.com/sports/football/schedule/2026",
-      coaches:"https://osubeavers.com/sports/football/coaches"
+  const OFFICIAL_ROOTS = {
+    "Oregon State":"https://osubeavers.com/sports/football",
+    "UC Davis":"https://ucdavisaggies.com/sports/football",
+    "Northern Colorado":"https://uncbears.com/sports/football",
+    "Northern Arizona":"https://nauathletics.com/sports/football",
+    "Idaho":"https://govandals.com/sports/football",
+    "Eastern Washington":"https://goeags.com/sports/football",
+    "Portland State":"https://goviks.com/sports/football",
+    "Idaho State":"https://isubengals.com/sports/football",
+    "Montana State":"https://msubobcats.com/sports/football",
+    "Southern Utah":"https://suutbirds.com/sports/football",
+    "Utah Tech":"https://utahtechtrailblazers.com/sports/football",
+    "Drake":"https://godrakebulldogs.com/sports/football"
+  };
+  const PROFILES = {
+    "Oregon State": {
+      record:"0–2", conferenceRecord:"0–0", location:"Corvallis, Ore.", capacity:"35,548",
+      coach:"JaMarcus Shephard", coachLine:"First season as Oregon State head coach",
+      stats:{points:"22.0", offense:"437.0", passing:"396.5", rushing:"40.5", allowed:"34.0", defense:"442.5", third:"26.7%", turnovers:"+2"},
+      recent:[
+        ["Oregon State","L","20–33","Houston"],["","L","24–35","Texas Tech"]
+      ],
+      players:[
+        ["OS","Braden Atkinson","Oregon State QB • 789 passing yards • 3 TD"],
+        ["OS","Jesse Legree","Oregon State WR • 376 receiving yards • 3 TD"],
+        ["OS","Kourdey Glass","Oregon State RB • 25 rushing yards"],
+        ["OS","Takari Hickle","Oregon State EDGE • TFL in six straight games entering Montana"],
+      ],
+      intel:"Oregon State enters Game 3 at 0–2 after losses to Houston and Texas Tech. Saturday is the Beavers' third game of the 2026 season and their first meeting with Montana since 1996. The program is in its first season under head coach JaMarcus Shephard.",
+      facts:[["0–2","Current record"],["2026","First season under Shephard"],["35,548","Reser Stadium capacity"],["Corvallis","Home of the Beavers"]],
+      historyTitle:"THE BEAVERS LEAD THE ALL-TIME SERIES",
+      historyText:"Oregon State leads the all-time series 12–2–2. The teams have not met since 1996, when Montana won 35–14 in Corvallis. Montana has won the last two meetings.",
+      historyGames:[["1996","MONTANA 35–14","Corvallis"],["1990","MONTANA 22–15","Missoula"],["2026","NEXT CHAPTER","Reser Stadium"]],
+      watch:[
+        ["Can Montana handle Oregon State's passing volume?","The Beavers have 793 passing yards through two games and are averaging 396.5 passing yards per game."],
+        ["Can the Griz limit Jesse Legree?","The freshman leads Oregon State with 376 receiving yards and has produced a 70-plus-yard catch in each game."],
+        ["Can Montana win the run game?","Oregon State is averaging 40.5 rushing yards per game through two contests."],
+      ],
+      checklist:[
+        ["Quarterback tendencies","Track Braden Atkinson on early downs, pressure looks and explosive throws."],
+        ["Explosive passes","Legree already has 71- and 75-yard receptions this season."],
+        ["Run defense","Oregon State has gained 81 rushing yards through two games."],
+        ["Third down","The Beavers are converting 26.7% of third downs through two games."],
+      ],
+      moreNumbers:[["PASSING","396.5","Oregon State passing yards per game"],["TOTAL OFFENSE","437.0","Total yards per game"],["RUSHING","40.5","Rushing yards per game"],["POINTS","22.0","Points per game"],["POINTS ALLOWED","34.0","Opponent points per game"],["3RD DOWN","26.7%","Third-down conversion rate"]],
+      media:[
+        ["HIGHLIGHTS","Search Oregon State 2026 Highlights","Recent game clips and team highlights","https://www.youtube.com/results?search_query=Oregon+State+football+2026+highlights"],
+        ["COACH TALK","JaMarcus Shephard Press Conferences","Hear the opponent's coaches directly","https://www.youtube.com/results?search_query=JaMarcus+Shephard+Oregon+State+2026+press+conference"],
+        ["RECENT GAME","Oregon State vs. Texas Tech","Full-game, recap and highlight video","https://www.youtube.com/results?search_query=Oregon+State+Texas+Tech+2026+football"],
+        ["RECENT GAME","Oregon State at Houston","Another look at the Beavers' season opener","https://www.youtube.com/results?search_query=Oregon+State+Houston+2026+football"]
+      ]
     }
   };
   function finished(game){ return !!String(game && game.result || '').trim(); }
@@ -1839,64 +1890,185 @@ loadGrizData();
     const schedule=Array.isArray(data && data.schedule) ? data.schedule : [];
     return schedule.find(g=>g && g.opponent && !finished(g)) || data.next_game || {};
   }
+  function esc(v){
+    return String(v == null ? "" : v).replace(/[&<>\"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+  }
   function text(el,value){ if(el && value!=null) el.textContent=String(value); }
   function attr(el,name,value){ if(el && value) el.setAttribute(name,value); }
-  function replaceWithin(scope, from, to){
-    if(!scope || !from || !to || from===to) return;
-    const walker=document.createTreeWalker(scope, NodeFilter.SHOW_TEXT);
-    const nodes=[]; let n; while(n=walker.nextNode()) nodes.push(n);
-    nodes.forEach(node=>{ if(node.nodeValue && node.nodeValue.includes(from)) node.nodeValue=node.nodeValue.split(from).join(to); });
+  function rootFor(opponent){ return OFFICIAL_ROOTS[opponent] || `https://www.google.com/search?q=${encodeURIComponent(opponent+" football")}`; }
+  function link(root,path){ return path ? root.replace(/\/$/,"")+path : root; }
+  function montanaRecord(schedule){
+    const played=(schedule||[]).filter(finished);
+    const w=played.filter(g=>/^W/i.test(g.result)).length;
+    const l=played.filter(g=>/^L/i.test(g.result)).length;
+    const conf=played.filter(g=>g.conference);
+    return {record:`${w}–${l}`, conference:`${conf.filter(g=>/^W/i.test(g.result)).length}–${conf.filter(g=>/^L/i.test(g.result)).length}`};
   }
-  function renderAuthoritativeNextGame(data){
+  function montanaRecent(schedule){
+    return (schedule||[]).filter(finished).slice(-2).reverse().map((g,i)=>[i?"": "MONTANA", /^W/i.test(g.result)?"W":"L", String(g.result).replace(/^[WL]\s*/i,""), g.opponent]);
+  }
+  function profileFor(opponent){ return PROFILES[opponent] || null; }
+  function resourceSet(opponent,data){
+    const root=rootFor(opponent);
+    const existing=(data && data.opponent_resources && data.opponent_resources[opponent]) || {};
+    return {
+      official:existing.official || root,
+      roster:existing.roster || link(root,"/roster"),
+      stats:existing.stats || link(root,"/stats/2026"),
+      schedule:existing.schedule || link(root,"/schedule/2026"),
+      coaches:existing.coaches || link(root,"/coaches"),
+      news:existing.news || link(root,"/news")
+    };
+  }
+  function renderQuickLinks(section, opponent, resources){
+    const grid=section.querySelector('.ghq-nu-link-grid'); if(!grid) return;
+    const items=[
+      ["OFFICIAL FOOTBALL","Official team home",resources.official],
+      ["ROSTER","Players & bios",resources.roster],
+      ["2026 STATS","Team & player stats",resources.stats],
+      ["SCHEDULE","Full 2026 slate",resources.schedule],
+      ["COACHES","Staff & leadership",resources.coaches],
+      ["TEAM NEWS","Latest opponent coverage",resources.news],
+      ["OPPONENT HISTORY","Montana vs. "+opponent,resources.official],
+      ["GRIZ GAME CENTER","Live stats & game info","https://gogriz.com/sports/football"]
+    ];
+    grid.innerHTML=items.map(x=>`<a href="${esc(x[2])}" target="_blank" rel="noopener"><strong>${esc(x[0])}</strong><span>${esc(x[1])}</span><em>↗</em></a>`).join('');
+  }
+  function renderStats(section, profile, mr){
+    const head=section.querySelector('.ghq-nu-compare-head');
+    if(head){
+      const bs=head.querySelectorAll('b'); if(bs[0]) text(bs[0],`MONTANA`); if(bs[1]) text(bs[1],profile?section.dataset.opponent.toUpperCase():section.dataset.opponent.toUpperCase());
+    }
+    const mtStats={record:mr.record,points:section.dataset.mtPpg||'—',offense:section.dataset.mtOffense||'—',passing:section.dataset.mtPassing||'—',rushing:section.dataset.mtRushing||'—',allowed:section.dataset.mtAllowed||'—',defense:section.dataset.mtDefense||'—',third:section.dataset.mtThird||'—',turnovers:section.dataset.mtTurnovers||'—'};
+    const vals=section.querySelectorAll('.ghq-nu-stat');
+    const keys=['record','points','offense','passing','rushing','allowed','defense','third','turnovers'];
+    vals.forEach((row,i)=>{
+      const strong=row.querySelectorAll('strong');
+      if(strong[0]) text(strong[0],mtStats[keys[i]]||'—');
+      if(strong[1]) text(strong[1],profile ? (profile.stats[keys[i]]||'—') : '—');
+      strong.forEach(x=>x.classList.remove('better'));
+    });
+  }
+  function renderPlayers(section, profile, data){
+    const cards=section.querySelectorAll('.ghq-nu-player');
+    const mtLeaders=data?.stats?.leaders || {};
+    const mt=[
+      ["M","Eli Gillman",mtLeaders.rushing?.[0]?.line ? `Montana RB • ${mtLeaders.rushing[0].line.replaceAll('•','•')}` : "Montana RB"],
+      ["M","Keali'i Ah Yat",mtLeaders.passing?.[0]?.line ? `Montana QB • ${mtLeaders.passing[0].line}` : "Montana QB"],
+    ];
+    const opp=profile?.players || [["OP",profile ? `${section.dataset.opponent} leaders` : "Opponent leaders","Opponent-specific player data will populate when available"],["OP","Key player","See official roster and stats"]];
+    const all=mt.concat(opp).slice(0,4);
+    cards.forEach((card,i)=>{ const x=all[i]; if(!x) return; text(card.querySelector('.ghq-nu-player-team'),x[0]); text(card.querySelector('b'),x[1]); text(card.querySelector('span'),x[2]); card.querySelector('.ghq-nu-player-team')?.classList.toggle('opp',i>=2); card.querySelector('.ghq-nu-player-team')?.classList.toggle('griz',i<2); });
+  }
+  function renderHistory(section, profile, opponent){
+    const copy=section.querySelector('.ghq-nu-history-copy');
+    const games=section.querySelector('.ghq-nu-history-games');
+    if(!profile){
+      text(copy?.querySelector('h2'),`MONTANA VS. ${opponent.toUpperCase()}`);
+      text(copy?.querySelector('p'),`Series history for Montana and ${opponent} is kept current from the official records. Detailed historical results can be added without changing the automatic opponent switch.`);
+      const score=copy?.querySelector('.ghq-nu-series-score');
+      if(score){ Array.from(score.children).forEach((box,i)=>{ text(box.querySelector('b'),i===2?'NEXT':'—'); text(box.querySelector('span'),i===2?'Upcoming chapter':'Series history'); }); }
+      if(games){ games.innerHTML=`<div><span>HISTORY</span><b>MONTANA VS. ${esc(opponent.toUpperCase())}</b><small>Official series records</small></div><div class="next-series"><span>NEXT</span><b>UPCOMING</b><small>${esc(section.dataset.venue||'Next game')}</small></div>`; }
+      return;
+    }
+    text(copy?.querySelector('h2'),profile.historyTitle);
+    text(copy?.querySelector('p'),profile.historyText);
+    const score=copy?.querySelector('.ghq-nu-series-score');
+    if(score){ const vals=profile.historyGames; text(score.children[0]?.querySelector('b'),profile.record==='0–2'?'12–2–2':'—'); text(score.children[0]?.querySelector('span'),'Oregon State all-time'); text(score.children[1]?.querySelector('b'),'Last meeting: 1996'); text(score.children[1]?.querySelector('span'),'35–14 Montana'); text(score.children[2]?.querySelector('b'),'1996'); text(score.children[2]?.querySelector('span'),'Last meeting'); }
+    if(games){ games.innerHTML=profile.historyGames.map((g,i)=>`<div${i===2?' class="next-series"':''}><span>${esc(g[0])}</span><b>${esc(g[1])}</b><small>${esc(g[2])}</small></div>`).join(''); }
+  }
+  function renderWatch(section, profile, opponent){
+    const lists=section.querySelectorAll('.ghq-nu-watchlist');
+    const w=profile?.watch || [[`What should Montana watch against ${opponent}?`,`Track the opponent's quarterback, explosive plays, third-down approach and special teams.`],[`Where can the game turn?`,`Use the opponent's latest official stats and game film to identify the biggest matchup points.`],[`What changed this week?`,`Check the opponent's latest news and press conferences before kickoff.`]];
+    const c=profile?.checklist || [["Quarterback tendencies",`Study ${opponent}'s early-down throws and pressure response.`],["Explosive plays",`Identify the opponent's longest runs, passes and returns.`],["Third-down defense",`Track third-down personnel, pressures and conversion rate.`],["Special teams",`Review punt, kickoff, field-goal and fake-punt tendencies.`]];
+    if(lists[0]) lists[0].innerHTML=w.map((x,i)=>`<li><b>${esc(x[0])}</b><span>${esc(x[1])}</span></li>`).join('');
+    if(lists[1]) lists[1].innerHTML=c.map(x=>`<li><b>${esc(x[0])}</b><span>${esc(x[1])}</span></li>`).join('');
+  }
+  function renderMedia(section, profile, opponent){
+    const cards=section.querySelectorAll('.ghq-nu-media-card');
+    const media=profile?.media || [
+      ["HIGHLIGHTS",`Search ${opponent} 2026 Highlights`,`Recent game clips and team highlights`,`https://www.youtube.com/results?search_query=${encodeURIComponent(opponent+' football 2026 highlights')}`],
+      ["COACH TALK",`${opponent} Press Conferences`,`Hear the opponent's coaches directly`,`https://www.youtube.com/results?search_query=${encodeURIComponent(opponent+' football 2026 press conference')}`],
+      ["RECENT GAME",`${opponent} Recent Game`,`Full-game, recap and highlight video`,`https://www.youtube.com/results?search_query=${encodeURIComponent(opponent+' football 2026 recent game')}`],
+      ["NEWS",`${opponent} Football News`,`Latest opponent coverage`,`https://www.google.com/search?q=${encodeURIComponent(opponent+' football news')}`]
+    ];
+    cards.forEach((card,i)=>{ const x=media[i]; if(!x) return; card.href=x[3]; text(card.querySelector('span'),x[0]); text(card.querySelector('b'),x[1]); text(card.querySelector('small'),x[2]); });
+  }
+  function renderResearch(section, opponent, resources){
+    const grid=section.querySelector('.ghq-nu-research-grid'); if(!grid) return;
+    const items=[["TEAM STATS","Offense, defense & special teams",resources.stats],["ROSTER & BIOS","Every player and position",resources.roster],["COACHING STAFF","Head coach & coordinators",resources.coaches],["TEAM NEWS","Latest opponent coverage",resources.news],["FULL SCHEDULE","Results & upcoming games",resources.schedule],["SERIES HISTORY","Montana vs. "+opponent,"https://gogriz.com/sports/football"]];
+    grid.innerHTML=items.map(x=>`<a href="${esc(x[2])}" target="_blank" rel="noopener"><b>${esc(x[0])}</b><span>${esc(x[1])}</span></a>`).join('');
+  }
+  function renderMoreNumbers(section, profile, opponent){
+    const cards=section.querySelectorAll('.ghq-nu-stat-cards > div');
+    const vals=profile?.moreNumbers || [["STATUS","UPDATING","Opponent-specific stats will appear here"],["ROSTER","OFFICIAL","Use the opponent roster for current players"],["SCHEDULE","CURRENT","Latest official schedule"],["FILM","AVAILABLE","Recent game video and pressers"],["NEWS","LIVE","Latest opponent coverage"],["RESEARCH","OPEN","Official stats and roster"]];
+    cards.forEach((card,i)=>{const x=vals[i]; if(!x) return; text(card.querySelector('span'),x[0]); text(card.querySelector('b'),x[1]); text(card.querySelector('small'),x[2]);});
+  }
+  function renderDossier(data){
     const game=chooseNext(data); if(!game || !game.opponent) return;
-    const opponent=String(game.opponent);
-    const location=String(game.location || game.venue || '').toLowerCase();
+    const opponent=String(game.opponent), upper=opponent.toUpperCase(), profile=profileFor(opponent), resources=resourceSet(opponent,data);
+    const schedule=Array.isArray(data.schedule)?data.schedule:[], mr=montanaRecord(schedule);
+    const nextSection=document.getElementById('next-up'); if(!nextSection) return;
+    nextSection.dataset.nextOpponent=opponent; nextSection.dataset.opponent=opponent;
+    const location=String(game.location||'').toLowerCase();
     const away=location.includes('away') || location.includes('at ');
     const venue=NEXT_GAME_VENUES[opponent] || (game.venue && game.venue!=='Away' ? game.venue : (away ? `Away at ${opponent}` : 'Washington-Grizzly Stadium, Missoula, Mont.'));
-    const logo=NEXT_GAME_LOGOS[opponent] || '';
-    const resources=NEXT_GAME_RESOURCES[opponent] || {};
-    const date=String(game.date || '').toUpperCase();
-    const time=String(game.time || '').toUpperCase();
-    const opponentUpper=opponent.toUpperCase();
-    const nextSection=document.getElementById('next-up');
-    if(nextSection){
-      // The Next Up section is authored as a complete opponent dossier. Never perform
-      // broad text replacement inside it; that can contaminate historical data.
-      const h=nextSection.querySelector('.ghq-nu-hero h1 span'); text(h,opponentUpper);
-      const pill=nextSection.querySelector('.ghq-nu-game-pill');
-      if(pill){ text(pill.querySelector('b'),date); text(pill.querySelector('span'),time); text(pill.querySelector('small'),String(venue).split(',')[0].toUpperCase()); }
-      const oppTeam=nextSection.querySelector('.ghq-nu-team.is-opponent');
-      if(oppTeam){ text(oppTeam.querySelector('h2'),opponentUpper); text(oppTeam.querySelector('p'),game.opponent_record || 'UPCOMING'); const img=oppTeam.querySelector('img'); attr(img,'src',logo); attr(img,'alt',`${opponent} logo`); }
-      nextSection.querySelectorAll('a[href]').forEach(a=>{
-        const label=(a.textContent||'').toLowerCase();
-        if(resources.official && (label.includes('football') || label.includes('official'))) a.href=resources.official;
-        if(resources.roster && label.includes('roster')) a.href=resources.roster;
-        if(resources.news && label.includes('news')) a.href=resources.news;
-        if(resources.stats && label.includes('stats')) a.href=resources.stats;
-        if(resources.schedule && label.includes('schedule')) a.href=resources.schedule;
-        if(resources.coaches && label.includes('coach')) a.href=resources.coaches;
-      });
-      nextSection.dataset.nextOpponent=opponent;
+    const logo=NEXT_GAME_LOGOS[opponent]||'';
+    text(nextSection.querySelector('.ghq-nu-hero h1 span'),upper);
+    text(nextSection.querySelector('.ghq-nu-game-pill b'),String(game.date||'').toUpperCase());
+    text(nextSection.querySelector('.ghq-nu-game-pill span'),String(game.time||'').toUpperCase());
+    text(nextSection.querySelector('.ghq-nu-game-pill small'),venue.split(',')[0].toUpperCase());
+    const teams=nextSection.querySelectorAll('.ghq-nu-team');
+    if(teams[0]) text(teams[0].querySelector('p'),`${mr.record} • ${mr.conference} BIG SKY`);
+    if(teams[1]){ text(teams[1].querySelector('h2'),upper); text(teams[1].querySelector('p'),profile?.record || 'UPCOMING'); attr(teams[1].querySelector('img'),'src',logo); attr(teams[1].querySelector('img'),'alt',`${opponent} logo`); }
+    const sections=nextSection.querySelectorAll('.ghq-nu-section-head');
+    if(sections[0]){ text(sections[0].querySelector('h2'),`MONTANA VS. ${upper}`); text(sections[0].querySelector('p'),profile ? `Through ${profile.record==='0–2'?'two':'the latest'} games for ${opponent}. Montana enters ${mr.record}.` : `Opponent dossier for ${opponent}. Montana enters ${mr.record}.`); }
+    if(sections[1]){ text(sections[1].querySelector('h2'),`WATCH THE ${upper}`); text(sections[1].querySelector('p'),`Start the week with the video that matters: coach interviews, player press conferences, highlights and recent games involving ${opponent}.`); }
+    if(sections[2]){ text(sections[2].querySelector('h2'),'STATS WORTH DIGGING INTO'); text(sections[2].querySelector('p'),`The scoreboard tells you who won. These numbers tell you how ${opponent} is built.`); }
+    const quick=nextSection.querySelector('.ghq-nu-quicklinks'); renderQuickLinks(quick,opponent,resources);
+    const teamSummary=Array.isArray(data?.stats?.team_summary)?data.stats.team_summary:[];
+    const sum=k=>teamSummary.find(x=>x.label===k)?.value||'';
+    nextSection.dataset.mtPpg=sum('POINTS / GAME')||'36.0';
+    nextSection.dataset.mtOffense=sum('TOTAL OFFENSE')||'429.3';
+    nextSection.dataset.mtPassing='264.3';
+    nextSection.dataset.mtRushing='165.0';
+    nextSection.dataset.mtAllowed=sum('POINTS ALLOWED')||'15.0';
+    nextSection.dataset.mtDefense=sum('TOTAL DEFENSE')||'404.0';
+    nextSection.dataset.mtThird='39.5%';
+    nextSection.dataset.mtTurnovers='+3';
+    renderStats(nextSection,profile,mr);
+    const cols=nextSection.querySelectorAll('.ghq-nu-two-col');
+    if(cols[0]){
+      const edge=cols[0].querySelector('.ghq-nu-edge');
+      if(edge){
+        const mtP=Number(nextSection.dataset.mtPpg), oppP=Number(profile?.stats?.points), mtO=Number(nextSection.dataset.mtOffense), oppO=Number(profile?.stats?.offense), mtD=Number(nextSection.dataset.mtAllowed), oppD=Number(profile?.stats?.allowed);
+        const diff=(a,b)=>Number.isFinite(a)&&Number.isFinite(b)?`${(a-b>=0?'+':'')+(a-b).toFixed(1)}`:'—';
+        const vals=profile ? [['SCORING',diff(mtP,oppP),'points/game difference'],['TOTAL OFFENSE',diff(mtO,oppO),'yards/game difference'],['RUSHING',diff(Number(nextSection.dataset.mtRushing),Number(profile.stats.rushing)),'yards/game difference'],['POINTS ALLOWED',diff(mtD,oppD),'points/game difference']] : [['SCORING','—',`Opponent scoring data not loaded for ${opponent}`],['TOTAL OFFENSE','—',`Opponent offense data not loaded for ${opponent}`],['RUSHING','—',`Opponent rushing data not loaded for ${opponent}`],['POINTS ALLOWED','—',`Opponent defensive data not loaded for ${opponent}`]];
+        edge.querySelectorAll('div').forEach((d,i)=>{const x=vals[i]; if(!x)return; text(d.querySelector('span'),x[0]); text(d.querySelector('b'),x[1]); text(d.querySelector('small'),x[2]);});
+      }
+      const recent=cols[0].querySelector('.ghq-nu-card:nth-child(2)'); if(recent){
+        const rows=recent.querySelectorAll('.ghq-nu-game-row'); const mt=montanaRecent(schedule), opp=profile?.recent || [[opponent,'','—','No completed games available'],['','', '—','Check official opponent schedule']];
+        const all=mt.concat(opp).slice(0,4); rows.forEach((r,i)=>{const x=all[i];if(!x)return;text(r.querySelector('b'),x[0]);text(r.querySelector('span'),x[1]);text(r.querySelector('strong'),x[2]);text(r.querySelector('small'),x[3]);r.querySelector('span')?.classList.toggle('w',x[1]==='W');r.querySelector('span')?.classList.toggle('l',x[1]==='L');});
+      }
     }
-    text(document.getElementById('next-opponent-name'),opponentUpper);
-    text(document.getElementById('next-game-date'),date);
-    text(document.getElementById('next-game-time'),time);
-    text(document.getElementById('next-game-venue'),String(venue).split(',')[0].toUpperCase());
-    const mainLogo=document.getElementById('next-opponent-logo'); attr(mainLogo,'src',logo); attr(mainLogo,'alt',`${opponent} logo`);
-    text(document.getElementById('game-center-title'),away ? `Montana at ${opponent}` : `Montana vs. ${opponent}`);
-    text(document.getElementById('game-center-meta'),[game.date,game.time,venue].filter(Boolean).join(' • '));
-    const homeNext=document.querySelector('.v2-home-next');
-    if(homeNext){
-      const cols=homeNext.querySelectorAll('.v2-home-next-match > div');
-      if(cols[1]) text(cols[1].querySelector('b'),`${game.date || ''}\n${game.time || ''}`);
-      if(cols[2]){ text(cols[2].querySelector('strong'),opponent==='Oregon State'?'OSU':opponentUpper); text(cols[2].querySelector('small'),`${opponentUpper}\n${game.opponent_record || 'UPCOMING'}`); }
-      text(homeNext.querySelector('p'),venue);
+    if(cols[1]){
+      renderPlayers(cols[1],profile,data);
+      const intel=cols[1].querySelector('.ghq-nu-card:nth-child(2)');
+      if(intel){ text(intel.querySelector('h3'),`GET TO KNOW THE ${upper}`); text(intel.querySelector('p'),profile?.intel || `${opponent} is Montana's next opponent. This dossier updates automatically from the next unplayed game on the Montana schedule.`); const facts=intel.querySelector('.ghq-nu-facts'); if(facts){const arr=profile?.facts || [["UPCOMING","Next opponent"],["—","Current record"],["OFFICIAL","Roster & stats"],[venue.split(',')[0],"Game venue"]]; facts.innerHTML=arr.map(x=>`<div><b>${esc(x[0])}</b><span>${esc(x[1])}</span></div>`).join('');}}
     }
-    const feature=document.querySelector('.v2-feature-overlay h1');
-    if(feature) text(feature,`Montana ${away?'travels to':'hosts'} ${opponent}`);
+    const history=nextSection.querySelector('.ghq-nu-history'); if(history) history.dataset.venue=venue; renderHistory(history,profile,opponent);
+    const lists=nextSection.querySelectorAll('.ghq-nu-two-col');
+    if(lists[2]) renderWatch(lists[2],profile,opponent);
+    renderMedia(nextSection,profile,opponent);
+    const research=nextSection.querySelector('.ghq-nu-research-grid')?.closest('.ghq-nu-card')?.parentElement;
+    if(research) renderResearch(research,opponent,resources);
+    renderMoreNumbers(nextSection,profile,opponent);
+    const linkDump=nextSection.querySelector('.ghq-nu-link-dump .ghq-nu-resource-grid');
+    if(linkDump){ linkDump.innerHTML=[["OFFICIAL FOOTBALL","Official athletics home",resources.official],["WEB NEWS","Latest web coverage",`https://www.google.com/search?q=${encodeURIComponent(opponent+' football news')}`],["YOUTUBE","Videos & pressers",`https://www.youtube.com/results?search_query=${encodeURIComponent(opponent+' football 2026')}`],["ESPN","Scores, roster & stats",opponent==='Oregon State' ? 'https://www.espn.com/college-football/team/_/id/204/oregon-state-beavers' : `https://www.google.com/search?q=${encodeURIComponent(opponent+' ESPN football')}`],["SCHEDULE","Game-by-game results",resources.schedule],["PODCASTS","Opponent discussion",`https://www.google.com/search?q=${encodeURIComponent(opponent+' football podcast')}`]].map(x=>`<a href="${esc(x[2])}" target="_blank" rel="noopener"><b>${esc(x[0])}</b><span>${esc(x[1])}</span></a>`).join(''); }
+    const footer=nextSection.querySelector('.ghq-nu-footer'); if(footer){text(footer.querySelector('span:first-child'),`DATA SNAPSHOT • ${new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})}`);text(footer.querySelector('span:last-child'),profile?`${opponent} statistics: official athletics • Montana statistics: Griz HQ`:`${opponent} information: official athletics • Montana information: Griz HQ`);}
   }
   async function refreshAuthoritativeNextGame(){
-    try{ const r=await fetch('data.json?next-game-controller='+Date.now(),{cache:'no-store'}); if(!r.ok) return; renderAuthoritativeNextGame(await r.json()); }
+    try{ const r=await fetch('data.json?next-game-controller='+Date.now(),{cache:'no-store'}); if(!r.ok) return; renderDossier(await r.json()); }
     catch(e){ console.warn('Authoritative next-game refresh failed',e); }
   }
   refreshAuthoritativeNextGame();
