@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-16T14:25:38.663017+00:00",
+  "updated": "2026-09-16T20:36:52.083277+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 93,
+  "story_count": 94,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "FCS Weekly with Samuel Akem – Idaho struggling, WA-Griz breaking down, ‘Cats confidence",
+      "url": "https://skylinesportsmt.com/fcs-weekly-with-samuel-akem-idaho-struggling-wa-griz-breaking-down-cats-confidence/",
+      "date": "Sep. 16, 2026",
+      "published_at": "2026-09-16T15:43:31+00:00",
+      "description": "September 16, 2026 FCS Weekly with Samuel Akem – Idaho struggling, WA-Griz breaking down, ‘Cats confidence",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2025/09/Washington-Grizzly-Stadium-tunnel-run-scaled.jpeg",
+      "is_video": true,
+      "youtube_id": "F-3IUJ7f384",
+      "video_url": "https://www.youtube.com/watch?v=F-3IUJ7f384",
+      "video_thumbnail": "https://i.ytimg.com/vi/F-3IUJ7f384/hqdefault.jpg"
+    },
     {
       "title": "Grizzlies WR Brooks Davis off to blistering start leading D-I in catches",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-wr-brooks-davis-off-to-blistering-start-leading-d-i-in-catches/article_83fbea61-f361-4788-9d62-511922936669.html",
