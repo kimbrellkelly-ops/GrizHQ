@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-16T13:05:44.482178+00:00",
+  "updated": "2026-09-16T13:26:29.936800+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 92,
+  "story_count": 93,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Grizzlies WR Brooks Davis off to blistering start leading D-I in catches",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-wr-brooks-davis-off-to-blistering-start-leading-d-i-in-catches/article_83fbea61-f361-4788-9d62-511922936669.html",
+      "date": "Sep. 16, 2026",
+      "published_at": "2026-09-16T13:00:00+00:00",
+      "description": "Grizzlies WR Brooks Davis off to blistering start leading D-I in catches",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/3f/83fbea61-f361-4788-9d62-511922936669/6aa896eda1924.preview.jpg?crop=1148%2C604%2C461%2C56",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/3f/83fbea61-f361-4788-9d62-511922936669/6aa896eda1924.preview.jpg?crop=1148%2C604%2C461%2C56"
+    },
     {
       "title": "Griz to battle Beavers on Saturday night in Corvallis",
       "url": "https://gogriz.com/news/2026/9/15/football-griz-to-battle-beavers-on-saturday-night-in-corvallis",
