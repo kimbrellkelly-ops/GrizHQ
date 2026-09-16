@@ -15,7 +15,14 @@
   const teams=ev=>comp(ev)?.competitors||[];
   const status=ev=>{const s=comp(ev)?.status?.type||{};if(s.completed)return 'FINAL';if(s.state==='in'||s.name==='STATUS_IN_PROGRESS')return s.shortDetail||'LIVE';return s.shortDetail||s.detail||'SCHEDULED';};
   const fmt=s=>new Date(String(s).slice(0,10)+'T12:00:00Z').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
-  const weekIndex=()=>{const now=new Date().toISOString().slice(0,10);const i=C.weeks.findIndex(w=>now>=w[0]&&now<=w[1]);return i<0?Math.max(0,C.weeks.length-1):i;};
+  const weekIndex=()=>{
+    const now=new Date().toISOString().slice(0,10);
+    const active=C.weeks.findIndex(w=>now>=w[0]&&now<=w[1]);
+    if(active>=0)return active;
+    const upcoming=C.weeks.findIndex(w=>w[0]>now);
+    if(upcoming>=0)return upcoming;
+    return C.weeks.length-1;
+  };
   async function fetchWeek(w){
     const out=[],seen=new Set();
     for(let d=new Date(w[0]+'T12:00:00Z');d<=new Date(w[1]+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+1)){
