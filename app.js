@@ -1330,9 +1330,6 @@ async function renderBigSkyAndOpponent(){
 renderBigSkyAndOpponent();
 
 
-let grizFcsRefreshTimer=null;
-async function renderFCSScoreboard(){ return window.GrizScoreboard ? window.GrizScoreboard.render() : null; }
-
 function renderStatsDashboard(stats) {
   if (!stats) return;
   const through = document.getElementById("stats-through");
@@ -1402,7 +1399,6 @@ setInterval(async () => {
     await loadHomepageNews();
 loadGrizData();
     await renderBigSkyAndOpponent();
-    await renderFCSScoreboard();
   } catch (e) {
     console.warn("Automatic Griz HQ refresh failed", e);
   }

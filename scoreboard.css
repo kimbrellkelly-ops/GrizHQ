@@ -1,3 +1,18 @@
-.ghq-scoreboard-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-left:1px solid #e3ddd7;border-top:1px solid #e3ddd7;background:#fff}
-.ghq-score-card{display:block;color:#171717;text-decoration:none;min-height:176px;padding:16px;border-right:1px solid #e3ddd7;border-bottom:1px solid #e3ddd7;background:#fff}
-.ghq-score-card:hover{background:#faf8f6}.ghq-score-top{display:flex;justify-content:space-between;gap:10px;margin-bottom:12px;font-size:12px;color:#756b66}.ghq-score-team{display:grid;grid-template-columns:minmax(0,1fr) 38px;align-items:center;gap:10px;padding:9px 0;border-top:1px solid #eee9e4}.ghq-score-team-main{display:flex;align-items:center;gap:10px;min-width:0}.ghq-score-logo{width:30px;height:30px;object-fit:contain}.ghq-score-team-name{font-weight:850;line-height:1.15}.ghq-score-team-rank{font-size:11px;color:#8b1737;font-weight:900;margin-right:6px}.ghq-score-team-score{font-size:22px;font-weight:950;text-align:right}.ghq-score-bottom{display:flex;justify-content:space-between;gap:10px;margin-top:8px;font-size:11px;color:#756b66}.ghq-score-status{font-weight:900;color:#8b1737}.ghq-score-empty{padding:22px;background:#faf8f6;border:1px dashed #cfc5be;color:#675e59}.ghq-score-empty strong{display:block;color:#8b1737;margin-bottom:4px}.ghq-score-error{padding:20px;background:#fff7f7;border:1px solid #dfc5ca;color:#741a2e}@media(max-width:1000px){.ghq-scoreboard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:680px){.ghq-scoreboard-grid{grid-template-columns:1fr}}
+/* Single scoreboard skin. ESPN-inspired without copying ESPN markup. */
+.fcs-top20{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-left:1px solid #ddd;border-top:1px solid #ddd;background:#fff}
+.fcs-top20 .ghq-fcs-card{min-width:0;padding:15px 16px;border-right:1px solid #ddd;border-bottom:1px solid #ddd;background:#fff;text-decoration:none;color:#171717}
+.ghq-score-card{display:block;color:inherit;text-decoration:none}
+.ghq-score-head{display:flex;justify-content:space-between;gap:8px;color:#756b66;font-size:11px;margin-bottom:9px}
+.ghq-score-team{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid #eee;padding:8px 0;font-weight:850}
+.ghq-score-name{display:flex;align-items:center;gap:9px;min-width:0}
+.ghq-score-name span{overflow-wrap:anywhere}
+.ghq-score-logo{width:30px;height:30px;object-fit:contain;flex:0 0 30px}
+.ghq-score-rank{color:#8b1737;font-size:11px;margin-right:4px}
+.ghq-score-number{font-size:22px;min-width:30px;text-align:right}
+.ghq-score-foot{display:flex;justify-content:space-between;gap:8px;margin-top:7px;font-size:10px;color:#756b66}
+.ghq-score-status{font-weight:900;color:#8b1737;letter-spacing:.03em}
+.ghq-score-unavailable{padding:18px;border:1px dashed #cfc4bc;background:#faf8f6;color:#756b66}
+.ghq-score-unavailable strong{display:block;color:#8b1737;margin-bottom:5px}
+.bigsky-score-games .fcs-game{margin:0;border-bottom:1px solid #e4e4e4}
+@media(max-width:900px){.fcs-top20{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.fcs-top20{grid-template-columns:1fr}}
