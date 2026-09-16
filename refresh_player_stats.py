@@ -140,16 +140,22 @@ def collect(page, totals):
 
 
 def click_exact(page, label):
-    loc = page.get_by_text(label, exact=True)
-    clicked = False
-    for i in range(min(loc.count(), 8)):
+    """Activate the visible stats control, not hidden duplicate text nodes."""
+    candidates = page.locator("a, button, [role='tab'], [role='button']").filter(
+        has_text=re.compile(r"^\s*" + re.escape(label) + r"\s*$", re.I)
+    )
+    for i in range(min(candidates.count(), 12)):
+        item = candidates.nth(i)
         try:
-            loc.nth(i).click(timeout=5000, force=True)
-            page.wait_for_timeout(1200)
-            clicked = True
+            if not item.is_visible():
+                continue
+            item.scroll_into_view_if_needed(timeout=3000)
+            item.click(timeout=7000)
+            page.wait_for_timeout(1800)
+            return True
         except Exception:
-            pass
-    return clicked
+            continue
+    return False
 
 
 def parse_rendered_page():
@@ -158,9 +164,6 @@ def parse_rendered_page():
         browser = p.chromium.launch(headless=True)
         page = browser.new_page(viewport={"width": 1600, "height": 1800})
         try:
-            # GoGriz keeps background requests open, so networkidle can time out
-            # even after the stats page is fully usable. DOMContentLoaded is the
-            # correct readiness point; the explicit wait below handles rendering.
             try:
                 page.goto(URL, wait_until="domcontentloaded", timeout=90000)
             except PlaywrightTimeoutError:
