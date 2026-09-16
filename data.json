@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-16T00:59:25.820275+00:00",
+  "updated": "2026-09-16T01:14:08.793875+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-16T00:59:46.435831+00:00"
+    "checked_at": "2026-09-16T01:14:29.272485+00:00"
   },
   "resources": [
     {
@@ -2935,7 +2935,7 @@
       "pending": []
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-16T00:59:28.248800+00:00",
+    "source_checked_at": "2026-09-16T01:14:11.257492+00:00",
     "team_summary": [
       {
         "value": "3–0",
