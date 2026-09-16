@@ -25,28 +25,33 @@ def num(value):
     return float(match.group()) if match else 0.0
 
 
+def normalize(value):
+    return re.sub(r"[^A-Z0-9]+", " ", clean(value).upper()).strip()
+
+
 def headers_and_rows(table):
     rows = table.find_all("tr")
-    for i, row in enumerate(rows[:30]):
-        headers = [clean(c.get_text(" ", strip=True)).upper() for c in row.find_all(["th", "td"])]
-        if "PLAYER" in headers:
+    for i, row in enumerate(rows[:40]):
+        headers = [normalize(c.get_text(" ", strip=True)) for c in row.find_all(["th", "td"])]
+        if any(h in {"PLAYER", "NAME", "ATHLETE", "PLAYER NAME"} for h in headers):
             return headers, rows, i
     return [], [], -1
 
 
 def col(headers, *names):
-    normalized = [re.sub(r"[^A-Z0-9]+", " ", h).strip() for h in headers]
+    normalized = [normalize(h) for h in headers]
     for name in names:
-        wanted = re.sub(r"[^A-Z0-9]+", " ", name.upper()).strip()
+        wanted = normalize(name)
         for i, header in enumerate(normalized):
             if header == wanted or header.startswith(wanted + " "):
                 return i
     return None
 
 
-def classify(headers):
+def classify(headers, context=""):
+    text = " ".join(headers) + " " + normalize(context)
     has = lambda *names: col(headers, *names) is not None
-    if has("TFL") or has("SACK", "SACKS") or has("FF") or has("QH"):
+    if has("TFL") or has("SACK", "SACKS") or has("FF") or has("QH") or "PRESSURE" in text:
         return "pressure"
     if has("SOLO") and has("AST") and has("TOT", "TOTAL"):
         return "tackles"
@@ -54,9 +59,9 @@ def classify(headers):
         return "passing"
     if has("REC", "RECEPTIONS") and has("YDS") and has("TD"):
         return "receiving"
-    if has("CAR", "RUSH", "ATT") and has("YDS") and has("TD"):
+    if (has("CAR") or has("RUSH", "RUSH ATT", "RUSHING")) and has("YDS") and has("TD"):
         return "rushing"
-    if has("PUNTS") or has("FGM") or has("XPM") or has("FGA") or has("XPA") or has("KICK"):
+    if has("PUNTS") or has("FGM") or has("XPM") or has("FGA") or has("XPA") or "SPECIAL" in text or "KICK" in text:
         return "special"
     return None
 
@@ -78,7 +83,7 @@ def parse_table(table, category, totals):
     headers, rows, header_index = headers_and_rows(table)
     if not headers:
         return
-    player_index = col(headers, "PLAYER")
+    player_index = col(headers, "PLAYER", "NAME", "ATHLETE", "PLAYER NAME")
     if player_index is None:
         return
     for row in rows[header_index + 1:]:
@@ -97,7 +102,7 @@ def parse_table(table, category, totals):
         if category == "passing":
             metrics = {"cmp": value("COMP", "CMP"), "yds": value("YDS"), "td": value("TD"), "int": value("INT")}
         elif category == "rushing":
-            metrics = {"att": value("CAR", "RUSH", "ATT"), "yds": value("YDS"), "td": value("TD")}
+            metrics = {"att": value("CAR", "RUSH", "RUSH ATT", "ATT"), "yds": value("YDS"), "td": value("TD")}
         elif category == "receiving":
             metrics = {"rec": value("REC", "RECEPTIONS"), "yds": value("YDS"), "td": value("TD")}
         elif category == "tackles":
@@ -117,7 +122,15 @@ def collect_tables(page, totals):
     soup = BeautifulSoup(page.content(), "html.parser")
     for table in soup.find_all("table"):
         headers, _, _ = headers_and_rows(table)
-        category = classify(headers)
+        if not headers:
+            continue
+        context = " ".join([
+            table.get("aria-label", ""),
+            table.get("id", ""),
+            table.find_previous(["h1", "h2", "h3", "h4", "caption"]).get_text(" ", strip=True)
+            if table.find_previous(["h1", "h2", "h3", "h4", "caption"]) else "",
+        ])
+        category = classify(headers, context)
         if category:
             parse_table(table, category, totals)
 
@@ -126,29 +139,33 @@ def parse_rendered_page():
     totals = {category: defaultdict(lambda: defaultdict(float)) for category in CATEGORIES}
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True)
-        page = browser.new_page(viewport={"width": 1440, "height": 1600})
-        page.goto(URL, wait_until="domcontentloaded", timeout=90000)
-        page.wait_for_timeout(2500)
+        page = browser.new_page(viewport={"width": 1600, "height": 1800})
+        page.goto(URL, wait_until="networkidle", timeout=90000)
+        page.wait_for_timeout(4000)
         collect_tables(page, totals)
 
-        wanted = {"passing", "rushing", "receiving", "defense", "special teams", "offense", "special", "kicking", "punting"}
         controls = page.locator("button, a, [role='tab'], [role='button']")
+        labels_seen = set()
         for i in range(controls.count()):
             control = controls.nth(i)
             try:
                 label = clean(control.inner_text()).lower()
             except Exception:
                 continue
-            if label not in wanted:
+            if not label or label in labels_seen:
+                continue
+            labels_seen.add(label)
+            wanted = any(word in label for word in ("passing", "rushing", "receiving", "tackle", "defense", "pressure", "special", "kicking", "punting"))
+            if not wanted:
                 continue
             try:
-                control.click(timeout=2500, force=True)
+                control.click(timeout=4000, force=True)
             except Exception:
                 try:
                     control.evaluate("el => el.click()")
                 except Exception:
                     continue
-            page.wait_for_timeout(700)
+            page.wait_for_timeout(1200)
             collect_tables(page, totals)
 
         browser.close()
@@ -180,31 +197,17 @@ def build_leaders(totals):
 def main():
     data = json.loads(DATA.read_text(encoding="utf-8"))
     stats = data.setdefault("stats", {})
-    previous = stats.get("leaders", {}) if isinstance(stats.get("leaders", {}), dict) else {}
     leaders = build_leaders(parse_rendered_page())
-
-    # The GoGriz page can expose only some category tabs to headless browsers.
-    # Never fail the entire data refresh or erase a previously published category
-    # just because one rendered tab was unavailable on this run.
-    preserved = []
-    for category in CATEGORIES:
-        if not leaders[category] and isinstance(previous.get(category), list) and previous[category]:
-            leaders[category] = previous[category]
-            preserved.append(category)
-
-    data_missing = [category for category in CATEGORIES if not leaders[category]]
-    if data_missing:
-        raise RuntimeError("No player leaders available for: " + ", ".join(data_missing))
+    missing = [category for category in CATEGORIES if len(leaders[category]) < 1]
+    if missing:
+        raise RuntimeError("Official 2026 player tables were not parsed completely; missing: " + ", ".join(missing))
 
     stats["leaders"] = leaders
     stats["leaders_source"] = URL
     stats["leaders_checked_at"] = datetime.now(timezone.utc).isoformat()
-    stats["leaders_preserved_categories"] = preserved
+    stats.pop("leaders_preserved_categories", None)
     DATA.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    message = "Published official player leaders: " + ", ".join(f"{k}={len(v)}" for k, v in leaders.items())
-    if preserved:
-        message += "; preserved unavailable categories: " + ", ".join(preserved)
-    print(message)
+    print("Published official 2026 season player leaders: " + ", ".join(f"{k}={len(v)}" for k, v in leaders.items()))
 
 
 if __name__ == "__main__":
