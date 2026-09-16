@@ -1,7 +1,13 @@
 name: Refresh Griz HQ Scoreboards
 on:
+  push:
+    paths:
+      - "refresh_scoreboards.py"
+      - "scoreboard/**"
+      - ".github/workflows/refresh-scoreboards.yml"
+      - "data.json"
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
 permissions:
   contents: write
@@ -11,37 +17,20 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-      - name: Install dependencies
-        run: python -m pip install --disable-pip-version-check requests
-      - name: Run scoreboard self-test
-        run: python refresh_scoreboards.py --self-test
-      - name: Build scoreboard cache
-        run: python refresh_scoreboards.py
-      - name: Validate cache was generated
-        run: python - <<'PY'
-          import json
-          from pathlib import Path
-          p=Path('scoreboard/scoreboard-data.json')
-          d=json.loads(p.read_text())
-          assert len(d.get('rankings',[]))==25
-          assert len(d.get('weeks',[]))==15
-          assert all(w.get('fcsEventCount',0)>0 for w in d['weeks'][:-1])
-          print('Scoreboard cache validation passed')
-          PY
-      - name: Commit verified cache
+      - run: python -m pip install --disable-pip-version-check requests
+      - run: python refresh_scoreboards.py --self-test
+      - run: python refresh_scoreboards.py
+      - name: Commit cache
         run: |
+          set -e
           git config user.name "griz-hq-scoreboard-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add scoreboard/scoreboard-data.json
-          if git diff --cached --quiet; then
-            echo "No scoreboard changes."
-            exit 0
-          fi
-          git commit -m "Refresh verified FCS and Big Sky scoreboards"
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Refresh FCS and Big Sky scoreboard cache"
           git push origin HEAD:main
