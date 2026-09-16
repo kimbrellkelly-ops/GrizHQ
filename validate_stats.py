@@ -20,22 +20,24 @@ def main():
     coverage = stats.get("coverage") or {}
     verified = int(coverage.get("verified_boxscores", len(log)) or 0)
     completed = int(coverage.get("completed_games", verified) or 0)
+    through = str(stats.get("through", ""))
+    pending_disclosed = "pending" in through.lower()
 
-    if verified != len(log):
+    # Partial box-score coverage is valid when it is explicitly disclosed.
+    # The refresh job may know the completed schedule before every individual
+    # box score has been verified.
+    if verified > len(log):
         errors.append(f"verified_boxscores={verified} but game_log={len(log)}")
     if verified > completed:
         errors.append("verified box scores exceed completed games")
-    if completed != verified:
-        errors.append("all completed games must have verified box scores")
+    if completed != verified and not pending_disclosed:
+        errors.append("partial coverage must be disclosed in stats.through")
     if len(log) != completed:
         errors.append("game_log must contain every completed game")
 
     for label in ("RECORD", "POINTS / GAME", "TOTAL OFFENSE", "TOTAL DEFENSE"):
         if label not in summary:
             errors.append(f"missing summary field: {label}")
-
-    if completed and verified < completed and "pending" not in str(stats.get("through", "")).lower():
-        errors.append("partial coverage must be disclosed in stats.through")
 
     # Opponent names are legitimate data. Only flag known legacy labels when
     # they appear as standalone stale record text, not normal opponent names.
