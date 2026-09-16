@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-16T21:49:56.221742+00:00",
+  "updated": "2026-09-16T22:03:57.583900+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 94,
+  "story_count": 95,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -524,6 +524,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/09/12/0913_SPO_DIL_football_Montana_vs_Utah_Tech-1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698"
+    },
+    {
+      "title": "Cussin’ & Discussin’ – A State of the Union with DJ Colter, Ty Hobbs & Colter Nuanez",
+      "url": "https://skylinesportsmt.com/cussin-discussin-a-state-of-the-union-with-dj-colter-ty-hobbs-colter-nuanez/",
+      "date": "Sep. 11, 2026",
+      "published_at": "2026-09-11T18:13:36+00:00",
+      "description": "September 11, 2026 Cussin’ & Discussin’ – A State of the Union with DJ Colter, Ty Hobbs & Colter Nuanez Tyler Hobbs and DJ Colter share memories before Colter Nuanez of Skyline Sports (53:50) crashes the party for a Griz…",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/06/IMG_67571.png",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/06/IMG_67571.png"
     },
     {
       "title": "3 questions: No. 3 Montana Grizzlies seek 3-0 start against Utah Tech",
