@@ -1,3 +1,4 @@
+
 name: Refresh Griz HQ data
 
 on:
@@ -8,7 +9,8 @@ on:
     paths:
       - "update_data.py"
       - "score_refresh.py"
-      - "repair_stats.py"
+      - "refresh_player_stats.py"
+      - "stats_rebuild.py"
       - "validate_stats.py"
       - ".github/workflows/refresh-griz-data.yml"
 
@@ -34,7 +36,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --disable-pip-version-check requests beautifulsoup4 pdfplumber
+          python -m pip install --disable-pip-version-check requests beautifulsoup4 pdfplumber playwright
+          python -m playwright install --with-deps chromium
 
       - name: Update Griz HQ data
         run: python update_data.py
@@ -42,8 +45,8 @@ jobs:
       - name: Refresh FCS scoreboard cache
         run: python score_refresh.py
 
-      - name: Repair missing completed-game stats
-        run: python repair_stats.py
+      - name: Refresh official player leaders
+        run: python refresh_player_stats.py
 
       - name: Validate generated data
         run: python validate_stats.py
@@ -59,7 +62,7 @@ jobs:
             git reset --hard origin/main
             python update_data.py
             python score_refresh.py
-            python repair_stats.py
+            python refresh_player_stats.py
             python validate_stats.py
             git add data.json
 
