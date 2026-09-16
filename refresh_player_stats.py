@@ -15,10 +15,12 @@ from playwright.sync_api import sync_playwright
 DATA = Path("data.json")
 URL = "https://gogriz.com/sports/football/stats/2026"
 CATEGORIES = ("passing", "rushing", "receiving", "tackles", "pressure", "special")
+# The GoGriz page exposes parent tabs first.  Clicking these is more reliable
+# than trying to click every repeated child label in the page navigation.
 TAB_LABELS = {
-    "passing": ("Passing",),
-    "rushing": ("Rushing",),
-    "receiving": ("Receiving",),
+    "passing": ("Offense", "Passing"),
+    "rushing": ("Offense", "Rushing"),
+    "receiving": ("Offense", "Receiving"),
     "tackles": ("Defense", "Tackles"),
     "pressure": ("Defense", "Pressure"),
     "special": ("Special Teams", "Kicking", "Punting"),
@@ -140,14 +142,15 @@ def collect(page, totals):
 
 
 def click_exact(page, label):
-    """Activate the visible stats control, not hidden duplicate text nodes."""
-    candidates = page.locator("a, button, [role='tab'], [role='button']").filter(
-        has_text=re.compile(r"^\s*" + re.escape(label) + r"\s*$", re.I)
-    )
-    for i in range(min(candidates.count(), 12)):
-        item = candidates.nth(i)
+    """Click the first visible navigation control whose complete text is label."""
+    controls = page.locator("a, button, [role='tab'], [role='button']")
+    for i in range(min(controls.count(), 300)):
+        item = controls.nth(i)
         try:
             if not item.is_visible():
+                continue
+            text = clean(item.inner_text(timeout=1000))
+            if text.lower() != label.lower():
                 continue
             item.scroll_into_view_if_needed(timeout=3000)
             item.click(timeout=7000)
@@ -170,10 +173,12 @@ def parse_rendered_page():
                 print("Warning: GoGriz navigation timed out; using the rendered page that is available.")
             page.wait_for_timeout(6000)
             collect(page, totals)
-            for category in CATEGORIES:
-                for label in TAB_LABELS[category]:
-                    click_exact(page, label)
-                    collect(page, totals)
+            # Open the parent sections first, then the child sections.  A page
+            # can expose several duplicate labels, so click_exact only accepts
+            # a visible control whose complete text matches.
+            for label in ("Offense", "Defense", "Special Teams", "Passing", "Rushing", "Receiving", "Tackles", "Pressure", "Kicking", "Punting"):
+                click_exact(page, label)
+                collect(page, totals)
         finally:
             browser.close()
     return totals
