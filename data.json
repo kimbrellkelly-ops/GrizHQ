@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-16T01:14:08.793875+00:00",
+  "updated": "2026-09-16T02:20:15.328447+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-16T01:14:29.272485+00:00"
+    "checked_at": "2026-09-16T02:20:36.656525+00:00"
   },
   "resources": [
     {
@@ -2927,15 +2927,19 @@
     }
   ],
   "stats": {
-    "through": "Through 3 completed games",
+    "through": "Official cumulative source: https://gogriz.com/sports/football/stats/2026; pending box-score verification for 3 completed game(s)",
     "coverage": {
       "completed_games": 3,
-      "verified_boxscores": 3,
+      "verified_boxscores": 0,
       "source_of_truth": "https://gogriz.com/sports/football/stats/2026",
-      "pending": []
+      "pending": [
+        "Southern Utah",
+        "Drake",
+        "Utah Tech"
+      ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-16T01:14:11.257492+00:00",
+    "source_checked_at": "2026-09-16T02:20:18.355477+00:00",
     "team_summary": [
       {
         "value": "3–0",
@@ -3065,7 +3069,7 @@
       "passing": [
         {
           "player": "Ah Yat, Keali'i",
-          "line": "67 CMP • 793 YDS • 5 TD • 1 INT",
+          "line": "201 CMP • 2379 YDS • 15 TD • 3 INT",
           "extra": ""
         }
       ],
@@ -3224,7 +3228,14 @@
     ],
     "leaders_source": "https://gogriz.com/sports/football/stats/2026",
     "source_url": "https://gogriz.com/sports/football/stats/2026",
-    "leaders_checked_at": "2026-09-14T05:15:36.958779+00:00"
+    "leaders_checked_at": "2026-09-16T02:20:46.190798+00:00",
+    "leaders_preserved_categories": [
+      "rushing",
+      "receiving",
+      "tackles",
+      "pressure",
+      "special"
+    ]
   },
   "rankings_date": "Sep 14, 2026",
   "fcs_scores": {
