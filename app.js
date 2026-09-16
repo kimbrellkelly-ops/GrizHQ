@@ -1381,7 +1381,7 @@ async function renderFCSScoreboard(){
   const teamIds={montana:'149',montanastate:'147',idaho:'70',weberstate:'2692',easternwashington:'331',northernarizona:'2464',northerncolorado:'2458',idahostate:'304',calpoly:'13',southernutah:'253',utahtech:'3101',ucdavis:'302',portlandstate:'2502'};
   const FCS_LOGO_IDS={
     Montana:'149','Montana State':'147',Idaho:'70','Weber State':'2692','Eastern Washington':'331','Northern Arizona':'2464','Northern Colorado':'2458','Idaho State':'304','Cal Poly':'13','Southern Utah':'253','Utah Tech':'3101','UC Davis':'302','Portland State':'2502',
-    Nevada:'2440',Colorado:'38','South Dakota':'233','Wyoming':'2751','Colorado State':'36',Utah:'254',Oregon:'2483','Oregon State':'204','Washington State':'265',Washington:'264','San Jose State':'23','San José State':'23','Utah State':'328','Boise State':'68','Fresno State':'278','San Diego State':'21','South Dakota State':'2571','North Dakota State':'2449','Montana State (57)':'147','North Dakota':'155','Lamar':'2320','Incarnate Word':'2916','SMU':'256', 'San Diego':'301','Yale':'43','West Florida':'290','Harvard':'108','Illinois State':'228','Tarleton State':'262','Youngstown State':'2754','Rhode Island':'227','Lehigh':'2329','Stephen F. Austin':'2617','Tennessee Tech':'2636','Austin Peay':'204','Mercer':'2382','Villanova':'222','William & Mary':'2729','Abilene Christian':'2000','South Carolina State':'2569','Richmond':'257','Central Arkansas':'2110','Southern Illinois':'79'
+    Nevada:'2440',Colorado:'38','South Dakota':'233','Wyoming':'2751','Colorado State':'36',Utah:'254',Oregon:'2483','Oregon State':'204','Washington State':'265',Washington:'264','San Jose State':'23','San José State':'23','Utah State':'328','Boise State':'68','Fresno State':'278','San Diego State':'21','South Dakota State':'2569','North Dakota State':'2449','Montana State (57)':'147','North Dakota':'155','Lamar':'2320','Incarnate Word':'2916','SMU':'256', 'San Diego':'301','Yale':'43','West Florida':'290','Harvard':'108'
   };
   const bigSkyAliases={
     montana:['montana','montanagrizzlies'],montanastate:['montanastate','montanast','montanastatebobcats'],idaho:['idaho','idahovandals'],
@@ -1495,14 +1495,31 @@ async function renderFCSScoreboard(){
     const seen=new Set();return out.filter(ev=>{const k=String(ev.id||'')||JSON.stringify(ev);if(seen.has(k))return false;seen.add(k);return true;});
   }
   async function fetchESPNEvents(w){
-    const urls=[
-      `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=1000`,
-      `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&limit=1000`,
-      `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&groups=81&limit=1000`,
-      `https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${w[0]}-${w[1]}&limit=1000`
-    ];
+    // Fetch one calendar day at a time. ESPN's multi-day and groups=81
+    // endpoints have intermittently returned incomplete FCS schedules; a
+    // daily unfiltered request is more reliable and still gets narrowed by
+    // the ranked-team/game matching below.
+    const days=[];
+    for(let d=new Date(w[0]+'T12:00:00');d<=new Date(w[1]+'T12:00:00');d.setDate(d.getDate()+1)){
+      days.push(`${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}`);
+    }
+    const hosts=['https://site.api.espn.com','https://site.web.api.espn.com'];
     const all=[]; const seen=new Set();
-    for(const url of urls){try{const r=await fetch(url,{cache:'no-store'});if(!r.ok)continue;const p=await r.json();for(const ev of (Array.isArray(p.events)?p.events:[])){const id=String(ev.id||'');if(id&&!seen.has(id)){seen.add(id);all.push(ev);}}}catch(e){}}
+    for(const day of days){
+      for(const host of hosts){
+        const url=`${host}/apis/site/v2/sports/football/college-football/scoreboard?dates=${day}&limit=500`;
+        try{
+          const r=await fetch(url,{cache:'no-store'}); if(!r.ok)continue;
+          const p=await r.json();
+          for(const ev of (Array.isArray(p.events)?p.events:[])){
+            const id=String(ev.id||'');
+            const key=id||JSON.stringify(ev);
+            if(!seen.has(key)){seen.add(key);all.push(ev);}
+          }
+          break;
+        }catch(e){}
+      }
+    }
     return all;
   }
   function statusText(ev,game){

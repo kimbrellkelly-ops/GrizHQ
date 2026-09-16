@@ -1,5 +1,5 @@
 import json
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 import requests
 
@@ -31,57 +31,67 @@ URLS = [
 HEADERS = {"User-Agent": "GrizHQ/1.0 (+https://grizhq.com)"}
 
 def fetch_week(start, end):
-    params = {
-        "dates": f"{start.replace('-', '')}-{end.replace('-', '')}",
-        "groups": "81",
-        "limit": 500,
-    }
+    # ESPN's multi-day groups=81 response can omit FCS games. Fetch each
+    # calendar day without a group filter, then merge/dedupe the events.
+    days = []
+    cursor = datetime.fromisoformat(start)
+    finish = datetime.fromisoformat(end)
+    while cursor <= finish:
+        days.append(cursor.strftime("%Y%m%d"))
+        cursor += timedelta(days=1)
 
+    all_events = {}
     last_error = None
+    for day in days:
+        fetched = False
+        for url in URLS:
+            try:
+                r = requests.get(url, params={"dates": day, "limit": 500}, headers=HEADERS, timeout=30)
+                r.raise_for_status()
+                payload = r.json()
+                for ev in payload.get("events", []):
+                    key = str(ev.get("id") or repr(ev))
+                    all_events[key] = ev
+                fetched = True
+                break
+            except Exception as exc:
+                last_error = exc
+        if not fetched:
+            return None
 
-    for url in URLS:
-        try:
-            r = requests.get(url, params=params, headers=HEADERS, timeout=30)
-            r.raise_for_status()
-            payload = r.json()
-
-            games = []
-            for ev in payload.get("events", []):
-                comp = (ev.get("competitions") or [{}])[0]
-                competitors = comp.get("competitors") or []
-
-                teams = []
-                for c in competitors:
-                    team = c.get("team") or {}
-                    teams.append({
-                        "id": str(team.get("id", "")),
-                        "name": team.get("displayName") or team.get("shortDisplayName") or "",
-                        "short": team.get("shortDisplayName") or team.get("displayName") or "",
-                        "abbrev": team.get("abbreviation") or "",
-                        "homeAway": c.get("homeAway", ""),
-                        "score": c.get("score", ""),
-                    })
-
-                st = (comp.get("status") or {}).get("type") or {}
-                broadcasts = []
-                for b in comp.get("broadcasts") or []:
-                    broadcasts.extend(b.get("names") or [])
-
-                games.append({
-                    "id": str(ev.get("id", "")),
-                    "date": ev.get("date", ""),
-                    "name": ev.get("name", ""),
-                    "teams": teams,
-                    "state": st.get("state", ""),
-                    "completed": bool(st.get("completed")),
-                    "detail": st.get("shortDetail") or st.get("detail") or "",
-                    "broadcasts": broadcasts[:3],
+    try:
+        games = []
+        for ev in all_events.values():
+            comp = (ev.get("competitions") or [{}])[0]
+            competitors = comp.get("competitors") or []
+            teams = []
+            for c in competitors:
+                team = c.get("team") or {}
+                teams.append({
+                    "id": str(team.get("id", "")),
+                    "name": team.get("displayName") or team.get("shortDisplayName") or "",
+                    "short": team.get("shortDisplayName") or team.get("displayName") or "",
+                    "abbrev": team.get("abbreviation") or "",
+                    "homeAway": c.get("homeAway", ""),
+                    "score": c.get("score", ""),
                 })
-
-            return games
-
-        except Exception as exc:
-            last_error = exc
+            st = (comp.get("status") or {}).get("type") or {}
+            broadcasts = []
+            for b in comp.get("broadcasts") or []:
+                broadcasts.extend(b.get("names") or [])
+            games.append({
+                "id": str(ev.get("id", "")),
+                "date": ev.get("date", ""),
+                "name": ev.get("name", ""),
+                "teams": teams,
+                "state": st.get("state", ""),
+                "completed": bool(st.get("completed")),
+                "detail": st.get("shortDetail") or st.get("detail") or "",
+                "broadcasts": broadcasts[:3],
+            })
+        return games
+    except Exception as exc:
+        last_error = exc
 
     print(f"Scoreboard fetch failed for {start}: {last_error}")
     return None
