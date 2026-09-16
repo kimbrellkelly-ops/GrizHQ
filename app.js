@@ -1511,14 +1511,12 @@ async function renderFCSScoreboard(){
         try{
           const r=await fetch(url,{cache:'no-store'}); if(!r.ok)continue;
           const p=await r.json();
-          const events=Array.isArray(p.events)?p.events:[];
-          for(const ev of events){
+          for(const ev of (Array.isArray(p.events)?p.events:[])){
             const id=String(ev.id||'');
             const key=id||JSON.stringify(ev);
             if(!seen.has(key)){seen.add(key);all.push(ev);}
           }
-          // Continue to the alternate ESPN host if this response was empty.
-          if(events.length) break;
+          if((p.events||[]).length) break;
         }catch(e){}
       }
     }
@@ -1566,9 +1564,6 @@ async function renderFCSScoreboard(){
       const d=new Date(rawDate);
       return Number.isNaN(d.getTime())||d>=weekStart&&d<=new Date(weekEnd.getTime()+24*60*60*1000);
     };
-
-    // Use the actual ESPN/cached event feed for every ranked team.
-    // Big Sky schedule data is only a fallback for scheduled matchups.
     const teamEvents=events.filter(ev=>inCurrentWeek(ev)&&eventTeams(ev).some(x=>teamMatch(name,x)));
     const exact=sg?events.find(e=>eventMatchesGame(e,sg)):null;
     const paired=sg?teamEvents.find(e=>{
@@ -1579,27 +1574,24 @@ async function renderFCSScoreboard(){
       const st=String(e.state||e.raw?.status?.type?.state||'');
       return e.completed||st==='in'||st==='live';
     })||teamEvents[0]||null;
-
-    if(preferred){
-      const ts=eventTeams(preferred);
-      const a=ts.find(x=>x.homeAway==='away')||ts[0]||null;
-      const h=ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]||null;
-      const playing=!!(preferred.completed||preferred.state==='in'||preferred.state==='live');
-      const awayRank=rankForTeam(a,'');
-      const homeRank=rankForTeam(h,'');
-      const awayRow=top25TeamRow(a,teamName(a,'Away'),awayRank,!!awayRank,playing);
-      const homeRow=top25TeamRow(h,teamName(h,'Home'),homeRank,!!homeRank,playing);
-      return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${awayRow}${homeRow}<div class="ghq-fcs-top-meta"><span>${escapeHtml(statusText(preferred,sg))}</span>${preferred?.broadcasts?.length?`<small>${escapeHtml(preferred.broadcasts.join(', '))}</small>`:''}</div></div></div>`;
+    const ev=preferred;
+    if(ev){
+      const ts=eventTeams(ev);
+      const a=sg?(ts.find(x=>teamMatch(sg.displayAway,x))||ts.find(x=>x.homeAway==='away')||ts[0]):(ts.find(x=>x.homeAway==='away')||ts[0]);
+      const h=sg?(ts.find(x=>teamMatch(sg.displayHome,x))||ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]):(ts.find(x=>x.homeAway==='home')||ts.find(x=>x!==a)||ts[1]);
+      const playing=!!(ev.completed||ev.state==='in'||ev.state==='live');
+      const awayRank=rankForTeam(a,sg?.displayAway||'Away');
+      const homeRank=rankForTeam(h,sg?.displayHome||'Home');
+      const awayRow=top25TeamRow(a,sg?.displayAway||'Away',awayRank,!!awayRank,playing);
+      const homeRow=top25TeamRow(h,sg?.displayHome||'Home',homeRank,!!homeRank,playing);
+      return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${awayRow}${homeRow}<div class="ghq-fcs-top-meta"><span>${escapeHtml(statusText(ev,sg))}</span>${ev?.broadcasts?.length?`<small>${escapeHtml(ev.broadcasts.slice(0,2).flatMap(b=>b.names||[]).join(', '))}</small>`:''}</div></div></div>`;
     }
-
     if(sg){
       const awayRank=rankForTeam(null,sg.displayAway),homeRank=rankForTeam(null,sg.displayHome);
       return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${top25TeamRow(null,sg.displayAway,awayRank,!!awayRank,false)}${top25TeamRow(null,sg.displayHome,homeRank,!!homeRank,false)}<div class="ghq-fcs-top-meta"><span>${escapeHtml(sg.time||'TBA')}</span>${sg.network?`<small>${escapeHtml(sg.network)}</small>`:''}</div></div></div>`;
     }
-
-    return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${top25TeamRow(null,name,rankForTeam(null,name)||rank,!!(rankForTeam(null,name)||rank),false)}<div class="ghq-fcs-top-meta"><span>BYE / NO GAME THIS WEEK</span></div></div></div>`;
+    return `<div class="fcs-rank-card ghq-fcs-rank-card"><div class="ghq-fcs-top-scorecard">${top25TeamRow(null,name,rankForTeam(null,name)||rank,!!(rankForTeam(null,name)||rank),false)}<div class="ghq-fcs-top-meta"><span>${events.length?'BYE / NO GAME THIS WEEK':'SCHEDULE DATA UNAVAILABLE'}</span></div></div></div>`;
   }
-
   function gameCard(game,ev){
     const ts=eventTeams(ev);
     // Always honor the scheduled matchup's home/away designation. ESPN can

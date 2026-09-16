@@ -51,64 +51,38 @@ FCS_SCORE_URLS = [
 ]
 
 def fetch_fcs_scores():
-    """Cache ESPN FCS scoreboard data in data.json so the browser never depends on ESPN CORS."""
+    """Cache complete daily ESPN events by week start. Never use the incomplete groups=81 feed."""
     out = {}
     for start, end in FCS_SCORE_WEEKS:
-        try:
+        games = []
+        day = datetime.fromisoformat(start).date()
+        last = datetime.fromisoformat(end).date()
+        while day <= last:
+            ymd = day.strftime("%Y%m%d")
             payload = None
-            last_error = None
-            params = {"dates": f"{start.replace('-', '')}-{end.replace('-', '')}", "groups": "81", "limit": 500}
             for endpoint in FCS_SCORE_URLS:
                 try:
-                    r = requests.get(endpoint, params=params, headers=HEADERS, timeout=20)
+                    r = requests.get(endpoint, params={"dates": ymd, "limit": 500}, headers=HEADERS, timeout=20)
                     r.raise_for_status()
                     candidate = r.json()
-                    if isinstance(candidate, dict) and "events" in candidate:
+                    if isinstance(candidate, dict) and isinstance(candidate.get("events"), list):
                         payload = candidate
                         break
                 except Exception as exc:
-                    last_error = exc
-            if payload is None:
-                raise RuntimeError(f"all ESPN scoreboard endpoints failed: {last_error}")
-            games = []
-            for ev in payload.get("events", []):
-                comp = (ev.get("competitions") or [{}])[0]
-                teams = []
-                for c in comp.get("competitors", []):
-                    team = c.get("team") or {}
-                    teams.append({
-                        "id": str(team.get("id", "")),
-                        "name": team.get("displayName") or team.get("shortDisplayName") or "",
-                        "short": team.get("shortDisplayName") or team.get("displayName") or "",
-                        "abbrev": team.get("abbreviation") or "",
-                        "homeAway": c.get("homeAway", ""),
-                        "score": c.get("score", ""),
-                    })
-                st = comp.get("status", {}).get("type", {})
-                broadcasts=[]
-                for b in comp.get("broadcasts", []): broadcasts.extend(b.get("names", []) or [])
-                games.append({
-                    "id": str(ev.get("id", "")),
-                    "date": ev.get("date", ""),
-                    "name": ev.get("name", ""),
-                    "teams": teams,
-                    "state": st.get("state", ""),
-                    "completed": bool(st.get("completed")),
-                    "detail": st.get("shortDetail") or st.get("detail") or "",
-                    "broadcasts": broadcasts[:3],
-                })
-            out[start] = games
-        except Exception as e:
-            print(f"FCS scoreboard fetch failed for {start}: {e}")
+                    print(f"ESPN {ymd} failed: {exc}")
+            if payload:
+                for ev in payload.get("events", []):
+                    comp = (ev.get("competitions") or [{}])[0]
+                    teams = []
+                    for c in comp.get("competitors", []):
+                        team = c.get("team") or {}
+                        teams.append({"id": str(team.get("id", "")), "name": team.get("displayName") or team.get("shortDisplayName") or "", "short": team.get("shortDisplayName") or team.get("displayName") or "", "abbrev": team.get("abbreviation") or "", "homeAway": c.get("homeAway", ""), "score": c.get("score", ""), "logo": team.get("logo", "")})
+                    st = comp.get("status", {}).get("type", {})
+                    broadcasts = [n for b in comp.get("broadcasts", []) for n in (b.get("names") or [])]
+                    games.append({"id": str(ev.get("id", "")), "date": ev.get("date", ""), "name": ev.get("name", ""), "teams": teams, "state": st.get("state", ""), "completed": bool(st.get("completed")), "detail": st.get("shortDetail") or st.get("detail") or "", "broadcasts": broadcasts[:3]})
+            day = day.fromordinal(day.toordinal()+1)
+        seen = set(); out[start] = [g for g in games if not (g["id"] in seen or seen.add(g["id"]))]
     return out
-
-def get(url):
-    r = requests.get(url, headers=HEADERS, timeout=30)
-    r.raise_for_status()
-    return r.text
-
-def clean(s):
-    return re.sub(r"\s+", " ", html.unescape(s or "")).strip()
 
 def parse_schedule():
     soup = BeautifulSoup(get("https://gogriz.com/sports/football/schedule/text"), "html.parser")
