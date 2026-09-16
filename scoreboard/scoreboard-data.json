@@ -1,0 +1,186 @@
+{
+  "source": "ESPN College Football scoreboard API",
+  "generatedAt": "2026-09-16T06:31:06Z",
+  "rankings": [
+    {
+      "rank": 1,
+      "team": "Montana State (57)"
+    },
+    {
+      "rank": 2,
+      "team": "South Dakota State"
+    },
+    {
+      "rank": 3,
+      "team": "Montana"
+    },
+    {
+      "rank": 4,
+      "team": "Tarleton State"
+    },
+    {
+      "rank": 5,
+      "team": "Illinois State"
+    },
+    {
+      "rank": 6,
+      "team": "North Dakota"
+    },
+    {
+      "rank": 7,
+      "team": "Lehigh"
+    },
+    {
+      "rank": 8,
+      "team": "Rhode Island"
+    },
+    {
+      "rank": 9,
+      "team": "Youngstown State"
+    },
+    {
+      "rank": 10,
+      "team": "South Dakota"
+    },
+    {
+      "rank": 11,
+      "team": "UC Davis"
+    },
+    {
+      "rank": 12,
+      "team": "Stephen F. Austin"
+    },
+    {
+      "rank": 13,
+      "team": "Tennessee Tech"
+    },
+    {
+      "rank": 14,
+      "team": "Austin Peay"
+    },
+    {
+      "rank": 15,
+      "team": "Lamar"
+    },
+    {
+      "rank": 16,
+      "team": "Idaho State"
+    },
+    {
+      "rank": 17,
+      "team": "West Florida"
+    },
+    {
+      "rank": 18,
+      "team": "South Carolina State"
+    },
+    {
+      "rank": 19,
+      "team": "Yale"
+    },
+    {
+      "rank": 20,
+      "team": "Northern Arizona"
+    },
+    {
+      "rank": 21,
+      "team": "William & Mary"
+    },
+    {
+      "rank": 22,
+      "team": "Villanova"
+    },
+    {
+      "rank": 23,
+      "team": "Mercer"
+    },
+    {
+      "rank": 24,
+      "team": "Southern Illinois"
+    },
+    {
+      "rank": 25,
+      "team": "Harvard"
+    }
+  ],
+  "weeks": [
+    {
+      "start": "2026-08-27",
+      "end": "2026-08-30",
+      "label": "WEEK 0 • AUG 27–30",
+      "events": []
+    },
+    {
+      "start": "2026-09-03",
+      "end": "2026-09-06",
+      "label": "WEEK 1 • SEP 3–6",
+      "events": []
+    },
+    {
+      "start": "2026-09-10",
+      "end": "2026-09-13",
+      "label": "WEEK 2 • SEP 10–13",
+      "events": []
+    },
+    {
+      "start": "2026-09-17",
+      "end": "2026-09-20",
+      "label": "WEEK 3 • SEP 17–20",
+      "events": []
+    },
+    {
+      "start": "2026-09-24",
+      "end": "2026-09-27",
+      "label": "WEEK 4 • SEP 24–27",
+      "events": []
+    },
+    {
+      "start": "2026-10-01",
+      "end": "2026-10-04",
+      "label": "WEEK 5 • OCT 1–4",
+      "events": []
+    },
+    {
+      "start": "2026-10-08",
+      "end": "2026-10-11",
+      "label": "WEEK 6 • OCT 8–11",
+      "events": []
+    },
+    {
+      "start": "2026-10-15",
+      "end": "2026-10-18",
+      "label": "WEEK 7 • OCT 15–18",
+      "events": []
+    },
+    {
+      "start": "2026-10-22",
+      "end": "2026-10-25",
+      "label": "WEEK 8 • OCT 22–25",
+      "events": []
+    },
+    {
+      "start": "2026-10-29",
+      "end": "2026-11-01",
+      "label": "WEEK 9 • OCT 29–NOV 1",
+      "events": []
+    },
+    {
+      "start": "2026-11-05",
+      "end": "2026-11-08",
+      "label": "WEEK 10 • NOV 5–8",
+      "events": []
+    },
+    {
+      "start": "2026-11-12",
+      "end": "2026-11-15",
+      "label": "WEEK 11 • NOV 12–15",
+      "events": []
+    },
+    {
+      "start": "2026-11-19",
+      "end": "2026-11-22",
+      "label": "WEEK 12 • NOV 19–22",
+      "events": []
+    }
+  ]
+}
