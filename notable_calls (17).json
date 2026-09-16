@@ -1,0 +1,6 @@
+{
+  "schema_version":"1.0",
+  "assessment_policy":["CLEARLY_CORRECT","DEBATABLE","LIKELY_INCORRECT","INSUFFICIENT_EVIDENCE"],
+  "calls":[],
+  "note":"No subjective correctness assessments are published until a call has independent evidence and a reviewer record. Formal replay outcomes are tracked separately."
+}

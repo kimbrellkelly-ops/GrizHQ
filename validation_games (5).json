@@ -1,0 +1,11 @@
+{
+  "schema_version": "0.1",
+  "purpose": "Track source-verified games used to validate the GoGriz officiating parser and reconciliation gate.",
+  "games": [
+    {"game_id": "2026-SUU", "season": 2026, "opponent": "Southern Utah", "source_url": "https://gogriz.com/sports/football/stats/2026/southern-utah/boxscore/6481", "source_order": ["SUU", "UM"], "official_penalties": {"SUU": 9, "UM": 3}, "official_yards": {"SUU": 94, "UM": 32}},
+    {"game_id": "2026-DRAKE", "season": 2026, "opponent": "Drake", "source_url": "https://gogriz.com/sports/football/stats/2026/drake/boxscore/6482", "source_order": ["DU", "UM"], "official_penalties": {"DU": 6, "UM": 16}, "official_yards": {"DU": 30, "UM": 138}},
+    {"game_id": "2025-IDAHO", "season": 2025, "opponent": "Idaho", "source_url": "https://gogriz.com/sports/football/stats/2025/idaho/boxscore/5246", "source_order": ["UI", "UM"], "official_penalties": {"UI": 3, "UM": 7}, "official_yards": {"UI": 30, "UM": 72}},
+    {"game_id": "2025-IDAHO-STATE", "season": 2025, "opponent": "Idaho State", "source_url": "https://gogriz.com/sports/football/stats/2025/idaho-state/boxscore/5247", "source_order": ["ISU", "UM"], "official_penalties": null, "official_yards": null, "status": "PENDING_OFFICIAL_TOTALS"},
+    {"game_id": "2025-CWU", "season": 2025, "opponent": "Central Washington", "source_url": "https://gogriz.com/sports/football/stats/2025/central-washington/boxscore/5907", "source_order": ["CWU", "UM"], "official_penalties": {"CWU": 3, "UM": 8}, "official_yards": {"CWU": 25, "UM": 85}}
+  ]
+}

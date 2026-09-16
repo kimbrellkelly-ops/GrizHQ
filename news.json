@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-16T20:24:55.077065+00:00",
+  "updated": "2026-09-16T14:25:38.663017+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 95,
+  "story_count": 93,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,36 +15,6 @@
     "Utah Tech Athletics"
   ],
   "stories": [
-    {
-      "title": "FCS Weekly with Samuel Akem – Idaho struggling, WA-Griz breaking down, ‘Cats confidence",
-      "url": "https://skylinesportsmt.com/fcs-weekly-with-samuel-akem-idaho-struggling-wa-griz-breaking-down-cats-confidence/",
-      "date": "Sep. 16, 2026",
-      "published_at": "2026-09-16T15:43:31+00:00",
-      "description": "September 16, 2026 FCS Weekly with Samuel Akem – Idaho struggling, WA-Griz breaking down, ‘Cats confidence",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2025/09/Washington-Grizzly-Stadium-tunnel-run-scaled.jpeg",
-      "is_video": true,
-      "youtube_id": "F-3IUJ7f384",
-      "video_url": "https://www.youtube.com/watch?v=F-3IUJ7f384",
-      "video_thumbnail": "https://i.ytimg.com/vi/F-3IUJ7f384/hqdefault.jpg"
-    },
-    {
-      "title": "Grizzlies WR Brooks Davis off to blistering start leading D-I in catches",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_d9f4c93a-2c07-5d6e-b257-ee92e44009b4.html",
-      "date": "Sep. 16, 2026",
-      "published_at": "2026-09-16T15:00:00+00:00",
-      "description": "Brooks Davis has already caught 24 passes for 311 yards in his first season as the Grizzlies' No. 1 wide receiver.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/58/75885aa0-9699-599c-9b05-f3fa9ded0e4a/6aa5dd502612c.image.jpg?resize=300%2C240",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/58/75885aa0-9699-599c-9b05-f3fa9ded0e4a/6aa5dd502612c.image.jpg?resize=300%2C240"
-    },
     {
       "title": "Grizzlies WR Brooks Davis off to blistering start leading D-I in catches",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-wr-brooks-davis-off-to-blistering-start-leading-d-i-in-catches/article_83fbea61-f361-4788-9d62-511922936669.html",

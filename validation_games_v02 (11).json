@@ -1,0 +1,10 @@
+{
+  "schema_version": "0.2",
+  "games": [
+    {"game_id":"2026-SUU","source_order":["SUU","UM"],"official_penalties":{"SUU":9,"UM":3},"official_yards":{"SUU":94,"UM":32},"status":"EVENT_LEVEL_REVIEW_REQUIRED"},
+    {"game_id":"2026-DRAKE","source_order":["DU","UM"],"official_penalties":{"DU":6,"UM":16},"official_yards":{"DU":30,"UM":138},"status":"EVENT_LEVEL_YARDAGE_REVIEW"},
+    {"game_id":"2025-IDAHO","source_order":["UI","UM"],"official_penalties":{"UI":3,"UM":7},"official_yards":{"UI":30,"UM":72},"status":"EVENT_LEVEL_REVIEW_REQUIRED"},
+    {"game_id":"2025-IDAHO-STATE","source_order":["ISU","UM"],"official_penalties":{"ISU":3,"UM":4},"official_yards":{"ISU":25,"UM":52},"status":"SOURCE_RECONCILIATION_REQUIRED"},
+    {"game_id":"2025-CWU","source_order":["CWU","UM"],"official_penalties":{"CWU":3,"UM":8},"official_yards":{"CWU":25,"UM":85},"status":"EVENT_LEVEL_REVIEW_REQUIRED"}
+  ]
+}
