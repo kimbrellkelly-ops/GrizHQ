@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-16T05:27:25.886309+00:00",
+  "updated": "2026-09-16T06:34:10.298195+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-0",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-16T05:27:56.385357+00:00"
+    "checked_at": "2026-09-16T06:34:30.714030+00:00"
   },
   "resources": [
     {
@@ -3239,6 +3239,241 @@
   },
   "rankings_date": "Sep 14, 2026",
   "fcs_scores": {
+    "2026-08-27": [
+      {
+        "id": "401864494",
+        "date": "2026-08-29T19:00Z",
+        "name": "San José State Spartans at USC Trojans",
+        "teams": [
+          {
+            "id": "30",
+            "name": "USC Trojans",
+            "short": "USC",
+            "abbrev": "USC",
+            "homeAway": "home",
+            "score": "42"
+          },
+          {
+            "id": "23",
+            "name": "San José State Spartans",
+            "short": "San José St",
+            "abbrev": "SJSU",
+            "homeAway": "away",
+            "score": "26"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "NBC"
+        ]
+      },
+      {
+        "id": "401856766",
+        "date": "2026-08-29T16:00Z",
+        "name": "North Carolina Tar Heels at TCU Horned Frogs",
+        "teams": [
+          {
+            "id": "2628",
+            "name": "TCU Horned Frogs",
+            "short": "TCU",
+            "abbrev": "TCU",
+            "homeAway": "home",
+            "score": "10"
+          },
+          {
+            "id": "153",
+            "name": "North Carolina Tar Heels",
+            "short": "North Carolina",
+            "abbrev": "UNC",
+            "homeAway": "away",
+            "score": "15"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN",
+          "Disney+"
+        ]
+      },
+      {
+        "id": "401858202",
+        "date": "2026-08-29T19:30Z",
+        "name": "NC State Wolfpack at Virginia Cavaliers",
+        "teams": [
+          {
+            "id": "258",
+            "name": "Virginia Cavaliers",
+            "short": "Virginia",
+            "abbrev": "UVA",
+            "homeAway": "home",
+            "score": "34"
+          },
+          {
+            "id": "152",
+            "name": "NC State Wolfpack",
+            "short": "NC State",
+            "abbrev": "NCSU",
+            "homeAway": "away",
+            "score": "8"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN"
+        ]
+      },
+      {
+        "id": "401864577",
+        "date": "2026-08-29T21:30Z",
+        "name": "Jacksonville State Gamecocks at North Dakota State Bison",
+        "teams": [
+          {
+            "id": "2449",
+            "name": "North Dakota State Bison",
+            "short": "N Dakota St",
+            "abbrev": "NDSU",
+            "homeAway": "home",
+            "score": "33"
+          },
+          {
+            "id": "55",
+            "name": "Jacksonville State Gamecocks",
+            "short": "Jax State",
+            "abbrev": "JVST",
+            "homeAway": "away",
+            "score": "7"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "CBSSN"
+        ]
+      },
+      {
+        "id": "401866408",
+        "date": "2026-08-29T22:30Z",
+        "name": "Sacramento State Hornets at Eastern Michigan Eagles",
+        "teams": [
+          {
+            "id": "2199",
+            "name": "Eastern Michigan Eagles",
+            "short": "E Michigan",
+            "abbrev": "EMU",
+            "homeAway": "home",
+            "score": "28"
+          },
+          {
+            "id": "16",
+            "name": "Sacramento State Hornets",
+            "short": "Sacramento St",
+            "abbrev": "SAC",
+            "homeAway": "away",
+            "score": "17"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ESPN+"
+        ]
+      },
+      {
+        "id": "401858201",
+        "date": "2026-08-29T23:00Z",
+        "name": "Hawai'i Rainbow Warriors at Stanford Cardinal",
+        "teams": [
+          {
+            "id": "24",
+            "name": "Stanford Cardinal",
+            "short": "Stanford",
+            "abbrev": "STAN",
+            "homeAway": "home",
+            "score": "37"
+          },
+          {
+            "id": "62",
+            "name": "Hawai'i Rainbow Warriors",
+            "short": "Hawai'i",
+            "abbrev": "HAW",
+            "homeAway": "away",
+            "score": "27"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "ACC Network"
+        ]
+      },
+      {
+        "id": "401864570",
+        "date": "2026-08-29T23:00Z",
+        "name": "New Mexico State Aggies at Florida State Seminoles",
+        "teams": [
+          {
+            "id": "52",
+            "name": "Florida State Seminoles",
+            "short": "Florida St",
+            "abbrev": "FSU",
+            "homeAway": "home",
+            "score": "34"
+          },
+          {
+            "id": "166",
+            "name": "New Mexico State Aggies",
+            "short": "New Mexico St",
+            "abbrev": "NMSU",
+            "homeAway": "away",
+            "score": "17"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "CW"
+        ]
+      },
+      {
+        "id": "401862693",
+        "date": "2026-08-30T02:00Z",
+        "name": "Memphis Tigers at UNLV Rebels",
+        "teams": [
+          {
+            "id": "2439",
+            "name": "UNLV Rebels",
+            "short": "UNLV",
+            "abbrev": "UNLV",
+            "homeAway": "home",
+            "score": "21"
+          },
+          {
+            "id": "235",
+            "name": "Memphis Tigers",
+            "short": "Memphis",
+            "abbrev": "MEM",
+            "homeAway": "away",
+            "score": "27"
+          }
+        ],
+        "state": "post",
+        "completed": true,
+        "detail": "Final",
+        "broadcasts": [
+          "FOX"
+        ]
+      }
+    ],
     "2026-09-03": [
       {
         "id": "401856768",
@@ -5853,1754 +6088,6 @@
         "detail": "Final",
         "broadcasts": [
           "NBC"
-        ]
-      }
-    ],
-    "2026-10-08": [
-      {
-        "id": "401870766",
-        "date": "2026-10-08T23:00Z",
-        "name": "Sam Houston Bearkats at Liberty Flames",
-        "teams": [
-          {
-            "id": "2335",
-            "name": "Liberty Flames",
-            "short": "Liberty",
-            "abbrev": "LIB",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2534",
-            "name": "Sam Houston Bearkats",
-            "short": "Sam Houston",
-            "abbrev": "SHSU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/8 - 7:00 PM EDT",
-        "broadcasts": [
-          "ESPNU"
-        ]
-      },
-      {
-        "id": "401871052",
-        "date": "2026-10-08T23:00Z",
-        "name": "Missouri State Bears at Western Kentucky Hilltoppers",
-        "teams": [
-          {
-            "id": "98",
-            "name": "Western Kentucky Hilltoppers",
-            "short": "Western KY",
-            "abbrev": "WKU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2623",
-            "name": "Missouri State Bears",
-            "short": "Missouri St",
-            "abbrev": "MOST",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/8 - 7:00 PM EDT",
-        "broadcasts": [
-          "CBSSN"
-        ]
-      },
-      {
-        "id": "401862794",
-        "date": "2026-10-08T23:30Z",
-        "name": "South Florida Bulls at UTSA Roadrunners",
-        "teams": [
-          {
-            "id": "2636",
-            "name": "UTSA Roadrunners",
-            "short": "UTSA",
-            "abbrev": "UTSA",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "58",
-            "name": "South Florida Bulls",
-            "short": "South Florida",
-            "abbrev": "USF",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/8 - 7:30 PM EDT",
-        "broadcasts": []
-      },
-      {
-        "id": "401869933",
-        "date": "2026-10-08T23:30Z",
-        "name": "South Alabama Jaguars at Arkansas State Red Wolves",
-        "teams": [
-          {
-            "id": "2032",
-            "name": "Arkansas State Red Wolves",
-            "short": "Arkansas St",
-            "abbrev": "ARST",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "6",
-            "name": "South Alabama Jaguars",
-            "short": "South Alabama",
-            "abbrev": "USA",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/8 - 7:30 PM EDT",
-        "broadcasts": []
-      },
-      {
-        "id": "401858254",
-        "date": "2026-10-09T23:00Z",
-        "name": "Florida State Seminoles at Louisville Cardinals",
-        "teams": [
-          {
-            "id": "97",
-            "name": "Louisville Cardinals",
-            "short": "Louisville",
-            "abbrev": "LOU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "52",
-            "name": "Florida State Seminoles",
-            "short": "Florida St",
-            "abbrev": "FSU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/9 - 7:00 PM EDT",
-        "broadcasts": [
-          "ESPN"
-        ]
-      },
-      {
-        "id": "401858487",
-        "date": "2026-10-10T01:00Z",
-        "name": "Iowa Hawkeyes at Washington Huskies",
-        "teams": [
-          {
-            "id": "264",
-            "name": "Washington Huskies",
-            "short": "Washington",
-            "abbrev": "WASH",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2294",
-            "name": "Iowa Hawkeyes",
-            "short": "Iowa",
-            "abbrev": "IOWA",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/9 - 9:00 PM EDT",
-        "broadcasts": []
-      },
-      {
-        "id": "401860922",
-        "date": "2026-10-10T01:00Z",
-        "name": "Washington State Cougars at Utah State Aggies",
-        "teams": [
-          {
-            "id": "328",
-            "name": "Utah State Aggies",
-            "short": "Utah State",
-            "abbrev": "USU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "265",
-            "name": "Washington State Cougars",
-            "short": "Washington St",
-            "abbrev": "WSU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/9 - 9:00 PM EDT",
-        "broadcasts": [
-          "CW"
-        ]
-      },
-      {
-        "id": "401864519",
-        "date": "2026-10-10T01:00Z",
-        "name": "Wyoming Cowboys at San José State Spartans",
-        "teams": [
-          {
-            "id": "23",
-            "name": "San José State Spartans",
-            "short": "San José St",
-            "abbrev": "SJSU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2751",
-            "name": "Wyoming Cowboys",
-            "short": "Wyoming",
-            "abbrev": "WYO",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/9 - 9:00 PM EDT",
-        "broadcasts": [
-          "CBSSN"
-        ]
-      },
-      {
-        "id": "401856826",
-        "date": "2026-10-10T02:15Z",
-        "name": "Iowa State Cyclones at BYU Cougars",
-        "teams": [
-          {
-            "id": "252",
-            "name": "BYU Cougars",
-            "short": "BYU",
-            "abbrev": "BYU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "66",
-            "name": "Iowa State Cyclones",
-            "short": "Iowa State",
-            "abbrev": "ISU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/9 - 10:15 PM EDT",
-        "broadcasts": [
-          "ESPN"
-        ]
-      },
-      {
-        "id": "401856712",
-        "date": "2026-10-10T04:00Z",
-        "name": "Georgia Bulldogs at Alabama Crimson Tide",
-        "teams": [
-          {
-            "id": "333",
-            "name": "Alabama Crimson Tide",
-            "short": "Alabama",
-            "abbrev": "ALA",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "61",
-            "name": "Georgia Bulldogs",
-            "short": "Georgia",
-            "abbrev": "UGA",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401858481",
-        "date": "2026-10-10T04:00Z",
-        "name": "Indiana Hoosiers at Nebraska Cornhuskers",
-        "teams": [
-          {
-            "id": "158",
-            "name": "Nebraska Cornhuskers",
-            "short": "Nebraska",
-            "abbrev": "NEB",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "84",
-            "name": "Indiana Hoosiers",
-            "short": "Indiana",
-            "abbrev": "IU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401858483",
-        "date": "2026-10-10T04:00Z",
-        "name": "Maryland Terrapins at Ohio State Buckeyes",
-        "teams": [
-          {
-            "id": "194",
-            "name": "Ohio State Buckeyes",
-            "short": "Ohio State",
-            "abbrev": "OSU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "120",
-            "name": "Maryland Terrapins",
-            "short": "Maryland",
-            "abbrev": "MD",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401856715",
-        "date": "2026-10-10T04:00Z",
-        "name": "LSU Tigers at Kentucky Wildcats",
-        "teams": [
-          {
-            "id": "96",
-            "name": "Kentucky Wildcats",
-            "short": "Kentucky",
-            "abbrev": "UK",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "99",
-            "name": "LSU Tigers",
-            "short": "LSU",
-            "abbrev": "LSU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401856718",
-        "date": "2026-10-10T04:00Z",
-        "name": "Ole Miss Rebels at Vanderbilt Commodores",
-        "teams": [
-          {
-            "id": "238",
-            "name": "Vanderbilt Commodores",
-            "short": "Vanderbilt",
-            "abbrev": "VAN",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "145",
-            "name": "Ole Miss Rebels",
-            "short": "Ole Miss",
-            "abbrev": "MISS",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401856716",
-        "date": "2026-10-10T04:00Z",
-        "name": "Texas A&M Aggies at Missouri Tigers",
-        "teams": [
-          {
-            "id": "142",
-            "name": "Missouri Tigers",
-            "short": "Missouri",
-            "abbrev": "MIZ",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "245",
-            "name": "Texas A&M Aggies",
-            "short": "Texas A&M",
-            "abbrev": "TA&M",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401858485",
-        "date": "2026-10-10T04:00Z",
-        "name": "USC Trojans at Penn State Nittany Lions",
-        "teams": [
-          {
-            "id": "213",
-            "name": "Penn State Nittany Lions",
-            "short": "Penn State",
-            "abbrev": "PSU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "30",
-            "name": "USC Trojans",
-            "short": "USC",
-            "abbrev": "USC",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401856713",
-        "date": "2026-10-10T04:00Z",
-        "name": "Tennessee Volunteers at Arkansas Razorbacks",
-        "teams": [
-          {
-            "id": "8",
-            "name": "Arkansas Razorbacks",
-            "short": "Arkansas",
-            "abbrev": "ARK",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2633",
-            "name": "Tennessee Volunteers",
-            "short": "Tennessee",
-            "abbrev": "TENN",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401856827",
-        "date": "2026-10-10T04:00Z",
-        "name": "Kansas Jayhawks at Utah Utes",
-        "teams": [
-          {
-            "id": "254",
-            "name": "Utah Utes",
-            "short": "Utah",
-            "abbrev": "UTAH",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2305",
-            "name": "Kansas Jayhawks",
-            "short": "Kansas",
-            "abbrev": "KU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401858484",
-        "date": "2026-10-10T04:00Z",
-        "name": "UCLA Bruins at Oregon Ducks",
-        "teams": [
-          {
-            "id": "2483",
-            "name": "Oregon Ducks",
-            "short": "Oregon",
-            "abbrev": "ORE",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "26",
-            "name": "UCLA Bruins",
-            "short": "UCLA",
-            "abbrev": "UCLA",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401856825",
-        "date": "2026-10-10T04:00Z",
-        "name": "Houston Cougars at Kansas State Wildcats",
-        "teams": [
-          {
-            "id": "2306",
-            "name": "Kansas State Wildcats",
-            "short": "Kansas St",
-            "abbrev": "KSU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "248",
-            "name": "Houston Cougars",
-            "short": "Houston",
-            "abbrev": "HOU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401858258",
-        "date": "2026-10-10T04:00Z",
-        "name": "Syracuse Orange at Virginia Cavaliers",
-        "teams": [
-          {
-            "id": "258",
-            "name": "Virginia Cavaliers",
-            "short": "Virginia",
-            "abbrev": "UVA",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "183",
-            "name": "Syracuse Orange",
-            "short": "Syracuse",
-            "abbrev": "SYR",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401856714",
-        "date": "2026-10-10T04:00Z",
-        "name": "South Carolina Gamecocks at Florida Gators",
-        "teams": [
-          {
-            "id": "57",
-            "name": "Florida Gators",
-            "short": "Florida",
-            "abbrev": "FLA",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2579",
-            "name": "South Carolina Gamecocks",
-            "short": "South Carolina",
-            "abbrev": "SC",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401856808",
-        "date": "2026-10-10T04:00Z",
-        "name": "Hawai'i Rainbow Warriors at Arizona State Sun Devils",
-        "teams": [
-          {
-            "id": "9",
-            "name": "Arizona State Sun Devils",
-            "short": "Arizona St",
-            "abbrev": "ASU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "62",
-            "name": "Hawai'i Rainbow Warriors",
-            "short": "Hawai'i",
-            "abbrev": "HAW",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401856823",
-        "date": "2026-10-10T04:00Z",
-        "name": "Arizona Wildcats at West Virginia Mountaineers",
-        "teams": [
-          {
-            "id": "277",
-            "name": "West Virginia Mountaineers",
-            "short": "West Virginia",
-            "abbrev": "WVU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "12",
-            "name": "Arizona Wildcats",
-            "short": "Arizona",
-            "abbrev": "ARIZ",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401856824",
-        "date": "2026-10-10T04:00Z",
-        "name": "UCF Knights at Oklahoma State Cowboys",
-        "teams": [
-          {
-            "id": "197",
-            "name": "Oklahoma State Cowboys",
-            "short": "Oklahoma St",
-            "abbrev": "OKST",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2116",
-            "name": "UCF Knights",
-            "short": "UCF",
-            "abbrev": "UCF",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401858255",
-        "date": "2026-10-10T04:00Z",
-        "name": "Duke Blue Devils at Georgia Tech Yellow Jackets",
-        "teams": [
-          {
-            "id": "59",
-            "name": "Georgia Tech Yellow Jackets",
-            "short": "Georgia Tech",
-            "abbrev": "GT",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "150",
-            "name": "Duke Blue Devils",
-            "short": "Duke",
-            "abbrev": "DUKE",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401858256",
-        "date": "2026-10-10T04:00Z",
-        "name": "North Carolina Tar Heels at Pittsburgh Panthers",
-        "teams": [
-          {
-            "id": "221",
-            "name": "Pittsburgh Panthers",
-            "short": "Pitt",
-            "abbrev": "PITT",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "153",
-            "name": "North Carolina Tar Heels",
-            "short": "North Carolina",
-            "abbrev": "UNC",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401858259",
-        "date": "2026-10-10T04:00Z",
-        "name": "Virginia Tech Hokies at California Golden Bears",
-        "teams": [
-          {
-            "id": "25",
-            "name": "California Golden Bears",
-            "short": "California",
-            "abbrev": "CAL",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "259",
-            "name": "Virginia Tech Hokies",
-            "short": "Virginia Tech",
-            "abbrev": "VT",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401858260",
-        "date": "2026-10-10T04:00Z",
-        "name": "Wake Forest Demon Deacons at NC State Wolfpack",
-        "teams": [
-          {
-            "id": "152",
-            "name": "NC State Wolfpack",
-            "short": "NC State",
-            "abbrev": "NCSU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "154",
-            "name": "Wake Forest Demon Deacons",
-            "short": "Wake Forest",
-            "abbrev": "WAKE",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401858480",
-        "date": "2026-10-10T04:00Z",
-        "name": "Illinois Fighting Illini at Michigan State Spartans",
-        "teams": [
-          {
-            "id": "127",
-            "name": "Michigan State Spartans",
-            "short": "Michigan St",
-            "abbrev": "MSU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "356",
-            "name": "Illinois Fighting Illini",
-            "short": "Illinois",
-            "abbrev": "ILL",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401858482",
-        "date": "2026-10-10T04:00Z",
-        "name": "Ball State Cardinals at Northwestern Wildcats",
-        "teams": [
-          {
-            "id": "77",
-            "name": "Northwestern Wildcats",
-            "short": "Northwestern",
-            "abbrev": "NU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2050",
-            "name": "Ball State Cardinals",
-            "short": "Ball State",
-            "abbrev": "BALL",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401858486",
-        "date": "2026-10-10T04:00Z",
-        "name": "Minnesota Golden Gophers at Purdue Boilermakers",
-        "teams": [
-          {
-            "id": "2509",
-            "name": "Purdue Boilermakers",
-            "short": "Purdue",
-            "abbrev": "PUR",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "135",
-            "name": "Minnesota Golden Gophers",
-            "short": "Minnesota",
-            "abbrev": "MINN",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401861964",
-        "date": "2026-10-10T04:00Z",
-        "name": "UConn Huskies at Temple Owls",
-        "teams": [
-          {
-            "id": "218",
-            "name": "Temple Owls",
-            "short": "Temple",
-            "abbrev": "TEM",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "41",
-            "name": "UConn Huskies",
-            "short": "UConn",
-            "abbrev": "CONN",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401862796",
-        "date": "2026-10-10T04:00Z",
-        "name": "Charlotte 49ers at North Texas Mean Green",
-        "teams": [
-          {
-            "id": "249",
-            "name": "North Texas Mean Green",
-            "short": "North Texas",
-            "abbrev": "UNT",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2429",
-            "name": "Charlotte 49ers",
-            "short": "Charlotte",
-            "abbrev": "CLT",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401862797",
-        "date": "2026-10-10T04:00Z",
-        "name": "Rice Owls at East Carolina Pirates",
-        "teams": [
-          {
-            "id": "151",
-            "name": "East Carolina Pirates",
-            "short": "East Carolina",
-            "abbrev": "ECU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "242",
-            "name": "Rice Owls",
-            "short": "Rice",
-            "abbrev": "RICE",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401862798",
-        "date": "2026-10-10T04:00Z",
-        "name": "UAB Blazers at Memphis Tigers",
-        "teams": [
-          {
-            "id": "235",
-            "name": "Memphis Tigers",
-            "short": "Memphis",
-            "abbrev": "MEM",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "5",
-            "name": "UAB Blazers",
-            "short": "UAB",
-            "abbrev": "UAB",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401864517",
-        "date": "2026-10-10T04:00Z",
-        "name": "Nevada Wolf Pack at UTEP Miners",
-        "teams": [
-          {
-            "id": "2638",
-            "name": "UTEP Miners",
-            "short": "UTEP",
-            "abbrev": "UTEP",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2440",
-            "name": "Nevada Wolf Pack",
-            "short": "Nevada",
-            "abbrev": "NEV",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401866436",
-        "date": "2026-10-10T04:00Z",
-        "name": "Sacramento State Hornets at Bowling Green Falcons",
-        "teams": [
-          {
-            "id": "189",
-            "name": "Bowling Green Falcons",
-            "short": "Bowling Green",
-            "abbrev": "BGSU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "16",
-            "name": "Sacramento State Hornets",
-            "short": "Sacramento St",
-            "abbrev": "SAC",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401866437",
-        "date": "2026-10-10T04:00Z",
-        "name": "Buffalo Bulls at Toledo Rockets",
-        "teams": [
-          {
-            "id": "2649",
-            "name": "Toledo Rockets",
-            "short": "Toledo",
-            "abbrev": "TOL",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2084",
-            "name": "Buffalo Bulls",
-            "short": "Buffalo",
-            "abbrev": "BUFF",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401866438",
-        "date": "2026-10-10T04:00Z",
-        "name": "Central Michigan Chippewas at Ohio Bobcats",
-        "teams": [
-          {
-            "id": "195",
-            "name": "Ohio Bobcats",
-            "short": "Ohio",
-            "abbrev": "OHIO",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2117",
-            "name": "Central Michigan Chippewas",
-            "short": "C Michigan",
-            "abbrev": "CMU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401866439",
-        "date": "2026-10-10T04:00Z",
-        "name": "Kent State Golden Flashes at Western Michigan Broncos",
-        "teams": [
-          {
-            "id": "2711",
-            "name": "Western Michigan Broncos",
-            "short": "W Michigan",
-            "abbrev": "WMU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2309",
-            "name": "Kent State Golden Flashes",
-            "short": "Kent State",
-            "abbrev": "KENT",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401866440",
-        "date": "2026-10-10T04:00Z",
-        "name": "Miami (OH) RedHawks at Massachusetts Minutemen",
-        "teams": [
-          {
-            "id": "113",
-            "name": "Massachusetts Minutemen",
-            "short": "UMass",
-            "abbrev": "MASS",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "193",
-            "name": "Miami (OH) RedHawks",
-            "short": "Miami OH",
-            "abbrev": "M-OH",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401869843",
-        "date": "2026-10-10T04:00Z",
-        "name": "Old Dominion Monarchs at App State Mountaineers",
-        "teams": [
-          {
-            "id": "2026",
-            "name": "App State Mountaineers",
-            "short": "App State",
-            "abbrev": "APP",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "295",
-            "name": "Old Dominion Monarchs",
-            "short": "Old Dominion",
-            "abbrev": "ODU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401869943",
-        "date": "2026-10-10T04:00Z",
-        "name": "Coastal Carolina Chanticleers at Marshall Thundering Herd",
-        "teams": [
-          {
-            "id": "276",
-            "name": "Marshall Thundering Herd",
-            "short": "Marshall",
-            "abbrev": "MRSH",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "324",
-            "name": "Coastal Carolina Chanticleers",
-            "short": "Coastal",
-            "abbrev": "CCU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401869949",
-        "date": "2026-10-10T04:00Z",
-        "name": "James Madison Dukes at Georgia Southern Eagles",
-        "teams": [
-          {
-            "id": "290",
-            "name": "Georgia Southern Eagles",
-            "short": "GA Southern",
-            "abbrev": "GASO",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "256",
-            "name": "James Madison Dukes",
-            "short": "James Madison",
-            "abbrev": "JMU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401869965",
-        "date": "2026-10-10T04:00Z",
-        "name": "Louisiana Ragin' Cajuns at Louisiana Tech Bulldogs",
-        "teams": [
-          {
-            "id": "2348",
-            "name": "Louisiana Tech Bulldogs",
-            "short": "Louisiana Tech",
-            "abbrev": "LT",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "309",
-            "name": "Louisiana Ragin' Cajuns",
-            "short": "Louisiana",
-            "abbrev": "UL",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "TBD",
-        "broadcasts": []
-      },
-      {
-        "id": "401862795",
-        "date": "2026-10-10T16:00Z",
-        "name": "Tulane Green Wave at Army Black Knights",
-        "teams": [
-          {
-            "id": "349",
-            "name": "Army Black Knights",
-            "short": "Army",
-            "abbrev": "ARMY",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2655",
-            "name": "Tulane Green Wave",
-            "short": "Tulane",
-            "abbrev": "TULN",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/10 - 12:00 PM EDT",
-        "broadcasts": [
-          "CBSSN"
-        ]
-      },
-      {
-        "id": "401856717",
-        "date": "2026-10-10T19:30Z",
-        "name": "Texas Longhorns at Oklahoma Sooners",
-        "teams": [
-          {
-            "id": "201",
-            "name": "Oklahoma Sooners",
-            "short": "Oklahoma",
-            "abbrev": "OU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "251",
-            "name": "Texas Longhorns",
-            "short": "Texas",
-            "abbrev": "TEX",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/10 - 3:30 PM EDT",
-        "broadcasts": []
-      },
-      {
-        "id": "401858257",
-        "date": "2026-10-10T19:30Z",
-        "name": "Stanford Cardinal at Notre Dame Fighting Irish",
-        "teams": [
-          {
-            "id": "87",
-            "name": "Notre Dame Fighting Irish",
-            "short": "Notre Dame",
-            "abbrev": "ND",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "24",
-            "name": "Stanford Cardinal",
-            "short": "Stanford",
-            "abbrev": "STAN",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/10 - 3:30 PM EDT",
-        "broadcasts": [
-          "NBC"
-        ]
-      },
-      {
-        "id": "401862799",
-        "date": "2026-10-10T19:30Z",
-        "name": "Tulsa Golden Hurricane at Navy Midshipmen",
-        "teams": [
-          {
-            "id": "2426",
-            "name": "Navy Midshipmen",
-            "short": "Navy",
-            "abbrev": "NAVY",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "202",
-            "name": "Tulsa Golden Hurricane",
-            "short": "Tulsa",
-            "abbrev": "TLSA",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/10 - 3:30 PM EDT",
-        "broadcasts": [
-          "CBSSN"
-        ]
-      },
-      {
-        "id": "401866435",
-        "date": "2026-10-10T19:30Z",
-        "name": "Eastern Michigan Eagles at Akron Zips",
-        "teams": [
-          {
-            "id": "2006",
-            "name": "Akron Zips",
-            "short": "Akron",
-            "abbrev": "AKR",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2199",
-            "name": "Eastern Michigan Eagles",
-            "short": "E Michigan",
-            "abbrev": "EMU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/10 - 3:30 PM EDT",
-        "broadcasts": []
-      },
-      {
-        "id": "401860902",
-        "date": "2026-10-10T22:00Z",
-        "name": "San Diego State Aztecs at Oregon State Beavers",
-        "teams": [
-          {
-            "id": "204",
-            "name": "Oregon State Beavers",
-            "short": "Oregon St",
-            "abbrev": "ORST",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "21",
-            "name": "San Diego State Aztecs",
-            "short": "San Diego St",
-            "abbrev": "SDSU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/10 - 6:00 PM EDT",
-        "broadcasts": [
-          "USA Net"
-        ]
-      },
-      {
-        "id": "401864518",
-        "date": "2026-10-10T23:00Z",
-        "name": "North Dakota State Bison at UNLV Rebels",
-        "teams": [
-          {
-            "id": "2439",
-            "name": "UNLV Rebels",
-            "short": "UNLV",
-            "abbrev": "UNLV",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2449",
-            "name": "North Dakota State Bison",
-            "short": "N Dakota St",
-            "abbrev": "NDSU",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/10 - 7:00 PM EDT",
-        "broadcasts": [
-          "CW"
-        ]
-      },
-      {
-        "id": "401864516",
-        "date": "2026-10-10T23:30Z",
-        "name": "Air Force Falcons at Northern Illinois Huskies",
-        "teams": [
-          {
-            "id": "2459",
-            "name": "Northern Illinois Huskies",
-            "short": "N Illinois",
-            "abbrev": "NIU",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "2005",
-            "name": "Air Force Falcons",
-            "short": "Air Force",
-            "abbrev": "AFA",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/10 - 7:30 PM EDT",
-        "broadcasts": [
-          "CBSSN"
-        ]
-      },
-      {
-        "id": "401860901",
-        "date": "2026-10-11T02:30Z",
-        "name": "Boise State Broncos at Fresno State Bulldogs",
-        "teams": [
-          {
-            "id": "278",
-            "name": "Fresno State Bulldogs",
-            "short": "Fresno St",
-            "abbrev": "FRES",
-            "homeAway": "home",
-            "score": "0"
-          },
-          {
-            "id": "68",
-            "name": "Boise State Broncos",
-            "short": "Boise St",
-            "abbrev": "BOIS",
-            "homeAway": "away",
-            "score": "0"
-          }
-        ],
-        "state": "pre",
-        "completed": false,
-        "detail": "10/10 - 10:30 PM EDT",
-        "broadcasts": [
-          "CW"
-        ]
-      }
-    ],
-    "2026-08-27": [
-      {
-        "id": "401864494",
-        "date": "2026-08-29T19:00Z",
-        "name": "San José State Spartans at USC Trojans",
-        "teams": [
-          {
-            "id": "30",
-            "name": "USC Trojans",
-            "short": "USC",
-            "abbrev": "USC",
-            "homeAway": "home",
-            "score": "42"
-          },
-          {
-            "id": "23",
-            "name": "San José State Spartans",
-            "short": "San José St",
-            "abbrev": "SJSU",
-            "homeAway": "away",
-            "score": "26"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "NBC"
-        ]
-      },
-      {
-        "id": "401856766",
-        "date": "2026-08-29T16:00Z",
-        "name": "North Carolina Tar Heels at TCU Horned Frogs",
-        "teams": [
-          {
-            "id": "2628",
-            "name": "TCU Horned Frogs",
-            "short": "TCU",
-            "abbrev": "TCU",
-            "homeAway": "home",
-            "score": "10"
-          },
-          {
-            "id": "153",
-            "name": "North Carolina Tar Heels",
-            "short": "North Carolina",
-            "abbrev": "UNC",
-            "homeAway": "away",
-            "score": "15"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN",
-          "Disney+"
-        ]
-      },
-      {
-        "id": "401858202",
-        "date": "2026-08-29T19:30Z",
-        "name": "NC State Wolfpack at Virginia Cavaliers",
-        "teams": [
-          {
-            "id": "258",
-            "name": "Virginia Cavaliers",
-            "short": "Virginia",
-            "abbrev": "UVA",
-            "homeAway": "home",
-            "score": "34"
-          },
-          {
-            "id": "152",
-            "name": "NC State Wolfpack",
-            "short": "NC State",
-            "abbrev": "NCSU",
-            "homeAway": "away",
-            "score": "8"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN"
-        ]
-      },
-      {
-        "id": "401864577",
-        "date": "2026-08-29T21:30Z",
-        "name": "Jacksonville State Gamecocks at North Dakota State Bison",
-        "teams": [
-          {
-            "id": "2449",
-            "name": "North Dakota State Bison",
-            "short": "N Dakota St",
-            "abbrev": "NDSU",
-            "homeAway": "home",
-            "score": "33"
-          },
-          {
-            "id": "55",
-            "name": "Jacksonville State Gamecocks",
-            "short": "Jax State",
-            "abbrev": "JVST",
-            "homeAway": "away",
-            "score": "7"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "CBSSN"
-        ]
-      },
-      {
-        "id": "401866408",
-        "date": "2026-08-29T22:30Z",
-        "name": "Sacramento State Hornets at Eastern Michigan Eagles",
-        "teams": [
-          {
-            "id": "2199",
-            "name": "Eastern Michigan Eagles",
-            "short": "E Michigan",
-            "abbrev": "EMU",
-            "homeAway": "home",
-            "score": "28"
-          },
-          {
-            "id": "16",
-            "name": "Sacramento State Hornets",
-            "short": "Sacramento St",
-            "abbrev": "SAC",
-            "homeAway": "away",
-            "score": "17"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ESPN+"
-        ]
-      },
-      {
-        "id": "401858201",
-        "date": "2026-08-29T23:00Z",
-        "name": "Hawai'i Rainbow Warriors at Stanford Cardinal",
-        "teams": [
-          {
-            "id": "24",
-            "name": "Stanford Cardinal",
-            "short": "Stanford",
-            "abbrev": "STAN",
-            "homeAway": "home",
-            "score": "37"
-          },
-          {
-            "id": "62",
-            "name": "Hawai'i Rainbow Warriors",
-            "short": "Hawai'i",
-            "abbrev": "HAW",
-            "homeAway": "away",
-            "score": "27"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "ACC Network"
-        ]
-      },
-      {
-        "id": "401864570",
-        "date": "2026-08-29T23:00Z",
-        "name": "New Mexico State Aggies at Florida State Seminoles",
-        "teams": [
-          {
-            "id": "52",
-            "name": "Florida State Seminoles",
-            "short": "Florida St",
-            "abbrev": "FSU",
-            "homeAway": "home",
-            "score": "34"
-          },
-          {
-            "id": "166",
-            "name": "New Mexico State Aggies",
-            "short": "New Mexico St",
-            "abbrev": "NMSU",
-            "homeAway": "away",
-            "score": "17"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "CW"
-        ]
-      },
-      {
-        "id": "401862693",
-        "date": "2026-08-30T02:00Z",
-        "name": "Memphis Tigers at UNLV Rebels",
-        "teams": [
-          {
-            "id": "2439",
-            "name": "UNLV Rebels",
-            "short": "UNLV",
-            "abbrev": "UNLV",
-            "homeAway": "home",
-            "score": "21"
-          },
-          {
-            "id": "235",
-            "name": "Memphis Tigers",
-            "short": "Memphis",
-            "abbrev": "MEM",
-            "homeAway": "away",
-            "score": "27"
-          }
-        ],
-        "state": "post",
-        "completed": true,
-        "detail": "Final",
-        "broadcasts": [
-          "FOX"
         ]
       }
     ],
@@ -15955,6 +14442,1519 @@
         "detail": "10/3 - 11:59 PM EDT",
         "broadcasts": [
           "MW+"
+        ]
+      }
+    ],
+    "2026-10-08": [
+      {
+        "id": "401870766",
+        "date": "2026-10-08T23:00Z",
+        "name": "Sam Houston Bearkats at Liberty Flames",
+        "teams": [
+          {
+            "id": "2335",
+            "name": "Liberty Flames",
+            "short": "Liberty",
+            "abbrev": "LIB",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2534",
+            "name": "Sam Houston Bearkats",
+            "short": "Sam Houston",
+            "abbrev": "SHSU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/8 - 7:00 PM EDT",
+        "broadcasts": [
+          "ESPNU"
+        ]
+      },
+      {
+        "id": "401871052",
+        "date": "2026-10-08T23:00Z",
+        "name": "Missouri State Bears at Western Kentucky Hilltoppers",
+        "teams": [
+          {
+            "id": "98",
+            "name": "Western Kentucky Hilltoppers",
+            "short": "Western KY",
+            "abbrev": "WKU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2623",
+            "name": "Missouri State Bears",
+            "short": "Missouri St",
+            "abbrev": "MOST",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/8 - 7:00 PM EDT",
+        "broadcasts": [
+          "CBSSN"
+        ]
+      },
+      {
+        "id": "401862794",
+        "date": "2026-10-08T23:30Z",
+        "name": "South Florida Bulls at UTSA Roadrunners",
+        "teams": [
+          {
+            "id": "2636",
+            "name": "UTSA Roadrunners",
+            "short": "UTSA",
+            "abbrev": "UTSA",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "58",
+            "name": "South Florida Bulls",
+            "short": "South Florida",
+            "abbrev": "USF",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/8 - 7:30 PM EDT",
+        "broadcasts": []
+      },
+      {
+        "id": "401869933",
+        "date": "2026-10-08T23:30Z",
+        "name": "South Alabama Jaguars at Arkansas State Red Wolves",
+        "teams": [
+          {
+            "id": "2032",
+            "name": "Arkansas State Red Wolves",
+            "short": "Arkansas St",
+            "abbrev": "ARST",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "6",
+            "name": "South Alabama Jaguars",
+            "short": "South Alabama",
+            "abbrev": "USA",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/8 - 7:30 PM EDT",
+        "broadcasts": []
+      },
+      {
+        "id": "401858254",
+        "date": "2026-10-09T23:00Z",
+        "name": "Florida State Seminoles at Louisville Cardinals",
+        "teams": [
+          {
+            "id": "97",
+            "name": "Louisville Cardinals",
+            "short": "Louisville",
+            "abbrev": "LOU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "52",
+            "name": "Florida State Seminoles",
+            "short": "Florida St",
+            "abbrev": "FSU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/9 - 7:00 PM EDT",
+        "broadcasts": [
+          "ESPN"
+        ]
+      },
+      {
+        "id": "401858487",
+        "date": "2026-10-10T01:00Z",
+        "name": "Iowa Hawkeyes at Washington Huskies",
+        "teams": [
+          {
+            "id": "264",
+            "name": "Washington Huskies",
+            "short": "Washington",
+            "abbrev": "WASH",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2294",
+            "name": "Iowa Hawkeyes",
+            "short": "Iowa",
+            "abbrev": "IOWA",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/9 - 9:00 PM EDT",
+        "broadcasts": []
+      },
+      {
+        "id": "401860922",
+        "date": "2026-10-10T01:00Z",
+        "name": "Washington State Cougars at Utah State Aggies",
+        "teams": [
+          {
+            "id": "328",
+            "name": "Utah State Aggies",
+            "short": "Utah State",
+            "abbrev": "USU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "265",
+            "name": "Washington State Cougars",
+            "short": "Washington St",
+            "abbrev": "WSU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/9 - 9:00 PM EDT",
+        "broadcasts": [
+          "CW"
+        ]
+      },
+      {
+        "id": "401864519",
+        "date": "2026-10-10T01:00Z",
+        "name": "Wyoming Cowboys at San José State Spartans",
+        "teams": [
+          {
+            "id": "23",
+            "name": "San José State Spartans",
+            "short": "San José St",
+            "abbrev": "SJSU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2751",
+            "name": "Wyoming Cowboys",
+            "short": "Wyoming",
+            "abbrev": "WYO",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/9 - 9:00 PM EDT",
+        "broadcasts": [
+          "CBSSN"
+        ]
+      },
+      {
+        "id": "401856826",
+        "date": "2026-10-10T02:15Z",
+        "name": "Iowa State Cyclones at BYU Cougars",
+        "teams": [
+          {
+            "id": "252",
+            "name": "BYU Cougars",
+            "short": "BYU",
+            "abbrev": "BYU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "66",
+            "name": "Iowa State Cyclones",
+            "short": "Iowa State",
+            "abbrev": "ISU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/9 - 10:15 PM EDT",
+        "broadcasts": [
+          "ESPN"
+        ]
+      },
+      {
+        "id": "401856712",
+        "date": "2026-10-10T04:00Z",
+        "name": "Georgia Bulldogs at Alabama Crimson Tide",
+        "teams": [
+          {
+            "id": "333",
+            "name": "Alabama Crimson Tide",
+            "short": "Alabama",
+            "abbrev": "ALA",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "61",
+            "name": "Georgia Bulldogs",
+            "short": "Georgia",
+            "abbrev": "UGA",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401858481",
+        "date": "2026-10-10T04:00Z",
+        "name": "Indiana Hoosiers at Nebraska Cornhuskers",
+        "teams": [
+          {
+            "id": "158",
+            "name": "Nebraska Cornhuskers",
+            "short": "Nebraska",
+            "abbrev": "NEB",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "84",
+            "name": "Indiana Hoosiers",
+            "short": "Indiana",
+            "abbrev": "IU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401858483",
+        "date": "2026-10-10T04:00Z",
+        "name": "Maryland Terrapins at Ohio State Buckeyes",
+        "teams": [
+          {
+            "id": "194",
+            "name": "Ohio State Buckeyes",
+            "short": "Ohio State",
+            "abbrev": "OSU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "120",
+            "name": "Maryland Terrapins",
+            "short": "Maryland",
+            "abbrev": "MD",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401856715",
+        "date": "2026-10-10T04:00Z",
+        "name": "LSU Tigers at Kentucky Wildcats",
+        "teams": [
+          {
+            "id": "96",
+            "name": "Kentucky Wildcats",
+            "short": "Kentucky",
+            "abbrev": "UK",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "99",
+            "name": "LSU Tigers",
+            "short": "LSU",
+            "abbrev": "LSU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401856718",
+        "date": "2026-10-10T04:00Z",
+        "name": "Ole Miss Rebels at Vanderbilt Commodores",
+        "teams": [
+          {
+            "id": "238",
+            "name": "Vanderbilt Commodores",
+            "short": "Vanderbilt",
+            "abbrev": "VAN",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "145",
+            "name": "Ole Miss Rebels",
+            "short": "Ole Miss",
+            "abbrev": "MISS",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401856716",
+        "date": "2026-10-10T04:00Z",
+        "name": "Texas A&M Aggies at Missouri Tigers",
+        "teams": [
+          {
+            "id": "142",
+            "name": "Missouri Tigers",
+            "short": "Missouri",
+            "abbrev": "MIZ",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "245",
+            "name": "Texas A&M Aggies",
+            "short": "Texas A&M",
+            "abbrev": "TA&M",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401858485",
+        "date": "2026-10-10T04:00Z",
+        "name": "USC Trojans at Penn State Nittany Lions",
+        "teams": [
+          {
+            "id": "213",
+            "name": "Penn State Nittany Lions",
+            "short": "Penn State",
+            "abbrev": "PSU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "30",
+            "name": "USC Trojans",
+            "short": "USC",
+            "abbrev": "USC",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401856713",
+        "date": "2026-10-10T04:00Z",
+        "name": "Tennessee Volunteers at Arkansas Razorbacks",
+        "teams": [
+          {
+            "id": "8",
+            "name": "Arkansas Razorbacks",
+            "short": "Arkansas",
+            "abbrev": "ARK",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2633",
+            "name": "Tennessee Volunteers",
+            "short": "Tennessee",
+            "abbrev": "TENN",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401856827",
+        "date": "2026-10-10T04:00Z",
+        "name": "Kansas Jayhawks at Utah Utes",
+        "teams": [
+          {
+            "id": "254",
+            "name": "Utah Utes",
+            "short": "Utah",
+            "abbrev": "UTAH",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2305",
+            "name": "Kansas Jayhawks",
+            "short": "Kansas",
+            "abbrev": "KU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401858484",
+        "date": "2026-10-10T04:00Z",
+        "name": "UCLA Bruins at Oregon Ducks",
+        "teams": [
+          {
+            "id": "2483",
+            "name": "Oregon Ducks",
+            "short": "Oregon",
+            "abbrev": "ORE",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "26",
+            "name": "UCLA Bruins",
+            "short": "UCLA",
+            "abbrev": "UCLA",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401856825",
+        "date": "2026-10-10T04:00Z",
+        "name": "Houston Cougars at Kansas State Wildcats",
+        "teams": [
+          {
+            "id": "2306",
+            "name": "Kansas State Wildcats",
+            "short": "Kansas St",
+            "abbrev": "KSU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "248",
+            "name": "Houston Cougars",
+            "short": "Houston",
+            "abbrev": "HOU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401858258",
+        "date": "2026-10-10T04:00Z",
+        "name": "Syracuse Orange at Virginia Cavaliers",
+        "teams": [
+          {
+            "id": "258",
+            "name": "Virginia Cavaliers",
+            "short": "Virginia",
+            "abbrev": "UVA",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "183",
+            "name": "Syracuse Orange",
+            "short": "Syracuse",
+            "abbrev": "SYR",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401856714",
+        "date": "2026-10-10T04:00Z",
+        "name": "South Carolina Gamecocks at Florida Gators",
+        "teams": [
+          {
+            "id": "57",
+            "name": "Florida Gators",
+            "short": "Florida",
+            "abbrev": "FLA",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2579",
+            "name": "South Carolina Gamecocks",
+            "short": "South Carolina",
+            "abbrev": "SC",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401856808",
+        "date": "2026-10-10T04:00Z",
+        "name": "Hawai'i Rainbow Warriors at Arizona State Sun Devils",
+        "teams": [
+          {
+            "id": "9",
+            "name": "Arizona State Sun Devils",
+            "short": "Arizona St",
+            "abbrev": "ASU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "62",
+            "name": "Hawai'i Rainbow Warriors",
+            "short": "Hawai'i",
+            "abbrev": "HAW",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401856823",
+        "date": "2026-10-10T04:00Z",
+        "name": "Arizona Wildcats at West Virginia Mountaineers",
+        "teams": [
+          {
+            "id": "277",
+            "name": "West Virginia Mountaineers",
+            "short": "West Virginia",
+            "abbrev": "WVU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "12",
+            "name": "Arizona Wildcats",
+            "short": "Arizona",
+            "abbrev": "ARIZ",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401856824",
+        "date": "2026-10-10T04:00Z",
+        "name": "UCF Knights at Oklahoma State Cowboys",
+        "teams": [
+          {
+            "id": "197",
+            "name": "Oklahoma State Cowboys",
+            "short": "Oklahoma St",
+            "abbrev": "OKST",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2116",
+            "name": "UCF Knights",
+            "short": "UCF",
+            "abbrev": "UCF",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401858255",
+        "date": "2026-10-10T04:00Z",
+        "name": "Duke Blue Devils at Georgia Tech Yellow Jackets",
+        "teams": [
+          {
+            "id": "59",
+            "name": "Georgia Tech Yellow Jackets",
+            "short": "Georgia Tech",
+            "abbrev": "GT",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "150",
+            "name": "Duke Blue Devils",
+            "short": "Duke",
+            "abbrev": "DUKE",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401858256",
+        "date": "2026-10-10T04:00Z",
+        "name": "North Carolina Tar Heels at Pittsburgh Panthers",
+        "teams": [
+          {
+            "id": "221",
+            "name": "Pittsburgh Panthers",
+            "short": "Pitt",
+            "abbrev": "PITT",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "153",
+            "name": "North Carolina Tar Heels",
+            "short": "North Carolina",
+            "abbrev": "UNC",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401858259",
+        "date": "2026-10-10T04:00Z",
+        "name": "Virginia Tech Hokies at California Golden Bears",
+        "teams": [
+          {
+            "id": "25",
+            "name": "California Golden Bears",
+            "short": "California",
+            "abbrev": "CAL",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "259",
+            "name": "Virginia Tech Hokies",
+            "short": "Virginia Tech",
+            "abbrev": "VT",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401858260",
+        "date": "2026-10-10T04:00Z",
+        "name": "Wake Forest Demon Deacons at NC State Wolfpack",
+        "teams": [
+          {
+            "id": "152",
+            "name": "NC State Wolfpack",
+            "short": "NC State",
+            "abbrev": "NCSU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "154",
+            "name": "Wake Forest Demon Deacons",
+            "short": "Wake Forest",
+            "abbrev": "WAKE",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401858480",
+        "date": "2026-10-10T04:00Z",
+        "name": "Illinois Fighting Illini at Michigan State Spartans",
+        "teams": [
+          {
+            "id": "127",
+            "name": "Michigan State Spartans",
+            "short": "Michigan St",
+            "abbrev": "MSU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "356",
+            "name": "Illinois Fighting Illini",
+            "short": "Illinois",
+            "abbrev": "ILL",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401858482",
+        "date": "2026-10-10T04:00Z",
+        "name": "Ball State Cardinals at Northwestern Wildcats",
+        "teams": [
+          {
+            "id": "77",
+            "name": "Northwestern Wildcats",
+            "short": "Northwestern",
+            "abbrev": "NU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2050",
+            "name": "Ball State Cardinals",
+            "short": "Ball State",
+            "abbrev": "BALL",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401858486",
+        "date": "2026-10-10T04:00Z",
+        "name": "Minnesota Golden Gophers at Purdue Boilermakers",
+        "teams": [
+          {
+            "id": "2509",
+            "name": "Purdue Boilermakers",
+            "short": "Purdue",
+            "abbrev": "PUR",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "135",
+            "name": "Minnesota Golden Gophers",
+            "short": "Minnesota",
+            "abbrev": "MINN",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401861964",
+        "date": "2026-10-10T04:00Z",
+        "name": "UConn Huskies at Temple Owls",
+        "teams": [
+          {
+            "id": "218",
+            "name": "Temple Owls",
+            "short": "Temple",
+            "abbrev": "TEM",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "41",
+            "name": "UConn Huskies",
+            "short": "UConn",
+            "abbrev": "CONN",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401862796",
+        "date": "2026-10-10T04:00Z",
+        "name": "Charlotte 49ers at North Texas Mean Green",
+        "teams": [
+          {
+            "id": "249",
+            "name": "North Texas Mean Green",
+            "short": "North Texas",
+            "abbrev": "UNT",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2429",
+            "name": "Charlotte 49ers",
+            "short": "Charlotte",
+            "abbrev": "CLT",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401862797",
+        "date": "2026-10-10T04:00Z",
+        "name": "Rice Owls at East Carolina Pirates",
+        "teams": [
+          {
+            "id": "151",
+            "name": "East Carolina Pirates",
+            "short": "East Carolina",
+            "abbrev": "ECU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "242",
+            "name": "Rice Owls",
+            "short": "Rice",
+            "abbrev": "RICE",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401862798",
+        "date": "2026-10-10T04:00Z",
+        "name": "UAB Blazers at Memphis Tigers",
+        "teams": [
+          {
+            "id": "235",
+            "name": "Memphis Tigers",
+            "short": "Memphis",
+            "abbrev": "MEM",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "5",
+            "name": "UAB Blazers",
+            "short": "UAB",
+            "abbrev": "UAB",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401864517",
+        "date": "2026-10-10T04:00Z",
+        "name": "Nevada Wolf Pack at UTEP Miners",
+        "teams": [
+          {
+            "id": "2638",
+            "name": "UTEP Miners",
+            "short": "UTEP",
+            "abbrev": "UTEP",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2440",
+            "name": "Nevada Wolf Pack",
+            "short": "Nevada",
+            "abbrev": "NEV",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401866436",
+        "date": "2026-10-10T04:00Z",
+        "name": "Sacramento State Hornets at Bowling Green Falcons",
+        "teams": [
+          {
+            "id": "189",
+            "name": "Bowling Green Falcons",
+            "short": "Bowling Green",
+            "abbrev": "BGSU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "16",
+            "name": "Sacramento State Hornets",
+            "short": "Sacramento St",
+            "abbrev": "SAC",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401866437",
+        "date": "2026-10-10T04:00Z",
+        "name": "Buffalo Bulls at Toledo Rockets",
+        "teams": [
+          {
+            "id": "2649",
+            "name": "Toledo Rockets",
+            "short": "Toledo",
+            "abbrev": "TOL",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2084",
+            "name": "Buffalo Bulls",
+            "short": "Buffalo",
+            "abbrev": "BUFF",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401866438",
+        "date": "2026-10-10T04:00Z",
+        "name": "Central Michigan Chippewas at Ohio Bobcats",
+        "teams": [
+          {
+            "id": "195",
+            "name": "Ohio Bobcats",
+            "short": "Ohio",
+            "abbrev": "OHIO",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2117",
+            "name": "Central Michigan Chippewas",
+            "short": "C Michigan",
+            "abbrev": "CMU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401866439",
+        "date": "2026-10-10T04:00Z",
+        "name": "Kent State Golden Flashes at Western Michigan Broncos",
+        "teams": [
+          {
+            "id": "2711",
+            "name": "Western Michigan Broncos",
+            "short": "W Michigan",
+            "abbrev": "WMU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2309",
+            "name": "Kent State Golden Flashes",
+            "short": "Kent State",
+            "abbrev": "KENT",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401866440",
+        "date": "2026-10-10T04:00Z",
+        "name": "Miami (OH) RedHawks at Massachusetts Minutemen",
+        "teams": [
+          {
+            "id": "113",
+            "name": "Massachusetts Minutemen",
+            "short": "UMass",
+            "abbrev": "MASS",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "193",
+            "name": "Miami (OH) RedHawks",
+            "short": "Miami OH",
+            "abbrev": "M-OH",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401869843",
+        "date": "2026-10-10T04:00Z",
+        "name": "Old Dominion Monarchs at App State Mountaineers",
+        "teams": [
+          {
+            "id": "2026",
+            "name": "App State Mountaineers",
+            "short": "App State",
+            "abbrev": "APP",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "295",
+            "name": "Old Dominion Monarchs",
+            "short": "Old Dominion",
+            "abbrev": "ODU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401869943",
+        "date": "2026-10-10T04:00Z",
+        "name": "Coastal Carolina Chanticleers at Marshall Thundering Herd",
+        "teams": [
+          {
+            "id": "276",
+            "name": "Marshall Thundering Herd",
+            "short": "Marshall",
+            "abbrev": "MRSH",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "324",
+            "name": "Coastal Carolina Chanticleers",
+            "short": "Coastal",
+            "abbrev": "CCU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401869949",
+        "date": "2026-10-10T04:00Z",
+        "name": "James Madison Dukes at Georgia Southern Eagles",
+        "teams": [
+          {
+            "id": "290",
+            "name": "Georgia Southern Eagles",
+            "short": "GA Southern",
+            "abbrev": "GASO",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "256",
+            "name": "James Madison Dukes",
+            "short": "James Madison",
+            "abbrev": "JMU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401869965",
+        "date": "2026-10-10T04:00Z",
+        "name": "Louisiana Ragin' Cajuns at Louisiana Tech Bulldogs",
+        "teams": [
+          {
+            "id": "2348",
+            "name": "Louisiana Tech Bulldogs",
+            "short": "Louisiana Tech",
+            "abbrev": "LT",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "309",
+            "name": "Louisiana Ragin' Cajuns",
+            "short": "Louisiana",
+            "abbrev": "UL",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "TBD",
+        "broadcasts": []
+      },
+      {
+        "id": "401862795",
+        "date": "2026-10-10T16:00Z",
+        "name": "Tulane Green Wave at Army Black Knights",
+        "teams": [
+          {
+            "id": "349",
+            "name": "Army Black Knights",
+            "short": "Army",
+            "abbrev": "ARMY",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2655",
+            "name": "Tulane Green Wave",
+            "short": "Tulane",
+            "abbrev": "TULN",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/10 - 12:00 PM EDT",
+        "broadcasts": [
+          "CBSSN"
+        ]
+      },
+      {
+        "id": "401856717",
+        "date": "2026-10-10T19:30Z",
+        "name": "Texas Longhorns at Oklahoma Sooners",
+        "teams": [
+          {
+            "id": "201",
+            "name": "Oklahoma Sooners",
+            "short": "Oklahoma",
+            "abbrev": "OU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "251",
+            "name": "Texas Longhorns",
+            "short": "Texas",
+            "abbrev": "TEX",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/10 - 3:30 PM EDT",
+        "broadcasts": []
+      },
+      {
+        "id": "401858257",
+        "date": "2026-10-10T19:30Z",
+        "name": "Stanford Cardinal at Notre Dame Fighting Irish",
+        "teams": [
+          {
+            "id": "87",
+            "name": "Notre Dame Fighting Irish",
+            "short": "Notre Dame",
+            "abbrev": "ND",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "24",
+            "name": "Stanford Cardinal",
+            "short": "Stanford",
+            "abbrev": "STAN",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/10 - 3:30 PM EDT",
+        "broadcasts": [
+          "NBC"
+        ]
+      },
+      {
+        "id": "401862799",
+        "date": "2026-10-10T19:30Z",
+        "name": "Tulsa Golden Hurricane at Navy Midshipmen",
+        "teams": [
+          {
+            "id": "2426",
+            "name": "Navy Midshipmen",
+            "short": "Navy",
+            "abbrev": "NAVY",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "202",
+            "name": "Tulsa Golden Hurricane",
+            "short": "Tulsa",
+            "abbrev": "TLSA",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/10 - 3:30 PM EDT",
+        "broadcasts": [
+          "CBSSN"
+        ]
+      },
+      {
+        "id": "401866435",
+        "date": "2026-10-10T19:30Z",
+        "name": "Eastern Michigan Eagles at Akron Zips",
+        "teams": [
+          {
+            "id": "2006",
+            "name": "Akron Zips",
+            "short": "Akron",
+            "abbrev": "AKR",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2199",
+            "name": "Eastern Michigan Eagles",
+            "short": "E Michigan",
+            "abbrev": "EMU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/10 - 3:30 PM EDT",
+        "broadcasts": []
+      },
+      {
+        "id": "401860902",
+        "date": "2026-10-10T22:00Z",
+        "name": "San Diego State Aztecs at Oregon State Beavers",
+        "teams": [
+          {
+            "id": "204",
+            "name": "Oregon State Beavers",
+            "short": "Oregon St",
+            "abbrev": "ORST",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "21",
+            "name": "San Diego State Aztecs",
+            "short": "San Diego St",
+            "abbrev": "SDSU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/10 - 6:00 PM EDT",
+        "broadcasts": [
+          "USA Net"
+        ]
+      },
+      {
+        "id": "401864518",
+        "date": "2026-10-10T23:00Z",
+        "name": "North Dakota State Bison at UNLV Rebels",
+        "teams": [
+          {
+            "id": "2439",
+            "name": "UNLV Rebels",
+            "short": "UNLV",
+            "abbrev": "UNLV",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2449",
+            "name": "North Dakota State Bison",
+            "short": "N Dakota St",
+            "abbrev": "NDSU",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/10 - 7:00 PM EDT",
+        "broadcasts": [
+          "CW"
+        ]
+      },
+      {
+        "id": "401864516",
+        "date": "2026-10-10T23:30Z",
+        "name": "Air Force Falcons at Northern Illinois Huskies",
+        "teams": [
+          {
+            "id": "2459",
+            "name": "Northern Illinois Huskies",
+            "short": "N Illinois",
+            "abbrev": "NIU",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "2005",
+            "name": "Air Force Falcons",
+            "short": "Air Force",
+            "abbrev": "AFA",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/10 - 7:30 PM EDT",
+        "broadcasts": [
+          "CBSSN"
+        ]
+      },
+      {
+        "id": "401860901",
+        "date": "2026-10-11T02:30Z",
+        "name": "Boise State Broncos at Fresno State Bulldogs",
+        "teams": [
+          {
+            "id": "278",
+            "name": "Fresno State Bulldogs",
+            "short": "Fresno St",
+            "abbrev": "FRES",
+            "homeAway": "home",
+            "score": "0"
+          },
+          {
+            "id": "68",
+            "name": "Boise State Broncos",
+            "short": "Boise St",
+            "abbrev": "BOIS",
+            "homeAway": "away",
+            "score": "0"
+          }
+        ],
+        "state": "pre",
+        "completed": false,
+        "detail": "10/10 - 10:30 PM EDT",
+        "broadcasts": [
+          "CW"
         ]
       }
     ],
@@ -27630,5 +27630,5 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-bobby-kennedy-brooks-davis-brock-beaner-on-oregon-state/",
     "youtube_id": "LCXacLE40UE"
   },
-  "fcs_scores_updated": "2026-09-16T05:28:08.198199+00:00"
+  "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00"
 }
