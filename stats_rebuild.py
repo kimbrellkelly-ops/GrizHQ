@@ -33,6 +33,7 @@ def _set_summary(stats, label, value, note):
 
 
 def _replace_pair(rows, label, value):
+    """Replace a row, or append it when the old schema omitted it."""
     for row in rows or []:
         if isinstance(row, list) and row and str(row[0]).strip().lower() == label.lower():
             if len(row) > 1:
@@ -40,6 +41,7 @@ def _replace_pair(rows, label, value):
             else:
                 row.append(str(value))
             return
+    rows.append([label, str(value)])
 
 
 def _row(text, label):
@@ -100,7 +102,6 @@ def build_stats(schedule, old_stats, get, schedule_html=None):
         _set_summary(stats, "POINTS / GAME", totals["points"][0], source_note)
     if "offense_avg" in totals:
         _set_summary(stats, "TOTAL OFFENSE", totals["offense_avg"][0], source_note)
-        _set_summary(stats, "TOTAL DEFENSE", totals["offense_avg"][1], source_note)
 
     offense = stats.setdefault("offense", [])
     defense = stats.setdefault("defense", [])
@@ -123,9 +124,13 @@ def build_stats(schedule, old_stats, get, schedule_html=None):
     stats["source_checked_at"] = datetime.now(timezone.utc).isoformat()
     stats["coverage"] = {
         "completed_games": len(completed),
-        "verified_boxscores": len(completed),
+        "verified_boxscores": 0,
         "source_of_truth": OFFICIAL_CUMULATIVE_URL,
-        "pending": [],
+        "pending": [
+            str(game.get("opponent", "")).strip()
+            for game in completed
+            if str(game.get("opponent", "")).strip()
+        ],
     }
     stats["through"] = f"Official cumulative source: {OFFICIAL_CUMULATIVE_URL}"
     return stats
