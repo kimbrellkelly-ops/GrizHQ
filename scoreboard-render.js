@@ -1,4 +1,4 @@
-/* Griz HQ scoreboard — cache-first renderer. */
+/* Griz HQ scoreboard — authoritative cache renderer. */
 (function(){
   'use strict';
   const C=window.GRIZ_SCOREBOARD_CONFIG;
@@ -25,12 +25,23 @@
     const upcoming=C.weeks.findIndex(w=>w[0]>now);
     return upcoming>=0?upcoming:C.weeks.length-1;
   };
+  function rankedMatch(teamName, rankings){
+    const t=norm(teamName);
+    let best=null;
+    for(const r of rankings){
+      const k=norm(r.team);
+      if(t===k || t.startsWith(k)){
+        if(!best || k.length>norm(best.team).length) best=r;
+      }
+    }
+    return best;
+  }
   function card(ev){
     const ts=teams(ev),a=ts.find(t=>t.homeAway==='away')||ts[0],h=ts.find(t=>t.homeAway==='home')||ts[1];
     const row=t=>`<div class="ghq-score-team"><span class="ghq-score-team-name">${logo(t)?`<img src="${esc(logo(t))}" alt="" loading="lazy">`:''}<span>${esc(name(t))}</span></span><strong>${esc(t?.score??'—')}</strong></div>`;
     return `<a class="ghq-score-card" href="https://www.espn.com/college-football/game/_/gameId/${encodeURIComponent(ev.id||'')}" target="_blank" rel="noopener"><div class="ghq-score-meta"><span>${esc(fmt(ev.date))}</span><b>ESPN</b></div>${row(a)}${row(h)}<div class="ghq-score-status">${esc(status(ev))}</div></a>`;
   }
-  function empty(rank,nm){return `<div class="ghq-score-card ghq-score-empty"><div class="ghq-score-meta"><b>#${esc(rank)}</b><span>${esc(nm)}</span></div><div class="ghq-score-status">NO MATCHUP FOUND IN VERIFIED CACHE</div></div>`;}
+  function empty(rank,nm){return `<div class="ghq-score-card ghq-score-empty"><div class="ghq-score-meta"><b>#${esc(rank)}</b><span>${esc(nm)}</span></div><div class="ghq-score-status">NO MATCHUP IN VERIFIED CACHE</div></div>`;}
   async function loadCache(){
     const r=await fetch('scoreboard/scoreboard-data.json?cache='+Date.now(),{cache:'no-store'});
     if(!r.ok)throw Error('scoreboard cache '+r.status);
@@ -39,26 +50,29 @@
   async function render(){
     const weekEl=$('fcs-week-filter'),top=$('fcs-top20'),big=$('bigsky-score-games'),st=$('fcs-status');
     if(!weekEl||!top||!big)return;
-    if(!weekEl.dataset.ready){C.weeks.forEach((w,i)=>{const o=document.createElement('option');o.value=i;o.textContent=w[2];weekEl.appendChild(o);});weekEl.dataset.ready='1';}
+    if(!weekEl.dataset.ready){
+      C.weeks.forEach((w,i)=>{const o=document.createElement('option');o.value=i;o.textContent=w[2];weekEl.appendChild(o);});
+      weekEl.dataset.ready='1';
+    }
     if(!weekEl.dataset.userChanged)weekEl.value=String(weekIndex());
     const idx=Number(weekEl.value)||0,w=C.weeks[idx];
-    top.innerHTML='<div class="ghq-score-empty">Loading verified scoreboard cache…</div>';big.innerHTML='';if(st)st.textContent='Loading verified scores…';
+    top.innerHTML='<div class="ghq-score-empty">Loading verified scoreboard cache…</div>';
+    big.innerHTML='';if(st)st.textContent='Loading verified scores…';
     try{
       const data=await loadCache();
       const cached=data.weeks?.find(x=>Number(x.index)===idx)||data.weeks?.[idx];
       if(!cached)throw Error('No cache entry for week '+idx);
       const rankings=(data.rankings||[]).slice(0,25);
       const games=cached.fcsTop25Games||[];
-      const byes=new Map((cached.fcsTop25Byes||[]).map(x=>[norm(x.team),x]));
-      const played=new Set(games.flatMap(e=>teams(e).map(name).map(norm)));
       top.innerHTML=rankings.map((r,i)=>{
-        const key=norm(r.team);
-        const ev=games.find(e=>teams(e).some(t=>norm(name(t))===key||norm(name(t)).startsWith(key)||key.startsWith(norm(name(t)))));
+        const ev=games.find(e=>teams(e).some(t=>rankedMatch(name(t),[r])));
         return ev?card(ev):empty(r.rank||i+1,r.team);
       }).join('');
       const bs=cached.bigSkyGames||[];
-      big.innerHTML=bs.length?bs.sort((a,b)=>String(a.date).localeCompare(String(b.date))).map(card).join(''):'<div class="ghq-score-empty">NO BIG SKY GAMES THIS WEEK</div>';
-      if(st)st.textContent=`Loaded ${games.length} ranked FCS games + ${bs.length} Big Sky games from verified cache • ${w[2]}`;
+      big.innerHTML=bs.length
+        ?bs.slice().sort((a,b)=>String(a.date).localeCompare(String(b.date))).map(card).join('')
+        :'<div class="ghq-score-empty">NO BIG SKY GAMES THIS WEEK</div>';
+      if(st)st.textContent=`VERIFIED CACHE • ${games.length} ranked FCS games • ${bs.length} Big Sky games • ${w[2]}`;
     }catch(err){
       top.innerHTML='<div class="ghq-score-empty"><b>SCOREBOARD CACHE UNAVAILABLE</b><span>Run the GitHub scoreboard refresh and try again.</span></div>';
       big.innerHTML='<div class="ghq-score-empty">SCOREBOARD CACHE UNAVAILABLE</div>';
