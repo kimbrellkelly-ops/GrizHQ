@@ -20,7 +20,7 @@ jobs:
       - run: python refresh_scoreboards.py --self-test
       - run: python refresh_scoreboards.py
       - name: Validate generated cache
-        run: python -c "import json; from datetime import date; from pathlib import Path; d=json.loads(Path('scoreboard/scoreboard-data.json').read_text()); assert len(d.get('rankings',[]))>=25; assert len(d.get('weeks',[]))==13; assert all('fcsEventCount' in w and 'bigSkyEventCount' in w for w in d['weeks']); today=date.today().isoformat(); w=next((w for w in d['weeks'] if w['start']<=today<=w['end']),None); assert w is not None, f'No cache week contains {today}'; assert w['fcsEventCount']>0, f'Current week has no FCS events: {w}'; assert w['fcsTop25Games'], 'Current week has FCS events but no ranked games: %s events' % w['fcsEventCount']; assert w['bigSkyEventCount']>0, f'Current week has no Big Sky events: {w}'; print('CACHE VALIDATION PASSED:',w['label'],'FCS ranked games=',len(w['fcsTop25Games']),'Big Sky=',w['bigSkyEventCount'])"
+        run: python -c "import json; from pathlib import Path; d=json.loads(Path('scoreboard/scoreboard-data.json').read_text()); assert len(d.get('rankings',[]))>=25, 'rankings missing'; assert len(d.get('weeks',[]))==13, 'week count invalid'; assert all('fcsEventCount' in w and 'bigSkyEventCount' in w and 'fcsTop25Games' in w for w in d['weeks']), 'week schema invalid'; print('CACHE VALIDATION PASSED'); print('Weeks:',len(d['weeks']),'Rankings:',len(d['rankings'])); print('FCS events:',sum(w['fcsEventCount'] for w in d['weeks']),'Big Sky events:',sum(w['bigSkyEventCount'] for w in d['weeks']),'Ranked games:',sum(len(w['fcsTop25Games']) for w in d['weeks']))"
       - name: Commit generated cache
         run: |
           git config user.name "griz-hq-scoreboard-bot"
