@@ -1,6 +1,32 @@
 {
-  "updated": "2026-09-17T04:52:14.758029+00:00",
+  "updated": "2026-09-17T05:06:13.965834+00:00",
   "posts": [
+    {
+      "title": "How do you beat an FBS team if you're an #FCS team?",
+      "url": "https://www.youtube.com/watch?v=6Wyimn5rEWs",
+      "image": "https://i.ytimg.com/vi/6Wyimn5rEWs/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Sep. 17, 2026",
+      "platform": "youtube",
+      "youtube_id": "6Wyimn5rEWs",
+      "published_at": "2026-09-17T00:00:00+00:00"
+    },
+    {
+      "title": "Montana's passing defense will be tested at Oregon State!",
+      "url": "https://www.youtube.com/watch?v=TxNW0oJvf68",
+      "image": "https://i.ytimg.com/vi/TxNW0oJvf68/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Sep. 17, 2026",
+      "platform": "youtube",
+      "youtube_id": "TxNW0oJvf68",
+      "published_at": "2026-09-17T00:00:00+00:00"
+    },
     {
       "title": "FCS Herd with Sam Herder - Biggest surprises & disappointments, FCS over FBS wins, Griz at Oregon St",
       "url": "https://www.youtube.com/watch?v=pdxo2x0vlds",
