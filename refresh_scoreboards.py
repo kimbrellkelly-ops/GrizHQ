@@ -17,6 +17,30 @@ BIG_SKY=['Montana','Montana State','Idaho','Idaho State','Eastern Washington','N
 HEADERS={'Accept':'application/json, text/plain, */*','Origin':'https://www.espn.com','Referer':'https://www.espn.com/'}
 BASES=['https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard','https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard']
 def norm(s):return re.sub(r'[^a-z0-9]','',str(s or '').lower())
+
+# ESPN often appends mascots to display names. These suffixes are removed only
+# for matching; the original ESPN display name is preserved in the cache.
+MASCOT_SUFFIXES=(
+ 'bobcats','jackrabbits','grizzlies','texans','redbirds','fightinghawks',
+ 'rams','rams','rams','rams','mountaineers','hawks','penguins','bison',
+ 'mountaineers','leopards','vikes','vikings','wildcats','bears','eagles',
+ 'aggies','lumberjacks','bengals','argonauts','bulldogs','bulldogs',
+ 'bulldogs','bulldogs','tigers','crimson','crimsonhawks','bluehens',
+ 'phoenix','tribe','cats','bisons','salukis','crusaders','mocs',
+ 'governors','cardinals','lions','bears','paladins','terriers','dolphins',
+ 'mustangs','colonels','skyhawks','rattlers','hornets','spiders',
+ 'seawolves','retrievers','rainbows','rainbowwarriors','flames','hawks',
+ 'bearkats','bearcats','gamecocks','privateers','lions','phoenix'
+)
+def team_key(s):
+ n=norm(s)
+ for suffix in sorted(MASCOT_SUFFIXES,key=len,reverse=True):
+  if n.endswith(suffix) and len(n)>len(suffix)+3:
+   return n[:-len(suffix)]
+ return n
+def same_team(a,b):
+ a,b=team_key(a),team_key(b)
+ return bool(a and b and (a==b or (a.startswith(b) and len(a)-len(b)<=8) or (b.startswith(a) and len(b)-len(a)<=8)))
 def load_rankings():
  d=json.loads(DATA.read_text(encoding='utf-8')); raw=d.get('fcs_top25') or d.get('fcs_top20') or []
  if len(raw)<25:raise RuntimeError(f'Expected 25 FCS rankings; found {len(raw)}')
@@ -76,20 +100,20 @@ def big_sky_expected(data,start,end):
   if start<=d<=end and r.get('team') and r.get('opponent'):out.add('|'.join(sorted([canonical(r['team']),canonical(r['opponent'])])))
  return out
 def build():
- data=json.loads(DATA.read_text(encoding='utf-8'));rankings,rank_date=load_rankings();rank_keys={norm(x['team']):x for x in rankings};result={'season':2026,'generatedAt':datetime.now(timezone.utc).isoformat(),'source':'ESPN FCS group 81 + ESPN Big Sky group 20','rankings':rankings,'rankingsDate':rank_date,'bigSkyTeams':BIG_SKY,'weeks':[]}
+ data=json.loads(DATA.read_text(encoding='utf-8'));rankings,rank_date=load_rankings();rank_keys={team_key(x['team']):x for x in rankings};result={'season':2026,'generatedAt':datetime.now(timezone.utc).isoformat(),'source':'ESPN FCS group 81 + ESPN Big Sky group 20','rankings':rankings,'rankingsDate':rank_date,'bigSkyTeams':BIG_SKY,'weeks':[]}
  for i,(start,end,label) in enumerate(WEEKS):
   fcs=[compact(x) for x in fetch_group_week(start,end,'81')]
   bs=[compact(x) for x in fetch_group_week(start,end,'20')]
   # One card per actual game involving at least one ranked FCS team.
   top=[];seen=set()
   for e in fcs:
-   ts=e.get('teams',[]); ifrank=any(norm(t.get('name') or t.get('short')) in rank_keys for t in ts)
+   ts=e.get('teams',[]); ifrank=any(team_key(t.get('name') or t.get('short')) in rank_keys for t in ts)
    if ifrank and e.get('id') not in seen:seen.add(e.get('id'));top.append(e)
   top.sort(key=lambda e:e.get('date',''))
   byes=[]
-  played={norm(t.get('name') or t.get('short')) for e in top for t in e.get('teams',[])}
+  played={team_key(t.get('name') or t.get('short')) for e in top for t in e.get('teams',[])}
   for r in rankings:
-   if norm(r['team']) not in played:byes.append(r)
+   if team_key(r['team']) not in played:byes.append(r)
   expected=big_sky_expected(data,start,end)
   got={pair_key(e) for e in bs if pair_key(e)}
   # The local Big Sky schedule is an independent sanity check. If it has games and group 20 omits them, fail.
