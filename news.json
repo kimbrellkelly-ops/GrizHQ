@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-17T15:04:21.291853+00:00",
+  "updated": "2026-09-17T15:24:56.826371+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 97,
+  "story_count": 98,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Big Sky Conference football picks: 406 MT Sports panel picks Beavers over Griz",
+      "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/big-sky-conference-football-picks-406-mt-sports-panel-picks-beavers-over-griz/article_abdba69a-24dc-49b2-bd6b-c94df6806476.html",
+      "date": "Sep. 17, 2026",
+      "published_at": "2026-09-17T14:00:00+00:00",
+      "description": "Big Sky Conference football picks: 406 MT Sports panel picks Beavers over Griz",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/bd/abdba69a-24dc-49b2-bd6b-c94df6806476/6aa837db53029.preview.jpg?crop=1422%2C747%2C253%2C48&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/bd/abdba69a-24dc-49b2-bd6b-c94df6806476/6aa837db53029.preview.jpg?crop=1422%2C747%2C253%2C48&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Quick Silver: Globetrotting Grizzlies kicker Jo Silver is fast learner",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/quick-silver-globetrotting-grizzlies-kicker-jo-silver-is-fast-learner/article_a76eae97-fe97-4826-a09a-0c0a84188504.html",
