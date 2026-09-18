@@ -1,4 +1,4 @@
-/* Griz HQ scoreboard configuration. Keep this file independent from the main page. */
+/* Griz HQ scoreboard configuration. */
 window.GRIZ_SCOREBOARD_CONFIG = {
   season: 2026,
   sportPath: 'football/college-football',
@@ -19,3 +19,11 @@ window.GRIZ_SCOREBOARD_CONFIG = {
   ],
   bigSkyIds: new Set(['149','147','302','2464','304','3101','310','253','2459','20','244','275','311','2448'])
 };
+
+/* Production header score scroll loader. */
+(function(){
+  const s=document.createElement('script');
+  s.src='score-scroll.js?v=20260917-score-scroll1';
+  s.defer=true;
+  document.head.appendChild(s);
+})();
