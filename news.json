@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-18T21:35:01.930694+00:00",
+  "updated": "2026-09-18T21:47:52.294598+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Oregon State Football vs. Montana: How To Watch, Preview, Storylines",
+      "url": "https://www.si.com/college/oregon-state/football/oregon-state-football-vs-montana-how-to-watch-preview-storylines",
+      "date": "Sep. 18, 2026",
+      "published_at": "2026-09-18T21:39:02+00:00",
+      "description": "Oregon State Football vs. Montana: How To Watch, Preview, Storylines Oregon State's first football season under head coach JaMarcus Shephard continues this week as the Beavers host the Montana Grizzlies. Despite an 0-2 start, Ore",
+      "source": "FCS Football Central",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_108,w_6000,h_3375/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/ReutersImages/mmsport/oregon-state-beavers-on-si/01m2v4777sq3ejnxpsp0.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_108,w_6000,h_3375/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/ReutersImages/mmsport/oregon-state-beavers-on-si/01m2v4777sq3ejnxpsp0.jpg"
+    },
     {
       "title": "3 questions: No. 3 Montana Grizzlies seek upset in road debut at Oregon State",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-3-montana-grizzlies-seek-upset-in-road-debut-at-oregon-state/article_a98b8f75-9f91-403e-bd6a-68ba065badf9.html",
@@ -1499,21 +1514,6 @@
       "youtube_id": "t5kOvJfTfy4",
       "video_url": "https://www.youtube.com/watch?v=t5kOvJfTfy4",
       "video_thumbnail": "https://i.ytimg.com/vi/t5kOvJfTfy4/hqdefault.jpg"
-    },
-    {
-      "title": "Lady Griz head coach Holsinger put on administrative leave",
-      "url": "https://skylinesportsmt.com/breaking-lady-griz-head-coach-holsinger-put-on-administrative-leavel/",
-      "date": "Jan. 16, 2025",
-      "published_at": "2025-01-16T18:05:55+00:00",
-      "description": "Lady Griz head coach Holsinger put on administrative leave",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2024/03/Brian-Holsinger-four-play-call-scaled.jpeg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2024/03/Brian-Holsinger-four-play-call-scaled.jpeg"
     }
   ]
 }
