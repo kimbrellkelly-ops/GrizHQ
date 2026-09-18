@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-18T22:47:55.482922+00:00",
+  "updated": "2026-09-18T23:04:01.568414+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Choteau’s Rusch Yeager commits to Bobcats for football",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/montana-state-university/article_d5f6ea41-c1fd-59f7-ab54-8a550fcedea5.html",
+      "date": "Sep. 18, 2026",
+      "published_at": "2026-09-18T22:35:00+00:00",
+      "description": "Rusch Yeager, a multi-sport standout for the Bulldogs, picked the offer he got from the Montana State football program over one from the Montana Grizzlies.",
+      "source": "Missoulian",
+      "badge": "RECRUITING",
+      "short": "RECRUI",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/67/d67516f7-2636-59ef-aefc-170a0d9c3b09/6a1b5e6300169.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/67/d67516f7-2636-59ef-aefc-170a0d9c3b09/6a1b5e6300169.image.jpg?resize=300%2C200"
+    },
     {
       "title": "Oregon State Football vs. Montana: How To Watch, Preview, Storylines",
       "url": "https://www.si.com/college/oregon-state/football/oregon-state-football-vs-montana-how-to-watch-preview-storylines",
@@ -1499,21 +1514,6 @@
       "youtube_id": "7Rg0rSRT1rw",
       "video_url": "https://www.youtube.com/watch?v=7Rg0rSRT1rw",
       "video_thumbnail": "https://i.ytimg.com/vi/7Rg0rSRT1rw/hqdefault.jpg"
-    },
-    {
-      "title": "Dowler brothers continue trading off carrying Bobcats all the way to the chipper",
-      "url": "https://skylinesportsmt.com/dowler-brothers-continue-trading-off-carrying-bobcats-all-the-way-to-the-chipper/",
-      "date": "Dec. 21, 2025",
-      "published_at": "2025-12-21T17:08:09+00:00",
-      "description": "Colter Nuanez December 21, 2025 Dowler brothers continue trading off carrying Bobcats all the way to the chipper BOZEMAN, Montana — Following Saturday evening’s FCS semifinal action, the Montana Grizzlies finished their season with a 13-2 r",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2025/12/Taco-Dowler-4471-scaled.jpg",
-      "is_video": true,
-      "youtube_id": "t5kOvJfTfy4",
-      "video_url": "https://www.youtube.com/watch?v=t5kOvJfTfy4",
-      "video_thumbnail": "https://i.ytimg.com/vi/t5kOvJfTfy4/hqdefault.jpg"
     }
   ]
 }
