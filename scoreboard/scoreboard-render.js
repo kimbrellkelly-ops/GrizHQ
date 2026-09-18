@@ -24,6 +24,7 @@ function gameForRank(name,games){const canonical=Object.keys(CANONICAL_TEAM_IDS)
 function verifiedWeek3Games(index){if(index!==3)return[];const t=(id,name,short,homeAway)=>({id:String(id),name,short,homeAway,score:'—',logo:`https://a.espncdn.com/i/teamlogos/ncaa/500/${id}.png`});const g=(id,away,home)=>({id,date:'2026-09-19T19:00:00Z',source:'Verified schedule',teams:[away,home],status:{state:'pre',detail:'Sat, Sep 19',shortDetail:'Sat, Sep 19'}});return[
 g('v-montana-osu',t(149,'Montana Grizzlies','Montana','away'),t(204,'Oregon State Beavers','Oregon State','home')),
 g('v-ysu-sdsu',t(2754,'Youngstown State Penguins','Youngstown State','away'),t(2571,'South Dakota State Jackrabbits','South Dakota State','home')),
+g('v-eiu-illinoisstate',t(5,'Eastern Illinois Panthers','Eastern Illinois','away'),t(228,'Illinois State Redbirds','Illinois State','home')),
 g('v-merrimack-tarleton',t(2244,'Merrimack Warriors','Merrimack','away'),t(2627,'Tarleton State Texans','Tarleton State','home')),
 g('v-und-nebraska',t(155,'North Dakota Fighting Hawks','North Dakota','away'),t(158,'Nebraska Cornhuskers','Nebraska','home')),
 g('v-sdak-boise',t(233,'South Dakota Coyotes','South Dakota','away'),t(66,'Boise State Broncos','Boise State','home')),
