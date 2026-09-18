@@ -11,7 +11,7 @@ const tokens=s=>clean(s).toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+
 const teamName=t=>t?.name||t?.short||t?.displayName||'Team';
 const teamNames=t=>[t?.name,t?.short,t?.displayName,t?.abbreviation].filter(Boolean);
 const teams=e=>Array.isArray(e?.teams)?e.teams:(Array.isArray(e?.competitors)?e.competitors:[]);
-const CANONICAL_TEAM_IDS={'Montana':'149','Montana State':'147','South Dakota State':'2571','South Dakota':'233','Idaho':'70','Idaho State':'304','Northern Arizona':'2464'}; const canonicalId=n=>CANONICAL_TEAM_IDS[clean(n)]||''; const logo=t=>{const id=String(t?.id||''); const canonical=canonicalId(teamName(t)); const logoId=canonical||id; return t?.logo&&(!canonical||id===canonical)?t.logo:(t?.logos?.[0]?.href&&(!canonical||id===canonical)?t.logos[0].href:(logoId?`https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(logoId)}.png`:''));};
+const CANONICAL_TEAM_IDS={'Montana':'149','Montana State':'147','South Dakota State':'2571','South Dakota':'233','Idaho':'70','Idaho State':'304','Northern Arizona':'2464','Stetson':'56','Stephen F. Austin':'2617'}; const canonicalId=n=>CANONICAL_TEAM_IDS[clean(n)]||''; const logo=t=>{const id=String(t?.id||''); const canonical=canonicalId(teamName(t)); const logoId=canonical||id; return t?.logo&&(!canonical||id===canonical)?t.logo:(t?.logos?.[0]?.href&&(!canonical||id===canonical)?t.logos[0].href:(logoId?`https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(logoId)}.png`:''));};
 const status=e=>{const s=e?.status||{};if(s.completed||s.state==='post'||s.name==='STATUS_FINAL')return'FINAL';if(s.state==='in'||s.name==='STATUS_IN_PROGRESS')return s.shortDetail||'LIVE';return s.shortDetail||s.detail||'SCHEDULED';};
 const fmt=s=>new Date(String(s).slice(0,10)+'T12:00:00Z').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
 // Exact team identity first. Never treat "Montana" as "Montana State".
@@ -31,7 +31,7 @@ g('v-sdak-boise',t(233,'South Dakota Coyotes','South Dakota','away'),t(66,'Boise
 g('v-dartmouth-lehigh',t(159,'Dartmouth Big Green','Dartmouth','away'),t(2329,'Lehigh Mountain Hawks','Lehigh','home')),
 g('v-uri-stonybrook',t(227,'Rhode Island Rams','Rhode Island','away'),t(2619,'Stony Brook Seawolves','Stony Brook','home')),
 g('v-stetson-ucd',t(56,'Stetson Hatters','Stetson','away'),t(302,'UC Davis Aggies','UC Davis','home')),
-g('v-sfa-pv',t(252,'Stephen F. Austin Lumberjacks','Stephen F. Austin','away'),t(2504,'Prairie View A&M Panthers','Prairie View A&M','home')),
+g('v-sfa-pv',t(2617,'Stephen F. Austin Lumberjacks','Stephen F. Austin','away'),t(2504,'Prairie View A&M Panthers','Prairie View A&M','home')),
 g('v-yale-hc',t(43,'Yale Bulldogs','Yale','away'),t(107,'Holy Cross Crusaders','Holy Cross','home')),
 g('v-austinpeay-westfl',t(2046,'Austin Peay Governors','Austin Peay','away'),t(110242,'West Florida Argonauts','West Florida','home')),
 g('v-wm-fordham',t(2729,'William & Mary Tribe','William & Mary','away'),t(221,'Fordham Rams','Fordham','home')),
