@@ -11,7 +11,7 @@ const tokens=s=>clean(s).toLowerCase().replace(/&/g,' and ').replace(/[^a-z0-9]+
 const teamName=t=>t?.name||t?.short||t?.displayName||'Team';
 const teamNames=t=>[t?.name,t?.short,t?.displayName,t?.abbreviation].filter(Boolean);
 const teams=e=>Array.isArray(e?.teams)?e.teams:(Array.isArray(e?.competitors)?e.competitors:[]);
-const CANONICAL_TEAM_IDS={'Montana':'149','Montana State':'147','South Dakota State':'2571','South Dakota':'233','Idaho':'70','Idaho State':'304'}; const canonicalId=n=>CANONICAL_TEAM_IDS[clean(n)]||''; const logo=t=>{const id=String(t?.id||''); const canonical=canonicalId(teamName(t)); const logoId=canonical||id; return t?.logo&&(!canonical||id===canonical)?t.logo:(t?.logos?.[0]?.href&&(!canonical||id===canonical)?t.logos[0].href:(logoId?`https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(logoId)}.png`:''));};
+const CANONICAL_TEAM_IDS={'Montana':'149','Montana State':'147','South Dakota State':'2571','South Dakota':'233','Idaho':'70','Idaho State':'304','Northern Arizona':'2464'}; const canonicalId=n=>CANONICAL_TEAM_IDS[clean(n)]||''; const logo=t=>{const id=String(t?.id||''); const canonical=canonicalId(teamName(t)); const logoId=canonical||id; return t?.logo&&(!canonical||id===canonical)?t.logo:(t?.logos?.[0]?.href&&(!canonical||id===canonical)?t.logos[0].href:(logoId?`https://a.espncdn.com/i/teamlogos/ncaa/500/${encodeURIComponent(logoId)}.png`:''));};
 const status=e=>{const s=e?.status||{};if(s.completed||s.state==='post'||s.name==='STATUS_FINAL')return'FINAL';if(s.state==='in'||s.name==='STATUS_IN_PROGRESS')return s.shortDetail||'LIVE';return s.shortDetail||s.detail||'SCHEDULED';};
 const fmt=s=>new Date(String(s).slice(0,10)+'T12:00:00Z').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
 // Exact team identity first. Never treat "Montana" as "Montana State".
@@ -36,7 +36,7 @@ g('v-austinpeay-westfl',t(2046,'Austin Peay Governors','Austin Peay','away'),t(1
 g('v-wm-fordham',t(2729,'William & Mary Tribe','William & Mary','away'),t(221,'Fordham Rams','Fordham','home')),
 g('v-villanova-liu',t(222,'Villanova Wildcats','Villanova','away'),t(2341,'Long Island Sharks','Long Island','home')),
 g('v-mercer-gt',t(2385,'Mercer Bears','Mercer','away'),t(59,'Georgia Tech Yellow Jackets','Georgia Tech','home')),
-g('v-nau-utahtech',t(310,'Northern Arizona Lumberjacks','Northern Arizona','away'),t(3101,'Utah Tech Trailblazers','Utah Tech','home')),
+g('v-nau-utahtech',t(2464,'Northern Arizona Lumberjacks','Northern Arizona','away'),t(3101,'Utah Tech Trailblazers','Utah Tech','home')),
 g('v-siu-illinois',t(79,'Southern Illinois Salukis','Southern Illinois','away'),t(356,'Illinois Fighting Illini','Illinois','home')),
 g('v-scstate-furman',t(257,'South Carolina State Bulldogs','South Carolina State','away'),t(231,'Furman Paladins','Furman','home')),
 g('v-harvard-unh',t(164,'Harvard Crimson','Harvard','away'),t(160,'New Hampshire Wildcats','New Hampshire','home'))];}
