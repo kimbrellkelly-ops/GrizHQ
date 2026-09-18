@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-18T14:03:54.506624+00:00",
+  "updated": "2026-09-18T14:23:58.389201+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 98,
+  "story_count": 99,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "3 questions: No. 3 Montana Grizzlies seek upset in road debut at Oregon State",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_1ffe3aca-2da8-53bf-bf71-4bc9cddef0df.html",
+      "date": "Sep. 18, 2026",
+      "published_at": "2026-09-18T13:30:00+00:00",
+      "description": "\"It's going to be a good test for us because first road game, going to a hostile environment, should be fun.\"",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/e2/4e2dfdc9-c6bc-5ce1-aa3d-7552d8ba57fb/6aa5dd53457aa.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/e2/4e2dfdc9-c6bc-5ce1-aa3d-7552d8ba57fb/6aa5dd53457aa.image.jpg?resize=300%2C200"
+    },
     {
       "title": "Quick Silver: Globetrotting Grizzlies kicker Jo Silver is fast learner",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_f2f109c1-6c22-50e3-b0fd-2c58edbbbe4a.html",
