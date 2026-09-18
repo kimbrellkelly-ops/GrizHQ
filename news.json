@@ -1,7 +1,7 @@
 {
-  "updated": "2026-09-18T18:04:15.609901+00:00",
+  "updated": "2026-09-18T18:25:47.915403+00:00",
   "source": "Automated Griz HQ news hub",
-  "story_count": 99,
+  "story_count": 100,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "3 questions: No. 3 Montana Grizzlies seek upset in road debut at Oregon State",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-3-montana-grizzlies-seek-upset-in-road-debut-at-oregon-state/article_a98b8f75-9f91-403e-bd6a-68ba065badf9.html",
+      "date": "Sep. 18, 2026",
+      "published_at": "2026-09-18T18:00:00+00:00",
+      "description": "3 questions: No. 3 Montana Grizzlies seek upset in road debut at Oregon State",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/98/a98b8f75-9f91-403e-bd6a-68ba065badf9/6aa9c7525ba76.preview.jpg?crop=1761%2C925%2C0%2C32&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/98/a98b8f75-9f91-403e-bd6a-68ba065badf9/6aa9c7525ba76.preview.jpg?crop=1761%2C925%2C0%2C32&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "3 questions: No. 3 Montana Grizzlies seek upset in road debut at Oregon State",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_1ffe3aca-2da8-53bf-bf71-4bc9cddef0df.html",
