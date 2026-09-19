@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-19T12:27:19.614473+00:00",
+  "updated": "2026-09-19T12:41:00.599507+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -15,6 +15,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Becoming a Bear Smart Community",
+      "url": "https://missoulian.com/video_b357a4a3-1d4a-574d-8d0e-cf88ffbd2b4f.html",
+      "date": "Sep. 19, 2026",
+      "published_at": "2026-09-19T12:00:00+00:00",
+      "description": "From installing bear-resistant trash cans throughout town to securing the local dump to participating in fall fruit gleaning, Virginia City has created a safe corridor for black bears and grizzlies to travel across the landscape. Learn more",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/custom/image/cd94e57c-c548-11ea-a1fd-572e8ba67fb0.jpg?resize=600%2C315",
+      "is_video": true,
+      "youtube_id": "-YLCv3AfEVA",
+      "video_url": "https://www.youtube.com/watch?v=-YLCv3AfEVA",
+      "video_thumbnail": "https://i.ytimg.com/vi/-YLCv3AfEVA/hqdefault.jpg"
+    },
     {
       "title": "Choteau’s Rusch Yeager commits to Bobcats for football",
       "url": "https://missoulian.com/sports/college/big-sky-conference/montana-state-university/article_d5f6ea41-c1fd-59f7-ab54-8a550fcedea5.html",
@@ -1499,21 +1514,6 @@
       "youtube_id": "oCpVtVe-o58",
       "video_url": "https://www.youtube.com/watch?v=oCpVtVe-o58",
       "video_thumbnail": "https://i.ytimg.com/vi/oCpVtVe-o58/hqdefault.jpg"
-    },
-    {
-      "title": "Hauck retires as Griz head football coach",
-      "url": "https://skylinesportsmt.com/breaking-hauck-expected-to-resign-as-griz-head-coach-on-wednesday/",
-      "date": "Feb. 4, 2026",
-      "published_at": "2026-02-04T15:24:08+00:00",
-      "description": "Hauck retires as Griz head football coach",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2025/11/Bobby-Hauck-2728-scaled.jpg",
-      "is_video": true,
-      "youtube_id": "7Rg0rSRT1rw",
-      "video_url": "https://www.youtube.com/watch?v=7Rg0rSRT1rw",
-      "video_thumbnail": "https://i.ytimg.com/vi/7Rg0rSRT1rw/hqdefault.jpg"
     }
   ]
 }
