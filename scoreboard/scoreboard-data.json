@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-19T21:23:00.499144+00:00",
+  "generatedAt": "2026-09-19T22:23:12.258721+00:00",
   "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [
     {
@@ -2846,201 +2846,6 @@
           ]
         },
         {
-          "id": "401867908",
-          "date": "2026-09-19T16:00Z",
-          "name": "Villanova Wildcats at Long Island University Sharks",
-          "shortName": "VILL @ LIU",
-          "venue": "Shark Stadium",
-          "city": "Brookville",
-          "state": "NY",
-          "teams": [
-            {
-              "id": "2341",
-              "name": "Long Island University Sharks",
-              "short": "Long Island",
-              "abbreviation": "LIU",
-              "homeAway": "home",
-              "score": "16",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2341.png"
-            },
-            {
-              "id": "222",
-              "name": "Villanova Wildcats",
-              "short": "Villanova",
-              "abbreviation": "VILL",
-              "homeAway": "away",
-              "score": "20",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/222.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final"
-          },
-          "broadcasts": [
-            "NEC Front Row"
-          ]
-        },
-        {
-          "id": "401858448",
-          "date": "2026-09-19T18:00Z",
-          "name": "Southern Illinois Salukis at Illinois Fighting Illini",
-          "shortName": "SIU @ ILL",
-          "venue": "Gies Memorial Stadium",
-          "city": "Champaign",
-          "state": "IL",
-          "teams": [
-            {
-              "id": "356",
-              "name": "Illinois Fighting Illini",
-              "short": "Illinois",
-              "abbreviation": "ILL",
-              "homeAway": "home",
-              "score": "48",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png"
-            },
-            {
-              "id": "79",
-              "name": "Southern Illinois Salukis",
-              "short": "S Illinois",
-              "abbreviation": "SIU",
-              "homeAway": "away",
-              "score": "10",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "0:01 - 4th Quarter",
-            "shortDetail": "0:01 - 4th"
-          },
-          "broadcasts": [
-            "Peacock"
-          ]
-        },
-        {
-          "id": "401868023",
-          "date": "2026-09-19T18:00Z",
-          "name": "Yale Bulldogs at Holy Cross Crusaders",
-          "shortName": "YALE @ HC",
-          "venue": "Fitton Field",
-          "city": "Worcester",
-          "state": "MA",
-          "teams": [
-            {
-              "id": "107",
-              "name": "Holy Cross Crusaders",
-              "short": "Holy Cross",
-              "abbreviation": "HC",
-              "homeAway": "home",
-              "score": "28",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/107.png"
-            },
-            {
-              "id": "43",
-              "name": "Yale Bulldogs",
-              "short": "Yale",
-              "abbreviation": "YALE",
-              "homeAway": "away",
-              "score": "35",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/43.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "3:21 - 4th Quarter",
-            "shortDetail": "3:21 - 4th"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
-          "id": "401866634",
-          "date": "2026-09-19T18:30Z",
-          "name": "Rhode Island Rams at Stony Brook Seawolves",
-          "shortName": "URI @ STBK",
-          "venue": "Kenneth P. LaValle Stadium",
-          "city": "Stony Brook",
-          "state": "NY",
-          "teams": [
-            {
-              "id": "2619",
-              "name": "Stony Brook Seawolves",
-              "short": "Stony Brook",
-              "abbreviation": "STBK",
-              "homeAway": "home",
-              "score": "56",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2619.png"
-            },
-            {
-              "id": "227",
-              "name": "Rhode Island Rams",
-              "short": "Rhode Island",
-              "abbreviation": "URI",
-              "homeAway": "away",
-              "score": "24",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/227.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "2:00 - 4th Quarter",
-            "shortDetail": "2:00 - 4th"
-          },
-          "broadcasts": [
-            "FloSports"
-          ]
-        },
-        {
-          "id": "401867846",
-          "date": "2026-09-19T19:00Z",
-          "name": "Eastern Illinois Panthers at Illinois State Redbirds",
-          "shortName": "EIU @ ILST",
-          "venue": "Hancock Stadium",
-          "city": "Normal",
-          "state": "IL",
-          "teams": [
-            {
-              "id": "2287",
-              "name": "Illinois State Redbirds",
-              "short": "Illinois St",
-              "abbreviation": "ILST",
-              "homeAway": "home",
-              "score": "42",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png"
-            },
-            {
-              "id": "2197",
-              "name": "Eastern Illinois Panthers",
-              "short": "E Illinois",
-              "abbreviation": "EIU",
-              "homeAway": "away",
-              "score": "6",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2197.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "4:03 - 3rd Quarter",
-            "shortDetail": "4:03 - 3rd"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
           "id": "401867898",
           "date": "2026-09-19T19:00Z",
           "name": "Central Connecticut Blue Devils at Montana State Bobcats",
@@ -3055,7 +2860,7 @@
               "short": "Montana St",
               "abbreviation": "MTST",
               "homeAway": "home",
-              "score": "20",
+              "score": "35",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
             },
             {
@@ -3064,20 +2869,59 @@
               "short": "C Connecticut",
               "abbreviation": "CCSU",
               "homeAway": "away",
-              "score": "21",
+              "score": "30",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2115.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
+          },
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports"
+          ]
+        },
+        {
+          "id": "401868009",
+          "date": "2026-09-19T22:00Z",
+          "name": "Fordham Rams at William & Mary Tribe",
+          "shortName": "FOR @ W&M",
+          "venue": "Walter J. Zable Stadium",
+          "city": "Williamsburg",
+          "state": "VA",
+          "teams": [
+            {
+              "id": "2729",
+              "name": "William & Mary Tribe",
+              "short": "William & Mary",
+              "abbreviation": "W&M",
+              "homeAway": "home",
+              "score": "0",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2729.png"
+            },
+            {
+              "id": "2230",
+              "name": "Fordham Rams",
+              "short": "Fordham",
+              "abbreviation": "FOR",
+              "homeAway": "away",
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2230.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "0:33 - 3rd Quarter",
-            "shortDetail": "0:33 - 3rd"
+            "detail": "6:58 - 1st Quarter",
+            "shortDetail": "6:58 - 1st"
           },
           "broadcasts": [
-            "ESPN+",
-            "Scripps Sports"
+            "ESPN+"
           ]
         }
       ],
@@ -3098,8 +2942,18 @@
           "record": "1-0"
         },
         {
+          "rank": 5,
+          "team": "Illinois State",
+          "record": "1-0"
+        },
+        {
           "rank": 6,
           "team": "North Dakota",
+          "record": "1-0"
+        },
+        {
+          "rank": 8,
+          "team": "Rhode Island",
           "record": "1-0"
         },
         {
@@ -3153,14 +3007,24 @@
           "record": "1-0"
         },
         {
+          "rank": 19,
+          "team": "Yale",
+          "record": "0-0"
+        },
+        {
           "rank": 20,
           "team": "Northern Arizona",
           "record": "1-0"
         },
         {
-          "rank": 21,
-          "team": "William & Mary",
-          "record": "1-0"
+          "rank": 22,
+          "team": "Villanova",
+          "record": "0-1"
+        },
+        {
+          "rank": 24,
+          "team": "Southern Illinois",
+          "record": ""
         },
         {
           "rank": 25,
@@ -3209,6 +3073,85 @@
           ]
         },
         {
+          "id": "401867898",
+          "date": "2026-09-19T19:00Z",
+          "name": "Central Connecticut Blue Devils at Montana State Bobcats",
+          "shortName": "CCSU @ MTST",
+          "venue": "Bobcat Stadium (MT)",
+          "city": "Bozeman",
+          "state": "MT",
+          "teams": [
+            {
+              "id": "147",
+              "name": "Montana State Bobcats",
+              "short": "Montana St",
+              "abbreviation": "MTST",
+              "homeAway": "home",
+              "score": "35",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
+            },
+            {
+              "id": "2115",
+              "name": "Central Connecticut Blue Devils",
+              "short": "C Connecticut",
+              "abbreviation": "CCSU",
+              "homeAway": "away",
+              "score": "30",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2115.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
+          },
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports"
+          ]
+        },
+        {
+          "id": "401868051",
+          "date": "2026-09-19T20:00Z",
+          "name": "Abilene Christian Wildcats at Idaho Vandals",
+          "shortName": "ACU @ IDHO",
+          "venue": "Kibbie Dome",
+          "city": "Moscow",
+          "state": "ID",
+          "teams": [
+            {
+              "id": "70",
+              "name": "Idaho Vandals",
+              "short": "Idaho",
+              "abbreviation": "IDHO",
+              "homeAway": "home",
+              "score": "24",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
+            },
+            {
+              "id": "2000",
+              "name": "Abilene Christian Wildcats",
+              "short": "Abilene Chrstn",
+              "abbreviation": "ACU",
+              "homeAway": "away",
+              "score": "24",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "14:06 - 4th Quarter",
+            "shortDetail": "14:06 - 4th"
+          },
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
           "id": "401868159",
           "date": "2026-09-19T18:00Z",
           "name": "Southern Utah Thunderbirds at St. Thomas Tommies",
@@ -3232,98 +3175,19 @@
               "short": "Southern Utah",
               "abbreviation": "SUU",
               "homeAway": "away",
-              "score": "20",
+              "score": "26",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/253.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "13:48 - 4th Quarter",
-            "shortDetail": "13:48 - 4th"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
           },
           "broadcasts": [
             "Midco Sports Plus"
-          ]
-        },
-        {
-          "id": "401867898",
-          "date": "2026-09-19T19:00Z",
-          "name": "Central Connecticut Blue Devils at Montana State Bobcats",
-          "shortName": "CCSU @ MTST",
-          "venue": "Bobcat Stadium (MT)",
-          "city": "Bozeman",
-          "state": "MT",
-          "teams": [
-            {
-              "id": "147",
-              "name": "Montana State Bobcats",
-              "short": "Montana St",
-              "abbreviation": "MTST",
-              "homeAway": "home",
-              "score": "20",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
-            },
-            {
-              "id": "2115",
-              "name": "Central Connecticut Blue Devils",
-              "short": "C Connecticut",
-              "abbreviation": "CCSU",
-              "homeAway": "away",
-              "score": "21",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2115.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "2:37 - 3rd Quarter",
-            "shortDetail": "2:37 - 3rd"
-          },
-          "broadcasts": [
-            "ESPN+",
-            "Scripps Sports"
-          ]
-        },
-        {
-          "id": "401868051",
-          "date": "2026-09-19T20:00Z",
-          "name": "Abilene Christian Wildcats at Idaho Vandals",
-          "shortName": "ACU @ IDHO",
-          "venue": "Kibbie Dome",
-          "city": "Moscow",
-          "state": "ID",
-          "teams": [
-            {
-              "id": "70",
-              "name": "Idaho Vandals",
-              "short": "Idaho",
-              "abbreviation": "IDHO",
-              "homeAway": "home",
-              "score": "17",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
-            },
-            {
-              "id": "2000",
-              "name": "Abilene Christian Wildcats",
-              "short": "Abilene Chrstn",
-              "abbreviation": "ACU",
-              "homeAway": "away",
-              "score": "14",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "0:07 - 2nd Quarter",
-            "shortDetail": "0:07 - 2nd"
-          },
-          "broadcasts": [
-            "ESPN+"
           ]
         },
         {
