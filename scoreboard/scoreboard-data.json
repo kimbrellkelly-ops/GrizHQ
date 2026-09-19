@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-19T06:29:19.315896+00:00",
+  "generatedAt": "2026-09-19T07:23:15.471958+00:00",
   "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [
     {
@@ -3218,7 +3218,7 @@
               "short": "Oregon",
               "abbreviation": "ORE",
               "homeAway": "home",
-              "score": "84",
+              "score": "77",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png"
             },
             {
@@ -3232,11 +3232,11 @@
             }
           ],
           "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final"
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "7:19 - 4th Quarter",
+            "shortDetail": "7:19 - 4th"
           },
           "broadcasts": [
             "BTN"
