@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-19T15:23:19.071154+00:00",
+  "generatedAt": "2026-09-19T16:24:35.717271+00:00",
   "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [
     {
@@ -2782,7 +2782,7 @@
               "short": "Georgia Tech",
               "abbreviation": "GT",
               "homeAway": "home",
-              "score": "0",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png"
             },
             {
@@ -2796,11 +2796,11 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 19th at 12:00 PM EDT",
-            "shortDetail": "9/19 - 12:00 PM EDT"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "4:08 - 1st Quarter",
+            "shortDetail": "4:08 - 1st"
           },
           "broadcasts": [
             "ACC Network"
@@ -2821,7 +2821,7 @@
               "short": "Lehigh",
               "abbreviation": "LEH",
               "homeAway": "home",
-              "score": "0",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2329.png"
             },
             {
@@ -2835,11 +2835,11 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 19th at 12:00 PM EDT",
-            "shortDetail": "9/19 - 12:00 PM EDT"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "6:01 - 1st Quarter",
+            "shortDetail": "6:01 - 1st"
           },
           "broadcasts": [
             "ESPN+"
@@ -2874,11 +2874,11 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 19th at 12:00 PM EDT",
-            "shortDetail": "9/19 - 12:00 PM EDT"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "6:54 - 1st Quarter",
+            "shortDetail": "6:54 - 1st"
           },
           "broadcasts": [
             "NEC Front Row"
