@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-19T19:21:07.195120+00:00",
+  "generatedAt": "2026-09-19T20:23:53.493791+00:00",
   "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [
     {
@@ -2885,45 +2885,6 @@
           ]
         },
         {
-          "id": "401866639",
-          "date": "2026-09-19T17:00Z",
-          "name": "Harvard Crimson at New Hampshire Wildcats",
-          "shortName": "HARV @ UNH",
-          "venue": "Wildcat Stadium (NH)",
-          "city": "Durham",
-          "state": "NH",
-          "teams": [
-            {
-              "id": "160",
-              "name": "New Hampshire Wildcats",
-              "short": "New Hampshire",
-              "abbreviation": "UNH",
-              "homeAway": "home",
-              "score": "7",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/160.png"
-            },
-            {
-              "id": "108",
-              "name": "Harvard Crimson",
-              "short": "Harvard",
-              "abbreviation": "HARV",
-              "homeAway": "away",
-              "score": "21",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/108.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "15:00 - 4th Quarter",
-            "shortDetail": "15:00 - 4th"
-          },
-          "broadcasts": [
-            "FloSports"
-          ]
-        },
-        {
           "id": "401858448",
           "date": "2026-09-19T18:00Z",
           "name": "Southern Illinois Salukis at Illinois Fighting Illini",
@@ -2938,7 +2899,7 @@
               "short": "Illinois",
               "abbreviation": "ILL",
               "homeAway": "home",
-              "score": "28",
+              "score": "31",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png"
             },
             {
@@ -2947,7 +2908,7 @@
               "short": "S Illinois",
               "abbreviation": "SIU",
               "homeAway": "away",
-              "score": "7",
+              "score": "10",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png"
             }
           ],
@@ -2955,8 +2916,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "5:41 - 2nd Quarter",
-            "shortDetail": "5:41 - 2nd"
+            "detail": "5:36 - 3rd Quarter",
+            "shortDetail": "5:36 - 3rd"
           },
           "broadcasts": [
             "Peacock"
@@ -2977,7 +2938,7 @@
               "short": "Holy Cross",
               "abbreviation": "HC",
               "homeAway": "home",
-              "score": "7",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/107.png"
             },
             {
@@ -2986,7 +2947,7 @@
               "short": "Yale",
               "abbreviation": "YALE",
               "homeAway": "away",
-              "score": "7",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/43.png"
             }
           ],
@@ -2994,8 +2955,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "3:32 - 2nd Quarter",
-            "shortDetail": "3:32 - 2nd"
+            "detail": "9:05 - 3rd Quarter",
+            "shortDetail": "9:05 - 3rd"
           },
           "broadcasts": [
             "ESPN+"
@@ -3016,7 +2977,7 @@
               "short": "Stony Brook",
               "abbreviation": "STBK",
               "homeAway": "home",
-              "score": "14",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2619.png"
             },
             {
@@ -3025,16 +2986,16 @@
               "short": "Rhode Island",
               "abbreviation": "URI",
               "homeAway": "away",
-              "score": "7",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/227.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "11:53 - 2nd Quarter",
-            "shortDetail": "11:53 - 2nd"
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime"
           },
           "broadcasts": [
             "FloSports"
@@ -3055,7 +3016,7 @@
               "short": "Illinois St",
               "abbreviation": "ILST",
               "homeAway": "home",
-              "score": "7",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png"
             },
             {
@@ -3064,7 +3025,7 @@
               "short": "E Illinois",
               "abbreviation": "EIU",
               "homeAway": "away",
-              "score": "0",
+              "score": "6",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2197.png"
             }
           ],
@@ -3072,8 +3033,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "11:40 - 1st Quarter",
-            "shortDetail": "11:40 - 1st"
+            "detail": "2:45 - 2nd Quarter",
+            "shortDetail": "2:45 - 2nd"
           },
           "broadcasts": [
             "ESPN+"
@@ -3094,7 +3055,7 @@
               "short": "Montana St",
               "abbreviation": "MTST",
               "homeAway": "home",
-              "score": "0",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
             },
             {
@@ -3103,7 +3064,7 @@
               "short": "C Connecticut",
               "abbreviation": "CCSU",
               "homeAway": "away",
-              "score": "0",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2115.png"
             }
           ],
@@ -3111,8 +3072,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "8:48 - 1st Quarter",
-            "shortDetail": "8:48 - 1st"
+            "detail": "0:50 - 2nd Quarter",
+            "shortDetail": "0:50 - 2nd"
           },
           "broadcasts": [
             "ESPN+",
@@ -3200,6 +3161,11 @@
           "rank": 21,
           "team": "William & Mary",
           "record": "1-0"
+        },
+        {
+          "rank": 25,
+          "team": "Harvard",
+          "record": ""
         }
       ],
       "bigSkyGames": [
@@ -3257,7 +3223,7 @@
               "short": "St Thomas",
               "abbreviation": "STMN",
               "homeAway": "home",
-              "score": "14",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2900.png"
             },
             {
@@ -3274,8 +3240,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "2:51 - 2nd Quarter",
-            "shortDetail": "2:51 - 2nd"
+            "detail": "6:00 - 3rd Quarter",
+            "shortDetail": "6:00 - 3rd"
           },
           "broadcasts": [
             "Midco Sports Plus"
@@ -3296,7 +3262,7 @@
               "short": "Montana St",
               "abbreviation": "MTST",
               "homeAway": "home",
-              "score": "0",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
             },
             {
@@ -3305,7 +3271,7 @@
               "short": "C Connecticut",
               "abbreviation": "CCSU",
               "homeAway": "away",
-              "score": "0",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2115.png"
             }
           ],
@@ -3313,8 +3279,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "8:48 - 1st Quarter",
-            "shortDetail": "8:48 - 1st"
+            "detail": "0:50 - 2nd Quarter",
+            "shortDetail": "0:50 - 2nd"
           },
           "broadcasts": [
             "ESPN+",
@@ -3336,7 +3302,7 @@
               "short": "Idaho",
               "abbreviation": "IDHO",
               "homeAway": "home",
-              "score": "0",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
             },
             {
@@ -3345,16 +3311,16 @@
               "short": "Abilene Chrstn",
               "abbreviation": "ACU",
               "homeAway": "away",
-              "score": "0",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 19th at 4:00 PM EDT",
-            "shortDetail": "9/19 - 4:00 PM EDT"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "5:16 - 1st Quarter",
+            "shortDetail": "5:16 - 1st"
           },
           "broadcasts": [
             "ESPN+"
