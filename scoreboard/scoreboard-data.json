@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-19T16:24:35.717271+00:00",
+  "generatedAt": "2026-09-19T17:22:08.352760+00:00",
   "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [
     {
@@ -2782,7 +2782,7 @@
               "short": "Georgia Tech",
               "abbreviation": "GT",
               "homeAway": "home",
-              "score": "7",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png"
             },
             {
@@ -2791,7 +2791,7 @@
               "short": "Mercer",
               "abbreviation": "MER",
               "homeAway": "away",
-              "score": "0",
+              "score": "3",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2382.png"
             }
           ],
@@ -2799,8 +2799,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "4:08 - 1st Quarter",
-            "shortDetail": "4:08 - 1st"
+            "detail": "2:00 - 2nd Quarter",
+            "shortDetail": "2:00 - 2nd"
           },
           "broadcasts": [
             "ACC Network"
@@ -2821,7 +2821,7 @@
               "short": "Lehigh",
               "abbreviation": "LEH",
               "homeAway": "home",
-              "score": "7",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2329.png"
             },
             {
@@ -2830,16 +2830,16 @@
               "short": "Dartmouth",
               "abbreviation": "DART",
               "homeAway": "away",
-              "score": "0",
+              "score": "13",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/159.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "6:01 - 1st Quarter",
-            "shortDetail": "6:01 - 1st"
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime"
           },
           "broadcasts": [
             "ESPN+"
@@ -2860,7 +2860,7 @@
               "short": "Long Island",
               "abbreviation": "LIU",
               "homeAway": "home",
-              "score": "0",
+              "score": "3",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2341.png"
             },
             {
@@ -2869,16 +2869,16 @@
               "short": "Villanova",
               "abbreviation": "VILL",
               "homeAway": "away",
-              "score": "0",
+              "score": "3",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/222.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "6:54 - 1st Quarter",
-            "shortDetail": "6:54 - 1st"
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime"
           },
           "broadcasts": [
             "NEC Front Row"
@@ -2913,11 +2913,11 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 19th at 1:00 PM EDT",
-            "shortDetail": "9/19 - 1:00 PM EDT"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "5:23 - 1st Quarter",
+            "shortDetail": "5:23 - 1st"
           },
           "broadcasts": [
             "FloSports"
