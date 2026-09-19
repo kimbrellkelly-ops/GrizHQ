@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-19T22:23:12.258721+00:00",
+  "generatedAt": "2026-09-19T23:21:57.542121+00:00",
   "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [
     {
@@ -2768,124 +2768,6 @@
       "bigSkyEventCount": 11,
       "fcsTop25Games": [
         {
-          "id": "401858228",
-          "date": "2026-09-19T16:00Z",
-          "name": "Mercer Bears at Georgia Tech Yellow Jackets",
-          "shortName": "MER @ GT",
-          "venue": "Bobby Dodd Stadium",
-          "city": "Atlanta",
-          "state": "GA",
-          "teams": [
-            {
-              "id": "59",
-              "name": "Georgia Tech Yellow Jackets",
-              "short": "Georgia Tech",
-              "abbreviation": "GT",
-              "homeAway": "home",
-              "score": "44",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png"
-            },
-            {
-              "id": "2382",
-              "name": "Mercer Bears",
-              "short": "Mercer",
-              "abbreviation": "MER",
-              "homeAway": "away",
-              "score": "11",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2382.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final"
-          },
-          "broadcasts": [
-            "ACC Network"
-          ]
-        },
-        {
-          "id": "401867834",
-          "date": "2026-09-19T16:00Z",
-          "name": "Dartmouth Big Green at Lehigh Mountain Hawks",
-          "shortName": "DART @ LEH",
-          "venue": "Goodman Stadium",
-          "city": "Bethlehem",
-          "state": "PA",
-          "teams": [
-            {
-              "id": "2329",
-              "name": "Lehigh Mountain Hawks",
-              "short": "Lehigh",
-              "abbreviation": "LEH",
-              "homeAway": "home",
-              "score": "24",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2329.png"
-            },
-            {
-              "id": "159",
-              "name": "Dartmouth Big Green",
-              "short": "Dartmouth",
-              "abbreviation": "DART",
-              "homeAway": "away",
-              "score": "20",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/159.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
-          "id": "401867898",
-          "date": "2026-09-19T19:00Z",
-          "name": "Central Connecticut Blue Devils at Montana State Bobcats",
-          "shortName": "CCSU @ MTST",
-          "venue": "Bobcat Stadium (MT)",
-          "city": "Bozeman",
-          "state": "MT",
-          "teams": [
-            {
-              "id": "147",
-              "name": "Montana State Bobcats",
-              "short": "Montana St",
-              "abbreviation": "MTST",
-              "homeAway": "home",
-              "score": "35",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
-            },
-            {
-              "id": "2115",
-              "name": "Central Connecticut Blue Devils",
-              "short": "C Connecticut",
-              "abbreviation": "CCSU",
-              "homeAway": "away",
-              "score": "30",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2115.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final"
-          },
-          "broadcasts": [
-            "ESPN+",
-            "Scripps Sports"
-          ]
-        },
-        {
           "id": "401868009",
           "date": "2026-09-19T22:00Z",
           "name": "Fordham Rams at William & Mary Tribe",
@@ -2900,7 +2782,7 @@
               "short": "William & Mary",
               "abbreviation": "W&M",
               "homeAway": "home",
-              "score": "0",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2729.png"
             },
             {
@@ -2909,7 +2791,7 @@
               "short": "Fordham",
               "abbreviation": "FOR",
               "homeAway": "away",
-              "score": "7",
+              "score": "27",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2230.png"
             }
           ],
@@ -2917,8 +2799,126 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "6:58 - 1st Quarter",
-            "shortDetail": "6:58 - 1st"
+            "detail": "0:32 - 2nd Quarter",
+            "shortDetail": "0:32 - 2nd"
+          },
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
+          "id": "401867896",
+          "date": "2026-09-19T23:00Z",
+          "name": "Youngstown State Penguins at South Dakota State Jackrabbits",
+          "shortName": "YSU @ SDST",
+          "venue": "Dana J. Dykhouse Stadium",
+          "city": "Brookings",
+          "state": "SD",
+          "teams": [
+            {
+              "id": "2571",
+              "name": "South Dakota State Jackrabbits",
+              "short": "S Dakota St",
+              "abbreviation": "SDST",
+              "homeAway": "home",
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png"
+            },
+            {
+              "id": "2754",
+              "name": "Youngstown State Penguins",
+              "short": "Youngstown St",
+              "abbreviation": "YSU",
+              "homeAway": "away",
+              "score": "0",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "8:50 - 1st Quarter",
+            "shortDetail": "8:50 - 1st"
+          },
+          "broadcasts": [
+            "ESPN+",
+            "Midco Sports Net"
+          ]
+        },
+        {
+          "id": "401868062",
+          "date": "2026-09-19T23:00Z",
+          "name": "Austin Peay Governors at West Florida Argonauts",
+          "shortName": "APSU @ UWF",
+          "venue": "Pen-Air Field",
+          "city": "Pensacola",
+          "state": "FL",
+          "teams": [
+            {
+              "id": "110242",
+              "name": "West Florida Argonauts",
+              "short": "West Florida",
+              "abbreviation": "UWF",
+              "homeAway": "home",
+              "score": "0",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/110242.png"
+            },
+            {
+              "id": "2046",
+              "name": "Austin Peay Governors",
+              "short": "Austin Peay",
+              "abbreviation": "APSU",
+              "homeAway": "away",
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "9:47 - 1st Quarter",
+            "shortDetail": "9:47 - 1st"
+          },
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
+          "id": "401868237",
+          "date": "2026-09-19T23:00Z",
+          "name": "Merrimack Warriors at Tarleton State Texans",
+          "shortName": "MRMK @ TAR",
+          "venue": "Tarleton Memorial Stadium",
+          "city": "Stephenville",
+          "state": "TX",
+          "teams": [
+            {
+              "id": "2627",
+              "name": "Tarleton State Texans",
+              "short": "Tarleton St",
+              "abbreviation": "TAR",
+              "homeAway": "home",
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2627.png"
+            },
+            {
+              "id": "2771",
+              "name": "Merrimack Warriors",
+              "short": "Merrimack",
+              "abbreviation": "MRMK",
+              "homeAway": "away",
+              "score": "0",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2771.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "9:19 - 1st Quarter",
+            "shortDetail": "9:19 - 1st"
           },
           "broadcasts": [
             "ESPN+"
@@ -2927,18 +2927,13 @@
       ],
       "fcsTop25Byes": [
         {
-          "rank": 2,
-          "team": "South Dakota State",
-          "record": "1-0"
+          "rank": 1,
+          "team": "Montana State",
+          "record": ""
         },
         {
           "rank": 3,
           "team": "Montana",
-          "record": "1-0"
-        },
-        {
-          "rank": 4,
-          "team": "Tarleton State",
           "record": "1-0"
         },
         {
@@ -2952,13 +2947,13 @@
           "record": "1-0"
         },
         {
-          "rank": 8,
-          "team": "Rhode Island",
+          "rank": 7,
+          "team": "Lehigh",
           "record": "1-0"
         },
         {
-          "rank": 9,
-          "team": "Youngstown State",
+          "rank": 8,
+          "team": "Rhode Island",
           "record": "1-0"
         },
         {
@@ -2982,11 +2977,6 @@
           "record": "1-0"
         },
         {
-          "rank": 14,
-          "team": "Austin Peay",
-          "record": "1-0"
-        },
-        {
           "rank": 15,
           "team": "Lamar",
           "record": "1-0"
@@ -2994,11 +2984,6 @@
         {
           "rank": 16,
           "team": "Idaho State",
-          "record": "1-0"
-        },
-        {
-          "rank": 17,
-          "team": "West Florida",
           "record": "1-0"
         },
         {
@@ -3020,6 +3005,11 @@
           "rank": 22,
           "team": "Villanova",
           "record": "0-1"
+        },
+        {
+          "rank": 23,
+          "team": "Mercer",
+          "record": "1-0"
         },
         {
           "rank": 24,
@@ -3073,46 +3063,6 @@
           ]
         },
         {
-          "id": "401867898",
-          "date": "2026-09-19T19:00Z",
-          "name": "Central Connecticut Blue Devils at Montana State Bobcats",
-          "shortName": "CCSU @ MTST",
-          "venue": "Bobcat Stadium (MT)",
-          "city": "Bozeman",
-          "state": "MT",
-          "teams": [
-            {
-              "id": "147",
-              "name": "Montana State Bobcats",
-              "short": "Montana St",
-              "abbreviation": "MTST",
-              "homeAway": "home",
-              "score": "35",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
-            },
-            {
-              "id": "2115",
-              "name": "Central Connecticut Blue Devils",
-              "short": "C Connecticut",
-              "abbreviation": "CCSU",
-              "homeAway": "away",
-              "score": "30",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2115.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final"
-          },
-          "broadcasts": [
-            "ESPN+",
-            "Scripps Sports"
-          ]
-        },
-        {
           "id": "401868051",
           "date": "2026-09-19T20:00Z",
           "name": "Abilene Christian Wildcats at Idaho Vandals",
@@ -3127,7 +3077,7 @@
               "short": "Idaho",
               "abbreviation": "IDHO",
               "homeAway": "home",
-              "score": "24",
+              "score": "39",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
             },
             {
@@ -3136,16 +3086,16 @@
               "short": "Abilene Chrstn",
               "abbreviation": "ACU",
               "homeAway": "away",
-              "score": "24",
+              "score": "41",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "14:06 - 4th Quarter",
-            "shortDetail": "14:06 - 4th"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
           },
           "broadcasts": [
             "ESPN+"
@@ -3191,6 +3141,46 @@
           ]
         },
         {
+          "id": "401867898",
+          "date": "2026-09-19T19:00Z",
+          "name": "Central Connecticut Blue Devils at Montana State Bobcats",
+          "shortName": "CCSU @ MTST",
+          "venue": "Bobcat Stadium (MT)",
+          "city": "Bozeman",
+          "state": "MT",
+          "teams": [
+            {
+              "id": "147",
+              "name": "Montana State Bobcats",
+              "short": "Montana St",
+              "abbreviation": "MTST",
+              "homeAway": "home",
+              "score": "35",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
+            },
+            {
+              "id": "2115",
+              "name": "Central Connecticut Blue Devils",
+              "short": "C Connecticut",
+              "abbreviation": "CCSU",
+              "homeAway": "away",
+              "score": "30",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2115.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
+          },
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports"
+          ]
+        },
+        {
           "id": "401858459",
           "date": "2026-09-19T23:15Z",
           "name": "Eastern Washington Eagles at Washington Huskies",
@@ -3205,7 +3195,7 @@
               "short": "Washington",
               "abbreviation": "WASH",
               "homeAway": "home",
-              "score": "0",
+              "score": "6",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png"
             },
             {
@@ -3219,11 +3209,11 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 19th at 7:15 PM EDT",
-            "shortDetail": "9/19 - 7:15 PM EDT"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "10:50 - 1st Quarter",
+            "shortDetail": "10:50 - 1st"
           },
           "broadcasts": [
             "BTN"
