@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20T06:52:54.363891+00:00",
+  "updated": "2026-09-20T07:03:34.807002+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -14,6 +14,21 @@
   ],
   "stories": [
     {
+      "title": "Recap: Montana Grizzlies can't keep pace with Oregon State in 1st loss",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_4e242ba5-0e3e-587b-b973-78a9d380a090.html",
+      "date": "Sep. 20, 2026",
+      "published_at": "2026-09-20T06:20:00+00:00",
+      "description": "The Beavers scored six touchdowns across their opening seven drives before they pulled their starting quarterback with a 42-3 lead over the Grizzlies.",
+      "source": "Missoulian",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/85/08523dd3-e811-5176-a563-1a9a057cdf8d/6aaf4c8312178.image.jpg?resize=300%2C225",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/85/08523dd3-e811-5176-a563-1a9a057cdf8d/6aaf4c8312178.image.jpg?resize=300%2C225"
+    },
+    {
       "title": "Live updates: No. 3 Montana Grizzlies visit FBS Oregon State",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-football-visit-oregon-state-live-updates/article_6b3fcfc4-fedd-4acb-b0ca-e15012656c8a.html",
       "date": "Sep. 20, 2026",
@@ -27,21 +42,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/b3/6b3fcfc4-fedd-4acb-b0ca-e15012656c8a/6aaf7b4ebd63a.preview.jpg?crop=1742%2C915%2C0%2C137&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Live updates: No. 3 Montana Grizzlies visit FBS Oregon State",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_4e242ba5-0e3e-587b-b973-78a9d380a090.html",
-      "date": "Sep. 20, 2026",
-      "published_at": "2026-09-20T02:45:00+00:00",
-      "description": "The No. 3 FCS Montana Grizzlies are facing their first FBS foe since 2021 as they hit the road for the first time this season.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/85/08523dd3-e811-5176-a563-1a9a057cdf8d/6aaf4c8312178.image.jpg?resize=300%2C225",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/85/08523dd3-e811-5176-a563-1a9a057cdf8d/6aaf4c8312178.image.jpg?resize=300%2C225"
     },
     {
       "title": "Grizzlies at Beavers pregame",
