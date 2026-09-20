@@ -1344,6 +1344,67 @@ async function renderBigSkyAndOpponent(){
 }
 renderBigSkyAndOpponent();
 
+function renderBigSkyHub(d){
+  const standingsEl=document.getElementById("bigsky-standings");
+  const leadersEl=document.getElementById("bigsky-leaders");
+  const newsEl=document.getElementById("bigsky-news");
+  const rankedEl=document.getElementById("bigsky-ranked");
+  const grizEl=document.getElementById("bigsky-griz-card");
+  const updatedEl=document.getElementById("bigsky-standings-updated");
+  const standings=Array.isArray(d.big_sky_standings)?d.big_sky_standings:[];
+  const leaders=d.big_sky_leaders&&typeof d.big_sky_leaders==="object"?d.big_sky_leaders:{};
+  const news=Array.isArray(d.big_sky_news)?d.big_sky_news:[];
+  const coaches=Array.isArray(d.coaches_poll)?d.coaches_poll:[];
+  if(updatedEl) updatedEl.textContent=standings.length ? "UPDATED "+new Date(d.updated||Date.now()).toLocaleDateString("en-US",{month:"short",day:"numeric"}) : "DATA UNAVAILABLE";
+  if(standingsEl){
+    let out='<div class="bigsky-standing-row bigsky-standing-head"><span>#</span><span>TEAM</span><span>BIG SKY</span><span>OVERALL</span><span>PF-PA</span><span>STREAK</span></div>';
+    if(standings.length){
+      standings.forEach(function(t,i){
+        const griz=t.team==="Montana";
+        const logo=bigSkyLogo(t.team);
+        out+='<div class="bigsky-standing-row '+(griz?"griz-row":"")+'"><span class="stand-rank">'+escapeHtml(t.rank||i+1)+'</span><span class="stand-team">'+(logo?'<img src="'+logo+'" alt="" loading="lazy">':"")+'<b>'+escapeHtml(t.team)+'</b></span><span>'+escapeHtml(t.conference_record||"—")+'</span><span>'+escapeHtml(t.overall_record||"—")+'</span><span>'+escapeHtml(t.points||"—")+'</span><span>'+escapeHtml(t.overall_streak||"—")+'</span></div>';
+      });
+    }else out='<div class="bigsky-empty">Standings are temporarily unavailable.</div>';
+    standingsEl.innerHTML=out;
+  }
+  const leaderMeta={rushing:["RUSHING","YDS"],passing:["PASSING","YDS"],receiving:["RECEIVING","YDS"],tackles:["TACKLES","TOTAL"],sacks:["SACKS","TOTAL"],scoring:["SCORING","PTS"]};
+  if(leadersEl){
+    const keys=["rushing","passing","receiving","tackles","sacks","scoring"];
+    leadersEl.innerHTML=keys.map(function(k){
+      const arr=Array.isArray(leaders[k])?leaders[k].slice(0,5):[];
+      const meta=leaderMeta[k];
+      let body="";
+      if(arr.length){
+        body=arr.map(function(p,i){return '<div class="bigsky-leader-row"><span class="leader-num">'+(i+1)+'</span><div><strong>'+escapeHtml(p.name)+'</strong><small>'+escapeHtml(p.school)+'</small></div><b>'+escapeHtml(p.value||"—")+'</b></div>';}).join("");
+      }else body='<div class="bigsky-empty">No current data.</div>';
+      return '<div class="bigsky-leader-card"><div class="bigsky-leader-head"><b>'+meta[0]+'</b><span>'+meta[1]+'</span></div>'+body+'</div>';
+    }).join("");
+  }
+  if(rankedEl){
+    const ranked=[];
+    coaches.forEach(function(name,i){
+      const found=standings.some(function(s){return bigSkyTeamKey(s.team)===bigSkyTeamKey(name);});
+      if(found) ranked.push({name:name,rank:i+1});
+    });
+    rankedEl.innerHTML=ranked.length?ranked.map(function(x){return '<div class="bigsky-ranked-row"><span>#'+x.rank+'</span><b>'+escapeHtml(x.name)+'</b><small>AFCA COACHES POLL</small></div>';}).join(""):'<div class="bigsky-empty">No ranked Big Sky teams listed.</div>';
+  }
+  if(newsEl){
+    newsEl.innerHTML=news.length?news.slice(0,6).map(function(n){return '<a class="bigsky-news-item" href="'+escapeHtml(n.url||"#")+'" target="_blank" rel="noopener"><small>'+escapeHtml(n.date||"BIG SKY FOOTBALL")+'</small><b>'+escapeHtml(n.title)+'</b><span>'+escapeHtml(n.description||"")+'</span></a>';}).join(""):'<div class="bigsky-empty">Conference news is temporarily unavailable.</div>';
+  }
+  if(grizEl){
+    const griz=standings.find(function(x){return bigSkyTeamKey(x.team)==="montana";});
+    const next=d.next_game||{};
+    grizEl.innerHTML=griz?'<div class="bigsky-griz-record"><b>'+escapeHtml(griz.overall_record)+'</b><span>OVERALL</span><b>'+escapeHtml(griz.conference_record)+'</b><span>BIG SKY</span></div><div class="bigsky-griz-next"><small>NEXT GAME</small><strong>'+escapeHtml(next.opponent||"—")+'</strong><span>'+escapeHtml([next.date,next.time].filter(Boolean).join(" • ")||"Schedule pending")+'</span></div>':'<div class="bigsky-empty">Montana standings unavailable.</div>';
+  }
+}
+(async function loadBigSkyHub(){
+  try{
+    const r=await fetch("data.json?ts="+Date.now(),{cache:"no-store"});
+    const d=await r.json();
+    renderBigSkyHub(d);
+  }catch(e){console.warn("Big Sky hub data unavailable",e);}
+})();
+
 
 
 function renderStatsDashboard(stats) {
