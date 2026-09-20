@@ -4695,3 +4695,28 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .v2-score-prev,.v2-score-next{flex:0 0 42px!important;min-width:42px!important;position:relative!important;z-index:20!important;pointer-events:auto!important;cursor:pointer!important;}
 .v2-score-prev:disabled,.v2-score-next:disabled{opacity:.28!important;cursor:default!important;}
 @media(max-width:800px){.v2-score-games>.v2-score-card{flex-basis:195px!important;min-width:195px!important;width:195px!important}.v2-score-prev,.v2-score-next{flex-basis:36px!important;min-width:36px!important;}}
+
+/* ===== BIG SKY CONFERENCE HUB — isolated page styles ===== */
+.bigsky-hub{max-width:1400px}.bigsky-hero-head{margin-bottom:18px}
+.bigsky-hub-grid{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(300px,.8fr);gap:18px}
+.bigsky-main,.bigsky-side{display:grid;gap:18px;align-content:start}
+.bigsky-panel{background:#fff;border:1px solid #ddd;overflow:hidden}
+.bigsky-panel-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;padding:18px 20px;background:#19191b;color:#fff}
+.bigsky-panel-head .eyebrow{color:#c9c9cc;margin-bottom:4px}.bigsky-panel-head h3{margin:0;font:800 27px/1 "Barlow Condensed",sans-serif}
+.bigsky-panel-head>span{font:800 9px/1 Inter,sans-serif;letter-spacing:1.2px;color:#c9c9cc;white-space:nowrap}
+.bigsky-standings{overflow-x:auto}
+.bigsky-standing-row{display:grid;grid-template-columns:38px minmax(190px,1.8fr) 90px 90px 105px 70px;gap:10px;align-items:center;padding:11px 15px;border-bottom:1px solid #ece9e7;font-size:11px;min-width:650px}
+.bigsky-standing-row:last-child{border-bottom:0}.bigsky-standing-head{background:#f3f0ee;color:#6c6a6b;font-size:8px;font-weight:900;letter-spacing:1px}
+.bigsky-standing-row.griz-row{background:#f7eef3;box-shadow:inset 4px 0 0 #73003b}
+.stand-rank{font-weight:900;color:#777}.stand-team{display:flex;align-items:center;gap:9px;min-width:0}.stand-team img{width:25px;height:25px;object-fit:contain}.stand-team b{font-weight:900}
+.bigsky-tools{padding:14px 16px 0;margin-bottom:0}
+.bigsky-leader-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#ddd}
+.bigsky-leader-card{background:#fff;padding:0 16px 8px}.bigsky-leader-head{display:flex;justify-content:space-between;padding:14px 0 9px;border-bottom:2px solid #19191b;font-size:9px;letter-spacing:1.2px}.bigsky-leader-head span{color:#777}
+.bigsky-leader-row{display:grid;grid-template-columns:22px 1fr auto;gap:8px;align-items:center;padding:10px 0;border-bottom:1px solid #eee}.bigsky-leader-row:last-child{border-bottom:0}
+.leader-num{font-weight:900;color:#999}.bigsky-leader-row strong{display:block;font-size:11px}.bigsky-leader-row small{display:block;color:#777;font-size:8px;margin-top:2px}.bigsky-leader-row>b{font-size:13px;color:#73003b}
+.bigsky-ranked-row{display:grid;grid-template-columns:45px 1fr;gap:4px 8px;align-items:center;padding:13px 16px;border-bottom:1px solid #eee}.bigsky-ranked-row:last-child{border-bottom:0}.bigsky-ranked-row span{font:900 18px "Barlow Condensed";color:#73003b}.bigsky-ranked-row b{font-size:12px}.bigsky-ranked-row small{grid-column:2;font-size:7px;color:#888;letter-spacing:1px}
+.bigsky-news-item{display:block;padding:13px 16px;border-bottom:1px solid #eee;text-decoration:none;color:#19191b}.bigsky-news-item:last-child{border-bottom:0}.bigsky-news-item small{display:block;color:#73003b;font-size:7px;font-weight:900;letter-spacing:.8px;margin-bottom:4px}.bigsky-news-item b{display:block;font-size:13px;line-height:1.1}.bigsky-news-item span{display:block;color:#777;font-size:9px;line-height:1.35;margin-top:5px}
+.bigsky-griz-record{display:grid;grid-template-columns:1fr 1fr;padding:20px 20px 8px;gap:4px 20px}.bigsky-griz-record b{font:900 30px "Barlow Condensed";color:#73003b}.bigsky-griz-record span{font-size:7px;letter-spacing:1px;color:#777;font-weight:900}
+.bigsky-griz-next{margin:6px 20px 20px;padding-top:14px;border-top:1px solid #ddd}.bigsky-griz-next small{display:block;color:#777;font-size:7px;font-weight:900;letter-spacing:1px}.bigsky-griz-next strong{display:block;font:900 25px "Barlow Condensed";margin-top:3px}.bigsky-griz-next span{display:block;color:#777;font-size:9px;margin-top:3px}
+@media(max-width:900px){.bigsky-hub-grid{grid-template-columns:1fr}.bigsky-side{grid-template-columns:1fr 1fr}.bigsky-griz-panel{grid-column:1/-1}}
+@media(max-width:650px){.bigsky-side{grid-template-columns:1fr}.bigsky-leader-grid{grid-template-columns:1fr}.bigsky-panel-head h3{font-size:23px}.bigsky-standing-row{grid-template-columns:32px minmax(170px,1.6fr) 75px 75px 95px 60px}}
