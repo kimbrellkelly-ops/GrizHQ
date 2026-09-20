@@ -209,10 +209,34 @@ async function loadHomepageNews() {
   }
 }
 
+function renderMainScheduleFromData(d) {
+  const schedule = document.getElementById("schedule-list");
+  if (!schedule || !Array.isArray(d?.schedule)) return;
+  try {
+    const firstUpcoming = d.schedule.findIndex(x => !x.result);
+    schedule.innerHTML = '<div class="schedule-row head"><span>DATE</span><span>OPPONENT</span><span>RESULT / TIME</span></div>' +
+      d.schedule.map((g, i) => {
+        const isNext = !g.result && i === firstUpcoming;
+        const key = `${g.date || ""}|${g.opponent || ""}`;
+        const venue = g.venue || GRIZ_GAME_VENUES[g.opponent]?.venue || (g.location === "Away" ? "Road game" : "Washington-Grizzly Stadium");
+        const tv = g.tv || g.network || "";
+        const status = g.result || g.time || "";
+        return `<div class="schedule-row game-card-row ${isNext ? "next" : ""} ${g.result ? "played" : "upcoming"}" data-game-key="${escapeHtml(key)}">
+          <div class="schedule-main-date"><span>${escapeHtml(g.date || "")}</span><small>${g.location === "Away" ? "AWAY" : "HOME"}</small></div>
+          <div class="schedule-main-match"><div class="schedule-team-line"><img src="${scheduleLogo(g.opponent)}" alt="${escapeHtml(g.opponent || "Opponent")} logo" loading="lazy" onerror="this.style.display='none'"><b>${g.location === "Away" ? "@ " : ""}${escapeHtml(g.opponent || "")}</b></div><span>${escapeHtml(venue)}</span>${tv ? `<small>${escapeHtml(tv)}</small>` : ""}</div>
+          <div class="schedule-main-status"><strong>${escapeHtml(status)}</strong>${isNext ? "<em>NEXT GAME</em>" : (g.result ? "<em>FINAL</em>" : "<em>UPCOMING</em>")}</div>
+        </div>`;
+      }).join("");
+  } catch (e) {
+    console.warn("Main schedule render failed", e);
+  }
+}
+
 async function loadGrizData() {
   try {
     const res = await fetch("data.json?ts=" + Date.now(), {cache: "no-store"});
     const d = await res.json();
+    renderMainScheduleFromData(d);
 
     const next = d.next_game || {};
     const dateEl = document.getElementById("next-game-date");
@@ -285,26 +309,6 @@ async function loadGrizData() {
         [d.team.opp_ppg || "—","OPP PPG"]
       ];
       stats.innerHTML = vals.map(x => `<div><b>${x[0]}</b><small>${x[1]}</small></div>`).join("");
-    }
-
-    const schedule = document.getElementById("schedule-list");
-    if (schedule && Array.isArray(d.schedule)) {
-      const firstUpcoming = d.schedule.findIndex(x => !x.result);
-      schedule.innerHTML = `<div class="schedule-row head"><span>DATE</span><span>OPPONENT</span><span>RESULT / TIME</span></div>` +
-        d.schedule.map((g, i) => {
-          const isNext = !g.result && i === firstUpcoming;
-          const key = `${g.date || ""}|${g.opponent || ""}`;
-          const venue = g.venue || GRIZ_GAME_VENUES[g.opponent]?.venue || (g.location === "Away" ? "Road game" : "Washington-Grizzly Stadium");
-          const tv = g.tv || g.network || "";
-          const status = g.result || g.time || "";
-          return `<div class="schedule-row game-card-row ${isNext ? "next" : ""} ${g.result ? "played" : "upcoming"}" data-game-key="${escapeHtml(key)}">
-            <div class="schedule-main-date"><span>${escapeHtml(g.date || "")}</span><small>${g.location === "Away" ? "AWAY" : "HOME"}</small></div>
-            <div class="schedule-main-match"><div class="schedule-team-line"><img src="${scheduleLogo(g.opponent)}" alt="${escapeHtml(g.opponent || "Opponent")} logo" loading="lazy" onerror="this.style.display='none'"><b>${g.location === "Away" ? "@ " : ""}${escapeHtml(g.opponent || "")}</b></div><span>${escapeHtml(venue)}</span>${tv ? `<small>${escapeHtml(tv)}</small>` : ""}</div>
-            <div class="schedule-main-status"><strong>${escapeHtml(status)}</strong>${isNext ? `<em>NEXT GAME</em>` : (g.result ? `<em>FINAL</em>` : `<em>UPCOMING</em>`)}</div>
-          </div>`;
-        }).join("");
-      // Main Griz schedule intentionally stays clean: no sportsbook/weather columns.
-      // The separate Around the League / Big Sky board handles market + weather data.
     }
 
     renderStatsDashboard(d.stats);
