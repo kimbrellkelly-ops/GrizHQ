@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20T10:03:44.733108+00:00",
+  "updated": "2026-09-20T10:22:26.043180+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -27,6 +27,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/19/20260919_griz-fb-v-osu_032_rb.JPG"
+    },
+    {
+      "title": "WATCH – Montana’s Bobby Kennedy, Brooks Davis, Tanner Huff post Oregon State loss",
+      "url": "https://skylinesportsmt.com/watch-montanas-bobby-kennedy-brooks-davis-tanner-huff-post-oregon-state-loss/",
+      "date": "Sep. 20, 2026",
+      "published_at": "2026-09-20T07:30:00+00:00",
+      "description": "September 20, 2026 WATCH – Montana’s Bobby Kennedy, Brooks Davis, Tanner Huff post Oregon State loss",
+      "source": "Skyline Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/09/44SVAMPK3ZBN7AR67NNO5YALSE.avif",
+      "is_video": true,
+      "youtube_id": "B_FfqIi0LIs",
+      "video_url": "https://www.youtube.com/watch?v=B_FfqIi0LIs",
+      "video_thumbnail": "https://i.ytimg.com/vi/B_FfqIi0LIs/hqdefault.jpg"
     },
     {
       "title": "Live updates: No. 3 Montana Grizzlies visit FBS Oregon State",
@@ -1497,21 +1512,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/8/24/For_Montana_Jersey_Patch_V2.png"
-    },
-    {
-      "title": "Spring (TX) Grand Oaks OL Joel Botchway Finds the Right Fit at Lamar",
-      "url": "https://www.si.com/college/fcs/southland/spring-tx-grand-oaks-ol-joel-botchway-finds-the-right-fit-at-lamar-cardinals",
-      "date": "Aug. 23, 2026",
-      "published_at": "2026-08-23T22:13:16+00:00",
-      "description": "Southland Spring (TX) Grand Oaks OL Joel Botchway Finds the Right Fit at Lamar The Grizzlies' all-district offensive lineman committed to the Cardinals over McNeese.",
-      "source": "FCS Recruiting",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_32,w_2000,h_1125/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/fcs_football_central/01kqeb8qqe5d3j82s7zp.jpg",
-      "is_video": true,
-      "youtube_id": "E2mzYm3y0i8",
-      "video_url": "https://www.youtube.com/watch?v=E2mzYm3y0i8",
-      "video_thumbnail": "https://i.ytimg.com/vi/E2mzYm3y0i8/hqdefault.jpg"
     }
   ]
 }
