@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20T07:03:34.807002+00:00",
+  "updated": "2026-09-20T07:22:16.520760+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -13,6 +13,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Live updates: No. 3 Montana Grizzlies visit FBS Oregon State",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-football-visit-oregon-state-live-updates/article_6b3fcfc4-fedd-4acb-b0ca-e15012656c8a.html",
+      "date": "Sep. 20, 2026",
+      "published_at": "2026-09-20T06:20:00+00:00",
+      "description": "Live updates: No. 3 Montana Grizzlies visit FBS Oregon State",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/b3/6b3fcfc4-fedd-4acb-b0ca-e15012656c8a/6aaf7b4ebd63a.preview.jpg?crop=1742%2C915%2C0%2C137&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/b3/6b3fcfc4-fedd-4acb-b0ca-e15012656c8a/6aaf7b4ebd63a.preview.jpg?crop=1742%2C915%2C0%2C137&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Recap: Montana Grizzlies can't keep pace with Oregon State in 1st loss",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_4e242ba5-0e3e-587b-b973-78a9d380a090.html",
@@ -29,19 +44,19 @@
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/85/08523dd3-e811-5176-a563-1a9a057cdf8d/6aaf4c8312178.image.jpg?resize=300%2C225"
     },
     {
-      "title": "Live updates: No. 3 Montana Grizzlies visit FBS Oregon State",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-football-visit-oregon-state-live-updates/article_6b3fcfc4-fedd-4acb-b0ca-e15012656c8a.html",
+      "title": "Grizzlies take the field for warmups at Oregon State",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-take-the-field-for-warmups-at-oregon-state/video_8a0da90d-37c5-5b22-a612-3ea10ac49728.html",
       "date": "Sep. 20, 2026",
-      "published_at": "2026-09-20T06:20:00+00:00",
-      "description": "Live updates: No. 3 Montana Grizzlies visit FBS Oregon State",
+      "published_at": "2026-09-20T02:41:00+00:00",
+      "description": "Grizzlies take the field for warmups at Oregon State",
       "source": "406 MT Sports",
       "badge": "GRIZ NEWS",
       "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/b3/6b3fcfc4-fedd-4acb-b0ca-e15012656c8a/6aaf7b4ebd63a.preview.jpg?crop=1742%2C915%2C0%2C137&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/a0/8a0da90d-37c5-5b22-a612-3ea10ac49728/6aaf48dae726b.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": true,
       "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/b3/6b3fcfc4-fedd-4acb-b0ca-e15012656c8a/6aaf7b4ebd63a.preview.jpg?crop=1742%2C915%2C0%2C137&resize=1200%2C630&order=crop%2Cresize"
+      "video_url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-take-the-field-for-warmups-at-oregon-state/video_8a0da90d-37c5-5b22-a612-3ea10ac49728.html",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/a0/8a0da90d-37c5-5b22-a612-3ea10ac49728/6aaf48dae726b.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
     },
     {
       "title": "Grizzlies at Beavers pregame",
@@ -1497,21 +1512,6 @@
       "youtube_id": "E2mzYm3y0i8",
       "video_url": "https://www.youtube.com/watch?v=E2mzYm3y0i8",
       "video_thumbnail": "https://i.ytimg.com/vi/E2mzYm3y0i8/hqdefault.jpg"
-    },
-    {
-      "title": "2026 Montana Football Preview: Can The Grizzlies Take The Championship Step? Zachary McKinnell | Jun 9, 2026",
-      "url": "https://www.si.com/college/fcs/big-sky/2026-montana-football-preview-can-the-grizzlies-take-the-championship-step",
-      "date": "Jun. 9, 2026",
-      "published_at": "2026-06-09T16:34:36+00:00",
-      "description": "2026 Montana Football Preview: Can The Grizzlies Take The Championship Step? Zachary McKinnell | Jun 9, 2026",
-      "source": "FCS Football Central",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_43,w_3050,h_1715/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/ImagnImages/mmsport/fcs_football_central/01ktmk82zqejd4aq1t6w.jpg",
-      "is_video": true,
-      "youtube_id": "MAKuhr_rlHo",
-      "video_url": "https://www.youtube.com/watch?v=MAKuhr_rlHo",
-      "video_thumbnail": "https://i.ytimg.com/vi/MAKuhr_rlHo/hqdefault.jpg"
     }
   ]
 }
