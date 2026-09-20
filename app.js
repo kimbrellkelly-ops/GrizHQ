@@ -1383,7 +1383,7 @@ function renderBigSkyHub(d){
   if(rankedEl){
     const ranked=[];
     coaches.forEach(function(name,i){
-      const found=standings.some(function(s){return bigSkyTeamKey(s.team)===bigSkyTeamKey(name);});
+      const found=standings.some(function(s){return bigSkyNormTeam(s.team)===bigSkyNormTeam(name);});
       if(found) ranked.push({name:name,rank:i+1});
     });
     rankedEl.innerHTML=ranked.length?ranked.map(function(x){return '<div class="bigsky-ranked-row"><span>#'+x.rank+'</span><b>'+escapeHtml(x.name)+'</b><small>AFCA COACHES POLL</small></div>';}).join(""):'<div class="bigsky-empty">No ranked Big Sky teams listed.</div>';
