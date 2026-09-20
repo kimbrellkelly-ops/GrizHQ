@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20T08:03:56.468089+00:00",
+  "updated": "2026-09-20T08:23:57.605145+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -14,19 +14,19 @@
   ],
   "stories": [
     {
-      "title": "Recap: Montana Grizzlies can't keep pace with Oregon State in 1st loss",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_4e242ba5-0e3e-587b-b973-78a9d380a090.html",
+      "title": "Beavers use big plays to beat Griz in Corvallis",
+      "url": "https://gogriz.com/news/2026/9/20/football-beavers-use-big-plays-to-beat-griz-in-corvallis",
       "date": "Sep. 20, 2026",
-      "published_at": "2026-09-20T06:20:00+00:00",
-      "description": "The Beavers scored six touchdowns across their opening seven drives before they pulled their starting quarterback with a 42-3 lead over the Grizzlies.",
-      "source": "Missoulian",
+      "published_at": "2026-09-20T09:03:00+00:00",
+      "description": "CORVALLIS – The Montana Grizzlies couldn't out-pace a fast and physical Oregon State team Saturday night, with the Beavers using their big play offensive attack to jump out to an early lead and come away with a 52-17 win at Reser Stadium.",
+      "source": "GoGriz",
       "badge": "GAME STORY",
       "short": "GAME S",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/85/08523dd3-e811-5176-a563-1a9a057cdf8d/6aaf4c8312178.image.jpg?resize=300%2C225",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/19/20260919_griz-fb-v-osu_032_rb.JPG",
       "is_video": false,
       "youtube_id": "",
       "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/85/08523dd3-e811-5176-a563-1a9a057cdf8d/6aaf4c8312178.image.jpg?resize=300%2C225"
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/19/20260919_griz-fb-v-osu_032_rb.JPG"
     },
     {
       "title": "Live updates: No. 3 Montana Grizzlies visit FBS Oregon State",
@@ -42,6 +42,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/b3/6b3fcfc4-fedd-4acb-b0ca-e15012656c8a/6aaf7b4ebd63a.preview.jpg?crop=1742%2C915%2C0%2C137&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Recap: Montana Grizzlies can't keep pace with Oregon State in 1st loss",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_4e242ba5-0e3e-587b-b973-78a9d380a090.html",
+      "date": "Sep. 20, 2026",
+      "published_at": "2026-09-20T06:20:00+00:00",
+      "description": "The Beavers scored six touchdowns across their opening seven drives before they pulled their starting quarterback with a 42-3 lead over the Grizzlies.",
+      "source": "Missoulian",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/85/08523dd3-e811-5176-a563-1a9a057cdf8d/6aaf4c8312178.image.jpg?resize=300%2C225",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/85/08523dd3-e811-5176-a563-1a9a057cdf8d/6aaf4c8312178.image.jpg?resize=300%2C225"
     },
     {
       "title": "Grizzlies take the field for warmups at Oregon State",
@@ -87,6 +102,21 @@
       "youtube_id": "",
       "video_url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/video_f05d89e6-ddbf-5364-a18d-7cb9ca2fd74e.html",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/05/f05d89e6-ddbf-5364-a18d-7cb9ca2fd74e/6aaf4c82bf9fd.image.jpg?resize=300%2C169"
+    },
+    {
+      "title": "Beavers win big over Griz, 52-17",
+      "url": "https://dailyinterlake.com/news/2026/sep/20/beavers-win-big-over-griz-52-17/",
+      "date": "Sep. 20, 2026",
+      "published_at": "2026-09-20T01:15:00+00:00",
+      "description": "Updated 4 minutes ago Beavers win big over Griz, 52-17 That mini-win streak is over for the Montana Grizzlies, who went into Reser Stadium and absorbed a 52-17 loss at the hands of Oregon State Saturday night.",
+      "source": "Daily Inter Lake",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://hagadone.media.clients.ellingtoncms.com/static-4/dailyinterlake/images/default-social.jpg?v=2",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/static-4/dailyinterlake/images/default-social.jpg?v=2"
     },
     {
       "title": "Becoming a Bear Smart Community",
@@ -1478,36 +1508,6 @@
       "badge": "GRIZ NEWS",
       "short": "GRIZ N",
       "image": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_32,w_2000,h_1125/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/fcs_football_central/01kqeb8qqe5d3j82s7zp.jpg",
-      "is_video": true,
-      "youtube_id": "E2mzYm3y0i8",
-      "video_url": "https://www.youtube.com/watch?v=E2mzYm3y0i8",
-      "video_thumbnail": "https://i.ytimg.com/vi/E2mzYm3y0i8/hqdefault.jpg"
-    },
-    {
-      "title": "AKEM’S ANALYSIS: MONTANA WEEK 1 THOUGHTS, BIG SKY BREAKOUT PLAYERS, USD CLOSE TO FINDING A GUY",
-      "url": "https://skylinesportsmt.com/akems-analysis-montana-week-1-thoughts-big-sky-breakout-players-usd-close-to-finding-a-guy/",
-      "date": "Aug. 11, 2026",
-      "published_at": "2026-08-11T13:03:07+00:00",
-      "description": "Samuel Akem August 11, 2026 AKEM’S ANALYSIS: MONTANA WEEK 1 THOUGHTS, BIG SKY BREAKOUT PLAYERS, USD CLOSE TO FINDING A GUY In this week’s Akem’s Analysis, I’m discussing my thoughts about the Grizzlies after one week of practice. There’s so",
-      "source": "Skyline Sports",
-      "badge": "ANALYSIS",
-      "short": "ANALYS",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/AA-EP.-150-THUMBNAIL.png",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/08/AA-EP.-150-THUMBNAIL.png"
-    },
-    {
-      "title": "Montana Lands Commitment From Byron Nelson (TX) OL Nick Fungavaka",
-      "url": "https://www.si.com/college/fcs/big-sky/montana-football-lands-commitment-from-byron-nelson-tx-ol-nick-fungavaka",
-      "date": "Aug. 8, 2026",
-      "published_at": "2026-08-08T16:24:47+00:00",
-      "description": "Big Sky Montana Lands Commitment From Byron Nelson (TX) OL Nick Fungavaka The Byron Nelson High School offensive lineman becomes the third recruit from Texas to commit to the Grizzlies",
-      "source": "FCS Recruiting",
-      "badge": "RECRUITING",
-      "short": "RECRUI",
-      "image": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_322,w_1366,h_768/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/fcs_football_central/01kzfp3vsrfvgzf7m7b1.jpg",
       "is_video": true,
       "youtube_id": "E2mzYm3y0i8",
       "video_url": "https://www.youtube.com/watch?v=E2mzYm3y0i8",
