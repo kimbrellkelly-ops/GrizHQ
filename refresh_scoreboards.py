@@ -38,6 +38,19 @@ def request(params):
    last=RuntimeError('ESPN response missing events list')
   except Exception as e:last=e
  raise RuntimeError(f'ESPN request failed: {last}')
+def fetch_all_week(start,end):
+ out=[];seen=set();success=0
+ for d in daterange(start,end):
+  try:
+   events=request({'dates':d.replace('-',''),'limit':1000})
+   success+=1
+   for e in events:
+    k=str(e.get('id') or json.dumps(e,sort_keys=True))
+    if k not in seen:seen.add(k);out.append(e)
+  except Exception as ex:print(f'all {d}: {ex}')
+ if success==0:raise RuntimeError(f'No successful ESPN responses during {start}..{end}')
+ return out
+
 def fetch_group_week(start,end,group):
  # Daily group requests are deliberate: date-scoped ESPN requests expose the full slate.
  out=[];seen=set();success=0
@@ -105,13 +118,15 @@ def big_sky_expected(data,start,end):
   if start<=d<=end and r.get('team') and r.get('opponent'):out.add('|'.join(sorted([canonical(r['team']),canonical(r['opponent'])])))
  return out
 def build():
- data=json.loads(DATA.read_text(encoding='utf-8'));rankings,rank_date=load_rankings();result={'season':2026,'generatedAt':datetime.now(timezone.utc).isoformat(),'source':'ESPN FCS group 81 + ESPN Big Sky group 20','rankings':rankings,'rankingsDate':rank_date,'bigSkyTeams':BIG_SKY,'weeks':[]}
+ data=json.loads(DATA.read_text(encoding='utf-8'));rankings,rank_date=load_rankings();result={'season':2026,'generatedAt':datetime.now(timezone.utc).isoformat(),'source':'ESPN daily calendar + ESPN Big Sky group 20','rankings':rankings,'rankingsDate':rank_date,'bigSkyTeams':BIG_SKY,'weeks':[]}
  for i,(start,end,label) in enumerate(WEEKS):
+  all_events=[compact(x) for x in fetch_all_week(start,end)]
   fcs=[compact(x) for x in fetch_group_week(start,end,'81')]
   bs=[compact(x) for x in fetch_group_week(start,end,'20')]
-  # One card per actual game involving at least one ranked FCS team.
+  # Build Top 25 cards from the unfiltered ESPN calendar so FCS-vs-FBS games
+  # (and any games omitted by ESPN's FCS grouping) are still captured.
   top=[];seen=set();played_ranks=set()
-  for e in fcs:
+  for e in all_events:
    matched=[]
    for t in e.get('teams',[]):
     r=ranked_team_match(t.get('name') or t.get('short'),rankings)
