@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-20T04:25:32.291032+00:00",
+  "generatedAt": "2026-09-20T05:23:44.199909+00:00",
   "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [
     {
@@ -3134,7 +3134,7 @@
               "short": "Boise St",
               "abbreviation": "BOIS",
               "homeAway": "home",
-              "score": "24",
+              "score": "38",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png"
             },
             {
@@ -3143,7 +3143,7 @@
               "short": "South Dakota",
               "abbreviation": "SDAK",
               "homeAway": "away",
-              "score": "14",
+              "score": "24",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/233.png"
             }
           ],
@@ -3151,8 +3151,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "2:49 - 3rd Quarter",
-            "shortDetail": "2:49 - 3rd"
+            "detail": "1:14 - 4th Quarter",
+            "shortDetail": "1:14 - 4th"
           },
           "broadcasts": [
             "CBSSN"
@@ -3173,7 +3173,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "home",
-              "score": "31",
+              "score": "45",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             },
             {
@@ -3182,7 +3182,7 @@
               "short": "Stetson",
               "abbreviation": "STET",
               "homeAway": "away",
-              "score": "0",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png"
             }
           ],
@@ -3190,8 +3190,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "5:51 - 3rd Quarter",
-            "shortDetail": "5:51 - 3rd"
+            "detail": "0:33 - 4th Quarter",
+            "shortDetail": "0:33 - 4th"
           },
           "broadcasts": [
             "ESPN+"
@@ -3212,7 +3212,7 @@
               "short": "Oregon St",
               "abbreviation": "ORST",
               "homeAway": "home",
-              "score": "28",
+              "score": "42",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
             },
             {
@@ -3229,8 +3229,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "1:48 - 2nd Quarter",
-            "shortDetail": "1:48 - 2nd"
+            "detail": "6:46 - 3rd Quarter",
+            "shortDetail": "6:46 - 3rd"
           },
           "broadcasts": [
             "USA Net"
@@ -3359,7 +3359,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "home",
-              "score": "31",
+              "score": "45",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             },
             {
@@ -3368,7 +3368,7 @@
               "short": "Stetson",
               "abbreviation": "STET",
               "homeAway": "away",
-              "score": "0",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png"
             }
           ],
@@ -3376,8 +3376,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "5:51 - 3rd Quarter",
-            "shortDetail": "5:51 - 3rd"
+            "detail": "0:33 - 4th Quarter",
+            "shortDetail": "0:33 - 4th"
           },
           "broadcasts": [
             "ESPN+"
@@ -3398,7 +3398,7 @@
               "short": "Oregon St",
               "abbreviation": "ORST",
               "homeAway": "home",
-              "score": "28",
+              "score": "42",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
             },
             {
@@ -3415,8 +3415,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "1:46 - 2nd Quarter",
-            "shortDetail": "1:46 - 2nd"
+            "detail": "6:46 - 3rd Quarter",
+            "shortDetail": "6:46 - 3rd"
           },
           "broadcasts": [
             "USA Net"
