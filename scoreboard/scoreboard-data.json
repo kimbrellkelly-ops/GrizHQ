@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-19T23:21:57.542121+00:00",
+  "generatedAt": "2026-09-20T00:03:07.342168+00:00",
   "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [
     {
@@ -2791,7 +2791,7 @@
               "short": "Fordham",
               "abbreviation": "FOR",
               "homeAway": "away",
-              "score": "27",
+              "score": "31",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2230.png"
             }
           ],
@@ -2799,8 +2799,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "0:32 - 2nd Quarter",
-            "shortDetail": "0:32 - 2nd"
+            "detail": "10:12 - 3rd Quarter",
+            "shortDetail": "10:12 - 3rd"
           },
           "broadcasts": [
             "ESPN+"
@@ -2830,7 +2830,7 @@
               "short": "Youngstown St",
               "abbreviation": "YSU",
               "homeAway": "away",
-              "score": "0",
+              "score": "3",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png"
             }
           ],
@@ -2838,8 +2838,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "8:50 - 1st Quarter",
-            "shortDetail": "8:50 - 1st"
+            "detail": "8:11 - 2nd Quarter",
+            "shortDetail": "8:11 - 2nd"
           },
           "broadcasts": [
             "ESPN+",
@@ -2861,7 +2861,7 @@
               "short": "West Florida",
               "abbreviation": "UWF",
               "homeAway": "home",
-              "score": "0",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/110242.png"
             },
             {
@@ -2870,7 +2870,7 @@
               "short": "Austin Peay",
               "abbreviation": "APSU",
               "homeAway": "away",
-              "score": "7",
+              "score": "21",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
             }
           ],
@@ -2878,8 +2878,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "9:47 - 1st Quarter",
-            "shortDetail": "9:47 - 1st"
+            "detail": "12:08 - 2nd Quarter",
+            "shortDetail": "12:08 - 2nd"
           },
           "broadcasts": [
             "ESPN+"
@@ -2900,7 +2900,7 @@
               "short": "Tarleton St",
               "abbreviation": "TAR",
               "homeAway": "home",
-              "score": "7",
+              "score": "10",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2627.png"
             },
             {
@@ -2917,8 +2917,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "9:19 - 1st Quarter",
-            "shortDetail": "9:19 - 1st"
+            "detail": "13:31 - 2nd Quarter",
+            "shortDetail": "13:31 - 2nd"
           },
           "broadcasts": [
             "ESPN+"
@@ -3063,42 +3063,42 @@
           ]
         },
         {
-          "id": "401868051",
-          "date": "2026-09-19T20:00Z",
-          "name": "Abilene Christian Wildcats at Idaho Vandals",
-          "shortName": "ACU @ IDHO",
-          "venue": "Kibbie Dome",
-          "city": "Moscow",
-          "state": "ID",
+          "id": "401858459",
+          "date": "2026-09-19T23:15Z",
+          "name": "Eastern Washington Eagles at Washington Huskies",
+          "shortName": "EWU @ WASH",
+          "venue": "Husky Stadium",
+          "city": "Seattle",
+          "state": "WA",
           "teams": [
             {
-              "id": "70",
-              "name": "Idaho Vandals",
-              "short": "Idaho",
-              "abbreviation": "IDHO",
+              "id": "264",
+              "name": "Washington Huskies",
+              "short": "Washington",
+              "abbreviation": "WASH",
               "homeAway": "home",
-              "score": "39",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
+              "score": "14",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png"
             },
             {
-              "id": "2000",
-              "name": "Abilene Christian Wildcats",
-              "short": "Abilene Chrstn",
-              "abbreviation": "ACU",
+              "id": "331",
+              "name": "Eastern Washington Eagles",
+              "short": "E Washington",
+              "abbreviation": "EWU",
               "homeAway": "away",
-              "score": "41",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
+              "score": "10",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png"
             }
           ],
           "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final"
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "13:47 - 2nd Quarter",
+            "shortDetail": "13:47 - 2nd"
           },
           "broadcasts": [
-            "ESPN+"
+            "BTN"
           ]
         },
         {
@@ -3181,42 +3181,42 @@
           ]
         },
         {
-          "id": "401858459",
-          "date": "2026-09-19T23:15Z",
-          "name": "Eastern Washington Eagles at Washington Huskies",
-          "shortName": "EWU @ WASH",
-          "venue": "Husky Stadium",
-          "city": "Seattle",
-          "state": "WA",
+          "id": "401868051",
+          "date": "2026-09-19T20:00Z",
+          "name": "Abilene Christian Wildcats at Idaho Vandals",
+          "shortName": "ACU @ IDHO",
+          "venue": "Kibbie Dome",
+          "city": "Moscow",
+          "state": "ID",
           "teams": [
             {
-              "id": "264",
-              "name": "Washington Huskies",
-              "short": "Washington",
-              "abbreviation": "WASH",
+              "id": "70",
+              "name": "Idaho Vandals",
+              "short": "Idaho",
+              "abbreviation": "IDHO",
               "homeAway": "home",
-              "score": "6",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png"
+              "score": "39",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
             },
             {
-              "id": "331",
-              "name": "Eastern Washington Eagles",
-              "short": "E Washington",
-              "abbreviation": "EWU",
+              "id": "2000",
+              "name": "Abilene Christian Wildcats",
+              "short": "Abilene Chrstn",
+              "abbreviation": "ACU",
               "homeAway": "away",
-              "score": "0",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png"
+              "score": "41",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "10:50 - 1st Quarter",
-            "shortDetail": "10:50 - 1st"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
           },
           "broadcasts": [
-            "BTN"
+            "ESPN+"
           ]
         },
         {
