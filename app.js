@@ -1385,7 +1385,8 @@ function renderBigSkyHub(d){
     const ranked=[];
     const addRanked=function(list,poll){
       list.forEach(function(item,i){
-        const name=typeof item==="string"?item:(item&&item.name)||"";
+        const rawName=typeof item==="string"?item:(item&&item.name)||"";
+        const name=String(rawName).replace(/\s*\([^)]*\)\s*$/,"").trim();
         const rank=typeof item==="string"?i+1:(item&&item.rank)||i+1;
         const found=standings.some(function(s){return bigSkyNormTeam(s.team)===bigSkyNormTeam(name);});
         if(found && !ranked.some(function(x){return x.poll===poll && bigSkyNormTeam(x.name)===bigSkyNormTeam(name);})){ranked.push({name:name,rank:rank,poll:poll});}
