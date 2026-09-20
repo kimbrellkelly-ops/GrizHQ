@@ -108,6 +108,44 @@ def parse_schedule():
     if not rows: raise RuntimeError("Could not parse GoGriz schedule")
     return rows
 
+def sync_montana_schedule_with_espn(rows):
+    """Use ESPN game results to keep Montana's completed schedule authoritative."""
+    endpoint="https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard"
+    for row in rows:
+        m=re.search(r"([A-Za-z]{3})\s+(\d{1,2})", str(row.get("date","")))
+        if not m:
+            continue
+        try:
+            dt=datetime.strptime(f"2026 {m.group(1)} {m.group(2)}", "%Y %b %d")
+        except ValueError:
+            continue
+        try:
+            payload=requests.get(endpoint, params={"dates":dt.strftime("%Y%m%d"),"limit":500}, headers=HEADERS, timeout=20).json()
+            for ev in payload.get("events", []):
+                comp=(ev.get("competitions") or [{}])[0]
+                competitors=comp.get("competitors") or []
+                mt=next((x for x in competitors if str((x.get("team") or {}).get("id",""))=="149"), None)
+                if not mt:
+                    continue
+                opp=next((x for x in competitors if x is not mt), None)
+                status=(comp.get("status") or {}).get("type") or {}
+                if not status.get("completed"):
+                    continue
+                mt_score=str(mt.get("score",""))
+                opp_score=str((opp or {}).get("score",""))
+                if not mt_score.isdigit() or not opp_score.isdigit():
+                    continue
+                result=("W" if int(mt_score)>int(opp_score) else "L" if int(mt_score)<int(opp_score) else "T")
+                row["result"]=f"{result} {mt_score}-{opp_score}"
+                row["location"]="Home" if mt.get("homeAway")=="home" else "Away"
+                if opp:
+                    row["opponent"]=(opp.get("team") or {}).get("displayName") or row.get("opponent","")
+                row["time"]=row.get("time") or ""
+                break
+        except Exception as exc:
+            print(f"ESPN Montana schedule sync failed for {row.get('date')}: {exc}")
+    return rows
+
 def parse_rankings(url):
     soup=BeautifulSoup(get(url),"html.parser")
     for table in soup.find_all("table"):
@@ -401,7 +439,7 @@ def main():
     new["source"]="Automatically refreshed from official/public sources."
 
     try:
-        sched=parse_schedule(); new["schedule"]=sched
+        sched=parse_schedule(); sched=sync_montana_schedule_with_espn(sched); new["schedule"]=sched
         played=[g for g in sched if g.get("result")]
         wins=sum(1 for g in played if g["result"].upper().startswith("W")); losses=sum(1 for g in played if g["result"].upper().startswith("L"))
         conf=[g for g in played if g.get("conference")]
