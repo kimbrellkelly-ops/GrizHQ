@@ -27630,5 +27630,348 @@
     "url": "https://skylinesportsmt.com/griz-press-conference-bobby-kennedy-brooks-davis-brock-beaner-on-oregon-state/",
     "youtube_id": "LCXacLE40UE"
   },
-  "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00"
+  "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
+  "big_sky_standings": [
+    {
+      "rank": 1,
+      "team": "Montana State",
+      "conference_record": "1-0",
+      "overall_record": "4-0",
+      "home": "2-0",
+      "away": "2-0",
+      "conference_points": "54-0",
+      "points": "160-61",
+      "conference_streak": "W4",
+      "overall_streak": "W4"
+    },
+    {
+      "rank": 2,
+      "team": "Montana",
+      "conference_record": "1-0",
+      "overall_record": "3-1",
+      "home": "3-0",
+      "away": "0-1",
+      "conference_points": "28-21",
+      "points": "125-97",
+      "conference_streak": "L1",
+      "overall_streak": "L1"
+    },
+    {
+      "rank": 3,
+      "team": "Northern Arizona",
+      "conference_record": "1-0",
+      "overall_record": "3-1",
+      "home": "2-0",
+      "away": "1-1",
+      "conference_points": "34-27",
+      "points": "114-113",
+      "conference_streak": "W2",
+      "overall_streak": "W2"
+    },
+    {
+      "rank": 4,
+      "team": "UC Davis",
+      "conference_record": "1-0",
+      "overall_record": "3-1",
+      "home": "1-0",
+      "away": "2-1",
+      "conference_points": "31-24",
+      "points": "135-104",
+      "conference_streak": "W1",
+      "overall_streak": "W1"
+    },
+    {
+      "rank": 5,
+      "team": "Cal Poly",
+      "conference_record": "1-0",
+      "overall_record": "2-2",
+      "home": "2-1",
+      "away": "0-1",
+      "conference_points": "38-34",
+      "points": "117-119",
+      "conference_streak": "L2",
+      "overall_streak": "L2"
+    },
+    {
+      "rank": 6,
+      "team": "Weber State",
+      "conference_record": "1-0",
+      "overall_record": "2-2",
+      "home": "1-0",
+      "away": "1-2",
+      "conference_points": "30-29",
+      "points": "142-148",
+      "conference_streak": "W1",
+      "overall_streak": "W1"
+    },
+    {
+      "rank": 7,
+      "team": "Idaho State",
+      "conference_record": "0-0",
+      "overall_record": "3-0",
+      "home": "2-0",
+      "away": "1-0",
+      "conference_points": "0-0",
+      "points": "126-44",
+      "conference_streak": "",
+      "overall_streak": "W3"
+    },
+    {
+      "rank": 8,
+      "team": "Eastern Washington",
+      "conference_record": "0-1",
+      "overall_record": "1-3",
+      "home": "1-0",
+      "away": "0-3",
+      "conference_points": "27-34",
+      "points": "100-147",
+      "conference_streak": "L2",
+      "overall_streak": "L2"
+    },
+    {
+      "rank": 9,
+      "team": "Northern Colorado",
+      "conference_record": "0-1",
+      "overall_record": "1-3",
+      "home": "1-2",
+      "away": "0-1",
+      "conference_points": "29-30",
+      "points": "88-106",
+      "conference_streak": "W1",
+      "overall_streak": "W1"
+    },
+    {
+      "rank": 10,
+      "team": "Southern Utah",
+      "conference_record": "0-1",
+      "overall_record": "1-3",
+      "home": "1-0",
+      "away": "0-3",
+      "conference_points": "21-28",
+      "points": "118-156",
+      "conference_streak": "L2",
+      "overall_streak": "L2"
+    },
+    {
+      "rank": 11,
+      "team": "Idaho",
+      "conference_record": "0-1",
+      "overall_record": "0-4",
+      "home": "0-2",
+      "away": "0-2",
+      "conference_points": "34-38",
+      "points": "104-168",
+      "conference_streak": "L4",
+      "overall_streak": "L4"
+    },
+    {
+      "rank": 12,
+      "team": "Portland State",
+      "conference_record": "0-1",
+      "overall_record": "0-4",
+      "home": "0-2",
+      "away": "0-2",
+      "conference_points": "24-31",
+      "points": "67-215",
+      "conference_streak": "L4",
+      "overall_streak": "L4"
+    },
+    {
+      "rank": 13,
+      "team": "Utah Tech",
+      "conference_record": "0-1",
+      "overall_record": "0-4",
+      "home": "0-2",
+      "away": "0-2",
+      "conference_points": "0-54",
+      "points": "44-187",
+      "conference_streak": "L4",
+      "overall_streak": "L4"
+    }
+  ],
+  "big_sky_leaders": {
+    "rushing": [
+      {
+        "name": "Chalk,Floyd",
+        "school": "Southern Utah",
+        "value": "545"
+      },
+      {
+        "name": "Gillman,Eli",
+        "school": "Montana",
+        "value": "409"
+      },
+      {
+        "name": "Green,Jaden",
+        "school": "Cal Poly",
+        "value": "343"
+      },
+      {
+        "name": "Ferguson,Spencer",
+        "school": "Weber State",
+        "value": "248"
+      },
+      {
+        "name": "Jones,Adam",
+        "school": "Montana State",
+        "value": "320"
+      }
+    ],
+    "passing": [
+      {
+        "name": "Cooke,Jordan",
+        "school": "Idaho State",
+        "value": "808"
+      },
+      {
+        "name": "Ah Yat,Keali'i",
+        "school": "Montana",
+        "value": "1008"
+      },
+      {
+        "name": "Wood,Joshua",
+        "school": "Idaho",
+        "value": "1005"
+      },
+      {
+        "name": "Cleeland,Treynor",
+        "school": "UC Davis",
+        "value": "995"
+      },
+      {
+        "name": "Grigsby Jr.,Anthony",
+        "school": "Cal Poly",
+        "value": "983"
+      }
+    ],
+    "receiving": [
+      {
+        "name": "Gbatu, Jr.,Samuel",
+        "school": "UC Davis",
+        "value": "468"
+      },
+      {
+        "name": "Davis,Brooks",
+        "school": "Montana",
+        "value": "446"
+      },
+      {
+        "name": "Kjar,Noah",
+        "school": "Weber State",
+        "value": "405"
+      },
+      {
+        "name": "Harste,Tony",
+        "school": "Idaho",
+        "value": "384"
+      },
+      {
+        "name": "Anahu-Ambrosio,Zedekiah",
+        "school": "Idaho State",
+        "value": "281"
+      }
+    ],
+    "tackles": [
+      {
+        "name": "D'Amato,Mikey",
+        "school": "Cal Poly",
+        "value": "48"
+      },
+      {
+        "name": "Smith,Bryce",
+        "school": "Eastern Washington",
+        "value": "42"
+      },
+      {
+        "name": "Miller,RL",
+        "school": "Cal Poly",
+        "value": "39"
+      },
+      {
+        "name": "Mayovsky,Myles",
+        "school": "Eastern Washington",
+        "value": "39"
+      },
+      {
+        "name": "Reynolds,Nathan",
+        "school": "Idaho State",
+        "value": "33"
+      }
+    ],
+    "sacks": [
+      {
+        "name": "Larsen,Gauge",
+        "school": "Eastern Washington",
+        "value": "2"
+      },
+      {
+        "name": "Fesili,Trehsyn",
+        "school": "Idaho State",
+        "value": "2.5"
+      },
+      {
+        "name": "Brock,Seth",
+        "school": "Montana State",
+        "value": "2"
+      },
+      {
+        "name": "Amey,Myles",
+        "school": "Southern Utah",
+        "value": "2.5"
+      },
+      {
+        "name": "Vaenuku,Mapa",
+        "school": "Weber State",
+        "value": "2"
+      }
+    ],
+    "scoring": [
+      {
+        "name": "Gillman,Eli",
+        "school": "Montana",
+        "value": "54"
+      },
+      {
+        "name": "Lindberg,Mason",
+        "school": "Idaho State",
+        "value": "36"
+      },
+      {
+        "name": "Kjar,Noah",
+        "school": "Weber State",
+        "value": "36"
+      },
+      {
+        "name": "Wood,Joshua",
+        "school": "Idaho",
+        "value": "36"
+      },
+      {
+        "name": "Chalk,Floyd",
+        "school": "Southern Utah",
+        "value": "36"
+      }
+    ]
+  },
+  "big_sky_news": [
+    {
+      "title": "Football Weekly Preview | Week 3 Features Final Non-Conference Tune Ups Before Return to League Play",
+      "url": "https://bigskyconf.com/news/2026/9/16/football-weekly-preview-week-3-features-final-non-conference-tune-ups-before-return-to-league-play.aspx",
+      "date": "Sept. 16, 2026",
+      "description": "Big Sky football enters Week 3 with 12 teams in action, including the final non-conference game between league foes."
+    },
+    {
+      "title": "Football Weekly Preview | Five Big Sky Teams Look to Stay Perfect in Week 2",
+      "url": "https://bigskyconf.com/news/2026/9/9/football-weekly-preview-five-big-sky-teams-look-to-stay-perfect-in-week-2.aspx",
+      "date": "Sept. 9, 2026",
+      "description": "Idaho State and four other Big Sky teams entered Week 2 looking to keep perfect records alive."
+    },
+    {
+      "title": "Football Weekly Preview | Non-Conference Action Highlights Week 1 in Big Sky Football",
+      "url": "https://bigskyconf.com/news/2026/9/2/football-weekly-preview-non-conference-action-highlights-week-1-in-big-sky-football.aspx",
+      "date": "Sept. 2, 2026",
+      "description": "The Big Sky opened Week 1 with non-conference action after a dramatic Week 0."
+    }
+  ],
+  "big_sky_hub_updated": "2026-09-20T22:01:09.553Z"
 }
