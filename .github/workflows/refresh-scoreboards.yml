@@ -1,5 +1,9 @@
 name: Refresh Griz HQ Scoreboards
 on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - scoreboard/scoreboard-data.json
   workflow_dispatch:
   schedule:
     - cron: "17 * * * *"
