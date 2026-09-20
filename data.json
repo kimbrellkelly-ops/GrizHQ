@@ -27973,5 +27973,48 @@
       "description": "The Big Sky opened Week 1 with non-conference action after a dramatic Week 0."
     }
   ],
-  "big_sky_hub_updated": "2026-09-20T22:01:09.553Z"
+  "big_sky_hub_updated": "2026-09-20T22:01:09.553Z",
+  "big_sky_players_of_week": [
+    {
+      "week": "2",
+      "category": "Offensive Player of the Week",
+      "player": "Eli Gillman",
+      "school": "Montana",
+      "position": "RB",
+      "summary": "Eli Gillman rushed for 147 yards and three touchdowns in the 35-14 win over Utah Tech.",
+      "article_url": "https://bigskyconf.com/news/2026/9/16/football-weekly-preview-week-3-features-final-non-conference-tune-ups-before-return-to-league-play.aspx",
+      "published": "Wed, 16 Sep 2026"
+    },
+    {
+      "week": "2",
+      "category": "Co-Defensive Player of the Week",
+      "player": "Deliyon Freeman",
+      "school": "Northern Arizona",
+      "position": "DB",
+      "summary": "Deliyon Freeman recorded 13 tackles, including one for loss, and helped force two takeaways in NAU's 38-28 win over UIW.",
+      "article_url": "https://bigskyconf.com/news/2026/9/16/football-weekly-preview-week-3-features-final-non-conference-tune-ups-before-return-to-league-play.aspx",
+      "published": "Wed, 16 Sep 2026"
+    },
+    {
+      "week": "2",
+      "category": "Co-Defensive Player of the Week",
+      "player": "Colter Petre",
+      "school": "Montana State",
+      "position": "DB",
+      "summary": "Colter Petre had 13 tackles and a forced fumble in Montana State's 20-7 win over Nevada.",
+      "article_url": "https://bigskyconf.com/news/2026/9/16/football-weekly-preview-week-3-features-final-non-conference-tune-ups-before-return-to-league-play.aspx",
+      "published": "Wed, 16 Sep 2026"
+    },
+    {
+      "week": "2",
+      "category": "Special Teams Player of the Week",
+      "player": "Everett O’Donnell",
+      "school": "Montana",
+      "position": "P",
+      "summary": "Everett O’Donnell boomed seven punts for 299 yards, including three inside the 20, in Montana's win over Utah Tech.",
+      "article_url": "https://bigskyconf.com/news/2026/9/16/football-weekly-preview-week-3-features-final-non-conference-tune-ups-before-return-to-league-play.aspx",
+      "published": "Wed, 16 Sep 2026"
+    }
+  ],
+  "big_sky_players_of_week_updated": "2026-09-20T19:00:00Z"
 }
