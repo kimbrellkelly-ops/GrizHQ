@@ -1,16 +1,16 @@
 {
-  "updated": "2026-09-20T20:26:03.914111+00:00",
+  "updated": "2026-09-20T20:40:58.676Z",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
-    "record": "3-0",
+    "record": "2-1",
     "conference_record": "1-0",
-    "streak": "W3"
+    "streak": "L1"
   },
   "next_game": {
-    "opponent": "Oregon State",
-    "date": "Sep 19 (Sat)",
-    "time": "9 PM (MT)",
-    "venue": "Reser Stadium, Corvallis, Ore.",
+    "opponent": "UC Davis",
+    "date": "Sep 26 (Sat)",
+    "time": "8 PM (MT)",
+    "venue": "UC Davis Health Stadium, Davis, Calif.",
     "url": "https://gogriz.com/sports/football/schedule"
   },
   "schedule": [
@@ -42,7 +42,7 @@
       "date": "Sep 19 (Sat)",
       "opponent": "Oregon State",
       "location": "Away",
-      "result": "",
+      "result": "L 17-52",
       "time": "9 PM (MT)",
       "conference": false
     },
