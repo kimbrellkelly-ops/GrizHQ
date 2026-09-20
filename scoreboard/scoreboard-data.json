@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-20T00:03:07.342168+00:00",
+  "generatedAt": "2026-09-20T00:32:52.403120+00:00",
   "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [
     {
@@ -2782,7 +2782,7 @@
               "short": "William & Mary",
               "abbreviation": "W&M",
               "homeAway": "home",
-              "score": "7",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2729.png"
             },
             {
@@ -2791,7 +2791,7 @@
               "short": "Fordham",
               "abbreviation": "FOR",
               "homeAway": "away",
-              "score": "31",
+              "score": "38",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2230.png"
             }
           ],
@@ -2799,8 +2799,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "10:12 - 3rd Quarter",
-            "shortDetail": "10:12 - 3rd"
+            "detail": "15:00 - 4th Quarter",
+            "shortDetail": "15:00 - 4th"
           },
           "broadcasts": [
             "ESPN+"
@@ -2821,7 +2821,7 @@
               "short": "S Dakota St",
               "abbreviation": "SDST",
               "homeAway": "home",
-              "score": "7",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png"
             },
             {
@@ -2830,7 +2830,7 @@
               "short": "Youngstown St",
               "abbreviation": "YSU",
               "homeAway": "away",
-              "score": "3",
+              "score": "10",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png"
             }
           ],
@@ -2838,8 +2838,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "8:11 - 2nd Quarter",
-            "shortDetail": "8:11 - 2nd"
+            "detail": "0:10 - 2nd Quarter",
+            "shortDetail": "0:10 - 2nd"
           },
           "broadcasts": [
             "ESPN+",
@@ -2870,7 +2870,7 @@
               "short": "Austin Peay",
               "abbreviation": "APSU",
               "homeAway": "away",
-              "score": "21",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
             }
           ],
@@ -2878,8 +2878,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "12:08 - 2nd Quarter",
-            "shortDetail": "12:08 - 2nd"
+            "detail": "5:03 - 2nd Quarter",
+            "shortDetail": "5:03 - 2nd"
           },
           "broadcasts": [
             "ESPN+"
@@ -2900,7 +2900,7 @@
               "short": "Tarleton St",
               "abbreviation": "TAR",
               "homeAway": "home",
-              "score": "10",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2627.png"
             },
             {
@@ -2909,7 +2909,7 @@
               "short": "Merrimack",
               "abbreviation": "MRMK",
               "homeAway": "away",
-              "score": "0",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2771.png"
             }
           ],
@@ -2917,8 +2917,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "13:31 - 2nd Quarter",
-            "shortDetail": "13:31 - 2nd"
+            "detail": "0:02 - 2nd Quarter",
+            "shortDetail": "0:02 - 2nd"
           },
           "broadcasts": [
             "ESPN+"
@@ -3077,7 +3077,7 @@
               "short": "Washington",
               "abbreviation": "WASH",
               "homeAway": "home",
-              "score": "14",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png"
             },
             {
@@ -3094,11 +3094,167 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "13:47 - 2nd Quarter",
-            "shortDetail": "13:47 - 2nd"
+            "detail": "1:28 - 2nd Quarter",
+            "shortDetail": "1:28 - 2nd"
           },
           "broadcasts": [
             "BTN"
+          ]
+        },
+        {
+          "id": "401868075",
+          "date": "2026-09-20T00:00Z",
+          "name": "San Diego Toreros at Cal Poly Mustangs",
+          "shortName": "USD @ CP",
+          "venue": "Mustang Memorial Field at Spanos Stadium",
+          "city": "San Luis Obispo",
+          "state": "CA",
+          "teams": [
+            {
+              "id": "13",
+              "name": "Cal Poly Mustangs",
+              "short": "Cal Poly",
+              "abbreviation": "CP",
+              "homeAway": "home",
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png"
+            },
+            {
+              "id": "301",
+              "name": "San Diego Toreros",
+              "short": "San Diego",
+              "abbreviation": "USD",
+              "homeAway": "away",
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/301.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "3:48 - 1st Quarter",
+            "shortDetail": "3:48 - 1st"
+          },
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
+          "id": "401868124",
+          "date": "2026-09-20T00:00Z",
+          "name": "Northern Arizona Lumberjacks at Utah Tech Trailblazers",
+          "shortName": "NAU @ UTU",
+          "venue": "Greater Zion Stadium",
+          "city": "Saint George",
+          "state": "UT",
+          "teams": [
+            {
+              "id": "3101",
+              "name": "Utah Tech Trailblazers",
+              "short": "Utah Tech",
+              "abbreviation": "UTU",
+              "homeAway": "home",
+              "score": "0",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png"
+            },
+            {
+              "id": "2464",
+              "name": "Northern Arizona Lumberjacks",
+              "short": "N Arizona",
+              "abbreviation": "NAU",
+              "homeAway": "away",
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "2:57 - 1st Quarter",
+            "shortDetail": "2:57 - 1st"
+          },
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
+          "id": "401868130",
+          "date": "2026-09-20T00:00Z",
+          "name": "Northeastern State RiverHawks at Northern Colorado Bears",
+          "shortName": "NEOS @ UNCO",
+          "venue": "Nottingham Field",
+          "city": "Greeley",
+          "state": "CO",
+          "teams": [
+            {
+              "id": "2458",
+              "name": "Northern Colorado Bears",
+              "short": "N Colorado",
+              "abbreviation": "UNCO",
+              "homeAway": "home",
+              "score": "0",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png"
+            },
+            {
+              "id": "196",
+              "name": "Northeastern State RiverHawks",
+              "short": "NE State",
+              "abbreviation": "NEOS",
+              "homeAway": "away",
+              "score": "0",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/196.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "End of 1st Quarter",
+            "shortDetail": "End of 1st"
+          },
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
+          "id": "401868168",
+          "date": "2026-09-20T00:00Z",
+          "name": "Northwestern State Demons at Weber State Wildcats",
+          "shortName": "NWST @ WEB",
+          "venue": "Stewart Stadium",
+          "city": "Ogden",
+          "state": "UT",
+          "teams": [
+            {
+              "id": "2692",
+              "name": "Weber State Wildcats",
+              "short": "Weber St",
+              "abbreviation": "WEB",
+              "homeAway": "home",
+              "score": "21",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
+            },
+            {
+              "id": "2466",
+              "name": "Northwestern State Demons",
+              "short": "N'Western St",
+              "abbreviation": "NWST",
+              "homeAway": "away",
+              "score": "0",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2466.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "9:37 - 1st Quarter",
+            "shortDetail": "9:37 - 1st"
+          },
+          "broadcasts": [
+            "ESPN+"
           ]
         },
         {
@@ -3214,162 +3370,6 @@
             "name": "STATUS_FINAL",
             "detail": "Final",
             "shortDetail": "Final"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
-          "id": "401868075",
-          "date": "2026-09-20T00:00Z",
-          "name": "San Diego Toreros at Cal Poly Mustangs",
-          "shortName": "USD @ CP",
-          "venue": "Mustang Memorial Field at Spanos Stadium",
-          "city": "San Luis Obispo",
-          "state": "CA",
-          "teams": [
-            {
-              "id": "13",
-              "name": "Cal Poly Mustangs",
-              "short": "Cal Poly",
-              "abbreviation": "CP",
-              "homeAway": "home",
-              "score": "0",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png"
-            },
-            {
-              "id": "301",
-              "name": "San Diego Toreros",
-              "short": "San Diego",
-              "abbreviation": "USD",
-              "homeAway": "away",
-              "score": "0",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/301.png"
-            }
-          ],
-          "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 19th at 8:00 PM EDT",
-            "shortDetail": "9/19 - 8:00 PM EDT"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
-          "id": "401868124",
-          "date": "2026-09-20T00:00Z",
-          "name": "Northern Arizona Lumberjacks at Utah Tech Trailblazers",
-          "shortName": "NAU @ UTU",
-          "venue": "Greater Zion Stadium",
-          "city": "Saint George",
-          "state": "UT",
-          "teams": [
-            {
-              "id": "3101",
-              "name": "Utah Tech Trailblazers",
-              "short": "Utah Tech",
-              "abbreviation": "UTU",
-              "homeAway": "home",
-              "score": "0",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png"
-            },
-            {
-              "id": "2464",
-              "name": "Northern Arizona Lumberjacks",
-              "short": "N Arizona",
-              "abbreviation": "NAU",
-              "homeAway": "away",
-              "score": "0",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
-            }
-          ],
-          "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 19th at 8:00 PM EDT",
-            "shortDetail": "9/19 - 8:00 PM EDT"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
-          "id": "401868130",
-          "date": "2026-09-20T00:00Z",
-          "name": "Northeastern State RiverHawks at Northern Colorado Bears",
-          "shortName": "NEOS @ UNCO",
-          "venue": "Nottingham Field",
-          "city": "Greeley",
-          "state": "CO",
-          "teams": [
-            {
-              "id": "2458",
-              "name": "Northern Colorado Bears",
-              "short": "N Colorado",
-              "abbreviation": "UNCO",
-              "homeAway": "home",
-              "score": "0",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png"
-            },
-            {
-              "id": "196",
-              "name": "Northeastern State RiverHawks",
-              "short": "NE State",
-              "abbreviation": "NEOS",
-              "homeAway": "away",
-              "score": "0",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/196.png"
-            }
-          ],
-          "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 19th at 8:00 PM EDT",
-            "shortDetail": "9/19 - 8:00 PM EDT"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
-          "id": "401868168",
-          "date": "2026-09-20T00:00Z",
-          "name": "Northwestern State Demons at Weber State Wildcats",
-          "shortName": "NWST @ WEB",
-          "venue": "Stewart Stadium",
-          "city": "Ogden",
-          "state": "UT",
-          "teams": [
-            {
-              "id": "2692",
-              "name": "Weber State Wildcats",
-              "short": "Weber St",
-              "abbreviation": "WEB",
-              "homeAway": "home",
-              "score": "0",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
-            },
-            {
-              "id": "2466",
-              "name": "Northwestern State Demons",
-              "short": "N'Western St",
-              "abbreviation": "NWST",
-              "homeAway": "away",
-              "score": "0",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2466.png"
-            }
-          ],
-          "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 19th at 8:00 PM EDT",
-            "shortDetail": "9/19 - 8:00 PM EDT"
           },
           "broadcasts": [
             "ESPN+"
