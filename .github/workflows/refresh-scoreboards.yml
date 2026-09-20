@@ -1,6 +1,8 @@
 name: Refresh Griz HQ Scoreboards
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
   schedule:
     - cron: "17 * * * *"
 permissions:
