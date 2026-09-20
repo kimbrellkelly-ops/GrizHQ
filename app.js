@@ -1611,9 +1611,26 @@ loadGrizData();
     const vals=profile?.moreNumbers || [["STATUS","UPDATING","Opponent-specific stats will appear here"],["ROSTER","OFFICIAL","Use the opponent roster for current players"],["SCHEDULE","CURRENT","Latest official schedule"],["FILM","AVAILABLE","Recent game video and pressers"],["NEWS","LIVE","Latest opponent coverage"],["RESEARCH","OPEN","Official stats and roster"]];
     cards.forEach((card,i)=>{const x=vals[i]; if(!x) return; text(card.querySelector('span'),x[0]); text(card.querySelector('b'),x[1]); text(card.querySelector('small'),x[2]);});
   }
-  function renderDossier(data){
+  function renderHomeNextGame(data, game){
+  const section=document.querySelector('.v2-home-next'); if(!section || !game || !game.opponent) return;
+  const schedule=Array.isArray(data?.schedule)?data.schedule:[];
+  const mr=montanaRecord(schedule);
+  const opponent=String(game.opponent);
+  const location=String(game.location||'').toLowerCase();
+  const away=location.includes('away') || location.includes('at ');
+  const venue=NEXT_GAME_VENUES[opponent] || (away ? 'Away at '+opponent : 'Washington-Grizzly Stadium, Missoula, MT');
+  const matchup=section.querySelector('.v2-home-next-match');
+  if(matchup){
+    const cols=matchup.children;
+    if(cols[0]){ text(cols[0].querySelector('strong'),'GRIZ'); const s=cols[0].querySelector('small'); if(s) s.innerHTML='MONTANA<br>'+esc(mr.record); }
+    if(cols[1]){ const b=cols[1].querySelector('b'); if(b) b.innerHTML=esc(game.date||'')+'<br>'+esc(game.time||''); const s=cols[1].querySelector('small'); if(s) s.textContent=String(game.tv||game.stream||'ESPN+'); }
+    if(cols[2]){ text(cols[2].querySelector('strong'),opponent.toUpperCase()); const s=cols[2].querySelector('small'); if(s) s.innerHTML=esc(opponent.toUpperCase())+'<br>UP NEXT'; }
+  }
+  const p=section.querySelector(':scope > p'); if(p) text(p,venue);
+}
+function renderDossier(data){
     const game=chooseNext(data); if(!game || !game.opponent) return;
-    const opponent=String(game.opponent), upper=opponent.toUpperCase(), profile=profileFor(opponent), resources=resourceSet(opponent,data);
+    const opponent=String(game.opponent), upper=opponent.toUpperCase(), profile=profileFor(opponent), resources=resourceSet(opponent,data); renderHomeNextGame(data,game);
     const schedule=Array.isArray(data.schedule)?data.schedule:[], mr=montanaRecord(schedule);
     const nextSection=document.getElementById('next-up'); if(!nextSection) return;
     nextSection.dataset.nextOpponent=opponent; nextSection.dataset.opponent=opponent;
