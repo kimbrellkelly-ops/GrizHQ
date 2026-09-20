@@ -164,6 +164,88 @@ def parse_rankings(url):
             rows.sort(); return [x[1] for x in rows[:25]]
     raise RuntimeError("Could not parse rankings")
 
+BIG_SKY_STANDINGS_URL = "https://bigskyconf.com/standings.aspx?path=football"
+BIG_SKY_STATS_URL = "https://bigskyconf.com/stats.aspx?path=football&year=2026"
+BIG_SKY_NEWS_RSS = "https://bigskyconf.com/rss?path=football"
+
+def _clean_text(value):
+    return re.sub(r"\s+", " ", BeautifulSoup(str(value or ""), "html.parser").get_text(" ", strip=True)).strip()
+
+def parse_big_sky_standings():
+    soup = BeautifulSoup(get(BIG_SKY_STANDINGS_URL), "html.parser")
+    for table in soup.find_all("table"):
+        headers = [_clean_text(x.get_text(" ", strip=True)).lower() for x in table.find_all("th")]
+        if "school" not in headers or "big sky" not in headers or "overall" not in headers:
+            continue
+        school_i=headers.index("school"); conf_i=headers.index("big sky"); overall_i=headers.index("overall")
+        home_i=headers.index("home") if "home" in headers else -1
+        away_i=headers.index("away") if "away" in headers else -1
+        conf_pf_i=headers.index("conf pf-pa") if "conf pf-pa" in headers else -1
+        pf_i=headers.index("pf-pa") if "pf-pa" in headers else -1
+        conf_streak_i=headers.index("conf streak") if "conf streak" in headers else -1
+        overall_streak_i=headers.index("overall streak") if "overall streak" in headers else -1
+        out=[]
+        for rank,tr in enumerate(table.find_all("tr")[1:],1):
+            cells=[_clean_text(x.get_text(" ",strip=True)) for x in tr.find_all(["td","th"])]
+            if len(cells)<=max(school_i,conf_i,overall_i): continue
+            school=cells[school_i]
+            if not school or school.lower()=="school": continue
+            out.append({"rank":rank,"team":school,"conference_record":cells[conf_i],"overall_record":cells[overall_i],
+                        "home":cells[home_i] if home_i>=0 and home_i<len(cells) else "",
+                        "away":cells[away_i] if away_i>=0 and away_i<len(cells) else "",
+                        "conference_points":cells[conf_pf_i] if conf_pf_i>=0 and conf_pf_i<len(cells) else "",
+                        "points":cells[pf_i] if pf_i>=0 and pf_i<len(cells) else "",
+                        "conference_streak":cells[conf_streak_i] if conf_streak_i>=0 and conf_streak_i<len(cells) else "",
+                        "overall_streak":cells[overall_streak_i] if overall_streak_i>=0 and overall_streak_i<len(cells) else ""})
+        if len(out)>=10: return out
+    raise RuntimeError("Could not parse Big Sky standings")
+
+def _parse_big_sky_leader_table(table):
+    headers=[_clean_text(x.get_text(" ",strip=True)).lower() for x in table.find_all("th")]
+    if "player" not in headers: return None
+    rows=[]
+    for tr in table.find_all("tr")[1:]:
+        cells=[_clean_text(x.get_text(" ",strip=True)) for x in tr.find_all(["td","th"])]
+        if len(cells)>=2: rows.append(cells)
+    pi=headers.index("player")
+    def idx(*names):
+        for name in names:
+            if name in headers: return headers.index(name)
+        return -1
+    vi=idx("yds","total","pts"); ti=idx("td","sacks"); ri=idx("avg/g","effic","pts/g")
+    out=[]
+    for row in rows[:5]:
+        raw=row[pi]; m=re.match(r"(.+?)\s*\(([^)]+)\)$",raw)
+        out.append({"name":m.group(1).strip() if m else raw,"school":m.group(2).strip() if m else "",
+                    "value":row[vi] if vi>=0 and vi<len(row) else "",
+                    "secondary":row[ti] if ti>=0 and ti<len(row) else "",
+                    "rate":row[ri] if ri>=0 and ri<len(row) else ""})
+    return out
+
+def parse_big_sky_leaders():
+    soup=BeautifulSoup(get(BIG_SKY_STATS_URL),"html.parser")
+    wanted=["rushing","passing","receiving","scoring","tackles","sacks"]; found={}
+    for table in soup.find_all("table"):
+        headers=[_clean_text(x.get_text(" ",strip=True)).lower() for x in table.find_all("th")]
+        if "player" not in headers: continue
+        heading=table.find_previous(["h4","h5","h3"])
+        label=_clean_text(heading.get_text(" ",strip=True)).lower() if heading else ""
+        if label=="scoring (td)": label="scoring"
+        if label in wanted and label not in found: found[label]=_parse_big_sky_leader_table(table)
+    if len(found)<5: raise RuntimeError("Could not parse Big Sky individual leaders")
+    return found
+
+def parse_big_sky_news():
+    try:
+        root=ET.fromstring(get(BIG_SKY_NEWS_RSS)); out=[]
+        for item in root.findall(".//item")[:10]:
+            title=_clean_text(item.findtext("title")); link=_clean_text(item.findtext("link"))
+            pub=_clean_text(item.findtext("pubDate")); desc=_clean_text(item.findtext("description"))[:220]
+            if title and link: out.append({"title":title,"url":link,"date":pub,"description":desc})
+        return out
+    except Exception as exc:
+        print("Big Sky RSS failed:",exc); return []
+
 def parse_news():
     root=ET.fromstring(get("https://gogriz.com/rss?path=football")); out=[]
     for item in root.findall(".//item")[:8]:
@@ -481,6 +563,13 @@ def main():
 
     try: new["news"]=parse_news()
     except Exception as e: print("News update failed:",e)
+
+    try: new["big_sky_standings"]=parse_big_sky_standings()
+    except Exception as e: print("Big Sky standings update failed:",e)
+    try: new["big_sky_leaders"]=parse_big_sky_leaders()
+    except Exception as e: print("Big Sky leaders update failed:",e)
+    try: new["big_sky_news"]=parse_big_sky_news()
+    except Exception as e: print("Big Sky news update failed:",e)
 
     try: new["stats"]=parse_stats(old, sched if "sched" in locals() else None)
     except Exception as e: print("Stats update failed:",e)
