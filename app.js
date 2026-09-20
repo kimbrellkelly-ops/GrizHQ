@@ -312,7 +312,7 @@ async function loadGrizData() {
     // Use a verified poll snapshot immediately so the page never falls back
     // to the stale preseason data.json rankings. Each entry carries the
     // previous-week rank, so movement is calculated/displayed correctly.
-    applyRankingSnapshotFallback();
+    applyRankingSnapshotFallback(d);
     const rankDate = document.getElementById("rankings-date");
 
     try {
@@ -324,7 +324,7 @@ async function loadGrizData() {
       if (liveBadge) liveBadge.textContent = "LIVE FCS COACHES POLL";
     } catch (rankErr) {
       console.warn("Live FCS rankings unavailable; using verified ranking snapshot", rankErr);
-      applyRankingSnapshotFallback();
+      applyRankingSnapshotFallback(d);
     }
     const updated = document.getElementById("data-updated");
     if (updated) updated.textContent = d.updated ? "DATA UPDATED " + new Date(d.updated).toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"}) : "";
@@ -388,13 +388,28 @@ const RANKING_SNAPSHOTS = {
     ].map(([rank,name,previous]) => ({rank,name,previous,delta:previous==null?null:previous-rank,record:""}))
   }
 };
-function applyRankingSnapshotFallback() {
-  renderPoll("coaches-poll", RANKING_SNAPSHOTS.coaches.teams);
-  renderPoll("media-poll", RANKING_SNAPSHOTS.media.teams);
-  window.__grizMediaPoll = RANKING_SNAPSHOTS.media.teams;
-  renderMiniPolls(RANKING_SNAPSHOTS.coaches.teams, RANKING_SNAPSHOTS.media.teams);
+function applyRankingSnapshotFallback(data) {
+  // Prefer the automatically refreshed data.json snapshot. The ESPN browser
+  // endpoint can temporarily lag the official weekly poll; when that happens
+  // never fall back all the way to the hard-coded preseason snapshot.
+  const coachesRaw = Array.isArray(data?.coaches_poll) ? data.coaches_poll : [];
+  const mediaRaw = Array.isArray(data?.media_poll) ? data.media_poll : [];
+  const coaches = coachesRaw.length >= 25
+    ? coachesRaw.map((name, i) => normalizeRankingEntry(name, i + 1))
+    : RANKING_SNAPSHOTS.coaches.teams;
+  const media = mediaRaw.length >= 25
+    ? mediaRaw.map((name, i) => normalizeRankingEntry(name, i + 1))
+    : RANKING_SNAPSHOTS.media.teams;
+  renderPoll("coaches-poll", coaches);
+  renderPoll("media-poll", media);
+  window.__grizMediaPoll = media;
+  renderMiniPolls(coaches, media);
   const rankDate = document.getElementById("rankings-date");
-  if (rankDate) rankDate.textContent = `Coaches • ${RANKING_SNAPSHOTS.coaches.date} | Stats Perform • ${RANKING_SNAPSHOTS.media.date}`;
+  if (rankDate) {
+    const coachesDate = data?.rankings_date || RANKING_SNAPSHOTS.coaches.date;
+    const mediaDate = data?.rankings_date || RANKING_SNAPSHOTS.media.date;
+    rankDate.textContent = `Coaches • ${coachesDate} | Stats Perform • ${mediaDate}`;
+  }
 }
 
 function rankingMovementMarkup(t) {
