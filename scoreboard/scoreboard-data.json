@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-20T02:25:00.373545+00:00",
+  "generatedAt": "2026-09-20T03:25:24.937272+00:00",
   "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [
     {
@@ -2885,78 +2885,195 @@
           ]
         },
         {
-          "id": "401867984",
-          "date": "2026-09-19T23:30Z",
-          "name": "South Carolina State Bulldogs at Furman Paladins",
-          "shortName": "SCST @ FUR",
-          "venue": "Paladin Stadium",
-          "city": "Greenville",
-          "state": "SC",
+          "id": "401866639",
+          "date": "2026-09-19T17:00Z",
+          "name": "Harvard Crimson at New Hampshire Wildcats",
+          "shortName": "HARV @ UNH",
+          "venue": "Wildcat Stadium (NH)",
+          "city": "Durham",
+          "state": "NH",
           "teams": [
             {
-              "id": "231",
-              "name": "Furman Paladins",
-              "short": "Furman",
-              "abbreviation": "FUR",
+              "id": "160",
+              "name": "New Hampshire Wildcats",
+              "short": "New Hampshire",
+              "abbreviation": "UNH",
               "homeAway": "home",
-              "score": "9",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/231.png"
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/160.png"
             },
             {
-              "id": "2569",
-              "name": "South Carolina State Bulldogs",
-              "short": "SC State",
-              "abbreviation": "SCST",
+              "id": "108",
+              "name": "Harvard Crimson",
+              "short": "Harvard",
+              "abbreviation": "HARV",
               "homeAway": "away",
-              "score": "17",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2569.png"
+              "score": "31",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/108.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "11:32 - 4th Quarter",
-            "shortDetail": "11:32 - 4th"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
+          },
+          "broadcasts": [
+            "FloSports"
+          ]
+        },
+        {
+          "id": "401858448",
+          "date": "2026-09-19T18:00Z",
+          "name": "Southern Illinois Salukis at Illinois Fighting Illini",
+          "shortName": "SIU @ ILL",
+          "venue": "Gies Memorial Stadium",
+          "city": "Champaign",
+          "state": "IL",
+          "teams": [
+            {
+              "id": "356",
+              "name": "Illinois Fighting Illini",
+              "short": "Illinois",
+              "abbreviation": "ILL",
+              "homeAway": "home",
+              "score": "48",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png"
+            },
+            {
+              "id": "79",
+              "name": "Southern Illinois Salukis",
+              "short": "S Illinois",
+              "abbreviation": "SIU",
+              "homeAway": "away",
+              "score": "10",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
+          },
+          "broadcasts": [
+            "Peacock"
+          ]
+        },
+        {
+          "id": "401868023",
+          "date": "2026-09-19T18:00Z",
+          "name": "Yale Bulldogs at Holy Cross Crusaders",
+          "shortName": "YALE @ HC",
+          "venue": "Fitton Field",
+          "city": "Worcester",
+          "state": "MA",
+          "teams": [
+            {
+              "id": "107",
+              "name": "Holy Cross Crusaders",
+              "short": "Holy Cross",
+              "abbreviation": "HC",
+              "homeAway": "home",
+              "score": "28",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/107.png"
+            },
+            {
+              "id": "43",
+              "name": "Yale Bulldogs",
+              "short": "Yale",
+              "abbreviation": "YALE",
+              "homeAway": "away",
+              "score": "38",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/43.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
           },
           "broadcasts": [
             "ESPN+"
           ]
         },
         {
-          "id": "401868124",
-          "date": "2026-09-20T00:00Z",
-          "name": "Northern Arizona Lumberjacks at Utah Tech Trailblazers",
-          "shortName": "NAU @ UTU",
-          "venue": "Greater Zion Stadium",
-          "city": "Saint George",
-          "state": "UT",
+          "id": "401866634",
+          "date": "2026-09-19T18:30Z",
+          "name": "Rhode Island Rams at Stony Brook Seawolves",
+          "shortName": "URI @ STBK",
+          "venue": "Kenneth P. LaValle Stadium",
+          "city": "Stony Brook",
+          "state": "NY",
           "teams": [
             {
-              "id": "3101",
-              "name": "Utah Tech Trailblazers",
-              "short": "Utah Tech",
-              "abbreviation": "UTU",
+              "id": "2619",
+              "name": "Stony Brook Seawolves",
+              "short": "Stony Brook",
+              "abbreviation": "STBK",
               "homeAway": "home",
-              "score": "17",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png"
+              "score": "56",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2619.png"
             },
             {
-              "id": "2464",
-              "name": "Northern Arizona Lumberjacks",
-              "short": "N Arizona",
-              "abbreviation": "NAU",
+              "id": "227",
+              "name": "Rhode Island Rams",
+              "short": "Rhode Island",
+              "abbreviation": "URI",
               "homeAway": "away",
-              "score": "21",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
+              "score": "24",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/227.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "15:00 - 4th Quarter",
-            "shortDetail": "15:00 - 4th"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
+          },
+          "broadcasts": [
+            "FloSports"
+          ]
+        },
+        {
+          "id": "401867846",
+          "date": "2026-09-19T19:00Z",
+          "name": "Eastern Illinois Panthers at Illinois State Redbirds",
+          "shortName": "EIU @ ILST",
+          "venue": "Hancock Stadium",
+          "city": "Normal",
+          "state": "IL",
+          "teams": [
+            {
+              "id": "2287",
+              "name": "Illinois State Redbirds",
+              "short": "Illinois St",
+              "abbreviation": "ILST",
+              "homeAway": "home",
+              "score": "49",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png"
+            },
+            {
+              "id": "2197",
+              "name": "Eastern Illinois Panthers",
+              "short": "E Illinois",
+              "abbreviation": "EIU",
+              "homeAway": "away",
+              "score": "13",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2197.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
           },
           "broadcasts": [
             "ESPN+"
@@ -2977,7 +3094,7 @@
               "short": "Prairie View",
               "abbreviation": "PV",
               "homeAway": "home",
-              "score": "3",
+              "score": "10",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2504.png"
             },
             {
@@ -2986,7 +3103,7 @@
               "short": "SF Austin",
               "abbreviation": "SFA",
               "homeAway": "away",
-              "score": "24",
+              "score": "31",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2617.png"
             }
           ],
@@ -2994,8 +3111,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "1:05 - 3rd Quarter",
-            "shortDetail": "1:05 - 3rd"
+            "detail": "0:19 - 4th Quarter",
+            "shortDetail": "0:19 - 4th"
           },
           "broadcasts": [
             "SWAC TV"
@@ -3016,7 +3133,7 @@
               "short": "Boise St",
               "abbreviation": "BOIS",
               "homeAway": "home",
-              "score": "0",
+              "score": "21",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png"
             },
             {
@@ -3025,7 +3142,7 @@
               "short": "South Dakota",
               "abbreviation": "SDAK",
               "homeAway": "away",
-              "score": "0",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/233.png"
             }
           ],
@@ -3033,8 +3150,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "8:36 - 1st Quarter",
-            "shortDetail": "8:36 - 1st"
+            "detail": "2:04 - 2nd Quarter",
+            "shortDetail": "2:04 - 2nd"
           },
           "broadcasts": [
             "CBSSN"
@@ -3055,7 +3172,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "home",
-              "score": "7",
+              "score": "21",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             },
             {
@@ -3072,11 +3189,50 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "7:03 - 1st Quarter",
-            "shortDetail": "7:03 - 1st"
+            "detail": "1:37 - 2nd Quarter",
+            "shortDetail": "1:37 - 2nd"
           },
           "broadcasts": [
             "ESPN+"
+          ]
+        },
+        {
+          "id": "401860886",
+          "date": "2026-09-20T03:00Z",
+          "name": "Montana Grizzlies at Oregon State Beavers",
+          "shortName": "MONT @ ORST",
+          "venue": "Reser Stadium",
+          "city": "Corvallis",
+          "state": "OR",
+          "teams": [
+            {
+              "id": "204",
+              "name": "Oregon State Beavers",
+              "short": "Oregon St",
+              "abbreviation": "ORST",
+              "homeAway": "home",
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
+            },
+            {
+              "id": "149",
+              "name": "Montana Grizzlies",
+              "short": "Montana",
+              "abbreviation": "MONT",
+              "homeAway": "away",
+              "score": "0",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "7:20 - 1st Quarter",
+            "shortDetail": "7:20 - 1st"
+          },
+          "broadcasts": [
+            "USA Net"
           ]
         }
       ],
@@ -3092,28 +3248,13 @@
           "record": "1-0"
         },
         {
-          "rank": 3,
-          "team": "Montana",
-          "record": "1-0"
-        },
-        {
           "rank": 4,
           "team": "Tarleton State",
           "record": "1-0"
         },
         {
-          "rank": 5,
-          "team": "Illinois State",
-          "record": "1-0"
-        },
-        {
           "rank": 6,
           "team": "North Dakota",
-          "record": "1-0"
-        },
-        {
-          "rank": 8,
-          "team": "Rhode Island",
           "record": "1-0"
         },
         {
@@ -3147,24 +3288,19 @@
           "record": "1-0"
         },
         {
-          "rank": 19,
-          "team": "Yale",
-          "record": "0-0"
+          "rank": 18,
+          "team": "South Carolina State",
+          "record": "1-0"
+        },
+        {
+          "rank": 20,
+          "team": "Northern Arizona",
+          "record": "1-0"
         },
         {
           "rank": 21,
           "team": "William & Mary",
           "record": "1-0"
-        },
-        {
-          "rank": 24,
-          "team": "Southern Illinois",
-          "record": ""
-        },
-        {
-          "rank": 25,
-          "team": "Harvard",
-          "record": ""
         }
       ],
       "bigSkyGames": [
@@ -3208,123 +3344,6 @@
           ]
         },
         {
-          "id": "401858459",
-          "date": "2026-09-19T23:15Z",
-          "name": "Eastern Washington Eagles at Washington Huskies",
-          "shortName": "EWU @ WASH",
-          "venue": "Husky Stadium",
-          "city": "Seattle",
-          "state": "WA",
-          "teams": [
-            {
-              "id": "264",
-              "name": "Washington Huskies",
-              "short": "Washington",
-              "abbreviation": "WASH",
-              "homeAway": "home",
-              "score": "41",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png"
-            },
-            {
-              "id": "331",
-              "name": "Eastern Washington Eagles",
-              "short": "E Washington",
-              "abbreviation": "EWU",
-              "homeAway": "away",
-              "score": "16",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "3:45 - 4th Quarter",
-            "shortDetail": "3:45 - 4th"
-          },
-          "broadcasts": [
-            "BTN"
-          ]
-        },
-        {
-          "id": "401868075",
-          "date": "2026-09-20T00:00Z",
-          "name": "San Diego Toreros at Cal Poly Mustangs",
-          "shortName": "USD @ CP",
-          "venue": "Mustang Memorial Field at Spanos Stadium",
-          "city": "San Luis Obispo",
-          "state": "CA",
-          "teams": [
-            {
-              "id": "13",
-              "name": "Cal Poly Mustangs",
-              "short": "Cal Poly",
-              "abbreviation": "CP",
-              "homeAway": "home",
-              "score": "28",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png"
-            },
-            {
-              "id": "301",
-              "name": "San Diego Toreros",
-              "short": "San Diego",
-              "abbreviation": "USD",
-              "homeAway": "away",
-              "score": "35",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/301.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "13:42 - 4th Quarter",
-            "shortDetail": "13:42 - 4th"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
-          "id": "401868124",
-          "date": "2026-09-20T00:00Z",
-          "name": "Northern Arizona Lumberjacks at Utah Tech Trailblazers",
-          "shortName": "NAU @ UTU",
-          "venue": "Greater Zion Stadium",
-          "city": "Saint George",
-          "state": "UT",
-          "teams": [
-            {
-              "id": "3101",
-              "name": "Utah Tech Trailblazers",
-              "short": "Utah Tech",
-              "abbreviation": "UTU",
-              "homeAway": "home",
-              "score": "17",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png"
-            },
-            {
-              "id": "2464",
-              "name": "Northern Arizona Lumberjacks",
-              "short": "N Arizona",
-              "abbreviation": "NAU",
-              "homeAway": "away",
-              "score": "21",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "End of 4th Quarter",
-            "shortDetail": "End of 4th"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
           "id": "401868130",
           "date": "2026-09-20T00:00Z",
           "name": "Northeastern State RiverHawks at Northern Colorado Bears",
@@ -3356,47 +3375,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "15:00 - 4th Quarter",
-            "shortDetail": "15:00 - 4th"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
-          "id": "401868168",
-          "date": "2026-09-20T00:00Z",
-          "name": "Northwestern State Demons at Weber State Wildcats",
-          "shortName": "NWST @ WEB",
-          "venue": "Stewart Stadium",
-          "city": "Ogden",
-          "state": "UT",
-          "teams": [
-            {
-              "id": "2692",
-              "name": "Weber State Wildcats",
-              "short": "Weber St",
-              "abbreviation": "WEB",
-              "homeAway": "home",
-              "score": "42",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
-            },
-            {
-              "id": "2466",
-              "name": "Northwestern State Demons",
-              "short": "N'Western St",
-              "abbreviation": "NWST",
-              "homeAway": "away",
-              "score": "6",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2466.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "6:25 - 3rd Quarter",
-            "shortDetail": "6:25 - 3rd"
+            "detail": "1:55 - 4th Quarter",
+            "shortDetail": "1:55 - 4th"
           },
           "broadcasts": [
             "ESPN+"
@@ -3417,7 +3397,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "home",
-              "score": "7",
+              "score": "21",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             },
             {
@@ -3434,11 +3414,50 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "7:03 - 1st Quarter",
-            "shortDetail": "7:03 - 1st"
+            "detail": "1:37 - 2nd Quarter",
+            "shortDetail": "1:37 - 2nd"
           },
           "broadcasts": [
             "ESPN+"
+          ]
+        },
+        {
+          "id": "401860886",
+          "date": "2026-09-20T03:00Z",
+          "name": "Montana Grizzlies at Oregon State Beavers",
+          "shortName": "MONT @ ORST",
+          "venue": "Reser Stadium",
+          "city": "Corvallis",
+          "state": "OR",
+          "teams": [
+            {
+              "id": "204",
+              "name": "Oregon State Beavers",
+              "short": "Oregon St",
+              "abbreviation": "ORST",
+              "homeAway": "home",
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
+            },
+            {
+              "id": "149",
+              "name": "Montana Grizzlies",
+              "short": "Montana",
+              "abbreviation": "MONT",
+              "homeAway": "away",
+              "score": "0",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "7:20 - 1st Quarter",
+            "shortDetail": "7:20 - 1st"
+          },
+          "broadcasts": [
+            "USA Net"
           ]
         },
         {
@@ -3560,42 +3579,159 @@
           ]
         },
         {
-          "id": "401860886",
-          "date": "2026-09-20T03:00Z",
-          "name": "Montana Grizzlies at Oregon State Beavers",
-          "shortName": "MONT @ ORST",
-          "venue": "Reser Stadium",
-          "city": "Corvallis",
-          "state": "OR",
+          "id": "401858459",
+          "date": "2026-09-19T23:15Z",
+          "name": "Eastern Washington Eagles at Washington Huskies",
+          "shortName": "EWU @ WASH",
+          "venue": "Husky Stadium",
+          "city": "Seattle",
+          "state": "WA",
           "teams": [
             {
-              "id": "204",
-              "name": "Oregon State Beavers",
-              "short": "Oregon St",
-              "abbreviation": "ORST",
+              "id": "264",
+              "name": "Washington Huskies",
+              "short": "Washington",
+              "abbreviation": "WASH",
               "homeAway": "home",
-              "score": "0",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
+              "score": "48",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png"
             },
             {
-              "id": "149",
-              "name": "Montana Grizzlies",
-              "short": "Montana",
-              "abbreviation": "MONT",
+              "id": "331",
+              "name": "Eastern Washington Eagles",
+              "short": "E Washington",
+              "abbreviation": "EWU",
               "homeAway": "away",
-              "score": "0",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
+              "score": "16",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png"
             }
           ],
           "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 19th at 11:00 PM EDT",
-            "shortDetail": "9/19 - 11:00 PM EDT"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
           },
           "broadcasts": [
-            "USA Net"
+            "BTN"
+          ]
+        },
+        {
+          "id": "401868075",
+          "date": "2026-09-20T00:00Z",
+          "name": "San Diego Toreros at Cal Poly Mustangs",
+          "shortName": "USD @ CP",
+          "venue": "Mustang Memorial Field at Spanos Stadium",
+          "city": "San Luis Obispo",
+          "state": "CA",
+          "teams": [
+            {
+              "id": "13",
+              "name": "Cal Poly Mustangs",
+              "short": "Cal Poly",
+              "abbreviation": "CP",
+              "homeAway": "home",
+              "score": "35",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png"
+            },
+            {
+              "id": "301",
+              "name": "San Diego Toreros",
+              "short": "San Diego",
+              "abbreviation": "USD",
+              "homeAway": "away",
+              "score": "38",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/301.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
+          },
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
+          "id": "401868124",
+          "date": "2026-09-20T00:00Z",
+          "name": "Northern Arizona Lumberjacks at Utah Tech Trailblazers",
+          "shortName": "NAU @ UTU",
+          "venue": "Greater Zion Stadium",
+          "city": "Saint George",
+          "state": "UT",
+          "teams": [
+            {
+              "id": "3101",
+              "name": "Utah Tech Trailblazers",
+              "short": "Utah Tech",
+              "abbreviation": "UTU",
+              "homeAway": "home",
+              "score": "23",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png"
+            },
+            {
+              "id": "2464",
+              "name": "Northern Arizona Lumberjacks",
+              "short": "N Arizona",
+              "abbreviation": "NAU",
+              "homeAway": "away",
+              "score": "35",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
+          },
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
+          "id": "401868168",
+          "date": "2026-09-20T00:00Z",
+          "name": "Northwestern State Demons at Weber State Wildcats",
+          "shortName": "NWST @ WEB",
+          "venue": "Stewart Stadium",
+          "city": "Ogden",
+          "state": "UT",
+          "teams": [
+            {
+              "id": "2692",
+              "name": "Weber State Wildcats",
+              "short": "Weber St",
+              "abbreviation": "WEB",
+              "homeAway": "home",
+              "score": "49",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
+            },
+            {
+              "id": "2466",
+              "name": "Northwestern State Demons",
+              "short": "N'Western St",
+              "abbreviation": "NWST",
+              "homeAway": "away",
+              "score": "20",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2466.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
+          },
+          "broadcasts": [
+            "ESPN+"
           ]
         }
       ]
