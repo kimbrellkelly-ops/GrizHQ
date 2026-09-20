@@ -1,8 +1,6 @@
 name: Refresh Griz HQ Scoreboards
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
   schedule:
     - cron: "17 * * * *"
 permissions:
@@ -32,6 +30,11 @@ jobs:
           assert len(d.get('rankings',[])) >= 25, 'rankings missing'
           assert len(d.get('weeks',[])) == 13, 'week count invalid'
           assert all('fcsEventCount' in w and 'bigSkyEventCount' in w and 'fcsTop25Games' in w for w in d['weeks']), 'week schema invalid'
+          ids=[]
+          for w in d['weeks']:
+              for g in (w.get('fcsTop25Games',[]) + w.get('bigSkyGames',[])):
+                  if g.get('id') is not None: ids.append(str(g['id']))
+          assert len(ids) == len(set(ids)), 'duplicate game IDs across cache sections'
 
           now=datetime.now(timezone.utc)
           today=now.date().isoformat()
