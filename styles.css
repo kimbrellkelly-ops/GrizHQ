@@ -3547,9 +3547,11 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 #big-sky[data-tab="bigsky"] .bigsky-matchup .bigsky-team.away{justify-content:flex-start;text-align:left}
 #big-sky[data-tab="bigsky"] .bigsky-matchup .bigsky-team.home{justify-content:flex-end;text-align:right}
 #big-sky[data-tab="bigsky"] .bigsky-team-logo{
-  width:58px;
-  height:58px;
-  object-fit:contain;
+  width:58px !important;
+  height:58px !important;
+  max-width:58px !important;
+  max-height:58px !important;
+  object-fit:contain !important;
   flex:0 0 58px;
 }
 #big-sky[data-tab="bigsky"] .bigsky-team-copy{min-width:0}
