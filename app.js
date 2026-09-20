@@ -1355,6 +1355,7 @@ function renderBigSkyHub(d){
   const leaders=d.big_sky_leaders&&typeof d.big_sky_leaders==="object"?d.big_sky_leaders:{};
   const news=Array.isArray(d.big_sky_news)?d.big_sky_news:[];
   const coaches=Array.isArray(d.coaches_poll)?d.coaches_poll:[];
+  const statsPerform=Array.isArray(d.fcs_rankings)?d.fcs_rankings:[];
   if(updatedEl) updatedEl.textContent=standings.length ? "UPDATED "+new Date(d.big_sky_hub_updated||d.updated||Date.now()).toLocaleDateString("en-US",{month:"short",day:"numeric"}) : "DATA UNAVAILABLE";
   if(standingsEl){
     let out='<div class="bigsky-standing-row bigsky-standing-head"><span>#</span><span>TEAM</span><span>BIG SKY</span><span>OVERALL</span><span>PF-PA</span><span>STREAK</span></div>';
@@ -1382,11 +1383,17 @@ function renderBigSkyHub(d){
   }
   if(rankedEl){
     const ranked=[];
-    coaches.forEach(function(name,i){
-      const found=standings.some(function(s){return bigSkyNormTeam(s.team)===bigSkyNormTeam(name);});
-      if(found) ranked.push({name:name,rank:i+1});
-    });
-    rankedEl.innerHTML=ranked.length?ranked.map(function(x){return '<div class="bigsky-ranked-row"><span>#'+x.rank+'</span><b>'+escapeHtml(x.name)+'</b><small>AFCA COACHES POLL</small></div>';}).join(""):'<div class="bigsky-empty">No ranked Big Sky teams listed.</div>';
+    const addRanked=function(list,poll){
+      list.forEach(function(item,i){
+        const name=typeof item==="string"?item:(item&&item.name)||"";
+        const rank=typeof item==="string"?i+1:(item&&item.rank)||i+1;
+        const found=standings.some(function(s){return bigSkyNormTeam(s.team)===bigSkyNormTeam(name);});
+        if(found && !ranked.some(function(x){return x.poll===poll && bigSkyNormTeam(x.name)===bigSkyNormTeam(name);})){ranked.push({name:name,rank:rank,poll:poll});}
+      });
+    };
+    addRanked(coaches,"AFCA COACHES POLL");
+    addRanked(statsPerform,"STATS PERFORM POLL");
+    rankedEl.innerHTML=ranked.length?ranked.map(function(x){return '<div class="bigsky-ranked-row"><span>#'+x.rank+'</span><b>'+escapeHtml(x.name)+'</b><small>'+escapeHtml(x.poll)+'</small></div>';}).join(""):'<div class="bigsky-empty">No ranked Big Sky teams listed.</div>';
   }
   if(newsEl){
     newsEl.innerHTML=news.length?news.slice(0,6).map(function(n){return '<a class="bigsky-news-item" href="'+escapeHtml(n.url||"#")+'" target="_blank" rel="noopener"><small>'+escapeHtml(n.date||"BIG SKY FOOTBALL")+'</small><b>'+escapeHtml(n.title)+'</b><span>'+escapeHtml(n.description||"")+'</span></a>';}).join(""):'<div class="bigsky-empty">Conference news is temporarily unavailable.</div>';
