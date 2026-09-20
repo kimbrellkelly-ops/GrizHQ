@@ -2,7 +2,7 @@
 """Authoritative Griz HQ scoreboard cache builder.
 
 Only this program writes scoreboard/scoreboard-data.json.
-Sources: ESPN FCS group 81 and ESPN Big Sky group 20.
+Sources: ESPN team schedules for the ranked FCS Top 25 and Big Sky teams.
 The browser never fetches ESPN directly.
 """
 from __future__ import annotations
@@ -142,7 +142,6 @@ def build():
      r=ranked_team_match(t.get('name') or t.get('short'),rankings)
      if r:played_ranks.add(norm(r['team']))
   top.sort(key=lambda e:e.get('date',''))
-  byes=[r for r in rankings if norm(r['team']) not in played_ranks]
   for e in big_sky_events:
    d=str(e.get('date',''))[:10]
    if start<=d<=end and e.get('id') not in bs_seen:bs_seen.add(e.get('id'));bs.append(e)
