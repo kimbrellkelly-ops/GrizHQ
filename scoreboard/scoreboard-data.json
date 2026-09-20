@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-20T06:29:07.560105+00:00",
+  "generatedAt": "2026-09-20T07:23:52.799400+00:00",
   "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [
     {
@@ -3118,51 +3118,17 @@
             "ESPN+",
             "Scripps Sports"
           ]
-        },
-        {
-          "id": "401860886",
-          "date": "2026-09-20T03:00Z",
-          "name": "Montana Grizzlies at Oregon State Beavers",
-          "shortName": "MONT @ ORST",
-          "venue": "Reser Stadium",
-          "city": "Corvallis",
-          "state": "OR",
-          "teams": [
-            {
-              "id": "204",
-              "name": "Oregon State Beavers",
-              "short": "Oregon St",
-              "abbreviation": "ORST",
-              "homeAway": "home",
-              "score": "52",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
-            },
-            {
-              "id": "149",
-              "name": "Montana Grizzlies",
-              "short": "Montana",
-              "abbreviation": "MONT",
-              "homeAway": "away",
-              "score": "17",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final"
-          },
-          "broadcasts": [
-            "USA Net"
-          ]
         }
       ],
       "fcsTop25Byes": [
         {
           "rank": 2,
           "team": "South Dakota State",
+          "record": "1-0"
+        },
+        {
+          "rank": 3,
+          "team": "Montana",
           "record": "1-0"
         },
         {
@@ -3274,45 +3240,6 @@
           },
           "broadcasts": [
             "BTN"
-          ]
-        },
-        {
-          "id": "401860886",
-          "date": "2026-09-20T03:00Z",
-          "name": "Montana Grizzlies at Oregon State Beavers",
-          "shortName": "MONT @ ORST",
-          "venue": "Reser Stadium",
-          "city": "Corvallis",
-          "state": "OR",
-          "teams": [
-            {
-              "id": "204",
-              "name": "Oregon State Beavers",
-              "short": "Oregon St",
-              "abbreviation": "ORST",
-              "homeAway": "home",
-              "score": "52",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
-            },
-            {
-              "id": "149",
-              "name": "Montana Grizzlies",
-              "short": "Montana",
-              "abbreviation": "MONT",
-              "homeAway": "away",
-              "score": "17",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final"
-          },
-          "broadcasts": [
-            "USA Net"
           ]
         },
         {
@@ -3665,6 +3592,45 @@
           },
           "broadcasts": [
             "ESPN+"
+          ]
+        },
+        {
+          "id": "401860886",
+          "date": "2026-09-20T03:00Z",
+          "name": "Montana Grizzlies at Oregon State Beavers",
+          "shortName": "MONT @ ORST",
+          "venue": "Reser Stadium",
+          "city": "Corvallis",
+          "state": "OR",
+          "teams": [
+            {
+              "id": "204",
+              "name": "Oregon State Beavers",
+              "short": "Oregon St",
+              "abbreviation": "ORST",
+              "homeAway": "home",
+              "score": "52",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
+            },
+            {
+              "id": "149",
+              "name": "Montana Grizzlies",
+              "short": "Montana",
+              "abbreviation": "MONT",
+              "homeAway": "away",
+              "score": "17",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
+          },
+          "broadcasts": [
+            "USA Net"
           ]
         }
       ]
