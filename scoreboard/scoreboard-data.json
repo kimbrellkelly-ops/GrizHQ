@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-20T05:23:44.199909+00:00",
+  "generatedAt": "2026-09-20T06:29:07.560105+00:00",
   "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [
     {
@@ -3120,84 +3120,6 @@
           ]
         },
         {
-          "id": "401860885",
-          "date": "2026-09-20T02:00Z",
-          "name": "South Dakota Coyotes at Boise State Broncos",
-          "shortName": "SDAK @ BOIS",
-          "venue": "Albertsons Stadium",
-          "city": "Boise",
-          "state": "ID",
-          "teams": [
-            {
-              "id": "68",
-              "name": "Boise State Broncos",
-              "short": "Boise St",
-              "abbreviation": "BOIS",
-              "homeAway": "home",
-              "score": "38",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png"
-            },
-            {
-              "id": "233",
-              "name": "South Dakota Coyotes",
-              "short": "South Dakota",
-              "abbreviation": "SDAK",
-              "homeAway": "away",
-              "score": "24",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/233.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "1:14 - 4th Quarter",
-            "shortDetail": "1:14 - 4th"
-          },
-          "broadcasts": [
-            "CBSSN"
-          ]
-        },
-        {
-          "id": "401868164",
-          "date": "2026-09-20T02:00Z",
-          "name": "Stetson Hatters at UC Davis Aggies",
-          "shortName": "STET @ UCD",
-          "venue": "UC Davis Health Stadium",
-          "city": "Davis",
-          "state": "CA",
-          "teams": [
-            {
-              "id": "302",
-              "name": "UC Davis Aggies",
-              "short": "UC Davis",
-              "abbreviation": "UCD",
-              "homeAway": "home",
-              "score": "45",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
-            },
-            {
-              "id": "56",
-              "name": "Stetson Hatters",
-              "short": "Stetson",
-              "abbreviation": "STET",
-              "homeAway": "away",
-              "score": "7",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "0:33 - 4th Quarter",
-            "shortDetail": "0:33 - 4th"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
           "id": "401860886",
           "date": "2026-09-20T03:00Z",
           "name": "Montana Grizzlies at Oregon State Beavers",
@@ -3212,7 +3134,7 @@
               "short": "Oregon St",
               "abbreviation": "ORST",
               "homeAway": "home",
-              "score": "42",
+              "score": "52",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
             },
             {
@@ -3221,16 +3143,16 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "away",
-              "score": "3",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "6:46 - 3rd Quarter",
-            "shortDetail": "6:46 - 3rd"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
           },
           "broadcasts": [
             "USA Net"
@@ -3256,6 +3178,16 @@
         {
           "rank": 9,
           "team": "Youngstown State",
+          "record": "1-0"
+        },
+        {
+          "rank": 10,
+          "team": "South Dakota",
+          "record": "1-0"
+        },
+        {
+          "rank": 11,
+          "team": "UC Davis",
           "record": "1-0"
         },
         {
@@ -3345,45 +3277,6 @@
           ]
         },
         {
-          "id": "401868164",
-          "date": "2026-09-20T02:00Z",
-          "name": "Stetson Hatters at UC Davis Aggies",
-          "shortName": "STET @ UCD",
-          "venue": "UC Davis Health Stadium",
-          "city": "Davis",
-          "state": "CA",
-          "teams": [
-            {
-              "id": "302",
-              "name": "UC Davis Aggies",
-              "short": "UC Davis",
-              "abbreviation": "UCD",
-              "homeAway": "home",
-              "score": "45",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
-            },
-            {
-              "id": "56",
-              "name": "Stetson Hatters",
-              "short": "Stetson",
-              "abbreviation": "STET",
-              "homeAway": "away",
-              "score": "7",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "0:33 - 4th Quarter",
-            "shortDetail": "0:33 - 4th"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
           "id": "401860886",
           "date": "2026-09-20T03:00Z",
           "name": "Montana Grizzlies at Oregon State Beavers",
@@ -3398,7 +3291,7 @@
               "short": "Oregon St",
               "abbreviation": "ORST",
               "homeAway": "home",
-              "score": "42",
+              "score": "52",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
             },
             {
@@ -3407,16 +3300,16 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "away",
-              "score": "3",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "6:46 - 3rd Quarter",
-            "shortDetail": "6:46 - 3rd"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
           },
           "broadcasts": [
             "USA Net"
@@ -3722,6 +3615,45 @@
               "homeAway": "away",
               "score": "20",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2466.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
+          },
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
+          "id": "401868164",
+          "date": "2026-09-20T02:00Z",
+          "name": "Stetson Hatters at UC Davis Aggies",
+          "shortName": "STET @ UCD",
+          "venue": "UC Davis Health Stadium",
+          "city": "Davis",
+          "state": "CA",
+          "teams": [
+            {
+              "id": "302",
+              "name": "UC Davis Aggies",
+              "short": "UC Davis",
+              "abbreviation": "UCD",
+              "homeAway": "home",
+              "score": "45",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
+            },
+            {
+              "id": "56",
+              "name": "Stetson Hatters",
+              "short": "Stetson",
+              "abbreviation": "STET",
+              "homeAway": "away",
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png"
             }
           ],
           "status": {
