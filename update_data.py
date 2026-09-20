@@ -8,6 +8,13 @@ from xml.etree import ElementTree as ET
 
 HEADERS = {"User-Agent": "GrizHQ/1.0 (+https://grizhq.com)"}
 DATA = Path("data.json")
+
+
+def get(url):
+    """Fetch a public source with the Griz HQ user-agent and fail loudly on HTTP errors."""
+    r = requests.get(url, headers=HEADERS, timeout=30)
+    r.raise_for_status()
+    return r.text
 NEXT_GAME_VENUES = {
     "Oregon State": "Reser Stadium, Corvallis, Ore.",
     "UC Davis": "UC Davis Health Stadium, Davis, Calif.",
