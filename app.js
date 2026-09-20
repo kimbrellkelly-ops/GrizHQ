@@ -1415,13 +1415,14 @@ function renderBigSkyHub(d){
     grizEl.innerHTML=griz?'<div class="bigsky-griz-record"><b>'+escapeHtml(griz.overall_record)+'</b><span>OVERALL</span><b>'+escapeHtml(griz.conference_record)+'</b><span>BIG SKY</span></div><div class="bigsky-griz-next"><small>NEXT GAME</small><strong>'+escapeHtml(next.opponent||"—")+'</strong><span>'+escapeHtml([next.date,next.time].filter(Boolean).join(" • ")||"Schedule pending")+'</span></div>':'<div class="bigsky-empty">Montana standings unavailable.</div>';
   }
 }
-(async function loadBigSkyHub(){
+async function loadBigSkyHub(){
   try{
     const r=await fetch("data.json?ts="+Date.now(),{cache:"no-store"});
     const d=await r.json();
     renderBigSkyHub(d);
   }catch(e){console.warn("Big Sky hub data unavailable",e);}
-})();
+}
+loadBigSkyHub();
 
 
 
@@ -1492,8 +1493,9 @@ function renderStatList(id, rows, situational=false) {
 setInterval(async () => {
   try {
     await loadHomepageNews();
-loadGrizData();
+    loadGrizData();
     await renderBigSkyAndOpponent();
+    await loadBigSkyHub();
   } catch (e) {
     console.warn("Automatic Griz HQ refresh failed", e);
   }
