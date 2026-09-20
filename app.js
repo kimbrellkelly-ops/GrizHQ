@@ -1374,7 +1374,7 @@ function renderBigSkyHub(d){
   if(playersEl){
     if(playersUpdatedEl) playersUpdatedEl.textContent=players.length ? "WEEK "+escapeHtml(players[0].week||"") : "AWAITING WEEKLY HONORS";
     playersEl.innerHTML=players.length ? players.map(function(p){
-      const category=String(p.category||"PLAYER OF THE WEEK").replace(/^Co-/i,"");
+      const category=String(p.category||"PLAYER OF THE WEEK");
       return '<article class="bigsky-pow-card"><div class="bigsky-pow-category">'+escapeHtml(category)+'</div><div class="bigsky-pow-player">'+escapeHtml(p.player||"—")+'</div><div class="bigsky-pow-school">'+escapeHtml(p.school||"")+(p.position?' • '+escapeHtml(p.position):"")+'</div><p>'+escapeHtml(p.summary||"")+'</p></article>';
     }).join("") : '<div class="bigsky-empty">Weekly honors are temporarily unavailable.</div>';
   }
