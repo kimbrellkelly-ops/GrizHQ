@@ -15,7 +15,7 @@ ROOT=Path(__file__).resolve().parent; DATA=ROOT/'data.json'; OUT=ROOT/'scoreboar
 WEEKS=[('2026-08-27','2026-08-30','WEEK 0 • AUG 27–30'),('2026-09-03','2026-09-06','WEEK 1 • SEP 3–6'),('2026-09-10','2026-09-13','WEEK 2 • SEP 10–13'),('2026-09-17','2026-09-20','WEEK 3 • SEP 17–20'),('2026-09-24','2026-09-27','WEEK 4 • SEP 24–27'),('2026-10-01','2026-10-04','WEEK 5 • OCT 1–4'),('2026-10-08','2026-10-11','WEEK 6 • OCT 8–11'),('2026-10-15','2026-10-18','WEEK 7 • OCT 15–18'),('2026-10-22','2026-10-25','WEEK 8 • OCT 22–25'),('2026-10-29','2026-11-01','WEEK 9 • OCT 29–NOV 1'),('2026-11-05','2026-11-08','WEEK 10 • NOV 5–8'),('2026-11-12','2026-11-15','WEEK 11 • NOV 12–15'),('2026-11-19','2026-11-22','WEEK 12 • NOV 19–22')]
 BIG_SKY=['Montana','Montana State','Idaho','Idaho State','Eastern Washington','Northern Arizona','Northern Colorado','Portland State','Weber State','Southern Utah','Utah Tech','Cal Poly','UC Davis']
 HEADERS={'Accept':'application/json, text/plain, */*','Origin':'https://www.espn.com','Referer':'https://www.espn.com/'}
-BASES=['https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard','https://site.web.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard']
+ROOTS=['https://site.api.espn.com/apis/site/v2/sports/football/college-football','https://site.web.api.espn.com/apis/site/v2/sports/football/college-football']
 def norm(s):return re.sub(r'[^a-z0-9]','',str(s or '').lower())
 def load_rankings():
  d=json.loads(DATA.read_text(encoding='utf-8')); raw=d.get('fcs_top25') or d.get('fcs_top20') or []
@@ -29,30 +29,21 @@ def load_rankings():
 def daterange(a,b):
  d=date.fromisoformat(a);e=date.fromisoformat(b)
  while d<=e:yield d.isoformat();d+=timedelta(days=1)
-def request(params):
+def request_json(path,params=None):
  last=None
- for base in BASES:
+ for root in ROOTS:
   try:
-   r=requests.get(base,params=params,headers=HEADERS,timeout=30);r.raise_for_status();p=r.json()
-   if isinstance(p,dict) and isinstance(p.get('events'),list):return p['events']
-   last=RuntimeError('ESPN response missing events list')
+   r=requests.get(root+path,params=params or {},headers=HEADERS,timeout=30);r.raise_for_status();p=r.json()
+   if isinstance(p,dict):return p
+   last=RuntimeError('ESPN response was not an object')
   except Exception as e:last=e
  raise RuntimeError(f'ESPN request failed: {last}')
-def fetch_all_week(start,end):
- out=[];seen=set();success=0
- for d in daterange(start,end):
-  try:
-   events=request({'dates':d.replace('-',''),'limit':1000})
-   success+=1
-   for e in events:
-    k=str(e.get('id') or json.dumps(e,sort_keys=True))
-    if k not in seen:seen.add(k);out.append(e)
-  except Exception as ex:print(f'all {d}: {ex}')
- if success==0:raise RuntimeError(f'No successful ESPN responses during {start}..{end}')
- return out
-
+def request(params):
+ p=request_json('/scoreboard',params)
+ if not isinstance(p.get('events'),list):raise RuntimeError('ESPN scoreboard response missing events list')
+ return p['events']
 def fetch_group_week(start,end,group):
- # Daily group requests are deliberate: date-scoped ESPN requests expose the full slate.
+ # Daily group requests are retained for Big Sky/FCS event-count auditing.
  out=[];seen=set();success=0
  for d in daterange(start,end):
   try:
@@ -63,6 +54,39 @@ def fetch_group_week(start,end,group):
     if k not in seen:seen.add(k);out.append(e)
   except Exception as ex:print(f'{group} {d}: {ex}')
  if success==0:raise RuntimeError(f'No successful ESPN responses for group {group} during {start}..{end}')
+ return out
+def team_catalog():
+ p=request_json('/teams',{'limit':700})
+ rows=[]
+ try:rows=p['sports'][0]['leagues'][0]['teams']
+ except Exception:rows=[]
+ return [x.get('team') or x for x in rows]
+def team_for_rank(name,catalog):
+ wanted=canonical(name)
+ candidates=[]
+ for t in catalog:
+  for field in ('location','displayName','name','shortDisplayName'):
+   value=t.get(field) or ''
+   k=canonical(value)
+   if k==wanted:candidates.append((100000+len(k),t));break
+   if k.startswith(wanted):candidates.append((len(wanted),t))
+ if not candidates:return None
+ return max(candidates,key=lambda x:x[0])[1]
+def fetch_ranked_team_events(rankings):
+ catalog=team_catalog();out=[];seen=set()
+ for r in rankings:
+  team=team_for_rank(r['team'],catalog)
+  if not team:raise RuntimeError(f'Could not resolve ESPN team for ranked school: {r["team"]}')
+  tid=str(team.get('id') or '')
+  if not tid:raise RuntimeError(f'ESPN team has no ID: {r["team"]}')
+  try:
+   p=request_json(f'/teams/{tid}/schedule',{'season':2026,'seasontype':2})
+   events=p.get('events') or []
+  except Exception as ex:
+   raise RuntimeError(f'ESPN schedule failed for {r["team"]} ({tid}): {ex}')
+  for e in events:
+   k=str(e.get('id') or json.dumps(e,sort_keys=True))
+   if k not in seen:seen.add(k);out.append(compact(e))
  return out
 def compact(e):
  c=(e.get('competitions') or [{}])[0];v=c.get('venue') or {};addr=v.get('address') or {};st=(c.get('status') or {}).get('type') or {};teams=[]
@@ -118,22 +142,18 @@ def big_sky_expected(data,start,end):
   if start<=d<=end and r.get('team') and r.get('opponent'):out.add('|'.join(sorted([canonical(r['team']),canonical(r['opponent'])])))
  return out
 def build():
- data=json.loads(DATA.read_text(encoding='utf-8'));rankings,rank_date=load_rankings();result={'season':2026,'generatedAt':datetime.now(timezone.utc).isoformat(),'source':'ESPN daily calendar + ESPN Big Sky group 20','rankings':rankings,'rankingsDate':rank_date,'bigSkyTeams':BIG_SKY,'weeks':[]}
+ data=json.loads(DATA.read_text(encoding='utf-8'));rankings,rank_date=load_rankings();ranked_events=fetch_ranked_team_events(rankings);result={'season':2026,'generatedAt':datetime.now(timezone.utc).isoformat(),'source':'ESPN ranked-team schedules + ESPN Big Sky group 20','rankings':rankings,'rankingsDate':rank_date,'bigSkyTeams':BIG_SKY,'weeks':[]}
  for i,(start,end,label) in enumerate(WEEKS):
-  all_events=[compact(x) for x in fetch_all_week(start,end)]
   fcs=[compact(x) for x in fetch_group_week(start,end,'81')]
   bs=[compact(x) for x in fetch_group_week(start,end,'20')]
-  # Build Top 25 cards from the unfiltered ESPN calendar so FCS-vs-FBS games
-  # (and any games omitted by ESPN's FCS grouping) are still captured.
   top=[];seen=set();played_ranks=set()
-  for e in all_events:
-   matched=[]
-   for t in e.get('teams',[]):
-    r=ranked_team_match(t.get('name') or t.get('short'),rankings)
-    if r: matched.append(r)
-   if matched and e.get('id') not in seen:
-    seen.add(e.get('id'));top.append(e)
-    played_ranks.update(norm(r['team']) for r in matched)
+  for e in ranked_events:
+   d=str(e.get('date',''))[:10]
+   if start<=d<=end and e.get('id') not in seen:
+    top.append(e);seen.add(e.get('id'))
+    for t in e.get('teams',[]):
+     r=ranked_team_match(t.get('name') or t.get('short'),rankings)
+     if r:played_ranks.add(norm(r['team']))
   top.sort(key=lambda e:e.get('date',''))
   byes=[r for r in rankings if norm(r['team']) not in played_ranks]
   expected=big_sky_expected(data,start,end)
