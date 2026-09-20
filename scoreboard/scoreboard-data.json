@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-20T00:32:52.403120+00:00",
+  "generatedAt": "2026-09-20T01:24:03.354327+00:00",
   "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [
     {
@@ -2768,45 +2768,6 @@
       "bigSkyEventCount": 11,
       "fcsTop25Games": [
         {
-          "id": "401868009",
-          "date": "2026-09-19T22:00Z",
-          "name": "Fordham Rams at William & Mary Tribe",
-          "shortName": "FOR @ W&M",
-          "venue": "Walter J. Zable Stadium",
-          "city": "Williamsburg",
-          "state": "VA",
-          "teams": [
-            {
-              "id": "2729",
-              "name": "William & Mary Tribe",
-              "short": "William & Mary",
-              "abbreviation": "W&M",
-              "homeAway": "home",
-              "score": "14",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2729.png"
-            },
-            {
-              "id": "2230",
-              "name": "Fordham Rams",
-              "short": "Fordham",
-              "abbreviation": "FOR",
-              "homeAway": "away",
-              "score": "38",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2230.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "15:00 - 4th Quarter",
-            "shortDetail": "15:00 - 4th"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
           "id": "401867896",
           "date": "2026-09-19T23:00Z",
           "name": "Youngstown State Penguins at South Dakota State Jackrabbits",
@@ -2821,7 +2782,7 @@
               "short": "S Dakota St",
               "abbreviation": "SDST",
               "homeAway": "home",
-              "score": "17",
+              "score": "24",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png"
             },
             {
@@ -2830,7 +2791,7 @@
               "short": "Youngstown St",
               "abbreviation": "YSU",
               "homeAway": "away",
-              "score": "10",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png"
             }
           ],
@@ -2838,8 +2799,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "0:10 - 2nd Quarter",
-            "shortDetail": "0:10 - 2nd"
+            "detail": "4:31 - 3rd Quarter",
+            "shortDetail": "4:31 - 3rd"
           },
           "broadcasts": [
             "ESPN+",
@@ -2861,7 +2822,7 @@
               "short": "West Florida",
               "abbreviation": "UWF",
               "homeAway": "home",
-              "score": "7",
+              "score": "16",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/110242.png"
             },
             {
@@ -2878,8 +2839,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "5:03 - 2nd Quarter",
-            "shortDetail": "5:03 - 2nd"
+            "detail": "1:23 - 3rd Quarter",
+            "shortDetail": "1:23 - 3rd"
           },
           "broadcasts": [
             "ESPN+"
@@ -2900,7 +2861,7 @@
               "short": "Tarleton St",
               "abbreviation": "TAR",
               "homeAway": "home",
-              "score": "17",
+              "score": "31",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2627.png"
             },
             {
@@ -2917,8 +2878,86 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "0:02 - 2nd Quarter",
-            "shortDetail": "0:02 - 2nd"
+            "detail": "4:17 - 3rd Quarter",
+            "shortDetail": "4:17 - 3rd"
+          },
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
+          "id": "401858452",
+          "date": "2026-09-19T23:15Z",
+          "name": "North Dakota Fighting Hawks at Nebraska Cornhuskers",
+          "shortName": "UND @ NEB",
+          "venue": "Memorial Stadium (Lincoln, NE)",
+          "city": "Lincoln",
+          "state": "NE",
+          "teams": [
+            {
+              "id": "158",
+              "name": "Nebraska Cornhuskers",
+              "short": "Nebraska",
+              "abbreviation": "NEB",
+              "homeAway": "home",
+              "score": "24",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png"
+            },
+            {
+              "id": "155",
+              "name": "North Dakota Fighting Hawks",
+              "short": "North Dakota",
+              "abbreviation": "UND",
+              "homeAway": "away",
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "5:23 - 3rd Quarter",
+            "shortDetail": "5:23 - 3rd"
+          },
+          "broadcasts": [
+            "BTN"
+          ]
+        },
+        {
+          "id": "401867984",
+          "date": "2026-09-19T23:30Z",
+          "name": "South Carolina State Bulldogs at Furman Paladins",
+          "shortName": "SCST @ FUR",
+          "venue": "Paladin Stadium",
+          "city": "Greenville",
+          "state": "SC",
+          "teams": [
+            {
+              "id": "231",
+              "name": "Furman Paladins",
+              "short": "Furman",
+              "abbreviation": "FUR",
+              "homeAway": "home",
+              "score": "3",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/231.png"
+            },
+            {
+              "id": "2569",
+              "name": "South Carolina State Bulldogs",
+              "short": "SC State",
+              "abbreviation": "SCST",
+              "homeAway": "away",
+              "score": "17",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2569.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime"
           },
           "broadcasts": [
             "ESPN+"
@@ -2939,11 +2978,6 @@
         {
           "rank": 5,
           "team": "Illinois State",
-          "record": "1-0"
-        },
-        {
-          "rank": 6,
-          "team": "North Dakota",
           "record": "1-0"
         },
         {
@@ -2987,11 +3021,6 @@
           "record": "1-0"
         },
         {
-          "rank": 18,
-          "team": "South Carolina State",
-          "record": "1-0"
-        },
-        {
           "rank": 19,
           "team": "Yale",
           "record": "0-0"
@@ -2999,6 +3028,11 @@
         {
           "rank": 20,
           "team": "Northern Arizona",
+          "record": "1-0"
+        },
+        {
+          "rank": 21,
+          "team": "William & Mary",
           "record": "1-0"
         },
         {
@@ -3077,7 +3111,7 @@
               "short": "Washington",
               "abbreviation": "WASH",
               "homeAway": "home",
-              "score": "28",
+              "score": "31",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png"
             },
             {
@@ -3086,7 +3120,7 @@
               "short": "E Washington",
               "abbreviation": "EWU",
               "homeAway": "away",
-              "score": "10",
+              "score": "13",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png"
             }
           ],
@@ -3094,8 +3128,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "1:28 - 2nd Quarter",
-            "shortDetail": "1:28 - 2nd"
+            "detail": "8:37 - 3rd Quarter",
+            "shortDetail": "8:37 - 3rd"
           },
           "broadcasts": [
             "BTN"
@@ -3116,7 +3150,7 @@
               "short": "Cal Poly",
               "abbreviation": "CP",
               "homeAway": "home",
-              "score": "7",
+              "score": "21",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png"
             },
             {
@@ -3125,7 +3159,7 @@
               "short": "San Diego",
               "abbreviation": "USD",
               "homeAway": "away",
-              "score": "7",
+              "score": "27",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/301.png"
             }
           ],
@@ -3133,8 +3167,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "3:48 - 1st Quarter",
-            "shortDetail": "3:48 - 1st"
+            "detail": "0:06 - 2nd Quarter",
+            "shortDetail": "0:06 - 2nd"
           },
           "broadcasts": [
             "ESPN+"
@@ -3164,7 +3198,7 @@
               "short": "N Arizona",
               "abbreviation": "NAU",
               "homeAway": "away",
-              "score": "7",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
             }
           ],
@@ -3172,8 +3206,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "2:57 - 1st Quarter",
-            "shortDetail": "2:57 - 1st"
+            "detail": "End of 2nd Quarter",
+            "shortDetail": "End of 2nd"
           },
           "broadcasts": [
             "ESPN+"
@@ -3194,7 +3228,7 @@
               "short": "N Colorado",
               "abbreviation": "UNCO",
               "homeAway": "home",
-              "score": "0",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png"
             },
             {
@@ -3203,16 +3237,16 @@
               "short": "NE State",
               "abbreviation": "NEOS",
               "homeAway": "away",
-              "score": "0",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/196.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "End of 1st Quarter",
-            "shortDetail": "End of 1st"
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime"
           },
           "broadcasts": [
             "ESPN+"
@@ -3242,7 +3276,7 @@
               "short": "N'Western St",
               "abbreviation": "NWST",
               "homeAway": "away",
-              "score": "0",
+              "score": "6",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2466.png"
             }
           ],
@@ -3250,8 +3284,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "9:37 - 1st Quarter",
-            "shortDetail": "9:37 - 1st"
+            "detail": "3:25 - 2nd Quarter",
+            "shortDetail": "3:25 - 2nd"
           },
           "broadcasts": [
             "ESPN+"
