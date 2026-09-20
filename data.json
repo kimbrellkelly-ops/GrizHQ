@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20T21:25:42.148818+00:00",
+  "updated": "2026-09-20T22:25:42.421917+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-1",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-20T21:25:43.297816+00:00"
+    "checked_at": "2026-09-20T22:25:49.795355+00:00"
   },
   "resources": [
     {
@@ -2927,22 +2927,18 @@
     }
   ],
   "stats": {
-    "through": "Official cumulative source: https://gogriz.com/sports/football/stats/2026; pending box-score verification for 3 completed game(s)",
+    "through": "Official cumulative source: https://gogriz.com/sports/football/stats/2026; pending box-score verification for 0 completed game(s)",
     "coverage": {
-      "completed_games": 3,
+      "completed_games": 0,
       "verified_boxscores": 0,
       "source_of_truth": "https://gogriz.com/sports/football/stats/2026",
-      "pending": [
-        "Southern Utah",
-        "Drake",
-        "Utah Tech"
-      ]
+      "pending": []
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-16T05:27:34.223479+00:00",
+    "source_checked_at": "2026-09-20T22:25:48.006951+00:00",
     "team_summary": [
       {
-        "value": "3–0",
+        "value": "0–0",
         "label": "RECORD",
         "note": "Official GoGriz 2026 schedule"
       },
@@ -3159,35 +3155,7 @@
         }
       ]
     },
-    "game_log": [
-      {
-        "week": "Wk 1",
-        "opponent": "Southern Utah",
-        "result": "W 28-21",
-        "montana_yards": 338,
-        "opponent_yards": 510,
-        "turnovers": "—",
-        "notes": "Official box score verified"
-      },
-      {
-        "week": "Wk 2",
-        "opponent": "Drake",
-        "result": "W 45-10",
-        "montana_yards": 488,
-        "opponent_yards": 297,
-        "turnovers": "—",
-        "notes": "Official box score verified"
-      },
-      {
-        "week": "Wk 3",
-        "opponent": "Utah Tech",
-        "result": "W 35-14",
-        "montana_yards": 462,
-        "opponent_yards": 405,
-        "turnovers": "0",
-        "notes": "Gillman 147 rushing / 3 TD; Davis 12 rec / 151 yards"
-      }
-    ],
+    "game_log": [],
     "compare": [
       {
         "label": "Points / Game",
@@ -27641,7 +27609,7 @@
       "away": "2-0",
       "conference_points": "54-0",
       "points": "160-61",
-      "conference_streak": "W4",
+      "conference_streak": "W1",
       "overall_streak": "W4"
     },
     {
@@ -27653,7 +27621,7 @@
       "away": "0-1",
       "conference_points": "28-21",
       "points": "125-97",
-      "conference_streak": "L1",
+      "conference_streak": "W1",
       "overall_streak": "L1"
     },
     {
@@ -27665,7 +27633,7 @@
       "away": "1-1",
       "conference_points": "34-27",
       "points": "114-113",
-      "conference_streak": "W2",
+      "conference_streak": "W1",
       "overall_streak": "W2"
     },
     {
@@ -27689,7 +27657,7 @@
       "away": "0-1",
       "conference_points": "38-34",
       "points": "117-119",
-      "conference_streak": "L2",
+      "conference_streak": "W1",
       "overall_streak": "L2"
     },
     {
@@ -27725,7 +27693,7 @@
       "away": "0-3",
       "conference_points": "27-34",
       "points": "100-147",
-      "conference_streak": "L2",
+      "conference_streak": "L1",
       "overall_streak": "L2"
     },
     {
@@ -27737,7 +27705,7 @@
       "away": "0-1",
       "conference_points": "29-30",
       "points": "88-106",
-      "conference_streak": "W1",
+      "conference_streak": "L1",
       "overall_streak": "W1"
     },
     {
@@ -27749,7 +27717,7 @@
       "away": "0-3",
       "conference_points": "21-28",
       "points": "118-156",
-      "conference_streak": "L2",
+      "conference_streak": "L1",
       "overall_streak": "L2"
     },
     {
@@ -27761,7 +27729,7 @@
       "away": "0-2",
       "conference_points": "34-38",
       "points": "104-168",
-      "conference_streak": "L4",
+      "conference_streak": "L1",
       "overall_streak": "L4"
     },
     {
@@ -27773,7 +27741,7 @@
       "away": "0-2",
       "conference_points": "24-31",
       "points": "67-215",
-      "conference_streak": "L4",
+      "conference_streak": "L1",
       "overall_streak": "L4"
     },
     {
@@ -27785,7 +27753,7 @@
       "away": "0-2",
       "conference_points": "0-54",
       "points": "44-187",
-      "conference_streak": "L4",
+      "conference_streak": "L1",
       "overall_streak": "L4"
     }
   ],
@@ -27794,185 +27762,226 @@
       {
         "name": "Chalk,Floyd",
         "school": "Southern Utah",
-        "value": "545"
+        "value": "545",
+        "secondary": "6",
+        "rate": "136.3"
       },
       {
         "name": "Gillman,Eli",
         "school": "Montana",
-        "value": "409"
+        "value": "409",
+        "secondary": "7",
+        "rate": "102.3"
       },
       {
         "name": "Green,Jaden",
         "school": "Cal Poly",
-        "value": "343"
+        "value": "343",
+        "secondary": "1",
+        "rate": "85.8"
       },
       {
         "name": "Ferguson,Spencer",
         "school": "Weber State",
-        "value": "248"
+        "value": "248",
+        "secondary": "3",
+        "rate": "82.7"
       },
       {
         "name": "Jones,Adam",
         "school": "Montana State",
-        "value": "320"
+        "value": "320",
+        "secondary": "5",
+        "rate": "80.0"
       }
     ],
     "passing": [
       {
         "name": "Cooke,Jordan",
         "school": "Idaho State",
-        "value": "808"
+        "value": "808",
+        "secondary": "8",
+        "rate": "269.3"
       },
       {
         "name": "Ah Yat,Keali'i",
         "school": "Montana",
-        "value": "1008"
+        "value": "1008",
+        "secondary": "7",
+        "rate": "252.0"
       },
       {
         "name": "Wood,Joshua",
         "school": "Idaho",
-        "value": "1005"
+        "value": "1005",
+        "secondary": "3",
+        "rate": "251.3"
       },
       {
         "name": "Cleeland,Treynor",
         "school": "UC Davis",
-        "value": "995"
+        "value": "995",
+        "secondary": "9",
+        "rate": "248.8"
       },
       {
         "name": "Grigsby Jr.,Anthony",
         "school": "Cal Poly",
-        "value": "983"
+        "value": "983",
+        "secondary": "11",
+        "rate": "245.8"
       }
     ],
     "receiving": [
       {
         "name": "Gbatu, Jr.,Samuel",
         "school": "UC Davis",
-        "value": "468"
+        "value": "468",
+        "secondary": "4",
+        "rate": "117.0"
       },
       {
         "name": "Davis,Brooks",
         "school": "Montana",
-        "value": "446"
+        "value": "446",
+        "secondary": "2",
+        "rate": "111.5"
       },
       {
         "name": "Kjar,Noah",
         "school": "Weber State",
-        "value": "405"
+        "value": "405",
+        "secondary": "6",
+        "rate": "101.3"
       },
       {
         "name": "Harste,Tony",
         "school": "Idaho",
-        "value": "384"
+        "value": "384",
+        "secondary": "3",
+        "rate": "96.0"
       },
       {
         "name": "Anahu-Ambrosio,Zedekiah",
         "school": "Idaho State",
-        "value": "281"
-      }
-    ],
-    "tackles": [
-      {
-        "name": "D'Amato,Mikey",
-        "school": "Cal Poly",
-        "value": "48"
-      },
-      {
-        "name": "Smith,Bryce",
-        "school": "Eastern Washington",
-        "value": "42"
-      },
-      {
-        "name": "Miller,RL",
-        "school": "Cal Poly",
-        "value": "39"
-      },
-      {
-        "name": "Mayovsky,Myles",
-        "school": "Eastern Washington",
-        "value": "39"
-      },
-      {
-        "name": "Reynolds,Nathan",
-        "school": "Idaho State",
-        "value": "33"
-      }
-    ],
-    "sacks": [
-      {
-        "name": "Larsen,Gauge",
-        "school": "Eastern Washington",
-        "value": "2"
-      },
-      {
-        "name": "Fesili,Trehsyn",
-        "school": "Idaho State",
-        "value": "2.5"
-      },
-      {
-        "name": "Brock,Seth",
-        "school": "Montana State",
-        "value": "2"
-      },
-      {
-        "name": "Amey,Myles",
-        "school": "Southern Utah",
-        "value": "2.5"
-      },
-      {
-        "name": "Vaenuku,Mapa",
-        "school": "Weber State",
-        "value": "2"
+        "value": "281",
+        "secondary": "3",
+        "rate": "93.7"
       }
     ],
     "scoring": [
       {
         "name": "Gillman,Eli",
         "school": "Montana",
-        "value": "54"
+        "value": "54",
+        "secondary": "9",
+        "rate": "13.5"
       },
       {
         "name": "Lindberg,Mason",
         "school": "Idaho State",
-        "value": "36"
+        "value": "36",
+        "secondary": "0",
+        "rate": "12.0"
       },
       {
         "name": "Kjar,Noah",
         "school": "Weber State",
-        "value": "36"
+        "value": "36",
+        "secondary": "6",
+        "rate": "9.0"
       },
       {
         "name": "Wood,Joshua",
         "school": "Idaho",
-        "value": "36"
+        "value": "36",
+        "secondary": "6",
+        "rate": "9.0"
       },
       {
         "name": "Chalk,Floyd",
         "school": "Southern Utah",
-        "value": "36"
+        "value": "36",
+        "secondary": "6",
+        "rate": "9.0"
+      }
+    ],
+    "tackles": [
+      {
+        "name": "D'Amato,Mikey",
+        "school": "Cal Poly",
+        "value": "6",
+        "secondary": "0.5",
+        "rate": "12.0"
+      },
+      {
+        "name": "Reynolds,Nathan",
+        "school": "Idaho State",
+        "value": "8",
+        "secondary": "0",
+        "rate": "11.0"
+      },
+      {
+        "name": "Smith,Bryce",
+        "school": "Eastern Washington",
+        "value": "0",
+        "secondary": "0",
+        "rate": "10.5"
+      },
+      {
+        "name": "Daniels,Jackson",
+        "school": "Idaho State",
+        "value": "0",
+        "secondary": "0",
+        "rate": "10.3"
+      },
+      {
+        "name": "Miller,RL",
+        "school": "Cal Poly",
+        "value": "2",
+        "secondary": "0",
+        "rate": "9.8"
+      }
+    ],
+    "sacks": [
+      {
+        "name": "Larsen,Gauge",
+        "school": "Eastern Washington",
+        "value": "22",
+        "secondary": "",
+        "rate": "1.00"
+      },
+      {
+        "name": "Fesili,Trehsyn",
+        "school": "Idaho State",
+        "value": "13",
+        "secondary": "",
+        "rate": ".83"
+      },
+      {
+        "name": "Brock,Seth",
+        "school": "Montana State",
+        "value": "11",
+        "secondary": "",
+        "rate": ".67"
+      },
+      {
+        "name": "Amey,Myles",
+        "school": "Southern Utah",
+        "value": "16",
+        "secondary": "",
+        "rate": ".63"
+      },
+      {
+        "name": "Vaenuku,Mapa",
+        "school": "Weber State",
+        "value": "13",
+        "secondary": "",
+        "rate": ".50"
       }
     ]
   },
-  "big_sky_news": [
-    {
-      "title": "Football Weekly Preview | Week 3 Features Final Non-Conference Tune Ups Before Return to League Play",
-      "url": "https://bigskyconf.com/news/2026/9/16/football-weekly-preview-week-3-features-final-non-conference-tune-ups-before-return-to-league-play.aspx",
-      "date": "Sept. 16, 2026",
-      "description": "Big Sky football enters Week 3 with 12 teams in action, including the final non-conference game between league foes."
-    },
-    {
-      "title": "Football Weekly Preview | Five Big Sky Teams Look to Stay Perfect in Week 2",
-      "url": "https://bigskyconf.com/news/2026/9/9/football-weekly-preview-five-big-sky-teams-look-to-stay-perfect-in-week-2.aspx",
-      "date": "Sept. 9, 2026",
-      "description": "Idaho State and four other Big Sky teams entered Week 2 looking to keep perfect records alive."
-    },
-    {
-      "title": "Football Weekly Preview | Non-Conference Action Highlights Week 1 in Big Sky Football",
-      "url": "https://bigskyconf.com/news/2026/9/2/football-weekly-preview-non-conference-action-highlights-week-1-in-big-sky-football.aspx",
-      "date": "Sept. 2, 2026",
-      "description": "The Big Sky opened Week 1 with non-conference action after a dramatic Week 0."
-    }
-  ],
+  "big_sky_news": [],
   "big_sky_hub_updated": "2026-09-20T22:01:09.553Z",
   "big_sky_players_of_week": [
     {
