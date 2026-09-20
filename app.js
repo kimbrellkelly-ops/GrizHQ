@@ -1355,7 +1355,7 @@ function renderBigSkyHub(d){
   const leaders=d.big_sky_leaders&&typeof d.big_sky_leaders==="object"?d.big_sky_leaders:{};
   const news=Array.isArray(d.big_sky_news)?d.big_sky_news:[];
   const coaches=Array.isArray(d.coaches_poll)?d.coaches_poll:[];
-  if(updatedEl) updatedEl.textContent=standings.length ? "UPDATED "+new Date(d.updated||Date.now()).toLocaleDateString("en-US",{month:"short",day:"numeric"}) : "DATA UNAVAILABLE";
+  if(updatedEl) updatedEl.textContent=standings.length ? "UPDATED "+new Date(d.big_sky_hub_updated||d.updated||Date.now()).toLocaleDateString("en-US",{month:"short",day:"numeric"}) : "DATA UNAVAILABLE";
   if(standingsEl){
     let out='<div class="bigsky-standing-row bigsky-standing-head"><span>#</span><span>TEAM</span><span>BIG SKY</span><span>OVERALL</span><span>PF-PA</span><span>STREAK</span></div>';
     if(standings.length){
