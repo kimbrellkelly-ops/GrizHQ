@@ -48,7 +48,7 @@ def team_catalog():
  try:rows=p['sports'][0]['leagues'][0]['teams']
  except Exception:rows=[]
  return [x.get('team') or x for x in rows]
-ESPN_TEAM_ID_OVERRIDES={'West Florida':'110242'}
+ESPN_TEAM_ID_OVERRIDES={'West Florida':'110242','Utah Tech':'3101'}
 def team_for_rank(name,catalog):
  override=ESPN_TEAM_ID_OVERRIDES.get(name)
  if override:return {'id':override,'location':name,'displayName':name,'name':name}
