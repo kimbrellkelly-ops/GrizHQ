@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-20T01:24:03.354327+00:00",
+  "generatedAt": "2026-09-20T02:25:00.373545+00:00",
   "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [
     {
@@ -2768,160 +2768,120 @@
       "bigSkyEventCount": 11,
       "fcsTop25Games": [
         {
-          "id": "401867896",
-          "date": "2026-09-19T23:00Z",
-          "name": "Youngstown State Penguins at South Dakota State Jackrabbits",
-          "shortName": "YSU @ SDST",
-          "venue": "Dana J. Dykhouse Stadium",
-          "city": "Brookings",
-          "state": "SD",
+          "id": "401858228",
+          "date": "2026-09-19T16:00Z",
+          "name": "Mercer Bears at Georgia Tech Yellow Jackets",
+          "shortName": "MER @ GT",
+          "venue": "Bobby Dodd Stadium",
+          "city": "Atlanta",
+          "state": "GA",
           "teams": [
             {
-              "id": "2571",
-              "name": "South Dakota State Jackrabbits",
-              "short": "S Dakota St",
-              "abbreviation": "SDST",
+              "id": "59",
+              "name": "Georgia Tech Yellow Jackets",
+              "short": "Georgia Tech",
+              "abbreviation": "GT",
               "homeAway": "home",
-              "score": "24",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png"
+              "score": "44",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png"
             },
             {
-              "id": "2754",
-              "name": "Youngstown State Penguins",
-              "short": "Youngstown St",
-              "abbreviation": "YSU",
+              "id": "2382",
+              "name": "Mercer Bears",
+              "short": "Mercer",
+              "abbreviation": "MER",
               "homeAway": "away",
-              "score": "17",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png"
+              "score": "11",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2382.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "4:31 - 3rd Quarter",
-            "shortDetail": "4:31 - 3rd"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
           },
           "broadcasts": [
-            "ESPN+",
-            "Midco Sports Net"
+            "ACC Network"
           ]
         },
         {
-          "id": "401868062",
-          "date": "2026-09-19T23:00Z",
-          "name": "Austin Peay Governors at West Florida Argonauts",
-          "shortName": "APSU @ UWF",
-          "venue": "Pen-Air Field",
-          "city": "Pensacola",
-          "state": "FL",
+          "id": "401867834",
+          "date": "2026-09-19T16:00Z",
+          "name": "Dartmouth Big Green at Lehigh Mountain Hawks",
+          "shortName": "DART @ LEH",
+          "venue": "Goodman Stadium",
+          "city": "Bethlehem",
+          "state": "PA",
           "teams": [
             {
-              "id": "110242",
-              "name": "West Florida Argonauts",
-              "short": "West Florida",
-              "abbreviation": "UWF",
+              "id": "2329",
+              "name": "Lehigh Mountain Hawks",
+              "short": "Lehigh",
+              "abbreviation": "LEH",
+              "homeAway": "home",
+              "score": "24",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2329.png"
+            },
+            {
+              "id": "159",
+              "name": "Dartmouth Big Green",
+              "short": "Dartmouth",
+              "abbreviation": "DART",
+              "homeAway": "away",
+              "score": "20",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/159.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
+          },
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
+          "id": "401867908",
+          "date": "2026-09-19T16:00Z",
+          "name": "Villanova Wildcats at Long Island University Sharks",
+          "shortName": "VILL @ LIU",
+          "venue": "Shark Stadium",
+          "city": "Brookville",
+          "state": "NY",
+          "teams": [
+            {
+              "id": "2341",
+              "name": "Long Island University Sharks",
+              "short": "Long Island",
+              "abbreviation": "LIU",
               "homeAway": "home",
               "score": "16",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/110242.png"
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2341.png"
             },
             {
-              "id": "2046",
-              "name": "Austin Peay Governors",
-              "short": "Austin Peay",
-              "abbreviation": "APSU",
+              "id": "222",
+              "name": "Villanova Wildcats",
+              "short": "Villanova",
+              "abbreviation": "VILL",
               "homeAway": "away",
-              "score": "28",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
+              "score": "20",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/222.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "1:23 - 3rd Quarter",
-            "shortDetail": "1:23 - 3rd"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
           },
           "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
-          "id": "401868237",
-          "date": "2026-09-19T23:00Z",
-          "name": "Merrimack Warriors at Tarleton State Texans",
-          "shortName": "MRMK @ TAR",
-          "venue": "Tarleton Memorial Stadium",
-          "city": "Stephenville",
-          "state": "TX",
-          "teams": [
-            {
-              "id": "2627",
-              "name": "Tarleton State Texans",
-              "short": "Tarleton St",
-              "abbreviation": "TAR",
-              "homeAway": "home",
-              "score": "31",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2627.png"
-            },
-            {
-              "id": "2771",
-              "name": "Merrimack Warriors",
-              "short": "Merrimack",
-              "abbreviation": "MRMK",
-              "homeAway": "away",
-              "score": "14",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2771.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "4:17 - 3rd Quarter",
-            "shortDetail": "4:17 - 3rd"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
-          "id": "401858452",
-          "date": "2026-09-19T23:15Z",
-          "name": "North Dakota Fighting Hawks at Nebraska Cornhuskers",
-          "shortName": "UND @ NEB",
-          "venue": "Memorial Stadium (Lincoln, NE)",
-          "city": "Lincoln",
-          "state": "NE",
-          "teams": [
-            {
-              "id": "158",
-              "name": "Nebraska Cornhuskers",
-              "short": "Nebraska",
-              "abbreviation": "NEB",
-              "homeAway": "home",
-              "score": "24",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png"
-            },
-            {
-              "id": "155",
-              "name": "North Dakota Fighting Hawks",
-              "short": "North Dakota",
-              "abbreviation": "UND",
-              "homeAway": "away",
-              "score": "7",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "5:23 - 3rd Quarter",
-            "shortDetail": "5:23 - 3rd"
-          },
-          "broadcasts": [
-            "BTN"
+            "NEC Front Row"
           ]
         },
         {
@@ -2939,7 +2899,7 @@
               "short": "Furman",
               "abbreviation": "FUR",
               "homeAway": "home",
-              "score": "3",
+              "score": "9",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/231.png"
             },
             {
@@ -2955,9 +2915,165 @@
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_HALFTIME",
-            "detail": "Halftime",
-            "shortDetail": "Halftime"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "11:32 - 4th Quarter",
+            "shortDetail": "11:32 - 4th"
+          },
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
+          "id": "401868124",
+          "date": "2026-09-20T00:00Z",
+          "name": "Northern Arizona Lumberjacks at Utah Tech Trailblazers",
+          "shortName": "NAU @ UTU",
+          "venue": "Greater Zion Stadium",
+          "city": "Saint George",
+          "state": "UT",
+          "teams": [
+            {
+              "id": "3101",
+              "name": "Utah Tech Trailblazers",
+              "short": "Utah Tech",
+              "abbreviation": "UTU",
+              "homeAway": "home",
+              "score": "17",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png"
+            },
+            {
+              "id": "2464",
+              "name": "Northern Arizona Lumberjacks",
+              "short": "N Arizona",
+              "abbreviation": "NAU",
+              "homeAway": "away",
+              "score": "21",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "15:00 - 4th Quarter",
+            "shortDetail": "15:00 - 4th"
+          },
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
+          "id": "401868307",
+          "date": "2026-09-20T00:00Z",
+          "name": "Stephen F. Austin Lumberjacks at Prairie View A&M Panthers",
+          "shortName": "SFA @ PV",
+          "venue": "Panther Stadium",
+          "city": "Prairie View",
+          "state": "TX",
+          "teams": [
+            {
+              "id": "2504",
+              "name": "Prairie View A&M Panthers",
+              "short": "Prairie View",
+              "abbreviation": "PV",
+              "homeAway": "home",
+              "score": "3",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2504.png"
+            },
+            {
+              "id": "2617",
+              "name": "Stephen F. Austin Lumberjacks",
+              "short": "SF Austin",
+              "abbreviation": "SFA",
+              "homeAway": "away",
+              "score": "24",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2617.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "1:05 - 3rd Quarter",
+            "shortDetail": "1:05 - 3rd"
+          },
+          "broadcasts": [
+            "SWAC TV"
+          ]
+        },
+        {
+          "id": "401860885",
+          "date": "2026-09-20T02:00Z",
+          "name": "South Dakota Coyotes at Boise State Broncos",
+          "shortName": "SDAK @ BOIS",
+          "venue": "Albertsons Stadium",
+          "city": "Boise",
+          "state": "ID",
+          "teams": [
+            {
+              "id": "68",
+              "name": "Boise State Broncos",
+              "short": "Boise St",
+              "abbreviation": "BOIS",
+              "homeAway": "home",
+              "score": "0",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png"
+            },
+            {
+              "id": "233",
+              "name": "South Dakota Coyotes",
+              "short": "South Dakota",
+              "abbreviation": "SDAK",
+              "homeAway": "away",
+              "score": "0",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/233.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "8:36 - 1st Quarter",
+            "shortDetail": "8:36 - 1st"
+          },
+          "broadcasts": [
+            "CBSSN"
+          ]
+        },
+        {
+          "id": "401868164",
+          "date": "2026-09-20T02:00Z",
+          "name": "Stetson Hatters at UC Davis Aggies",
+          "shortName": "STET @ UCD",
+          "venue": "UC Davis Health Stadium",
+          "city": "Davis",
+          "state": "CA",
+          "teams": [
+            {
+              "id": "302",
+              "name": "UC Davis Aggies",
+              "short": "UC Davis",
+              "abbreviation": "UCD",
+              "homeAway": "home",
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
+            },
+            {
+              "id": "56",
+              "name": "Stetson Hatters",
+              "short": "Stetson",
+              "abbreviation": "STET",
+              "homeAway": "away",
+              "score": "0",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "7:03 - 1st Quarter",
+            "shortDetail": "7:03 - 1st"
           },
           "broadcasts": [
             "ESPN+"
@@ -2971,8 +3087,18 @@
           "record": ""
         },
         {
+          "rank": 2,
+          "team": "South Dakota State",
+          "record": "1-0"
+        },
+        {
           "rank": 3,
           "team": "Montana",
+          "record": "1-0"
+        },
+        {
+          "rank": 4,
+          "team": "Tarleton State",
           "record": "1-0"
         },
         {
@@ -2981,8 +3107,8 @@
           "record": "1-0"
         },
         {
-          "rank": 7,
-          "team": "Lehigh",
+          "rank": 6,
+          "team": "North Dakota",
           "record": "1-0"
         },
         {
@@ -2991,23 +3117,18 @@
           "record": "1-0"
         },
         {
-          "rank": 10,
-          "team": "South Dakota",
-          "record": "1-0"
-        },
-        {
-          "rank": 11,
-          "team": "UC Davis",
-          "record": "1-0"
-        },
-        {
-          "rank": 12,
-          "team": "Stephen F. Austin",
+          "rank": 9,
+          "team": "Youngstown State",
           "record": "1-0"
         },
         {
           "rank": 13,
           "team": "Tennessee Tech",
+          "record": "1-0"
+        },
+        {
+          "rank": 14,
+          "team": "Austin Peay",
           "record": "1-0"
         },
         {
@@ -3021,28 +3142,18 @@
           "record": "1-0"
         },
         {
+          "rank": 17,
+          "team": "West Florida",
+          "record": "1-0"
+        },
+        {
           "rank": 19,
           "team": "Yale",
           "record": "0-0"
         },
         {
-          "rank": 20,
-          "team": "Northern Arizona",
-          "record": "1-0"
-        },
-        {
           "rank": 21,
           "team": "William & Mary",
-          "record": "1-0"
-        },
-        {
-          "rank": 22,
-          "team": "Villanova",
-          "record": "0-1"
-        },
-        {
-          "rank": 23,
-          "team": "Mercer",
           "record": "1-0"
         },
         {
@@ -3111,7 +3222,7 @@
               "short": "Washington",
               "abbreviation": "WASH",
               "homeAway": "home",
-              "score": "31",
+              "score": "41",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png"
             },
             {
@@ -3120,7 +3231,7 @@
               "short": "E Washington",
               "abbreviation": "EWU",
               "homeAway": "away",
-              "score": "13",
+              "score": "16",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png"
             }
           ],
@@ -3128,8 +3239,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "8:37 - 3rd Quarter",
-            "shortDetail": "8:37 - 3rd"
+            "detail": "3:45 - 4th Quarter",
+            "shortDetail": "3:45 - 4th"
           },
           "broadcasts": [
             "BTN"
@@ -3150,7 +3261,7 @@
               "short": "Cal Poly",
               "abbreviation": "CP",
               "homeAway": "home",
-              "score": "21",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png"
             },
             {
@@ -3159,7 +3270,7 @@
               "short": "San Diego",
               "abbreviation": "USD",
               "homeAway": "away",
-              "score": "27",
+              "score": "35",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/301.png"
             }
           ],
@@ -3167,8 +3278,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "0:06 - 2nd Quarter",
-            "shortDetail": "0:06 - 2nd"
+            "detail": "13:42 - 4th Quarter",
+            "shortDetail": "13:42 - 4th"
           },
           "broadcasts": [
             "ESPN+"
@@ -3189,7 +3300,7 @@
               "short": "Utah Tech",
               "abbreviation": "UTU",
               "homeAway": "home",
-              "score": "0",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png"
             },
             {
@@ -3198,7 +3309,7 @@
               "short": "N Arizona",
               "abbreviation": "NAU",
               "homeAway": "away",
-              "score": "14",
+              "score": "21",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
             }
           ],
@@ -3206,8 +3317,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "End of 2nd Quarter",
-            "shortDetail": "End of 2nd"
+            "detail": "End of 4th Quarter",
+            "shortDetail": "End of 4th"
           },
           "broadcasts": [
             "ESPN+"
@@ -3237,16 +3348,16 @@
               "short": "NE State",
               "abbreviation": "NEOS",
               "homeAway": "away",
-              "score": "7",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/196.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_HALFTIME",
-            "detail": "Halftime",
-            "shortDetail": "Halftime"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "15:00 - 4th Quarter",
+            "shortDetail": "15:00 - 4th"
           },
           "broadcasts": [
             "ESPN+"
@@ -3267,7 +3378,7 @@
               "short": "Weber St",
               "abbreviation": "WEB",
               "homeAway": "home",
-              "score": "21",
+              "score": "42",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
             },
             {
@@ -3284,8 +3395,47 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "3:25 - 2nd Quarter",
-            "shortDetail": "3:25 - 2nd"
+            "detail": "6:25 - 3rd Quarter",
+            "shortDetail": "6:25 - 3rd"
+          },
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
+          "id": "401868164",
+          "date": "2026-09-20T02:00Z",
+          "name": "Stetson Hatters at UC Davis Aggies",
+          "shortName": "STET @ UCD",
+          "venue": "UC Davis Health Stadium",
+          "city": "Davis",
+          "state": "CA",
+          "teams": [
+            {
+              "id": "302",
+              "name": "UC Davis Aggies",
+              "short": "UC Davis",
+              "abbreviation": "UCD",
+              "homeAway": "home",
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
+            },
+            {
+              "id": "56",
+              "name": "Stetson Hatters",
+              "short": "Stetson",
+              "abbreviation": "STET",
+              "homeAway": "away",
+              "score": "0",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "7:03 - 1st Quarter",
+            "shortDetail": "7:03 - 1st"
           },
           "broadcasts": [
             "ESPN+"
@@ -3404,45 +3554,6 @@
             "name": "STATUS_FINAL",
             "detail": "Final",
             "shortDetail": "Final"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
-          "id": "401868164",
-          "date": "2026-09-20T02:00Z",
-          "name": "Stetson Hatters at UC Davis Aggies",
-          "shortName": "STET @ UCD",
-          "venue": "UC Davis Health Stadium",
-          "city": "Davis",
-          "state": "CA",
-          "teams": [
-            {
-              "id": "302",
-              "name": "UC Davis Aggies",
-              "short": "UC Davis",
-              "abbreviation": "UCD",
-              "homeAway": "home",
-              "score": "0",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
-            },
-            {
-              "id": "56",
-              "name": "Stetson Hatters",
-              "short": "Stetson",
-              "abbreviation": "STET",
-              "homeAway": "away",
-              "score": "0",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png"
-            }
-          ],
-          "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 19th at 10:00 PM EDT",
-            "shortDetail": "9/19 - 10:00 PM EDT"
           },
           "broadcasts": [
             "ESPN+"
