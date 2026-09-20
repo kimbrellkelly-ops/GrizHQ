@@ -246,6 +246,96 @@ def parse_big_sky_news():
     except Exception as exc:
         print("Big Sky RSS failed:",exc); return []
 
+def parse_big_sky_players_of_week():
+    """Parse the newest official Big Sky football weekly preview and its player-of-the-week honorees."""
+    try:
+        root=ET.fromstring(get(BIG_SKY_NEWS_RSS))
+        candidate=None
+        for item in root.findall(".//item"):
+            title=_clean_text(item.findtext("title"))
+            link=_clean_text(item.findtext("link"))
+            pub=_clean_text(item.findtext("pubDate"))
+            if title and link and "football weekly preview" in title.lower():
+                candidate={"title":title,"url":link,"date":pub}
+                break
+        if not candidate:
+            raise RuntimeError("No Big Sky football weekly preview found in RSS")
+
+        soup=BeautifulSoup(get(candidate["url"]),"html.parser")
+        lines=[_clean_text(x) for x in soup.stripped_strings if _clean_text(x)]
+        marker_i=-1
+        for i,line in enumerate(lines):
+            if re.search(r"BIG SKY PLAYER OF THE WEEK HONOREES FOR WEEK",line,re.I):
+                marker_i=i
+                break
+        if marker_i<0:
+            raise RuntimeError("Weekly player-of-the-week section not found")
+
+        category_re=re.compile(r"^(Co-)?(Offensive|Defensive|Special Teams) Player of the Week(?::)?$",re.I)
+        winner_re=re.compile(r"^(.+?),\s+(.+?)\s+\(([^)]+)\)$")
+        stop_re=re.compile(r"^(?:Others Nominated:|[A-Z][A-Z0-9’'\-\s]+)$")
+        out=[]
+        i=marker_i+1
+        current_week=""
+        mweek=re.search(r"WEEK\s+(\d+)",lines[marker_i],re.I)
+        if mweek: current_week=mweek.group(1)
+
+        while i<len(lines):
+            line=lines[i]
+            if re.match(r"^[A-Z][A-Z0-9’'\-\s]+$",line) and "PLAYER OF THE WEEK" not in line.upper():
+                break
+            cm=category_re.match(line)
+            if not cm:
+                i+=1
+                continue
+
+            category=("Co-" if cm.group(1) else "")+cm.group(2).title()+" Player of the Week"
+            winners=[]
+            j=i+1
+            while j<len(lines):
+                wm=winner_re.match(lines[j])
+                if wm:
+                    winners.append(wm)
+                    j+=1
+                    if not cm.group(1):
+                        break
+                    continue
+                break
+            if not winners:
+                i+=1
+                continue
+
+            summary=""
+            if j<len(lines) and not lines[j].lower().startswith("others nominated:"):
+                summary=lines[j]
+            for wm in winners:
+                player=wm.group(1).strip()
+                school=wm.group(2).strip()
+                bio=wm.group(3).strip()
+                position=bio.split(",",1)[0].strip()
+                out.append({
+                    "week":current_week,
+                    "category":category,
+                    "player":player,
+                    "school":school,
+                    "position":position,
+                    "summary":summary,
+                    "article_url":candidate["url"],
+                    "published":candidate["date"]
+                })
+            while j<len(lines) and not category_re.match(lines[j]) and not (re.match(r"^[A-Z][A-Z0-9’'\-\s]+$",lines[j]) and "PLAYER OF THE WEEK" not in lines[j].upper()):
+                if lines[j].lower().startswith("others nominated:"):
+                    j+=1
+                    break
+                j+=1
+            i=j
+        if not out:
+            raise RuntimeError("No weekly football honorees parsed")
+        return out
+    except Exception as exc:
+        print("Big Sky players-of-week update failed:",exc)
+        return []
+
 def parse_news():
     root=ET.fromstring(get("https://gogriz.com/rss?path=football")); out=[]
     for item in root.findall(".//item")[:8]:
@@ -570,6 +660,10 @@ def main():
     except Exception as e: print("Big Sky leaders update failed:",e)
     try: new["big_sky_news"]=parse_big_sky_news()
     except Exception as e: print("Big Sky news update failed:",e)
+    try:
+        pow=parse_big_sky_players_of_week()
+        if pow: new["big_sky_players_of_week"]=pow
+    except Exception as e: print("Big Sky players-of-week update failed:",e)
 
     try: new["stats"]=parse_stats(old, sched if "sched" in locals() else None)
     except Exception as e: print("Stats update failed:",e)
