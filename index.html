@@ -11,7 +11,7 @@
 <script defer src="scoreboard/scoreboard-config.js?v=20260920-finalfix1"></script>
 <script defer src="scoreboard/scoreboard-render.js?v=20260920-finalfix1"></script>
 <script defer src="score-scroll.js?v=20260920-finalfix1"></script>
-<script defer src="app.js?v=20260920-rankingsfix1"></script>
+<script defer src="app.js?v=20260920-bigsky1"></script>
 <script defer="" src="rankings-team-logos.js?v=20260920-finalfix1"></script>
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -49,7 +49,7 @@
       <a data-tab-link="schedule" href="#schedule">Schedule</a>
       <a data-tab-link="roster" href="#roster">Roster</a>
       <a data-tab-link="stats" href="#stats">Stats</a>
-      <a data-tab-link="schedule" href="#big-sky">Big Sky</a>
+      <a data-tab-link="bigsky" href="#big-sky">Big Sky</a>
       <a data-tab-link="media" href="#media">Media</a>
       <a data-tab-link="history" href="#history">History</a>
       <a data-tab-link="officiating" href="#officiating">Officiating</a>
@@ -104,7 +104,32 @@
   </div>
   <section class="v2-lower-news v2-card"><div class="v2-card-heading"><h2>Latest Griz News</h2><a href="#news">Open Newsroom →</a></div><div class="v2-lower-news-grid"><a href="#news">Game week: everything you need to know</a><a href="#news">Depth chart and roster updates</a><a href="#news">Big Sky and FCS news roundup</a><a href="#news">Podcasts, videos and interviews</a></div></section>
 </section>
-<section class="section tab-panel" data-tab="schedule" id="big-sky"><div class="section-head"><div class="eyebrow">AROUND THE LEAGUE</div><h2>2026 Big Sky Football</h2><span>All Big Sky teams • conference &amp; non-conference</span></div><div class="bigsky-tools"><label>TEAM<select id="bigsky-team-filter"><option value="ALL">ALL TEAMS</option></select></label><label>WEEK<select id="bigsky-date-filter"><option value="ALL">CURRENT WEEK</option></select></label></div><div class="bigsky-table" id="bigsky-table">Loading Big Sky schedule…</div><div class="schedule-source">Source: <a href="https://bigskyconf.com/news/2026/7/6/big-sky-announces-kickoff-times-for-2026-conference-football-season.aspx" rel="noopener" target="_blank">Big Sky Conference ↗</a></div></section>
+<section class="section tab-panel bigsky-hub" data-tab="bigsky" id="big-sky">
+  <div class="section-head bigsky-hero-head"><div class="eyebrow">AROUND THE LEAGUE</div><h2>BIG SKY FOOTBALL</h2><span>Standings • Scores • Stats • News • Rankings</span></div>
+  <div class="bigsky-hub-grid">
+    <div class="bigsky-main">
+      <div class="bigsky-panel bigsky-standings-panel">
+        <div class="bigsky-panel-head"><div><div class="eyebrow">2026 CONFERENCE STANDINGS</div><h3>Big Sky Football</h3></div><span id="bigsky-standings-updated">LIVE FROM BIG SKY</span></div>
+        <div class="bigsky-standings" id="bigsky-standings">Loading standings…</div>
+      </div>
+      <div class="bigsky-panel">
+        <div class="bigsky-panel-head"><div><div class="eyebrow">AROUND THE LEAGUE</div><h3>This Week in the Big Sky</h3></div><span>GAMES &amp; MATCHUPS</span></div>
+        <div class="bigsky-tools"><label>TEAM<select id="bigsky-team-filter"><option value="ALL">ALL TEAMS</option></select></label><label>WEEK<select id="bigsky-date-filter"><option value="ALL">CURRENT WEEK</option></select></label></div>
+        <div class="bigsky-table" id="bigsky-table">Loading Big Sky schedule…</div>
+      </div>
+      <div class="bigsky-panel">
+        <div class="bigsky-panel-head"><div><div class="eyebrow">BIG SKY LEADERS</div><h3>Stat Leaders</h3></div><span>2026 SEASON</span></div>
+        <div class="bigsky-leader-grid" id="bigsky-leaders">Loading leaders…</div>
+      </div>
+    </div>
+    <aside class="bigsky-side">
+      <div class="bigsky-panel bigsky-ranked-panel"><div class="bigsky-panel-head"><div><div class="eyebrow">FCS TOP 25</div><h3>Big Sky Ranked Teams</h3></div><span>COACHES</span></div><div id="bigsky-ranked">Loading rankings…</div></div>
+      <div class="bigsky-panel"><div class="bigsky-panel-head"><div><div class="eyebrow">BIG SKY NEWS</div><h3>Around the Conference</h3></div><span>OFFICIAL</span></div><div id="bigsky-news">Loading news…</div></div>
+      <div class="bigsky-panel bigsky-griz-panel"><div class="bigsky-panel-head"><div><div class="eyebrow">MONTANA</div><h3>The Griz in the Big Sky</h3></div></div><div id="bigsky-griz-card">Loading…</div></div>
+    </aside>
+  </div>
+  <div class="schedule-source">Primary sources: <a href="https://bigskyconf.com/standings.aspx?path=football" rel="noopener" target="_blank">Big Sky standings ↗</a> • <a href="https://bigskyconf.com/stats.aspx?path=football&amp;year=2026" rel="noopener" target="_blank">Big Sky statistics ↗</a> • <a href="https://bigskyconf.com/news.aspx?path=football" rel="noopener" target="_blank">Big Sky football news ↗</a></div>
+</section>
 <section class="section tab-panel ghq-next-up" data-tab="game" id="next-up">
   <div class="ghq-nu-hero">
     <div class="ghq-nu-hero-top">
