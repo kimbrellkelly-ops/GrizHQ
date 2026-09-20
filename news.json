@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20T15:48:13.155759+00:00",
+  "updated": "2026-09-20T16:03:51.810403+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -15,21 +15,6 @@
   "stories": [
     {
       "title": "3 takeaways: No. 3 Grizzlies exit 1st loss needing to make progress",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_b91fbcfc-45c7-5127-950a-25b57c21fcdb.html",
-      "date": "Sep. 20, 2026",
-      "published_at": "2026-09-20T14:00:00+00:00",
-      "description": "\"What I love about this team, what I love about these guys is that there's no quit in them.\" —Griz coach Bobby Kennedy",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/68/1689968d-0d4f-5a35-8d0a-7139488765f2/6aafb63893a11.image.jpg?resize=300%2C195",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/68/1689968d-0d4f-5a35-8d0a-7139488765f2/6aafb63893a11.image.jpg?resize=300%2C195"
-    },
-    {
-      "title": "3 takeaways: No. 3 Grizzlies exit 1st loss needing to make progress",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-3-grizzlies-exit-1st-loss-needing-to-make-progress/article_11740f5e-ace2-4d03-960e-1c56cd39150e.html",
       "date": "Sep. 20, 2026",
       "published_at": "2026-09-20T14:00:00+00:00",
@@ -42,6 +27,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/17/11740f5e-ace2-4d03-960e-1c56cd39150e/6aafb1e918f86.preview.jpg?crop=1104%2C580%2C290%2C24"
+    },
+    {
+      "title": "3 takeaways: No. 3 Grizzlies exit 1st loss needing to make progress",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_b91fbcfc-45c7-5127-950a-25b57c21fcdb.html",
+      "date": "Sep. 20, 2026",
+      "published_at": "2026-09-20T14:00:00+00:00",
+      "description": "\"What I love about this team, what I love about these guys is that there's no quit in them.\" —Griz coach Bobby Kennedy",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/68/1689968d-0d4f-5a35-8d0a-7139488765f2/6aafb63893a11.image.jpg?resize=300%2C195",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/68/1689968d-0d4f-5a35-8d0a-7139488765f2/6aafb63893a11.image.jpg?resize=300%2C195"
     },
     {
       "title": "Beavers blitz Griz: Atkinson’s five TD passes bury Montana, give BK first loss as head coach",
