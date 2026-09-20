@@ -1618,7 +1618,7 @@ loadGrizData();
   const opponent=String(game.opponent);
   const location=String(game.location||'').toLowerCase();
   const away=location.includes('away') || location.includes('at ');
-  const venue=NEXT_GAME_VENUES[opponent] || (away ? 'Away at '+opponent : 'Washington-Grizzly Stadium, Missoula, MT');
+  const venue=GRIZ_GAME_VENUES[opponent]?.venue || (game.venue && game.venue!=='Away' ? game.venue : (away ? 'Away at '+opponent : 'Washington-Grizzly Stadium, Missoula, MT'));
   const matchup=section.querySelector('.v2-home-next-match');
   if(matchup){
     const cols=matchup.children;
@@ -1628,9 +1628,22 @@ loadGrizData();
   }
   const p=section.querySelector(':scope > p'); if(p) text(p,venue);
 }
+function renderHomeSnapshot(data){
+  const section=document.querySelector('.v2-snapshot'); if(!section) return;
+  const schedule=Array.isArray(data?.schedule)?data.schedule:[];
+  const mr=montanaRecord(schedule);
+  const poll=Array.isArray(data?.coaches_poll)?data.coaches_poll:[];
+  const rankIndex=poll.findIndex(x=>/montana/i.test(String(x)));
+  const rank=rankIndex>=0 ? '#'+(rankIndex+1) : '—';
+  const grid=section.querySelector('.v2-snapshot-grid'); if(!grid) return;
+  const cells=grid.children;
+  if(cells[0]) text(cells[0].querySelector('b'),mr.record);
+  if(cells[1]) text(cells[1].querySelector('b'),rank);
+  if(cells[2]) text(cells[2].querySelector('b'),mr.conference);
+}
 function renderDossier(data){
     const game=chooseNext(data); if(!game || !game.opponent) return;
-    const opponent=String(game.opponent), upper=opponent.toUpperCase(), profile=profileFor(opponent), resources=resourceSet(opponent,data); renderHomeNextGame(data,game);
+    const opponent=String(game.opponent), upper=opponent.toUpperCase(), profile=profileFor(opponent), resources=resourceSet(opponent,data); renderHomeNextGame(data,game); renderHomeSnapshot(data);
     const schedule=Array.isArray(data.schedule)?data.schedule:[], mr=montanaRecord(schedule);
     const nextSection=document.getElementById('next-up'); if(!nextSection) return;
     nextSection.dataset.nextOpponent=opponent; nextSection.dataset.opponent=opponent;
