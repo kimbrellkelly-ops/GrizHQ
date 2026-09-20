@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20T14:03:43.481596+00:00",
+  "updated": "2026-09-20T14:22:09.164514+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -13,6 +13,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "3 takeaways: No. 3 Grizzlies exit 1st loss needing to make progress",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_b91fbcfc-45c7-5127-950a-25b57c21fcdb.html",
+      "date": "Sep. 20, 2026",
+      "published_at": "2026-09-20T14:00:00+00:00",
+      "description": "\"What I love about this team, what I love about these guys is that there's no quit in them.\" —Griz coach Bobby Kennedy",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/68/1689968d-0d4f-5a35-8d0a-7139488765f2/6aafb63893a11.image.jpg?resize=300%2C195",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/68/1689968d-0d4f-5a35-8d0a-7139488765f2/6aafb63893a11.image.jpg?resize=300%2C195"
+    },
     {
       "title": "Beavers use big plays to beat Griz in Corvallis",
       "url": "https://gogriz.com/news/2026/9/20/football-beavers-use-big-plays-to-beat-griz-in-corvallis",
@@ -1497,21 +1512,6 @@
       "youtube_id": "jly_1Z4B0RA",
       "video_url": "https://www.youtube.com/watch?v=jly_1Z4B0RA",
       "video_thumbnail": "https://i.ytimg.com/vi/jly_1Z4B0RA/hqdefault.jpg"
-    },
-    {
-      "title": "Grizzly Athletics partners with UM Foundation on football jersey patch to support Montana students",
-      "url": "https://gogriz.com/news/2026/8/24/football-grizzly-athletics-partners-with-um-foundation-on-football-jersey-patch-to-support-montana-students",
-      "date": "Aug. 24, 2026",
-      "published_at": "2026-08-24T15:30:00+00:00",
-      "description": "MISSOULA - Grizzly Athletics and the University of Montana Foundation announced a new partnership to directly support University of Montana students on Monday, with the Foundation becoming the first official jersey patch partner of Griz foo",
-      "source": "GoGriz",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/8/24/For_Montana_Jersey_Patch_V2.png",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/8/24/For_Montana_Jersey_Patch_V2.png"
     }
   ]
 }
