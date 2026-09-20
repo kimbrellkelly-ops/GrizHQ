@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20T20:04:01.763228+00:00",
+  "updated": "2026-09-20T20:22:25.507892+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -13,6 +13,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Week 3: FBS Oregon State overwhelms No. 3 Montana Grizzlies",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-3-fbs-oregon-state-overwhelms-no-3-montana-grizzlies/collection_b6ac5247-bb95-47d1-821d-842818631005.html",
+      "date": "Sep. 20, 2026",
+      "published_at": "2026-09-20T20:00:00+00:00",
+      "description": "Week 3: FBS Oregon State overwhelms No. 3 Montana Grizzlies",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/6a/b6ac5247-bb95-47d1-821d-842818631005/6aaf92b9cdd3f.preview.jpg?crop=1785%2C937%2C0%2C111&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/6a/b6ac5247-bb95-47d1-821d-842818631005/6aaf92b9cdd3f.preview.jpg?crop=1785%2C937%2C0%2C111&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "3 takeaways: No. 3 Grizzlies exit 1st loss needing to make progress",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-3-grizzlies-exit-1st-loss-needing-to-make-progress/article_11740f5e-ace2-4d03-960e-1c56cd39150e.html",
@@ -1497,21 +1512,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2024/9/4/Coaches_Show_web.png"
-    },
-    {
-      "title": "Keali’i Ah Yat thriving heading into fourth year with Griz",
-      "url": "https://skylinesportsmt.com/kealii-ah-yat-thriving-heading-into-fourth-year-with-griz/",
-      "date": "Aug. 26, 2026",
-      "published_at": "2026-08-26T14:00:00+00:00",
-      "description": "Keali’i Ah Yat thriving heading into fourth year with Griz August 26, 2026",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2024/09/Kealii-Ah-Yat-breaks-through-an-arm-tackle-scaled.jpeg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2024/09/Kealii-Ah-Yat-breaks-through-an-arm-tackle-scaled.jpeg"
     }
   ]
 }
