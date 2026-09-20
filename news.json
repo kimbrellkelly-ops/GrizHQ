@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20T14:22:09.164514+00:00",
+  "updated": "2026-09-20T14:35:28.809713+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -27,6 +27,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/68/1689968d-0d4f-5a35-8d0a-7139488765f2/6aafb63893a11.image.jpg?resize=300%2C195"
+    },
+    {
+      "title": "Beavers blitz Griz: Atkinson’s five TD passes bury Montana, give BK first loss as head coach",
+      "url": "https://skylinesportsmt.com/beavers-blitz-griz-atkinsons-five-td-passes-bury-montana-give-bk-first-loss-as-head-coach/",
+      "date": "Sep. 20, 2026",
+      "published_at": "2026-09-20T10:36:04+00:00",
+      "description": "September 20, 2026 Beavers blitz Griz: Atkinson’s five TD passes bury Montana, give BK first loss as head coach",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/09/Brooks-Davis.webp",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/09/Brooks-Davis.webp"
     },
     {
       "title": "Beavers use big plays to beat Griz in Corvallis",
@@ -1497,21 +1512,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/4/8/03022026_Spring_Practice_ce_15.jpg"
-    },
-    {
-      "title": "AKEM’S ANALYSIS: RUCKER OUT FOR NORTH DAKOTA, GRIZ PICK 26 CAPTAINS, MCQUAIDE NOT ELIGIBLE (AGAIN)",
-      "url": "https://skylinesportsmt.com/akems-analysis-rucker-out-for-north-dakota-griz-pick-26-captains-mcquaide-not-eligible-again/",
-      "date": "Aug. 25, 2026",
-      "published_at": "2026-08-25T03:16:48+00:00",
-      "description": "AKEM’S ANALYSIS: RUCKER OUT FOR NORTH DAKOTA, GRIZ PICK 26 CAPTAINS, MCQUAIDE NOT ELIGIBLE (AGAIN)",
-      "source": "Skyline Sports",
-      "badge": "ANALYSIS",
-      "short": "ANALYS",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/SAS-EP.-6-THUMBNAIL.png",
-      "is_video": true,
-      "youtube_id": "jly_1Z4B0RA",
-      "video_url": "https://www.youtube.com/watch?v=jly_1Z4B0RA",
-      "video_thumbnail": "https://i.ytimg.com/vi/jly_1Z4B0RA/hqdefault.jpg"
     }
   ]
 }
