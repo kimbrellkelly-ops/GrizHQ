@@ -1346,6 +1346,8 @@ renderBigSkyAndOpponent();
 
 function renderBigSkyHub(d){
   const standingsEl=document.getElementById("bigsky-standings");
+  const playersEl=document.getElementById("bigsky-players-of-week");
+  const playersUpdatedEl=document.getElementById("bigsky-players-updated");
   const leadersEl=document.getElementById("bigsky-leaders");
   const newsEl=document.getElementById("bigsky-news");
   const rankedEl=document.getElementById("bigsky-ranked");
@@ -1354,6 +1356,7 @@ function renderBigSkyHub(d){
   const standings=Array.isArray(d.big_sky_standings)?d.big_sky_standings:[];
   const leaders=d.big_sky_leaders&&typeof d.big_sky_leaders==="object"?d.big_sky_leaders:{};
   const news=Array.isArray(d.big_sky_news)?d.big_sky_news:[];
+  const players=Array.isArray(d.big_sky_players_of_week)?d.big_sky_players_of_week:[];
   const coaches=Array.isArray(d.coaches_poll)?d.coaches_poll:[];
   const statsPerform=Array.isArray(d.fcs_rankings)?d.fcs_rankings:[];
   if(updatedEl) updatedEl.textContent=standings.length ? "UPDATED "+new Date(d.big_sky_hub_updated||d.updated||Date.now()).toLocaleDateString("en-US",{month:"short",day:"numeric"}) : "DATA UNAVAILABLE";
@@ -1367,6 +1370,13 @@ function renderBigSkyHub(d){
       });
     }else out='<div class="bigsky-empty">Standings are temporarily unavailable.</div>';
     standingsEl.innerHTML=out;
+  }
+  if(playersEl){
+    if(playersUpdatedEl) playersUpdatedEl.textContent=players.length ? "WEEK "+escapeHtml(players[0].week||"") : "AWAITING WEEKLY HONORS";
+    playersEl.innerHTML=players.length ? players.map(function(p){
+      const category=String(p.category||"PLAYER OF THE WEEK").replace(/^Co-/i,"");
+      return '<article class="bigsky-pow-card"><div class="bigsky-pow-category">'+escapeHtml(category)+'</div><div class="bigsky-pow-player">'+escapeHtml(p.player||"—")+'</div><div class="bigsky-pow-school">'+escapeHtml(p.school||"")+(p.position?' • '+escapeHtml(p.position):"")+'</div><p>'+escapeHtml(p.summary||"")+'</p></article>';
+    }).join("") : '<div class="bigsky-empty">Weekly honors are temporarily unavailable.</div>';
   }
   const leaderMeta={rushing:["RUSHING","YDS"],passing:["PASSING","YDS"],receiving:["RECEIVING","YDS"],tackles:["TACKLES","TOTAL"],sacks:["SACKS","TOTAL"],scoring:["SCORING","PTS"]};
   if(leadersEl){
