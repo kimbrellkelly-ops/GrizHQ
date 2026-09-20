@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20T14:35:28.809713+00:00",
+  "updated": "2026-09-20T14:48:09.368859+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -13,6 +13,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "3 takeaways: No. 3 Grizzlies exit 1st loss needing to make progress",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-3-grizzlies-exit-1st-loss-needing-to-make-progress/article_11740f5e-ace2-4d03-960e-1c56cd39150e.html",
+      "date": "Sep. 20, 2026",
+      "published_at": "2026-09-20T14:00:00+00:00",
+      "description": "3 takeaways: No. 3 Grizzlies exit 1st loss needing to make progress",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/17/11740f5e-ace2-4d03-960e-1c56cd39150e/6aafb1e918f86.preview.jpg?crop=1104%2C580%2C290%2C24",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/17/11740f5e-ace2-4d03-960e-1c56cd39150e/6aafb1e918f86.preview.jpg?crop=1104%2C580%2C290%2C24"
+    },
     {
       "title": "3 takeaways: No. 3 Grizzlies exit 1st loss needing to make progress",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_b91fbcfc-45c7-5127-950a-25b57c21fcdb.html",
@@ -1497,21 +1512,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2024/09/Kealii-Ah-Yat-breaks-through-an-arm-tackle-scaled.jpeg"
-    },
-    {
-      "title": "Kennedy era opens as Griz host T-Birds",
-      "url": "https://gogriz.com/news/2026/8/25/football-kennedy-era-opens-as-griz-host-t-birds",
-      "date": "Aug. 25, 2026",
-      "published_at": "2026-08-25T23:49:00+00:00",
-      "description": "The dawn of a new era rises over Washington-Grizzly Stadium on Saturday as Bobby Kennedy leads Montana onto the field for the first time as UM's 38th head football coach.",
-      "source": "GoGriz",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/4/8/03022026_Spring_Practice_ce_15.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/4/8/03022026_Spring_Practice_ce_15.jpg"
     }
   ]
 }
