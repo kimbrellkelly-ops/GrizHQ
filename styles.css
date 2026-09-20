@@ -4722,3 +4722,14 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .bigsky-griz-next{margin:6px 20px 20px;padding-top:14px;border-top:1px solid #ddd}.bigsky-griz-next small{display:block;color:#777;font-size:7px;font-weight:900;letter-spacing:1px}.bigsky-griz-next strong{display:block;font:900 25px "Barlow Condensed";margin-top:3px}.bigsky-griz-next span{display:block;color:#777;font-size:9px;margin-top:3px}
 @media(max-width:900px){.bigsky-hub-grid{grid-template-columns:1fr}.bigsky-side{grid-template-columns:1fr 1fr}.bigsky-griz-panel{grid-column:1/-1}}
 @media(max-width:650px){.bigsky-side{grid-template-columns:1fr}.bigsky-leader-grid{grid-template-columns:1fr}.bigsky-panel-head h3{font-size:23px}.bigsky-standing-row{grid-template-columns:32px minmax(170px,1.6fr) 75px 75px 95px 60px}}
+
+
+/* Big Sky weekly honors — isolated to the Big Sky hub. */
+.bigsky-pow-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:16px}
+.bigsky-pow-card{border:1px solid #ddd;background:#fafafa;padding:16px;min-width:0}
+.bigsky-pow-category{font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#6b0038;margin-bottom:9px}
+.bigsky-pow-player{font-size:21px;font-weight:900;line-height:1.05;margin-bottom:5px}
+.bigsky-pow-school{font-size:12px;font-weight:800;color:#555;text-transform:uppercase;letter-spacing:.03em}
+.bigsky-pow-card p{font-size:13px;line-height:1.45;color:#555;margin:12px 0 0}
+@media(max-width:1100px){.bigsky-pow-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.bigsky-pow-grid{grid-template-columns:1fr}}
