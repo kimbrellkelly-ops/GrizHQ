@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-20T03:25:24.937272+00:00",
+  "generatedAt": "2026-09-20T04:25:32.291032+00:00",
   "source": "ESPN FCS group 81 + ESPN Big Sky group 20",
   "rankings": [
     {
@@ -3080,42 +3080,43 @@
           ]
         },
         {
-          "id": "401868307",
-          "date": "2026-09-20T00:00Z",
-          "name": "Stephen F. Austin Lumberjacks at Prairie View A&M Panthers",
-          "shortName": "SFA @ PV",
-          "venue": "Panther Stadium",
-          "city": "Prairie View",
-          "state": "TX",
+          "id": "401867898",
+          "date": "2026-09-19T19:00Z",
+          "name": "Central Connecticut Blue Devils at Montana State Bobcats",
+          "shortName": "CCSU @ MTST",
+          "venue": "Bobcat Stadium (MT)",
+          "city": "Bozeman",
+          "state": "MT",
           "teams": [
             {
-              "id": "2504",
-              "name": "Prairie View A&M Panthers",
-              "short": "Prairie View",
-              "abbreviation": "PV",
+              "id": "147",
+              "name": "Montana State Bobcats",
+              "short": "Montana St",
+              "abbreviation": "MTST",
               "homeAway": "home",
-              "score": "10",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2504.png"
+              "score": "35",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
             },
             {
-              "id": "2617",
-              "name": "Stephen F. Austin Lumberjacks",
-              "short": "SF Austin",
-              "abbreviation": "SFA",
+              "id": "2115",
+              "name": "Central Connecticut Blue Devils",
+              "short": "C Connecticut",
+              "abbreviation": "CCSU",
               "homeAway": "away",
-              "score": "31",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2617.png"
+              "score": "30",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2115.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "0:19 - 4th Quarter",
-            "shortDetail": "0:19 - 4th"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final"
           },
           "broadcasts": [
-            "SWAC TV"
+            "ESPN+",
+            "Scripps Sports"
           ]
         },
         {
@@ -3133,7 +3134,7 @@
               "short": "Boise St",
               "abbreviation": "BOIS",
               "homeAway": "home",
-              "score": "21",
+              "score": "24",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png"
             },
             {
@@ -3150,8 +3151,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "2:04 - 2nd Quarter",
-            "shortDetail": "2:04 - 2nd"
+            "detail": "2:49 - 3rd Quarter",
+            "shortDetail": "2:49 - 3rd"
           },
           "broadcasts": [
             "CBSSN"
@@ -3172,7 +3173,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "home",
-              "score": "21",
+              "score": "31",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             },
             {
@@ -3189,8 +3190,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "1:37 - 2nd Quarter",
-            "shortDetail": "1:37 - 2nd"
+            "detail": "5:51 - 3rd Quarter",
+            "shortDetail": "5:51 - 3rd"
           },
           "broadcasts": [
             "ESPN+"
@@ -3211,7 +3212,7 @@
               "short": "Oregon St",
               "abbreviation": "ORST",
               "homeAway": "home",
-              "score": "7",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
             },
             {
@@ -3220,7 +3221,7 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "away",
-              "score": "0",
+              "score": "3",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             }
           ],
@@ -3228,8 +3229,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "7:20 - 1st Quarter",
-            "shortDetail": "7:20 - 1st"
+            "detail": "1:48 - 2nd Quarter",
+            "shortDetail": "1:48 - 2nd"
           },
           "broadcasts": [
             "USA Net"
@@ -3237,11 +3238,6 @@
         }
       ],
       "fcsTop25Byes": [
-        {
-          "rank": 1,
-          "team": "Montana State",
-          "record": ""
-        },
         {
           "rank": 2,
           "team": "South Dakota State",
@@ -3260,6 +3256,11 @@
         {
           "rank": 9,
           "team": "Youngstown State",
+          "record": "1-0"
+        },
+        {
+          "rank": 12,
+          "team": "Stephen F. Austin",
           "record": "1-0"
         },
         {
@@ -3344,45 +3345,6 @@
           ]
         },
         {
-          "id": "401868130",
-          "date": "2026-09-20T00:00Z",
-          "name": "Northeastern State RiverHawks at Northern Colorado Bears",
-          "shortName": "NEOS @ UNCO",
-          "venue": "Nottingham Field",
-          "city": "Greeley",
-          "state": "CO",
-          "teams": [
-            {
-              "id": "2458",
-              "name": "Northern Colorado Bears",
-              "short": "N Colorado",
-              "abbreviation": "UNCO",
-              "homeAway": "home",
-              "score": "7",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png"
-            },
-            {
-              "id": "196",
-              "name": "Northeastern State RiverHawks",
-              "short": "NE State",
-              "abbreviation": "NEOS",
-              "homeAway": "away",
-              "score": "17",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/196.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "1:55 - 4th Quarter",
-            "shortDetail": "1:55 - 4th"
-          },
-          "broadcasts": [
-            "ESPN+"
-          ]
-        },
-        {
           "id": "401868164",
           "date": "2026-09-20T02:00Z",
           "name": "Stetson Hatters at UC Davis Aggies",
@@ -3397,7 +3359,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "home",
-              "score": "21",
+              "score": "31",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             },
             {
@@ -3414,8 +3376,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "1:37 - 2nd Quarter",
-            "shortDetail": "1:37 - 2nd"
+            "detail": "5:51 - 3rd Quarter",
+            "shortDetail": "5:51 - 3rd"
           },
           "broadcasts": [
             "ESPN+"
@@ -3436,7 +3398,7 @@
               "short": "Oregon St",
               "abbreviation": "ORST",
               "homeAway": "home",
-              "score": "7",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
             },
             {
@@ -3445,7 +3407,7 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "away",
-              "score": "0",
+              "score": "3",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             }
           ],
@@ -3453,8 +3415,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "7:20 - 1st Quarter",
-            "shortDetail": "7:20 - 1st"
+            "detail": "1:46 - 2nd Quarter",
+            "shortDetail": "1:46 - 2nd"
           },
           "broadcasts": [
             "USA Net"
@@ -3690,6 +3652,45 @@
             "name": "STATUS_FINAL",
             "detail": "Final",
             "shortDetail": "Final"
+          },
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
+          "id": "401868130",
+          "date": "2026-09-20T00:00Z",
+          "name": "Northeastern State RiverHawks at Northern Colorado Bears",
+          "shortName": "NEOS @ UNCO",
+          "venue": "Nottingham Field",
+          "city": "Greeley",
+          "state": "CO",
+          "teams": [
+            {
+              "id": "2458",
+              "name": "Northern Colorado Bears",
+              "short": "N Colorado",
+              "abbreviation": "UNCO",
+              "homeAway": "home",
+              "score": "23",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png"
+            },
+            {
+              "id": "196",
+              "name": "Northeastern State RiverHawks",
+              "short": "NE State",
+              "abbreviation": "NEOS",
+              "homeAway": "away",
+              "score": "17",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/196.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final/OT",
+            "shortDetail": "Final/OT"
           },
           "broadcasts": [
             "ESPN+"
