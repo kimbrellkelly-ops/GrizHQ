@@ -3049,70 +3049,70 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 }
 
 /* Around-the-league portion: make it feel like a real schedule desk rather than a plain table. */
-#big-sky[data-tab="schedule"]{
+#big-sky[data-tab="bigsky"]{
   max-width:1500px;
   margin:24px auto 0;
   padding:42px 25px 55px;
   background:#171719;
   color:#fff;
 }
-#big-sky[data-tab="schedule"] .section-head{
+#big-sky[data-tab="bigsky"] .section-head{
   margin-bottom:24px;
 }
-#big-sky[data-tab="schedule"] .section-head .eyebrow{
+#big-sky[data-tab="bigsky"] .section-head .eyebrow{
   color:#c7c9cc;
 }
-#big-sky[data-tab="schedule"] .section-head h2{
+#big-sky[data-tab="bigsky"] .section-head h2{
   color:#fff;
   font-size:43px;
   letter-spacing:.7px;
 }
-#big-sky[data-tab="schedule"] .section-head>span{
+#big-sky[data-tab="bigsky"] .section-head>span{
   color:#aaa;
 }
-#big-sky[data-tab="schedule"] .bigsky-tools{
+#big-sky[data-tab="bigsky"] .bigsky-tools{
   padding:12px 14px;
   margin-bottom:14px;
   background:#222225;
   border:1px solid #3b3b3e;
 }
-#big-sky[data-tab="schedule"] .bigsky-tools label{
+#big-sky[data-tab="bigsky"] .bigsky-tools label{
   color:#c7c9cc;
 }
-#big-sky[data-tab="schedule"] .bigsky-tools select{
+#big-sky[data-tab="bigsky"] .bigsky-tools select{
   min-width:175px;
   border:1px solid #55555a;
   background:#171719;
   color:#fff;
 }
-#big-sky[data-tab="schedule"] .bigsky-table{
+#big-sky[data-tab="bigsky"] .bigsky-table{
   border:1px solid #3b3b3e;
   background:#fff;
 }
-#big-sky[data-tab="schedule"] .bigsky-row{
+#big-sky[data-tab="bigsky"] .bigsky-row{
   min-height:42px;
   padding:10px 14px;
   border-bottom:1px solid #e4e2df;
   font-size:9px;
 }
-#big-sky[data-tab="schedule"] .bigsky-head{
+#big-sky[data-tab="bigsky"] .bigsky-head{
   min-height:34px;
   background:var(--maroon);
   color:#fff;
   border-bottom:0;
   letter-spacing:.9px;
 }
-#big-sky[data-tab="schedule"] .bigsky-row:not(.bigsky-head):nth-child(even){
+#big-sky[data-tab="bigsky"] .bigsky-row:not(.bigsky-head):nth-child(even){
   background:#f5f4f2;
 }
-#big-sky[data-tab="schedule"] .bigsky-row:not(.bigsky-head):hover{
+#big-sky[data-tab="bigsky"] .bigsky-row:not(.bigsky-head):hover{
   background:#eee9eb;
 }
-#big-sky[data-tab="schedule"] .schedule-source{
+#big-sky[data-tab="bigsky"] .schedule-source{
   color:#999;
   margin-top:12px;
 }
-#big-sky[data-tab="schedule"] .schedule-source a{
+#big-sky[data-tab="bigsky"] .schedule-source a{
   color:#fff;
   text-decoration:underline;
 }
@@ -3127,10 +3127,10 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   .lower-grid:has(#schedule.is-active) .schedule-row.head{grid-template-columns:72px minmax(0,1fr);gap:10px;padding-left:12px;padding-right:12px}
   .lower-grid:has(#schedule.is-active) .schedule-row:not(.head) strong{grid-column:2;text-align:left;justify-self:start;padding:5px 9px}
   .lower-grid:has(#schedule.is-active) .schedule-row.next:before{left:9px}
-  #big-sky[data-tab="schedule"]{padding:34px 18px 44px}
-  #big-sky[data-tab="schedule"] .section-head h2{font-size:36px}
-  #big-sky[data-tab="schedule"] .bigsky-tools{flex-direction:column;align-items:stretch}
-  #big-sky[data-tab="schedule"] .bigsky-tools select{width:100%}
+  #big-sky[data-tab="bigsky"]{padding:34px 18px 44px}
+  #big-sky[data-tab="bigsky"] .section-head h2{font-size:36px}
+  #big-sky[data-tab="bigsky"] .bigsky-tools{flex-direction:column;align-items:stretch}
+  #big-sky[data-tab="bigsky"] .bigsky-tools select{width:100%}
 }
 
 /* =========================================================
@@ -3138,40 +3138,40 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
    Keep the upgraded structure, but restore a professional
    light schedule surface with dark readable type.
    ========================================================= */
-#big-sky[data-tab="schedule"]{
+#big-sky[data-tab="bigsky"]{
   background:#f4f4f2 !important;
   color:#202024 !important;
   border-top:1px solid #d9d9d6;
 }
-#big-sky[data-tab="schedule"] .section-head h2{
+#big-sky[data-tab="bigsky"] .section-head h2{
   color:#202024 !important;
 }
-#big-sky[data-tab="schedule"] .section-head>span{
+#big-sky[data-tab="bigsky"] .section-head>span{
   color:#6d6d70 !important;
 }
-#big-sky[data-tab="schedule"] .section-head .eyebrow{
+#big-sky[data-tab="bigsky"] .section-head .eyebrow{
   color:var(--maroon) !important;
 }
-#big-sky[data-tab="schedule"] .bigsky-tools{
+#big-sky[data-tab="bigsky"] .bigsky-tools{
   background:#fff !important;
   border:1px solid #d9d6d2 !important;
   box-shadow:0 2px 8px rgba(0,0,0,.035);
 }
-#big-sky[data-tab="schedule"] .bigsky-tools label{
+#big-sky[data-tab="bigsky"] .bigsky-tools label{
   color:#5e5e62 !important;
 }
-#big-sky[data-tab="schedule"] .bigsky-tools select{
+#big-sky[data-tab="bigsky"] .bigsky-tools select{
   background:#fff !important;
   color:#202024 !important;
   border:1px solid #c9c9c7 !important;
 }
-#big-sky[data-tab="schedule"] .bigsky-table{
+#big-sky[data-tab="bigsky"] .bigsky-table{
   background:#fff !important;
   border:1px solid #d6d4d1 !important;
   border-radius:10px;
   box-shadow:0 8px 24px rgba(0,0,0,.055);
 }
-#big-sky[data-tab="schedule"] .bigsky-row{
+#big-sky[data-tab="bigsky"] .bigsky-row{
   min-height:48px !important;
   padding:11px 16px !important;
   color:#252529 !important;
@@ -3180,27 +3180,27 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   font-size:10px !important;
   line-height:1.25 !important;
 }
-#big-sky[data-tab="schedule"] .bigsky-row:nth-child(even):not(.bigsky-head){
+#big-sky[data-tab="bigsky"] .bigsky-row:nth-child(even):not(.bigsky-head){
   background:#faf9f7 !important;
 }
-#big-sky[data-tab="schedule"] .bigsky-row:not(.bigsky-head):hover{
+#big-sky[data-tab="bigsky"] .bigsky-row:not(.bigsky-head):hover{
   background:#f2ecef !important;
 }
-#big-sky[data-tab="schedule"] .bigsky-row > span,
-#big-sky[data-tab="schedule"] .bigsky-row > b{
+#big-sky[data-tab="bigsky"] .bigsky-row > span,
+#big-sky[data-tab="bigsky"] .bigsky-row > b{
   color:#252529 !important;
 }
-#big-sky[data-tab="schedule"] .bigsky-row > b{
+#big-sky[data-tab="bigsky"] .bigsky-row > b{
   font-weight:850 !important;
 }
-#big-sky[data-tab="schedule"] .bigsky-row > span:nth-child(3){
+#big-sky[data-tab="bigsky"] .bigsky-row > span:nth-child(3){
   color:#4f4f54 !important;
 }
-#big-sky[data-tab="schedule"] .bigsky-row > span:last-child{
+#big-sky[data-tab="bigsky"] .bigsky-row > span:last-child{
   color:#333338 !important;
   font-weight:800 !important;
 }
-#big-sky[data-tab="schedule"] .bigsky-head{
+#big-sky[data-tab="bigsky"] .bigsky-head{
   min-height:38px !important;
   background:var(--maroon) !important;
   color:#fff !important;
@@ -3208,11 +3208,11 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   border-radius:9px 9px 0 0;
   letter-spacing:1px;
 }
-#big-sky[data-tab="schedule"] .bigsky-head > span{
+#big-sky[data-tab="bigsky"] .bigsky-head > span{
   color:#fff !important;
   font-weight:850 !important;
 }
-#big-sky[data-tab="schedule"] .league-tag{
+#big-sky[data-tab="bigsky"] .league-tag{
   color:#7b7b7e !important;
   opacity:1 !important;
   font-size:.58rem !important;
@@ -3220,30 +3220,30 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   letter-spacing:.05em;
   margin-left:7px;
 }
-#big-sky[data-tab="schedule"] .nonconf-tag{
+#big-sky[data-tab="bigsky"] .nonconf-tag{
   color:#8a8a8d !important;
   opacity:1 !important;
 }
-#big-sky[data-tab="schedule"] .bigsky-row:has(b:first-of-type){
+#big-sky[data-tab="bigsky"] .bigsky-row:has(b:first-of-type){
   position:relative;
 }
-#big-sky[data-tab="schedule"] .bigsky-row:nth-child(2){
+#big-sky[data-tab="bigsky"] .bigsky-row:nth-child(2){
   border-left:4px solid var(--maroon) !important;
   background:linear-gradient(90deg,#f5e9ed 0%,#fff 28%) !important;
 }
-#big-sky[data-tab="schedule"] .bigsky-row.bye-row{
+#big-sky[data-tab="bigsky"] .bigsky-row.bye-row{
   color:#777 !important;
 }
-#big-sky[data-tab="schedule"] .schedule-source{
+#big-sky[data-tab="bigsky"] .schedule-source{
   color:#777 !important;
 }
-#big-sky[data-tab="schedule"] .schedule-source a{
+#big-sky[data-tab="bigsky"] .schedule-source a{
   color:var(--maroon) !important;
 }
 @media(max-width:700px){
-  #big-sky[data-tab="schedule"]{padding-left:14px !important;padding-right:14px !important;}
-  #big-sky[data-tab="schedule"] .bigsky-row{min-width:560px !important;}
-  #big-sky[data-tab="schedule"] .bigsky-table{overflow-x:auto !important;}
+  #big-sky[data-tab="bigsky"]{padding-left:14px !important;padding-right:14px !important;}
+  #big-sky[data-tab="bigsky"] .bigsky-row{min-width:560px !important;}
+  #big-sky[data-tab="bigsky"] .bigsky-table{overflow-x:auto !important;}
 }
 
 /* Game information layer for the season schedule */
@@ -3269,23 +3269,23 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 @media(max-width:760px){.schedule{padding:0 12px}.schedule-row.game-card-row.head{display:none}.schedule-row.game-card-row{grid-template-columns:70px 1fr 90px;gap:10px;padding:14px 8px}.schedule-main-match b{font-size:18px}.schedule-team-line{gap:8px}.schedule-team-line img{width:32px;height:32px;flex-basis:32px}.schedule-odds,.schedule-weather{grid-column:2 / -1;border-left:0;border-top:1px solid #e8e5e3;padding:9px 0 0;min-height:0}.schedule-main-status{text-align:right}.schedule-odds b,.schedule-weather b{width:auto}.schedule-odds span,.schedule-weather span{font-size:8px}.schedule-odds small,.schedule-weather small{width:auto}}
 
 /* Big Sky schedule game information upgrade */
-#big-sky[data-tab="schedule"] .bigsky-table{overflow-x:auto}
-#big-sky[data-tab="schedule"] .bigsky-row{grid-template-columns:78px minmax(150px,1.05fr) minmax(210px,1.45fr) 100px minmax(185px,1.15fr) minmax(205px,1.2fr);gap:14px;align-items:center}
-#big-sky[data-tab="schedule"] .bigsky-head{min-width:1080px}
-#big-sky[data-tab="schedule"] .bigsky-game-row{min-width:1080px;padding-top:12px;padding-bottom:12px}
-#big-sky[data-tab="schedule"] .bigsky-game-row > span,
-#big-sky[data-tab="schedule"] .bigsky-game-row > b{min-width:0}
-#big-sky[data-tab="schedule"] .bigsky-info{min-height:48px;border-left:1px solid #dedfe1;padding-left:12px;display:flex;flex-direction:column;justify-content:center;gap:3px}
-#big-sky[data-tab="schedule"] .bigsky-info b{font:800 14px/1.05 "Barlow Condensed",sans-serif;color:var(--maroon);letter-spacing:.15px}
-#big-sky[data-tab="schedule"] .bigsky-info small{font-size:7px;line-height:1.1;color:#777;text-transform:uppercase;letter-spacing:.65px}
-#big-sky[data-tab="schedule"] .bigsky-info.muted{color:#999;border-left:0}
-#big-sky[data-tab="schedule"] .bigsky-info.muted b{color:#999}
-#big-sky[data-tab="schedule"] .bigsky-betting b{font-size:13px}
-#big-sky[data-tab="schedule"] .bigsky-weather b{font-size:13px}
-#big-sky[data-tab="schedule"] .bigsky-game-row:hover .bigsky-info{border-color:#c9cbd0}
+#big-sky[data-tab="bigsky"] .bigsky-table{overflow-x:auto}
+#big-sky[data-tab="bigsky"] .bigsky-row{grid-template-columns:78px minmax(150px,1.05fr) minmax(210px,1.45fr) 100px minmax(185px,1.15fr) minmax(205px,1.2fr);gap:14px;align-items:center}
+#big-sky[data-tab="bigsky"] .bigsky-head{min-width:1080px}
+#big-sky[data-tab="bigsky"] .bigsky-game-row{min-width:1080px;padding-top:12px;padding-bottom:12px}
+#big-sky[data-tab="bigsky"] .bigsky-game-row > span,
+#big-sky[data-tab="bigsky"] .bigsky-game-row > b{min-width:0}
+#big-sky[data-tab="bigsky"] .bigsky-info{min-height:48px;border-left:1px solid #dedfe1;padding-left:12px;display:flex;flex-direction:column;justify-content:center;gap:3px}
+#big-sky[data-tab="bigsky"] .bigsky-info b{font:800 14px/1.05 "Barlow Condensed",sans-serif;color:var(--maroon);letter-spacing:.15px}
+#big-sky[data-tab="bigsky"] .bigsky-info small{font-size:7px;line-height:1.1;color:#777;text-transform:uppercase;letter-spacing:.65px}
+#big-sky[data-tab="bigsky"] .bigsky-info.muted{color:#999;border-left:0}
+#big-sky[data-tab="bigsky"] .bigsky-info.muted b{color:#999}
+#big-sky[data-tab="bigsky"] .bigsky-betting b{font-size:13px}
+#big-sky[data-tab="bigsky"] .bigsky-weather b{font-size:13px}
+#big-sky[data-tab="bigsky"] .bigsky-game-row:hover .bigsky-info{border-color:#c9cbd0}
 @media(max-width:760px){
-  #big-sky[data-tab="schedule"] .bigsky-row{grid-template-columns:72px minmax(135px,1fr) minmax(185px,1.3fr) 88px minmax(170px,1fr) minmax(180px,1fr);gap:10px}
-  #big-sky[data-tab="schedule"] .bigsky-head,#big-sky[data-tab="schedule"] .bigsky-game-row{min-width:920px}
+  #big-sky[data-tab="bigsky"] .bigsky-row{grid-template-columns:72px minmax(135px,1fr) minmax(185px,1.3fr) 88px minmax(170px,1fr) minmax(180px,1fr);gap:10px}
+  #big-sky[data-tab="bigsky"] .bigsky-head,#big-sky[data-tab="bigsky"] .bigsky-game-row{min-width:920px}
 }
 
 /* BIG SKY SCHEDULE — MORE PROMINENT GAME INFO */
@@ -3370,14 +3370,14 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 }
 
 /* BIG SKY SCOREBOARD-STYLE CARDS — isolated to Around the League only */
-#big-sky[data-tab="schedule"] .bigsky-table{
+#big-sky[data-tab="bigsky"] .bigsky-table{
   background:transparent !important;
   border:0 !important;
   border-radius:0 !important;
   box-shadow:none !important;
   overflow:visible !important;
 }
-#big-sky[data-tab="schedule"] .bigsky-date-divider{
+#big-sky[data-tab="bigsky"] .bigsky-date-divider{
   margin:22px 0 0;
   padding:10px 16px 8px;
   background:#262629;
@@ -3385,11 +3385,11 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   border-radius:10px 10px 0 0;
   border-bottom:4px solid var(--maroon);
 }
-#big-sky[data-tab="schedule"] .bigsky-date-divider span{
+#big-sky[data-tab="bigsky"] .bigsky-date-divider span{
   font:900 15px/1 Inter,Arial,sans-serif;
   letter-spacing:.08em;
 }
-#big-sky[data-tab="schedule"] .bigsky-game-card{
+#big-sky[data-tab="bigsky"] .bigsky-game-card{
   background:#fff;
   border:1px solid #ddd9d6;
   border-top:0;
@@ -3397,11 +3397,11 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   box-shadow:0 3px 12px rgba(0,0,0,.045);
   transition:background .16s ease,box-shadow .16s ease;
 }
-#big-sky[data-tab="schedule"] .bigsky-game-card:hover{
+#big-sky[data-tab="bigsky"] .bigsky-game-card:hover{
   background:#fcfbfa;
   box-shadow:0 5px 16px rgba(0,0,0,.08);
 }
-#big-sky[data-tab="schedule"] .bigsky-game-top{
+#big-sky[data-tab="bigsky"] .bigsky-game-top{
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -3409,31 +3409,31 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   padding:14px 0 10px;
   border-bottom:1px solid #ece9e6;
 }
-#big-sky[data-tab="schedule"] .bigsky-game-time{
+#big-sky[data-tab="bigsky"] .bigsky-game-time{
   display:flex;
   align-items:baseline;
   gap:10px;
 }
-#big-sky[data-tab="schedule"] .bigsky-game-time strong{
+#big-sky[data-tab="bigsky"] .bigsky-game-time strong{
   font:900 17px/1 Inter,Arial,sans-serif;
   color:#202024;
 }
-#big-sky[data-tab="schedule"] .bigsky-game-time span{
+#big-sky[data-tab="bigsky"] .bigsky-game-time span{
   font:700 12px/1 Inter,Arial,sans-serif;
   color:#66676b;
 }
-#big-sky[data-tab="schedule"] .bigsky-game-type{
+#big-sky[data-tab="bigsky"] .bigsky-game-type{
   display:flex;
   align-items:center;
   gap:10px;
 }
-#big-sky[data-tab="schedule"] .bigsky-game-type > span:last-child{
+#big-sky[data-tab="bigsky"] .bigsky-game-type > span:last-child{
   font:800 10px/1 Inter,Arial,sans-serif;
   color:#77787c;
   letter-spacing:.07em;
   text-transform:uppercase;
 }
-#big-sky[data-tab="schedule"] .bigsky-game-type .league-tag{
+#big-sky[data-tab="bigsky"] .bigsky-game-type .league-tag{
   margin:0 !important;
   padding:5px 7px;
   border-radius:4px;
@@ -3442,33 +3442,33 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   font:900 9px/1 Inter,Arial,sans-serif !important;
   letter-spacing:.08em;
 }
-#big-sky[data-tab="schedule"] .bigsky-game-type .nonconf-tag{
+#big-sky[data-tab="bigsky"] .bigsky-game-type .nonconf-tag{
   color:#666 !important;
 }
-#big-sky[data-tab="schedule"] .bigsky-matchup{
+#big-sky[data-tab="bigsky"] .bigsky-matchup{
   display:grid;
   grid-template-columns:minmax(0,1fr) 42px minmax(0,1fr);
   align-items:center;
   gap:12px;
   padding:20px 0;
 }
-#big-sky[data-tab="schedule"] .bigsky-team strong{
+#big-sky[data-tab="bigsky"] .bigsky-team strong{
   display:block;
   font:900 28px/.95 "Barlow Condensed",Inter,sans-serif;
   color:#171719;
   letter-spacing:.2px;
   text-transform:uppercase;
 }
-#big-sky[data-tab="schedule"] .bigsky-team small{
+#big-sky[data-tab="bigsky"] .bigsky-team small{
   display:block;
   margin-top:7px;
   min-height:13px;
   font:700 11px/1.1 Inter,Arial,sans-serif;
   color:#77787c;
 }
-#big-sky[data-tab="schedule"] .bigsky-team.away{text-align:left}
-#big-sky[data-tab="schedule"] .bigsky-team.home{text-align:right}
-#big-sky[data-tab="schedule"] .bigsky-at{
+#big-sky[data-tab="bigsky"] .bigsky-team.away{text-align:left}
+#big-sky[data-tab="bigsky"] .bigsky-team.home{text-align:right}
+#big-sky[data-tab="bigsky"] .bigsky-at{
   width:42px;
   height:42px;
   display:flex;
@@ -3480,98 +3480,98 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   color:var(--maroon);
   font:900 13px/1 Inter,Arial,sans-serif;
 }
-#big-sky[data-tab="schedule"] .bigsky-game-bottom{
+#big-sky[data-tab="bigsky"] .bigsky-game-bottom{
   display:grid;
   grid-template-columns:minmax(220px,1.35fr) minmax(190px,1fr) minmax(190px,1fr);
   gap:16px;
   padding:13px 0 15px;
   border-top:1px solid #ece9e6;
 }
-#big-sky[data-tab="schedule"] .bigsky-location,
-#big-sky[data-tab="schedule"] .bigsky-info{
+#big-sky[data-tab="bigsky"] .bigsky-location,
+#big-sky[data-tab="bigsky"] .bigsky-info{
   min-height:48px;
   display:flex;
   flex-direction:column;
   justify-content:center;
 }
-#big-sky[data-tab="schedule"] .bigsky-location b{
+#big-sky[data-tab="bigsky"] .bigsky-location b{
   font:800 13px/1.15 Inter,Arial,sans-serif;
   color:#3e3e42;
 }
-#big-sky[data-tab="schedule"] .bigsky-location span{
+#big-sky[data-tab="bigsky"] .bigsky-location span{
   margin-top:4px;
   font:600 11px/1.15 Inter,Arial,sans-serif;
   color:#77787c;
 }
-#big-sky[data-tab="schedule"] .bigsky-info{
+#big-sky[data-tab="bigsky"] .bigsky-info{
   border-left:1px solid #dedbd8;
   padding-left:16px;
 }
-#big-sky[data-tab="schedule"] .bigsky-info b{
+#big-sky[data-tab="bigsky"] .bigsky-info b{
   font:900 14px/1.15 Inter,Arial,sans-serif !important;
   color:var(--maroon) !important;
 }
-#big-sky[data-tab="schedule"] .bigsky-info small{
+#big-sky[data-tab="bigsky"] .bigsky-info small{
   margin-top:5px;
   font:800 9px/1.1 Inter,Arial,sans-serif !important;
   color:#7a7a7e !important;
   letter-spacing:.07em;
 }
-#big-sky[data-tab="schedule"] .bye-row{display:block !important; min-height:70px !important; padding:20px !important; background:#fff !important}
+#big-sky[data-tab="bigsky"] .bye-row{display:block !important; min-height:70px !important; padding:20px !important; background:#fff !important}
 
 @media(max-width:700px){
-  #big-sky[data-tab="schedule"] .bigsky-date-divider{margin-top:16px;padding:9px 12px 7px}
-  #big-sky[data-tab="schedule"] .bigsky-date-divider span{font-size:12px}
-  #big-sky[data-tab="schedule"] .bigsky-game-card{padding:0 12px}
-  #big-sky[data-tab="schedule"] .bigsky-game-top{gap:10px;align-items:flex-start}
-  #big-sky[data-tab="schedule"] .bigsky-game-time{display:block}
-  #big-sky[data-tab="schedule"] .bigsky-game-time strong{font-size:15px}
-  #big-sky[data-tab="schedule"] .bigsky-game-time span{display:block;margin-top:4px;font-size:10px}
-  #big-sky[data-tab="schedule"] .bigsky-game-type{display:block;text-align:right}
-  #big-sky[data-tab="schedule"] .bigsky-game-type > span:last-child{display:block;margin-top:5px}
-  #big-sky[data-tab="schedule"] .bigsky-matchup{grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);gap:7px;padding:17px 0}
-  #big-sky[data-tab="schedule"] .bigsky-team strong{font-size:23px}
-  #big-sky[data-tab="schedule"] .bigsky-at{width:34px;height:34px;font-size:11px}
-  #big-sky[data-tab="schedule"] .bigsky-game-bottom{grid-template-columns:1fr 1fr;gap:10px}
-  #big-sky[data-tab="schedule"] .bigsky-location{grid-column:1/-1;padding-bottom:9px;border-bottom:1px solid #ece9e6}
-  #big-sky[data-tab="schedule"] .bigsky-info{padding-left:10px}
+  #big-sky[data-tab="bigsky"] .bigsky-date-divider{margin-top:16px;padding:9px 12px 7px}
+  #big-sky[data-tab="bigsky"] .bigsky-date-divider span{font-size:12px}
+  #big-sky[data-tab="bigsky"] .bigsky-game-card{padding:0 12px}
+  #big-sky[data-tab="bigsky"] .bigsky-game-top{gap:10px;align-items:flex-start}
+  #big-sky[data-tab="bigsky"] .bigsky-game-time{display:block}
+  #big-sky[data-tab="bigsky"] .bigsky-game-time strong{font-size:15px}
+  #big-sky[data-tab="bigsky"] .bigsky-game-time span{display:block;margin-top:4px;font-size:10px}
+  #big-sky[data-tab="bigsky"] .bigsky-game-type{display:block;text-align:right}
+  #big-sky[data-tab="bigsky"] .bigsky-game-type > span:last-child{display:block;margin-top:5px}
+  #big-sky[data-tab="bigsky"] .bigsky-matchup{grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);gap:7px;padding:17px 0}
+  #big-sky[data-tab="bigsky"] .bigsky-team strong{font-size:23px}
+  #big-sky[data-tab="bigsky"] .bigsky-at{width:34px;height:34px;font-size:11px}
+  #big-sky[data-tab="bigsky"] .bigsky-game-bottom{grid-template-columns:1fr 1fr;gap:10px}
+  #big-sky[data-tab="bigsky"] .bigsky-location{grid-column:1/-1;padding-bottom:9px;border-bottom:1px solid #ece9e6}
+  #big-sky[data-tab="bigsky"] .bigsky-info{padding-left:10px}
 }
 
 /* Big Sky scoreboard cards — team logos + line-shop presentation */
-#big-sky[data-tab="schedule"] .bigsky-matchup .bigsky-team{
+#big-sky[data-tab="bigsky"] .bigsky-matchup .bigsky-team{
   display:flex;
   align-items:center;
   gap:14px;
   min-width:0;
 }
-#big-sky[data-tab="schedule"] .bigsky-matchup .bigsky-team.away{justify-content:flex-start;text-align:left}
-#big-sky[data-tab="schedule"] .bigsky-matchup .bigsky-team.home{justify-content:flex-end;text-align:right}
-#big-sky[data-tab="schedule"] .bigsky-team-logo{
+#big-sky[data-tab="bigsky"] .bigsky-matchup .bigsky-team.away{justify-content:flex-start;text-align:left}
+#big-sky[data-tab="bigsky"] .bigsky-matchup .bigsky-team.home{justify-content:flex-end;text-align:right}
+#big-sky[data-tab="bigsky"] .bigsky-team-logo{
   width:58px;
   height:58px;
   object-fit:contain;
   flex:0 0 58px;
 }
-#big-sky[data-tab="schedule"] .bigsky-team-copy{min-width:0}
-#big-sky[data-tab="schedule"] .bigsky-team strong{margin:0}
-#big-sky[data-tab="schedule"] .bigsky-team small{margin-top:7px}
-#big-sky[data-tab="schedule"] .bigsky-info.bigsky-betting{
+#big-sky[data-tab="bigsky"] .bigsky-team-copy{min-width:0}
+#big-sky[data-tab="bigsky"] .bigsky-team strong{margin:0}
+#big-sky[data-tab="bigsky"] .bigsky-team small{margin-top:7px}
+#big-sky[data-tab="bigsky"] .bigsky-info.bigsky-betting{
   overflow:hidden;
 }
-#big-sky[data-tab="schedule"] .bigsky-betting .market-line-row{
+#big-sky[data-tab="bigsky"] .bigsky-betting .market-line-row{
   display:grid;
   grid-template-columns:auto minmax(0,1fr);
   gap:8px;
   align-items:baseline;
   margin:1px 0;
 }
-#big-sky[data-tab="schedule"] .bigsky-betting .market-line-row b{
+#big-sky[data-tab="bigsky"] .bigsky-betting .market-line-row b{
   font:900 9px/1 Inter,Arial,sans-serif !important;
   letter-spacing:.05em;
   color:#555 !important;
   white-space:nowrap;
 }
-#big-sky[data-tab="schedule"] .bigsky-betting .market-line-row span{
+#big-sky[data-tab="bigsky"] .bigsky-betting .market-line-row span{
   min-width:0;
   overflow:hidden;
   text-overflow:ellipsis;
@@ -3579,13 +3579,13 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
   font:800 12px/1.15 "Barlow Condensed",Inter,sans-serif;
   color:var(--maroon);
 }
-#big-sky[data-tab="schedule"] .bigsky-betting .kalshi-line span{color:#168c70}
+#big-sky[data-tab="bigsky"] .bigsky-betting .kalshi-line span{color:#168c70}
 
 @media(max-width:700px){
-  #big-sky[data-tab="schedule"] .bigsky-team-logo{width:45px;height:45px;flex-basis:45px}
-  #big-sky[data-tab="schedule"] .bigsky-matchup .bigsky-team{gap:9px}
-  #big-sky[data-tab="schedule"] .bigsky-team strong{font-size:21px}
-  #big-sky[data-tab="schedule"] .bigsky-betting .market-line-row span{font-size:11px}
+  #big-sky[data-tab="bigsky"] .bigsky-team-logo{width:45px;height:45px;flex-basis:45px}
+  #big-sky[data-tab="bigsky"] .bigsky-matchup .bigsky-team{gap:9px}
+  #big-sky[data-tab="bigsky"] .bigsky-team strong{font-size:21px}
+  #big-sky[data-tab="bigsky"] .bigsky-betting .market-line-row span{font-size:11px}
 }
 
 /* GRIZ FULL SCHEDULE — clean presentation (Big Sky board remains unchanged) */
