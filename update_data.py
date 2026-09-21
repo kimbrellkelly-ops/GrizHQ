@@ -613,7 +613,7 @@ def fetch_latest_press_conference():
 
 
 # ---------------------------------------------------------------------------
-# AUTOMATIC NEXT-OPPONENT DOSSIER
+# AUTOMATIC NEXT-OPPONENT DOSSIER — LIVE BUILD-TIME FEED
 # ---------------------------------------------------------------------------
 # The Next Up page is intentionally fed by the same authoritative Montana
 # schedule that drives the rest of Griz HQ.  ESPN supplies the opponent's
