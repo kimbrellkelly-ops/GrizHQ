@@ -1078,6 +1078,7 @@ def main():
     except Exception as e: print("Big Sky players-of-week update failed:",e)
 
     try: new["stats"]=parse_stats(old, sched if "sched" in locals() else None)
+    except Exception as e: print("Stats update failed:",e)
 
     try:
         upcoming = [g for g in (sched if "sched" in locals() else new.get("schedule", [])) if not g.get("result")]
@@ -1087,7 +1088,6 @@ def main():
         print("Next-opponent dossier update failed; retaining last good dossier:", e)
         if isinstance(old.get("next_opponent"), dict):
             new["next_opponent"] = old["next_opponent"]
-    except Exception as e: print("Stats update failed:",e)
 
     try:
         depth=fetch_depth_chart(old)
