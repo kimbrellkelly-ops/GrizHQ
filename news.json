@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21T23:35:31.424632+00:00",
+  "updated": "2026-09-21T23:48:21.641310+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -15,21 +15,6 @@
   "stories": [
     {
       "title": "First look: No. 5 Montana Grizzlies at No. 10 UC Davis Aggies",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_9276d266-e940-5501-a28b-d4fc4403ae3f.html",
-      "date": "Sep. 21, 2026",
-      "published_at": "2026-09-21T22:45:00+00:00",
-      "description": "The Grizzlies remain on the road for a second straight week when they play at UC Davis looking to rebound from their first loss.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/6c/06c44cb1-cb99-5224-8687-c0876d6330e4/6aafb638e0e39.image.jpg?resize=300%2C205",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/6c/06c44cb1-cb99-5224-8687-c0876d6330e4/6aafb638e0e39.image.jpg?resize=300%2C205"
-    },
-    {
-      "title": "First look: No. 5 Montana Grizzlies at No. 10 UC Davis Aggies",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-5-montana-grizzlies-at-no-10-uc-davis-aggies/article_a5c9adbf-e2f9-4d68-9add-38b8ebcd3608.html",
       "date": "Sep. 21, 2026",
       "published_at": "2026-09-21T22:45:00+00:00",
@@ -42,6 +27,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/5c/a5c9adbf-e2f9-4d68-9add-38b8ebcd3608/6ab1ad9f3897c.preview.jpg?crop=1739%2C913%2C0%2C160&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "First look: No. 5 Montana Grizzlies at No. 10 UC Davis Aggies",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_9276d266-e940-5501-a28b-d4fc4403ae3f.html",
+      "date": "Sep. 21, 2026",
+      "published_at": "2026-09-21T22:45:00+00:00",
+      "description": "The Grizzlies remain on the road for a second straight week when they play at UC Davis looking to rebound from their first loss.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/6c/06c44cb1-cb99-5224-8687-c0876d6330e4/6aafb638e0e39.image.jpg?resize=300%2C205",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/6c/06c44cb1-cb99-5224-8687-c0876d6330e4/6aafb638e0e39.image.jpg?resize=300%2C205"
     },
     {
       "title": "Two grizzlies spotted swimming in Polson Bay, one trapped for relocation",
