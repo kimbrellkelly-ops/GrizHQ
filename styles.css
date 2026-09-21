@@ -3255,7 +3255,7 @@ footer{background:var(--maroon);color:#fff;padding:30px max(25px,calc((100% - 15
 .schedule-row.game-card-row.head{display:grid;grid-template-columns:92px minmax(180px,1.55fr) 120px minmax(170px,1fr) minmax(190px,1.1fr);padding:10px 12px;background:var(--maroon);color:#fff;border:0;font-size:8px;letter-spacing:1px;text-transform:uppercase}
 .schedule-main-date span{display:block;font:800 15px "Barlow Condensed";color:var(--maroon);letter-spacing:.4px}
 .schedule-main-date small{display:block;font:800 7px Inter;letter-spacing:1.2px;color:#777;margin-top:4px}
-.schedule-team-line{display:flex;align-items:center;gap:10px;min-width:0}.schedule-team-line img{width:38px;height:38px;object-fit:contain;flex:0 0 38px}.schedule-main-match b{display:block;font:800 20px "Barlow Condensed";letter-spacing:.2px;color:#171719}
+.schedule-team-line{display:flex;align-items:center;gap:10px;min-width:0}.schedule-team-line img{width:38px;height:38px;object-fit:contain;flex:0 0 38px}.schedule-team-line img+img{display:none!important}.schedule-main-match b{display:block;font:800 20px "Barlow Condensed";letter-spacing:.2px;color:#171719}
 .schedule-main-match span{display:block;color:#666;font-size:8px;margin-top:4px;line-height:1.35}
 .schedule-main-match small{display:inline-block;margin-top:6px;padding:3px 6px;background:#eeeae8;color:#555;font:800 7px Inter;letter-spacing:.7px}
 .schedule-main-status strong{display:block;font:800 15px "Barlow Condensed";color:#171719}
