@@ -974,23 +974,16 @@ def build_next_opponent_dossier(opponent, schedule, old=None):
     if opponent in BIG_SKY:
         big_sky_games = _big_sky_team_schedule(opponent)
         if big_sky_games:
-            # The conference schedule is authoritative for Big Sky records and
-            # recent opponents; ESPN remains the first choice for richer data.
-            if not games:
-                games = big_sky_games
-            else:
-                by_opp = {str(g.get("opponent","")).lower(): g for g in big_sky_games}
-                for g in games:
-                    bg = by_opp.get(str(g.get("opponent","")).lower())
-                    if bg and bg.get("completed"):
-                        g.update({k:v for k,v in bg.items() if v not in ("",None)})
+            # The official Big Sky schedule is authoritative for conference
+            # records, recent results, and score orientation for league teams.
+            games = big_sky_games
     played = [g for g in games if g["completed"]]
     upcoming = [g for g in games if not g["completed"]]
     wins = sum(1 for g in played if g["result"].startswith("W"))
     losses = sum(1 for g in played if g["result"].startswith("L"))
 
     # Big Sky is the only opponent conference we need for Montana's 2026 slate.
-    conf_games = [g for g in played if g.get("opponent") in BIG_SKY]
+    conf_games = [g for g in played if g.get("conference") or g.get("opponent") in BIG_SKY]
     cw = sum(1 for g in conf_games if g["result"].startswith("W"))
     cl = sum(1 for g in conf_games if g["result"].startswith("L"))
 
