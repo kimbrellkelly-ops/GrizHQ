@@ -171,6 +171,9 @@ BIG_SKY_NEWS_RSS = "https://bigskyconf.com/rss?path=football"
 def _clean_text(value):
     return re.sub(r"\s+", " ", BeautifulSoup(str(value or ""), "html.parser").get_text(" ", strip=True)).strip()
 
+# Backward-compatible alias used by the original refresh parsers.
+clean = _clean_text
+
 def parse_big_sky_standings():
     soup = BeautifulSoup(get(BIG_SKY_STANDINGS_URL), "html.parser")
     for table in soup.find_all("table"):
@@ -660,14 +663,19 @@ OPPONENT_OFFICIAL_ROOTS = {
 OPPONENT_VENUES = dict(NEXT_GAME_VENUES)
 
 def _espn_json(url, params=None):
-    try:
-        r = requests.get(url, params=params or {}, headers=HEADERS, timeout=30)
-        r.raise_for_status()
-        data = r.json()
-        return data if isinstance(data, dict) else {}
-    except Exception as exc:
-        print("Next-opponent ESPN request failed:", url, exc)
-        return {}
+    urls=[url]
+    if "site.api.espn.com" in url:
+        urls.append(url.replace("site.api.espn.com","site.web.api.espn.com"))
+    for candidate_url in urls:
+        try:
+            r=requests.get(candidate_url, params=params or {}, headers=HEADERS, timeout=30)
+            r.raise_for_status()
+            data=r.json()
+            if isinstance(data, dict):
+                return data
+        except Exception as exc:
+            print("Next-opponent ESPN request failed:", candidate_url, exc)
+    return {}
 
 def _first_number(value):
     if value is None:
@@ -1021,6 +1029,15 @@ def build_next_opponent_dossier(opponent, schedule, old=None):
         venue = games[-1]["venue"] + (f", {games[-1]['city']}, {games[-1]['state']}" if games[-1].get("city") else "")
     coach = _opponent_coach(team)
     leaders = _opponent_leader_players(team_id, opponent)
+    if played:
+        own_points=[_first_number(g.get("score","").split("-")[0]) for g in played if g.get("score")]
+        opp_points=[_first_number(g.get("score","").split("-")[-1]) for g in played if g.get("score")]
+        own_points=[x for x in own_points if x is not None]
+        opp_points=[x for x in opp_points if x is not None]
+        if not points and own_points:
+            points=_fmt_num(sum(own_points)/len(own_points))
+        if not allowed and opp_points:
+            allowed=_fmt_num(sum(opp_points)/len(opp_points))
     stats = {
         "points": points or "",
         "offense": offense or "",
