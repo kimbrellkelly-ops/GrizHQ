@@ -1075,6 +1075,7 @@ def build_next_opponent_dossier(opponent, schedule, old=None):
     venue = OPPONENT_VENUES.get(opponent, "")
     if games and games[-1].get("venue"):
         venue = games[-1]["venue"] + (f", {games[-1]['city']}, {games[-1]['state']}" if games[-1].get("city") else "")
+    official_stats, official_players = _official_opponent_stats(opponent)
     coach = _opponent_coach(team)
     leaders = official_players or _opponent_leader_players(team_id, opponent)
     if played:
