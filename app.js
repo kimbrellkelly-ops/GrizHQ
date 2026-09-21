@@ -1657,7 +1657,25 @@ setInterval(async () => {
     const fallback=PROFILES[opponent] || null;
     if(!generated) return fallback;
     if(!fallback) return generated;
-    return Object.assign({},fallback,generated,{stats:Object.assign({},fallback.stats||{},generated.stats||{})});
+    const merged=Object.assign({},fallback,generated);
+    const gs=generated.stats||{}, fs=fallback.stats||{};
+    merged.stats=Object.assign({},fs,gs);
+    if(!generated.record || (generated.record==='0–0' && !Array.isArray(generated.recent)?.length)) merged.record=fallback.record;
+    if(!generated.conferenceRecord || (generated.conferenceRecord==='0–0' && fallback.conferenceRecord)) merged.conferenceRecord=fallback.conferenceRecord;
+    if(!generated.coach) merged.coach=fallback.coach;
+    if(!generated.coachLine) merged.coachLine=fallback.coachLine;
+    if(!Array.isArray(generated.recent) || !generated.recent.length) merged.recent=fallback.recent;
+    if(!Array.isArray(generated.players) || !generated.players.length) merged.players=fallback.players;
+    if(!generated.intel) merged.intel=fallback.intel;
+    if(!Array.isArray(generated.facts) || !generated.facts.length) merged.facts=fallback.facts;
+    if(!Array.isArray(generated.watch) || !generated.watch.length) merged.watch=fallback.watch;
+    if(!Array.isArray(generated.checklist) || !generated.checklist.length) merged.checklist=fallback.checklist;
+    if(!Array.isArray(generated.moreNumbers) || !generated.moreNumbers.length) merged.moreNumbers=fallback.moreNumbers;
+    if(!Array.isArray(generated.media) || !generated.media.length) merged.media=fallback.media;
+    if(!generated.historyRecord && fallback.historyRecord) merged.historyRecord=fallback.historyRecord;
+    if(!generated.historyText && fallback.historyText) merged.historyText=fallback.historyText;
+    if(!Array.isArray(generated.historyGames) || !generated.historyGames.length) merged.historyGames=fallback.historyGames;
+    return merged;
   }
   function resourceSet(opponent,data){
     const root=rootFor(opponent);
