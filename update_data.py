@@ -190,13 +190,20 @@ def parse_big_sky_standings():
             if len(cells)<=max(school_i,conf_i,overall_i): continue
             school=cells[school_i]
             if not school or school.lower()=="school": continue
+            schedule_url=""
+            for a in tr.find_all("a", href=True):
+                href=urljoin(BIG_SKY_STANDINGS_URL, a.get("href"))
+                if "schedule.aspx?schedule=" in href:
+                    schedule_url=href
+                    break
             out.append({"rank":rank,"team":school,"conference_record":cells[conf_i],"overall_record":cells[overall_i],
                         "home":cells[home_i] if home_i>=0 and home_i<len(cells) else "",
                         "away":cells[away_i] if away_i>=0 and away_i<len(cells) else "",
                         "conference_points":cells[conf_pf_i] if conf_pf_i>=0 and conf_pf_i<len(cells) else "",
                         "points":cells[pf_i] if pf_i>=0 and pf_i<len(cells) else "",
                         "conference_streak":cells[conf_streak_i] if conf_streak_i>=0 and conf_streak_i<len(cells) else "",
-                        "overall_streak":cells[overall_streak_i] if overall_streak_i>=0 and overall_streak_i<len(cells) else ""})
+                        "overall_streak":cells[overall_streak_i] if overall_streak_i>=0 and overall_streak_i<len(cells) else "",
+                        "schedule_url":schedule_url})
         if len(out)>=10: return out
     raise RuntimeError("Could not parse Big Sky standings")
 
@@ -697,6 +704,60 @@ def _pick_stat(stats, aliases):
             return str(value)
     return ""
 
+def _big_sky_team_schedule(opponent):
+    """Read the official Big Sky team schedule when ESPN's team feed is unavailable."""
+    try:
+        soup=BeautifulSoup(get(BIG_SKY_STANDINGS_URL),"html.parser")
+        schedule_url=""
+        for tr in soup.find_all("tr"):
+            cells=[_clean_text(x.get_text(" ",strip=True)) for x in tr.find_all(["td","th"])]
+            if not cells or str(opponent).lower() not in " ".join(cells).lower():
+                continue
+            for a in tr.find_all("a",href=True):
+                href=urljoin(BIG_SKY_STANDINGS_URL,a.get("href"))
+                if "schedule.aspx?schedule=" in href:
+                    schedule_url=href
+                    break
+            if schedule_url:
+                break
+        if not schedule_url:
+            return []
+        page=BeautifulSoup(get(schedule_url),"html.parser")
+        for table in page.find_all("table"):
+            headers=[_clean_text(x.get_text(" ",strip=True)).lower() for x in table.find_all("th")]
+            if not {"date","opponent","location","time/result"}.issubset(set(headers)):
+                continue
+            idx={h:i for i,h in enumerate(headers)}
+            out=[]
+            for tr in table.find_all("tr")[1:]:
+                cells=[_clean_text(x.get_text(" ",strip=True)) for x in tr.find_all(["td","th"])]
+                if len(cells)<=max(idx.values()):
+                    continue
+                date=cells[idx["date"]]
+                opp=cells[idx["opponent"]]
+                loc=cells[idx["location"]]
+                result=cells[idx["time/result"]]
+                m=re.match(r"([WL])\s+(\d+)-(\d+)$",result)
+                completed=bool(m)
+                rowscore=""
+                if m:
+                    rowscore=f"{m.group(2)}-{m.group(3)}"
+                out.append({
+                    "date":date,
+                    "opponent":_clean_text(BeautifulSoup(opp,"html.parser").get_text(" ",strip=True)),
+                    "result":(m.group(1) if m else ""),
+                    "score":rowscore,
+                    "completed":completed,
+                    "homeAway":"away" if re.search(r"^at\s+",opp,re.I) else "home",
+                    "venue":loc,
+                    "conference":bool(cells[idx.get("conference game",-1)]) if "conference game" in idx and idx["conference game"]>=0 else False,
+                    "event_id":"",
+                })
+            return out
+    except Exception as exc:
+        print("Big Sky team schedule fallback failed:",opponent,exc)
+    return []
+
 def _espn_team_schedule(team_id):
     data = _espn_json(
         f"https://site.api.espn.com/apis/site/v2/sports/football/college-football/teams/{team_id}/schedule",
@@ -902,6 +963,19 @@ def build_next_opponent_dossier(opponent, schedule, old=None):
     team = team if isinstance(team, dict) else {}
     events = _espn_team_schedule(team_id)
     games = _parse_opponent_schedule(events, team_id)
+    if opponent in BIG_SKY:
+        big_sky_games = _big_sky_team_schedule(opponent)
+        if big_sky_games:
+            # The conference schedule is authoritative for Big Sky records and
+            # recent opponents; ESPN remains the first choice for richer data.
+            if not games:
+                games = big_sky_games
+            else:
+                by_opp = {str(g.get("opponent","")).lower(): g for g in big_sky_games}
+                for g in games:
+                    bg = by_opp.get(str(g.get("opponent","")).lower())
+                    if bg and bg.get("completed"):
+                        g.update({k:v for k,v in bg.items() if v not in ("",None)})
     played = [g for g in games if g["completed"]]
     upcoming = [g for g in games if not g["completed"]]
     wins = sum(1 for g in played if g["result"].startswith("W"))
