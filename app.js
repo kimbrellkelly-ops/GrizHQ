@@ -1591,7 +1591,7 @@ setInterval(async () => {
         ["RECENT GAME","Oregon State at Houston","Another look at the Beavers' season opener","https://www.youtube.com/results?search_query=Oregon+State+Houston+2026+football"]
       ]
     }
-  };
+  ,
      "UC Davis": {
        record:"3–1", conferenceRecord:"1–0", location:"Davis, Calif.", capacity:"10,743",
        coach:"Tim Plough", coachLine:"Third season as UC Davis head coach",
@@ -1629,7 +1629,8 @@ setInterval(async () => {
          ["RECENT GAME","UC Davis vs. Stetson","Full-game, recap and highlight video","https://www.youtube.com/results?search_query=UC+Davis+Stetson+2026+football"],
          ["RECENT GAME","UC Davis at SMU","Another look at the Aggies' season","https://www.youtube.com/results?search_query=UC+Davis+SMU+2026+football"]
        ]
-     },
+     }
+  };
   function finished(game){ return !!String(game && game.result || '').trim(); }
   function chooseNext(data){
     const schedule=Array.isArray(data && data.schedule) ? data.schedule : [];
