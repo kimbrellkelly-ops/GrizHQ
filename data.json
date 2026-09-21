@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21T04:35:24.469075+00:00",
+  "updated": "2026-09-21T04:36:28.132710+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-1",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-21T04:35:34.990765+00:00"
+    "checked_at": "2026-09-21T04:36:38.319456+00:00"
   },
   "resources": [
     {
@@ -2935,7 +2935,7 @@
       "pending": []
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-21T04:35:30.858816+00:00",
+    "source_checked_at": "2026-09-21T04:36:34.523057+00:00",
     "team_summary": [
       {
         "value": "0–0",
@@ -28167,6 +28167,6 @@
       "news": "https://ucdavisaggies.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-09-21T04:35:33.332362+00:00"
+    "updated": "2026-09-21T04:36:36.645038+00:00"
   }
 }
