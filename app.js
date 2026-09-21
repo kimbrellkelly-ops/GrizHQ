@@ -1592,6 +1592,43 @@ setInterval(async () => {
       ]
     }
   };
+     "UC Davis": {
+       record:"3–1", conferenceRecord:"1–0", location:"Davis, Calif.", capacity:"10,743",
+       coach:"Tim Plough", coachLine:"Third season as UC Davis head coach",
+       stats:{points:"33.75", offense:"410.0", passing:"286.25", rushing:"123.75", allowed:"26.00", defense:"382.75", third:"38.46%", turnovers:"+1"},
+       recent:[
+         ["UC Davis","W","45–7","Stetson"],["","L","10–56","SMU"]
+       ],
+       players:[
+         ["UC","Treynor Cleeland","UC Davis QB • 995 passing yards • 9 TD"],
+         ["UC","Samuel Gbatu Jr.","UC Davis WR • 468 receiving yards • 4 TD"],
+         ["UC","Jordan Fisher","UC Davis RB • 213 rushing yards • 4 TD"],
+         ["UC","Porter Connors","UC Davis DL • 31 tackles • 1 sack"],
+       ],
+       intel:"UC Davis enters the Montana matchup at 3–1 after a 45–7 win over Stetson. The Aggies average 33.75 points and 410.0 total yards per game through four games.",
+       facts:[["3–1","Current record"],["1–0","Big Sky record"],["410.0","Total offense / game"],["Davis","Home of the Aggies"]],
+       historyTitle:"MONTANA VS. UC DAVIS",
+       historyText:"Montana and UC Davis meet in Davis on Sept. 26 in the next Big Sky game for both teams.",
+       historyGames:[["2026","NEXT CHAPTER","UC Davis Health Stadium"],["2025","SERIES","Official records"],["2026","UPCOMING","Davis, Calif."]],
+       watch:[
+         ["Can Montana contain the Aggies' passing game?","UC Davis is averaging 286.25 passing yards per game through four contests."],
+         ["Can Montana slow Samuel Gbatu Jr.?","Gbatu leads UC Davis with 468 receiving yards and four touchdowns."],
+         ["Can Montana win on third down?","UC Davis is converting 38.46% of third downs this season."],
+       ],
+       checklist:[
+         ["Quarterback play","Treynor Cleeland has 995 passing yards and nine touchdowns through four games."],
+         ["Explosive offense","UC Davis is averaging 410.0 total yards per game."],
+         ["Run defense","The Aggies average 123.75 rushing yards per game."],
+         ["Takeaways","UC Davis has a +1 turnover margin through four games."],
+       ],
+       moreNumbers:[["PASSING","286.25","UC Davis passing yards per game"],["TOTAL OFFENSE","410.0","Total yards per game"],["RUSHING","123.75","Rushing yards per game"],["POINTS","33.75","Points per game"],["POINTS ALLOWED","26.0","Opponent points per game"],["3RD DOWN","38.46%","Third-down conversion rate"]],
+       media:[
+         ["HIGHLIGHTS","UC Davis 2026 Highlights","Recent game clips and team highlights","https://www.youtube.com/results?search_query=UC+Davis+football+2026+highlights"],
+         ["COACH TALK","Tim Plough Press Conferences","Hear the Aggies' coaches directly","https://www.youtube.com/results?search_query=Tim+Plough+UC+Davis+2026+press+conference"],
+         ["RECENT GAME","UC Davis vs. Stetson","Full-game, recap and highlight video","https://www.youtube.com/results?search_query=UC+Davis+Stetson+2026+football"],
+         ["RECENT GAME","UC Davis at SMU","Another look at the Aggies' season","https://www.youtube.com/results?search_query=UC+Davis+SMU+2026+football"]
+       ]
+     },
   function finished(game){ return !!String(game && game.result || '').trim(); }
   function chooseNext(data){
     const schedule=Array.isArray(data && data.schedule) ? data.schedule : [];
