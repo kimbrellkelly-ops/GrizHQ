@@ -1,6 +1,9 @@
 name: Refresh Griz HQ data
 
 on:
+  push:
+    paths:
+      - update_data.py
   schedule:
     - cron: "17 * * * *"
   workflow_dispatch:
@@ -35,6 +38,20 @@ jobs:
 
       - name: Validate generated data
         run: python validate_stats.py
+
+      - name: Validate next-opponent dossier
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data.json').read_text())
+          n=d.get('next_opponent') or {}
+          assert n.get('opponent'), 'next_opponent missing'
+          assert isinstance(n.get('stats'), dict), 'next_opponent stats missing'
+          assert isinstance(n.get('recent'), list), 'next_opponent recent games missing'
+          assert isinstance(n.get('resources'), dict), 'next_opponent resources missing'
+          print('NEXT OPPONENT DOSSIER VALIDATION PASSED:', n.get('opponent'))
+          PY
 
       - name: Commit updated data safely
         run: |
