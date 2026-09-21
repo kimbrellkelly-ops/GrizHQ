@@ -894,7 +894,7 @@ def build_next_opponent_dossier(opponent, schedule, old=None):
     losses = sum(1 for g in played if g["result"].startswith("L"))
 
     # Big Sky is the only opponent conference we need for Montana's 2026 slate.
-    conf_games = [g for g in played if opponent in BIG_SKY or "Montana" in g["opponent"]]
+    conf_games = [g for g in played if g.get("opponent") in BIG_SKY]
     cw = sum(1 for g in conf_games if g["result"].startswith("W"))
     cl = sum(1 for g in conf_games if g["result"].startswith("L"))
 
