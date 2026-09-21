@@ -702,7 +702,21 @@ def _espn_team_schedule(team_id):
         f"https://site.api.espn.com/apis/site/v2/sports/football/college-football/teams/{team_id}/schedule",
         {"season": "2026", "seasontype": "2"},
     )
-    return data.get("events") if isinstance(data.get("events"), list) else []
+    events = data.get("events") if isinstance(data.get("events"), list) else []
+    if events:
+        return events
+    # ESPN's college-football team schedule endpoint can temporarily return an
+    # empty events array. The year scoreboard feed is the current fallback.
+    year = _espn_json(
+        "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard",
+        {"dates": "2026", "seasontype": "2", "limit": "1000"},
+    )
+    found = []
+    for event in year.get("events", []) if isinstance(year.get("events"), list) else []:
+        competitors = ((event.get("competitions") or [{}])[0]).get("competitors") or []
+        if any(str((c.get("team") or {}).get("id", "")) == str(team_id) for c in competitors):
+            found.append(event)
+    return found
 
 def _parse_opponent_schedule(events, team_id):
     rows = []
