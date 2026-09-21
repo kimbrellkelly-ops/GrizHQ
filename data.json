@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21T04:28:55.056144+00:00",
+  "updated": "2026-09-21T04:35:24.469075+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "2-1",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-21T04:29:00.852993+00:00"
+    "checked_at": "2026-09-21T04:35:34.990765+00:00"
   },
   "resources": [
     {
@@ -2935,7 +2935,7 @@
       "pending": []
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-21T04:28:59.530407+00:00",
+    "source_checked_at": "2026-09-21T04:35:30.858816+00:00",
     "team_summary": [
       {
         "value": "0–0",
@@ -28025,5 +28025,148 @@
       "published": "Wed, 16 Sep 2026"
     }
   ],
-  "big_sky_players_of_week_updated": "2026-09-20T19:00:00Z"
+  "big_sky_players_of_week_updated": "2026-09-20T19:00:00Z",
+  "next_opponent": {
+    "opponent": "UC Davis",
+    "record": "0–0",
+    "conferenceRecord": "0–0",
+    "location": "UC Davis",
+    "capacity": "",
+    "coach": "",
+    "coachLine": "Current ESPN team listing",
+    "logo": "",
+    "stats": {
+      "points": "",
+      "offense": "",
+      "passing": "",
+      "rushing": "",
+      "allowed": "",
+      "defense": "",
+      "third": "—",
+      "turnovers": "—"
+    },
+    "recent": [],
+    "players": [],
+    "intel": "UC Davis is 0–0 through 0 completed games and 0–0 in Big Sky play.",
+    "facts": [
+      [
+        "0–0",
+        "Current record"
+      ],
+      [
+        "0–0",
+        "Big Sky record"
+      ],
+      [
+        "—",
+        "Total offense / game"
+      ],
+      [
+        "UC Davis",
+        "Program"
+      ]
+    ],
+    "historyTitle": "MONTANA VS. UC DAVIS",
+    "historyText": "Official matchup history is available through the Griz game center for the current meeting.",
+    "historyRecord": "",
+    "historyRecordLabel": "Series history",
+    "historyLast": "",
+    "historyLastScore": "",
+    "historyGames": [
+      [
+        "2026",
+        "NEXT CHAPTER",
+        "UC Davis Health Stadium, Davis, Calif."
+      ]
+    ],
+    "historyUrl": "https://gogriz.com/game-center/5256",
+    "watch": [
+      [
+        "Can Montana handle UC Davis's offense?",
+        "UC Davis is averaging — total yards per game."
+      ],
+      [
+        "Where is UC Davis most productive?",
+        "Current passing and rushing production: — pass / — rush yards per game."
+      ],
+      [
+        "Can Montana win the situational battle?",
+        "Current third-down figure: —; turnover margin: —."
+      ]
+    ],
+    "checklist": [
+      [
+        "Quarterback play",
+        "Review UC Davis's current passing production and recent game film."
+      ],
+      [
+        "Explosive offense",
+        "Track UC Davis's longest plays and scoring drives in the latest games."
+      ],
+      [
+        "Run defense",
+        "Account for UC Davis's current rushing production."
+      ],
+      [
+        "Takeaways",
+        "Track the current turnover margin: —."
+      ]
+    ],
+    "moreNumbers": [
+      [
+        "PASSING",
+        "—",
+        "UC Davis passing yards per game"
+      ],
+      [
+        "TOTAL OFFENSE",
+        "—",
+        "UC Davis total yards per game"
+      ],
+      [
+        "RUSHING",
+        "—",
+        "UC Davis rushing yards per game"
+      ],
+      [
+        "POINTS",
+        "—",
+        "UC Davis points per game"
+      ],
+      [
+        "POINTS ALLOWED",
+        "—",
+        "UC Davis opponent points per game"
+      ],
+      [
+        "3RD DOWN",
+        "—",
+        "UC Davis third-down conversion rate"
+      ]
+    ],
+    "media": [
+      [
+        "HIGHLIGHTS",
+        "UC Davis 2026 Highlights",
+        "Recent game clips and team highlights",
+        "https://www.youtube.com/results?search_query=UC%20Davis%20football%202026%20highlights"
+      ],
+      [
+        "COACH TALK",
+        "UC Davis Press Conferences",
+        "Hear the opponent's coaches directly",
+        "https://www.youtube.com/results?search_query=UC%20Davis%20football%202026%20press%20conference"
+      ]
+    ],
+    "resources": {
+      "official": "https://ucdavisaggies.com/sports/football",
+      "roster": "https://ucdavisaggies.com/sports/football/roster",
+      "stats": "https://ucdavisaggies.com/sports/football/stats/2026",
+      "schedule": "https://ucdavisaggies.com/sports/football/schedule/2026",
+      "coaches": "https://ucdavisaggies.com/sports/football/coaches",
+      "news": "https://ucdavisaggies.com/sports/football/news"
+    },
+    "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
+    "updated": "2026-09-21T04:35:33.332362+00:00"
+  }
 }
