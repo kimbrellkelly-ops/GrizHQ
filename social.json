@@ -1,6 +1,32 @@
 {
-  "updated": "2026-09-21T23:36:11.119323+00:00",
+  "updated": "2026-09-21T23:48:54.846329+00:00",
   "posts": [
+    {
+      "title": "Montana Griz press conference - Bobby Kennedy, Titus Rohrer, Clay Oven on No. 10 UC Davis.",
+      "url": "https://www.youtube.com/watch?v=WPrqu50pEbc",
+      "image": "https://i.ytimg.com/vi/WPrqu50pEbc/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Sep. 21, 2026",
+      "platform": "youtube",
+      "youtube_id": "WPrqu50pEbc",
+      "published_at": "2026-09-21T00:00:00+00:00"
+    },
+    {
+      "title": "Montana State football press conference - Brent Vigen on hosting No. 18 Northern Arizona",
+      "url": "https://www.youtube.com/watch?v=PlE0HZmEt5o",
+      "image": "https://i.ytimg.com/vi/PlE0HZmEt5o/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Sep. 21, 2026",
+      "platform": "youtube",
+      "youtube_id": "PlE0HZmEt5o",
+      "published_at": "2026-09-21T00:00:00+00:00"
+    },
     {
       "title": "Montana's Bobby Kennedy, Brooks Davis, Tanner Huff post Oregon State loss",
       "url": "https://www.youtube.com/watch?v=B_FfqIi0LIs",
