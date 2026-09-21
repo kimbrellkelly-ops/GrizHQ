@@ -1652,7 +1652,13 @@ setInterval(async () => {
   function montanaRecent(schedule){
     return (schedule||[]).filter(finished).slice(-2).reverse().map((g,i)=>[i?"": "MONTANA", /^W/i.test(g.result)?"W":"L", String(g.result).replace(/^[WL]\s*/i,""), g.opponent]);
   }
-  function profileFor(opponent){ return PROFILES[opponent] || null; }
+  function profileFor(opponent,data){
+    const generated=(data && data.next_opponent && String(data.next_opponent.opponent||'')===String(opponent)) ? data.next_opponent : null;
+    const fallback=PROFILES[opponent] || null;
+    if(!generated) return fallback;
+    if(!fallback) return generated;
+    return Object.assign({},fallback,generated,{stats:Object.assign({},fallback.stats||{},generated.stats||{})});
+  }
   function resourceSet(opponent,data){
     const root=rootFor(opponent);
     const existing=(data && data.opponent_resources && data.opponent_resources[opponent]) || {};
@@ -1781,7 +1787,7 @@ function renderHomeSnapshot(data){
 }
 function renderDossier(data){
     const game=chooseNext(data); if(!game || !game.opponent) return;
-    const opponent=String(game.opponent), upper=opponent.toUpperCase(), profile=profileFor(opponent), resources=resourceSet(opponent,data); renderHomeNextGame(data,game); renderHomeSnapshot(data);
+    const opponent=String(game.opponent), upper=opponent.toUpperCase(), profile=profileFor(opponent,data), resources=resourceSet(opponent,data); renderHomeNextGame(data,game); renderHomeSnapshot(data);
     const schedule=Array.isArray(data.schedule)?data.schedule:[], mr=montanaRecord(schedule);
     const nextSection=document.getElementById('next-up'); if(!nextSection) return;
     nextSection.dataset.nextOpponent=opponent; nextSection.dataset.opponent=opponent;
