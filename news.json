@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21T22:48:36.694274+00:00",
+  "updated": "2026-09-21T23:04:10.604663+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -13,6 +13,36 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "First look: No. 5 Montana Grizzlies at No. 10 UC Davis Aggies",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_9276d266-e940-5501-a28b-d4fc4403ae3f.html",
+      "date": "Sep. 21, 2026",
+      "published_at": "2026-09-21T22:45:00+00:00",
+      "description": "The Grizzlies remain on the road for a second straight week when they play at UC Davis looking to rebound from their first loss.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/6c/06c44cb1-cb99-5224-8687-c0876d6330e4/6aafb638e0e39.image.jpg?resize=300%2C205",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/6c/06c44cb1-cb99-5224-8687-c0876d6330e4/6aafb638e0e39.image.jpg?resize=300%2C205"
+    },
+    {
+      "title": "Two grizzlies spotted swimming in Polson Bay, one trapped for relocation",
+      "url": "https://missoulian.com/news/state-regional/article_45567382-8eaa-4b0e-a16a-e7c2d225840e.html",
+      "date": "Sep. 21, 2026",
+      "published_at": "2026-09-21T22:30:00+00:00",
+      "description": "Tribal wildlife officials have trapped one of two grizzlies spotted recently taking a late-summer dip in Polson Bay and lounging on a nearby dock.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/55/45567382-8eaa-4b0e-a16a-e7c2d225840e/6ab1ab54f3de6.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/55/45567382-8eaa-4b0e-a16a-e7c2d225840e/6ab1ab54f3de6.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Week 3: FBS Oregon State overwhelms No. 3 Montana Grizzlies",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-3-fbs-oregon-state-overwhelms-no-3-montana-grizzlies/collection_b6ac5247-bb95-47d1-821d-842818631005.html",
@@ -1482,36 +1512,6 @@
       "youtube_id": "eyfcruefW6E",
       "video_url": "https://www.youtube.com/watch?v=eyfcruefW6E",
       "video_thumbnail": "https://i.ytimg.com/vi/eyfcruefW6E/hqdefault.jpg"
-    },
-    {
-      "title": "Grizzly Insider returns in 2026",
-      "url": "https://gogriz.com/news/2026/8/26/football-grizzly-insider-returns-in-2026",
-      "date": "Aug. 27, 2026",
-      "published_at": "2026-08-27T01:05:00+00:00",
-      "description": "MISSOULA - The Grizzly Insider returns for its fourth season beginning on Wednesday, Aug. 26 for another year of breaking down all things Montana Athletics.",
-      "source": "GoGriz",
-      "badge": "ANALYSIS",
-      "short": "ANALYS",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2025/9/3/Grizzly_Insider.png",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2025/9/3/Grizzly_Insider.png"
-    },
-    {
-      "title": "Missoula Named ‘Best College Sports Town’ in USA TODAY Poll",
-      "url": "https://gogriz.com/news/2026/8/26/football-missoula-named-best-college-sports-town-in-usa-today-poll",
-      "date": "Aug. 26, 2026",
-      "published_at": "2026-08-26T20:00:00+00:00",
-      "description": "MISSOULA – Missoula, the home of the University of Montana Grizzlies, recently came out on top in the USA TODAY Sports Readers' Choice 2026 for 'Best College Sports Town.",
-      "source": "GoGriz",
-      "badge": "HONOR",
-      "short": "HONOR",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/8/26/Top_College_Sports_Town.png",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/8/26/Top_College_Sports_Town.png"
     }
   ]
 }
