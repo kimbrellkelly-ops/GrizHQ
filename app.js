@@ -227,6 +227,11 @@ function renderMainScheduleFromData(d) {
           <div class="schedule-main-status"><strong>${escapeHtml(status)}</strong>${isNext ? "<em>NEXT GAME</em>" : (g.result ? "<em>FINAL</em>" : "<em>UPCOMING</em>")}</div>
         </div>`;
       }).join("");
+    // Guard against duplicate schedule-logo nodes from legacy/render overlap.
+    schedule.querySelectorAll(".schedule-team-line").forEach(line => {
+      const logos = line.querySelectorAll("img");
+      for (let i = 1; i < logos.length; i++) logos[i].remove();
+    });
   } catch (e) {
     console.warn("Main schedule render failed", e);
   }
