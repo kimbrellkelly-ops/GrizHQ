@@ -1,10 +1,10 @@
 {
-  "updated": "2026-09-21T04:36:28.132710+00:00",
+  "updated": "2026-09-21T04:40:28.709441+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
-    "record": "2-1",
+    "record": "3-1",
     "conference_record": "1-0",
-    "streak": "L1"
+    "streak": "L4"
   },
   "next_game": {
     "opponent": "UC Davis",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Beavers use big plays to beat Griz in Corvallis",
+      "url": "https://gogriz.com/news/2026/9/20/football-beavers-use-big-plays-to-beat-griz-in-corvallis",
+      "date": "Sun, 20 Sep 2026 02:03:00 MST",
+      "description": "CORVALLIS – The Montana Grizzlies couldn't out-pace a fast and physical Oregon State team Saturday night, with the Beavers using their big play offensive attack to jump out to an e"
+    },
+    {
       "title": "Griz to battle Beavers on Saturday night in Corvallis",
       "url": "https://gogriz.com/news/2026/9/15/football-griz-to-battle-beavers-on-saturday-night-in-corvallis",
       "date": "Tue, 15 Sep 2026 16:20:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/9/1/football-griz-look-to-build-momentum-against-drake",
       "date": "Tue, 1 Sep 2026 16:53:00 MST",
       "description": "After starting the Bobby Kennedy era 1-0, the Montana Grizzlies return to action this week for the first nonconference game of the year at Washington-Grizzy Stadium as the Drake Bu"
-    },
-    {
-      "title": "Mason named Big Sky Special Teams Player of the Week",
-      "url": "https://gogriz.com/news/2026/8/31/football-mason-named-big-sky-special-teams-player-of-the-week",
-      "date": "Mon, 31 Aug 2026 09:21:00 MST",
-      "description": "They call it special teams for a reason… but Grizzly defensive end Jake Mason was a catalyst in the standout day by Montana's third unit on Saturday in UM's 28-21 Big Sky Conferenc"
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-21T04:36:38.319456+00:00"
+    "checked_at": "2026-09-21T04:41:13.219726+00:00"
   },
   "resources": [
     {
@@ -2927,18 +2927,23 @@
     }
   ],
   "stats": {
-    "through": "Official cumulative source: https://gogriz.com/sports/football/stats/2026; pending box-score verification for 0 completed game(s)",
+    "through": "Official cumulative source: https://gogriz.com/sports/football/stats/2026; pending box-score verification for 4 completed game(s)",
     "coverage": {
-      "completed_games": 0,
+      "completed_games": 4,
       "verified_boxscores": 0,
       "source_of_truth": "https://gogriz.com/sports/football/stats/2026",
-      "pending": []
+      "pending": [
+        "Southern Utah",
+        "Drake",
+        "Utah Tech",
+        "Oregon State"
+      ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-21T04:36:34.523057+00:00",
+    "source_checked_at": "2026-09-21T04:40:37.840433+00:00",
     "team_summary": [
       {
-        "value": "0–0",
+        "value": "3–1",
         "label": "RECORD",
         "note": "Official GoGriz 2026 schedule"
       },
@@ -3155,7 +3160,32 @@
         }
       ]
     },
-    "game_log": [],
+    "game_log": [
+      {
+        "week": "Wk 1",
+        "opponent": "Southern Utah",
+        "result": "W 28-21",
+        "notes": "Official GoGriz schedule result"
+      },
+      {
+        "week": "Wk 2",
+        "opponent": "Drake",
+        "result": "W 45-10",
+        "notes": "Official GoGriz schedule result"
+      },
+      {
+        "week": "Wk 3",
+        "opponent": "Utah Tech",
+        "result": "W 35-14",
+        "notes": "Official GoGriz schedule result"
+      },
+      {
+        "week": "Wk 4",
+        "opponent": "Oregon State",
+        "result": "L 17-52",
+        "notes": "Official GoGriz schedule result"
+      }
+    ],
     "compare": [
       {
         "label": "Points / Game",
@@ -27610,7 +27640,8 @@
       "conference_points": "54-0",
       "points": "160-61",
       "conference_streak": "W1",
-      "overall_streak": "W4"
+      "overall_streak": "W4",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2539"
     },
     {
       "rank": 2,
@@ -27622,7 +27653,8 @@
       "conference_points": "28-21",
       "points": "125-97",
       "conference_streak": "W1",
-      "overall_streak": "L1"
+      "overall_streak": "L1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2538"
     },
     {
       "rank": 3,
@@ -27634,7 +27666,8 @@
       "conference_points": "34-27",
       "points": "114-113",
       "conference_streak": "W1",
-      "overall_streak": "W2"
+      "overall_streak": "W2",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2540"
     },
     {
       "rank": 4,
@@ -27646,7 +27679,8 @@
       "conference_points": "31-24",
       "points": "135-104",
       "conference_streak": "W1",
-      "overall_streak": "W1"
+      "overall_streak": "W1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2544"
     },
     {
       "rank": 5,
@@ -27658,7 +27692,8 @@
       "conference_points": "38-34",
       "points": "117-119",
       "conference_streak": "W1",
-      "overall_streak": "L2"
+      "overall_streak": "L2",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2535"
     },
     {
       "rank": 6,
@@ -27670,7 +27705,8 @@
       "conference_points": "30-29",
       "points": "142-148",
       "conference_streak": "W1",
-      "overall_streak": "W1"
+      "overall_streak": "W1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2546"
     },
     {
       "rank": 7,
@@ -27682,7 +27718,8 @@
       "conference_points": "0-0",
       "points": "126-44",
       "conference_streak": "",
-      "overall_streak": "W3"
+      "overall_streak": "W3",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2537"
     },
     {
       "rank": 8,
@@ -27694,7 +27731,8 @@
       "conference_points": "27-34",
       "points": "100-147",
       "conference_streak": "L1",
-      "overall_streak": "L2"
+      "overall_streak": "L2",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2534"
     },
     {
       "rank": 9,
@@ -27706,7 +27744,8 @@
       "conference_points": "29-30",
       "points": "88-106",
       "conference_streak": "L1",
-      "overall_streak": "W1"
+      "overall_streak": "W1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2541"
     },
     {
       "rank": 10,
@@ -27718,7 +27757,8 @@
       "conference_points": "21-28",
       "points": "118-156",
       "conference_streak": "L1",
-      "overall_streak": "L2"
+      "overall_streak": "L2",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2543"
     },
     {
       "rank": 11,
@@ -27730,7 +27770,8 @@
       "conference_points": "34-38",
       "points": "104-168",
       "conference_streak": "L1",
-      "overall_streak": "L4"
+      "overall_streak": "L4",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2536"
     },
     {
       "rank": 12,
@@ -27742,7 +27783,8 @@
       "conference_points": "24-31",
       "points": "67-215",
       "conference_streak": "L1",
-      "overall_streak": "L4"
+      "overall_streak": "L4",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2542"
     },
     {
       "rank": 13,
@@ -27754,7 +27796,8 @@
       "conference_points": "0-54",
       "points": "44-187",
       "conference_streak": "L1",
-      "overall_streak": "L4"
+      "overall_streak": "L4",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2561"
     }
   ],
   "big_sky_leaders": {
@@ -28028,29 +28071,42 @@
   "big_sky_players_of_week_updated": "2026-09-20T19:00:00Z",
   "next_opponent": {
     "opponent": "UC Davis",
-    "record": "0–0",
+    "record": "3–1",
     "conferenceRecord": "0–0",
     "location": "UC Davis",
     "capacity": "",
     "coach": "",
     "coachLine": "Current ESPN team listing",
-    "logo": "",
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png",
     "stats": {
-      "points": "",
-      "offense": "",
-      "passing": "",
-      "rushing": "",
-      "allowed": "",
+      "points": "26",
+      "offense": "382.8",
+      "passing": "280.8",
+      "rushing": "102",
+      "allowed": "26",
       "defense": "",
       "third": "—",
-      "turnovers": "—"
+      "turnovers": "0"
     },
-    "recent": [],
+    "recent": [
+      [
+        "UC Davis",
+        "W",
+        "45–7",
+        "Stetson Hatters"
+      ],
+      [
+        "UC Davis",
+        "L",
+        "10–56",
+        "SMU Mustangs"
+      ]
+    ],
     "players": [],
-    "intel": "UC Davis is 0–0 through 0 completed games and 0–0 in Big Sky play.",
+    "intel": "UC Davis is 3–1 through 4 completed games and 0–0 in Big Sky play.",
     "facts": [
       [
-        "0–0",
+        "3–1",
         "Current record"
       ],
       [
@@ -28058,7 +28114,7 @@
         "Big Sky record"
       ],
       [
-        "—",
+        "382.8",
         "Total offense / game"
       ],
       [
@@ -28076,22 +28132,22 @@
       [
         "2026",
         "NEXT CHAPTER",
-        "UC Davis Health Stadium, Davis, Calif."
+        "UC Davis Health Stadium, Davis, CA"
       ]
     ],
     "historyUrl": "https://gogriz.com/game-center/5256",
     "watch": [
       [
         "Can Montana handle UC Davis's offense?",
-        "UC Davis is averaging — total yards per game."
+        "UC Davis is averaging 382.8 total yards per game."
       ],
       [
         "Where is UC Davis most productive?",
-        "Current passing and rushing production: — pass / — rush yards per game."
+        "Current passing and rushing production: 280.8 pass / 102 rush yards per game."
       ],
       [
         "Can Montana win the situational battle?",
-        "Current third-down figure: —; turnover margin: —."
+        "Current third-down figure: —; turnover margin: 0."
       ]
     ],
     "checklist": [
@@ -28109,33 +28165,33 @@
       ],
       [
         "Takeaways",
-        "Track the current turnover margin: —."
+        "Track the current turnover margin: 0."
       ]
     ],
     "moreNumbers": [
       [
         "PASSING",
-        "—",
+        "280.8",
         "UC Davis passing yards per game"
       ],
       [
         "TOTAL OFFENSE",
-        "—",
+        "382.8",
         "UC Davis total yards per game"
       ],
       [
         "RUSHING",
-        "—",
+        "102",
         "UC Davis rushing yards per game"
       ],
       [
         "POINTS",
-        "—",
+        "26",
         "UC Davis points per game"
       ],
       [
         "POINTS ALLOWED",
-        "—",
+        "26",
         "UC Davis opponent points per game"
       ],
       [
@@ -28156,6 +28212,18 @@
         "UC Davis Press Conferences",
         "Hear the opponent's coaches directly",
         "https://www.youtube.com/results?search_query=UC%20Davis%20football%202026%20press%20conference"
+      ],
+      [
+        "RECENT GAME",
+        "UC Davis W vs. Stetson Hatters",
+        "Full-game, recap and highlight video",
+        "https://www.youtube.com/results?search_query=UC%20Davis%20Stetson%20Hatters%202026%20football"
+      ],
+      [
+        "RECENT GAME",
+        "UC Davis L vs. SMU Mustangs",
+        "Full-game, recap and highlight video",
+        "https://www.youtube.com/results?search_query=UC%20Davis%20SMU%20Mustangs%202026%20football"
       ]
     ],
     "resources": {
@@ -28167,6 +28235,6 @@
       "news": "https://ucdavisaggies.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-09-21T04:36:36.645038+00:00"
+    "updated": "2026-09-21T04:40:41.642999+00:00"
   }
 }
