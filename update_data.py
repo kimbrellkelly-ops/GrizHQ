@@ -1083,10 +1083,23 @@ def build_next_opponent_dossier(opponent, schedule, old=None):
         opp_points=[_first_number(g.get("score","").split("-")[-1]) for g in played if g.get("score")]
         own_points=[x for x in own_points if x is not None]
         opp_points=[x for x in opp_points if x is not None]
-        if not points and own_points:
+        if opponent in BIG_SKY and own_points:
             points=_fmt_num(sum(own_points)/len(own_points))
-        if not allowed and opp_points:
+        elif not points and own_points:
+            points=_fmt_num(sum(own_points)/len(own_points))
+        if opponent in BIG_SKY and opp_points:
             allowed=_fmt_num(sum(opp_points)/len(opp_points))
+        elif not allowed and opp_points:
+            allowed=_fmt_num(sum(opp_points)/len(opp_points))
+    if opponent in BIG_SKY:
+        # Do not expose an inverted ESPN team-stat payload when the official
+        # school page is unavailable; official stats below will refill these.
+        offense = ""
+        passing = ""
+        rushing = ""
+        defense = ""
+        third = ""
+        turnovers = ""
     if official_stats:
         points=official_stats.get("points") or points
         offense=official_stats.get("offense") or offense
