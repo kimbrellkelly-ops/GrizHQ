@@ -1609,7 +1609,8 @@ setInterval(async () => {
        facts:[["3–1","Current record"],["1–0","Big Sky record"],["410.0","Total offense / game"],["Davis","Home of the Aggies"]],
        historyTitle:"MONTANA VS. UC DAVIS",
        historyText:"Montana and UC Davis meet in Davis on Sept. 26 in the next Big Sky game for both teams.",
-       historyGames:[["2026","NEXT CHAPTER","UC Davis Health Stadium"],["2025","SERIES","Official records"],["2026","UPCOMING","Davis, Calif."]],
+       historyRecord:"9–2", historyRecordLabel:"Montana all-time", historyLast:"2024", historyLastScore:"30–14 UC Davis",
+       historyGames:[["2024","UC DAVIS 30–14","Missoula"],["2023","MONTANA 31–23","Davis"],["2026","NEXT CHAPTER","Davis, Calif."]],
        watch:[
          ["Can Montana contain the Aggies' passing game?","UC Davis is averaging 286.25 passing yards per game through four contests."],
          ["Can Montana slow Samuel Gbatu Jr.?","Gbatu leads UC Davis with 468 receiving yards and four touchdowns."],
@@ -1718,7 +1719,7 @@ setInterval(async () => {
     text(copy?.querySelector('h2'),profile.historyTitle);
     text(copy?.querySelector('p'),profile.historyText);
     const score=copy?.querySelector('.ghq-nu-series-score');
-    if(score){ const vals=profile.historyGames; text(score.children[0]?.querySelector('b'),profile.record==='0–2'?'12–2–2':'—'); text(score.children[0]?.querySelector('span'),'Oregon State all-time'); text(score.children[1]?.querySelector('b'),'Last meeting: 1996'); text(score.children[1]?.querySelector('span'),'35–14 Montana'); text(score.children[2]?.querySelector('b'),'1996'); text(score.children[2]?.querySelector('span'),'Last meeting'); }
+    if(score){ text(score.children[0]?.querySelector('b'),profile.historyRecord||'—'); text(score.children[0]?.querySelector('span'),profile.historyRecordLabel||'Series record'); text(score.children[1]?.querySelector('b'),profile.historyLast?('Last meeting: '+profile.historyLast):'Last meeting'); text(score.children[1]?.querySelector('span'),profile.historyLastScore||'See official history'); text(score.children[2]?.querySelector('b'),profile.historyLast||'—'); text(score.children[2]?.querySelector('span'),'Last meeting'); }
     if(games){ games.innerHTML=profile.historyGames.map((g,i)=>`<div${i===2?' class="next-series"':''}><span>${esc(g[0])}</span><b>${esc(g[1])}</b><small>${esc(g[2])}</small></div>`).join(''); }
   }
   function renderWatch(section, profile, opponent){
