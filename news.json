@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21T15:22:24.270038+00:00",
+  "updated": "2026-09-21T15:35:28.153720+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -207,6 +207,21 @@
       "youtube_id": "-YLCv3AfEVA",
       "video_url": "https://www.youtube.com/watch?v=-YLCv3AfEVA",
       "video_thumbnail": "https://i.ytimg.com/vi/-YLCv3AfEVA/hqdefault.jpg"
+    },
+    {
+      "title": "Headlines: Court upholds murder conviction, tensions flare at Mineral County Commissioners meeting, and plane crash lands at Polson airport",
+      "url": "https://dailyinterlake.com/news/2026/sep/19/headlines-court-upholds-murder-conviction-tensions-flare-at-mineral-county-commissioners-meeting-gofundme-set-up-for-grizzly-bear-mauling-victim-and-plane-crash-lands-at-polson-airport/",
+      "date": "Sep. 19, 2026",
+      "published_at": "2026-09-19T06:30:00+00:00",
+      "description": "Updated 2 days, 1 hour ago Headlines: Court upholds murder conviction, tensions flare at Mineral County Commissioners meeting, and plane crash lands at Polson airport Court upholds murder conviction in deadly 2022 home invasion, tensions fl",
+      "source": "Daily Inter Lake",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/09/18/headline_cover_art_template_2-01_1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698",
+      "is_video": true,
+      "youtube_id": "oEA_jiEhscs",
+      "video_url": "https://www.youtube.com/watch?v=oEA_jiEhscs",
+      "video_thumbnail": "https://i.ytimg.com/vi/oEA_jiEhscs/hqdefault.jpg"
     },
     {
       "title": "Choteau’s Rusch Yeager commits to Bobcats for football",
@@ -1497,21 +1512,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/8/26/Top_College_Sports_Town.png"
-    },
-    {
-      "title": "Coach Kennedy Radio Show premieres Wednesday, live from The Den",
-      "url": "https://gogriz.com/news/2026/8/26/football-coach-kennedy-radio-show-premieres-wednesday-live-from-the-den",
-      "date": "Aug. 26, 2026",
-      "published_at": "2026-08-26T15:22:00+00:00",
-      "description": "MISSOULA - The Montana Grizzly Coaches Radio Show returns to The Den each Wednesday at 7 p.m. in 2026, giving fans an exclusive inside look at Griz football with first year head coach Bobby Kennedy paired with unbeatable views of the Missou",
-      "source": "GoGriz",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2024/9/4/Coaches_Show_web.png",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2024/9/4/Coaches_Show_web.png"
     }
   ]
 }
