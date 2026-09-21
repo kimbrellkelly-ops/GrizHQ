@@ -1087,7 +1087,6 @@ def build_next_opponent_dossier(opponent, schedule, old=None):
             points=_fmt_num(sum(own_points)/len(own_points))
         if not allowed and opp_points:
             allowed=_fmt_num(sum(opp_points)/len(opp_points))
-    official_stats, official_players = _official_opponent_stats(opponent)
     if official_stats:
         points=official_stats.get("points") or points
         offense=official_stats.get("offense") or offense
