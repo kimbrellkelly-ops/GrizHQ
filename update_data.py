@@ -873,6 +873,61 @@ def _opponent_leader_players(team_id, opponent):
             break
     return wanted
 
+def _official_opponent_stats(opponent):
+    root=OPPONENT_OFFICIAL_ROOTS.get(opponent,"")
+    if not root:
+        return {}, []
+    pages=[root.rstrip("/") + "/stats/2026", root.rstrip("/") + "/stats"]
+    for url in pages:
+        try:
+            soup=BeautifulSoup(get(url),"html.parser")
+            stats={}
+            players=[]
+            for table in soup.find_all("table"):
+                heading=table.find_previous(["h1","h2","h3","h4","h5","h6"])
+                section=_clean_text(heading.get_text(" ",strip=True)).lower() if heading else ""
+                rows=[]
+                for tr in table.find_all("tr"):
+                    cells=[_clean_text(x.get_text(" ",strip=True)) for x in tr.find_all(["td","th"])]
+                    if cells: rows.append(cells)
+                for row in rows:
+                    joined=" ".join(row).lower()
+                    nums=[]
+                    for cell in row[1:]:
+                        n=_first_number(cell)
+                        if n is not None:
+                            nums.append(n)
+                    if "points per game" in joined and nums:
+                        stats["points"]=_fmt_num(nums[0])
+                        if len(nums)>1: stats["allowed"]=_fmt_num(nums[1])
+                    elif "avg. per game" in joined and "total offense" in section and nums:
+                        stats["offense"]=_fmt_num(nums[0])
+                    elif "avg. per game" in joined and section.startswith("rushing") and nums:
+                        stats["rushing"]=_fmt_num(nums[0])
+                    elif "avg. per game" in joined and section.startswith("passing") and nums:
+                        stats["passing"]=_fmt_num(nums[0])
+                    elif "3rd down conversions" in joined:
+                        m=re.search(r"(\d+(?:\.\d+)?)\s*%", " ".join(row))
+                        if m: stats["third"]=m.group(1) + "%"
+                if section.startswith(("rushing","passing","receiving","defensive")):
+                    for row in rows:
+                        if len(row)<2 or row[0].lower() in ("#","player","total","opponents"):
+                            continue
+                        raw=row[1]
+                        if raw.lower().startswith(("team","total","opponents")):
+                            continue
+                        m=re.search(r"([A-Za-z'’\-]+,\s*[A-Za-z'’\-]+)",raw)
+                        name=m.group(1).replace(","," ").strip() if m else raw.split("  ")[0].strip()
+                        if name and not any(p[1]==name for p in players):
+                            label=" ".join(section.split()[:1]).title()
+                            players.append([opponent[:2].upper(),name,f"{opponent} {label} leader"])
+                            break
+            if stats:
+                return stats,players[:4]
+        except Exception as exc:
+            print("Official opponent stats fetch failed:",opponent,url,exc)
+    return {}, []
+
 def _opponent_coach(team):
     candidates = team.get("coaches") or team.get("coach") or []
     if isinstance(candidates, dict):
@@ -1021,7 +1076,7 @@ def build_next_opponent_dossier(opponent, schedule, old=None):
     if games and games[-1].get("venue"):
         venue = games[-1]["venue"] + (f", {games[-1]['city']}, {games[-1]['state']}" if games[-1].get("city") else "")
     coach = _opponent_coach(team)
-    leaders = _opponent_leader_players(team_id, opponent)
+    leaders = official_players or _opponent_leader_players(team_id, opponent)
     if played:
         own_points=[_first_number(g.get("score","").split("-")[0]) for g in played if g.get("score")]
         opp_points=[_first_number(g.get("score","").split("-")[-1]) for g in played if g.get("score")]
@@ -1031,13 +1086,21 @@ def build_next_opponent_dossier(opponent, schedule, old=None):
             points=_fmt_num(sum(own_points)/len(own_points))
         if not allowed and opp_points:
             allowed=_fmt_num(sum(opp_points)/len(opp_points))
+    official_stats, official_players = _official_opponent_stats(opponent)
+    if official_stats:
+        points=official_stats.get("points") or points
+        offense=official_stats.get("offense") or offense
+        passing=official_stats.get("passing") or passing
+        rushing=official_stats.get("rushing") or rushing
+        allowed=official_stats.get("allowed") or allowed
+        third=official_stats.get("third") or third
     stats = {
         "points": points or "",
         "offense": offense or "",
         "passing": passing or "",
         "rushing": rushing or "",
         "allowed": allowed or "",
-        "defense": defense or "",
+        "defense": official_stats.get("defense","") or "",
         "third": third or "—",
         "turnovers": turnovers or "—",
     }
