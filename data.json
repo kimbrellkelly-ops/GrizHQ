@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21T04:44:20.715348+00:00",
+  "updated": "2026-09-21T04:46:52.674159+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-1",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-21T04:44:52.163540+00:00"
+    "checked_at": "2026-09-21T04:47:26.831949+00:00"
   },
   "resources": [
     {
@@ -2940,7 +2940,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-21T04:44:27.514235+00:00",
+    "source_checked_at": "2026-09-21T04:46:58.601431+00:00",
     "team_summary": [
       {
         "value": "3–1",
@@ -28079,14 +28079,14 @@
     "coachLine": "Current ESPN team listing",
     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png",
     "stats": {
-      "points": "26",
-      "offense": "382.8",
-      "passing": "280.8",
-      "rushing": "102",
+      "points": "33.75",
+      "offense": "",
+      "passing": "",
+      "rushing": "",
       "allowed": "26",
       "defense": "",
       "third": "—",
-      "turnovers": "0"
+      "turnovers": "—"
     },
     "recent": [
       [
@@ -28102,7 +28102,28 @@
         "at SMU"
       ]
     ],
-    "players": [],
+    "players": [
+      [
+        "UC",
+        "Fisher  Jordan",
+        "UC Davis Rushing leader"
+      ],
+      [
+        "UC",
+        "Cleeland  Treynor",
+        "UC Davis Passing leader"
+      ],
+      [
+        "UC",
+        "Gbatu  Jr",
+        "UC Davis Receiving leader"
+      ],
+      [
+        "UC",
+        "Connors  Porter",
+        "UC Davis Defensive leader"
+      ]
+    ],
     "intel": "UC Davis is 3–1 through 4 completed games and 1–0 in Big Sky play.",
     "facts": [
       [
@@ -28114,7 +28135,7 @@
         "Big Sky record"
       ],
       [
-        "382.8",
+        "—",
         "Total offense / game"
       ],
       [
@@ -28139,15 +28160,15 @@
     "watch": [
       [
         "Can Montana handle UC Davis's offense?",
-        "UC Davis is averaging 382.8 total yards per game."
+        "UC Davis is averaging — total yards per game."
       ],
       [
         "Where is UC Davis most productive?",
-        "Current passing and rushing production: 280.8 pass / 102 rush yards per game."
+        "Current passing and rushing production: — pass / — rush yards per game."
       ],
       [
         "Can Montana win the situational battle?",
-        "Current third-down figure: —; turnover margin: 0."
+        "Current third-down figure: —; turnover margin: —."
       ]
     ],
     "checklist": [
@@ -28165,28 +28186,28 @@
       ],
       [
         "Takeaways",
-        "Track the current turnover margin: 0."
+        "Track the current turnover margin: —."
       ]
     ],
     "moreNumbers": [
       [
         "PASSING",
-        "280.8",
+        "—",
         "UC Davis passing yards per game"
       ],
       [
         "TOTAL OFFENSE",
-        "382.8",
+        "—",
         "UC Davis total yards per game"
       ],
       [
         "RUSHING",
-        "102",
+        "—",
         "UC Davis rushing yards per game"
       ],
       [
         "POINTS",
-        "26",
+        "33.75",
         "UC Davis points per game"
       ],
       [
@@ -28235,6 +28256,6 @@
       "news": "https://ucdavisaggies.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-09-21T04:42:16.657351+00:00"
+    "updated": "2026-09-21T04:47:02.527714+00:00"
   }
 }
