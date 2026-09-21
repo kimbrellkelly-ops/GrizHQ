@@ -1660,7 +1660,7 @@ setInterval(async () => {
     const merged=Object.assign({},fallback,generated);
     const gs=generated.stats||{}, fs=fallback.stats||{};
     merged.stats=Object.assign({},fs,gs);
-    if(!generated.record || (generated.record==='0–0' && !Array.isArray(generated.recent)?.length)) merged.record=fallback.record;
+    if(!generated.record || (generated.record==='0–0' && (!Array.isArray(generated.recent) || !generated.recent.length))) merged.record=fallback.record;
     if(!generated.conferenceRecord || (generated.conferenceRecord==='0–0' && fallback.conferenceRecord)) merged.conferenceRecord=fallback.conferenceRecord;
     if(!generated.coach) merged.coach=fallback.coach;
     if(!generated.coachLine) merged.coachLine=fallback.coachLine;
