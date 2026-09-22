@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22T15:24:04.260251+00:00",
+  "updated": "2026-09-22T15:36:17.598152+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -13,6 +13,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Montana punter Everett O'Donnell enjoying adjustment to Missoula from Australia",
+      "url": "https://missoulian.com/sports/college/article_0b799f80-c938-5559-9f21-0140a15b54be.html",
+      "date": "Sep. 22, 2026",
+      "published_at": "2026-09-22T15:00:00+00:00",
+      "description": "Punter Everett O'Donnell joined the Grizzlies from Australia just in time for fall camp.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/2/95/295a7887-1bd9-51fd-b8a7-cc555f6ed720/6ab1979357a94.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/2/95/295a7887-1bd9-51fd-b8a7-cc555f6ed720/6ab1979357a94.image.jpg?resize=300%2C200"
+    },
     {
       "title": "Montana Griz press conference – Bobby Kennedy, Titus Rohrer, Clay Oven on No. 10 UC Davis",
       "url": "https://skylinesportsmt.com/montana-griz-press-conference-bobby-kennedy-titus-rohrer-clay-oven-on-no-10-uc-davis/",
@@ -1497,21 +1512,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/8/31/Mason_ST_POW_Web.png"
-    },
-    {
-      "title": "Bridges comes up in the clutch to lift Kennedy, Griz to season-opening victory over Southern Utah",
-      "url": "https://skylinesportsmt.com/bridges-comes-up-in-the-clutch-to-lift-kennedy-griz-to-season-opening-victory-over-southern-utah/",
-      "date": "Aug. 30, 2026",
-      "published_at": "2026-08-30T15:17:04+00:00",
-      "description": "Bridges comes up in the clutch to lift Kennedy, Griz to season-opening victory over Southern Utah August 30, 2026",
-      "source": "Skyline Sports",
-      "badge": "GAME STORY",
-      "short": "GAME S",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/IMG_9888.jpeg",
-      "is_video": true,
-      "youtube_id": "3DLykMBKQLI",
-      "video_url": "https://www.youtube.com/watch?v=3DLykMBKQLI",
-      "video_thumbnail": "https://i.ytimg.com/vi/3DLykMBKQLI/hqdefault.jpg"
     }
   ]
 }
