@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22T22:26:09.117495+00:00",
+  "updated": "2026-09-22T23:24:57.163402+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-1",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Griz to face Aggies in top 10 showdown",
+      "url": "https://gogriz.com/news/2026/9/22/football-griz-to-face-aggies-in-top-10-showdown",
+      "date": "Tue, 22 Sep 2026 16:25:00 MST",
+      "description": "MISSOULA - The Montana Grizzles dive back in the deep end of Big Sky Conference play this weekend with a top 10 showdown at UC Davis, under the lights in California's Central Valle"
+    },
+    {
       "title": "Beavers use big plays to beat Griz in Corvallis",
       "url": "https://gogriz.com/news/2026/9/20/football-beavers-use-big-plays-to-beat-griz-in-corvallis",
       "date": "Sun, 20 Sep 2026 02:03:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/9/4/football-stripe-the-stadium-what-you-should-wear",
       "date": "Fri, 4 Sep 2026 14:32:00 MST",
       "description": "Need to know what color you should wear to stripe Washington-Grizzly Stadium against Drake?"
-    },
-    {
-      "title": "Griz look to build momentum against Drake",
-      "url": "https://gogriz.com/news/2026/9/1/football-griz-look-to-build-momentum-against-drake",
-      "date": "Tue, 1 Sep 2026 16:53:00 MST",
-      "description": "After starting the Bobby Kennedy era 1-0, the Montana Grizzlies return to action this week for the first nonconference game of the year at Washington-Grizzy Stadium as the Drake Bu"
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-22T22:26:41.309281+00:00"
+    "checked_at": "2026-09-22T23:25:42.353891+00:00"
   },
   "resources": [
     {
@@ -2940,7 +2940,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-22T22:26:16.455353+00:00",
+    "source_checked_at": "2026-09-22T23:25:04.069483+00:00",
     "team_summary": [
       {
         "value": "3–1",
@@ -28157,6 +28157,6 @@
       "news": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-09-22T22:26:16.455426+00:00"
+    "updated": "2026-09-22T23:25:04.069557+00:00"
   }
 }
