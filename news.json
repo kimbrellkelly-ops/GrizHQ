@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22T22:48:44.479816+00:00",
+  "updated": "2026-09-22T23:03:50.589039+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -13,6 +13,21 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Griz to face Aggies in top 10 showdown",
+      "url": "https://gogriz.com/news/2026/9/22/football-griz-to-face-aggies-in-top-10-showdown",
+      "date": "Sep. 22, 2026",
+      "published_at": "2026-09-22T23:25:00+00:00",
+      "description": "MISSOULA - The Montana Grizzles dive back in the deep end of Big Sky Conference play this weekend with a top 10 showdown at UC Davis, under the lights in California's Central Valley on Saturday night.",
+      "source": "GoGriz",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/20/20260919_griz-fb-v-osu_043_rb.JPG",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/20/20260919_griz-fb-v-osu_043_rb.JPG"
+    },
     {
       "title": "Montana punter Everett O'Donnell enjoying adjustment to Missoula from Australia",
       "url": "https://missoulian.com/sports/college/article_0b799f80-c938-5559-9f21-0140a15b54be.html",
@@ -1497,21 +1512,6 @@
       "youtube_id": "RsaQNx-3pfQ",
       "video_url": "https://www.youtube.com/watch?v=RsaQNx-3pfQ",
       "video_thumbnail": "https://i.ytimg.com/vi/RsaQNx-3pfQ/hqdefault.jpg"
-    },
-    {
-      "title": "Mason named Big Sky Special Teams Player of the Week",
-      "url": "https://gogriz.com/news/2026/8/31/football-mason-named-big-sky-special-teams-player-of-the-week",
-      "date": "Aug. 31, 2026",
-      "published_at": "2026-08-31T16:21:00+00:00",
-      "description": "They call it special teams for a reason… but Grizzly defensive end Jake Mason was a catalyst in the standout day by Montana's third unit on Saturday in UM's 28-21 Big Sky Conference win over Southern Utah.",
-      "source": "GoGriz",
-      "badge": "HONOR",
-      "short": "HONOR",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/8/31/Mason_ST_POW_Web.png",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/8/31/Mason_ST_POW_Web.png"
     }
   ]
 }
