@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22T17:26:30.997329+00:00",
+  "updated": "2026-09-22T18:31:29.720145+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-1",
@@ -7,10 +7,10 @@
     "streak": "L4"
   },
   "next_game": {
-    "opponent": "UC Davis",
+    "opponent": "#9/10 UC Davis",
     "date": "Sep 26 (Sat)",
     "time": "8 PM (MT)",
-    "venue": "UC Davis Health Stadium, Davis, Calif.",
+    "venue": "Away",
     "url": "https://gogriz.com/sports/football/schedule"
   },
   "schedule": [
@@ -48,7 +48,7 @@
     },
     {
       "date": "Sep 26 (Sat)",
-      "opponent": "UC Davis",
+      "opponent": "#9/10 UC Davis",
       "location": "Away",
       "result": "",
       "time": "8 PM (MT)",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-22T17:27:39.761483+00:00"
+    "checked_at": "2026-09-22T18:32:19.690519+00:00"
   },
   "resources": [
     {
@@ -2940,7 +2940,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-22T17:26:42.094593+00:00",
+    "source_checked_at": "2026-09-22T18:31:39.448208+00:00",
     "team_summary": [
       {
         "value": "3–1",
@@ -28070,192 +28070,93 @@
   ],
   "big_sky_players_of_week_updated": "2026-09-20T19:00:00Z",
   "next_opponent": {
-    "opponent": "UC Davis",
-    "record": "3–1",
-    "conferenceRecord": "1–0",
-    "location": "UC Davis",
+    "opponent": "#9/10 UC Davis",
+    "record": "",
+    "conferenceRecord": "",
+    "location": "",
     "capacity": "",
     "coach": "",
-    "coachLine": "Current ESPN team listing",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png",
-    "stats": {
-      "points": "33.75",
-      "offense": "",
-      "passing": "",
-      "rushing": "",
-      "allowed": "26",
-      "defense": "",
-      "third": "—",
-      "turnovers": "—"
-    },
-    "recent": [
-      [
-        "UC Davis",
-        "W",
-        "45–7",
-        "Stetson"
-      ],
-      [
-        "UC Davis",
-        "L",
-        "10–56",
-        "at SMU"
-      ]
-    ],
-    "players": [
-      [
-        "UC",
-        "Fisher  Jordan",
-        "UC Davis Rushing leader"
-      ],
-      [
-        "UC",
-        "Cleeland  Treynor",
-        "UC Davis Passing leader"
-      ],
-      [
-        "UC",
-        "Gbatu  Jr",
-        "UC Davis Receiving leader"
-      ],
-      [
-        "UC",
-        "Connors  Porter",
-        "UC Davis Defensive leader"
-      ]
-    ],
-    "intel": "UC Davis is 3–1 through 4 completed games and 1–0 in Big Sky play.",
+    "coachLine": "",
+    "stats": {},
+    "recent": [],
+    "players": [],
+    "intel": "#9/10 UC Davis is Montana's next scheduled opponent.",
     "facts": [
       [
-        "3–1",
-        "Current record"
+        "UPCOMING",
+        "Next opponent"
       ],
       [
-        "1–0",
-        "Big Sky record"
+        "OFFICIAL",
+        "Team information"
       ],
       [
-        "—",
-        "Total offense / game"
+        "SCHEDULE",
+        "2026 schedule"
       ],
       [
-        "UC Davis",
-        "Program"
+        "NEWS",
+        "Latest coverage"
       ]
     ],
-    "historyTitle": "MONTANA VS. UC DAVIS",
-    "historyText": "Official matchup history is available through the Griz game center for the current meeting.",
+    "historyTitle": "MONTANA VS. #9/10 UC DAVIS",
+    "historyText": "Official matchup history is available through the Griz game center.",
     "historyRecord": "",
     "historyRecordLabel": "Series history",
     "historyLast": "",
     "historyLastScore": "",
-    "historyGames": [
-      [
-        "2026",
-        "NEXT CHAPTER",
-        "Davis, CA"
-      ]
-    ],
-    "historyUrl": "https://gogriz.com/game-center/5256",
+    "historyGames": [],
     "watch": [
       [
-        "Can Montana handle UC Davis's offense?",
-        "UC Davis is averaging — total yards per game."
-      ],
-      [
-        "Where is UC Davis most productive?",
-        "Current passing and rushing production: — pass / — rush yards per game."
-      ],
-      [
-        "Can Montana win the situational battle?",
-        "Current third-down figure: —; turnover margin: —."
+        "What should Montana watch against #9/10 UC Davis?",
+        "Use the latest official opponent schedule, stats and game film."
       ]
     ],
     "checklist": [
       [
-        "Quarterback play",
-        "Review UC Davis's current passing production and recent game film."
+        "Quarterback tendencies",
+        "Review #9/10 UC Davis's recent quarterback and offensive production."
       ],
       [
-        "Explosive offense",
-        "Track UC Davis's longest plays and scoring drives in the latest games."
+        "Explosive plays",
+        "Track #9/10 UC Davis's recent explosive runs and passes."
       ],
       [
-        "Run defense",
-        "Account for UC Davis's current rushing production."
+        "Third down",
+        "Check #9/10 UC Davis's current third-down profile."
       ],
       [
-        "Takeaways",
-        "Track the current turnover margin: —."
+        "Special teams",
+        "Review the opponent's latest special-teams results."
       ]
     ],
     "moreNumbers": [
       [
-        "PASSING",
-        "—",
-        "UC Davis passing yards per game"
+        "STATUS",
+        "UPDATING",
+        "Opponent data not yet available from ESPN"
       ],
       [
-        "TOTAL OFFENSE",
-        "—",
-        "UC Davis total yards per game"
+        "SCHEDULE",
+        "CURRENT",
+        "Official 2026 schedule"
       ],
       [
-        "RUSHING",
-        "—",
-        "UC Davis rushing yards per game"
-      ],
-      [
-        "POINTS",
-        "33.75",
-        "UC Davis points per game"
-      ],
-      [
-        "POINTS ALLOWED",
-        "26",
-        "UC Davis opponent points per game"
-      ],
-      [
-        "3RD DOWN",
-        "—",
-        "UC Davis third-down conversion rate"
+        "NEWS",
+        "LIVE",
+        "Latest opponent coverage"
       ]
     ],
-    "media": [
-      [
-        "HIGHLIGHTS",
-        "UC Davis 2026 Highlights",
-        "Recent game clips and team highlights",
-        "https://www.youtube.com/results?search_query=UC%20Davis%20football%202026%20highlights"
-      ],
-      [
-        "COACH TALK",
-        "UC Davis Press Conferences",
-        "Hear the opponent's coaches directly",
-        "https://www.youtube.com/results?search_query=UC%20Davis%20football%202026%20press%20conference"
-      ],
-      [
-        "RECENT GAME",
-        "UC Davis W vs. Stetson",
-        "Full-game, recap and highlight video",
-        "https://www.youtube.com/results?search_query=UC%20Davis%20Stetson%202026%20football"
-      ],
-      [
-        "RECENT GAME",
-        "UC Davis L vs. at SMU",
-        "Full-game, recap and highlight video",
-        "https://www.youtube.com/results?search_query=UC%20Davis%20at%20SMU%202026%20football"
-      ]
-    ],
+    "media": [],
     "resources": {
-      "official": "https://ucdavisaggies.com/sports/football",
-      "roster": "https://ucdavisaggies.com/sports/football/roster",
-      "stats": "https://ucdavisaggies.com/sports/football/stats/2026",
-      "schedule": "https://ucdavisaggies.com/sports/football/schedule/2026",
-      "coaches": "https://ucdavisaggies.com/sports/football/coaches",
-      "news": "https://ucdavisaggies.com/sports/football/news"
+      "official": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football",
+      "roster": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/roster",
+      "stats": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/stats/2026",
+      "schedule": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/schedule/2026",
+      "coaches": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/coaches",
+      "news": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/news"
     },
-    "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-09-22T17:26:50.028853+00:00"
+    "source": "ESPN team feed / official opponent athletics site",
+    "updated": "2026-09-22T18:31:39.448286+00:00"
   }
 }
