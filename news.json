@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22T02:23:48.269114+00:00",
+  "updated": "2026-09-22T02:37:00.411925+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -387,6 +387,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/76/a76eae97-fe97-4826-a09a-0c0a84188504/6aa64f8379fee.preview.jpg?crop=1761%2C925%2C0%2C32&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Talkin’ Schmidt – Andrew wants to smoke cigarettes and is concerned about Oregon State",
+      "url": "https://skylinesportsmt.com/talkin-schmidt-andrew-wants-to-smoke-cigarettes-and-is-concerned-about-oregon-state/",
+      "date": "Sep. 16, 2026",
+      "published_at": "2026-09-16T20:24:12+00:00",
+      "description": "September 16, 2026 Talkin’ Schmidt – Andrew wants to smoke cigarettes and is concerned about Oregon State Andrew Schmidt has finally found his pessimism after an uninspiring (his words) performance by the Griz in a 35-14 win…",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/09/Eli-Gillman-Celebration-scaled.jpg",
+      "is_video": true,
+      "youtube_id": "z7vkeK55ulo",
+      "video_url": "https://www.youtube.com/watch?v=z7vkeK55ulo",
+      "video_thumbnail": "https://i.ytimg.com/vi/z7vkeK55ulo/hqdefault.jpg"
     },
     {
       "title": "FCS Weekly with Samuel Akem – Idaho struggling, WA-Griz breaking down, ‘Cats confidence",
@@ -1493,21 +1508,6 @@
       "badge": "GAME STORY",
       "short": "GAME S",
       "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/IMG_9888.jpeg",
-      "is_video": true,
-      "youtube_id": "3DLykMBKQLI",
-      "video_url": "https://www.youtube.com/watch?v=3DLykMBKQLI",
-      "video_thumbnail": "https://i.ytimg.com/vi/3DLykMBKQLI/hqdefault.jpg"
-    },
-    {
-      "title": "Griz football – SUU’s Fitzgerald, UM’s Kennedy & Griz players post-game press conference following UM’s win over SUU",
-      "url": "https://skylinesportsmt.com/griz-football-suus-fitzgerald-ums-kennedy-griz-players-post-game-press-conference-following-ums-win-over-suu/",
-      "date": "Aug. 30, 2026",
-      "published_at": "2026-08-30T14:13:38+00:00",
-      "description": "Colter Nuanez August 30, 2026 Griz football – SUU’s Fitzgerald, UM’s Kennedy & Griz players post-game press conference following UM’s win over SUU Southern Utah head coach Delane Fitzgerald along with Montana head coach Bobby Kennedy, WR Le",
-      "source": "Skyline Sports",
-      "badge": "INSIDER",
-      "short": "INSIDE",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/IMG_9960.jpeg",
       "is_video": true,
       "youtube_id": "3DLykMBKQLI",
       "video_url": "https://www.youtube.com/watch?v=3DLykMBKQLI",
