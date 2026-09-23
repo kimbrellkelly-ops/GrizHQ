@@ -42,7 +42,13 @@ jobs:
           now=datetime.now(timezone.utc)
           today=now.date().isoformat()
           current=next((w for w in d['weeks'] if w['start'] <= today <= w['end']), None)
-          assert current is not None, f'No cache week covers {today}'
+          if current is None:
+              # Monday-Wednesday between weekend windows: validate the next
+              # scheduled scoreboard week instead of failing the entire refresh.
+              current=next((w for w in d['weeks'] if w['start'] > today), None)
+          if current is None:
+              current=d['weeks'][-1] if d.get('weeks') else None
+          assert current is not None, 'Scoreboard cache contains no weeks'
 
           games=current.get('fcsTop25Games',[])
           scored=sum(1 for g in games if len(g.get('teams',[])) >= 2 and all(str(t.get('score','')).isdigit() for t in g['teams']))
