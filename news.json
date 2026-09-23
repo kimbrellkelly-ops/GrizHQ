@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-23T17:03:52.793510+00:00",
+  "updated": "2026-09-23T17:23:57.131293+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -14,21 +14,6 @@
   "stories": [
     {
       "title": "Grizzlies looking to turn page resuming Big Sky play",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_6a059b98-ee48-5ac3-bdce-7f547fbab155.html",
-      "date": "Sep. 23, 2026",
-      "published_at": "2026-09-23T16:00:00+00:00",
-      "description": "The Grizzlies will seek a win to stay on track to contend for a Big Sky title.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/88/688af292-c4ee-56b3-801d-6dd827dea1c7/6aafb6391e22b.image.jpg?resize=300%2C214",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/88/688af292-c4ee-56b3-801d-6dd827dea1c7/6aafb6391e22b.image.jpg?resize=300%2C214"
-    },
-    {
-      "title": "Grizzlies looking to turn page resuming Big Sky play",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-looking-to-turn-page-resuming-big-sky-play/article_342d1e15-924c-47ac-8bf4-5de9139fa511.html",
       "date": "Sep. 23, 2026",
       "published_at": "2026-09-23T16:00:00+00:00",
@@ -41,6 +26,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/42/342d1e15-924c-47ac-8bf4-5de9139fa511/6ab328dc70d0d.preview.jpg?crop=1704%2C895%2C0%2C32&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Grizzlies looking to turn page resuming Big Sky play",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_6a059b98-ee48-5ac3-bdce-7f547fbab155.html",
+      "date": "Sep. 23, 2026",
+      "published_at": "2026-09-23T16:00:00+00:00",
+      "description": "The Grizzlies will seek a win to stay on track to contend for a Big Sky title.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/88/688af292-c4ee-56b3-801d-6dd827dea1c7/6aafb6391e22b.image.jpg?resize=300%2C214",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/88/688af292-c4ee-56b3-801d-6dd827dea1c7/6aafb6391e22b.image.jpg?resize=300%2C214"
     },
     {
       "title": "Griz Game Day 9-24-26",
