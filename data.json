@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T10:28:38.768035+00:00",
+  "updated": "2026-09-24T11:28:10.686045+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-1",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-24T10:29:04.047970+00:00"
+    "checked_at": "2026-09-24T11:28:52.132372+00:00"
   },
   "resources": [
     {
@@ -2940,7 +2940,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-24T10:28:45.317081+00:00",
+    "source_checked_at": "2026-09-24T11:28:20.305081+00:00",
     "team_summary": [
       {
         "value": "3–1",
@@ -28157,6 +28157,6 @@
       "news": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-09-24T10:28:45.317155+00:00"
+    "updated": "2026-09-24T11:28:20.305166+00:00"
   }
 }
