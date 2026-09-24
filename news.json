@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T14:04:55.773066+00:00",
+  "updated": "2026-09-24T14:25:50.406065+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Big Sky Conference football picks: 406 MT Sports panel divided over Grizzly duel at Davis",
+      "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/big-sky-conference-football-picks-406-mt-sports-panel-divided-over-grizzly-duel-at-davis/article_d3917228-caa6-459d-b18b-b9f215f8707e.html",
+      "date": "Sep. 24, 2026",
+      "published_at": "2026-09-24T14:00:00+00:00",
+      "description": "Big Sky Conference football picks: 406 MT Sports panel divided over Grizzly duel at Davis",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/39/d3917228-caa6-459d-b18b-b9f215f8707e/6ab1b8c60653c.preview.jpg?crop=997%2C523%2C394%2C82",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/39/d3917228-caa6-459d-b18b-b9f215f8707e/6ab1b8c60653c.preview.jpg?crop=997%2C523%2C394%2C82"
+    },
     {
       "title": "Paine free: Grizzlies RB Dylan Paine displays resilience through injuries",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/paine-free-grizzlies-rb-dylan-paine-displays-resilience-through-injuries/article_74ceec9f-37e7-462b-bc11-197e9aa16e29.html",
@@ -1495,21 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/5/20260905_fb_v_Drake_4405_rb.jpg"
-    },
-    {
-      "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker",
-      "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/",
-      "date": "Sep. 6, 2026",
-      "published_at": "2026-09-06T02:23:32+00:00",
-      "description": "Colter Nuanez September 5, 2026 WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker Montana head coach Bobby Kennedy, senior running back Eli Gillman and senior defensive end Tyler King along with D",
-      "source": "Skyline Sports",
-      "badge": "INSIDER",
-      "short": "INSIDE",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg"
     }
   ]
 }
