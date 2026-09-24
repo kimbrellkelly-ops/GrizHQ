@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T13:38:58.397397+00:00",
+  "updated": "2026-09-24T13:52:41.130070+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,21 +11,6 @@
     "Skyline Sports"
   ],
   "stories": [
-    {
-      "title": "Paine free: Grizzlies RB Dylan Paine displays resilience through injuries",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_48179a1e-bcdf-5052-83e0-812019416cd3.html",
-      "date": "Sep. 24, 2026",
-      "published_at": "2026-09-24T13:00:00+00:00",
-      "description": "\"I've had the most fun of my life these last nine months.\" —Griz RB Dylan Paine",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/2b/52ba2f81-8b27-5e7c-b9bb-f5fbd0579a4e/6aa5dd548fc1a.image.jpg?resize=300%2C240",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/2b/52ba2f81-8b27-5e7c-b9bb-f5fbd0579a4e/6aa5dd548fc1a.image.jpg?resize=300%2C240"
-    },
     {
       "title": "Paine free: Grizzlies RB Dylan Paine displays resilience through injuries",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/paine-free-grizzlies-rb-dylan-paine-displays-resilience-through-injuries/article_74ceec9f-37e7-462b-bc11-197e9aa16e29.html",
@@ -40,6 +25,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/4c/74ceec9f-37e7-462b-bc11-197e9aa16e29/6ab03ca0e683f.preview.jpg?crop=1235%2C648%2C374%2C39&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Paine free: Grizzlies RB Dylan Paine displays resilience through injuries",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_48179a1e-bcdf-5052-83e0-812019416cd3.html",
+      "date": "Sep. 24, 2026",
+      "published_at": "2026-09-24T13:00:00+00:00",
+      "description": "\"I've had the most fun of my life these last nine months.\" —Griz RB Dylan Paine",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/2b/52ba2f81-8b27-5e7c-b9bb-f5fbd0579a4e/6aa5dd548fc1a.image.jpg?resize=300%2C240",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/2b/52ba2f81-8b27-5e7c-b9bb-f5fbd0579a4e/6aa5dd548fc1a.image.jpg?resize=300%2C240"
     },
     {
       "title": "Hamilton artist shoots, stuffs, eats, paints, sculpts and honors her animal subjects",
