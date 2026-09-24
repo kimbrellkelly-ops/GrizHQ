@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T12:29:33.702430+00:00",
+  "updated": "2026-09-24T12:45:39.453602+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Hamilton artist shoots, stuffs, eats, paints, sculpts and honors her animal subjects",
+      "url": "https://missoulian.com/article_a378f95b-a275-5b60-a33d-0c87c236a1bf.html",
+      "date": "Sep. 24, 2026",
+      "published_at": "2026-09-24T12:30:00+00:00",
+      "description": "Professional animal artist Cynthie Fisher is creating one of her largest pieces to date — a nearly life size statue honoring the famous Grizzly 399, who died in 2024.",
+      "source": "Missoulian",
+      "badge": "HONOR",
+      "short": "HONOR",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/e2/8e2efab6-0074-538e-acb4-e8a76dc9983c/6ab42ffb70d23.image.jpg?resize=300%2C225",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/e2/8e2efab6-0074-538e-acb4-e8a76dc9983c/6ab42ffb70d23.image.jpg?resize=300%2C225"
+    },
     {
       "title": "'MY HEART WAS SINGING'",
       "url": "https://missoulian.com/image_d546b76b-774a-548b-a6ac-df95fc7b59f1.html",
@@ -1495,21 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/ad/cad53a42-28eb-4ef7-9968-f38d99e938a7/6a9ca726d8675.preview.jpg?crop=1703%2C894%2C29%2C111&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Give Gillman the crown: Griz ride RBs 4 touchdowns to win over Drake",
-      "url": "https://dailyinterlake.com/news/2026/sep/06/give-gillman-the-crown-griz-ride-rbs-4-touchdowns-to-win-pver-drake/",
-      "date": "Sep. 6, 2026",
-      "published_at": "2026-09-06T00:00:00Z",
-      "description": "Daily Inter Lake breaks down Eli Gillman's four-touchdown performance, his career records and Montana's 45-10 win over Drake.",
-      "badge": "ANALYSIS",
-      "short": "ANAL",
-      "source": "Daily Inter Lake",
-      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/9/5/20260905_fb_v_Drake_4405_rb_AFMpW.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/9/5/20260905_fb_v_Drake_4405_rb_AFMpW.jpg"
     }
   ]
 }
