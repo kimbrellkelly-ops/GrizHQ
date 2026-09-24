@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T19:49:00.973097+00:00",
+  "updated": "2026-09-24T20:04:28.298299+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz football to host player reunion weekend as part of stadium’s 40th anniversary celebration",
+      "url": "https://gogriz.com/news/2026/9/24/football-griz-football-to-host-player-reunion-weekend-as-part-of-stadiums-40th-anniversary-celebration",
+      "date": "Sep. 24, 2026",
+      "published_at": "2026-09-24T20:50:00+00:00",
+      "description": "To help celebrate the 40th anniversary of Washington-Grizzly Stadium, the Montana Grizzlies are calling all former football players to reunite at \"The Mecca of FCS Football\" for a reunion weekend of Oct. 17 when the Griz take on Idaho.",
+      "source": "GoGriz",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/24/40th_anniversary_invitation_web_2.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/24/40th_anniversary_invitation_web_2.jpg"
+    },
     {
       "title": "Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on UC Davis",
       "url": "https://skylinesportsmt.com/brawl-of-the-wild-coaches-corner-montana-head-coach-bobby-kennedy-on-uc-davis/",
@@ -1495,21 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/2d/72dfbcec-85cc-4542-ab41-868212fe9f34/6a9d3df190b06.preview.jpg?crop=1765%2C927%2C0%2C123&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "3 takeaways: No. 3 Grizzlies show strides but lack 'discipline' in beating Drake",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-3-grizzlies-show-strides-but-lack-discipline-in-beating-drake/article_de3c0760-782f-48bf-9175-b87f05369a5c.html",
-      "date": "Sep. 6, 2026",
-      "published_at": "2026-09-06T12:00:00+00:00",
-      "description": "3 takeaways: No. 3 Grizzlies show strides but lack 'discipline' in beating Drake",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/e3/de3c0760-782f-48bf-9175-b87f05369a5c/6a9ce278e0bf3.preview.jpg?crop=1002%2C526%2C479%2C75",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/e3/de3c0760-782f-48bf-9175-b87f05369a5c/6a9ce278e0bf3.preview.jpg?crop=1002%2C526%2C479%2C75"
     }
   ]
 }
