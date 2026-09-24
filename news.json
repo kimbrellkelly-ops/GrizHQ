@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T11:04:17.147389+00:00",
+  "updated": "2026-09-24T11:24:25.268553+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -8,10 +8,54 @@
     "FCS Football Central",
     "GoGriz",
     "Missoulian",
-    "Skyline Sports",
-    "Utah Tech Athletics"
+    "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "'MY HEART WAS SINGING'",
+      "url": "https://missoulian.com/image_d546b76b-774a-548b-a6ac-df95fc7b59f1.html",
+      "date": "Sep. 24, 2026",
+      "published_at": "2026-09-24T10:40:31+00:00",
+      "description": "Montana running back Dylan Paine rushes for a 57-yard touchdown during the college football game against Utah Tech on Sept. 12 at Washington-Grizzly Stadium in Missoula. It was a career-long run for the seventh-year player who has battled b",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/54/d546b76b-774a-548b-a6ac-df95fc7b59f1/6ab4fe1f77068.image.jpg?resize=300%2C221",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/54/d546b76b-774a-548b-a6ac-df95fc7b59f1/6ab4fe1f77068.image.jpg?resize=300%2C221"
+    },
+    {
+      "title": "The punter from Down Under",
+      "url": "https://missoulian.com/image_79a72b64-5ea2-5013-b301-ada076dc8589.html",
+      "date": "Sep. 24, 2026",
+      "published_at": "2026-09-24T10:40:31+00:00",
+      "description": "Montana's Everett O'Donnell punts the ball in the college football game against Southern Utah on Aug. 29 at Washington-Grizzly Stadium in Missoula. O'Donnell is in his first season with the Grizzlies after moving from Australia.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/9a/79a72b64-5ea2-5013-b301-ada076dc8589/6ab4fe1f88b35.image.jpg?resize=300%2C191",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/9a/79a72b64-5ea2-5013-b301-ada076dc8589/6ab4fe1f88b35.image.jpg?resize=300%2C191"
+    },
+    {
+      "title": "HOW WE SEE THE BIG SKY",
+      "url": "https://missoulian.com/image_9caf022a-8d2b-55ac-bcdc-4998787ed604.html",
+      "date": "Sep. 24, 2026",
+      "published_at": "2026-09-24T10:40:31+00:00",
+      "description": "Montana running back Eli Gillman avoids a tackle by Oregon State's TJ Crandall during the college football game on Sept. 19 at Reser Stadium in Corvallis, Oregon. Gillman broke the UM career rushing yards record in the game.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/9/ca/9caf022a-8d2b-55ac-bcdc-4998787ed604/6ab4fe1f9b6da.image.jpg?resize=300%2C201",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/9/ca/9caf022a-8d2b-55ac-bcdc-4998787ed604/6ab4fe1f9b6da.image.jpg?resize=300%2C201"
+    },
     {
       "title": "Griz Game Day 9-24-26",
       "url": "https://missoulian.com/special-section/pdf_685ca537-a5d8-412e-a9ed-db6f8695f302.html",
@@ -1466,51 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/9/5/20260905_fb_v_Drake_4405_rb_AFMpW.jpg"
-    },
-    {
-      "title": "Montana's King, Kennedy, Gillman on win over Drake",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montanas-king-kennedy-gillman-on-win-over-drake/video_85ce6486-e45e-5f96-b0d3-4595556ce68e.html",
-      "date": "Sep. 5, 2026",
-      "published_at": "2026-09-05T23:29:00+00:00",
-      "description": "Montana's King, Kennedy, Gillman on win over Drake",
-      "source": "406 MT Sports",
-      "badge": "GAME STORY",
-      "short": "GAME S",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/5c/85ce6486-e45e-5f96-b0d3-4595556ce68e/6a9ca5ff40c23.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montanas-king-kennedy-gillman-on-win-over-drake/video_85ce6486-e45e-5f96-b0d3-4595556ce68e.html",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/5c/85ce6486-e45e-5f96-b0d3-4595556ce68e/6a9ca5ff40c23.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Trailblazers Drop In-State Duel at BYU on Saturday Night",
-      "url": "https://utahtechtrailblazers.com/news/2026/9/5/football-trailblazers-drop-in-state-duel-at-byu-on-saturday-night.aspx",
-      "date": "Sep. 5, 2026",
-      "published_at": "2026-09-05T22:46:00Z",
-      "description": "Utah Tech fell 63-7 at BYU and now travels to Washington-Grizzly Stadium to face Montana on Sept. 12.",
-      "badge": "OPPONENT",
-      "short": "OPP",
-      "source": "Utah Tech Athletics",
-      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/dixieathletics.com/images/2026/9/5/utfb_byuwrap.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/dixieathletics.com/images/2026/9/5/utfb_byuwrap.jpg"
-    },
-    {
-      "title": "PHOTOS: Grizzlies bite Bulldogs, 45-10",
-      "url": "https://dailyinterlake.com/news/2026/sep/05/photos-grizzlies-bite-bulldogs-45-10/",
-      "date": "Sep. 5, 2026",
-      "published_at": "2026-09-05T08:05:00+00:00",
-      "description": "Updated 1 day, 22 hours ago PHOTOS: Grizzlies bite Bulldogs, 45-10 The Montana Grizzlies improved to 2-0 with a 45-10 win over the Drake Bulldogs at Washington-Grizzly Stadium on Saturday, Sept. 5.",
-      "source": "Daily Inter Lake",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/09/05/0905_SPO_DIL_football_Grizzlies_vs_Drake-1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/09/05/0905_SPO_DIL_football_Grizzlies_vs_Drake-1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698"
     }
   ]
 }
