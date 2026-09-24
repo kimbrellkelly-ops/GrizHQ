@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T18:40:42.627018+00:00",
+  "updated": "2026-09-24T18:53:11.362374+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on UC Davis",
+      "url": "https://skylinesportsmt.com/brawl-of-the-wild-coaches-corner-montana-head-coach-bobby-kennedy-on-uc-davis/",
+      "date": "Sep. 24, 2026",
+      "published_at": "2026-09-24T18:29:28+00:00",
+      "description": "September 24, 2026 Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on UC Davis",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Bobby-Kennedy-coaches-up-a-huddle.jpeg",
+      "is_video": true,
+      "youtube_id": "znyIys8HCFc",
+      "video_url": "https://www.youtube.com/watch?v=znyIys8HCFc",
+      "video_thumbnail": "https://i.ytimg.com/vi/znyIys8HCFc/hqdefault.jpg"
+    },
     {
       "title": "Big Sky Conference football picks: 406 MT Sports panel divided over Grizzly duel at Davis",
       "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/big-sky-conference-football-picks-406-mt-sports-panel-divided-over-grizzly-duel-at-davis/article_d3917228-caa6-459d-b18b-b9f215f8707e.html",
@@ -1495,21 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/e3/de3c0760-782f-48bf-9175-b87f05369a5c/6a9ce278e0bf3.preview.jpg?crop=1002%2C526%2C479%2C75"
-    },
-    {
-      "title": "Gillman sets records as Griz roll past Bulldogs, 45-10",
-      "url": "https://gogriz.com/news/2026/9/5/football-gillman-sets-records-as-griz-roll-past-bulldogs-45-10",
-      "date": "Sep. 6, 2026",
-      "published_at": "2026-09-06T02:45:00+00:00",
-      "description": "MISSOULA – It was a record setting day in Missoula as running back Eli Gillman became and all-time Grizzly great, leading Montana to a dominant 45-10 nonconference victory over the Drake Bulldogs at Washington-Grizzly Stadium on Saturday.",
-      "source": "GoGriz",
-      "badge": "GAME STORY",
-      "short": "GAME S",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/5/20260905_fb_v_Drake_4405_rb.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/5/20260905_fb_v_Drake_4405_rb.jpg"
     }
   ]
 }
