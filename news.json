@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T05:50:21.747686+00:00",
+  "updated": "2026-09-24T06:04:48.207084+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -12,6 +12,36 @@
     "Utah Tech Athletics"
   ],
   "stories": [
+    {
+      "title": "Griz Game Day 9-24-26",
+      "url": "https://missoulian.com/special-section/pdf_685ca537-a5d8-412e-a9ed-db6f8695f302.html",
+      "date": "Sep. 24, 2026",
+      "published_at": "2026-09-24T06:00:00+00:00",
+      "description": "Latest Montana football coverage.",
+      "source": "Missoulian",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/85/685ca537-a5d8-412e-a9ed-db6f8695f302/6ab3ebd325c84.preview.jpg?resize=300%2C303",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/85/685ca537-a5d8-412e-a9ed-db6f8695f302/6ab3ebd325c84.preview.jpg?resize=300%2C303"
+    },
+    {
+      "title": "Griz Game Day 9-24-26",
+      "url": "https://missoulian.com/image_5e1c3d0e-8ee3-4f9a-b228-66f1b15cd1ad.html",
+      "date": "Sep. 24, 2026",
+      "published_at": "2026-09-24T06:00:00+00:00",
+      "description": "Latest Montana football coverage.",
+      "source": "Missoulian",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/e1/5e1c3d0e-8ee3-4f9a-b228-66f1b15cd1ad/6ab3ec59006c5.image.jpg?resize=300%2C303",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/e1/5e1c3d0e-8ee3-4f9a-b228-66f1b15cd1ad/6ab3ec59006c5.image.jpg?resize=300%2C303"
+    },
     {
       "title": "Grizzlies looking to turn page resuming Big Sky play",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-looking-to-turn-page-resuming-big-sky-play/article_342d1e15-924c-47ac-8bf4-5de9139fa511.html",
@@ -1481,36 +1511,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/09/05/0905_SPO_DIL_football_Grizzlies_vs_Drake-1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698"
-    },
-    {
-      "title": "Stripe the Stadium - What you should wear",
-      "url": "https://gogriz.com/news/2026/9/4/football-stripe-the-stadium-what-you-should-wear",
-      "date": "Sep. 4, 2026",
-      "published_at": "2026-09-04T21:32:00+00:00",
-      "description": "Need to know what color you should wear to stripe Washington-Grizzly Stadium against Drake?",
-      "source": "GoGriz",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2024/9/21/_TM21627_2.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2024/9/21/_TM21627_2.jpg"
-    },
-    {
-      "title": "Talkin’ Schmidt – Andrew give top 3 Griz players from season-opening + best/worst of BK debut",
-      "url": "https://skylinesportsmt.com/talkin-schmidt-andrew-give-top-3-griz-players-from-season-opening-best-worst-of-bk-debut/",
-      "date": "Sep. 3, 2026",
-      "published_at": "2026-09-03T02:22:57+00:00",
-      "description": "September 2, 2026 Talkin’ Schmidt – Andrew give top 3 Griz players from season-opening + best/worst of BK debut",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Montana-Griz-special-teams-blocking-field-goal-Tyler-King-Cooper-Buffington-Jake-Mason-and-Solomon-Tuliaupupu.jpeg",
-      "is_video": true,
-      "youtube_id": "9BjGfVWVUfU",
-      "video_url": "https://www.youtube.com/watch?v=9BjGfVWVUfU",
-      "video_thumbnail": "https://i.ytimg.com/vi/9BjGfVWVUfU/hqdefault.jpg"
     }
   ]
 }
