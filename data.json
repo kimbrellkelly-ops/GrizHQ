@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T19:26:26.020586+00:00",
+  "updated": "2026-09-24T20:29:19.916594+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-1",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Griz football to host player reunion weekend as part of stadium’s 40th anniversary celebration",
+      "url": "https://gogriz.com/news/2026/9/24/football-griz-football-to-host-player-reunion-weekend-as-part-of-stadiums-40th-anniversary-celebration",
+      "date": "Thu, 24 Sep 2026 13:50:00 MST",
+      "description": "To help celebrate the 40th anniversary of Washington-Grizzly Stadium, the Montana Grizzlies are calling all former football players to reunite at \"The Mecca of FCS Football\" for a "
+    },
+    {
       "title": "Griz to face Aggies in top 10 showdown",
       "url": "https://gogriz.com/news/2026/9/22/football-griz-to-face-aggies-in-top-10-showdown",
       "date": "Tue, 22 Sep 2026 16:25:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/9/5/football-gillman-sets-records-as-griz-roll-past-bulldogs-45-10",
       "date": "Sat, 5 Sep 2026 19:45:00 MST",
       "description": "MISSOULA – It was a record setting day in Missoula as running back Eli Gillman became and all-time Grizzly great, leading Montana to a dominant 45-10 nonconference victory over the"
-    },
-    {
-      "title": "Stripe the Stadium - What you should wear",
-      "url": "https://gogriz.com/news/2026/9/4/football-stripe-the-stadium-what-you-should-wear",
-      "date": "Fri, 4 Sep 2026 14:32:00 MST",
-      "description": "Need to know what color you should wear to stripe Washington-Grizzly Stadium against Drake?"
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-24T19:26:58.353779+00:00"
+    "checked_at": "2026-09-24T20:29:51.137283+00:00"
   },
   "resources": [
     {
@@ -2940,7 +2940,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-24T19:26:33.345276+00:00",
+    "source_checked_at": "2026-09-24T20:29:26.358230+00:00",
     "team_summary": [
       {
         "value": "3–1",
@@ -28157,6 +28157,6 @@
       "news": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-09-24T19:26:33.345368+00:00"
+    "updated": "2026-09-24T20:29:26.358300+00:00"
   }
 }
