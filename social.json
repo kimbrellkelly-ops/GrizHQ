@@ -1,6 +1,32 @@
 {
-  "updated": "2026-09-25T05:24:16.774365+00:00",
+  "updated": "2026-09-25T05:38:23.059277+00:00",
   "posts": [
+    {
+      "title": "Contender & Pretender FCS style!",
+      "url": "https://www.youtube.com/watch?v=8_jL5ZBDjdU",
+      "image": "https://i.ytimg.com/vi/8_jL5ZBDjdU/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Sep. 25, 2026",
+      "platform": "youtube",
+      "youtube_id": "8_jL5ZBDjdU",
+      "published_at": "2026-09-25T00:00:00+00:00"
+    },
+    {
+      "title": "\"No one has more respect for the Montana football program than me\" - UC Davis head coach @VintagePlo",
+      "url": "https://www.youtube.com/watch?v=pmtlDINy0fs",
+      "image": "https://i.ytimg.com/vi/pmtlDINy0fs/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Sep. 25, 2026",
+      "platform": "youtube",
+      "youtube_id": "pmtlDINy0fs",
+      "published_at": "2026-09-25T00:00:00+00:00"
+    },
     {
       "title": "Ridin with Rider: Can Montana State Live Up to their Hype?",
       "url": "https://www.youtube.com/watch?v=yqzNGs0A7CM",
