@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25T15:37:11.760672+00:00",
+  "updated": "2026-09-25T15:51:11.924361+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "3 questions: No. 5 Montana Grizzlies look to rebound at No. 10 UC Davis",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_a4e4b08d-f57d-50ae-8990-21dd67caf675.html",
+      "date": "Sep. 25, 2026",
+      "published_at": "2026-09-25T15:30:00+00:00",
+      "description": "\"It's always really exciting to be able to go against other teams in the conference and see how you match up against them.\"",
+      "source": "Missoulian",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/72/67247519-1a3d-5310-9281-d4d9912d40c9/6aa5dd4dbc8ac.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/72/67247519-1a3d-5310-9281-d4d9912d40c9/6aa5dd4dbc8ac.image.jpg?resize=300%2C200"
+    },
     {
       "title": "092426-ir-spt-hockey-Griz-6.jpg",
       "url": "https://missoulian.com/sports/hockey/image_3c8c4a5a-3a41-56f8-ac48-8bf2543da777.html",
@@ -1495,21 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/c9/1c9e10a8-b18b-4a62-b695-1a8c600c1b12/6a9f3d9af149c.preview.jpg?crop=1763%2C926%2C0%2C113&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Cat-Griz Insider Podcast: Injury, penalties, Jeff Choate headline 3rd week",
-      "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/cat-griz-insider-podcast-injury-penalties-jeff-choate/article_33983564-3bd2-43cd-b40b-233d778d80c7.html",
-      "date": "Sep. 9, 2026",
-      "published_at": "2026-09-09T03:30:00+00:00",
-      "description": "Cat-Griz Insider Podcast: Injury, penalties, Jeff Choate headline 3rd week",
-      "source": "406 MT Sports",
-      "badge": "INSIDER",
-      "short": "INSIDE",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/39/33983564-3bd2-43cd-b40b-233d778d80c7/6aa0d2178c8a2.preview.png?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/cat-griz-insider-podcast-injury-penalties-jeff-choate/article_33983564-3bd2-43cd-b40b-233d778d80c7.html",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/39/33983564-3bd2-43cd-b40b-233d778d80c7/6aa0d2178c8a2.preview.png?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
