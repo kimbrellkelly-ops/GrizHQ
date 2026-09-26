@@ -84,12 +84,12 @@ def score_value(value):
  return str(value)
 
 def compact(e):
- c=(e.get('competitions') or [{}])[0];v=c.get('venue') or {};addr=v.get('address') or {};st=(c.get('status') or {}).get('type') or {};teams=[]
+ c=(e.get('competitions') or [{}])[0];v=c.get('venue') or {};addr=v.get('address') or {};raw_status=c.get('status') or {};st=raw_status.get('type') or {};period=raw_status.get('period') or c.get('period') or e.get('period');clock=raw_status.get('displayClock') or raw_status.get('clock') or c.get('displayClock') or c.get('clock') or e.get('displayClock') or e.get('clock');teams=[]
  for x in c.get('competitors',[]) or []:
   t=x.get('team') or {};teams.append({'id':str(t.get('id') or x.get('id') or ''),'name':t.get('displayName') or t.get('shortDisplayName') or t.get('name') or '','short':t.get('shortDisplayName') or t.get('displayName') or t.get('name') or '','abbreviation':t.get('abbreviation') or '','homeAway':x.get('homeAway') or '','score':score_value(x.get('score')),'logo':t.get('logo') or ((t.get('logos') or [{}])[0].get('href') if isinstance(t.get('logos'),list) else '') or ''})
  b=[]
  for br in c.get('broadcasts',[]) or []:b.extend(br.get('names') or [])
- return {'id':str(e.get('id') or ''),'date':e.get('date') or '','name':e.get('name') or '','shortName':e.get('shortName') or '','venue':v.get('fullName') or '','city':addr.get('city') or '','state':addr.get('state') or '','teams':teams,'status':{'state':st.get('state') or '','completed':bool(st.get('completed')),'name':st.get('name') or '','detail':st.get('detail') or '','shortDetail':st.get('shortDetail') or ''},'broadcasts':b[:4]}
+ state=st.get('state') or ''; completed=bool(st.get('completed')) or state=='post'; status_label='FINAL' if completed else ('HALFTIME' if state=='half' or st.get('name') in ('STATUS_HALFTIME','STATUS_HALFTIME_FINAL') else (f"OT" if period is not None and int(period)>=5 else (f"Q{int(period)}" if period is not None else ('LIVE' if state=='in' else (st.get('shortDetail') or st.get('detail') or 'SCHEDULED'))))); return {'id':str(e.get('id') or ''),'date':e.get('date') or '','name':e.get('name') or '','shortName':e.get('shortName') or '','venue':v.get('fullName') or '','city':addr.get('city') or '','state':addr.get('state') or '','teams':teams,'status':{'state':state,'completed':completed,'name':st.get('name') or '','detail':st.get('detail') or '','shortDetail':st.get('shortDetail') or '','label':status_label,'period':period,'clock':clock},'state':state,'completed':completed,'period':period,'clock':clock,'statusText':status_label,'broadcasts':b[:4]}
 def canonical(s):
  n=norm(s)
  aliases={
