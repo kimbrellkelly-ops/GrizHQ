@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T10:36:11.118566+00:00",
+  "updated": "2026-09-26T10:49:11.211326+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Montana has tough road test at Davis",
+      "url": "https://missoulian.com/article_7dcaad56-beb1-5f01-8016-55b18d4ad38e.html",
+      "date": "Sep. 26, 2026",
+      "published_at": "2026-09-26T10:27:25+00:00",
+      "description": "DAVIS, Calif. — The Montana football team will return to its Big Sky Conference slate by playing in the only top10 matchup in the FCS this week.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/63/46311cb3-92cd-57a4-86e2-32d346c37fe1/6ab79df1c97ab.image.jpg?resize=300%2C249",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/63/46311cb3-92cd-57a4-86e2-32d346c37fe1/6ab79df1c97ab.image.jpg?resize=300%2C249"
+    },
     {
       "title": "Griz commit Eli Kasberg throws for four TDs, runs for two in Missoula Big Sky win over Flathead",
       "url": "https://missoulian.com/sports/high-school/football/article_b8932662-a674-54ea-9802-15e35193d463.html",
@@ -1495,21 +1510,6 @@
       "youtube_id": "wLVk0UNe3tc",
       "video_url": "https://www.youtube.com/watch?v=wLVk0UNe3tc",
       "video_thumbnail": "https://i.ytimg.com/vi/wLVk0UNe3tc/hqdefault.jpg"
-    },
-    {
-      "title": "Griz Game Day 9-10-26",
-      "url": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/2/0c/20cdb1e6-bc02-4f3c-8502-2da52aeb33f5/6aa1a4f47887d.pdf.pdf",
-      "date": "Sep. 9, 2026",
-      "published_at": "2026-09-09T18:27:00+00:00",
-      "description": "Latest Montana football coverage.",
-      "source": "Missoulian",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/30/20260829_fbvssouthernutah_0125.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/8/30/20260829_fbvssouthernutah_0125.jpg"
     }
   ]
 }
