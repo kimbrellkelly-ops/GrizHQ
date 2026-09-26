@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-26T17:24:30.239973+00:00",
+  "generatedAt": "2026-09-26T18:28:32.198179+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -5127,7 +5127,7 @@
               "short": "Penn",
               "abbreviation": "PENN",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/219.png"
             },
             {
@@ -5136,16 +5136,16 @@
               "short": "Lehigh",
               "abbreviation": "LEH",
               "homeAway": "away",
-              "score": "",
+              "score": "3",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2329.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "6:17 - 1st Quarter",
-            "shortDetail": "6:17 - 1st"
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime"
           },
           "broadcasts": []
         },
@@ -5181,8 +5181,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "5:41 - 1st Quarter",
-            "shortDetail": "5:41 - 1st"
+            "detail": "4:07 - 2nd Quarter",
+            "shortDetail": "4:07 - 2nd"
           },
           "broadcasts": []
         },
@@ -5218,8 +5218,8 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "6:51 - 1st Quarter",
-            "shortDetail": "6:51 - 1st"
+            "detail": "End of 2nd Quarter",
+            "shortDetail": "End of 2nd"
           },
           "broadcasts": []
         },
@@ -5252,11 +5252,11 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 26th at 1:30 PM EDT",
-            "shortDetail": "9/26 - 1:30 PM EDT"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "9:29 - 2nd Quarter",
+            "shortDetail": "9:29 - 2nd"
           },
           "broadcasts": []
         },
@@ -5289,11 +5289,11 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 26th at 2:00 PM EDT",
-            "shortDetail": "9/26 - 2:00 PM EDT"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "4:06 - 1st Quarter",
+            "shortDetail": "4:06 - 1st"
           },
           "broadcasts": []
         },
@@ -5326,11 +5326,11 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 26th at 2:00 PM EDT",
-            "shortDetail": "9/26 - 2:00 PM EDT"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "6:45 - 1st Quarter",
+            "shortDetail": "6:45 - 1st"
           },
           "broadcasts": []
         },
