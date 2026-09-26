@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-26T22:09:51.441279+00:00",
+  "generatedAt": "2026-09-26T22:22:31.363152+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -6369,15 +6369,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "13:10 - 3rd Quarter",
-            "shortDetail": "13:10 - 3rd",
+            "detail": "7:50 - 3rd Quarter",
+            "shortDetail": "7:50 - 3rd",
             "label": "Q3",
             "period": 3,
-            "clock": "13:10"
+            "clock": "7:50"
           },
           "completed": false,
           "period": 3,
-          "clock": "13:10",
+          "clock": "7:50",
           "statusText": "Q3",
           "broadcasts": []
         },
@@ -6501,15 +6501,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "14:55 - 1st Quarter",
-            "shortDetail": "14:55 - 1st",
+            "detail": "8:46 - 1st Quarter",
+            "shortDetail": "8:46 - 1st",
             "label": "Q1",
             "period": 1,
-            "clock": "14:55"
+            "clock": "8:46"
           },
           "completed": false,
           "period": 1,
-          "clock": "14:55",
+          "clock": "8:46",
           "statusText": "Q1",
           "broadcasts": []
         },
@@ -6545,15 +6545,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "11:39 - 1st Quarter",
-            "shortDetail": "11:39 - 1st",
+            "detail": "7:51 - 1st Quarter",
+            "shortDetail": "7:51 - 1st",
             "label": "Q1",
             "period": 1,
-            "clock": "11:39"
+            "clock": "7:51"
           },
           "completed": false,
           "period": 1,
-          "clock": "11:39",
+          "clock": "7:51",
           "statusText": "Q1",
           "broadcasts": []
         },
