@@ -6,7 +6,7 @@ on:
       - scoreboard/scoreboard-data.json
   workflow_dispatch:
   schedule:
-    - cron: "17 * * * *"
+    - cron: "*/5 * * * *"
 permissions:
   contents: write
 concurrency:
