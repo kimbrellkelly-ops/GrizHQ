@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-26T22:54:00.989968+00:00",
+  "generatedAt": "2026-09-26T23:03:13.788148+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -6369,15 +6369,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "11:36 - 4th Quarter",
-            "shortDetail": "11:36 - 4th",
+            "detail": "8:10 - 4th Quarter",
+            "shortDetail": "8:10 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "11:36"
+            "clock": "8:10"
           },
           "completed": false,
           "period": 4,
-          "clock": "11:36",
+          "clock": "8:10",
           "statusText": "Q4",
           "broadcasts": []
         },
@@ -6413,15 +6413,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "9:22 - 4th Quarter",
-            "shortDetail": "9:22 - 4th",
+            "detail": "11:38 - 4th Quarter",
+            "shortDetail": "11:38 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "9:22"
+            "clock": "11:38"
           },
           "completed": false,
           "period": 4,
-          "clock": "9:22",
+          "clock": "11:38",
           "statusText": "Q4",
           "broadcasts": []
         },
@@ -6501,15 +6501,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "End of 1st Quarter",
-            "shortDetail": "End of 1st",
+            "detail": "3:58 - 1st Quarter",
+            "shortDetail": "3:58 - 1st",
             "label": "Q1",
             "period": 1,
-            "clock": "0:00"
+            "clock": "3:58"
           },
           "completed": false,
           "period": 1,
-          "clock": "0:00",
+          "clock": "3:58",
           "statusText": "Q1",
           "broadcasts": []
         },
@@ -6545,15 +6545,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "10:23 - 2nd Quarter",
-            "shortDetail": "10:23 - 2nd",
+            "detail": "12:09 - 2nd Quarter",
+            "shortDetail": "12:09 - 2nd",
             "label": "Q2",
             "period": 2,
-            "clock": "10:23"
+            "clock": "12:09"
           },
           "completed": false,
           "period": 2,
-          "clock": "10:23",
+          "clock": "12:09",
           "statusText": "Q2",
           "broadcasts": []
         },
