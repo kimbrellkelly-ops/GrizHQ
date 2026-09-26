@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-26T16:25:50.950588+00:00",
+  "generatedAt": "2026-09-26T17:24:30.239973+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -5141,11 +5141,11 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 26th at 1:00 PM EDT",
-            "shortDetail": "9/26 - 1:00 PM EDT"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "6:17 - 1st Quarter",
+            "shortDetail": "6:17 - 1st"
           },
           "broadcasts": []
         },
@@ -5178,11 +5178,11 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 26th at 1:00 PM EDT",
-            "shortDetail": "9/26 - 1:00 PM EDT"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "5:41 - 1st Quarter",
+            "shortDetail": "5:41 - 1st"
           },
           "broadcasts": []
         },
@@ -5215,11 +5215,11 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 26th at 1:00 PM EDT",
-            "shortDetail": "9/26 - 1:00 PM EDT"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "6:51 - 1st Quarter",
+            "shortDetail": "6:51 - 1st"
           },
           "broadcasts": []
         },
