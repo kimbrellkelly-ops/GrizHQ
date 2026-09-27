@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-27T02:28:33.985989+00:00",
+  "generatedAt": "2026-09-27T02:41:34.918534+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -6652,7 +6652,7 @@
           "shortName": "UWF @ SEMO",
           "venue": "Houck Field",
           "city": "Cape Girardeau",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2546",
@@ -6660,7 +6660,7 @@
               "short": "SE Missouri",
               "abbreviation": "SEMO",
               "homeAway": "home",
-              "score": "",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2546.png"
             },
             {
@@ -6669,24 +6669,24 @@
               "short": "West Florida",
               "abbreviation": "UWF",
               "homeAway": "away",
-              "score": "",
+              "score": "20",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/110242.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "1:55 - 4th Quarter",
-            "shortDetail": "1:55 - 4th",
-            "label": "Q4",
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
             "period": 4,
-            "clock": "1:55"
+            "clock": "0:00"
           },
-          "completed": false,
+          "completed": true,
           "period": 4,
-          "clock": "1:55",
-          "statusText": "Q4",
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": []
         },
         {
@@ -6765,15 +6765,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "14:09 - 4th Quarter",
-            "shortDetail": "14:09 - 4th",
+            "detail": "7:54 - 4th Quarter",
+            "shortDetail": "7:54 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "14:09"
+            "clock": "7:54"
           },
           "completed": false,
           "period": 4,
-          "clock": "14:09",
+          "clock": "7:54",
           "statusText": "Q4",
           "broadcasts": []
         },
@@ -6853,15 +6853,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "8:48 - 1st Quarter",
-            "shortDetail": "8:48 - 1st",
+            "detail": "5:08 - 1st Quarter",
+            "shortDetail": "5:08 - 1st",
             "label": "Q1",
             "period": 1,
-            "clock": "8:48"
+            "clock": "5:08"
           },
           "completed": false,
           "period": 1,
-          "clock": "8:48",
+          "clock": "5:08",
           "statusText": "Q1",
           "broadcasts": []
         },
@@ -6872,7 +6872,7 @@
           "shortName": "NAU @ MTST",
           "venue": "Bobcat Stadium (MT)",
           "city": "Bozeman",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "147",
@@ -6894,19 +6894,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 26th at 10:30 PM EDT",
-            "shortDetail": "9/26 - 10:30 PM EDT",
-            "label": "9/26 - 10:30 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "15:00 - 1st Quarter",
+            "shortDetail": "15:00 - 1st",
+            "label": "Q1",
+            "period": 1,
+            "clock": "15:00"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "9/26 - 10:30 PM EDT",
+          "period": 1,
+          "clock": "15:00",
+          "statusText": "Q1",
           "broadcasts": []
         }
       ],
@@ -6994,15 +6994,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "14:09 - 4th Quarter",
-            "shortDetail": "14:09 - 4th",
+            "detail": "7:54 - 4th Quarter",
+            "shortDetail": "7:54 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "14:09"
+            "clock": "7:54"
           },
           "completed": false,
           "period": 4,
-          "clock": "14:09",
+          "clock": "7:54",
           "statusText": "Q4",
           "broadcasts": []
         },
@@ -7038,16 +7038,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "4:33 - 3rd Quarter",
-            "shortDetail": "4:33 - 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "4:33"
+            "detail": "15:00 - 4th Quarter",
+            "shortDetail": "15:00 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "15:00"
           },
           "completed": false,
-          "period": 3,
-          "clock": "4:33",
-          "statusText": "Q3",
+          "period": 4,
+          "clock": "15:00",
+          "statusText": "Q4",
           "broadcasts": []
         },
         {
@@ -7082,16 +7082,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "5:19 - 3rd Quarter",
-            "shortDetail": "5:19 - 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "5:19"
+            "detail": "15:00 - 4th Quarter",
+            "shortDetail": "15:00 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "15:00"
           },
           "completed": false,
-          "period": 3,
-          "clock": "5:19",
-          "statusText": "Q3",
+          "period": 4,
+          "clock": "15:00",
+          "statusText": "Q4",
           "broadcasts": []
         },
         {
@@ -7126,15 +7126,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "7:06 - 1st Quarter",
-            "shortDetail": "7:06 - 1st",
+            "detail": "5:08 - 1st Quarter",
+            "shortDetail": "5:08 - 1st",
             "label": "Q1",
             "period": 1,
-            "clock": "7:06"
+            "clock": "5:08"
           },
           "completed": false,
           "period": 1,
-          "clock": "7:06",
+          "clock": "5:08",
           "statusText": "Q1",
           "broadcasts": []
         },
@@ -7145,7 +7145,7 @@
           "shortName": "NAU @ MTST",
           "venue": "Bobcat Stadium (MT)",
           "city": "Bozeman",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "147",
@@ -7167,19 +7167,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, September 26th at 10:30 PM EDT",
-            "shortDetail": "9/26 - 10:30 PM EDT",
-            "label": "9/26 - 10:30 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "13:58 - 1st Quarter",
+            "shortDetail": "13:58 - 1st",
+            "label": "Q1",
+            "period": 1,
+            "clock": "13:58"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "9/26 - 10:30 PM EDT",
+          "period": 1,
+          "clock": "13:58",
+          "statusText": "Q1",
           "broadcasts": []
         }
       ]
