@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T23:35:21.500478+00:00",
+  "updated": "2026-09-27T23:48:59.529489+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Former Grizzlies head coach Bobby Hauck out at Illinois after 4 games",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_bfbc3ce6-063e-5b44-9e13-19f443a2ffda.html",
+      "date": "Sep. 27, 2026",
+      "published_at": "2026-09-27T22:45:00+00:00",
+      "description": "Bobby Hauck and the Illinois Fighting Illini parted ways Sunday afternoon.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/73/e73bad6c-c481-5184-b697-901f4c06edc1/6983afe9dbe33.image.jpg?resize=300%2C200",
+      "is_video": true,
+      "youtube_id": "qrmMPOnSHGI",
+      "video_url": "https://www.youtube.com/watch?v=qrmMPOnSHGI",
+      "video_thumbnail": "https://i.ytimg.com/vi/qrmMPOnSHGI/hqdefault.jpg"
+    },
     {
       "title": "Former Grizzlies head coach Bobby Hauck out at Illinois after 4 games",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/former-grizzlies-head-coach-bobby-hauck-out-at-illinois-after-4-games/article_711bf909-523d-4dfc-8b2f-0dfa4e1bc196.html",
@@ -1495,21 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/40/6407eaf5-ec6b-5f73-a306-bbcdb7cd5dd8/6aa5dd523bb68.image.jpg?resize=300%2C420"
-    },
-    {
-      "title": "Montana vs. Utah Tech football 30.JPG",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/image_6e47c0bb-e060-58d7-a6e0-d90831c134bc.html",
-      "date": "Sep. 12, 2026",
-      "published_at": "2026-09-12T23:03:10+00:00",
-      "description": "Montana safety Tanner Huff (29) and Montana linebacker Peyton Wing (32) tackle Utah Tech wide receiver Isaac McMullin (21) during the Big Sky Conference football game between Montana and Utah Tech at Washington-Grizzly Stadium in Missoula o",
-      "source": "Missoulian",
-      "badge": "OPPONENT",
-      "short": "OPPONE",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/e4/6e47c0bb-e060-58d7-a6e0-d90831c134bc/6aa5dd51efe75.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/e4/6e47c0bb-e060-58d7-a6e0-d90831c134bc/6aa5dd51efe75.image.jpg?resize=300%2C200"
     }
   ]
 }
