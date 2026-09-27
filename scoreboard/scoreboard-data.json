@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-27T03:55:48.197592+00:00",
+  "generatedAt": "2026-09-27T04:06:42.660024+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -6809,15 +6809,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "End of 3rd Quarter",
-            "shortDetail": "End of 3rd",
+            "detail": "9:16 - 3rd Quarter",
+            "shortDetail": "9:16 - 3rd",
             "label": "Q3",
             "period": 3,
-            "clock": "0:00"
+            "clock": "9:16"
           },
           "completed": false,
           "period": 3,
-          "clock": "0:00",
+          "clock": "9:16",
           "statusText": "Q3",
           "broadcasts": []
         },
@@ -6836,7 +6836,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "home",
-              "score": "8",
+              "score": "",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             },
             {
@@ -6845,24 +6845,24 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "away",
-              "score": "31",
+              "score": "",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_HALFTIME",
-            "detail": "Halftime",
-            "shortDetail": "Halftime",
-            "label": "HALFTIME",
-            "period": 2,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "13:06 - 3rd Quarter",
+            "shortDetail": "13:06 - 3rd",
+            "label": "Q3",
+            "period": 3,
+            "clock": "13:06"
           },
           "completed": false,
-          "period": 2,
-          "clock": "0:00",
-          "statusText": "HALFTIME",
+          "period": 3,
+          "clock": "13:06",
+          "statusText": "Q3",
           "broadcasts": []
         },
         {
@@ -6880,7 +6880,7 @@
               "short": "Montana St",
               "abbreviation": "MTST",
               "homeAway": "home",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
             },
             {
@@ -6889,24 +6889,24 @@
               "short": "N Arizona",
               "abbreviation": "NAU",
               "homeAway": "away",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "2:05 - 2nd Quarter",
-            "shortDetail": "2:05 - 2nd",
-            "label": "Q2",
-            "period": 2,
-            "clock": "2:05"
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 3,
+            "clock": "15:00"
           },
           "completed": false,
-          "period": 2,
-          "clock": "2:05",
-          "statusText": "Q2",
+          "period": 3,
+          "clock": "15:00",
+          "statusText": "HALFTIME",
           "broadcasts": []
         }
       ],
@@ -7057,7 +7057,7 @@
           "shortName": "PRST @ WEB",
           "venue": "Stewart Stadium",
           "city": "Ogden",
-          "state": "post",
+          "state": "in",
           "teams": [
             {
               "id": "2692",
@@ -7065,7 +7065,7 @@
               "short": "Weber St",
               "abbreviation": "WEB",
               "homeAway": "home",
-              "score": "41",
+              "score": "",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
             },
             {
@@ -7074,24 +7074,24 @@
               "short": "Portland St",
               "abbreviation": "PRST",
               "homeAway": "away",
-              "score": "44",
+              "score": "",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2502.png"
             }
           ],
           "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final",
-            "label": "FINAL",
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "0:16 - 4th Quarter",
+            "shortDetail": "0:16 - 4th",
+            "label": "Q4",
             "period": 4,
-            "clock": "0:00"
+            "clock": "0:16"
           },
-          "completed": true,
+          "completed": false,
           "period": 4,
-          "clock": "0:00",
-          "statusText": "FINAL",
+          "clock": "0:16",
+          "statusText": "Q4",
           "broadcasts": []
         },
         {
@@ -7109,7 +7109,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "home",
-              "score": "8",
+              "score": "",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             },
             {
@@ -7118,24 +7118,24 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "away",
-              "score": "31",
+              "score": "",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_HALFTIME",
-            "detail": "Halftime",
-            "shortDetail": "Halftime",
-            "label": "HALFTIME",
-            "period": 2,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "13:06 - 3rd Quarter",
+            "shortDetail": "13:06 - 3rd",
+            "label": "Q3",
+            "period": 3,
+            "clock": "13:06"
           },
           "completed": false,
-          "period": 2,
-          "clock": "0:00",
-          "statusText": "HALFTIME",
+          "period": 3,
+          "clock": "13:06",
+          "statusText": "Q3",
           "broadcasts": []
         },
         {
@@ -7153,7 +7153,7 @@
               "short": "Montana St",
               "abbreviation": "MTST",
               "homeAway": "home",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
             },
             {
@@ -7162,24 +7162,24 @@
               "short": "N Arizona",
               "abbreviation": "NAU",
               "homeAway": "away",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "2:05 - 2nd Quarter",
-            "shortDetail": "2:05 - 2nd",
-            "label": "Q2",
-            "period": 2,
-            "clock": "2:05"
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 3,
+            "clock": "15:00"
           },
           "completed": false,
-          "period": 2,
-          "clock": "2:05",
-          "statusText": "Q2",
+          "period": 3,
+          "clock": "15:00",
+          "statusText": "HALFTIME",
           "broadcasts": []
         }
       ]
