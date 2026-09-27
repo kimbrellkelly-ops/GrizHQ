@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-27T05:08:01.278747+00:00",
+  "generatedAt": "2026-09-27T05:21:24.775646+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -6853,15 +6853,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "5:31 - 4th Quarter",
-            "shortDetail": "5:31 - 4th",
+            "detail": "2:45 - 4th Quarter",
+            "shortDetail": "2:45 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "5:31"
+            "clock": "2:45"
           },
           "completed": false,
           "period": 4,
-          "clock": "5:31",
+          "clock": "2:45",
           "statusText": "Q4",
           "broadcasts": []
         },
@@ -6897,15 +6897,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "15:00 - 4th Quarter",
-            "shortDetail": "15:00 - 4th",
+            "detail": "8:48 - 4th Quarter",
+            "shortDetail": "8:48 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "15:00"
+            "clock": "8:48"
           },
           "completed": false,
           "period": 4,
-          "clock": "15:00",
+          "clock": "8:48",
           "statusText": "Q4",
           "broadcasts": []
         }
@@ -7126,15 +7126,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "5:31 - 4th Quarter",
-            "shortDetail": "5:31 - 4th",
+            "detail": "2:45 - 4th Quarter",
+            "shortDetail": "2:45 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "5:31"
+            "clock": "2:45"
           },
           "completed": false,
           "period": 4,
-          "clock": "5:31",
+          "clock": "2:45",
           "statusText": "Q4",
           "broadcasts": []
         },
@@ -7170,15 +7170,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "15:00 - 4th Quarter",
-            "shortDetail": "15:00 - 4th",
+            "detail": "8:48 - 4th Quarter",
+            "shortDetail": "8:48 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "15:00"
+            "clock": "8:48"
           },
           "completed": false,
           "period": 4,
-          "clock": "15:00",
+          "clock": "8:48",
           "statusText": "Q4",
           "broadcasts": []
         }
