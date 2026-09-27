@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T12:04:42.962522+00:00",
+  "updated": "2026-09-27T12:28:13.321862+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,36 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "3 takeaways: No. 5 Grizzlies make statement at No. 10 UC Davis",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_a50bcf9d-8cb6-5f40-b0e5-7c35a1a6c966.html",
+      "date": "Sep. 27, 2026",
+      "published_at": "2026-09-27T12:00:00+00:00",
+      "description": "\"We're still Montana. We still got it. We never really went anywhere. We just had to prove it again.\" —Griz RB Eli Gillman",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/a/50/a50bcf9d-8cb6-5f40-b0e5-7c35a1a6c966/6ab8f05e046c7.preview.jpg?crop=678%2C356%2C0%2C12",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/a/50/a50bcf9d-8cb6-5f40-b0e5-7c35a1a6c966/6ab8f05e046c7.preview.jpg?crop=678%2C356%2C0%2C12"
+    },
+    {
+      "title": "3 takeaways: No. 5 Grizzlies make statement at No. 10 UC Davis",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-5-grizzlies-make-statement-at-no-10-uc-davis/article_549611cc-19fc-44bf-9bec-b4c0eac4f4ac.html",
+      "date": "Sep. 27, 2026",
+      "published_at": "2026-09-27T12:00:00+00:00",
+      "description": "3 takeaways: No. 5 Grizzlies make statement at No. 10 UC Davis",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/49/549611cc-19fc-44bf-9bec-b4c0eac4f4ac/6ab8ef5ce777e.preview.jpg?crop=678%2C356%2C0%2C12",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/49/549611cc-19fc-44bf-9bec-b4c0eac4f4ac/6ab8ef5ce777e.preview.jpg?crop=678%2C356%2C0%2C12"
+    },
     {
       "title": "Griz blitzkrieg rolls through Aggies in California",
       "url": "https://skylinesportsmt.com/griz-blitzkrieg-rolls-through-aggies-in-california/",
@@ -1480,36 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/06/IMG_67571.png"
-    },
-    {
-      "title": "3 questions: No. 3 Montana Grizzlies seek 3-0 start against Utah Tech",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-3-montana-grizzlies-seek-3-0-start-against-utah-tech/article_6e16a730-bc4b-4cd9-bffd-c7269b62e14a.html",
-      "date": "Sep. 11, 2026",
-      "published_at": "2026-09-11T18:00:00+00:00",
-      "description": "3 questions: No. 3 Montana Grizzlies seek 3-0 start against Utah Tech",
-      "source": "406 MT Sports",
-      "badge": "OPPONENT",
-      "short": "OPPONE",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/e1/6e16a730-bc4b-4cd9-bffd-c7269b62e14a/6aa239f8db5c2.preview.jpg?crop=1762%2C925%2C0%2C215&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/e1/6e16a730-bc4b-4cd9-bffd-c7269b62e14a/6aa239f8db5c2.preview.jpg?crop=1762%2C925%2C0%2C215&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "3 questions: No. 3 Montana Grizzlies seek 3-0 start against Utah Tech",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_f3328fda-94f3-5ba4-b83f-bdc99ed7dffe.html",
-      "date": "Sep. 11, 2026",
-      "published_at": "2026-09-11T18:00:00+00:00",
-      "description": "\"In the past we've dropped games where we might have been looking ahead in the future, so we really can't overlook any opponent.\"",
-      "source": "Missoulian",
-      "badge": "OPPONENT",
-      "short": "OPPONE",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/9b/59b14a77-06f0-56a9-ac36-8edcbf69ddda/6aa23d2508eb9.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/9b/59b14a77-06f0-56a9-ac36-8edcbf69ddda/6aa23d2508eb9.image.jpg?resize=300%2C200"
     }
   ]
 }
