@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T03:37:59.890026+00:00",
+  "updated": "2026-09-27T03:51:32.020201+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -28,21 +28,6 @@
     },
     {
       "title": "Montana Grizzlies take to the field at UC Davis",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/video_856064ec-e643-5614-829e-71643226a686.html",
-      "date": "Sep. 27, 2026",
-      "published_at": "2026-09-27T02:07:00+00:00",
-      "description": "Latest Montana football coverage.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/56/856064ec-e643-5614-829e-71643226a686/6ab87fb8836ea.image.jpg?resize=300%2C169",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/video_856064ec-e643-5614-829e-71643226a686.html",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/56/856064ec-e643-5614-829e-71643226a686/6ab87fb8836ea.image.jpg?resize=300%2C169"
-    },
-    {
-      "title": "Montana Grizzlies take to the field at UC Davis",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-take-to-the-field-at-uc-davis/video_928d31a7-cfbd-546e-afb6-b451535a01d7.html",
       "date": "Sep. 27, 2026",
       "published_at": "2026-09-27T02:07:00+00:00",
@@ -57,19 +42,19 @@
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/9/28/928d31a7-cfbd-546e-afb6-b451535a01d7/6ab87c629fae1.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
     },
     {
-      "title": "Live updates: No. 5 Montana Grizzlies visit No. 10 UC Davis",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_8f3d0c30-80d1-570f-9f16-5564d3603193.html",
+      "title": "Montana Grizzlies take to the field at UC Davis",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/video_856064ec-e643-5614-829e-71643226a686.html",
       "date": "Sep. 27, 2026",
-      "published_at": "2026-09-27T01:45:00+00:00",
-      "description": "It’s the first ranked matchup of the 2026 season for both the Grizzlies and the Aggies.",
+      "published_at": "2026-09-27T02:07:00+00:00",
+      "description": "Latest Montana football coverage.",
       "source": "Missoulian",
       "badge": "GRIZ NEWS",
       "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/f6/7f6194df-5f9e-56f4-99f6-b99fbf434029/6ab878f9c64f2.image.jpg?resize=300%2C225",
-      "is_video": false,
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/56/856064ec-e643-5614-829e-71643226a686/6ab87fb8836ea.image.jpg?resize=300%2C169",
+      "is_video": true,
       "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/f6/7f6194df-5f9e-56f4-99f6-b99fbf434029/6ab878f9c64f2.image.jpg?resize=300%2C225"
+      "video_url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/video_856064ec-e643-5614-829e-71643226a686.html",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/56/856064ec-e643-5614-829e-71643226a686/6ab87fb8836ea.image.jpg?resize=300%2C169"
     },
     {
       "title": "Live updates: No. 5 Montana Grizzlies visit No. 10 UC Davis",
@@ -85,6 +70,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/de/7de9373c-323f-4c09-8099-110036fce5f5/6ab874ebf3cab.preview.jpg?crop=1661%2C872%2C1%2C139&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Live updates: No. 5 Montana Grizzlies visit No. 10 UC Davis",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_8f3d0c30-80d1-570f-9f16-5564d3603193.html",
+      "date": "Sep. 27, 2026",
+      "published_at": "2026-09-27T01:45:00+00:00",
+      "description": "It’s the first ranked matchup of the 2026 season for both the Grizzlies and the Aggies.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/f6/7f6194df-5f9e-56f4-99f6-b99fbf434029/6ab878f9c64f2.image.jpg?resize=300%2C225",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/f6/7f6194df-5f9e-56f4-99f6-b99fbf434029/6ab878f9c64f2.image.jpg?resize=300%2C225"
     },
     {
       "title": "Montana Grizzlies pregame",
