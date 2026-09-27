@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-27T05:44:59.069592+00:00",
+  "generatedAt": "2026-09-27T05:53:44.670209+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -6872,7 +6872,7 @@
           "shortName": "NAU @ MTST",
           "venue": "Bobcat Stadium (MT)",
           "city": "Bozeman",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "147",
@@ -6880,7 +6880,7 @@
               "short": "Montana St",
               "abbreviation": "MTST",
               "homeAway": "home",
-              "score": "",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
             },
             {
@@ -6889,24 +6889,24 @@
               "short": "N Arizona",
               "abbreviation": "NAU",
               "homeAway": "away",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "1:53 - 4th Quarter",
-            "shortDetail": "1:53 - 4th",
-            "label": "Q4",
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
             "period": 4,
-            "clock": "1:53"
+            "clock": "0:00"
           },
-          "completed": false,
+          "completed": true,
           "period": 4,
-          "clock": "1:53",
-          "statusText": "Q4",
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": []
         }
       ],
@@ -7145,7 +7145,7 @@
           "shortName": "NAU @ MTST",
           "venue": "Bobcat Stadium (MT)",
           "city": "Bozeman",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "147",
@@ -7153,7 +7153,7 @@
               "short": "Montana St",
               "abbreviation": "MTST",
               "homeAway": "home",
-              "score": "",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
             },
             {
@@ -7162,24 +7162,24 @@
               "short": "N Arizona",
               "abbreviation": "NAU",
               "homeAway": "away",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "0:33 - 4th Quarter",
-            "shortDetail": "0:33 - 4th",
-            "label": "Q4",
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
             "period": 4,
-            "clock": "0:33"
+            "clock": "0:00"
           },
-          "completed": false,
+          "completed": true,
           "period": 4,
-          "clock": "0:33",
-          "statusText": "Q4",
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": []
         }
       ]
