@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T06:04:33.967008+00:00",
+  "updated": "2026-09-27T06:28:52.399575+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,21 +11,6 @@
     "Skyline Sports"
   ],
   "stories": [
-    {
-      "title": "Recap: No. 5 Montana Grizzlies rout No. 10 UC Davis Aggies on road",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_8f3d0c30-80d1-570f-9f16-5564d3603193.html",
-      "date": "Sep. 27, 2026",
-      "published_at": "2026-09-27T05:15:00+00:00",
-      "description": "The Griz ran for 366 yards, their most since 2024, against UC Davis and outgained the Aggies 607-392 in total yards.",
-      "source": "Missoulian",
-      "badge": "GAME STORY",
-      "short": "GAME S",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/f6/7f6194df-5f9e-56f4-99f6-b99fbf434029/6ab878f9c64f2.image.jpg?resize=300%2C225",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/f6/7f6194df-5f9e-56f4-99f6-b99fbf434029/6ab878f9c64f2.image.jpg?resize=300%2C225"
-    },
     {
       "title": "Live updates: No. 5 Montana Grizzlies visit No. 10 UC Davis",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-football-visit-uc-davis-live-updates/article_7de9373c-323f-4c09-8099-110036fce5f5.html",
@@ -40,6 +25,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/de/7de9373c-323f-4c09-8099-110036fce5f5/6ab874ebf3cab.preview.jpg?crop=1661%2C872%2C1%2C139&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Recap: No. 5 Montana Grizzlies rout No. 10 UC Davis Aggies on road",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_8f3d0c30-80d1-570f-9f16-5564d3603193.html",
+      "date": "Sep. 27, 2026",
+      "published_at": "2026-09-27T05:15:00+00:00",
+      "description": "The Griz ran for 366 yards, their most since 2024, against UC Davis and outgained the Aggies 607-392 in total yards.",
+      "source": "Missoulian",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/f6/7f6194df-5f9e-56f4-99f6-b99fbf434029/6ab878f9c64f2.image.jpg?resize=300%2C225",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/f6/7f6194df-5f9e-56f4-99f6-b99fbf434029/6ab878f9c64f2.image.jpg?resize=300%2C225"
     },
     {
       "title": "Eli Gillman Big Sky record tweet",
