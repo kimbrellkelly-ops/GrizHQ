@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T04:28:21.720433+00:00",
+  "updated": "2026-09-27T05:26:34.676136+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-1",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-27T04:28:46.999159+00:00"
+    "checked_at": "2026-09-27T05:27:09.294567+00:00"
   },
   "resources": [
     {
@@ -2940,7 +2940,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-27T04:28:27.912955+00:00",
+    "source_checked_at": "2026-09-27T05:26:40.955418+00:00",
     "team_summary": [
       {
         "value": "3–1",
@@ -27632,19 +27632,6 @@
   "big_sky_standings": [
     {
       "rank": 1,
-      "team": "Montana State",
-      "conference_record": "1-0",
-      "overall_record": "4-0",
-      "home": "2-0",
-      "away": "2-0",
-      "conference_points": "54-0",
-      "points": "160-61",
-      "conference_streak": "W1",
-      "overall_streak": "W4",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2539"
-    },
-    {
-      "rank": 2,
       "team": "Idaho State",
       "conference_record": "1-0",
       "overall_record": "4-0",
@@ -27655,6 +27642,19 @@
       "conference_streak": "W1",
       "overall_streak": "W4",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2537"
+    },
+    {
+      "rank": 2,
+      "team": "Montana State",
+      "conference_record": "1-0",
+      "overall_record": "4-0",
+      "home": "2-0",
+      "away": "2-0",
+      "conference_points": "54-0",
+      "points": "160-61",
+      "conference_streak": "W1",
+      "overall_streak": "W4",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2539"
     },
     {
       "rank": 3,
@@ -27749,19 +27749,6 @@
     },
     {
       "rank": 10,
-      "team": "Southern Utah",
-      "conference_record": "0-2",
-      "overall_record": "1-4",
-      "home": "1-1",
-      "away": "0-3",
-      "conference_points": "45-56",
-      "points": "142-184",
-      "conference_streak": "L2",
-      "overall_streak": "L3",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2543"
-    },
-    {
-      "rank": 11,
       "team": "Eastern Washington",
       "conference_record": "0-2",
       "overall_record": "1-4",
@@ -27772,6 +27759,19 @@
       "conference_streak": "L2",
       "overall_streak": "L3",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2534"
+    },
+    {
+      "rank": 11,
+      "team": "Southern Utah",
+      "conference_record": "0-2",
+      "overall_record": "1-4",
+      "home": "1-1",
+      "away": "0-3",
+      "conference_points": "45-56",
+      "points": "142-184",
+      "conference_streak": "L2",
+      "overall_streak": "L3",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2543"
     },
     {
       "rank": 12,
@@ -28157,6 +28157,6 @@
       "news": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-09-27T04:28:27.913019+00:00"
+    "updated": "2026-09-27T05:26:40.955484+00:00"
   }
 }
