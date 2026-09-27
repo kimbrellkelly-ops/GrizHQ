@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-27T02:41:34.918534+00:00",
+  "generatedAt": "2026-09-27T03:00:30.893958+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -6765,15 +6765,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "7:54 - 4th Quarter",
-            "shortDetail": "7:54 - 4th",
+            "detail": "3:54 - 4th Quarter",
+            "shortDetail": "3:54 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "7:54"
+            "clock": "3:54"
           },
           "completed": false,
           "period": 4,
-          "clock": "7:54",
+          "clock": "3:54",
           "statusText": "Q4",
           "broadcasts": []
         },
@@ -6853,16 +6853,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "5:08 - 1st Quarter",
-            "shortDetail": "5:08 - 1st",
-            "label": "Q1",
-            "period": 1,
-            "clock": "5:08"
+            "detail": "11:44 - 2nd Quarter",
+            "shortDetail": "11:44 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "11:44"
           },
           "completed": false,
-          "period": 1,
-          "clock": "5:08",
-          "statusText": "Q1",
+          "period": 2,
+          "clock": "11:44",
+          "statusText": "Q2",
           "broadcasts": []
         },
         {
@@ -6897,15 +6897,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "15:00 - 1st Quarter",
-            "shortDetail": "15:00 - 1st",
+            "detail": "7:55 - 1st Quarter",
+            "shortDetail": "7:55 - 1st",
             "label": "Q1",
             "period": 1,
-            "clock": "15:00"
+            "clock": "7:55"
           },
           "completed": false,
           "period": 1,
-          "clock": "15:00",
+          "clock": "7:55",
           "statusText": "Q1",
           "broadcasts": []
         }
@@ -6994,15 +6994,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "7:54 - 4th Quarter",
-            "shortDetail": "7:54 - 4th",
+            "detail": "3:08 - 4th Quarter",
+            "shortDetail": "3:08 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "7:54"
+            "clock": "3:08"
           },
           "completed": false,
           "period": 4,
-          "clock": "7:54",
+          "clock": "3:08",
           "statusText": "Q4",
           "broadcasts": []
         },
@@ -7038,15 +7038,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "15:00 - 4th Quarter",
-            "shortDetail": "15:00 - 4th",
+            "detail": "8:43 - 4th Quarter",
+            "shortDetail": "8:43 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "15:00"
+            "clock": "8:43"
           },
           "completed": false,
           "period": 4,
-          "clock": "15:00",
+          "clock": "8:43",
           "statusText": "Q4",
           "broadcasts": []
         },
@@ -7082,15 +7082,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "15:00 - 4th Quarter",
-            "shortDetail": "15:00 - 4th",
+            "detail": "8:00 - 4th Quarter",
+            "shortDetail": "8:00 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "15:00"
+            "clock": "8:00"
           },
           "completed": false,
           "period": 4,
-          "clock": "15:00",
+          "clock": "8:00",
           "statusText": "Q4",
           "broadcasts": []
         },
@@ -7126,16 +7126,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "5:08 - 1st Quarter",
-            "shortDetail": "5:08 - 1st",
-            "label": "Q1",
-            "period": 1,
-            "clock": "5:08"
+            "detail": "11:44 - 2nd Quarter",
+            "shortDetail": "11:44 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "11:44"
           },
           "completed": false,
-          "period": 1,
-          "clock": "5:08",
-          "statusText": "Q1",
+          "period": 2,
+          "clock": "11:44",
+          "statusText": "Q2",
           "broadcasts": []
         },
         {
@@ -7170,15 +7170,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "13:58 - 1st Quarter",
-            "shortDetail": "13:58 - 1st",
+            "detail": "7:55 - 1st Quarter",
+            "shortDetail": "7:55 - 1st",
             "label": "Q1",
             "period": 1,
-            "clock": "13:58"
+            "clock": "7:55"
           },
           "completed": false,
           "period": 1,
-          "clock": "13:58",
+          "clock": "7:55",
           "statusText": "Q1",
           "broadcasts": []
         }
