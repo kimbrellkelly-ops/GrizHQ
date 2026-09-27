@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T11:04:04.635719+00:00",
+  "updated": "2026-09-27T11:23:05.942823+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz blitzkrieg rolls through Aggies in California",
+      "url": "https://skylinesportsmt.com/griz-blitzkrieg-rolls-through-aggies-in-california/",
+      "date": "Sep. 27, 2026",
+      "published_at": "2026-09-27T10:04:39+00:00",
+      "description": "September 27, 2026 Griz blitzkrieg rolls through Aggies in California",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/09/The-Archie_Complex_Black-scaled.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/09/The-Archie_Complex_Black-scaled.jpg"
+    },
     {
       "title": "Gillman has career day as Griz dominate Aggies in ranked showdown",
       "url": "https://gogriz.com/news/2026/9/27/football-gillman-has-career-day-as-griz-dominate-aggies-in-ranked-showdown",
@@ -1495,21 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/9b/59b14a77-06f0-56a9-ac36-8edcbf69ddda/6aa23d2508eb9.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Big Sky Breakdown – Jordan Tripp on Drake win, team discipline, defensive standouts, Eli Gillman",
-      "url": "https://skylinesportsmt.com/big-sky-breakdown-jordan-tripp-on-drake-win-team-discipline-defensive-standouts-eli-gillman/",
-      "date": "Sep. 11, 2026",
-      "published_at": "2026-09-11T02:26:24+00:00",
-      "description": "September 10, 2026 Big Sky Breakdown – Jordan Tripp on Drake win, team discipline, defensive standouts, Eli Gillman",
-      "source": "Skyline Sports",
-      "badge": "ANALYSIS",
-      "short": "ANALYS",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Peyton-Wing-flexes-it-out-celebrates-after-big-hit.jpeg",
-      "is_video": true,
-      "youtube_id": "0GTivnvCsBw",
-      "video_url": "https://www.youtube.com/watch?v=0GTivnvCsBw",
-      "video_thumbnail": "https://i.ytimg.com/vi/0GTivnvCsBw/hqdefault.jpg"
     }
   ]
 }
