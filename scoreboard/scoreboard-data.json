@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-27T04:47:47.153895+00:00",
+  "generatedAt": "2026-09-27T04:56:53.654278+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -6853,16 +6853,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "End of 3rd Quarter",
-            "shortDetail": "End of 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "0:00"
+            "detail": "14:38 - 4th Quarter",
+            "shortDetail": "14:38 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "14:38"
           },
           "completed": false,
-          "period": 3,
-          "clock": "0:00",
-          "statusText": "Q3",
+          "period": 4,
+          "clock": "14:38",
+          "statusText": "Q4",
           "broadcasts": []
         },
         {
@@ -7126,15 +7126,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "14:47 - 4th Quarter",
-            "shortDetail": "14:47 - 4th",
+            "detail": "11:55 - 4th Quarter",
+            "shortDetail": "11:55 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "14:47"
+            "clock": "11:55"
           },
           "completed": false,
           "period": 4,
-          "clock": "14:47",
+          "clock": "11:55",
           "statusText": "Q4",
           "broadcasts": []
         },
