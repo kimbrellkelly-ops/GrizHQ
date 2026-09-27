@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-27T01:00:45.862719+00:00",
+  "generatedAt": "2026-09-27T01:15:59.327145+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -6501,16 +6501,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "4:47 - 3rd Quarter",
-            "shortDetail": "4:47 - 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "4:47"
+            "detail": "12:05 - 4th Quarter",
+            "shortDetail": "12:05 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "12:05"
           },
           "completed": false,
-          "period": 3,
-          "clock": "4:47",
-          "statusText": "Q3",
+          "period": 4,
+          "clock": "12:05",
+          "statusText": "Q4",
           "broadcasts": []
         },
         {
@@ -6545,16 +6545,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "0:25 - 3rd Quarter",
-            "shortDetail": "0:25 - 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "0:25"
+            "detail": "6:21 - 4th Quarter",
+            "shortDetail": "6:21 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "6:21"
           },
           "completed": false,
-          "period": 3,
-          "clock": "0:25",
-          "statusText": "Q3",
+          "period": 4,
+          "clock": "6:21",
+          "statusText": "Q4",
           "broadcasts": []
         },
         {
@@ -6572,7 +6572,7 @@
               "short": "S Dakota St",
               "abbreviation": "SDST",
               "homeAway": "home",
-              "score": "14",
+              "score": "",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png"
             },
             {
@@ -6581,24 +6581,24 @@
               "short": "E Illinois",
               "abbreviation": "EIU",
               "homeAway": "away",
-              "score": "7",
+              "score": "",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2197.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_HALFTIME",
-            "detail": "Halftime",
-            "shortDetail": "Halftime",
-            "label": "HALFTIME",
-            "period": 2,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "10:31 - 3rd Quarter",
+            "shortDetail": "10:31 - 3rd",
+            "label": "Q3",
+            "period": 3,
+            "clock": "10:31"
           },
           "completed": false,
-          "period": 2,
-          "clock": "0:00",
-          "statusText": "HALFTIME",
+          "period": 3,
+          "clock": "10:31",
+          "statusText": "Q3",
           "broadcasts": []
         },
         {
@@ -6633,16 +6633,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "End of 2nd Quarter",
-            "shortDetail": "End of 2nd",
-            "label": "Q2",
-            "period": 2,
-            "clock": "0:00"
+            "detail": "14:52 - 3rd Quarter",
+            "shortDetail": "14:52 - 3rd",
+            "label": "Q3",
+            "period": 3,
+            "clock": "14:52"
           },
           "completed": false,
-          "period": 2,
-          "clock": "0:00",
-          "statusText": "Q2",
+          "period": 3,
+          "clock": "14:52",
+          "statusText": "Q3",
           "broadcasts": []
         },
         {
@@ -6677,16 +6677,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "1:25 - 2nd Quarter",
-            "shortDetail": "1:25 - 2nd",
-            "label": "Q2",
-            "period": 2,
-            "clock": "1:25"
+            "detail": "14:53 - 3rd Quarter",
+            "shortDetail": "14:53 - 3rd",
+            "label": "Q3",
+            "period": 3,
+            "clock": "14:53"
           },
           "completed": false,
-          "period": 2,
-          "clock": "1:25",
-          "statusText": "Q2",
+          "period": 3,
+          "clock": "14:53",
+          "statusText": "Q3",
           "broadcasts": []
         },
         {
@@ -6704,7 +6704,7 @@
               "short": "Murray St",
               "abbreviation": "MUR",
               "homeAway": "home",
-              "score": "6",
+              "score": "",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/93.png"
             },
             {
@@ -6713,24 +6713,24 @@
               "short": "S Illinois",
               "abbreviation": "SIU",
               "homeAway": "away",
-              "score": "29",
+              "score": "",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_HALFTIME",
-            "detail": "Halftime",
-            "shortDetail": "Halftime",
-            "label": "HALFTIME",
-            "period": 2,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "11:11 - 3rd Quarter",
+            "shortDetail": "11:11 - 3rd",
+            "label": "Q3",
+            "period": 3,
+            "clock": "11:11"
           },
           "completed": false,
-          "period": 2,
-          "clock": "0:00",
-          "statusText": "HALFTIME",
+          "period": 3,
+          "clock": "11:11",
+          "statusText": "Q3",
           "broadcasts": []
         },
         {
@@ -6765,16 +6765,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "3:30 - 1st Quarter",
-            "shortDetail": "3:30 - 1st",
-            "label": "Q1",
-            "period": 1,
-            "clock": "3:30"
+            "detail": "11:14 - 2nd Quarter",
+            "shortDetail": "11:14 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "11:14"
           },
           "completed": false,
-          "period": 1,
-          "clock": "3:30",
-          "statusText": "Q1",
+          "period": 2,
+          "clock": "11:14",
+          "statusText": "Q2",
           "broadcasts": []
         },
         {
@@ -6809,16 +6809,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "0:53 - 1st Quarter",
-            "shortDetail": "0:53 - 1st",
-            "label": "Q1",
-            "period": 1,
-            "clock": "0:53"
+            "detail": "6:31 - 2nd Quarter",
+            "shortDetail": "6:31 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "6:31"
           },
           "completed": false,
-          "period": 1,
-          "clock": "0:53",
-          "statusText": "Q1",
+          "period": 2,
+          "clock": "6:31",
+          "statusText": "Q2",
           "broadcasts": []
         },
         {
@@ -6933,7 +6933,7 @@
               "short": "E Washington",
               "abbreviation": "EWU",
               "homeAway": "home",
-              "score": "13",
+              "score": "",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png"
             },
             {
@@ -6942,24 +6942,24 @@
               "short": "Cal Poly",
               "abbreviation": "CP",
               "homeAway": "away",
-              "score": "14",
+              "score": "",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_HALFTIME",
-            "detail": "Halftime",
-            "shortDetail": "Halftime",
-            "label": "HALFTIME",
-            "period": 2,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "6:51 - 3rd Quarter",
+            "shortDetail": "6:51 - 3rd",
+            "label": "Q3",
+            "period": 3,
+            "clock": "6:51"
           },
           "completed": false,
-          "period": 2,
-          "clock": "0:00",
-          "statusText": "HALFTIME",
+          "period": 3,
+          "clock": "6:51",
+          "statusText": "Q3",
           "broadcasts": []
         },
         {
@@ -6994,15 +6994,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "11:14 - 2nd Quarter",
-            "shortDetail": "11:14 - 2nd",
+            "detail": "6:26 - 2nd Quarter",
+            "shortDetail": "6:26 - 2nd",
             "label": "Q2",
             "period": 2,
-            "clock": "11:14"
+            "clock": "6:26"
           },
           "completed": false,
           "period": 2,
-          "clock": "11:14",
+          "clock": "6:26",
           "statusText": "Q2",
           "broadcasts": []
         },
@@ -7038,16 +7038,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "3:16 - 1st Quarter",
-            "shortDetail": "3:16 - 1st",
-            "label": "Q1",
-            "period": 1,
-            "clock": "3:16"
+            "detail": "10:13 - 2nd Quarter",
+            "shortDetail": "10:13 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "10:13"
           },
           "completed": false,
-          "period": 1,
-          "clock": "3:16",
-          "statusText": "Q1",
+          "period": 2,
+          "clock": "10:13",
+          "statusText": "Q2",
           "broadcasts": []
         },
         {
@@ -7082,16 +7082,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "3:09 - 1st Quarter",
-            "shortDetail": "3:09 - 1st",
-            "label": "Q1",
-            "period": 1,
-            "clock": "3:09"
+            "detail": "5:33 - 2nd Quarter",
+            "shortDetail": "5:33 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "5:33"
           },
           "completed": false,
-          "period": 1,
-          "clock": "3:09",
-          "statusText": "Q1",
+          "period": 2,
+          "clock": "5:33",
+          "statusText": "Q2",
           "broadcasts": []
         },
         {
