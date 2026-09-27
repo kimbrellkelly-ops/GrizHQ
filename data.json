@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T01:27:26.853140+00:00",
+  "updated": "2026-09-27T03:28:33.088781+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-1",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-27T01:28:13.485329+00:00"
+    "checked_at": "2026-09-27T03:29:08.287843+00:00"
   },
   "resources": [
     {
@@ -2940,7 +2940,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-27T01:27:35.050317+00:00",
+    "source_checked_at": "2026-09-27T03:28:39.614569+00:00",
     "team_summary": [
       {
         "value": "3–1",
@@ -27685,14 +27685,14 @@
     {
       "rank": 5,
       "team": "Cal Poly",
-      "conference_record": "1-0",
-      "overall_record": "2-2",
+      "conference_record": "2-0",
+      "overall_record": "3-2",
       "home": "2-1",
-      "away": "0-1",
-      "conference_points": "38-34",
-      "points": "117-119",
-      "conference_streak": "W1",
-      "overall_streak": "L2",
+      "away": "1-1",
+      "conference_points": "69-61",
+      "points": "148-146",
+      "conference_streak": "W2",
+      "overall_streak": "W1",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2535"
     },
     {
@@ -27723,19 +27723,6 @@
     },
     {
       "rank": 8,
-      "team": "Eastern Washington",
-      "conference_record": "0-1",
-      "overall_record": "1-3",
-      "home": "1-0",
-      "away": "0-3",
-      "conference_points": "27-34",
-      "points": "100-147",
-      "conference_streak": "L1",
-      "overall_streak": "L2",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2534"
-    },
-    {
-      "rank": 9,
       "team": "Northern Colorado",
       "conference_record": "0-1",
       "overall_record": "1-3",
@@ -27748,7 +27735,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2541"
     },
     {
-      "rank": 10,
+      "rank": 9,
       "team": "Southern Utah",
       "conference_record": "0-1",
       "overall_record": "1-3",
@@ -27759,6 +27746,19 @@
       "conference_streak": "L1",
       "overall_streak": "L2",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2543"
+    },
+    {
+      "rank": 10,
+      "team": "Eastern Washington",
+      "conference_record": "0-2",
+      "overall_record": "1-4",
+      "home": "1-1",
+      "away": "0-3",
+      "conference_points": "54-65",
+      "points": "127-178",
+      "conference_streak": "L2",
+      "overall_streak": "L3",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2534"
     },
     {
       "rank": 11,
@@ -27810,18 +27810,18 @@
         "rate": "136.3"
       },
       {
+        "name": "Green,Jaden",
+        "school": "Cal Poly",
+        "value": "612",
+        "secondary": "3",
+        "rate": "122.4"
+      },
+      {
         "name": "Gillman,Eli",
         "school": "Montana",
         "value": "409",
         "secondary": "7",
         "rate": "102.3"
-      },
-      {
-        "name": "Green,Jaden",
-        "school": "Cal Poly",
-        "value": "343",
-        "secondary": "1",
-        "rate": "85.8"
       },
       {
         "name": "Ferguson,Spencer",
@@ -27868,11 +27868,11 @@
         "rate": "248.8"
       },
       {
-        "name": "Grigsby Jr.,Anthony",
-        "school": "Cal Poly",
-        "value": "983",
-        "secondary": "11",
-        "rate": "245.8"
+        "name": "Bell,Nate",
+        "school": "Eastern Washington",
+        "value": "1184",
+        "secondary": "8",
+        "rate": "236.8"
       }
     ],
     "receiving": [
@@ -27953,7 +27953,7 @@
       {
         "name": "D'Amato,Mikey",
         "school": "Cal Poly",
-        "value": "6",
+        "value": "8",
         "secondary": "0.5",
         "rate": "12.0"
       },
@@ -27965,11 +27965,11 @@
         "rate": "11.0"
       },
       {
-        "name": "Smith,Bryce",
-        "school": "Eastern Washington",
-        "value": "0",
-        "secondary": "0",
-        "rate": "10.5"
+        "name": "Olson,Kenny",
+        "school": "Cal Poly",
+        "value": "5",
+        "secondary": "1",
+        "rate": "10.4"
       },
       {
         "name": "Daniels,Jackson",
@@ -27979,27 +27979,27 @@
         "rate": "10.3"
       },
       {
-        "name": "Miller,RL",
-        "school": "Cal Poly",
-        "value": "2",
+        "name": "Smith,Bryce",
+        "school": "Eastern Washington",
+        "value": "0",
         "secondary": "0",
         "rate": "9.8"
       }
     ],
     "sacks": [
       {
-        "name": "Larsen,Gauge",
-        "school": "Eastern Washington",
-        "value": "22",
-        "secondary": "",
-        "rate": "1.00"
-      },
-      {
         "name": "Fesili,Trehsyn",
         "school": "Idaho State",
         "value": "13",
         "secondary": "",
         "rate": ".83"
+      },
+      {
+        "name": "Larsen,Gauge",
+        "school": "Eastern Washington",
+        "value": "22",
+        "secondary": "",
+        "rate": ".67"
       },
       {
         "name": "Brock,Seth",
@@ -28157,6 +28157,6 @@
       "news": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-09-27T01:27:35.050406+00:00"
+    "updated": "2026-09-27T03:28:39.614642+00:00"
   }
 }
