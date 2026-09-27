@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-27T03:31:05.488491+00:00",
+  "generatedAt": "2026-09-27T03:45:09.462208+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -6809,15 +6809,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "8:58 - 3rd Quarter",
-            "shortDetail": "8:58 - 3rd",
+            "detail": "End of 3rd Quarter",
+            "shortDetail": "End of 3rd",
             "label": "Q3",
             "period": 3,
-            "clock": "8:58"
+            "clock": "0:00"
           },
           "completed": false,
           "period": 3,
-          "clock": "8:58",
+          "clock": "0:00",
           "statusText": "Q3",
           "broadcasts": []
         },
@@ -6836,7 +6836,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "home",
-              "score": "",
+              "score": "8",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             },
             {
@@ -6845,24 +6845,24 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "away",
-              "score": "",
+              "score": "31",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "2:45 - 2nd Quarter",
-            "shortDetail": "2:45 - 2nd",
-            "label": "Q2",
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
             "period": 2,
-            "clock": "2:45"
+            "clock": "0:00"
           },
           "completed": false,
           "period": 2,
-          "clock": "2:45",
-          "statusText": "Q2",
+          "clock": "0:00",
+          "statusText": "HALFTIME",
           "broadcasts": []
         },
         {
@@ -6897,15 +6897,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "10:43 - 2nd Quarter",
-            "shortDetail": "10:43 - 2nd",
+            "detail": "4:08 - 2nd Quarter",
+            "shortDetail": "4:08 - 2nd",
             "label": "Q2",
             "period": 2,
-            "clock": "10:43"
+            "clock": "4:08"
           },
           "completed": false,
           "period": 2,
-          "clock": "10:43",
+          "clock": "4:08",
           "statusText": "Q2",
           "broadcasts": []
         }
@@ -7109,7 +7109,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "home",
-              "score": "",
+              "score": "8",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             },
             {
@@ -7118,24 +7118,24 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "away",
-              "score": "",
+              "score": "31",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "0:57 - 2nd Quarter",
-            "shortDetail": "0:57 - 2nd",
-            "label": "Q2",
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
             "period": 2,
-            "clock": "0:57"
+            "clock": "0:00"
           },
           "completed": false,
           "period": 2,
-          "clock": "0:57",
-          "statusText": "Q2",
+          "clock": "0:00",
+          "statusText": "HALFTIME",
           "broadcasts": []
         },
         {
@@ -7170,15 +7170,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "10:43 - 2nd Quarter",
-            "shortDetail": "10:43 - 2nd",
+            "detail": "4:08 - 2nd Quarter",
+            "shortDetail": "4:08 - 2nd",
             "label": "Q2",
             "period": 2,
-            "clock": "10:43"
+            "clock": "4:08"
           },
           "completed": false,
           "period": 2,
-          "clock": "10:43",
+          "clock": "4:08",
           "statusText": "Q2",
           "broadcasts": []
         }
