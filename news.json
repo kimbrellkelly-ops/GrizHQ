@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T13:04:12.095517+00:00",
+  "updated": "2026-09-27T13:22:49.999058+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,21 +11,6 @@
     "Skyline Sports"
   ],
   "stories": [
-    {
-      "title": "3 takeaways: No. 5 Grizzlies make statement at No. 10 UC Davis",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-5-grizzlies-make-statement-at-no-10-uc-davis/article_549611cc-19fc-44bf-9bec-b4c0eac4f4ac.html",
-      "date": "Sep. 27, 2026",
-      "published_at": "2026-09-27T12:00:00+00:00",
-      "description": "3 takeaways: No. 5 Grizzlies make statement at No. 10 UC Davis",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/49/549611cc-19fc-44bf-9bec-b4c0eac4f4ac/6ab8ef5ce777e.preview.jpg?crop=678%2C356%2C0%2C12",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/49/549611cc-19fc-44bf-9bec-b4c0eac4f4ac/6ab8ef5ce777e.preview.jpg?crop=678%2C356%2C0%2C12"
-    },
     {
       "title": "3 takeaways: No. 5 Grizzlies make statement at No. 10 UC Davis",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_a50bcf9d-8cb6-5f40-b0e5-7c35a1a6c966.html",
@@ -40,6 +25,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/a/50/a50bcf9d-8cb6-5f40-b0e5-7c35a1a6c966/6ab8f05e046c7.preview.jpg?crop=678%2C356%2C0%2C12"
+    },
+    {
+      "title": "3 takeaways: No. 5 Grizzlies make statement at No. 10 UC Davis",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-5-grizzlies-make-statement-at-no-10-uc-davis/article_549611cc-19fc-44bf-9bec-b4c0eac4f4ac.html",
+      "date": "Sep. 27, 2026",
+      "published_at": "2026-09-27T12:00:00+00:00",
+      "description": "3 takeaways: No. 5 Grizzlies make statement at No. 10 UC Davis",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/49/549611cc-19fc-44bf-9bec-b4c0eac4f4ac/6ab8ef5ce777e.preview.jpg?crop=678%2C356%2C0%2C12",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/49/549611cc-19fc-44bf-9bec-b4c0eac4f4ac/6ab8ef5ce777e.preview.jpg?crop=678%2C356%2C0%2C12"
     },
     {
       "title": "Griz blitzkrieg rolls through Aggies in California",
