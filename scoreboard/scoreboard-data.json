@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-27T05:21:24.775646+00:00",
+  "generatedAt": "2026-09-27T05:33:23.195833+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -6828,7 +6828,7 @@
           "shortName": "MONT @ UCD",
           "venue": "UC Davis Health Stadium",
           "city": "Davis",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "302",
@@ -6836,7 +6836,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "home",
-              "score": "",
+              "score": "22",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             },
             {
@@ -6845,24 +6845,24 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "away",
-              "score": "",
+              "score": "62",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "2:45 - 4th Quarter",
-            "shortDetail": "2:45 - 4th",
-            "label": "Q4",
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
             "period": 4,
-            "clock": "2:45"
+            "clock": "0:00"
           },
-          "completed": false,
+          "completed": true,
           "period": 4,
-          "clock": "2:45",
-          "statusText": "Q4",
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": []
         },
         {
@@ -7101,7 +7101,7 @@
           "shortName": "MONT @ UCD",
           "venue": "UC Davis Health Stadium",
           "city": "Davis",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "302",
@@ -7109,7 +7109,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "home",
-              "score": "",
+              "score": "22",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             },
             {
@@ -7118,24 +7118,24 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "away",
-              "score": "",
+              "score": "62",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "2:45 - 4th Quarter",
-            "shortDetail": "2:45 - 4th",
-            "label": "Q4",
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
             "period": 4,
-            "clock": "2:45"
+            "clock": "0:00"
           },
-          "completed": false,
+          "completed": true,
           "period": 4,
-          "clock": "2:45",
-          "statusText": "Q4",
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": []
         },
         {
@@ -7170,15 +7170,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "8:48 - 4th Quarter",
-            "shortDetail": "8:48 - 4th",
+            "detail": "4:27 - 4th Quarter",
+            "shortDetail": "4:27 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "8:48"
+            "clock": "4:27"
           },
           "completed": false,
           "period": 4,
-          "clock": "8:48",
+          "clock": "4:27",
           "statusText": "Q4",
           "broadcasts": []
         }
