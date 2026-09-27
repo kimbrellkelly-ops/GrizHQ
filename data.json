@@ -1,16 +1,16 @@
 {
-  "updated": "2026-09-27T06:33:14.429675+00:00",
+  "updated": "2026-09-27T07:27:29.806817+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
-    "record": "3-1",
-    "conference_record": "1-0",
-    "streak": "L4"
+    "record": "4-1",
+    "conference_record": "2-0",
+    "streak": "W5"
   },
   "next_game": {
-    "opponent": "#9/10 UC Davis",
-    "date": "Sep 26 (Sat)",
-    "time": "8 PM (MT)",
-    "venue": "Away",
+    "opponent": "Northern Colorado",
+    "date": "Oct 3 (Sat)",
+    "time": "2 PM",
+    "venue": "Washington-Grizzly Stadium, Missoula, Mont.",
     "url": "https://gogriz.com/sports/football/schedule"
   },
   "schedule": [
@@ -50,7 +50,7 @@
       "date": "Sep 26 (Sat)",
       "opponent": "#9/10 UC Davis",
       "location": "Away",
-      "result": "",
+      "result": "W 62-22",
       "time": "8 PM (MT)",
       "conference": true
     },
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Gillman has career day as Griz dominate Aggies in ranked showdown",
+      "url": "https://gogriz.com/news/2026/9/27/football-gillman-has-career-day-as-griz-dominate-aggies-in-ranked-showdown",
+      "date": "Sun, 27 Sep 2026 00:44:00 MST",
+      "description": "DAVIS, Calif. – A game for the ages, and another week of history for Eli Gillman."
+    },
+    {
       "title": "Griz football to host player reunion weekend as part of stadium’s 40th anniversary celebration",
       "url": "https://gogriz.com/news/2026/9/24/football-griz-football-to-host-player-reunion-weekend-as-part-of-stadiums-40th-anniversary-celebration",
       "date": "Thu, 24 Sep 2026 13:50:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/9/8/football-montana-hosts-utah-tech-in-saturday-showdown",
       "date": "Tue, 8 Sep 2026 18:34:00 MST",
       "description": "The Montana Grizzlies return to action this week inside the friendly confines of Washington-Grizzly Stadium on Saturday for their second of three nonconference matchups in 2026, ho"
-    },
-    {
-      "title": "Gillman sets records as Griz roll past Bulldogs, 45-10",
-      "url": "https://gogriz.com/news/2026/9/5/football-gillman-sets-records-as-griz-roll-past-bulldogs-45-10",
-      "date": "Sat, 5 Sep 2026 19:45:00 MST",
-      "description": "MISSOULA – It was a record setting day in Missoula as running back Eli Gillman became and all-time Grizzly great, leading Montana to a dominant 45-10 nonconference victory over the"
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-27T06:33:55.429964+00:00"
+    "checked_at": "2026-09-27T07:27:59.102328+00:00"
   },
   "resources": [
     {
@@ -2927,23 +2927,24 @@
     }
   ],
   "stats": {
-    "through": "Official cumulative source: https://gogriz.com/sports/football/stats/2026; pending box-score verification for 4 completed game(s)",
+    "through": "Official cumulative source: https://gogriz.com/sports/football/stats/2026; pending box-score verification for 5 completed game(s)",
     "coverage": {
-      "completed_games": 4,
+      "completed_games": 5,
       "verified_boxscores": 0,
       "source_of_truth": "https://gogriz.com/sports/football/stats/2026",
       "pending": [
         "Southern Utah",
         "Drake",
         "Utah Tech",
-        "Oregon State"
+        "Oregon State",
+        "#9/10 UC Davis"
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-27T06:33:23.557726+00:00",
+    "source_checked_at": "2026-09-27T07:27:35.884749+00:00",
     "team_summary": [
       {
-        "value": "3–1",
+        "value": "4–1",
         "label": "RECORD",
         "note": "Official GoGriz 2026 schedule"
       },
@@ -3183,6 +3184,12 @@
         "week": "Wk 4",
         "opponent": "Oregon State",
         "result": "L 17-52",
+        "notes": "Official GoGriz schedule result"
+      },
+      {
+        "week": "Wk 5",
+        "opponent": "#9/10 UC Davis",
+        "result": "W 62-22",
         "notes": "Official GoGriz schedule result"
       }
     ],
@@ -28070,93 +28077,177 @@
   ],
   "big_sky_players_of_week_updated": "2026-09-20T19:00:00Z",
   "next_opponent": {
-    "opponent": "#9/10 UC Davis",
-    "record": "",
-    "conferenceRecord": "",
-    "location": "",
+    "opponent": "Northern Colorado",
+    "record": "1–3",
+    "conferenceRecord": "1–1",
+    "location": "Northern Colorado",
     "capacity": "",
     "coach": "",
-    "coachLine": "",
-    "stats": {},
-    "recent": [],
-    "players": [],
-    "intel": "#9/10 UC Davis is Montana's next scheduled opponent.",
-    "facts": [
+    "coachLine": "Current ESPN team listing",
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png",
+    "stats": {
+      "points": "25",
+      "offense": "",
+      "passing": "",
+      "rushing": "",
+      "allowed": "23.8",
+      "defense": "",
+      "third": "—",
+      "turnovers": "—"
+    },
+    "recent": [
       [
-        "UPCOMING",
-        "Next opponent"
+        "Northern Colorado",
+        "W",
+        "37–13",
+        "Utah Tech"
       ],
       [
-        "OFFICIAL",
-        "Team information"
-      ],
-      [
-        "SCHEDULE",
-        "2026 schedule"
-      ],
-      [
-        "NEWS",
-        "Latest coverage"
+        "Northern Colorado",
+        "L",
+        "13–21",
+        "at Wyoming"
       ]
     ],
-    "historyTitle": "MONTANA VS. #9/10 UC DAVIS",
-    "historyText": "Official matchup history is available through the Griz game center.",
+    "players": [
+      [
+        "NO",
+        "Lueth  Kenny",
+        "Northern Colorado Passing leader"
+      ]
+    ],
+    "intel": "Northern Colorado is 1–3 through 4 completed games and 1–1 in Big Sky play.",
+    "facts": [
+      [
+        "1–3",
+        "Current record"
+      ],
+      [
+        "1–1",
+        "Big Sky record"
+      ],
+      [
+        "—",
+        "Total offense / game"
+      ],
+      [
+        "Northern Colorado",
+        "Program"
+      ]
+    ],
+    "historyTitle": "MONTANA VS. NORTHERN COLORADO",
+    "historyText": "Official matchup history is available through the Griz game center for the current meeting.",
     "historyRecord": "",
     "historyRecordLabel": "Series history",
     "historyLast": "",
     "historyLastScore": "",
-    "historyGames": [],
+    "historyGames": [
+      [
+        "2026",
+        "NEXT CHAPTER",
+        "Flagstaff, Ariz."
+      ]
+    ],
+    "historyUrl": "https://gogriz.com/game-center/5261",
     "watch": [
       [
-        "What should Montana watch against #9/10 UC Davis?",
-        "Use the latest official opponent schedule, stats and game film."
+        "Can Montana handle Northern Colorado's offense?",
+        "Northern Colorado is averaging — total yards per game."
+      ],
+      [
+        "Where is Northern Colorado most productive?",
+        "Current passing and rushing production: — pass / — rush yards per game."
+      ],
+      [
+        "Can Montana win the situational battle?",
+        "Current third-down figure: —; turnover margin: —."
       ]
     ],
     "checklist": [
       [
-        "Quarterback tendencies",
-        "Review #9/10 UC Davis's recent quarterback and offensive production."
+        "Quarterback play",
+        "Review Northern Colorado's current passing production and recent game film."
       ],
       [
-        "Explosive plays",
-        "Track #9/10 UC Davis's recent explosive runs and passes."
+        "Explosive offense",
+        "Track Northern Colorado's longest plays and scoring drives in the latest games."
       ],
       [
-        "Third down",
-        "Check #9/10 UC Davis's current third-down profile."
+        "Run defense",
+        "Account for Northern Colorado's current rushing production."
       ],
       [
-        "Special teams",
-        "Review the opponent's latest special-teams results."
+        "Takeaways",
+        "Track the current turnover margin: —."
       ]
     ],
     "moreNumbers": [
       [
-        "STATUS",
-        "UPDATING",
-        "Opponent data not yet available from ESPN"
+        "PASSING",
+        "—",
+        "Northern Colorado passing yards per game"
       ],
       [
-        "SCHEDULE",
-        "CURRENT",
-        "Official 2026 schedule"
+        "TOTAL OFFENSE",
+        "—",
+        "Northern Colorado total yards per game"
       ],
       [
-        "NEWS",
-        "LIVE",
-        "Latest opponent coverage"
+        "RUSHING",
+        "—",
+        "Northern Colorado rushing yards per game"
+      ],
+      [
+        "POINTS",
+        "25",
+        "Northern Colorado points per game"
+      ],
+      [
+        "POINTS ALLOWED",
+        "23.8",
+        "Northern Colorado opponent points per game"
+      ],
+      [
+        "3RD DOWN",
+        "—",
+        "Northern Colorado third-down conversion rate"
       ]
     ],
-    "media": [],
+    "media": [
+      [
+        "HIGHLIGHTS",
+        "Northern Colorado 2026 Highlights",
+        "Recent game clips and team highlights",
+        "https://www.youtube.com/results?search_query=Northern%20Colorado%20football%202026%20highlights"
+      ],
+      [
+        "COACH TALK",
+        "Northern Colorado Press Conferences",
+        "Hear the opponent's coaches directly",
+        "https://www.youtube.com/results?search_query=Northern%20Colorado%20football%202026%20press%20conference"
+      ],
+      [
+        "RECENT GAME",
+        "Northern Colorado W vs. Utah Tech",
+        "Full-game, recap and highlight video",
+        "https://www.youtube.com/results?search_query=Northern%20Colorado%20Utah%20Tech%202026%20football"
+      ],
+      [
+        "RECENT GAME",
+        "Northern Colorado L vs. at Wyoming",
+        "Full-game, recap and highlight video",
+        "https://www.youtube.com/results?search_query=Northern%20Colorado%20at%20Wyoming%202026%20football"
+      ]
+    ],
     "resources": {
-      "official": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football",
-      "roster": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/roster",
-      "stats": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/stats/2026",
-      "schedule": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/schedule/2026",
-      "coaches": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/coaches",
-      "news": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/news"
+      "official": "https://uncbears.com/sports/football",
+      "roster": "https://uncbears.com/sports/football/roster",
+      "stats": "https://uncbears.com/sports/football/stats/2026",
+      "schedule": "https://uncbears.com/sports/football/schedule/2026",
+      "coaches": "https://uncbears.com/sports/football/coaches",
+      "news": "https://uncbears.com/sports/football/news"
     },
-    "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-09-27T06:33:23.557787+00:00"
+    "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
+    "updated": "2026-09-27T07:27:40.016455+00:00"
   }
 }
