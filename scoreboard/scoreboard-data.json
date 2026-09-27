@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-27T04:06:42.660024+00:00",
+  "generatedAt": "2026-09-27T04:22:10.322474+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -6809,16 +6809,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "9:16 - 3rd Quarter",
-            "shortDetail": "9:16 - 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "9:16"
+            "detail": "1:33 - 4th Quarter",
+            "shortDetail": "1:33 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "1:33"
           },
           "completed": false,
-          "period": 3,
-          "clock": "9:16",
-          "statusText": "Q3",
+          "period": 4,
+          "clock": "1:33",
+          "statusText": "Q4",
           "broadcasts": []
         },
         {
@@ -6853,15 +6853,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "13:06 - 3rd Quarter",
-            "shortDetail": "13:06 - 3rd",
+            "detail": "8:49 - 3rd Quarter",
+            "shortDetail": "8:49 - 3rd",
             "label": "Q3",
             "period": 3,
-            "clock": "13:06"
+            "clock": "8:49"
           },
           "completed": false,
           "period": 3,
-          "clock": "13:06",
+          "clock": "8:49",
           "statusText": "Q3",
           "broadcasts": []
         },
@@ -7057,7 +7057,7 @@
           "shortName": "PRST @ WEB",
           "venue": "Stewart Stadium",
           "city": "Ogden",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2692",
@@ -7065,7 +7065,7 @@
               "short": "Weber St",
               "abbreviation": "WEB",
               "homeAway": "home",
-              "score": "",
+              "score": "41",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
             },
             {
@@ -7074,24 +7074,24 @@
               "short": "Portland St",
               "abbreviation": "PRST",
               "homeAway": "away",
-              "score": "",
+              "score": "44",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2502.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "0:16 - 4th Quarter",
-            "shortDetail": "0:16 - 4th",
-            "label": "Q4",
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
             "period": 4,
-            "clock": "0:16"
+            "clock": "0:00"
           },
-          "completed": false,
+          "completed": true,
           "period": 4,
-          "clock": "0:16",
-          "statusText": "Q4",
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": []
         },
         {
@@ -7126,15 +7126,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "13:06 - 3rd Quarter",
-            "shortDetail": "13:06 - 3rd",
+            "detail": "6:43 - 3rd Quarter",
+            "shortDetail": "6:43 - 3rd",
             "label": "Q3",
             "period": 3,
-            "clock": "13:06"
+            "clock": "6:43"
           },
           "completed": false,
           "period": 3,
-          "clock": "13:06",
+          "clock": "6:43",
           "statusText": "Q3",
           "broadcasts": []
         },
