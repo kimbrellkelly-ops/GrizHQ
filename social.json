@@ -1,6 +1,19 @@
 {
-  "updated": "2026-09-27T02:38:43.744932+00:00",
+  "updated": "2026-09-27T02:52:22.751542+00:00",
   "posts": [
+    {
+      "title": "Montana State's secret sauce? Sweet cornerbacks",
+      "url": "https://www.youtube.com/watch?v=WR6RudhrfD0",
+      "image": "https://i.ytimg.com/vi/WR6RudhrfD0/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Sep. 27, 2026",
+      "platform": "youtube",
+      "youtube_id": "WR6RudhrfD0",
+      "published_at": "2026-09-27T00:00:00+00:00"
+    },
     {
       "title": "Big Sky Breakdown with analyst Jordan Tripp previewing No. 5 Montana at No. 10 UC Davis",
       "url": "https://www.youtube.com/watch?v=DTYzx9xFP0c",
