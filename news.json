@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T06:55:50.369418+00:00",
+  "updated": "2026-09-27T07:04:34.891981+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Gillman has career day as Griz dominate Aggies in ranked showdown",
+      "url": "https://gogriz.com/news/2026/9/27/football-gillman-has-career-day-as-griz-dominate-aggies-in-ranked-showdown",
+      "date": "Sep. 27, 2026",
+      "published_at": "2026-09-27T07:44:00+00:00",
+      "description": "DAVIS, Calif. – A game for the ages, and another week of history for Eli Gillman.",
+      "source": "GoGriz",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/26/20260926_fbvsucdavis_043.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/26/20260926_fbvsucdavis_043.jpg"
+    },
     {
       "title": "Recap: No. 5 Montana Grizzlies rout No. 10 UC Davis Aggies on road",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_8f3d0c30-80d1-570f-9f16-5564d3603193.html",
@@ -1495,21 +1510,6 @@
       "youtube_id": "0GTivnvCsBw",
       "video_url": "https://www.youtube.com/watch?v=0GTivnvCsBw",
       "video_thumbnail": "https://i.ytimg.com/vi/0GTivnvCsBw/hqdefault.jpg"
-    },
-    {
-      "title": "Facebook-famous grizzly bears euthanized in Lincoln after 10 days of conflicts over food",
-      "url": "https://missoulian.com/news/state-regional/article_ed1282eb-973a-5323-92f3-903020754aef.html",
-      "date": "Sep. 10, 2026",
-      "published_at": "2026-09-10T19:50:00+00:00",
-      "description": "A pair of young adult grizzly bears that have been a ongoing topic of conversation on a community Facebook page have been euthanized, Montana Fish, Wildlife & Parks announced Thursday.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/9/5/20260905_fb_v_Drake_4405_rb_AFMpW.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/gogriz.com/images/2026/9/5/20260905_fb_v_Drake_4405_rb_AFMpW.jpg"
     }
   ]
 }
