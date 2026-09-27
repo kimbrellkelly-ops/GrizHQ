@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T03:28:33.088781+00:00",
+  "updated": "2026-09-27T04:28:21.720433+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "3-1",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-27T03:29:08.287843+00:00"
+    "checked_at": "2026-09-27T04:28:46.999159+00:00"
   },
   "resources": [
     {
@@ -2940,7 +2940,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-27T03:28:39.614569+00:00",
+    "source_checked_at": "2026-09-27T04:28:27.912955+00:00",
     "team_summary": [
       {
         "value": "3–1",
@@ -27645,6 +27645,19 @@
     },
     {
       "rank": 2,
+      "team": "Idaho State",
+      "conference_record": "1-0",
+      "overall_record": "4-0",
+      "home": "2-0",
+      "away": "2-0",
+      "conference_points": "28-24",
+      "points": "154-68",
+      "conference_streak": "W1",
+      "overall_streak": "W4",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2537"
+    },
+    {
+      "rank": 3,
       "team": "Montana",
       "conference_record": "1-0",
       "overall_record": "3-1",
@@ -27657,7 +27670,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2538"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "team": "Northern Arizona",
       "conference_record": "1-0",
       "overall_record": "3-1",
@@ -27670,7 +27683,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2540"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "team": "UC Davis",
       "conference_record": "1-0",
       "overall_record": "3-1",
@@ -27683,7 +27696,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2544"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "team": "Cal Poly",
       "conference_record": "2-0",
       "overall_record": "3-2",
@@ -27696,59 +27709,59 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2535"
     },
     {
-      "rank": 6,
-      "team": "Weber State",
-      "conference_record": "1-0",
-      "overall_record": "2-2",
-      "home": "1-0",
-      "away": "1-2",
-      "conference_points": "30-29",
-      "points": "142-148",
-      "conference_streak": "W1",
-      "overall_streak": "W1",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2546"
-    },
-    {
       "rank": 7,
-      "team": "Idaho State",
-      "conference_record": "0-0",
-      "overall_record": "3-0",
-      "home": "2-0",
-      "away": "1-0",
-      "conference_points": "0-0",
-      "points": "126-44",
-      "conference_streak": "",
-      "overall_streak": "W3",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2537"
-    },
-    {
-      "rank": 8,
       "team": "Northern Colorado",
-      "conference_record": "0-1",
-      "overall_record": "1-3",
-      "home": "1-2",
+      "conference_record": "1-1",
+      "overall_record": "2-3",
+      "home": "2-2",
       "away": "0-1",
-      "conference_points": "29-30",
-      "points": "88-106",
-      "conference_streak": "L1",
-      "overall_streak": "W1",
+      "conference_points": "66-43",
+      "points": "125-119",
+      "conference_streak": "W1",
+      "overall_streak": "W2",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2541"
     },
     {
-      "rank": 9,
-      "team": "Southern Utah",
-      "conference_record": "0-1",
-      "overall_record": "1-3",
-      "home": "1-0",
-      "away": "0-3",
-      "conference_points": "21-28",
-      "points": "118-156",
+      "rank": 8,
+      "team": "Weber State",
+      "conference_record": "1-1",
+      "overall_record": "2-3",
+      "home": "1-1",
+      "away": "1-2",
+      "conference_points": "71-73",
+      "points": "183-192",
       "conference_streak": "L1",
-      "overall_streak": "L2",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2543"
+      "overall_streak": "L1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2546"
+    },
+    {
+      "rank": 9,
+      "team": "Portland State",
+      "conference_record": "1-1",
+      "overall_record": "1-4",
+      "home": "0-2",
+      "away": "1-2",
+      "conference_points": "68-72",
+      "points": "111-256",
+      "conference_streak": "W1",
+      "overall_streak": "W1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2542"
     },
     {
       "rank": 10,
+      "team": "Southern Utah",
+      "conference_record": "0-2",
+      "overall_record": "1-4",
+      "home": "1-1",
+      "away": "0-3",
+      "conference_points": "45-56",
+      "points": "142-184",
+      "conference_streak": "L2",
+      "overall_streak": "L3",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2543"
+    },
+    {
+      "rank": 11,
       "team": "Eastern Washington",
       "conference_record": "0-2",
       "overall_record": "1-4",
@@ -27761,7 +27774,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2534"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "team": "Idaho",
       "conference_record": "0-1",
       "overall_record": "0-4",
@@ -27774,29 +27787,16 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2536"
     },
     {
-      "rank": 12,
-      "team": "Portland State",
-      "conference_record": "0-1",
-      "overall_record": "0-4",
-      "home": "0-2",
-      "away": "0-2",
-      "conference_points": "24-31",
-      "points": "67-215",
-      "conference_streak": "L1",
-      "overall_streak": "L4",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2542"
-    },
-    {
       "rank": 13,
       "team": "Utah Tech",
-      "conference_record": "0-1",
-      "overall_record": "0-4",
+      "conference_record": "0-2",
+      "overall_record": "0-5",
       "home": "0-2",
-      "away": "0-2",
-      "conference_points": "0-54",
-      "points": "44-187",
-      "conference_streak": "L1",
-      "overall_streak": "L4",
+      "away": "0-3",
+      "conference_points": "13-91",
+      "points": "57-224",
+      "conference_streak": "L2",
+      "overall_streak": "L5",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2561"
     }
   ],
@@ -27805,9 +27805,9 @@
       {
         "name": "Chalk,Floyd",
         "school": "Southern Utah",
-        "value": "545",
-        "secondary": "6",
-        "rate": "136.3"
+        "value": "704",
+        "secondary": "7",
+        "rate": "140.8"
       },
       {
         "name": "Green,Jaden",
@@ -27831,20 +27831,20 @@
         "rate": "82.7"
       },
       {
-        "name": "Jones,Adam",
-        "school": "Montana State",
-        "value": "320",
-        "secondary": "5",
-        "rate": "80.0"
+        "name": "Thompson,Delon",
+        "school": "Portland State",
+        "value": "411",
+        "secondary": "3",
+        "rate": "82.2"
       }
     ],
     "passing": [
       {
         "name": "Cooke,Jordan",
         "school": "Idaho State",
-        "value": "808",
-        "secondary": "8",
-        "rate": "269.3"
+        "value": "1011",
+        "secondary": "10",
+        "rate": "252.8"
       },
       {
         "name": "Ah Yat,Keali'i",
@@ -27893,9 +27893,9 @@
       {
         "name": "Kjar,Noah",
         "school": "Weber State",
-        "value": "405",
-        "secondary": "6",
-        "rate": "101.3"
+        "value": "542",
+        "secondary": "8",
+        "rate": "108.4"
       },
       {
         "name": "Harste,Tony",
@@ -27905,11 +27905,11 @@
         "rate": "96.0"
       },
       {
-        "name": "Anahu-Ambrosio,Zedekiah",
-        "school": "Idaho State",
-        "value": "281",
-        "secondary": "3",
-        "rate": "93.7"
+        "name": "McCoy,Tayvion",
+        "school": "Cal Poly",
+        "value": "423",
+        "secondary": "4",
+        "rate": "84.6"
       }
     ],
     "scoring": [
@@ -27923,16 +27923,16 @@
       {
         "name": "Lindberg,Mason",
         "school": "Idaho State",
-        "value": "36",
+        "value": "40",
         "secondary": "0",
-        "rate": "12.0"
+        "rate": "10.0"
       },
       {
         "name": "Kjar,Noah",
         "school": "Weber State",
-        "value": "36",
-        "secondary": "6",
-        "rate": "9.0"
+        "value": "48",
+        "secondary": "8",
+        "rate": "9.6"
       },
       {
         "name": "Wood,Joshua",
@@ -27942,11 +27942,11 @@
         "rate": "9.0"
       },
       {
-        "name": "Chalk,Floyd",
-        "school": "Southern Utah",
-        "value": "36",
-        "secondary": "6",
-        "rate": "9.0"
+        "name": "Sansted,Myles",
+        "school": "Montana State",
+        "value": "34",
+        "secondary": "0",
+        "rate": "8.5"
       }
     ],
     "tackles": [
@@ -27958,13 +27958,6 @@
         "rate": "12.0"
       },
       {
-        "name": "Reynolds,Nathan",
-        "school": "Idaho State",
-        "value": "8",
-        "secondary": "0",
-        "rate": "11.0"
-      },
-      {
         "name": "Olson,Kenny",
         "school": "Cal Poly",
         "value": "5",
@@ -27972,32 +27965,39 @@
         "rate": "10.4"
       },
       {
-        "name": "Daniels,Jackson",
-        "school": "Idaho State",
-        "value": "0",
-        "secondary": "0",
-        "rate": "10.3"
-      },
-      {
         "name": "Smith,Bryce",
         "school": "Eastern Washington",
         "value": "0",
         "secondary": "0",
         "rate": "9.8"
+      },
+      {
+        "name": "Reynolds,Nathan",
+        "school": "Idaho State",
+        "value": "8",
+        "secondary": "0",
+        "rate": "9.5"
+      },
+      {
+        "name": "Miller,RL",
+        "school": "Cal Poly",
+        "value": "2",
+        "secondary": "0",
+        "rate": "9.0"
       }
     ],
     "sacks": [
       {
-        "name": "Fesili,Trehsyn",
-        "school": "Idaho State",
-        "value": "13",
-        "secondary": "",
-        "rate": ".83"
-      },
-      {
         "name": "Larsen,Gauge",
         "school": "Eastern Washington",
         "value": "22",
+        "secondary": "",
+        "rate": ".67"
+      },
+      {
+        "name": "Abbott,Nathan",
+        "school": "Idaho State",
+        "value": "10",
         "secondary": "",
         "rate": ".67"
       },
@@ -28009,18 +28009,18 @@
         "rate": ".67"
       },
       {
-        "name": "Amey,Myles",
-        "school": "Southern Utah",
-        "value": "16",
+        "name": "Fesili,Trehsyn",
+        "school": "Idaho State",
+        "value": "13",
         "secondary": "",
         "rate": ".63"
       },
       {
-        "name": "Vaenuku,Mapa",
-        "school": "Weber State",
-        "value": "13",
+        "name": "Amey,Myles",
+        "school": "Southern Utah",
+        "value": "23",
         "secondary": "",
-        "rate": ".50"
+        "rate": ".60"
       }
     ]
   },
@@ -28157,6 +28157,6 @@
       "news": "https://www.google.com/search?q=%239/10%20UC%20Davis%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-09-27T03:28:39.614642+00:00"
+    "updated": "2026-09-27T04:28:27.913019+00:00"
   }
 }
