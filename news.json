@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T23:03:35.264461+00:00",
+  "updated": "2026-09-27T23:22:35.561947+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Former Grizzlies head coach Bobby Hauck out at Illinois after 4 games",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/former-grizzlies-head-coach-bobby-hauck-out-at-illinois-after-4-games/article_711bf909-523d-4dfc-8b2f-0dfa4e1bc196.html",
+      "date": "Sep. 27, 2026",
+      "published_at": "2026-09-27T22:45:00+00:00",
+      "description": "Former Grizzlies head coach Bobby Hauck out at Illinois after 4 games",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/11/711bf909-523d-4dfc-8b2f-0dfa4e1bc196/6ab99c4501c18.preview.jpg?crop=1762%2C925%2C0%2C34&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": true,
+      "youtube_id": "qrmMPOnSHGI",
+      "video_url": "https://www.youtube.com/watch?v=qrmMPOnSHGI",
+      "video_thumbnail": "https://i.ytimg.com/vi/qrmMPOnSHGI/hqdefault.jpg"
+    },
     {
       "title": "Week 4: No. 5 Montana Grizzlies earn top-10 win at UC Davis",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-4-no-5-montana-grizzlies-earn-top-10-win-at-uc-davis/collection_b509e76a-a52d-4d22-a67b-381c624ca162.html",
@@ -1495,21 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/e4/6e47c0bb-e060-58d7-a6e0-d90831c134bc/6aa5dd51efe75.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Montana vs. Utah Tech football 29.JPG",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/image_bcdd46b2-e078-5a0e-90fa-4fb204105d78.html",
-      "date": "Sep. 12, 2026",
-      "published_at": "2026-09-12T23:03:08+00:00",
-      "description": "Montana kicker Jo Silver (46) lines up for a point after attempt during the Big Sky Conference football game between Montana and Utah Tech at Washington-Grizzly Stadium in Missoula on Saturday, Sept. 12, 2026.",
-      "source": "Missoulian",
-      "badge": "OPPONENT",
-      "short": "OPPONE",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/b/cd/bcdd46b2-e078-5a0e-90fa-4fb204105d78/6aa5dd51ac550.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/b/cd/bcdd46b2-e078-5a0e-90fa-4fb204105d78/6aa5dd51ac550.image.jpg?resize=300%2C200"
     }
   ]
 }
