@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-09-28T15:34:35.884444+00:00",
+  "generatedAt": "2026-09-28T15:50:25.560087+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -7273,7 +7273,7 @@
       "fcsTop25Games": [
         {
           "id": "401868094",
-          "date": "2026-10-03T01:30Z",
+          "date": "2026-10-03T02:30Z",
           "name": "Montana State Bobcats at Idaho Vandals",
           "shortName": "MTST @ IDHO",
           "venue": "Kibbie Dome",
@@ -7303,16 +7303,16 @@
             "state": "pre",
             "completed": false,
             "name": "STATUS_SCHEDULED",
-            "detail": "Fri, October 2nd at 9:30 PM EDT",
-            "shortDetail": "10/2 - 9:30 PM EDT",
-            "label": "10/2 - 9:30 PM EDT",
+            "detail": "Fri, October 2nd at 10:30 PM EDT",
+            "shortDetail": "10/2 - 10:30 PM EDT",
+            "label": "10/2 - 10:30 PM EDT",
             "period": null,
             "clock": "0:00"
           },
           "completed": false,
           "period": null,
           "clock": "0:00",
-          "statusText": "10/2 - 9:30 PM EDT",
+          "statusText": "10/2 - 10:30 PM EDT",
           "broadcasts": []
         },
         {
