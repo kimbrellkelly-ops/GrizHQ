@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T22:04:12.029595+00:00",
+  "updated": "2026-09-28T22:23:55.597436+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,51 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "First look: No. 3 Montana Grizzlies vs. Northern Colorado Bears",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_d4cd544a-e022-5288-b488-1d4e5b96de7b.html",
+      "date": "Sep. 28, 2026",
+      "published_at": "2026-09-28T22:15:00+00:00",
+      "description": "The Montana Grizzlies return home this weekend after back-to-back road games as they'll host Northern Colorado.",
+      "source": "Missoulian",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/19/e1945c32-17b3-5de9-b994-82f54edc0750/6ab959b56220d.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/19/e1945c32-17b3-5de9-b994-82f54edc0750/6ab959b56220d.image.jpg?resize=300%2C200"
+    },
+    {
+      "title": "First look: No. 3 Montana Grizzlies vs. Northern Colorado Bears",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-3-montana-grizzlies-vs-northern-colorado-bears/article_c50c9a0c-9ec1-4e1c-8a9a-6c0da79b5c09.html",
+      "date": "Sep. 28, 2026",
+      "published_at": "2026-09-28T22:15:00+00:00",
+      "description": "First look: No. 3 Montana Grizzlies vs. Northern Colorado Bears",
+      "source": "406 MT Sports",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/50/c50c9a0c-9ec1-4e1c-8a9a-6c0da79b5c09/6abae63458a56.preview.jpg?crop=1759%2C923%2C0%2C33&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/50/c50c9a0c-9ec1-4e1c-8a9a-6c0da79b5c09/6abae63458a56.preview.jpg?crop=1759%2C923%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Grizzlies RB Eli Gillman named Big Sky, FCS offensive player of the week",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_976b6389-6b1a-5be6-bb39-f3faf88fa195.html",
+      "date": "Sep. 28, 2026",
+      "published_at": "2026-09-28T21:30:00+00:00",
+      "description": "This is the first time Grizzlies running back Eli Gillman has been named the FCS offensive player of the week by Stats Perform.",
+      "source": "Missoulian",
+      "badge": "HONOR",
+      "short": "HONOR",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/c1/cc114d6a-cbe6-5464-9f64-74372cc64d7d/6aa5dd47aec1b.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/c1/cc114d6a-cbe6-5464-9f64-74372cc64d7d/6aa5dd47aec1b.image.jpg?resize=300%2C200"
+    },
     {
       "title": "Grizzlies RB Eli Gillman named Big Sky, FCS offensive player of the week",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-rb-eli-gillman-named-big-sky-fcs-offensive-player-of-the-week/article_c141e911-2c5e-431d-97d3-b2a12d02ef58.html",
@@ -25,21 +70,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/14/c141e911-2c5e-431d-97d3-b2a12d02ef58/6abaaa2491171.preview.jpg?crop=1113%2C584%2C312%2C25"
-    },
-    {
-      "title": "Grizzlies RB Eli Gillman named Big Sky, FCS offensive player of the week",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_976b6389-6b1a-5be6-bb39-f3faf88fa195.html",
-      "date": "Sep. 28, 2026",
-      "published_at": "2026-09-28T18:00:00+00:00",
-      "description": "This is the first time Grizzlies running back Eli Gillman has been named the FCS offensive player of the week by Stats Perform.",
-      "source": "Missoulian",
-      "badge": "HONOR",
-      "short": "HONOR",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/c1/cc114d6a-cbe6-5464-9f64-74372cc64d7d/6aa5dd47aec1b.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/c1/cc114d6a-cbe6-5464-9f64-74372cc64d7d/6aa5dd47aec1b.image.jpg?resize=300%2C200"
     },
     {
       "title": "Former Grizzlies head coach Bobby Hauck out at Illinois after 4 games",
@@ -1476,36 +1506,6 @@
       "badge": "OPPONENT",
       "short": "OPPONE",
       "image": "https://skylinesportsmt.com/wp-content/uploads/2026/09/Eli-Gillman-Touchdown-scaled.jpg",
-      "is_video": true,
-      "youtube_id": "kUA6VfnmPKI",
-      "video_url": "https://www.youtube.com/watch?v=kUA6VfnmPKI",
-      "video_thumbnail": "https://i.ytimg.com/vi/kUA6VfnmPKI/hqdefault.jpg"
-    },
-    {
-      "title": "Gillman races to more records in Griz win over ‘Blazers",
-      "url": "https://gogriz.com/news/2026/9/12/football-gillman-races-to-more-records-in-griz-win-over-blazers",
-      "date": "Sep. 13, 2026",
-      "published_at": "2026-09-13T01:09:00+00:00",
-      "description": "MISSOULA – Another week, another chapter in Eli Gillman's record-setting career.",
-      "source": "GoGriz",
-      "badge": "GAME STORY",
-      "short": "GAME S",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/12/20260912_fbvsutahtech_132.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/12/20260912_fbvsutahtech_132.jpg"
-    },
-    {
-      "title": "WATCH – Griz press conference – Bobby Kennedy, Tanner Williams, Keali’i Ah Yat after Utah Tech win",
-      "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-tanner-williams-kealii-ah-yat-after-utah-tech-win/",
-      "date": "Sep. 13, 2026",
-      "published_at": "2026-09-13T00:10:26+00:00",
-      "description": "September 12, 2026 WATCH – Griz press conference – Bobby Kennedy, Tanner Williams, Keali’i Ah Yat after Utah Tech win",
-      "source": "Skyline Sports",
-      "badge": "INSIDER",
-      "short": "INSIDE",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2025/12/Kealii-Ah-Yat-throws-from-a-clean-pcket-2.jpeg",
       "is_video": true,
       "youtube_id": "kUA6VfnmPKI",
       "video_url": "https://www.youtube.com/watch?v=kUA6VfnmPKI",
