@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T18:28:46.410520+00:00",
+  "updated": "2026-09-28T18:44:47.832222+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -25,6 +25,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/c1/cc114d6a-cbe6-5464-9f64-74372cc64d7d/6aa5dd47aec1b.image.jpg?resize=300%2C200"
+    },
+    {
+      "title": "Grizzlies RB Eli Gillman named Big Sky, FCS offensive player of the week",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-rb-eli-gillman-named-big-sky-fcs-offensive-player-of-the-week/article_c141e911-2c5e-431d-97d3-b2a12d02ef58.html",
+      "date": "Sep. 28, 2026",
+      "published_at": "2026-09-28T18:00:00+00:00",
+      "description": "Grizzlies RB Eli Gillman named Big Sky, FCS offensive player of the week",
+      "source": "406 MT Sports",
+      "badge": "HONOR",
+      "short": "HONOR",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/14/c141e911-2c5e-431d-97d3-b2a12d02ef58/6abaaa2491171.preview.jpg?crop=1113%2C584%2C312%2C25",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/14/c141e911-2c5e-431d-97d3-b2a12d02ef58/6abaaa2491171.preview.jpg?crop=1113%2C584%2C312%2C25"
     },
     {
       "title": "Former Grizzlies head coach Bobby Hauck out at Illinois after 4 games",
@@ -1495,21 +1510,6 @@
       "youtube_id": "kUA6VfnmPKI",
       "video_url": "https://www.youtube.com/watch?v=kUA6VfnmPKI",
       "video_thumbnail": "https://i.ytimg.com/vi/kUA6VfnmPKI/hqdefault.jpg"
-    },
-    {
-      "title": "Montana vs. Utah Tech football 34.JPG",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/image_039ac5dc-f872-5ff3-a2c1-8f62c55632ca.html",
-      "date": "Sep. 12, 2026",
-      "published_at": "2026-09-12T23:03:22+00:00",
-      "description": "Montana safety Tanner Huff (29) celebrates a sack during the Big Sky Conference football game between Montana and Utah Tech at Washington-Grizzly Stadium in Missoula on Saturday, Sept. 12, 2026.",
-      "source": "Missoulian",
-      "badge": "OPPONENT",
-      "short": "OPPONE",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/39/039ac5dc-f872-5ff3-a2c1-8f62c55632ca/6aa5dd530fd85.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/39/039ac5dc-f872-5ff3-a2c1-8f62c55632ca/6aa5dd530fd85.image.jpg?resize=300%2C200"
     }
   ]
 }
