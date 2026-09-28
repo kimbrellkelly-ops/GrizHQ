@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T16:31:52.033944+00:00",
+  "updated": "2026-09-28T17:29:19.037972+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "4-1",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Gillman sweeps weekly awards after record-breaking performance",
+      "url": "https://gogriz.com/news/2026/9/28/football-gillman-sweeps-weekly-awards-after-record-breaking-performance",
+      "date": "Mon, 28 Sep 2026 08:45:00 MST",
+      "description": "Not even halfway through his senior season, Eli Gillman put an exclamation mark of a game on a career whose legend continues to grow by the day."
+    },
+    {
       "title": "Gillman has career day as Griz dominate Aggies in ranked showdown",
       "url": "https://gogriz.com/news/2026/9/27/football-gillman-has-career-day-as-griz-dominate-aggies-in-ranked-showdown",
       "date": "Sun, 27 Sep 2026 00:44:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/9/12/football-gillman-races-to-more-records-in-griz-win-over-blazers",
       "date": "Sat, 12 Sep 2026 18:09:00 MST",
       "description": "MISSOULA – Another week, another chapter in Eli Gillman's record-setting career."
-    },
-    {
-      "title": "Montana hosts Utah Tech in Saturday showdown",
-      "url": "https://gogriz.com/news/2026/9/8/football-montana-hosts-utah-tech-in-saturday-showdown",
-      "date": "Tue, 8 Sep 2026 18:34:00 MST",
-      "description": "The Montana Grizzlies return to action this week inside the friendly confines of Washington-Grizzly Stadium on Saturday for their second of three nonconference matchups in 2026, ho"
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-28T16:32:30.333458+00:00"
+    "checked_at": "2026-09-28T17:29:48.779817+00:00"
   },
   "resources": [
     {
@@ -2941,7 +2941,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-28T16:31:59.365287+00:00",
+    "source_checked_at": "2026-09-28T17:29:24.464897+00:00",
     "team_summary": [
       {
         "value": "4–1",
@@ -28248,6 +28248,6 @@
       "news": "https://uncbears.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-09-28T16:32:05.686973+00:00"
+    "updated": "2026-09-28T17:29:29.446988+00:00"
   }
 }
