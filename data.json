@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T23:26:09.120388+00:00",
+  "updated": "2026-09-28T00:37:42.517464+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "4-1",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-27T23:26:44.505306+00:00"
+    "checked_at": "2026-09-28T00:38:26.979917+00:00"
   },
   "resources": [
     {
@@ -2941,7 +2941,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-27T23:26:15.905967+00:00",
+    "source_checked_at": "2026-09-28T00:37:50.353493+00:00",
     "team_summary": [
       {
         "value": "4–1",
@@ -28248,6 +28248,6 @@
       "news": "https://uncbears.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-09-27T23:26:20.672555+00:00"
+    "updated": "2026-09-28T00:37:55.152148+00:00"
   }
 }
