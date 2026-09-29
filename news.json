@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29T01:36:37.170326+00:00",
+  "updated": "2026-09-29T01:52:21.044594+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,21 +11,6 @@
     "Skyline Sports"
   ],
   "stories": [
-    {
-      "title": "First look: No. 3 Montana Grizzlies vs. Northern Colorado Bears",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-3-montana-grizzlies-vs-northern-colorado-bears/article_c50c9a0c-9ec1-4e1c-8a9a-6c0da79b5c09.html",
-      "date": "Sep. 28, 2026",
-      "published_at": "2026-09-28T22:15:00+00:00",
-      "description": "First look: No. 3 Montana Grizzlies vs. Northern Colorado Bears",
-      "source": "406 MT Sports",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/50/c50c9a0c-9ec1-4e1c-8a9a-6c0da79b5c09/6abae63458a56.preview.jpg?crop=1759%2C923%2C0%2C33&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/50/c50c9a0c-9ec1-4e1c-8a9a-6c0da79b5c09/6abae63458a56.preview.jpg?crop=1759%2C923%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
-    },
     {
       "title": "First look: No. 3 Montana Grizzlies vs. Northern Colorado Bears",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_d4cd544a-e022-5288-b488-1d4e5b96de7b.html",
@@ -40,6 +25,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/19/e1945c32-17b3-5de9-b994-82f54edc0750/6ab959b56220d.image.jpg?resize=300%2C200"
+    },
+    {
+      "title": "First look: No. 3 Montana Grizzlies vs. Northern Colorado Bears",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-3-montana-grizzlies-vs-northern-colorado-bears/article_c50c9a0c-9ec1-4e1c-8a9a-6c0da79b5c09.html",
+      "date": "Sep. 28, 2026",
+      "published_at": "2026-09-28T22:15:00+00:00",
+      "description": "First look: No. 3 Montana Grizzlies vs. Northern Colorado Bears",
+      "source": "406 MT Sports",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/50/c50c9a0c-9ec1-4e1c-8a9a-6c0da79b5c09/6abae63458a56.preview.jpg?crop=1759%2C923%2C0%2C33&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/50/c50c9a0c-9ec1-4e1c-8a9a-6c0da79b5c09/6abae63458a56.preview.jpg?crop=1759%2C923%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
     },
     {
       "title": "Grizzlies RB Eli Gillman named Big Sky, FCS offensive player of the week",
