@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29T02:23:34.542628+00:00",
+  "updated": "2026-09-29T02:37:20.985181+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Montana Griz presser – Bobby Kennedy, OL Austin Buehler & DL Zeke Seumalo on Northern Colorado",
+      "url": "https://skylinesportsmt.com/montana-griz-presser-bobby-kennedy-ol-austin-buehler-dl-zeke-seumalo-on-northern-colorado/",
+      "date": "Sep. 29, 2026",
+      "published_at": "2026-09-29T01:39:29+00:00",
+      "description": "Colter Nuanez September 28, 2026 Montana Griz presser – Bobby Kennedy, OL Austin Buehler & DL Zeke Seumalo on Northern Colorado Montana head coach Bobby Kennedy, offensive tackle Austin Buehler & DT Zeke Seumalo on UM’s upcoming homecoming",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Austin-Buehler-stanced-at-tackle.jpeg",
+      "is_video": true,
+      "youtube_id": "np9jf62Vflo",
+      "video_url": "https://www.youtube.com/watch?v=np9jf62Vflo",
+      "video_thumbnail": "https://i.ytimg.com/vi/np9jf62Vflo/hqdefault.jpg"
+    },
     {
       "title": "First look: No. 3 Montana Grizzlies vs. Northern Colorado Bears",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-3-montana-grizzlies-vs-northern-colorado-bears/article_c50c9a0c-9ec1-4e1c-8a9a-6c0da79b5c09.html",
@@ -1495,21 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/b/0a/b0a64185-bbf5-5393-acf9-60cf2d74e857/6aa5dd508aa97.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Gillman continues assault on the record books as Griz use big plays to bury Utah Tech",
-      "url": "https://skylinesportsmt.com/gillman-continues-assault-on-the-record-books-as-griz-use-big-plays-to-bury-utah-tech/",
-      "date": "Sep. 13, 2026",
-      "published_at": "2026-09-13T03:08:12+00:00",
-      "description": "September 12, 2026 Gillman continues assault on the record books as Griz use big plays to bury Utah Tech",
-      "source": "Skyline Sports",
-      "badge": "OPPONENT",
-      "short": "OPPONE",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/09/Eli-Gillman-Touchdown-scaled.jpg",
-      "is_video": true,
-      "youtube_id": "kUA6VfnmPKI",
-      "video_url": "https://www.youtube.com/watch?v=kUA6VfnmPKI",
-      "video_thumbnail": "https://i.ytimg.com/vi/kUA6VfnmPKI/hqdefault.jpg"
     }
   ]
 }
