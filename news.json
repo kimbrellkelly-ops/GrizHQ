@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29T15:08:00.503067+00:00",
+  "updated": "2026-09-29T15:29:15.474917+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Montana cornerback Chris Johnson appreciative of opportunity with Griz",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-cornerback-chris-johnson-appreciative-of-opportunity-with-griz/article_ebe16d4f-989b-4017-84b7-35646d70d564.html",
+      "date": "Sep. 29, 2026",
+      "published_at": "2026-09-29T15:00:00+00:00",
+      "description": "Montana cornerback Chris Johnson appreciative of opportunity with Griz",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/e/be/ebe16d4f-989b-4017-84b7-35646d70d564/6aba104bd6e28.preview.jpg?crop=1535%2C806%2C127%2C335&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/e/be/ebe16d4f-989b-4017-84b7-35646d70d564/6aba104bd6e28.preview.jpg?crop=1535%2C806%2C127%2C335&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Montana cornerback Chris Johnson appreciative of opportunity with Griz",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_f0eb5cad-c820-5add-bdca-a5b36568ba20.html",
@@ -1495,21 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/14/Player_of_the_Week_-_Web_-_two_people.png"
-    },
-    {
-      "title": "Week 2: No. 3 Montana Grizzlies down Utah Tech",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-2-no-3-montana-grizzlies-down-utah-tech/collection_cbc7550b-d7a8-4d37-81f1-38d8e91958ef.html",
-      "date": "Sep. 13, 2026",
-      "published_at": "2026-09-13T20:00:00+00:00",
-      "description": "Week 2: No. 3 Montana Grizzlies down Utah Tech",
-      "source": "406 MT Sports",
-      "badge": "OPPONENT",
-      "short": "OPPONE",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/bc/cbc7550b-d7a8-4d37-81f1-38d8e91958ef/6aa625e078671.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/bc/cbc7550b-d7a8-4d37-81f1-38d8e91958ef/6aa625e078671.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
