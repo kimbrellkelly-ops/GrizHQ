@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29T14:56:47.073053+00:00",
+  "updated": "2026-09-29T15:08:00.503067+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Montana cornerback Chris Johnson appreciative of opportunity with Griz",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_f0eb5cad-c820-5add-bdca-a5b36568ba20.html",
+      "date": "Sep. 29, 2026",
+      "published_at": "2026-09-29T15:00:00+00:00",
+      "description": "Johnson has been a starting cornerback for Montana since transferring from Arizona State.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/1a/c1a1c88f-633d-5a98-8557-a9d7e6ae4f77/6a93e52d54d48.image.jpg?resize=300%2C451",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/1a/c1a1c88f-633d-5a98-8557-a9d7e6ae4f77/6a93e52d54d48.image.jpg?resize=300%2C451"
+    },
     {
       "title": "Montana Griz presser – Bobby Kennedy, OL Austin Buehler & DL Zeke Seumalo on Northern Colorado",
       "url": "https://skylinesportsmt.com/montana-griz-presser-bobby-kennedy-ol-austin-buehler-dl-zeke-seumalo-on-northern-colorado/",
@@ -1495,21 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/bc/cbc7550b-d7a8-4d37-81f1-38d8e91958ef/6aa625e078671.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "3 takeaways: Grizzlies still seeking growth after 3-0 start",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-grizzlies-still-seeking-growth-after-3-0-start/article_b45bbd23-4f03-4fc7-8129-156776a2bb63.html",
-      "date": "Sep. 13, 2026",
-      "published_at": "2026-09-13T14:00:00+00:00",
-      "description": "3 takeaways: Grizzlies still seeking growth after 3-0 start",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/45/b45bbd23-4f03-4fc7-8129-156776a2bb63/6aa60352b084a.preview.jpg?crop=1725%2C907%2C0%2C75&resize=1200%2C631&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/45/b45bbd23-4f03-4fc7-8129-156776a2bb63/6aa60352b084a.preview.jpg?crop=1725%2C907%2C0%2C75&resize=1200%2C631&order=crop%2Cresize"
     }
   ]
 }
