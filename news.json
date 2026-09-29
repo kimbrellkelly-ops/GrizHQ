@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29T22:25:05.058905+00:00",
+  "updated": "2026-09-29T22:37:49.885956+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz to host Bears on Homecoming",
+      "url": "https://gogriz.com/news/2026/9/29/football-griz-to-host-bears-on-homecoming",
+      "date": "Sep. 29, 2026",
+      "published_at": "2026-09-29T23:24:00+00:00",
+      "description": "It's the Grizzlies versus the Bears this week as Montana returns home from a two-game road swing to face Northern Colorado on Homecoming Weekend at the University of Montana.",
+      "source": "GoGriz",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/26/20260926_fbvsucdavis_045.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/26/20260926_fbvsucdavis_045.jpg"
+    },
     {
       "title": "Former Grizzlies head coach Bobby Hauck out at Illinois after 4 games",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_bfbc3ce6-063e-5b44-9e13-19f443a2ffda.html",
@@ -1495,21 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/50/0505ed27-6000-5e9a-b5b9-6b0fec681bad/6aa5dd47ee65b.image.jpg?resize=300%2C240"
-    },
-    {
-      "title": "Gillman and O’Donnell earn Big Sky weekly honors",
-      "url": "https://gogriz.com/news/2026/9/14/football-gillman-and-o-donnell-earn-big-sky-weekly-honors",
-      "date": "Sep. 14, 2026",
-      "published_at": "2026-09-14T16:53:00+00:00",
-      "description": "MISSOULA - Eli Gillman and punter Everett O'Donnell each earned Big Sky Conference Player of the Week honors Monday after a pair of standout performances in Montana's 35-14 victory over Utah Tech at Washington-Grizzly Stadium.",
-      "source": "GoGriz",
-      "badge": "HONOR",
-      "short": "HONOR",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/14/Player_of_the_Week_-_Web_-_two_people.png",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/14/Player_of_the_Week_-_Web_-_two_people.png"
     }
   ]
 }
