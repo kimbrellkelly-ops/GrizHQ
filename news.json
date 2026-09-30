@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30T02:24:49.986007+00:00",
+  "updated": "2026-09-30T02:38:30.414245+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,36 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Montana Grizzlies Week 5 depth chart",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/pdf_1c8a0bb4-80e0-5688-a28a-67d1690e71b8.html",
+      "date": "Sep. 30, 2026",
+      "published_at": "2026-09-30T01:19:00+00:00",
+      "description": "Latest Montana football coverage.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/c8/1c8a0bb4-80e0-5688-a28a-67d1690e71b8/6abc66394ad08.preview.jpg?resize=300%2C388",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/c8/1c8a0bb4-80e0-5688-a28a-67d1690e71b8/6abc66394ad08.preview.jpg?resize=300%2C388"
+    },
+    {
+      "title": "Montana Grizzlies Week 5 depth chart",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_614d3e9a-0f36-5da5-a8cd-01f3f293b119.html",
+      "date": "Sep. 30, 2026",
+      "published_at": "2026-09-30T01:18:00+00:00",
+      "description": "Latest Montana football coverage.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/c8/1c8a0bb4-80e0-5688-a28a-67d1690e71b8/6abc66394ad08.preview.jpg?crop=1265%2C664%2C0%2C486&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/c8/1c8a0bb4-80e0-5688-a28a-67d1690e71b8/6abc66394ad08.preview.jpg?crop=1265%2C664%2C0%2C486&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Cat-Griz Insider Podcast: Montana teams resume Big Sky play with big wins",
       "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/cat-griz-insider-podcast-montana-teams-resume-big-sky-play-with-big-wins/article_397601f3-54c9-42a8-ba13-99a2294ce3f4.html",
@@ -1480,36 +1510,6 @@
       "youtube_id": "LCXacLE40UE",
       "video_url": "https://www.youtube.com/watch?v=LCXacLE40UE",
       "video_thumbnail": "https://i.ytimg.com/vi/LCXacLE40UE/hqdefault.jpg"
-    },
-    {
-      "title": "First look: No. 3 Montana Grizzlies at Oregon State Beavers",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-3-montana-grizzlies-at-oregon-state-beavers/article_b1a4cedf-3052-436b-8abe-7b6e8dba8bf7.html",
-      "date": "Sep. 14, 2026",
-      "published_at": "2026-09-14T22:48:00+00:00",
-      "description": "First look: No. 3 Montana Grizzlies at Oregon State Beavers",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/1a/b1a4cedf-3052-436b-8abe-7b6e8dba8bf7/6aa843215eb86.preview.jpg?crop=1761%2C925%2C0%2C85&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/1a/b1a4cedf-3052-436b-8abe-7b6e8dba8bf7/6aa843215eb86.preview.jpg?crop=1761%2C925%2C0%2C85&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "First look: No. 3 Montana Grizzlies at Oregon State Beavers",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_df55c928-851e-558c-bea9-4605644dc96f.html",
-      "date": "Sep. 14, 2026",
-      "published_at": "2026-09-14T22:45:00+00:00",
-      "description": "The Montana Grizzlies will hit the road for the first time this season when they play at Oregon State this weekend.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/e4/6e47c0bb-e060-58d7-a6e0-d90831c134bc/6aa5dd51efe75.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/e4/6e47c0bb-e060-58d7-a6e0-d90831c134bc/6aa5dd51efe75.image.jpg?resize=300%2C200"
     }
   ]
 }
