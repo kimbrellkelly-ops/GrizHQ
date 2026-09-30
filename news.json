@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30T23:23:28.941887+00:00",
+  "updated": "2026-09-30T23:36:49.515862+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz to host winter flag football league for kids",
+      "url": "https://gogriz.com/news/2026/9/30/football-griz-to-host-winter-flag-football-league-for-kids",
+      "date": "Oct. 1, 2026",
+      "published_at": "2026-10-01T00:05:00+00:00",
+      "description": "MISSOULA - Montana football coach Bobby Kennedy and the Grizzly staff are expanding their youth camp offerings with the addition of a winter flag football league to be held at the Grizzly Indoor Practice Facility in January and February 202",
+      "source": "GoGriz",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/6/24/06242026_fb_camp_1616_ce.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/6/24/06242026_fb_camp_1616_ce.jpg"
+    },
     {
       "title": "Grizzlies look to avoid 'rat poison' coming off season-altering win",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-look-to-avoid-rat-poison-coming-off-season-altering-win/article_421e5e58-0c10-4c73-90b7-3857f5996f5d.html",
@@ -1495,21 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/a0/ca0aec99-2afd-5f8c-be66-f10bc5b7bfa1/6aa5dd4b388a3.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Grizzlies DL Tyler King thriving in first year of D-I football",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-dl-tyler-king-thriving-in-first-year-of-d-i-football/article_6a3a5c97-e0d3-41a7-8597-9f8262f5b43e.html",
-      "date": "Sep. 15, 2026",
-      "published_at": "2026-09-15T15:00:00+00:00",
-      "description": "Grizzlies DL Tyler King thriving in first year of D-I football",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/a3/6a3a5c97-e0d3-41a7-8597-9f8262f5b43e/6aa780d906bf1.preview.jpg?crop=1732%2C909%2C31%2C55&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/a3/6a3a5c97-e0d3-41a7-8597-9f8262f5b43e/6aa780d906bf1.preview.jpg?crop=1732%2C909%2C31%2C55&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
