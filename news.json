@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30T00:34:41.010595+00:00",
+  "updated": "2026-09-30T00:57:51.714948+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -39,8 +39,7 @@
       "is_video": false,
       "youtube_id": "",
       "video_url": "",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg",
-      "image_fallback": true
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg"
     },
     {
       "title": "Griz to host Bears on Homecoming",
