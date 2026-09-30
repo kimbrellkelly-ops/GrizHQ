@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30T22:30:08.375741+00:00",
+  "updated": "2026-09-30T23:27:33.370195+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "4-1",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Griz to host winter flag football league for kids",
+      "url": "https://gogriz.com/news/2026/9/30/football-griz-to-host-winter-flag-football-league-for-kids",
+      "date": "Wed, 30 Sep 2026 17:05:00 MST",
+      "description": "MISSOULA - Montana football coach Bobby Kennedy and the Grizzly staff are expanding their youth camp offerings with the addition of a winter flag football league to be held at the "
+    },
+    {
       "title": "Griz to host Bears on Homecoming",
       "url": "https://gogriz.com/news/2026/9/29/football-griz-to-host-bears-on-homecoming",
       "date": "Tue, 29 Sep 2026 16:24:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/9/15/football-griz-to-battle-beavers-on-saturday-night-in-corvallis",
       "date": "Tue, 15 Sep 2026 16:20:00 MST",
       "description": "MISSOULA - Thirty years and a little over one week ago, the Montana Grizzlies and a gunslinger quarterback named Ah Yat went to Corvallis, Oregon, and returned to Missoula with a 3"
-    },
-    {
-      "title": "Gillman and O’Donnell earn Big Sky weekly honors",
-      "url": "https://gogriz.com/news/2026/9/14/football-gillman-and-o-donnell-earn-big-sky-weekly-honors",
-      "date": "Mon, 14 Sep 2026 09:53:00 MST",
-      "description": "MISSOULA - Eli Gillman and punter Everett O'Donnell each earned Big Sky Conference Player of the Week honors Monday after a pair of standout performances in Montana's 35-14 victory"
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-09-30T22:30:55.898235+00:00"
+    "checked_at": "2026-09-30T23:28:32.349218+00:00"
   },
   "resources": [
     {
@@ -2941,7 +2941,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-09-30T22:30:15.445737+00:00",
+    "source_checked_at": "2026-09-30T23:27:41.411678+00:00",
     "team_summary": [
       {
         "value": "4–1",
@@ -28248,6 +28248,6 @@
       "news": "https://uncbears.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-09-30T22:30:23.965259+00:00"
+    "updated": "2026-09-30T23:27:47.028577+00:00"
   }
 }
