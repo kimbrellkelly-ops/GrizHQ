@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30T00:05:17.121935+00:00",
+  "updated": "2026-09-30T00:34:41.010595+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,37 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Cat-Griz Insider Podcast: Montana teams resume Big Sky play with big wins",
+      "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/cat-griz-insider-podcast-montana-teams-resume-big-sky-play-with-big-wins/article_397601f3-54c9-42a8-ba13-99a2294ce3f4.html",
+      "date": "Sep. 30, 2026",
+      "published_at": "2026-09-30T00:15:00+00:00",
+      "description": "Cat-Griz Insider Podcast: Montana teams resume Big Sky play with big wins",
+      "source": "406 MT Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/97/397601f3-54c9-42a8-ba13-99a2294ce3f4/6abc550ea0127.preview.png?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": true,
+      "youtube_id": "",
+      "video_url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/cat-griz-insider-podcast-montana-teams-resume-big-sky-play-with-big-wins/article_397601f3-54c9-42a8-ba13-99a2294ce3f4.html",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/97/397601f3-54c9-42a8-ba13-99a2294ce3f4/6abc550ea0127.preview.png?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Cat-Griz Pod S6 E10",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/montana-state-university/html_6eb56003-f891-501f-ad54-e65454e5a4e9.html",
+      "date": "Sep. 30, 2026",
+      "published_at": "2026-09-30T00:00:00+00:00",
+      "description": "Latest Montana football coverage.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg",
+      "image_fallback": true
+    },
     {
       "title": "Griz to host Bears on Homecoming",
       "url": "https://gogriz.com/news/2026/9/29/football-griz-to-host-bears-on-homecoming",
@@ -1480,36 +1511,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/e4/6e47c0bb-e060-58d7-a6e0-d90831c134bc/6aa5dd51efe75.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Montana's Eli Gillman, Everett O’Donnell earn Big Sky weekly honors",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montanas-eli-gillman-everett-o-donnell-earn-big-sky-weekly-honors/article_00a8db7d-0126-4235-8127-93e81b3e1a43.html",
-      "date": "Sep. 14, 2026",
-      "published_at": "2026-09-14T18:45:00+00:00",
-      "description": "Montana's Eli Gillman, Everett O’Donnell earn Big Sky weekly honors",
-      "source": "406 MT Sports",
-      "badge": "HONOR",
-      "short": "HONOR",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/0a/00a8db7d-0126-4235-8127-93e81b3e1a43/6aa840de90bdd.preview.jpg?crop=1308%2C687%2C266%2C24&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/0a/00a8db7d-0126-4235-8127-93e81b3e1a43/6aa840de90bdd.preview.jpg?crop=1308%2C687%2C266%2C24&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Montana's Eli Gillman, Everett O’Donnell earn Big Sky weekly honors",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_09f7ae20-ac9a-5e8a-af9d-777d5d7798ea.html",
-      "date": "Sep. 14, 2026",
-      "published_at": "2026-09-14T18:45:00+00:00",
-      "description": "Eli Gillman is the Big Sky Offensive Player of the Week and Everett O'Donnell is the Big Sky Special Teams Player of the Week.",
-      "source": "Missoulian",
-      "badge": "HONOR",
-      "short": "HONOR",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/50/0505ed27-6000-5e9a-b5b9-6b0fec681bad/6aa5dd47ee65b.image.jpg?resize=300%2C240",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/50/0505ed27-6000-5e9a-b5b9-6b0fec681bad/6aa5dd47ee65b.image.jpg?resize=300%2C240"
     }
   ]
 }
