@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30T13:33:01.624125+00:00",
+  "updated": "2026-09-30T13:54:39.796725+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,21 +11,6 @@
     "Skyline Sports"
   ],
   "stories": [
-    {
-      "title": "Grizzlies look to avoid 'rat poison' coming off season-altering win",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_38fa16d9-8f6a-5e6f-bcd7-b9ad54d2d00d.html",
-      "date": "Sep. 30, 2026",
-      "published_at": "2026-09-30T13:00:00+00:00",
-      "description": "\"We can't buy into the rat poison with everybody patting us on the back, including me.\" —Grizzlies coach Bobby Kennedy",
-      "source": "Missoulian",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/f3/ff3e5612-42e2-5c68-a3cd-db5635bb6a47/6ab959b5256f0.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/f3/ff3e5612-42e2-5c68-a3cd-db5635bb6a47/6ab959b5256f0.image.jpg?resize=300%2C200"
-    },
     {
       "title": "Grizzlies look to avoid 'rat poison' coming off season-altering win",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-look-to-avoid-rat-poison-coming-off-season-altering-win/article_421e5e58-0c10-4c73-90b7-3857f5996f5d.html",
@@ -40,6 +25,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/21/421e5e58-0c10-4c73-90b7-3857f5996f5d/6abb21c18d7e7.preview.jpg?crop=882%2C463%2C239%2C73"
+    },
+    {
+      "title": "Grizzlies look to avoid 'rat poison' coming off season-altering win",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_38fa16d9-8f6a-5e6f-bcd7-b9ad54d2d00d.html",
+      "date": "Sep. 30, 2026",
+      "published_at": "2026-09-30T13:00:00+00:00",
+      "description": "\"We can't buy into the rat poison with everybody patting us on the back, including me.\" —Grizzlies coach Bobby Kennedy",
+      "source": "Missoulian",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/f3/ff3e5612-42e2-5c68-a3cd-db5635bb6a47/6ab959b5256f0.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/f3/ff3e5612-42e2-5c68-a3cd-db5635bb6a47/6ab959b5256f0.image.jpg?resize=300%2C200"
     },
     {
       "title": "Montana Grizzlies Week 5 depth chart",
