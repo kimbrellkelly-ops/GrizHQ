@@ -1,6 +1,58 @@
 {
-  "updated": "2026-10-01T05:42:21.555229+00:00",
+  "updated": "2026-10-01T05:56:44.992072+00:00",
   "posts": [
+    {
+      "title": "Jammin' with JP- JP Flynn on Montana State vs NAU and upcoming Idaho Game",
+      "url": "https://www.youtube.com/watch?v=jUvgOyP6AhE",
+      "image": "https://i.ytimg.com/vi/jUvgOyP6AhE/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 1, 2026",
+      "platform": "youtube",
+      "youtube_id": "jUvgOyP6AhE",
+      "published_at": "2026-10-01T00:00:00+00:00"
+    },
+    {
+      "title": "Talkin' Schmidt: Our First Guest + The Griz are on the Up & Up",
+      "url": "https://www.youtube.com/watch?v=m6U2Ra6DWAU",
+      "image": "https://i.ytimg.com/vi/m6U2Ra6DWAU/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 1, 2026",
+      "platform": "youtube",
+      "youtube_id": "m6U2Ra6DWAU",
+      "published_at": "2026-10-01T00:00:00+00:00"
+    },
+    {
+      "title": "How did the Griz find a spark?",
+      "url": "https://www.youtube.com/watch?v=VtG70s2d9xc",
+      "image": "https://i.ytimg.com/vi/VtG70s2d9xc/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 1, 2026",
+      "platform": "youtube",
+      "youtube_id": "VtG70s2d9xc",
+      "published_at": "2026-10-01T00:00:00+00:00"
+    },
+    {
+      "title": "Who's the GOAT running back at the University of Montana?",
+      "url": "https://www.youtube.com/watch?v=Hfve707xjrY",
+      "image": "https://i.ytimg.com/vi/Hfve707xjrY/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 1, 2026",
+      "platform": "youtube",
+      "youtube_id": "Hfve707xjrY",
+      "published_at": "2026-10-01T00:00:00+00:00"
+    },
     {
       "title": "FCS Herd with Herder - Are the Griz back to being a national contender? How did YSU upset USD?",
       "url": "https://www.youtube.com/watch?v=LW4n3SPv75c",
