@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01T12:01:22.964599+00:00",
+  "updated": "2026-10-01T18:25:18.892957+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,66 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Driven D'Ambra: Grizzlies OL Jack D'Ambra inspired by late father",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_abf4426e-6669-53ad-81d0-4e39c1452807.html",
+      "date": "Oct. 1, 2026",
+      "published_at": "2026-10-01T17:30:00+00:00",
+      "description": "\"This whole season for me is really dedicated to him.\" —Grizzlies offensive lineman Jack D'Ambra on his late father",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/c3/0c37f412-ba80-5f94-9eba-5f4f41a3cbe7/6aa5dd4cc8f15.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/c3/0c37f412-ba80-5f94-9eba-5f4f41a3cbe7/6aa5dd4cc8f15.image.jpg?resize=300%2C200"
+    },
+    {
+      "title": "Big Sky Conference football picks: 406 MT Sports panel forecasts games for Griz, Cats",
+      "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/big-sky-conference-football-picks-406-mt-sports-panel-forecasts-games-for-griz-cats/article_d8dbb5f2-d962-42ed-833d-955063f1ea12.html",
+      "date": "Oct. 1, 2026",
+      "published_at": "2026-10-01T14:00:00+00:00",
+      "description": "Big Sky Conference football picks: 406 MT Sports panel forecasts games for Griz, Cats",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/8d/d8dbb5f2-d962-42ed-833d-955063f1ea12/6abaabdc15227.preview.jpg?crop=1199%2C629%2C9%2C149",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/8d/d8dbb5f2-d962-42ed-833d-955063f1ea12/6abaabdc15227.preview.jpg?crop=1199%2C629%2C9%2C149"
+    },
+    {
+      "title": "Talkin’ Schmidt: Griz OL ascent, defensive improvements, good news, bad news, TOP SOUPS & a cameo!",
+      "url": "https://skylinesportsmt.com/talkin-schmidt-griz-ol-ascent-defensive-improvements-good-news-bad-news-top-soups-a-cameo/",
+      "date": "Oct. 1, 2026",
+      "published_at": "2026-10-01T12:59:44+00:00",
+      "description": "October 1, 2026 Talkin’ Schmidt: Griz OL ascent, defensive improvements, good news, bad news, TOP SOUPS & a cameo!",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Montana-Griz-offense-live-presnap-Dyllan-Drummond-Jack-DAmbra-Lucas-Freitas-Torin-Jeske-and-Titus-Rohrer-.jpeg",
+      "is_video": true,
+      "youtube_id": "m6U2Ra6DWAU",
+      "video_url": "https://www.youtube.com/watch?v=m6U2Ra6DWAU",
+      "video_thumbnail": "https://i.ytimg.com/vi/m6U2Ra6DWAU/hqdefault.jpg"
+    },
+    {
+      "title": "Driven D'Ambra: Grizzlies OL Jack D'Ambra inspired by late father",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/driven-dambra-grizzlies-ol-jack-dambra-inspired-by-late-father/article_3410e332-4663-4b2f-83b2-83e2c73965c1.html",
+      "date": "Oct. 1, 2026",
+      "published_at": "2026-10-01T12:00:00+00:00",
+      "description": "Driven D'Ambra: Grizzlies OL Jack D'Ambra inspired by late father",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/41/3410e332-4663-4b2f-83b2-83e2c73965c1/6ab5c793f1e8f.preview.jpg?crop=1761%2C925%2C2%2C78&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/41/3410e332-4663-4b2f-83b2-83e2c73965c1/6ab5c793f1e8f.preview.jpg?crop=1761%2C925%2C2%2C78&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Griz to host winter flag football league for kids",
       "url": "https://gogriz.com/news/2026/9/30/football-griz-to-host-winter-flag-football-league-for-kids",
@@ -640,6 +700,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/72/67247519-1a3d-5310-9281-d4d9912d40c9/6aa5dd4dbc8ac.image.jpg?resize=300%2C200"
+    },
+    {
+      "title": "Big Sky Breakdown",
+      "url": "https://skylinesportsmt.com/big-sky-breakdown-with-analyst-jordan-tripp-previewing-no-5-montana-at-no-10-uc-davis/",
+      "date": "Sep. 25, 2026",
+      "published_at": "2026-09-25T15:20:16+00:00",
+      "description": "Big Sky Breakdown September 25, 2026 Big Sky Breakdown with analyst Jordan Tripp previewing No. 5 Montana at No. 10 UC Davis Former NFL linebacker Jordan Tripp joins Colter Nuanez for the latest deep dive into what ails the Griz defense, th",
+      "source": "Skyline Sports",
+      "badge": "ANALYSIS",
+      "short": "ANALYS",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Brooks-Davis-nasty-catch-on-the-sideline-with-Griz-team-behind.jpeg",
+      "is_video": true,
+      "youtube_id": "DTYzx9xFP0c",
+      "video_url": "https://www.youtube.com/watch?v=DTYzx9xFP0c",
+      "video_thumbnail": "https://i.ytimg.com/vi/DTYzx9xFP0c/hqdefault.jpg"
     },
     {
       "title": "092426-ir-spt-hockey-Griz-6.jpg",
@@ -1435,81 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/3f/83fbea61-f361-4788-9d62-511922936669/6aa896eda1924.preview.jpg?crop=1148%2C604%2C461%2C56"
-    },
-    {
-      "title": "Griz to battle Beavers on Saturday night in Corvallis",
-      "url": "https://gogriz.com/news/2026/9/15/football-griz-to-battle-beavers-on-saturday-night-in-corvallis",
-      "date": "Sep. 15, 2026",
-      "published_at": "2026-09-15T23:20:00+00:00",
-      "description": "MISSOULA - Thirty years and a little over one week ago, the Montana Grizzlies and a gunslinger quarterback named Ah Yat went to Corvallis, Oregon, and returned to Missoula with a 35-14 win over Oregon State.",
-      "source": "GoGriz",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/12/20260912_fbvsutahtech_143.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/12/20260912_fbvsutahtech_143.jpg"
-    },
-    {
-      "title": "Several weeks of planned prescribed burns in Helena area set to start Wednesday",
-      "url": "https://missoulian.com/news/state-regional/article_eb2ab6c9-5ec9-553f-8765-8b8d74143a2a.html",
-      "date": "Sep. 15, 2026",
-      "published_at": "2026-09-15T22:10:00+00:00",
-      "description": "The Helena-Lewis and Clark National Forest is conducting the first of several prescribed burns planned over the next few weeks on Wednesday southwest of Helena and along Grizzly Gulch.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/4b/84bc40b4-3146-532a-ad94-47887874d0af/69d9302d25721.image.jpg?resize=300%2C190",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/4b/84bc40b4-3146-532a-ad94-47887874d0af/69d9302d25721.image.jpg?resize=300%2C190"
-    },
-    {
-      "title": "FWP confirms bear that attacked hunter south of Augusta was grizzly",
-      "url": "https://missoulian.com/news/state-regional/article_3778b52c-1464-555d-9c19-f105d0846a15.html",
-      "date": "Sep. 15, 2026",
-      "published_at": "2026-09-15T21:40:00+00:00",
-      "description": "Montana Fish, Wildlife & Parks confirmed Tuesday the bear that attacked a hunter Monday morning south of Augusta was a grizzly bear.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/3/77/3778b52c-1464-555d-9c19-f105d0846a15/6aa9bcd5e5386.preview.jpg?crop=1763%2C926%2C0%2C125&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/3/77/3778b52c-1464-555d-9c19-f105d0846a15/6aa9bcd5e5386.preview.jpg?crop=1763%2C926%2C0%2C125&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Cat-Griz Insider Podcast: Bobcats pass FBS test, Grizzlies prepare for one",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/montana-state-university/article_caa28094-7e15-58c8-8451-a9f5a14eace7.html",
-      "date": "Sep. 15, 2026",
-      "published_at": "2026-09-15T21:00:00+00:00",
-      "description": "This episode reflects on the Montana State and Montana football teams’ most recent games and previews their upcoming ones.",
-      "source": "Missoulian",
-      "badge": "INSIDER",
-      "short": "INSIDE",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/aa/caa28094-7e15-58c8-8451-a9f5a14eace7/6aa9b3497f552.preview.png?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://missoulian.com/sports/college/big-sky-conference/montana-state-university/article_caa28094-7e15-58c8-8451-a9f5a14eace7.html",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/aa/caa28094-7e15-58c8-8451-a9f5a14eace7/6aa9b3497f552.preview.png?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Grizzlies DL Tyler King thriving in first year of D-I football",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_234b8f39-ea5b-5e2b-a6f8-6647590e40ed.html",
-      "date": "Sep. 15, 2026",
-      "published_at": "2026-09-15T21:00:00+00:00",
-      "description": "Grizzlies defensive lineman Tyler King recorded two sacks in Montana's win over Drake.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/a0/ca0aec99-2afd-5f8c-be66-f10bc5b7bfa1/6aa5dd4b388a3.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/a0/ca0aec99-2afd-5f8c-be66-f10bc5b7bfa1/6aa5dd4b388a3.image.jpg?resize=300%2C200"
     }
   ]
 }
