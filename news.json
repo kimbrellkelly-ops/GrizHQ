@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-02T14:09:27.781598+00:00",
+  "updated": "2026-10-02T19:16:03.815830+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,6 +11,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "3 questions: No. 3 Grizzlies seek homecoming win vs. Northern Colorado",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-3-grizzlies-seek-homecoming-win-vs-northern-colorado/article_17d68ce5-a515-4d0f-b017-e637b7716e51.html",
+      "date": "Oct. 2, 2026",
+      "published_at": "2026-10-02T18:00:00+00:00",
+      "description": "3 questions: No. 3 Grizzlies seek homecoming win vs. Northern Colorado",
+      "source": "406 MT Sports",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/7d/17d68ce5-a515-4d0f-b017-e637b7716e51/6abb24794003d.preview.jpg?crop=1759%2C924%2C4%2C82&resize=1200%2C631&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/7d/17d68ce5-a515-4d0f-b017-e637b7716e51/6abb24794003d.preview.jpg?crop=1759%2C924%2C4%2C82&resize=1200%2C631&order=crop%2Cresize"
+    },
     {
       "title": "Driven D'Ambra: Grizzlies OL Jack D'Ambra inspired by late father",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_abf4426e-6669-53ad-81d0-4e39c1452807.html",
@@ -1495,21 +1510,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/76/a76eae97-fe97-4826-a09a-0c0a84188504/6aa64f8379fee.preview.jpg?crop=1761%2C925%2C0%2C32&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Talkin’ Schmidt – Andrew wants to smoke cigarettes and is concerned about Oregon State",
-      "url": "https://skylinesportsmt.com/talkin-schmidt-andrew-wants-to-smoke-cigarettes-and-is-concerned-about-oregon-state/",
-      "date": "Sep. 16, 2026",
-      "published_at": "2026-09-16T20:24:12+00:00",
-      "description": "September 16, 2026 Talkin’ Schmidt – Andrew wants to smoke cigarettes and is concerned about Oregon State Andrew Schmidt has finally found his pessimism after an uninspiring (his words) performance by the Griz in a 35-14 win…",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/09/Eli-Gillman-Celebration-scaled.jpg",
-      "is_video": true,
-      "youtube_id": "z7vkeK55ulo",
-      "video_url": "https://www.youtube.com/watch?v=z7vkeK55ulo",
-      "video_thumbnail": "https://i.ytimg.com/vi/z7vkeK55ulo/hqdefault.jpg"
     }
   ]
 }
