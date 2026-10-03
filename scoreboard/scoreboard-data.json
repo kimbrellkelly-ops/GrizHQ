@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-10-03T14:45:38.123837+00:00",
+  "generatedAt": "2026-10-03T18:18:16.955944+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -7322,7 +7322,7 @@
           "shortName": "FOR @ LEH",
           "venue": "Goodman Stadium",
           "city": "Bethlehem",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2329",
@@ -7344,19 +7344,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 3rd at 12:00 PM EDT",
-            "shortDetail": "10/3 - 12:00 PM EDT",
-            "label": "10/3 - 12:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "4:34 - 3rd Quarter",
+            "shortDetail": "4:34 - 3rd",
+            "label": "Q3",
+            "period": 3,
+            "clock": "4:34"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/3 - 12:00 PM EDT",
+          "period": 3,
+          "clock": "4:34",
+          "statusText": "Q3",
           "broadcasts": []
         },
         {
@@ -7366,7 +7366,7 @@
           "shortName": "RICH @ LAF",
           "venue": "Fisher Stadium",
           "city": "Easton",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "322",
@@ -7374,7 +7374,7 @@
               "short": "Lafayette",
               "abbreviation": "LAF",
               "homeAway": "home",
-              "score": "",
+              "score": "24",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/322.png"
             },
             {
@@ -7383,24 +7383,24 @@
               "short": "Richmond",
               "abbreviation": "RICH",
               "homeAway": "away",
-              "score": "",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/257.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 3rd at 12:30 PM EDT",
-            "shortDetail": "10/3 - 12:30 PM EDT",
-            "label": "10/3 - 12:30 PM EDT",
-            "period": null,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "10/3 - 12:30 PM EDT",
+          "statusText": "HALFTIME",
           "broadcasts": []
         },
         {
@@ -7410,7 +7410,7 @@
           "shortName": "MER @ VMI",
           "venue": "Foster Stadium",
           "city": "Lexington",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2678",
@@ -7432,19 +7432,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 3rd at 1:30 PM EDT",
-            "shortDetail": "10/3 - 1:30 PM EDT",
-            "label": "10/3 - 1:30 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "15:00 - 2nd Quarter",
+            "shortDetail": "15:00 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "15:00"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/3 - 1:30 PM EDT",
+          "period": 2,
+          "clock": "15:00",
+          "statusText": "Q2",
           "broadcasts": []
         },
         {
@@ -7454,7 +7454,7 @@
           "shortName": "MUR @ UND",
           "venue": "Alerus Center",
           "city": "Grand Forks",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "155",
@@ -7476,19 +7476,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 3rd at 2:00 PM EDT",
-            "shortDetail": "10/3 - 2:00 PM EDT",
-            "label": "10/3 - 2:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "7:28 - 1st Quarter",
+            "shortDetail": "7:28 - 1st",
+            "label": "Q1",
+            "period": 1,
+            "clock": "7:28"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/3 - 2:00 PM EDT",
+          "period": 1,
+          "clock": "7:28",
+          "statusText": "Q1",
           "broadcasts": []
         },
         {
@@ -7498,7 +7498,7 @@
           "shortName": "CIT @ SCST",
           "venue": "Oliver C. Dawson Stadium",
           "city": "Orangeburg",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2569",
@@ -7520,19 +7520,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 3rd at 2:00 PM EDT",
-            "shortDetail": "10/3 - 2:00 PM EDT",
-            "label": "10/3 - 2:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "9:16 - 1st Quarter",
+            "shortDetail": "9:16 - 1st",
+            "label": "Q1",
+            "period": 1,
+            "clock": "9:16"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/3 - 2:00 PM EDT",
+          "period": 1,
+          "clock": "9:16",
+          "statusText": "Q1",
           "broadcasts": []
         },
         {
