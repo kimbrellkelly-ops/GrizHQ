@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-10-03T05:06:21.443000+00:00",
+  "generatedAt": "2026-10-03T10:21:38.441460+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -7278,7 +7278,7 @@
           "shortName": "MTST @ IDHO",
           "venue": "Kibbie Dome",
           "city": "Moscow",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "70",
@@ -7286,7 +7286,7 @@
               "short": "Idaho",
               "abbreviation": "IDHO",
               "homeAway": "home",
-              "score": "",
+              "score": "35",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
             },
             {
@@ -7295,24 +7295,24 @@
               "short": "Montana St",
               "abbreviation": "MTST",
               "homeAway": "away",
-              "score": "",
+              "score": "34",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "3:14 - 3rd Quarter",
-            "shortDetail": "3:14 - 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "3:14"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 3,
-          "clock": "3:14",
-          "statusText": "Q3",
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": []
         },
         {
@@ -8205,7 +8205,7 @@
           "shortName": "MTST @ IDHO",
           "venue": "Kibbie Dome",
           "city": "Moscow",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "70",
@@ -8213,7 +8213,7 @@
               "short": "Idaho",
               "abbreviation": "IDHO",
               "homeAway": "home",
-              "score": "",
+              "score": "35",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
             },
             {
@@ -8222,24 +8222,24 @@
               "short": "Montana St",
               "abbreviation": "MTST",
               "homeAway": "away",
-              "score": "",
+              "score": "34",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "3:14 - 3rd Quarter",
-            "shortDetail": "3:14 - 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "3:14"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 3,
-          "clock": "3:14",
-          "statusText": "Q3",
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": []
         },
         {
