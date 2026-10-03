@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-03T00:31:07.913551+00:00",
+  "updated": "2026-10-03T06:34:29.752955+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "4-1",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-03T00:31:50.336918+00:00"
+    "checked_at": "2026-10-03T06:35:26.701622+00:00"
   },
   "resources": [
     {
@@ -2941,7 +2941,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-03T00:31:14.371780+00:00",
+    "source_checked_at": "2026-10-03T06:34:37.277798+00:00",
     "team_summary": [
       {
         "value": "4–1",
@@ -27639,19 +27639,6 @@
   "big_sky_standings": [
     {
       "rank": 1,
-      "team": "Montana State",
-      "conference_record": "2-0",
-      "overall_record": "5-0",
-      "home": "3-0",
-      "away": "2-0",
-      "conference_points": "82-14",
-      "points": "188-75",
-      "conference_streak": "W2",
-      "overall_streak": "W5",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2539"
-    },
-    {
-      "rank": 2,
       "team": "Idaho State",
       "conference_record": "1-0",
       "overall_record": "4-0",
@@ -27664,7 +27651,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2537"
     },
     {
-      "rank": 3,
+      "rank": 2,
       "team": "Montana",
       "conference_record": "2-0",
       "overall_record": "4-1",
@@ -27677,7 +27664,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2538"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "team": "Cal Poly",
       "conference_record": "2-0",
       "overall_record": "3-2",
@@ -27688,6 +27675,19 @@
       "conference_streak": "W2",
       "overall_streak": "W1",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2535"
+    },
+    {
+      "rank": 4,
+      "team": "Montana State",
+      "conference_record": "2-1",
+      "overall_record": "5-1",
+      "home": "3-0",
+      "away": "2-1",
+      "conference_points": "116-49",
+      "points": "222-110",
+      "conference_streak": "L1",
+      "overall_streak": "L1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2539"
     },
     {
       "rank": 5,
@@ -27756,6 +27756,19 @@
     },
     {
       "rank": 10,
+      "team": "Idaho",
+      "conference_record": "1-1",
+      "overall_record": "1-4",
+      "home": "1-2",
+      "away": "0-2",
+      "conference_points": "69-72",
+      "points": "139-202",
+      "conference_streak": "W1",
+      "overall_streak": "W1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2536"
+    },
+    {
+      "rank": 11,
       "team": "Eastern Washington",
       "conference_record": "0-2",
       "overall_record": "1-4",
@@ -27768,7 +27781,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2534"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "team": "Southern Utah",
       "conference_record": "0-2",
       "overall_record": "1-4",
@@ -27779,19 +27792,6 @@
       "conference_streak": "L2",
       "overall_streak": "L3",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2543"
-    },
-    {
-      "rank": 12,
-      "team": "Idaho",
-      "conference_record": "0-1",
-      "overall_record": "0-4",
-      "home": "0-2",
-      "away": "0-2",
-      "conference_points": "34-38",
-      "points": "104-168",
-      "conference_streak": "L1",
-      "overall_streak": "L4",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2536"
     },
     {
       "rank": 13,
@@ -27847,18 +27847,18 @@
     ],
     "passing": [
       {
+        "name": "Wood,Joshua",
+        "school": "Idaho",
+        "value": "1320",
+        "secondary": "5",
+        "rate": "264.0"
+      },
+      {
         "name": "Cooke,Jordan",
         "school": "Idaho State",
         "value": "1011",
         "secondary": "10",
         "rate": "252.8"
-      },
-      {
-        "name": "Wood,Joshua",
-        "school": "Idaho",
-        "value": "1005",
-        "secondary": "3",
-        "rate": "251.3"
       },
       {
         "name": "Ah Yat,Keali'i",
@@ -27907,9 +27907,9 @@
       {
         "name": "Harste,Tony",
         "school": "Idaho",
-        "value": "384",
+        "value": "450",
         "secondary": "3",
-        "rate": "96.0"
+        "rate": "90.0"
       },
       {
         "name": "McCoy,Tayvion",
@@ -27944,9 +27944,9 @@
       {
         "name": "Wood,Joshua",
         "school": "Idaho",
-        "value": "36",
-        "secondary": "6",
-        "rate": "9.0"
+        "value": "44",
+        "secondary": "7",
+        "rate": "8.8"
       },
       {
         "name": "Chalk,Floyd",
@@ -27986,11 +27986,11 @@
         "rate": "9.5"
       },
       {
-        "name": "Miller,RL",
-        "school": "Cal Poly",
+        "name": "Hepburn,Cruz",
+        "school": "Idaho",
         "value": "2",
         "secondary": "0",
-        "rate": "9.0"
+        "rate": "9.4"
       }
     ],
     "sacks": [
@@ -28000,13 +28000,6 @@
         "value": "26",
         "secondary": "",
         "rate": ".90"
-      },
-      {
-        "name": "Brock,Seth",
-        "school": "Montana State",
-        "value": "17",
-        "secondary": "",
-        "rate": ".75"
       },
       {
         "name": "Larsen,Gauge",
@@ -28028,6 +28021,13 @@
         "value": "13",
         "secondary": "",
         "rate": ".63"
+      },
+      {
+        "name": "Brock,Seth",
+        "school": "Montana State",
+        "value": "17",
+        "secondary": "",
+        "rate": ".60"
       }
     ]
   },
@@ -28248,6 +28248,6 @@
       "news": "https://uncbears.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-03T00:31:17.868200+00:00"
+    "updated": "2026-10-03T06:34:43.283191+00:00"
   }
 }
