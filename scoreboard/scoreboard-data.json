@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-10-03T00:01:22.326642+00:00",
+  "generatedAt": "2026-10-03T05:06:21.443000+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -7278,7 +7278,7 @@
           "shortName": "MTST @ IDHO",
           "venue": "Kibbie Dome",
           "city": "Moscow",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "70",
@@ -7300,19 +7300,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Fri, October 2nd at 10:30 PM EDT",
-            "shortDetail": "10/2 - 10:30 PM EDT",
-            "label": "10/2 - 10:30 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "3:14 - 3rd Quarter",
+            "shortDetail": "3:14 - 3rd",
+            "label": "Q3",
+            "period": 3,
+            "clock": "3:14"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/2 - 10:30 PM EDT",
+          "period": 3,
+          "clock": "3:14",
+          "statusText": "Q3",
           "broadcasts": []
         },
         {
@@ -8205,7 +8205,7 @@
           "shortName": "MTST @ IDHO",
           "venue": "Kibbie Dome",
           "city": "Moscow",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "70",
@@ -8227,19 +8227,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Fri, October 2nd at 10:30 PM EDT",
-            "shortDetail": "10/2 - 10:30 PM EDT",
-            "label": "10/2 - 10:30 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "3:14 - 3rd Quarter",
+            "shortDetail": "3:14 - 3rd",
+            "label": "Q3",
+            "period": 3,
+            "clock": "3:14"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/2 - 10:30 PM EDT",
+          "period": 3,
+          "clock": "3:14",
+          "statusText": "Q3",
           "broadcasts": []
         },
         {
