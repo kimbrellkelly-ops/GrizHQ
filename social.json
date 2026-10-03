@@ -1,6 +1,19 @@
 {
-  "updated": "2026-10-03T02:19:22.411593+00:00",
+  "updated": "2026-10-03T08:23:28.222766+00:00",
   "posts": [
+    {
+      "title": "Montana is back to being a CONTENDER in the #FCS",
+      "url": "https://www.youtube.com/watch?v=0ChUz1jCkaI",
+      "image": "https://i.ytimg.com/vi/0ChUz1jCkaI/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 3, 2026",
+      "platform": "youtube",
+      "youtube_id": "0ChUz1jCkaI",
+      "published_at": "2026-10-03T00:00:00+00:00"
+    },
     {
       "title": "Is Montana State at Idaho Friday night a trap game?",
       "url": "https://www.youtube.com/watch?v=ihj9B2FDTt4",
