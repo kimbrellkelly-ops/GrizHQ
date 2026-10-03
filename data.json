@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-03T17:18:04.491452+00:00",
+  "updated": "2026-10-03T21:17:33.412582+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "4-1",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-03T17:18:56.312107+00:00"
+    "checked_at": "2026-10-03T21:18:24.829178+00:00"
   },
   "resources": [
     {
@@ -2941,7 +2941,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-03T17:18:16.625007+00:00",
+    "source_checked_at": "2026-10-03T21:17:39.813115+00:00",
     "team_summary": [
       {
         "value": "4–1",
@@ -27743,19 +27743,6 @@
     },
     {
       "rank": 9,
-      "team": "Portland State",
-      "conference_record": "1-1",
-      "overall_record": "1-4",
-      "home": "0-2",
-      "away": "1-2",
-      "conference_points": "68-72",
-      "points": "111-256",
-      "conference_streak": "W1",
-      "overall_streak": "W1",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2542"
-    },
-    {
-      "rank": 10,
       "team": "Idaho",
       "conference_record": "1-1",
       "overall_record": "1-4",
@@ -27766,6 +27753,19 @@
       "conference_streak": "W1",
       "overall_streak": "W1",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2536"
+    },
+    {
+      "rank": 10,
+      "team": "Portland State",
+      "conference_record": "1-1",
+      "overall_record": "1-4",
+      "home": "0-2",
+      "away": "1-2",
+      "conference_points": "68-72",
+      "points": "111-256",
+      "conference_streak": "W1",
+      "overall_streak": "W1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2542"
     },
     {
       "rank": 11,
@@ -28248,6 +28248,6 @@
       "news": "https://uncbears.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-03T17:18:21.138891+00:00"
+    "updated": "2026-10-03T21:17:45.537423+00:00"
   }
 }
