@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-04T07:25:04.763803+00:00",
+  "updated": "2026-10-04T13:20:33.555655+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "3 takeaways: No. 3 Grizzlies back up strong showing against Northern Colorado",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-3-grizzlies-back-up-strong-showing-against-northern-colorado/article_e949b9b6-9045-49f4-859f-7b2d2d30af88.html",
+      "date": "Oct. 4, 2026",
+      "published_at": "2026-10-04T12:00:00+00:00",
+      "description": "3 takeaways: No. 3 Grizzlies back up strong showing against Northern Colorado",
+      "source": "406 MT Sports",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/4d/64da336d-a211-5170-8c7f-631e951115af/6ac19e2d99721.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/4d/64da336d-a211-5170-8c7f-631e951115af/6ac19e2d99721.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "WATCH – Montana Griz presser – Kennedy, Davis, Mose + Ed Lamb on 36-14 win over Northern Colorado",
       "url": "https://skylinesportsmt.com/watch-montana-griz-presser-kennedy-davis-mose-ed-lamb-on-36-14-win-over-northern-colorado/",
@@ -1494,21 +1509,6 @@
       "youtube_id": "-YLCv3AfEVA",
       "video_url": "https://www.youtube.com/watch?v=-YLCv3AfEVA",
       "video_thumbnail": "https://i.ytimg.com/vi/-YLCv3AfEVA/hqdefault.jpg"
-    },
-    {
-      "title": "Headlines: Court upholds murder conviction, tensions flare at Mineral County Commissioners meeting, and plane crash lands at Polson airport",
-      "url": "https://dailyinterlake.com/news/2026/sep/19/headlines-court-upholds-murder-conviction-tensions-flare-at-mineral-county-commissioners-meeting-gofundme-set-up-for-grizzly-bear-mauling-victim-and-plane-crash-lands-at-polson-airport/",
-      "date": "Sep. 19, 2026",
-      "published_at": "2026-09-19T06:30:00+00:00",
-      "description": "Updated 2 days, 1 hour ago Headlines: Court upholds murder conviction, tensions flare at Mineral County Commissioners meeting, and plane crash lands at Polson airport Court upholds murder conviction in deadly 2022 home invasion, tensions fl",
-      "source": "Daily Inter Lake",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/09/18/headline_cover_art_template_2-01_1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698",
-      "is_video": true,
-      "youtube_id": "oEA_jiEhscs",
-      "video_url": "https://www.youtube.com/watch?v=oEA_jiEhscs",
-      "video_thumbnail": "https://i.ytimg.com/vi/oEA_jiEhscs/hqdefault.jpg"
     }
   ]
 }
