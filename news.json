@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-04T17:43:57.915149+00:00",
+  "updated": "2026-10-04T20:28:17.745532+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Davis sparks Griz to Homecoming win as offense keeps humming",
+      "url": "https://skylinesportsmt.com/davis-sparks-griz-to-homecoming-win-as-offense-keeps-humming/",
+      "date": "Oct. 4, 2026",
+      "published_at": "2026-10-04T17:13:47+00:00",
+      "description": "October 4, 2026 Davis sparks Griz to Homecoming win as offense keeps humming",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Brooks-Davis-hits-the-hole-with-intentions-Kealii-Ah-Yat-blocking-scaled.jpeg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Brooks-Davis-hits-the-hole-with-intentions-Kealii-Ah-Yat-blocking-scaled.jpeg"
+    },
     {
       "title": "3 takeaways: No. 3 Grizzlies back up strong showing against Northern Colorado",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-3-grizzlies-back-up-strong-showing-against-northern-colorado/article_e949b9b6-9045-49f4-859f-7b2d2d30af88.html",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/static-4/dailyinterlake/images/default-social.jpg?v=2"
-    },
-    {
-      "title": "Becoming a Bear Smart Community",
-      "url": "https://missoulian.com/video_b357a4a3-1d4a-574d-8d0e-cf88ffbd2b4f.html",
-      "date": "Sep. 19, 2026",
-      "published_at": "2026-09-19T12:00:00+00:00",
-      "description": "From installing bear-resistant trash cans throughout town to securing the local dump to participating in fall fruit gleaning, Virginia City has created a safe corridor for black bears and grizzlies to travel across the landscape. Learn more",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/custom/image/cd94e57c-c548-11ea-a1fd-572e8ba67fb0.jpg?resize=600%2C315",
-      "is_video": true,
-      "youtube_id": "-YLCv3AfEVA",
-      "video_url": "https://www.youtube.com/watch?v=-YLCv3AfEVA",
-      "video_thumbnail": "https://i.ytimg.com/vi/-YLCv3AfEVA/hqdefault.jpg"
     }
   ]
 }
