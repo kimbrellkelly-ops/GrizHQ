@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-04T00:39:06.603561+00:00",
+  "updated": "2026-10-04T06:50:10.394529+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-1",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Explosive offense carries Griz to Homecoming win over Bears",
+      "url": "https://gogriz.com/news/2026/10/3/football-explosive-offense-carries-griz-to-homecoming-win-over-bears",
+      "date": "Sat, 3 Oct 2026 19:10:00 MST",
+      "description": "MISSOULA – Historic performances continued to pile up for the Montana Grizzlies on Homecoming."
+    },
+    {
       "title": "Griz to host winter flag football league for kids",
       "url": "https://gogriz.com/news/2026/9/30/football-griz-to-host-winter-flag-football-league-for-kids",
       "date": "Wed, 30 Sep 2026 17:05:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/9/20/football-beavers-use-big-plays-to-beat-griz-in-corvallis",
       "date": "Sun, 20 Sep 2026 02:03:00 MST",
       "description": "CORVALLIS – The Montana Grizzlies couldn't out-pace a fast and physical Oregon State team Saturday night, with the Beavers using their big play offensive attack to jump out to an e"
-    },
-    {
-      "title": "Griz to battle Beavers on Saturday night in Corvallis",
-      "url": "https://gogriz.com/news/2026/9/15/football-griz-to-battle-beavers-on-saturday-night-in-corvallis",
-      "date": "Tue, 15 Sep 2026 16:20:00 MST",
-      "description": "MISSOULA - Thirty years and a little over one week ago, the Montana Grizzlies and a gunslinger quarterback named Ah Yat went to Corvallis, Oregon, and returned to Missoula with a 3"
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-04T00:40:01.137095+00:00"
+    "checked_at": "2026-10-04T06:50:54.243760+00:00"
   },
   "resources": [
     {
@@ -2942,7 +2942,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-04T00:39:13.121817+00:00",
+    "source_checked_at": "2026-10-04T06:50:18.104939+00:00",
     "team_summary": [
       {
         "value": "5–1",
@@ -27646,19 +27646,6 @@
   "big_sky_standings": [
     {
       "rank": 1,
-      "team": "Idaho State",
-      "conference_record": "1-0",
-      "overall_record": "4-0",
-      "home": "2-0",
-      "away": "2-0",
-      "conference_points": "28-24",
-      "points": "154-68",
-      "conference_streak": "W1",
-      "overall_streak": "W4",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2537"
-    },
-    {
-      "rank": 2,
       "team": "Montana",
       "conference_record": "3-0",
       "overall_record": "5-1",
@@ -27671,20 +27658,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2538"
     },
     {
-      "rank": 3,
-      "team": "Cal Poly",
-      "conference_record": "2-0",
-      "overall_record": "3-2",
-      "home": "2-1",
-      "away": "1-1",
-      "conference_points": "69-61",
-      "points": "148-146",
-      "conference_streak": "W2",
-      "overall_streak": "W1",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2535"
-    },
-    {
-      "rank": 4,
+      "rank": 2,
       "team": "Montana State",
       "conference_record": "2-1",
       "overall_record": "5-1",
@@ -27697,43 +27671,69 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2539"
     },
     {
-      "rank": 5,
+      "rank": 3,
       "team": "Northern Arizona",
-      "conference_record": "1-1",
-      "overall_record": "3-2",
+      "conference_record": "2-1",
+      "overall_record": "4-2",
       "home": "2-0",
-      "away": "1-2",
-      "conference_points": "48-55",
-      "points": "128-141",
-      "conference_streak": "L1",
-      "overall_streak": "L1",
+      "away": "2-2",
+      "conference_points": "86-86",
+      "points": "166-172",
+      "conference_streak": "W1",
+      "overall_streak": "W1",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2540"
     },
     {
-      "rank": 6,
+      "rank": 4,
       "team": "UC Davis",
-      "conference_record": "1-1",
-      "overall_record": "3-2",
-      "home": "1-1",
+      "conference_record": "2-1",
+      "overall_record": "4-2",
+      "home": "2-1",
       "away": "2-1",
-      "conference_points": "53-86",
-      "points": "157-166",
-      "conference_streak": "L1",
-      "overall_streak": "L1",
+      "conference_points": "102-124",
+      "points": "206-204",
+      "conference_streak": "W1",
+      "overall_streak": "W1",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2544"
     },
     {
-      "rank": 7,
-      "team": "Weber State",
-      "conference_record": "1-1",
-      "overall_record": "2-3",
-      "home": "1-1",
-      "away": "1-2",
-      "conference_points": "71-73",
-      "points": "183-192",
+      "rank": 5,
+      "team": "Cal Poly",
+      "conference_record": "2-1",
+      "overall_record": "3-3",
+      "home": "2-2",
+      "away": "1-1",
+      "conference_points": "103-103",
+      "points": "182-188",
       "conference_streak": "L1",
       "overall_streak": "L1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2535"
+    },
+    {
+      "rank": 6,
+      "team": "Weber State",
+      "conference_record": "2-1",
+      "overall_record": "3-3",
+      "home": "1-1",
+      "away": "2-2",
+      "conference_points": "113-107",
+      "points": "225-226",
+      "conference_streak": "W1",
+      "overall_streak": "W1",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2546"
+    },
+    {
+      "rank": 7,
+      "team": "Idaho State",
+      "conference_record": "1-1",
+      "overall_record": "4-1",
+      "home": "2-1",
+      "away": "2-0",
+      "conference_points": "59-62",
+      "points": "185-106",
+      "conference_streak": "L1",
+      "overall_streak": "L1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2537"
     },
     {
       "rank": 8,
@@ -27776,41 +27776,41 @@
     },
     {
       "rank": 11,
-      "team": "Eastern Washington",
-      "conference_record": "0-2",
-      "overall_record": "1-4",
+      "team": "Southern Utah",
+      "conference_record": "1-2",
+      "overall_record": "2-4",
       "home": "1-1",
-      "away": "0-3",
-      "conference_points": "54-65",
-      "points": "127-178",
-      "conference_streak": "L2",
-      "overall_streak": "L3",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2534"
+      "away": "1-3",
+      "conference_points": "91-89",
+      "points": "188-217",
+      "conference_streak": "W1",
+      "overall_streak": "W1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2543"
     },
     {
       "rank": 12,
-      "team": "Southern Utah",
-      "conference_record": "0-2",
-      "overall_record": "1-4",
+      "team": "Eastern Washington",
+      "conference_record": "0-3",
+      "overall_record": "1-5",
       "home": "1-1",
-      "away": "0-3",
-      "conference_points": "45-56",
-      "points": "142-184",
-      "conference_streak": "L2",
-      "overall_streak": "L3",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2543"
+      "away": "0-4",
+      "conference_points": "92-114",
+      "points": "165-227",
+      "conference_streak": "L3",
+      "overall_streak": "L4",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2534"
     },
     {
       "rank": 13,
       "team": "Utah Tech",
-      "conference_record": "0-2",
-      "overall_record": "0-5",
-      "home": "0-2",
+      "conference_record": "0-3",
+      "overall_record": "0-6",
+      "home": "0-3",
       "away": "0-3",
-      "conference_points": "13-91",
-      "points": "57-224",
-      "conference_streak": "L2",
-      "overall_streak": "L5",
+      "conference_points": "46-137",
+      "points": "90-270",
+      "conference_streak": "L3",
+      "overall_streak": "L6",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2561"
     }
   ],
@@ -27819,9 +27819,9 @@
       {
         "name": "Chalk,Floyd",
         "school": "Southern Utah",
-        "value": "708",
-        "secondary": "7",
-        "rate": "141.6"
+        "value": "823",
+        "secondary": "8",
+        "rate": "137.2"
       },
       {
         "name": "Gillman,Eli",
@@ -27833,26 +27833,40 @@
       {
         "name": "Green,Jaden",
         "school": "Cal Poly",
-        "value": "612",
-        "secondary": "3",
-        "rate": "122.4"
+        "value": "782",
+        "secondary": "5",
+        "rate": "130.3"
       },
       {
-        "name": "Ferguson,Spencer",
-        "school": "Weber State",
-        "value": "248",
-        "secondary": "3",
-        "rate": "82.7"
+        "name": "Fisher,Jordan",
+        "school": "UC Davis",
+        "value": "570",
+        "secondary": "7",
+        "rate": "95.0"
       },
       {
-        "name": "Thompson,Delon",
-        "school": "Portland State",
-        "value": "411",
-        "secondary": "3",
-        "rate": "82.2"
+        "name": "Burns,Will",
+        "school": "Southern Utah",
+        "value": "558",
+        "secondary": "7",
+        "rate": "93.0"
       }
     ],
     "passing": [
+      {
+        "name": "Cooke,Jordan",
+        "school": "Idaho State",
+        "value": "1396",
+        "secondary": "13",
+        "rate": "279.2"
+      },
+      {
+        "name": "Bell,Nate",
+        "school": "Eastern Washington",
+        "value": "1597",
+        "secondary": "11",
+        "rate": "266.2"
+      },
       {
         "name": "Ah Yat,Keali'i",
         "school": "Montana",
@@ -27868,25 +27882,11 @@
         "rate": "264.0"
       },
       {
-        "name": "Cooke,Jordan",
-        "school": "Idaho State",
-        "value": "1011",
-        "secondary": "10",
-        "rate": "252.8"
-      },
-      {
         "name": "Cleeland,Treynor",
         "school": "UC Davis",
-        "value": "1189",
-        "secondary": "10",
-        "rate": "237.8"
-      },
-      {
-        "name": "Bell,Nate",
-        "school": "Eastern Washington",
-        "value": "1184",
-        "secondary": "8",
-        "rate": "236.8"
+        "value": "1467",
+        "secondary": "14",
+        "rate": "244.5"
       }
     ],
     "receiving": [
@@ -27900,16 +27900,16 @@
       {
         "name": "Gbatu, Jr.,Samuel",
         "school": "UC Davis",
-        "value": "571",
-        "secondary": "4",
-        "rate": "114.2"
+        "value": "663",
+        "secondary": "5",
+        "rate": "110.5"
       },
       {
         "name": "Kjar,Noah",
         "school": "Weber State",
-        "value": "542",
+        "value": "621",
         "secondary": "8",
-        "rate": "108.4"
+        "rate": "103.5"
       },
       {
         "name": "Harste,Tony",
@@ -27921,9 +27921,9 @@
       {
         "name": "McCoy,Tayvion",
         "school": "Cal Poly",
-        "value": "423",
+        "value": "490",
         "secondary": "4",
-        "rate": "84.6"
+        "rate": "81.7"
       }
     ],
     "scoring": [
@@ -27937,16 +27937,9 @@
       {
         "name": "Lindberg,Mason",
         "school": "Idaho State",
-        "value": "40",
+        "value": "47",
         "secondary": "0",
-        "rate": "10.0"
-      },
-      {
-        "name": "Kjar,Noah",
-        "school": "Weber State",
-        "value": "48",
-        "secondary": "8",
-        "rate": "9.6"
+        "rate": "9.4"
       },
       {
         "name": "Wood,Joshua",
@@ -27956,11 +27949,18 @@
         "rate": "8.8"
       },
       {
-        "name": "Chalk,Floyd",
-        "school": "Southern Utah",
-        "value": "42",
-        "secondary": "7",
-        "rate": "8.4"
+        "name": "Kjar,Noah",
+        "school": "Weber State",
+        "value": "50",
+        "secondary": "8",
+        "rate": "8.3"
+      },
+      {
+        "name": "Fisher,Jordan",
+        "school": "UC Davis",
+        "value": "48",
+        "secondary": "8",
+        "rate": "8.0"
       }
     ],
     "tackles": [
@@ -27976,7 +27976,7 @@
         "school": "Cal Poly",
         "value": "5",
         "secondary": "1",
-        "rate": "10.4"
+        "rate": "10.2"
       },
       {
         "name": "Smith,Bryce",
@@ -27986,18 +27986,18 @@
         "rate": "9.8"
       },
       {
-        "name": "Reynolds,Nathan",
-        "school": "Idaho State",
-        "value": "8",
-        "secondary": "0",
-        "rate": "9.5"
-      },
-      {
         "name": "Hepburn,Cruz",
         "school": "Idaho",
         "value": "2",
         "secondary": "0",
         "rate": "9.4"
+      },
+      {
+        "name": "Reynolds,Nathan",
+        "school": "Idaho State",
+        "value": "8",
+        "secondary": "0",
+        "rate": "9.2"
       }
     ],
     "sacks": [
@@ -28007,6 +28007,20 @@
         "value": "26",
         "secondary": "",
         "rate": ".75"
+      },
+      {
+        "name": "Small,Porter",
+        "school": "Weber State",
+        "value": "25",
+        "secondary": "",
+        "rate": ".67"
+      },
+      {
+        "name": "Pleis,Kaleb",
+        "school": "Cal Poly",
+        "value": "30",
+        "secondary": "",
+        "rate": ".67"
       },
       {
         "name": "Larsen,Gauge",
@@ -28021,20 +28035,6 @@
         "value": "10",
         "secondary": "",
         "rate": ".67"
-      },
-      {
-        "name": "Fesili,Trehsyn",
-        "school": "Idaho State",
-        "value": "13",
-        "secondary": "",
-        "rate": ".63"
-      },
-      {
-        "name": "Brock,Seth",
-        "school": "Montana State",
-        "value": "17",
-        "secondary": "",
-        "rate": ".60"
       }
     ]
   },
@@ -28085,19 +28085,19 @@
   "big_sky_players_of_week_updated": "2026-09-20T19:00:00Z",
   "next_opponent": {
     "opponent": "Northern Arizona",
-    "record": "3–2",
-    "conferenceRecord": "1–1",
+    "record": "4–2",
+    "conferenceRecord": "2–1",
     "location": "Northern Arizona",
     "capacity": "",
     "coach": "",
     "coachLine": "Current ESPN team listing",
     "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png",
     "stats": {
-      "points": "25.6",
+      "points": "27.67",
       "offense": "",
       "passing": "",
       "rushing": "",
-      "allowed": "28.2",
+      "allowed": "28.67",
       "defense": "",
       "third": "—",
       "turnovers": "—"
@@ -28105,15 +28105,15 @@
     "recent": [
       [
         "Northern Arizona",
-        "L",
-        "14–28",
-        "at Montana State"
+        "W",
+        "38–31",
+        "at Idaho State"
       ],
       [
         "Northern Arizona",
-        "W",
-        "35–23",
-        "at Utah Tech"
+        "L",
+        "14–28",
+        "at Montana State"
       ]
     ],
     "players": [
@@ -28129,7 +28129,7 @@
       ],
       [
         "NO",
-        "Currie  Myseth",
+        "Purdy  Jeter",
         "Northern Arizona Receiving leader"
       ],
       [
@@ -28138,14 +28138,14 @@
         "Northern Arizona Defensive leader"
       ]
     ],
-    "intel": "Northern Arizona is 3–2 through 5 completed games and 1–1 in Big Sky play.",
+    "intel": "Northern Arizona is 4–2 through 6 completed games and 2–1 in Big Sky play.",
     "facts": [
       [
-        "3–2",
+        "4–2",
         "Current record"
       ],
       [
-        "1–1",
+        "2–1",
         "Big Sky record"
       ],
       [
@@ -28221,12 +28221,12 @@
       ],
       [
         "POINTS",
-        "25.6",
+        "27.67",
         "Northern Arizona points per game"
       ],
       [
         "POINTS ALLOWED",
-        "28.2",
+        "28.67",
         "Northern Arizona opponent points per game"
       ],
       [
@@ -28250,15 +28250,15 @@
       ],
       [
         "RECENT GAME",
-        "Northern Arizona L vs. at Montana State",
+        "Northern Arizona W vs. at Idaho State",
         "Full-game, recap and highlight video",
-        "https://www.youtube.com/results?search_query=Northern%20Arizona%20at%20Montana%20State%202026%20football"
+        "https://www.youtube.com/results?search_query=Northern%20Arizona%20at%20Idaho%20State%202026%20football"
       ],
       [
         "RECENT GAME",
-        "Northern Arizona W vs. at Utah Tech",
+        "Northern Arizona L vs. at Montana State",
         "Full-game, recap and highlight video",
-        "https://www.youtube.com/results?search_query=Northern%20Arizona%20at%20Utah%20Tech%202026%20football"
+        "https://www.youtube.com/results?search_query=Northern%20Arizona%20at%20Montana%20State%202026%20football"
       ]
     ],
     "resources": {
@@ -28270,6 +28270,6 @@
       "news": "https://nauathletics.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-04T00:39:18.336217+00:00"
+    "updated": "2026-10-04T06:50:24.308446+00:00"
   }
 }
