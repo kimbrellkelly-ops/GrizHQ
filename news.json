@@ -1,16 +1,45 @@
 {
-  "updated": "2026-10-04T01:44:55.106485+00:00",
+  "updated": "2026-10-04T07:25:04.763803+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
     "406 MT Sports",
     "Daily Inter Lake",
-    "FCS Football Central",
     "GoGriz",
     "Missoulian",
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "WATCH – Montana Griz presser – Kennedy, Davis, Mose + Ed Lamb on 36-14 win over Northern Colorado",
+      "url": "https://skylinesportsmt.com/watch-montana-griz-presser-kennedy-davis-mose-ed-lamb-on-36-14-win-over-northern-colorado/",
+      "date": "Oct. 4, 2026",
+      "published_at": "2026-10-04T05:16:33+00:00",
+      "description": "Colter Nuanez October 3, 2026 WATCH – Montana Griz presser – Kennedy, Davis, Mose + Ed Lamb on 36-14 win over Northern Colorado Montana head coach Bobby Kennedy, junior wide receiver Brooks Davis and senior linebacker Nai Mose along with No",
+      "source": "Skyline Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Bobby-Kennedy-and-Ed-Lamb-rapping-pregame-scaled.jpeg",
+      "is_video": true,
+      "youtube_id": "",
+      "video_url": "https://skylinesportsmt.com/watch-montana-griz-presser-kennedy-davis-mose-ed-lamb-on-36-14-win-over-northern-colorado/",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Bobby-Kennedy-and-Ed-Lamb-rapping-pregame-scaled.jpeg"
+    },
+    {
+      "title": "Behind career game, Grizzlies WR Brooks Davis setting pace for banner year",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/behind-career-game-grizzlies-wr-brooks-davis-setting-pace-for-banner-year/article_ff9cb953-2543-43a8-822a-9078d7e56da6.html",
+      "date": "Oct. 4, 2026",
+      "published_at": "2026-10-04T02:30:00+00:00",
+      "description": "Behind career game, Grizzlies WR Brooks Davis setting pace for banner year",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/f9/ff9cb953-2543-43a8-822a-9078d7e56da6/6ac1bb3d3bd80.preview.jpg?crop=1733%2C910%2C30%2C133&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/f9/ff9cb953-2543-43a8-822a-9078d7e56da6/6ac1bb3d3bd80.preview.jpg?crop=1733%2C910%2C30%2C133&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Explosive offense carries Griz to Homecoming win over Bears",
       "url": "https://gogriz.com/news/2026/10/3/football-explosive-offense-carries-griz-to-homecoming-win-over-bears",
@@ -55,6 +84,36 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/ab/4abe5b49-a2c2-5397-a1a0-b5572d74c89a/6ac17b519192c.image.jpg?resize=300%2C200"
+    },
+    {
+      "title": "Grizzlies take the field for homecoming",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-take-the-field-for-homecoming/video_a342a36b-d49d-58dc-8a0b-7afb809705fe.html",
+      "date": "Oct. 3, 2026",
+      "published_at": "2026-10-03T20:09:00+00:00",
+      "description": "Grizzlies take the field for homecoming",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/34/a342a36b-d49d-58dc-8a0b-7afb809705fe/6ac162a17accc.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": true,
+      "youtube_id": "",
+      "video_url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-take-the-field-for-homecoming/video_a342a36b-d49d-58dc-8a0b-7afb809705fe.html",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/34/a342a36b-d49d-58dc-8a0b-7afb809705fe/6ac162a17accc.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "PHOTOS: Ah Yat, Davis key Grizzlies 36-14 win over Northern Colorado",
+      "url": "https://dailyinterlake.com/news/2026/oct/03/photos-ah-yat-davis-key-grizzlies-36-14-win-over-northern-colorado/",
+      "date": "Oct. 3, 2026",
+      "published_at": "2026-10-03T08:20:00+00:00",
+      "description": "Updated 3 hours, 52 minutes ago PHOTOS: Ah Yat, Davis key Grizzlies 36-14 win over Northern Colorado The Montana Grizzlies rolled to a 36-14 win over the Northern Colorado Bears at Washington-Grizzly Stadium on Saturday, Oct. 3. Quarterback",
+      "source": "Daily Inter Lake",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/10/03/1004_SPO_DIL_Grizzlies_vs_Northern_Colorado-1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/10/03/1004_SPO_DIL_Grizzlies_vs_Northern_Colorado-1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698"
     },
     {
       "title": "3 questions: No. 3 Grizzlies seek homecoming win vs. Northern Colorado",
@@ -1450,66 +1509,6 @@
       "youtube_id": "oEA_jiEhscs",
       "video_url": "https://www.youtube.com/watch?v=oEA_jiEhscs",
       "video_thumbnail": "https://i.ytimg.com/vi/oEA_jiEhscs/hqdefault.jpg"
-    },
-    {
-      "title": "Choteau’s Rusch Yeager commits to Bobcats for football",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/montana-state-university/article_d5f6ea41-c1fd-59f7-ab54-8a550fcedea5.html",
-      "date": "Sep. 18, 2026",
-      "published_at": "2026-09-18T22:35:00+00:00",
-      "description": "Rusch Yeager, a multi-sport standout for the Bulldogs, picked the offer he got from the Montana State football program over one from the Montana Grizzlies.",
-      "source": "Missoulian",
-      "badge": "RECRUITING",
-      "short": "RECRUI",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/67/d67516f7-2636-59ef-aefc-170a0d9c3b09/6a1b5e6300169.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/67/d67516f7-2636-59ef-aefc-170a0d9c3b09/6a1b5e6300169.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Oregon State Football vs. Montana: How To Watch, Preview, Storylines",
-      "url": "https://www.si.com/college/oregon-state/football/oregon-state-football-vs-montana-how-to-watch-preview-storylines",
-      "date": "Sep. 18, 2026",
-      "published_at": "2026-09-18T21:39:02+00:00",
-      "description": "Oregon State Football vs. Montana: How To Watch, Preview, Storylines Oregon State's first football season under head coach JaMarcus Shephard continues this week as the Beavers host the Montana Grizzlies. Despite an 0-2 start, Ore",
-      "source": "FCS Football Central",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_108,w_6000,h_3375/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/ReutersImages/mmsport/oregon-state-beavers-on-si/01m2v4777sq3ejnxpsp0.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_108,w_6000,h_3375/c_fill,w_1440,ar_1440:810,f_auto,q_auto,g_auto/images/ReutersImages/mmsport/oregon-state-beavers-on-si/01m2v4777sq3ejnxpsp0.jpg"
-    },
-    {
-      "title": "3 questions: No. 3 Montana Grizzlies seek upset in road debut at Oregon State",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-3-montana-grizzlies-seek-upset-in-road-debut-at-oregon-state/article_a98b8f75-9f91-403e-bd6a-68ba065badf9.html",
-      "date": "Sep. 18, 2026",
-      "published_at": "2026-09-18T18:00:00+00:00",
-      "description": "3 questions: No. 3 Montana Grizzlies seek upset in road debut at Oregon State",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/98/a98b8f75-9f91-403e-bd6a-68ba065badf9/6aa9c7525ba76.preview.jpg?crop=1761%2C925%2C0%2C32&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/98/a98b8f75-9f91-403e-bd6a-68ba065badf9/6aa9c7525ba76.preview.jpg?crop=1761%2C925%2C0%2C32&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "3 questions: No. 3 Montana Grizzlies seek upset in road debut at Oregon State",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_1ffe3aca-2da8-53bf-bf71-4bc9cddef0df.html",
-      "date": "Sep. 18, 2026",
-      "published_at": "2026-09-18T13:30:00+00:00",
-      "description": "\"It's going to be a good test for us because first road game, going to a hostile environment, should be fun.\"",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/e2/4e2dfdc9-c6bc-5ce1-aa3d-7552d8ba57fb/6aa5dd53457aa.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/e2/4e2dfdc9-c6bc-5ce1-aa3d-7552d8ba57fb/6aa5dd53457aa.image.jpg?resize=300%2C200"
     }
   ]
 }
