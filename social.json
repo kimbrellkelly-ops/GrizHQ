@@ -1,6 +1,19 @@
 {
-  "updated": "2026-10-03T23:03:19.877473+00:00",
+  "updated": "2026-10-04T08:46:47.123571+00:00",
   "posts": [
+    {
+      "title": "Montana Griz presser - Kennedy, Davis, Mose + Ed Lamb on 36-14 win over Northern Colorado",
+      "url": "https://www.youtube.com/watch?v=ItkzKAYkTNc",
+      "image": "https://i.ytimg.com/vi/ItkzKAYkTNc/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 4, 2026",
+      "platform": "youtube",
+      "youtube_id": "ItkzKAYkTNc",
+      "published_at": "2026-10-04T00:00:00+00:00"
+    },
     {
       "title": "Tim Plough on Montana's offensive evolutions",
       "url": "https://www.youtube.com/watch?v=76H7z3ebRkk",
@@ -208,32 +221,6 @@
       "platform": "youtube",
       "youtube_id": "BrVGjv3oLo4",
       "published_at": "2026-09-28T00:00:00+00:00"
-    },
-    {
-      "title": "Montana State press conference - Brent Vigen, Patrick Duchien, Bryce Grebe on 28-14 win over NAU",
-      "url": "https://www.youtube.com/watch?v=Dw-NSgB_b5A",
-      "image": "https://i.ytimg.com/vi/Dw-NSgB_b5A/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Sep. 27, 2026",
-      "platform": "youtube",
-      "youtube_id": "Dw-NSgB_b5A",
-      "published_at": "2026-09-27T00:00:00+00:00"
-    },
-    {
-      "title": "Montana State's secret sauce? Sweet cornerbacks",
-      "url": "https://www.youtube.com/watch?v=WR6RudhrfD0",
-      "image": "https://i.ytimg.com/vi/WR6RudhrfD0/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Sep. 27, 2026",
-      "platform": "youtube",
-      "youtube_id": "WR6RudhrfD0",
-      "published_at": "2026-09-27T00:00:00+00:00"
     }
   ],
   "profiles": [
