@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05T17:41:20.959539+00:00",
+  "updated": "2026-10-05T23:22:43.554979+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz Football Week 7 Press Conference",
+      "url": "https://gogriz.com/news/2026/10/5/griz-football-week-7-press-conference",
+      "date": "Oct. 5, 2026",
+      "published_at": "2026-10-05T23:22:00+00:00",
+      "description": "Weekly Griz Football Press Conference featuring Coach Bobby Kennedy, quarterback Keali'i Ah Yat and linebacker Justin Eklund as UM looks ahead to a road test at Northern Arizona.",
+      "source": "GoGriz",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/5/Kennedy_Press_Conference.png",
+      "is_video": true,
+      "youtube_id": "",
+      "video_url": "https://gogriz.com/news/2026/10/5/griz-football-week-7-press-conference",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/5/Kennedy_Press_Conference.png"
+    },
     {
       "title": "Week 5: No. 3 Montana Grizzlies rout Northern Colorado on homecoming",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-5-no-3-montana-grizzlies-rout-northern-colorado-on-homecoming/collection_e8fa97ec-0318-48b4-bbb0-79992f0c2108.html",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/85/08523dd3-e811-5176-a563-1a9a057cdf8d/6aaf4c8312178.image.jpg?resize=300%2C225"
-    },
-    {
-      "title": "Grizzlies take the field for warmups at Oregon State",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/video_f05d89e6-ddbf-5364-a18d-7cb9ca2fd74e.html",
-      "date": "Sep. 20, 2026",
-      "published_at": "2026-09-20T02:41:00+00:00",
-      "description": "Latest Montana football coverage.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/05/f05d89e6-ddbf-5364-a18d-7cb9ca2fd74e/6aaf4c82bf9fd.image.jpg?resize=300%2C169",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/video_f05d89e6-ddbf-5364-a18d-7cb9ca2fd74e.html",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/05/f05d89e6-ddbf-5364-a18d-7cb9ca2fd74e/6aaf4c82bf9fd.image.jpg?resize=300%2C169"
     }
   ]
 }
