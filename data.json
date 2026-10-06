@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05T22:38:44.164340+00:00",
+  "updated": "2026-10-06T02:59:29.157544+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-1",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Griz Football Week 7 Press Conference",
+      "url": "https://gogriz.com/news/2026/10/5/griz-football-week-7-press-conference",
+      "date": "Mon, 5 Oct 2026 16:22:00 MST",
+      "description": "Weekly Griz Football Press Conference featuring Coach Bobby Kennedy, quarterback Keali'i Ah Yat and linebacker Justin Eklund as UM looks ahead to a road test at Northern Arizona."
+    },
+    {
       "title": "Explosive offense carries Griz to Homecoming win over Bears",
       "url": "https://gogriz.com/news/2026/10/3/football-explosive-offense-carries-griz-to-homecoming-win-over-bears",
       "date": "Sat, 3 Oct 2026 19:10:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/9/22/football-griz-to-face-aggies-in-top-10-showdown",
       "date": "Tue, 22 Sep 2026 16:25:00 MST",
       "description": "MISSOULA - The Montana Grizzles dive back in the deep end of Big Sky Conference play this weekend with a top 10 showdown at UC Davis, under the lights in California's Central Valle"
-    },
-    {
-      "title": "Beavers use big plays to beat Griz in Corvallis",
-      "url": "https://gogriz.com/news/2026/9/20/football-beavers-use-big-plays-to-beat-griz-in-corvallis",
-      "date": "Sun, 20 Sep 2026 02:03:00 MST",
-      "description": "CORVALLIS – The Montana Grizzlies couldn't out-pace a fast and physical Oregon State team Saturday night, with the Beavers using their big play offensive attack to jump out to an e"
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-05T22:39:45.267621+00:00"
+    "checked_at": "2026-10-06T03:00:17.851854+00:00"
   },
   "resources": [
     {
@@ -2942,7 +2942,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-05T22:38:52.570871+00:00",
+    "source_checked_at": "2026-10-06T02:59:36.261681+00:00",
     "team_summary": [
       {
         "value": "5–1",
@@ -27637,10 +27637,10 @@
     ]
   },
   "latest_press_conference": {
-    "title": "Montana State press conference – Brent Vigen, Patrick Duchien, Bryce Grebe on 28-14 win over NAU",
-    "date": "Sun, 27 Sep 2026 08:01:49 +0000",
-    "url": "https://skylinesportsmt.com/montana-state-press-conference-brent-vigen-patrick-duchien-bryce-grebe-on-28-14-win-over-nau/",
-    "youtube_id": ""
+    "title": "Montana Griz press conference – Bobby Kennedy, Keali’i Ah Yat, Justin Eklund on Northern Arizona",
+    "date": "Tue, 06 Oct 2026 01:20:08 +0000",
+    "url": "https://skylinesportsmt.com/montana-griz-press-conference-bobby-kennedy-kealii-ah-yat-justin-eklund-on-northern-arizona/",
+    "youtube_id": "Dh2Kqm3TEn8"
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -28270,6 +28270,6 @@
       "news": "https://nauathletics.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-05T22:38:58.054926+00:00"
+    "updated": "2026-10-06T02:59:43.314236+00:00"
   }
 }
