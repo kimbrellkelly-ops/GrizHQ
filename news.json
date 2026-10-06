@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05T23:22:43.554979+00:00",
+  "updated": "2026-10-06T03:10:31.904418+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,36 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Montana Griz press conference – Bobby Kennedy, Keali’i Ah Yat, Justin Eklund on Northern Arizona",
+      "url": "https://skylinesportsmt.com/montana-griz-press-conference-bobby-kennedy-kealii-ah-yat-justin-eklund-on-northern-arizona/",
+      "date": "Oct. 6, 2026",
+      "published_at": "2026-10-06T01:20:08+00:00",
+      "description": "Colter Nuanez October 5, 2026 Montana Griz press conference – Bobby Kennedy, Keali’i Ah Yat, Justin Eklund on Northern Arizona Montana head coach Bobby Kennedy, senior quarterback Keali’i Ah Yat and linebacker Justin Eklund addressed the me",
+      "source": "Skyline Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Kealii-Ah-Yat-rips-it-to-the-flat-with-foreground-scaled.jpeg",
+      "is_video": true,
+      "youtube_id": "Dh2Kqm3TEn8",
+      "video_url": "https://www.youtube.com/watch?v=Dh2Kqm3TEn8",
+      "video_thumbnail": "https://i.ytimg.com/vi/Dh2Kqm3TEn8/hqdefault.jpg"
+    },
+    {
+      "title": "Kalispell Glacier's Hunter Daniels commits to Grizzlies in 2027 recruiting class",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_da30fa28-10d0-554c-9eb3-c24c0ce9e329.html",
+      "date": "Oct. 6, 2026",
+      "published_at": "2026-10-06T01:15:00+00:00",
+      "description": "Hunter Daniels committed to the Grizzlies as an \"athlete\" and has played tight end and defensive end for Kalispell Glacier.",
+      "source": "Missoulian",
+      "badge": "RECRUITING",
+      "short": "RECRUI",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/2f/d2f037aa-fab2-50d0-97c5-a15c28dbaf2d/6ac44be0cac60.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/2f/d2f037aa-fab2-50d0-97c5-a15c28dbaf2d/6ac44be0cac60.image.jpg?resize=300%2C200"
+    },
     {
       "title": "Griz Football Week 7 Press Conference",
       "url": "https://gogriz.com/news/2026/10/5/griz-football-week-7-press-conference",
@@ -24,6 +54,51 @@
       "youtube_id": "",
       "video_url": "https://gogriz.com/news/2026/10/5/griz-football-week-7-press-conference",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/5/Kennedy_Press_Conference.png"
+    },
+    {
+      "title": "First look: No. 2 Montana Grizzlies at No. 13 Northern Arizona",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_762b7108-ceac-5670-bb43-60f7c3c53325.html",
+      "date": "Oct. 5, 2026",
+      "published_at": "2026-10-05T22:45:00+00:00",
+      "description": "The Montana Grizzlies head to Northern Arizona for their second Top 25 showdown this season.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/e9/5e928477-5f46-57e9-8c59-f33ff55aabe4/6ac42874bd08a.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/e9/5e928477-5f46-57e9-8c59-f33ff55aabe4/6ac42874bd08a.image.jpg?resize=300%2C200"
+    },
+    {
+      "title": "First look: No. 2 Montana Grizzlies at No. 13 Northern Arizona",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-2-montana-grizzlies-at-no-13-northern-arizona/article_2c1379dd-1b77-4f9d-88b9-b01662dbf8a9.html",
+      "date": "Oct. 5, 2026",
+      "published_at": "2026-10-05T22:45:00+00:00",
+      "description": "First look: No. 2 Montana Grizzlies at No. 13 Northern Arizona",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/2/c1/2c1379dd-1b77-4f9d-88b9-b01662dbf8a9/6ac425e4027ca.preview.jpg?crop=1764%2C926%2C0%2C33&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/2/c1/2c1379dd-1b77-4f9d-88b9-b01662dbf8a9/6ac425e4027ca.preview.jpg?crop=1764%2C926%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Headlines: Trego man shoots grizzly bear in self-defense, Whitefish musician lands spot on The Voice",
+      "url": "https://dailyinterlake.com/news/2026/oct/05/headlines-trego-man-shoots-grizzly-bear-in-self-defense-whitefish-musician-lands-spot-on-the-voice/",
+      "date": "Oct. 5, 2026",
+      "published_at": "2026-10-05T05:30:00+00:00",
+      "description": "Updated 2 hours, 25 minutes ago Headlines: Trego man shoots grizzly bear in self-defense, Whitefish musician lands spot on The Voice Trego resident kills grizzly, Flathead County Attorney puts in for vacant judge’s seat, judge dismisses Col",
+      "source": "Daily Inter Lake",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/10/05/headline_cover_art_template_2-01_3_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698",
+      "is_video": true,
+      "youtube_id": "DUFDPwqEtnI",
+      "video_url": "https://www.youtube.com/watch?v=DUFDPwqEtnI",
+      "video_thumbnail": "https://i.ytimg.com/vi/DUFDPwqEtnI/hqdefault.jpg"
     },
     {
       "title": "Week 5: No. 3 Montana Grizzlies rout Northern Colorado on homecoming",
@@ -1434,81 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/19/20260919_griz-fb-v-osu_032_rb.JPG"
-    },
-    {
-      "title": "WATCH – Montana’s Bobby Kennedy, Brooks Davis, Tanner Huff post Oregon State loss",
-      "url": "https://skylinesportsmt.com/watch-montanas-bobby-kennedy-brooks-davis-tanner-huff-post-oregon-state-loss/",
-      "date": "Sep. 20, 2026",
-      "published_at": "2026-09-20T07:30:00+00:00",
-      "description": "September 20, 2026 WATCH – Montana’s Bobby Kennedy, Brooks Davis, Tanner Huff post Oregon State loss",
-      "source": "Skyline Sports",
-      "badge": "INSIDER",
-      "short": "INSIDE",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/09/44SVAMPK3ZBN7AR67NNO5YALSE.avif",
-      "is_video": true,
-      "youtube_id": "B_FfqIi0LIs",
-      "video_url": "https://www.youtube.com/watch?v=B_FfqIi0LIs",
-      "video_thumbnail": "https://i.ytimg.com/vi/B_FfqIi0LIs/hqdefault.jpg"
-    },
-    {
-      "title": "Live updates: No. 3 Montana Grizzlies visit FBS Oregon State",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-football-visit-oregon-state-live-updates/article_6b3fcfc4-fedd-4acb-b0ca-e15012656c8a.html",
-      "date": "Sep. 20, 2026",
-      "published_at": "2026-09-20T06:20:00+00:00",
-      "description": "Live updates: No. 3 Montana Grizzlies visit FBS Oregon State",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/b3/6b3fcfc4-fedd-4acb-b0ca-e15012656c8a/6aaf7b4ebd63a.preview.jpg?crop=1742%2C915%2C0%2C137&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/b3/6b3fcfc4-fedd-4acb-b0ca-e15012656c8a/6aaf7b4ebd63a.preview.jpg?crop=1742%2C915%2C0%2C137&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Recap: Montana Grizzlies can't keep pace with Oregon State in 1st loss",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_4e242ba5-0e3e-587b-b973-78a9d380a090.html",
-      "date": "Sep. 20, 2026",
-      "published_at": "2026-09-20T06:20:00+00:00",
-      "description": "The Beavers scored six touchdowns across their opening seven drives before they pulled their starting quarterback with a 42-3 lead over the Grizzlies.",
-      "source": "Missoulian",
-      "badge": "GAME STORY",
-      "short": "GAME S",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/85/08523dd3-e811-5176-a563-1a9a057cdf8d/6aaf4c8312178.image.jpg?resize=300%2C225",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/85/08523dd3-e811-5176-a563-1a9a057cdf8d/6aaf4c8312178.image.jpg?resize=300%2C225"
-    },
-    {
-      "title": "Grizzlies take the field for warmups at Oregon State",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-take-the-field-for-warmups-at-oregon-state/video_8a0da90d-37c5-5b22-a612-3ea10ac49728.html",
-      "date": "Sep. 20, 2026",
-      "published_at": "2026-09-20T02:41:00+00:00",
-      "description": "Grizzlies take the field for warmups at Oregon State",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/a0/8a0da90d-37c5-5b22-a612-3ea10ac49728/6aaf48dae726b.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-take-the-field-for-warmups-at-oregon-state/video_8a0da90d-37c5-5b22-a612-3ea10ac49728.html",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/a0/8a0da90d-37c5-5b22-a612-3ea10ac49728/6aaf48dae726b.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Grizzlies at Beavers pregame",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/image_08523dd3-e811-5176-a563-1a9a057cdf8d.html",
-      "date": "Sep. 20, 2026",
-      "published_at": "2026-09-20T02:41:00+00:00",
-      "description": "Montana's offensive line goes through pregame drills prior to the nonconference contest against Oregon State on Saturday at Reser Stadium in Corvallis, Oregon.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/85/08523dd3-e811-5176-a563-1a9a057cdf8d/6aaf4c8312178.image.jpg?resize=300%2C225",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/85/08523dd3-e811-5176-a563-1a9a057cdf8d/6aaf4c8312178.image.jpg?resize=300%2C225"
     }
   ]
 }
