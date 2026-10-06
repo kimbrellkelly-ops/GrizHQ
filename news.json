@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-06T03:10:31.904418+00:00",
+  "updated": "2026-10-06T10:12:06.912261+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Big Sky Breakdown – Nuanez brothers on Idaho’s last-second win over MSU, Griz offensive showcase",
+      "url": "https://skylinesportsmt.com/big-sky-breakdown-nuanez-brothers-on-idahos-last-second-win-over-msu-griz-offensive-showcase/",
+      "date": "Oct. 6, 2026",
+      "published_at": "2026-10-06T02:30:14+00:00",
+      "description": "October 5, 2026 Big Sky Breakdown – Nuanez brothers on Idaho’s last-second win over MSU, Griz offensive showcase",
+      "source": "Skyline Sports",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Brooks-Davis-screaming-celebration-with-ref-background-scaled.jpeg",
+      "is_video": true,
+      "youtube_id": "kgDV_YiQitM",
+      "video_url": "https://www.youtube.com/watch?v=kgDV_YiQitM",
+      "video_thumbnail": "https://i.ytimg.com/vi/kgDV_YiQitM/hqdefault.jpg"
+    },
     {
       "title": "Montana Griz press conference – Bobby Kennedy, Keali’i Ah Yat, Justin Eklund on Northern Arizona",
       "url": "https://skylinesportsmt.com/montana-griz-press-conference-bobby-kennedy-kealii-ah-yat-justin-eklund-on-northern-arizona/",
@@ -24,6 +39,21 @@
       "youtube_id": "Dh2Kqm3TEn8",
       "video_url": "https://www.youtube.com/watch?v=Dh2Kqm3TEn8",
       "video_thumbnail": "https://i.ytimg.com/vi/Dh2Kqm3TEn8/hqdefault.jpg"
+    },
+    {
+      "title": "Kalispell Glacier's Hunter Daniels commits to Grizzlies in 2027 recruiting class",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/kalispell-glaciers-hunter-daniels-commits-to-grizzlies-in-2027-recruiting-class/article_bd2b4211-be74-4b21-9bb5-66d6746bbec0.html",
+      "date": "Oct. 6, 2026",
+      "published_at": "2026-10-06T01:15:00+00:00",
+      "description": "Kalispell Glacier's Hunter Daniels commits to Grizzlies in 2027 recruiting class",
+      "source": "406 MT Sports",
+      "badge": "RECRUITING",
+      "short": "RECRUI",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/d2/bd2b4211-be74-4b21-9bb5-66d6746bbec0/6ac449a3472ee.preview.jpg?crop=1761%2C925%2C0%2C32&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/d2/bd2b4211-be74-4b21-9bb5-66d6746bbec0/6ac449a3472ee.preview.jpg?crop=1761%2C925%2C0%2C32&resize=1200%2C630&order=crop%2Cresize"
     },
     {
       "title": "Kalispell Glacier's Hunter Daniels commits to Grizzlies in 2027 recruiting class",
@@ -57,21 +87,6 @@
     },
     {
       "title": "First look: No. 2 Montana Grizzlies at No. 13 Northern Arizona",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_762b7108-ceac-5670-bb43-60f7c3c53325.html",
-      "date": "Oct. 5, 2026",
-      "published_at": "2026-10-05T22:45:00+00:00",
-      "description": "The Montana Grizzlies head to Northern Arizona for their second Top 25 showdown this season.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/e9/5e928477-5f46-57e9-8c59-f33ff55aabe4/6ac42874bd08a.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/e9/5e928477-5f46-57e9-8c59-f33ff55aabe4/6ac42874bd08a.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "First look: No. 2 Montana Grizzlies at No. 13 Northern Arizona",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-2-montana-grizzlies-at-no-13-northern-arizona/article_2c1379dd-1b77-4f9d-88b9-b01662dbf8a9.html",
       "date": "Oct. 5, 2026",
       "published_at": "2026-10-05T22:45:00+00:00",
@@ -84,6 +99,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/2/c1/2c1379dd-1b77-4f9d-88b9-b01662dbf8a9/6ac425e4027ca.preview.jpg?crop=1764%2C926%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "First look: No. 2 Montana Grizzlies at No. 13 Northern Arizona",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_762b7108-ceac-5670-bb43-60f7c3c53325.html",
+      "date": "Oct. 5, 2026",
+      "published_at": "2026-10-05T22:45:00+00:00",
+      "description": "The Montana Grizzlies head to Northern Arizona for their second Top 25 showdown this season.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/e9/5e928477-5f46-57e9-8c59-f33ff55aabe4/6ac42874bd08a.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/e9/5e928477-5f46-57e9-8c59-f33ff55aabe4/6ac42874bd08a.image.jpg?resize=300%2C200"
     },
     {
       "title": "Headlines: Trego man shoots grizzly bear in self-defense, Whitefish musician lands spot on The Voice",
@@ -1479,36 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/68/1689968d-0d4f-5a35-8d0a-7139488765f2/6aafb63893a11.image.jpg?resize=300%2C195"
-    },
-    {
-      "title": "Beavers blitz Griz: Atkinson’s five TD passes bury Montana, give BK first loss as head coach",
-      "url": "https://skylinesportsmt.com/beavers-blitz-griz-atkinsons-five-td-passes-bury-montana-give-bk-first-loss-as-head-coach/",
-      "date": "Sep. 20, 2026",
-      "published_at": "2026-09-20T10:36:04+00:00",
-      "description": "September 20, 2026 Beavers blitz Griz: Atkinson’s five TD passes bury Montana, give BK first loss as head coach",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/09/Brooks-Davis.webp",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/09/Brooks-Davis.webp"
-    },
-    {
-      "title": "Beavers use big plays to beat Griz in Corvallis",
-      "url": "https://gogriz.com/news/2026/9/20/football-beavers-use-big-plays-to-beat-griz-in-corvallis",
-      "date": "Sep. 20, 2026",
-      "published_at": "2026-09-20T09:03:00+00:00",
-      "description": "CORVALLIS – The Montana Grizzlies couldn't out-pace a fast and physical Oregon State team Saturday night, with the Beavers using their big play offensive attack to jump out to an early lead and come away with a 52-17 win at Reser Stadium.",
-      "source": "GoGriz",
-      "badge": "GAME STORY",
-      "short": "GAME S",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/19/20260919_griz-fb-v-osu_032_rb.JPG",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/19/20260919_griz-fb-v-osu_032_rb.JPG"
     }
   ]
 }
