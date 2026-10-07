@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-06T21:38:25.048199+00:00",
+  "updated": "2026-10-07T01:33:29.515425+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-1",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Griz back on road to face No. 13 Lumberjacks",
+      "url": "https://gogriz.com/news/2026/10/6/football-griz-back-on-road-to-face-no-13-lumberjacks",
+      "date": "Tue, 6 Oct 2026 17:05:00 MST",
+      "description": "The Montana Grizzlies return to the road this week for another top 25 showdown against a Big Sky Conference opponent as the No. 2/3 Griz travel south to Flagstaff to face the No. 1"
+    },
+    {
       "title": "Griz Football Week 7 Press Conference",
       "url": "https://gogriz.com/news/2026/10/5/griz-football-week-7-press-conference",
       "date": "Mon, 5 Oct 2026 16:22:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/9/24/football-griz-football-to-host-player-reunion-weekend-as-part-of-stadiums-40th-anniversary-celebration",
       "date": "Thu, 24 Sep 2026 13:50:00 MST",
       "description": "To help celebrate the 40th anniversary of Washington-Grizzly Stadium, the Montana Grizzlies are calling all former football players to reunite at \"The Mecca of FCS Football\" for a "
-    },
-    {
-      "title": "Griz to face Aggies in top 10 showdown",
-      "url": "https://gogriz.com/news/2026/9/22/football-griz-to-face-aggies-in-top-10-showdown",
-      "date": "Tue, 22 Sep 2026 16:25:00 MST",
-      "description": "MISSOULA - The Montana Grizzles dive back in the deep end of Big Sky Conference play this weekend with a top 10 showdown at UC Davis, under the lights in California's Central Valle"
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-06T21:39:28.162752+00:00"
+    "checked_at": "2026-10-07T01:34:24.758112+00:00"
   },
   "resources": [
     {
@@ -2942,7 +2942,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-06T21:38:32.584408+00:00",
+    "source_checked_at": "2026-10-07T01:33:37.705581+00:00",
     "team_summary": [
       {
         "value": "5–1",
@@ -28270,6 +28270,6 @@
       "news": "https://nauathletics.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-06T21:38:38.176959+00:00"
+    "updated": "2026-10-07T01:33:43.764991+00:00"
   }
 }
