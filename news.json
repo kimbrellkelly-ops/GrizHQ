@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-06T21:22:54.155883+00:00",
+  "updated": "2026-10-07T00:52:37.656521+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz back on road to face No. 13 Lumberjacks",
+      "url": "https://gogriz.com/news/2026/10/6/football-griz-back-on-road-to-face-no-13-lumberjacks",
+      "date": "Oct. 7, 2026",
+      "published_at": "2026-10-07T00:05:00+00:00",
+      "description": "The Montana Grizzlies return to the road this week for another top 25 showdown against a Big Sky Conference opponent as the No. 2/3 Griz travel south to Flagstaff to face the No. 13/14 Northern Arizona Lumberjacks at the Walkup Skydome on S",
+      "source": "GoGriz",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/3/10032026_fb_11105__ce.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/3/10032026_fb_11105__ce.jpg"
+    },
     {
       "title": "Tight end Reese Brooks happy to receive increasing role in 1st year with Griz",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/tight-end-reese-brooks-happy-to-receive-increasing-role-in-1st-year-with-griz/article_1d0c519b-2619-47b8-b50c-0bce53b594ab.html",
@@ -104,7 +119,7 @@
       "title": "First look: No. 2 Montana Grizzlies at No. 13 Northern Arizona",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-2-montana-grizzlies-at-no-13-northern-arizona/article_2c1379dd-1b77-4f9d-88b9-b01662dbf8a9.html",
       "date": "Oct. 5, 2026",
-      "published_at": "2026-10-05T22:45:00+00:00",
+      "published_at": "2026-10-05T22:46:00+00:00",
       "description": "First look: No. 2 Montana Grizzlies at No. 13 Northern Arizona",
       "source": "406 MT Sports",
       "badge": "GRIZ NEWS",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/6a/b6ac5247-bb95-47d1-821d-842818631005/6aaf92b9cdd3f.preview.jpg?crop=1785%2C937%2C0%2C111&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "3 takeaways: No. 3 Grizzlies exit 1st loss needing to make progress",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-3-grizzlies-exit-1st-loss-needing-to-make-progress/article_11740f5e-ace2-4d03-960e-1c56cd39150e.html",
-      "date": "Sep. 20, 2026",
-      "published_at": "2026-09-20T14:00:00+00:00",
-      "description": "3 takeaways: No. 3 Grizzlies exit 1st loss needing to make progress",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/17/11740f5e-ace2-4d03-960e-1c56cd39150e/6aafb1e918f86.preview.jpg?crop=1104%2C580%2C290%2C24",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/17/11740f5e-ace2-4d03-960e-1c56cd39150e/6aafb1e918f86.preview.jpg?crop=1104%2C580%2C290%2C24"
     }
   ]
 }
