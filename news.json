@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07T13:56:21.805966+00:00",
+  "updated": "2026-10-07T19:39:08.136445+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Bobby Kennedy settling in as 1st-time head coach as Grizzlies reach midpoint",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/bobby-kennedy-settling-in-as-1st-time-head-coach-as-grizzlies-reach-midpoint/article_9a213165-0f97-443a-9aa8-a1896c828741.html",
+      "date": "Oct. 7, 2026",
+      "published_at": "2026-10-07T13:00:00+00:00",
+      "description": "Bobby Kennedy settling in as 1st-time head coach as Grizzlies reach midpoint",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/9/a2/9a213165-0f97-443a-9aa8-a1896c828741/6ac486b1a7823.preview.jpg?crop=1111%2C583%2C342%2C85",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/9/a2/9a213165-0f97-443a-9aa8-a1896c828741/6ac486b1a7823.preview.jpg?crop=1111%2C583%2C342%2C85"
+    },
     {
       "title": "Griz back on road to face No. 13 Lumberjacks",
       "url": "https://gogriz.com/news/2026/10/6/football-griz-back-on-road-to-face-no-13-lumberjacks",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/55/45567382-8eaa-4b0e-a16a-e7c2d225840e/6ab1ab54f3de6.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Week 3: FBS Oregon State overwhelms No. 3 Montana Grizzlies",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-3-fbs-oregon-state-overwhelms-no-3-montana-grizzlies/collection_b6ac5247-bb95-47d1-821d-842818631005.html",
-      "date": "Sep. 20, 2026",
-      "published_at": "2026-09-20T20:00:00+00:00",
-      "description": "Week 3: FBS Oregon State overwhelms No. 3 Montana Grizzlies",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/6a/b6ac5247-bb95-47d1-821d-842818631005/6aaf92b9cdd3f.preview.jpg?crop=1785%2C937%2C0%2C111&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/6a/b6ac5247-bb95-47d1-821d-842818631005/6aaf92b9cdd3f.preview.jpg?crop=1785%2C937%2C0%2C111&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
