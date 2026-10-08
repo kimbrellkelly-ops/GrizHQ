@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-10-08T07:27:56.507988+00:00",
+  "generatedAt": "2026-10-08T14:47:01.023098+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -8588,6 +8588,50 @@
       "bigSkyEventCount": 5,
       "fcsTop25Games": [
         {
+          "id": "401867987",
+          "date": "2026-10-10T16:00Z",
+          "name": "South Carolina State Bulldogs at Charleston Southern Buccaneers",
+          "shortName": "SCST @ CHSO",
+          "venue": "Buccaneer Field",
+          "city": "Charleston",
+          "state": "pre",
+          "teams": [
+            {
+              "id": "2127",
+              "name": "Charleston Southern Buccaneers",
+              "short": "Charleston So",
+              "abbreviation": "CHSO",
+              "homeAway": "home",
+              "score": "",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2127.png"
+            },
+            {
+              "id": "2569",
+              "name": "South Carolina State Bulldogs",
+              "short": "SC State",
+              "abbreviation": "SCST",
+              "homeAway": "away",
+              "score": "",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2569.png"
+            }
+          ],
+          "status": {
+            "state": "pre",
+            "completed": false,
+            "name": "STATUS_SCHEDULED",
+            "detail": "Sat, October 10th at 12:00 PM EDT",
+            "shortDetail": "10/10 - 12:00 PM EDT",
+            "label": "10/10 - 12:00 PM EDT",
+            "period": null,
+            "clock": "0:00"
+          },
+          "completed": false,
+          "period": null,
+          "clock": "0:00",
+          "statusText": "10/10 - 12:00 PM EDT",
+          "broadcasts": []
+        },
+        {
           "id": "401867860",
           "date": "2026-10-10T17:00Z",
           "name": "Youngstown State Penguins at Indiana State Sycamores",
@@ -9097,50 +9141,6 @@
               "homeAway": "away",
               "score": "",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png"
-            }
-          ],
-          "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 10th at 6:00 PM EDT",
-            "shortDetail": "10/10 - 6:00 PM EDT",
-            "label": "10/10 - 6:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
-          },
-          "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/10 - 6:00 PM EDT",
-          "broadcasts": []
-        },
-        {
-          "id": "401867987",
-          "date": "2026-10-10T22:00Z",
-          "name": "South Carolina State Bulldogs at Charleston Southern Buccaneers",
-          "shortName": "SCST @ CHSO",
-          "venue": "Buccaneer Field",
-          "city": "Charleston",
-          "state": "pre",
-          "teams": [
-            {
-              "id": "2127",
-              "name": "Charleston Southern Buccaneers",
-              "short": "Charleston So",
-              "abbreviation": "CHSO",
-              "homeAway": "home",
-              "score": "",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2127.png"
-            },
-            {
-              "id": "2569",
-              "name": "South Carolina State Bulldogs",
-              "short": "SC State",
-              "abbreviation": "SCST",
-              "homeAway": "away",
-              "score": "",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2569.png"
             }
           ],
           "status": {
