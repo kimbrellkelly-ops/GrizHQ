@@ -1,6 +1,32 @@
 {
-  "updated": "2026-10-08T16:42:50.245760+00:00",
+  "updated": "2026-10-08T21:31:10.889945+00:00",
   "posts": [
+    {
+      "title": "Brawl of the Wild Coaches' Corner - Montana head coach Bobby Kennedy on UNC win, NAU road trip",
+      "url": "https://www.youtube.com/watch?v=E-44vnhsW6I",
+      "image": "https://i.ytimg.com/vi/E-44vnhsW6I/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 8, 2026",
+      "platform": "youtube",
+      "youtube_id": "E-44vnhsW6I",
+      "published_at": "2026-10-08T00:00:00+00:00"
+    },
+    {
+      "title": "Griz Stars of the Week - WR Landon Ransom-Goelz, TE Mariano Birdno, WR coach Eric Price",
+      "url": "https://www.youtube.com/watch?v=GA7NmrsYTi8",
+      "image": "https://i.ytimg.com/vi/GA7NmrsYTi8/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 8, 2026",
+      "platform": "youtube",
+      "youtube_id": "GA7NmrsYTi8",
+      "published_at": "2026-10-08T00:00:00+00:00"
+    },
     {
       "title": "How much pressure is on Montana State to not lose again?",
       "url": "https://www.youtube.com/watch?v=Z50we_tL0ac",
