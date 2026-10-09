@@ -1,6 +1,19 @@
 {
-  "updated": "2026-10-08T21:31:10.889945+00:00",
+  "updated": "2026-10-09T01:26:51.146690+00:00",
   "posts": [
+    {
+      "title": "Big Sky Breakdown with Jordan Tripp on No. 1 Montana State going down, Montana's new offensive level",
+      "url": "https://www.youtube.com/watch?v=HMQ26Xu6YyU",
+      "image": "https://i.ytimg.com/vi/HMQ26Xu6YyU/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 8, 2026",
+      "platform": "youtube",
+      "youtube_id": "HMQ26Xu6YyU",
+      "published_at": "2026-10-08T00:00:00+00:00"
+    },
     {
       "title": "Brawl of the Wild Coaches' Corner - Montana head coach Bobby Kennedy on UNC win, NAU road trip",
       "url": "https://www.youtube.com/watch?v=E-44vnhsW6I",
@@ -156,45 +169,6 @@
       "platform": "youtube",
       "youtube_id": "0ChUz1jCkaI",
       "published_at": "2026-10-03T00:00:00+00:00"
-    },
-    {
-      "title": "Is Montana State at Idaho Friday night a trap game?",
-      "url": "https://www.youtube.com/watch?v=ihj9B2FDTt4",
-      "image": "https://i.ytimg.com/vi/ihj9B2FDTt4/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 2, 2026",
-      "platform": "youtube",
-      "youtube_id": "ihj9B2FDTt4",
-      "published_at": "2026-10-02T00:00:00+00:00"
-    },
-    {
-      "title": "Big Sky Breakdown with former NFL LB Jordan Tripp on Griz win over UC Davis, homecoming at UM",
-      "url": "https://www.youtube.com/watch?v=NQw0KidmNWY",
-      "image": "https://i.ytimg.com/vi/NQw0KidmNWY/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 2, 2026",
-      "platform": "youtube",
-      "youtube_id": "NQw0KidmNWY",
-      "published_at": "2026-10-02T00:00:00+00:00"
-    },
-    {
-      "title": "Emulating Montana State's physicality for the Idaho Vandals",
-      "url": "https://www.youtube.com/watch?v=KWwVVCFqV7I",
-      "image": "https://i.ytimg.com/vi/KWwVVCFqV7I/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 2, 2026",
-      "platform": "youtube",
-      "youtube_id": "KWwVVCFqV7I",
-      "published_at": "2026-10-02T00:00:00+00:00"
     }
   ],
   "profiles": [
