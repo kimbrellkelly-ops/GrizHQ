@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-10-09T18:57:24.466784+00:00",
+  "generatedAt": "2026-10-09T23:01:52.485812+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -12890,7 +12890,7 @@
       "fcsTop25Games": [
         {
           "id": "401867964",
-          "date": "2026-11-05T22:00Z",
+          "date": "2026-11-06T00:30Z",
           "name": "South Carolina State Bulldogs at Howard Bison",
           "shortName": "SCST @ HOW",
           "venue": "Greene Stadium",
@@ -12920,16 +12920,16 @@
             "state": "pre",
             "completed": false,
             "name": "STATUS_SCHEDULED",
-            "detail": "Thu, November 5th at 5:00 PM EST",
-            "shortDetail": "11/5 - 5:00 PM EST",
-            "label": "11/5 - 5:00 PM EST",
+            "detail": "Thu, November 5th at 7:30 PM EST",
+            "shortDetail": "11/5 - 7:30 PM EST",
+            "label": "11/5 - 7:30 PM EST",
             "period": null,
             "clock": "0:00"
           },
           "completed": false,
           "period": null,
           "clock": "0:00",
-          "statusText": "11/5 - 5:00 PM EST",
+          "statusText": "11/5 - 7:30 PM EST",
           "broadcasts": []
         },
         {
