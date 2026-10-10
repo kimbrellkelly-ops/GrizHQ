@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10T20:51:21.699813+00:00",
+  "updated": "2026-10-10T23:58:36.939087+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Live updates: No. 2 Montana Grizzlies visit No. 13 Northern Arizona",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-football-visit-nau-live-updates/article_73a8adc8-4fa7-400c-b0ed-6b0865d583ca.html",
+      "date": "Oct. 10, 2026",
+      "published_at": "2026-10-10T20:50:00+00:00",
+      "description": "Live updates: No. 2 Montana Grizzlies visit No. 13 Northern Arizona",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/3a/73a8adc8-4fa7-400c-b0ed-6b0865d583ca/6acad0d243ec5.preview.jpg?crop=1761%2C925%2C2%2C195&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/3a/73a8adc8-4fa7-400c-b0ed-6b0865d583ca/6acad0d243ec5.preview.jpg?crop=1761%2C925%2C2%2C195&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "3 questions: No. 2 Grizzlies eye Top 25 win at Northern Arizona",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-2-grizzlies-eye-top-25-win-at-northern-arizona/article_a7443915-f42d-4dc3-bed8-39f8176d8306.html",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/88/688af292-c4ee-56b3-801d-6dd827dea1c7/6aafb6391e22b.image.jpg?resize=300%2C214"
-    },
-    {
-      "title": "Griz Game Day 9-24-26",
-      "url": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/85/685ca537-a5d8-412e-a9ed-db6f8695f302/6ab3ebd347c66.pdf.pdf",
-      "date": "Sep. 23, 2026",
-      "published_at": "2026-09-23T15:10:00+00:00",
-      "description": "Latest Montana football coverage.",
-      "source": "Missoulian",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg"
     }
   ]
 }
