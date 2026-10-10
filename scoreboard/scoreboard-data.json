@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-10-10T14:39:35.491097+00:00",
+  "generatedAt": "2026-10-10T18:50:23.162935+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -8588,57 +8588,13 @@
       "bigSkyEventCount": 5,
       "fcsTop25Games": [
         {
-          "id": "401867987",
-          "date": "2026-10-10T16:00Z",
-          "name": "South Carolina State Bulldogs at Charleston Southern Buccaneers",
-          "shortName": "SCST @ CHSO",
-          "venue": "Buccaneer Field",
-          "city": "Charleston",
-          "state": "pre",
-          "teams": [
-            {
-              "id": "2127",
-              "name": "Charleston Southern Buccaneers",
-              "short": "Charleston So",
-              "abbreviation": "CHSO",
-              "homeAway": "home",
-              "score": "",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2127.png"
-            },
-            {
-              "id": "2569",
-              "name": "South Carolina State Bulldogs",
-              "short": "SC State",
-              "abbreviation": "SCST",
-              "homeAway": "away",
-              "score": "",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2569.png"
-            }
-          ],
-          "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 10th at 12:00 PM EDT",
-            "shortDetail": "10/10 - 12:00 PM EDT",
-            "label": "10/10 - 12:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
-          },
-          "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/10 - 12:00 PM EDT",
-          "broadcasts": []
-        },
-        {
           "id": "401868347",
           "date": "2026-10-10T16:00Z",
           "name": "East Tennessee State Buccaneers at The Citadel Bulldogs",
           "shortName": "ETSU @ CIT",
           "venue": "Johnson Hagood Stadium",
           "city": "Charleston",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2643",
@@ -8660,19 +8616,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 10th at 12:00 PM EDT",
-            "shortDetail": "10/10 - 12:00 PM EDT",
-            "label": "10/10 - 12:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "3:56 - 3rd Quarter",
+            "shortDetail": "3:56 - 3rd",
+            "label": "Q3",
+            "period": 3,
+            "clock": "3:56"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/10 - 12:00 PM EDT",
+          "period": 3,
+          "clock": "3:56",
+          "statusText": "Q3",
           "broadcasts": []
         },
         {
@@ -8682,7 +8638,7 @@
           "shortName": "YSU @ INST",
           "venue": "Memorial Stadium (Terre Haute, IN)",
           "city": "Terre Haute",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "282",
@@ -8690,7 +8646,7 @@
               "short": "Indiana St",
               "abbreviation": "INST",
               "homeAway": "home",
-              "score": "",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/282.png"
             },
             {
@@ -8699,24 +8655,24 @@
               "short": "Youngstown St",
               "abbreviation": "YSU",
               "homeAway": "away",
-              "score": "",
+              "score": "36",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 10th at 1:00 PM EDT",
-            "shortDetail": "10/10 - 1:00 PM EDT",
-            "label": "10/10 - 1:00 PM EDT",
-            "period": null,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "10/10 - 1:00 PM EDT",
+          "statusText": "HALFTIME",
           "broadcasts": []
         },
         {
@@ -8726,7 +8682,7 @@
           "shortName": "HARV @ COR",
           "venue": "Schoellkopf Field",
           "city": "Ithaca",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "172",
@@ -8748,19 +8704,63 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 10th at 1:00 PM EDT",
-            "shortDetail": "10/10 - 1:00 PM EDT",
-            "label": "10/10 - 1:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "8:26 - 2nd Quarter",
+            "shortDetail": "8:26 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "8:26"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/10 - 1:00 PM EDT",
+          "period": 2,
+          "clock": "8:26",
+          "statusText": "Q2",
+          "broadcasts": []
+        },
+        {
+          "id": "401867987",
+          "date": "2026-10-10T17:00Z",
+          "name": "South Carolina State Bulldogs at Charleston Southern Buccaneers",
+          "shortName": "SCST @ CHSO",
+          "venue": "Buccaneer Field",
+          "city": "Charleston",
+          "state": "in",
+          "teams": [
+            {
+              "id": "2127",
+              "name": "Charleston Southern Buccaneers",
+              "short": "Charleston So",
+              "abbreviation": "CHSO",
+              "homeAway": "home",
+              "score": "",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2127.png"
+            },
+            {
+              "id": "2569",
+              "name": "South Carolina State Bulldogs",
+              "short": "SC State",
+              "abbreviation": "SCST",
+              "homeAway": "away",
+              "score": "",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2569.png"
+            }
+          ],
+          "status": {
+            "state": "in",
+            "completed": false,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "10:18 - 2nd Quarter",
+            "shortDetail": "10:18 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "10:18"
+          },
+          "completed": false,
+          "period": 2,
+          "clock": "10:18",
+          "statusText": "Q2",
           "broadcasts": []
         },
         {
@@ -8770,7 +8770,7 @@
           "shortName": "SIU @ SDAK",
           "venue": "The DakotaDome",
           "city": "Vermillion",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "233",
@@ -8792,19 +8792,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 10th at 2:00 PM EDT",
-            "shortDetail": "10/10 - 2:00 PM EDT",
-            "label": "10/10 - 2:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "8:36 - 2nd Quarter",
+            "shortDetail": "8:36 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "8:36"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/10 - 2:00 PM EDT",
+          "period": 2,
+          "clock": "8:36",
+          "statusText": "Q2",
           "broadcasts": []
         },
         {
