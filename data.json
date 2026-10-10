@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10T13:44:13.317970+00:00",
+  "updated": "2026-10-10T18:37:25.395465+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-1",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-10T13:44:54.110639+00:00"
+    "checked_at": "2026-10-10T18:38:08.361305+00:00"
   },
   "resources": [
     {
@@ -2942,7 +2942,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-10T13:44:20.169600+00:00",
+    "source_checked_at": "2026-10-10T18:37:31.874691+00:00",
     "team_summary": [
       {
         "value": "5–1",
@@ -28171,6 +28171,6 @@
       "news": "https://www.google.com/search?q=%2313%20Northern%20Arizona%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-10-10T13:44:20.169680+00:00"
+    "updated": "2026-10-10T18:37:31.874766+00:00"
   }
 }
