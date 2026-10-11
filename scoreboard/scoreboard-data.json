@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-10-11T18:12:54.232461+00:00",
+  "generatedAt": "2026-10-11T21:58:11.432418+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -10056,6 +10056,50 @@
           "broadcasts": []
         },
         {
+          "id": "401868319",
+          "date": "2026-10-17T21:00Z",
+          "name": "Lamar Cardinals at SE Louisiana Lions",
+          "shortName": "LAM @ SELA",
+          "venue": "Strawberry Stadium",
+          "city": "Hammond",
+          "state": "pre",
+          "teams": [
+            {
+              "id": "2545",
+              "name": "SE Louisiana Lions",
+              "short": "SE Louisiana",
+              "abbreviation": "SELA",
+              "homeAway": "home",
+              "score": "",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2545.png"
+            },
+            {
+              "id": "2320",
+              "name": "Lamar Cardinals",
+              "short": "Lamar",
+              "abbreviation": "LAM",
+              "homeAway": "away",
+              "score": "",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png"
+            }
+          ],
+          "status": {
+            "state": "pre",
+            "completed": false,
+            "name": "STATUS_SCHEDULED",
+            "detail": "Sat, October 17th at 5:00 PM EDT",
+            "shortDetail": "10/17 - 5:00 PM EDT",
+            "label": "10/17 - 5:00 PM EDT",
+            "period": null,
+            "clock": "0:00"
+          },
+          "completed": false,
+          "period": null,
+          "clock": "0:00",
+          "statusText": "10/17 - 5:00 PM EDT",
+          "broadcasts": []
+        },
+        {
           "id": "401867897",
           "date": "2026-10-17T22:00Z",
           "name": "Northern Iowa Panthers at Youngstown State Penguins",
@@ -10169,50 +10213,6 @@
               "homeAway": "away",
               "score": "",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
-            }
-          ],
-          "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 7:00 PM EDT",
-            "shortDetail": "10/17 - 7:00 PM EDT",
-            "label": "10/17 - 7:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
-          },
-          "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/17 - 7:00 PM EDT",
-          "broadcasts": []
-        },
-        {
-          "id": "401868319",
-          "date": "2026-10-17T23:00Z",
-          "name": "Lamar Cardinals at SE Louisiana Lions",
-          "shortName": "LAM @ SELA",
-          "venue": "Strawberry Stadium",
-          "city": "Hammond",
-          "state": "pre",
-          "teams": [
-            {
-              "id": "2545",
-              "name": "SE Louisiana Lions",
-              "short": "SE Louisiana",
-              "abbreviation": "SELA",
-              "homeAway": "home",
-              "score": "",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2545.png"
-            },
-            {
-              "id": "2320",
-              "name": "Lamar Cardinals",
-              "short": "Lamar",
-              "abbreviation": "LAM",
-              "homeAway": "away",
-              "score": "",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png"
             }
           ],
           "status": {
