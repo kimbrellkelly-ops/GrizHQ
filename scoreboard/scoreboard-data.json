@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-10-10T22:02:18.132056+00:00",
+  "generatedAt": "2026-10-11T00:50:07.675369+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -8814,7 +8814,7 @@
           "shortName": "WCU @ MER",
           "venue": "Five Star Stadium",
           "city": "Macon",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2382",
@@ -8822,7 +8822,7 @@
               "short": "Mercer",
               "abbreviation": "MER",
               "homeAway": "home",
-              "score": "",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2382.png"
             },
             {
@@ -8831,24 +8831,24 @@
               "short": "W Carolina",
               "abbreviation": "WCU",
               "homeAway": "away",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2717.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "2:40 - 4th Quarter",
-            "shortDetail": "2:40 - 4th",
-            "label": "Q4",
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
             "period": 4,
-            "clock": "2:40"
+            "clock": "0:00"
           },
-          "completed": false,
+          "completed": true,
           "period": 4,
-          "clock": "2:40",
-          "statusText": "Q4",
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": []
         },
         {
@@ -8858,7 +8858,7 @@
           "shortName": "FUR @ TNTC",
           "venue": "Tucker Stadium",
           "city": "Cookeville",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2635",
@@ -8866,7 +8866,7 @@
               "short": "Tennessee Tech",
               "abbreviation": "TNTC",
               "homeAway": "home",
-              "score": "",
+              "score": "20",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2635.png"
             },
             {
@@ -8875,24 +8875,24 @@
               "short": "Furman",
               "abbreviation": "FUR",
               "homeAway": "away",
-              "score": "",
+              "score": "15",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/231.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "13:45 - 4th Quarter",
-            "shortDetail": "13:45 - 4th",
-            "label": "Q4",
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
             "period": 4,
-            "clock": "13:45"
+            "clock": "0:00"
           },
-          "completed": false,
+          "completed": true,
           "period": 4,
-          "clock": "13:45",
-          "statusText": "Q4",
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": []
         },
         {
@@ -8902,7 +8902,7 @@
           "shortName": "RICH @ FOR",
           "venue": "Moglia Stadium at Jack Coffey Field",
           "city": "Bronx",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2230",
@@ -8910,7 +8910,7 @@
               "short": "Fordham",
               "abbreviation": "FOR",
               "homeAway": "home",
-              "score": "",
+              "score": "20",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2230.png"
             },
             {
@@ -8919,24 +8919,24 @@
               "short": "Richmond",
               "abbreviation": "RICH",
               "homeAway": "away",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/257.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "9:51 - 4th Quarter",
-            "shortDetail": "9:51 - 4th",
-            "label": "Q4",
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
             "period": 4,
-            "clock": "9:51"
+            "clock": "0:00"
           },
-          "completed": false,
+          "completed": true,
           "period": 4,
-          "clock": "9:51",
-          "statusText": "Q4",
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": []
         },
         {
@@ -8946,7 +8946,7 @@
           "shortName": "UIW @ LAM",
           "venue": "Provost Umphrey Stadium",
           "city": "Beaumont",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2320",
@@ -8954,7 +8954,7 @@
               "short": "Lamar",
               "abbreviation": "LAM",
               "homeAway": "home",
-              "score": "",
+              "score": "38",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png"
             },
             {
@@ -8963,24 +8963,24 @@
               "short": "Incarnate Word",
               "abbreviation": "UIW",
               "homeAway": "away",
-              "score": "",
+              "score": "35",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2916.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "13:39 - 3rd Quarter",
-            "shortDetail": "13:39 - 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "13:39"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 3,
-          "clock": "13:39",
-          "statusText": "Q3",
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": []
         },
         {
@@ -8990,7 +8990,7 @@
           "shortName": "MONT @ NAU",
           "venue": "J. Lawrence Walkup Skydome",
           "city": "Flagstaff",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2464",
@@ -8998,7 +8998,7 @@
               "short": "N Arizona",
               "abbreviation": "NAU",
               "homeAway": "home",
-              "score": "",
+              "score": "49",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
             },
             {
@@ -9007,24 +9007,24 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "away",
-              "score": "",
+              "score": "44",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "10:45 - 2nd Quarter",
-            "shortDetail": "10:45 - 2nd",
-            "label": "Q2",
-            "period": 2,
-            "clock": "10:45"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 2,
-          "clock": "10:45",
-          "statusText": "Q2",
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": []
         },
         {
@@ -9034,7 +9034,7 @@
           "shortName": "UND @ UNI",
           "venue": "UNI-Dome",
           "city": "Cedar Falls",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2460",
@@ -9042,7 +9042,7 @@
               "short": "Northern Iowa",
               "abbreviation": "UNI",
               "homeAway": "home",
-              "score": "",
+              "score": "24",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2460.png"
             },
             {
@@ -9051,24 +9051,24 @@
               "short": "North Dakota",
               "abbreviation": "UND",
               "homeAway": "away",
-              "score": "",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "9:41 - 2nd Quarter",
-            "shortDetail": "9:41 - 2nd",
-            "label": "Q2",
-            "period": 2,
-            "clock": "9:41"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 2,
-          "clock": "9:41",
-          "statusText": "Q2",
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": []
         },
         {
@@ -9103,16 +9103,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "10:26 - 2nd Quarter",
-            "shortDetail": "10:26 - 2nd",
-            "label": "Q2",
-            "period": 2,
-            "clock": "10:26"
+            "detail": "9:46 - 4th Quarter",
+            "shortDetail": "9:46 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "9:46"
           },
           "completed": false,
-          "period": 2,
-          "clock": "10:26",
-          "statusText": "Q2",
+          "period": 4,
+          "clock": "9:46",
+          "statusText": "Q4",
           "broadcasts": []
         },
         {
@@ -9122,7 +9122,7 @@
           "shortName": "CP @ IDST",
           "venue": "ICCU Dome",
           "city": "Pocatello",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "304",
@@ -9144,19 +9144,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 10th at 6:00 PM EDT",
-            "shortDetail": "10/10 - 6:00 PM EDT",
-            "label": "10/10 - 6:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "2:00 - 4th Quarter",
+            "shortDetail": "2:00 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "2:00"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/10 - 6:00 PM EDT",
+          "period": 4,
+          "clock": "2:00",
+          "statusText": "Q4",
           "broadcasts": []
         },
         {
@@ -9166,7 +9166,7 @@
           "shortName": "TAR @ APSU",
           "venue": "Fortera Stadium",
           "city": "Clarksville",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2046",
@@ -9174,7 +9174,7 @@
               "short": "Austin Peay",
               "abbreviation": "APSU",
               "homeAway": "home",
-              "score": "",
+              "score": "10",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
             },
             {
@@ -9183,24 +9183,24 @@
               "short": "Tarleton St",
               "abbreviation": "TAR",
               "homeAway": "away",
-              "score": "",
+              "score": "23",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2627.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 10th at 7:00 PM EDT",
-            "shortDetail": "10/10 - 7:00 PM EDT",
-            "label": "10/10 - 7:00 PM EDT",
-            "period": null,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "10/10 - 7:00 PM EDT",
+          "statusText": "HALFTIME",
           "broadcasts": []
         }
       ],
@@ -9259,7 +9259,7 @@
           "shortName": "IDHO @ WEB",
           "venue": "Stewart Stadium",
           "city": "Ogden",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2692",
@@ -9267,7 +9267,7 @@
               "short": "Weber St",
               "abbreviation": "WEB",
               "homeAway": "home",
-              "score": "14",
+              "score": "38",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
             },
             {
@@ -9276,24 +9276,24 @@
               "short": "Idaho",
               "abbreviation": "IDHO",
               "homeAway": "away",
-              "score": "7",
+              "score": "27",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_HALFTIME",
-            "detail": "Halftime",
-            "shortDetail": "Halftime",
-            "label": "HALFTIME",
-            "period": 2,
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
             "clock": "0:00"
           },
-          "completed": false,
-          "period": 2,
+          "completed": true,
+          "period": 4,
           "clock": "0:00",
-          "statusText": "HALFTIME",
+          "statusText": "FINAL",
           "broadcasts": []
         },
         {
@@ -9303,7 +9303,7 @@
           "shortName": "UTU @ PRST",
           "venue": "Hillsboro Stadium",
           "city": "Portland",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2502",
@@ -9320,24 +9320,24 @@
               "short": "Utah Tech",
               "abbreviation": "UTU",
               "homeAway": "away",
-              "score": "7",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_HALFTIME",
-            "detail": "Halftime",
-            "shortDetail": "Halftime",
-            "label": "HALFTIME",
-            "period": 2,
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
             "clock": "0:00"
           },
-          "completed": false,
-          "period": 2,
+          "completed": true,
+          "period": 4,
           "clock": "0:00",
-          "statusText": "HALFTIME",
+          "statusText": "FINAL",
           "broadcasts": []
         },
         {
@@ -9347,7 +9347,7 @@
           "shortName": "MONT @ NAU",
           "venue": "J. Lawrence Walkup Skydome",
           "city": "Flagstaff",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2464",
@@ -9355,7 +9355,7 @@
               "short": "N Arizona",
               "abbreviation": "NAU",
               "homeAway": "home",
-              "score": "",
+              "score": "49",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
             },
             {
@@ -9364,24 +9364,24 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "away",
-              "score": "",
+              "score": "44",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "10:45 - 2nd Quarter",
-            "shortDetail": "10:45 - 2nd",
-            "label": "Q2",
-            "period": 2,
-            "clock": "10:45"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 2,
-          "clock": "10:45",
-          "statusText": "Q2",
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": []
         },
         {
@@ -9391,7 +9391,7 @@
           "shortName": "CP @ IDST",
           "venue": "ICCU Dome",
           "city": "Pocatello",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "304",
@@ -9413,19 +9413,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 10th at 6:00 PM EDT",
-            "shortDetail": "10/10 - 6:00 PM EDT",
-            "label": "10/10 - 6:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "2:00 - 4th Quarter",
+            "shortDetail": "2:00 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "2:00"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/10 - 6:00 PM EDT",
+          "period": 4,
+          "clock": "2:00",
+          "statusText": "Q4",
           "broadcasts": []
         },
         {
@@ -9435,7 +9435,7 @@
           "shortName": "UNCO @ EWU",
           "venue": "Roos Field",
           "city": "Cheney",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "331",
@@ -9443,7 +9443,7 @@
               "short": "E Washington",
               "abbreviation": "EWU",
               "homeAway": "home",
-              "score": "",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png"
             },
             {
@@ -9452,24 +9452,24 @@
               "short": "N Colorado",
               "abbreviation": "UNCO",
               "homeAway": "away",
-              "score": "",
+              "score": "6",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 10th at 7:00 PM EDT",
-            "shortDetail": "10/10 - 7:00 PM EDT",
-            "label": "10/10 - 7:00 PM EDT",
-            "period": null,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "10/10 - 7:00 PM EDT",
+          "statusText": "HALFTIME",
           "broadcasts": []
         }
       ]
