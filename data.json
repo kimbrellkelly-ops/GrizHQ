@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-11T08:53:54.525261+00:00",
+  "updated": "2026-10-11T15:42:36.775863+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-2",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-11T08:54:38.298503+00:00"
+    "checked_at": "2026-10-11T15:43:31.733719+00:00"
   },
   "resources": [
     {
@@ -2943,7 +2943,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-11T08:54:00.987222+00:00",
+    "source_checked_at": "2026-10-11T15:42:43.388555+00:00",
     "team_summary": [
       {
         "value": "5–2",
@@ -27653,19 +27653,6 @@
   "big_sky_standings": [
     {
       "rank": 1,
-      "team": "Weber State",
-      "conference_record": "4-1",
-      "overall_record": "5-3",
-      "home": "3-1",
-      "away": "2-2",
-      "conference_points": "189-161",
-      "points": "301-280",
-      "conference_streak": "W3",
-      "overall_streak": "W3",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2546"
-    },
-    {
-      "rank": 2,
       "team": "Montana",
       "conference_record": "3-1",
       "overall_record": "5-2",
@@ -27678,7 +27665,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2538"
     },
     {
-      "rank": 3,
+      "rank": 2,
       "team": "Northern Arizona",
       "conference_record": "3-1",
       "overall_record": "5-2",
@@ -27691,7 +27678,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2540"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "team": "Cal Poly",
       "conference_record": "3-1",
       "overall_record": "4-3",
@@ -27702,6 +27689,19 @@
       "conference_streak": "W1",
       "overall_streak": "W1",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2535"
+    },
+    {
+      "rank": 4,
+      "team": "Weber State",
+      "conference_record": "3-1",
+      "overall_record": "4-3",
+      "home": "2-1",
+      "away": "2-2",
+      "conference_points": "151-134",
+      "points": "263-253",
+      "conference_streak": "W2",
+      "overall_streak": "W2",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2546"
     },
     {
       "rank": 5,
@@ -27770,6 +27770,19 @@
     },
     {
       "rank": 10,
+      "team": "Idaho",
+      "conference_record": "1-2",
+      "overall_record": "1-5",
+      "home": "1-2",
+      "away": "0-3",
+      "conference_points": "96-110",
+      "points": "166-240",
+      "conference_streak": "L1",
+      "overall_streak": "L1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2536"
+    },
+    {
+      "rank": 11,
       "team": "Eastern Washington",
       "conference_record": "1-3",
       "overall_record": "2-5",
@@ -27782,7 +27795,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2534"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "team": "Northern Colorado",
       "conference_record": "1-3",
       "overall_record": "2-5",
@@ -27793,19 +27806,6 @@
       "conference_streak": "L2",
       "overall_streak": "L2",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2541"
-    },
-    {
-      "rank": 12,
-      "team": "Idaho",
-      "conference_record": "1-3",
-      "overall_record": "1-6",
-      "home": "1-2",
-      "away": "0-4",
-      "conference_points": "123-148",
-      "points": "193-278",
-      "conference_streak": "L2",
-      "overall_streak": "L2",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2536"
     },
     {
       "rank": 13,
@@ -28277,6 +28277,6 @@
       "news": "https://govandals.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-11T08:54:06.952057+00:00"
+    "updated": "2026-10-11T15:42:49.720486+00:00"
   }
 }
