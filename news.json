@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-11T16:23:12.108779+00:00",
+  "updated": "2026-10-11T20:26:21.121158+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "3 takeaways: No. 2 Grizzlies knocked off at No. 13 NAU",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-2-grizzlies-knocked-off-at-no-13-nau/article_f8d1d4a9-281b-4215-8c5e-74851be934a5.html",
+      "date": "Oct. 11, 2026",
+      "published_at": "2026-10-11T12:00:00+00:00",
+      "description": "3 takeaways: No. 2 Grizzlies knocked off at No. 13 NAU",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/8d/f8d1d4a9-281b-4215-8c5e-74851be934a5/6acb55d1098cf.preview.jpg?crop=1763%2C926%2C0%2C216&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/8d/f8d1d4a9-281b-4215-8c5e-74851be934a5/6acb55d1098cf.preview.jpg?crop=1763%2C926%2C0%2C216&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "3 takeaways: No. 2 Grizzlies knocked off at No. 13 NAU",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_c2766fbc-cccd-5ef6-aff1-2fc96bb48810.html",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/4c/74ceec9f-37e7-462b-bc11-197e9aa16e29/6ab03ca0e683f.preview.jpg?crop=1235%2C648%2C374%2C39&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Paine free: Grizzlies RB Dylan Paine displays resilience through injuries",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_48179a1e-bcdf-5052-83e0-812019416cd3.html",
-      "date": "Sep. 24, 2026",
-      "published_at": "2026-09-24T13:00:00+00:00",
-      "description": "\"I've had the most fun of my life these last nine months.\" —Griz RB Dylan Paine",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/2b/52ba2f81-8b27-5e7c-b9bb-f5fbd0579a4e/6aa5dd548fc1a.image.jpg?resize=300%2C240",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/2b/52ba2f81-8b27-5e7c-b9bb-f5fbd0579a4e/6aa5dd548fc1a.image.jpg?resize=300%2C240"
     }
   ]
 }
