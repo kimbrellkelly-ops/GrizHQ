@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-11T01:55:14.180547+00:00",
+  "updated": "2026-10-11T08:53:54.525261+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-2",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Griz drop ranked shootout at NAU",
+      "url": "https://gogriz.com/news/2026/10/10/football-griz-drop-ranked-shootout-at-nau",
+      "date": "Sat, 10 Oct 2026 19:49:00 MST",
+      "description": "FLAGSTAFF, Ariz. – The No. 2 Montana Grizzlies traded blows with No. 13 Northern Arizona throughout the afternoon but fell to the Lumberjacks 49-44 in a ranked Big Sky Conference s"
+    },
+    {
       "title": "Montana finalizes 2027 Nonconference schedule",
       "url": "https://gogriz.com/news/2026/10/8/football-montana-finalizes-2027-nonconference-schedule",
       "date": "Thu, 8 Oct 2026 18:01:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/9/28/football-gillman-sweeps-weekly-awards-after-record-breaking-performance",
       "date": "Mon, 28 Sep 2026 08:45:00 MST",
       "description": "Not even halfway through his senior season, Eli Gillman put an exclamation mark of a game on a career whose legend continues to grow by the day."
-    },
-    {
-      "title": "Gillman has career day as Griz dominate Aggies in ranked showdown",
-      "url": "https://gogriz.com/news/2026/9/27/football-gillman-has-career-day-as-griz-dominate-aggies-in-ranked-showdown",
-      "date": "Sun, 27 Sep 2026 00:44:00 MST",
-      "description": "DAVIS, Calif. – A game for the ages, and another week of history for Eli Gillman."
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-11T01:55:52.435789+00:00"
+    "checked_at": "2026-10-11T08:54:38.298503+00:00"
   },
   "resources": [
     {
@@ -2943,7 +2943,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-11T01:55:19.538615+00:00",
+    "source_checked_at": "2026-10-11T08:54:00.987222+00:00",
     "team_summary": [
       {
         "value": "5–2",
@@ -27653,6 +27653,19 @@
   "big_sky_standings": [
     {
       "rank": 1,
+      "team": "Weber State",
+      "conference_record": "4-1",
+      "overall_record": "5-3",
+      "home": "3-1",
+      "away": "2-2",
+      "conference_points": "189-161",
+      "points": "301-280",
+      "conference_streak": "W3",
+      "overall_streak": "W3",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2546"
+    },
+    {
+      "rank": 2,
       "team": "Montana",
       "conference_record": "3-1",
       "overall_record": "5-2",
@@ -27665,7 +27678,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2538"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "team": "Northern Arizona",
       "conference_record": "3-1",
       "overall_record": "5-2",
@@ -27676,19 +27689,6 @@
       "conference_streak": "W2",
       "overall_streak": "W2",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2540"
-    },
-    {
-      "rank": 3,
-      "team": "Weber State",
-      "conference_record": "3-1",
-      "overall_record": "4-3",
-      "home": "2-1",
-      "away": "2-2",
-      "conference_points": "151-134",
-      "points": "263-253",
-      "conference_streak": "W2",
-      "overall_streak": "W2",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2546"
     },
     {
       "rank": 4,
@@ -27757,19 +27757,6 @@
     },
     {
       "rank": 9,
-      "team": "Northern Colorado",
-      "conference_record": "1-2",
-      "overall_record": "2-4",
-      "home": "2-2",
-      "away": "0-2",
-      "conference_points": "80-79",
-      "points": "139-155",
-      "conference_streak": "L1",
-      "overall_streak": "L1",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2541"
-    },
-    {
-      "rank": 10,
       "team": "Southern Utah",
       "conference_record": "1-2",
       "overall_record": "2-4",
@@ -27782,30 +27769,43 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2543"
     },
     {
+      "rank": 10,
+      "team": "Eastern Washington",
+      "conference_record": "1-3",
+      "overall_record": "2-5",
+      "home": "2-1",
+      "away": "0-4",
+      "conference_points": "123-136",
+      "points": "196-249",
+      "conference_streak": "W1",
+      "overall_streak": "W1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2534"
+    },
+    {
       "rank": 11,
-      "team": "Idaho",
-      "conference_record": "1-2",
-      "overall_record": "1-5",
-      "home": "1-2",
+      "team": "Northern Colorado",
+      "conference_record": "1-3",
+      "overall_record": "2-5",
+      "home": "2-2",
       "away": "0-3",
-      "conference_points": "96-110",
-      "points": "166-240",
-      "conference_streak": "L1",
-      "overall_streak": "L1",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2536"
+      "conference_points": "102-110",
+      "points": "161-186",
+      "conference_streak": "L2",
+      "overall_streak": "L2",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2541"
     },
     {
       "rank": 12,
-      "team": "Eastern Washington",
-      "conference_record": "0-3",
-      "overall_record": "1-5",
-      "home": "1-1",
+      "team": "Idaho",
+      "conference_record": "1-3",
+      "overall_record": "1-6",
+      "home": "1-2",
       "away": "0-4",
-      "conference_points": "92-114",
-      "points": "165-227",
-      "conference_streak": "L3",
-      "overall_streak": "L4",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2534"
+      "conference_points": "123-148",
+      "points": "193-278",
+      "conference_streak": "L2",
+      "overall_streak": "L2",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2536"
     },
     {
       "rank": 13,
@@ -27875,18 +27875,18 @@
         "rate": "277.4"
       },
       {
+        "name": "Bell,Nate",
+        "school": "Eastern Washington",
+        "value": "1931",
+        "secondary": "15",
+        "rate": "275.9"
+      },
+      {
         "name": "Cooke,Jordan",
         "school": "Idaho State",
         "value": "1634",
         "secondary": "14",
         "rate": "272.3"
-      },
-      {
-        "name": "Bell,Nate",
-        "school": "Eastern Washington",
-        "value": "1597",
-        "secondary": "11",
-        "rate": "266.2"
       },
       {
         "name": "Cleeland,Treynor",
@@ -27986,18 +27986,18 @@
         "rate": "9.9"
       },
       {
-        "name": "Smith,Bryce",
-        "school": "Eastern Washington",
-        "value": "0",
-        "secondary": "0",
-        "rate": "9.8"
-      },
-      {
         "name": "Hepburn,Cruz",
         "school": "Idaho",
         "value": "4",
         "secondary": "0",
         "rate": "9.2"
+      },
+      {
+        "name": "Mayovsky,Myles",
+        "school": "Eastern Washington",
+        "value": "5",
+        "secondary": "0",
+        "rate": "9.1"
       },
       {
         "name": "Reynolds,Nathan",
@@ -28023,13 +28023,6 @@
         "rate": ".67"
       },
       {
-        "name": "Larsen,Gauge",
-        "school": "Eastern Washington",
-        "value": "22",
-        "secondary": "",
-        "rate": ".67"
-      },
-      {
         "name": "Amey,Myles",
         "school": "Southern Utah",
         "value": "30",
@@ -28042,6 +28035,13 @@
         "value": "17",
         "secondary": "",
         "rate": ".60"
+      },
+      {
+        "name": "Connors,Porter",
+        "school": "UC Davis",
+        "value": "7",
+        "secondary": "",
+        "rate": ".58"
       }
     ]
   },
@@ -28277,6 +28277,6 @@
       "news": "https://govandals.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-11T01:55:23.784498+00:00"
+    "updated": "2026-10-11T08:54:06.952057+00:00"
   }
 }
