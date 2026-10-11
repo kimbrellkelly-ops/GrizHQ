@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-11T10:19:38.900175+00:00",
+  "updated": "2026-10-11T16:23:12.108779+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "3 takeaways: No. 2 Grizzlies knocked off at No. 13 NAU",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_c2766fbc-cccd-5ef6-aff1-2fc96bb48810.html",
+      "date": "Oct. 11, 2026",
+      "published_at": "2026-10-11T12:00:00+00:00",
+      "description": "\"We have a whole lot of potential and we got a whole lot of season left.\" —Grizzlies running back Eli Gillman",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/27/c2766fbc-cccd-5ef6-aff1-2fc96bb48810/6acb5759a7f9b.preview.jpg?crop=1763%2C926%2C0%2C216&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/27/c2766fbc-cccd-5ef6-aff1-2fc96bb48810/6acb5759a7f9b.preview.jpg?crop=1763%2C926%2C0%2C216&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Griz drop ranked shootout at NAU",
       "url": "https://gogriz.com/news/2026/10/10/football-griz-drop-ranked-shootout-at-nau",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/5/2b/52ba2f81-8b27-5e7c-b9bb-f5fbd0579a4e/6aa5dd548fc1a.image.jpg?resize=300%2C240"
-    },
-    {
-      "title": "Hamilton artist shoots, stuffs, eats, paints, sculpts and honors her animal subjects",
-      "url": "https://missoulian.com/article_a378f95b-a275-5b60-a33d-0c87c236a1bf.html",
-      "date": "Sep. 24, 2026",
-      "published_at": "2026-09-24T12:30:00+00:00",
-      "description": "Professional animal artist Cynthie Fisher is creating one of her largest pieces to date — a nearly life size statue honoring the famous Grizzly 399, who died in 2024.",
-      "source": "Missoulian",
-      "badge": "HONOR",
-      "short": "HONOR",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/e2/8e2efab6-0074-538e-acb4-e8a76dc9983c/6ab42ffb70d23.image.jpg?resize=300%2C225",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/e2/8e2efab6-0074-538e-acb4-e8a76dc9983c/6ab42ffb70d23.image.jpg?resize=300%2C225"
     }
   ]
 }
