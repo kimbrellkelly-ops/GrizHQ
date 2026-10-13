@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13T16:27:01.360215+00:00",
+  "updated": "2026-10-13T21:23:57.925755+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "575 Miles to Missoula: Football Super Fans Never Miss a Griz Game",
+      "url": "https://gogriz.com/news/2026/10/13/575-miles-to-missoula-football-super-fans-never-miss-a-griz-game",
+      "date": "Oct. 13, 2026",
+      "published_at": "2026-10-13T18:41:00+00:00",
+      "description": "MISSOULA – If Griz football fandom were measured in miles, few could match Brad and Carol Holm.",
+      "source": "GoGriz",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/13/Brad_and_Carol_Holm.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/13/Brad_and_Carol_Holm.jpg"
+    },
     {
       "title": "Cussin’ & Discussin’ – Former Griz DL Pat Foster & OL Larry Clarkson",
       "url": "https://skylinesportsmt.com/cussin-discussin-former-griz-dl-pat-foster-ol-larry-clarkson/",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/3/c8/3c8c4a5a-3a41-56f8-ac48-8bf2543da777/6ab67b4a4e3b4.image.jpg?resize=300%2C178"
-    },
-    {
-      "title": "092426-ir-spt-hockey-Griz-5.jpg",
-      "url": "https://missoulian.com/sports/hockey/image_d985dfb7-89e1-5446-85c6-c8ab2daeeae6.html",
-      "date": "Sep. 25, 2026",
-      "published_at": "2026-09-25T13:28:18+00:00",
-      "description": "Montana's Jordan Belley played between the pipes for the Griz against Colorado during Thursday nights game at Steed arena.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/98/d985dfb7-89e1-5446-85c6-c8ab2daeeae6/6ab67b4a1f0dc.image.jpg?resize=300%2C245",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/98/d985dfb7-89e1-5446-85c6-c8ab2daeeae6/6ab67b4a1f0dc.image.jpg?resize=300%2C245"
     }
   ]
 }
