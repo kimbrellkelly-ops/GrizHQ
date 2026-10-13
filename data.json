@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13T00:41:58.966719+00:00",
+  "updated": "2026-10-13T07:43:46.798733+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-2",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-13T00:43:06.990628+00:00"
+    "checked_at": "2026-10-13T07:44:25.661769+00:00"
   },
   "resources": [
     {
@@ -2943,7 +2943,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-13T00:42:16.526655+00:00",
+    "source_checked_at": "2026-10-13T07:43:52.958949+00:00",
     "team_summary": [
       {
         "value": "5–2",
@@ -28277,6 +28277,6 @@
       "news": "https://govandals.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-13T00:42:22.274175+00:00"
+    "updated": "2026-10-13T07:43:56.504039+00:00"
   }
 }
