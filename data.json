@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13T16:00:27.979633+00:00",
+  "updated": "2026-10-13T21:16:03.179451+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-2",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "575 Miles to Missoula: Football Super Fans Never Miss a Griz Game",
+      "url": "https://gogriz.com/news/2026/10/13/575-miles-to-missoula-football-super-fans-never-miss-a-griz-game",
+      "date": "Tue, 13 Oct 2026 11:41:00 MST",
+      "description": "MISSOULA – If Griz football fandom were measured in miles, few could match Brad and Carol Holm."
+    },
+    {
       "title": "Griz drop ranked shootout at NAU",
       "url": "https://gogriz.com/news/2026/10/10/football-griz-drop-ranked-shootout-at-nau",
       "date": "Sat, 10 Oct 2026 19:49:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/9/29/football-griz-to-host-bears-on-homecoming",
       "date": "Tue, 29 Sep 2026 16:24:00 MST",
       "description": "It's the Grizzlies versus the Bears this week as Montana returns home from a two-game road swing to face Northern Colorado on Homecoming Weekend at the University of Montana."
-    },
-    {
-      "title": "Gillman sweeps weekly awards after record-breaking performance",
-      "url": "https://gogriz.com/news/2026/9/28/football-gillman-sweeps-weekly-awards-after-record-breaking-performance",
-      "date": "Mon, 28 Sep 2026 08:45:00 MST",
-      "description": "Not even halfway through his senior season, Eli Gillman put an exclamation mark of a game on a career whose legend continues to grow by the day."
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-13T16:01:16.720017+00:00"
+    "checked_at": "2026-10-13T21:16:59.551255+00:00"
   },
   "resources": [
     {
@@ -2943,7 +2943,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-13T16:00:35.559334+00:00",
+    "source_checked_at": "2026-10-13T21:16:11.364105+00:00",
     "team_summary": [
       {
         "value": "5–2",
@@ -27647,7 +27647,7 @@
     "title": "Griz press conference – Kennedy, Finch, Huff on Battle for the Little Brown Stein against Idaho",
     "date": "Mon, 12 Oct 2026 21:52:39 +0000",
     "url": "https://skylinesportsmt.com/griz-press-conference-kennedy-finch-huff-on-battle-for-the-little-brown-stein-against-idaho/",
-    "youtube_id": "pxD_r-fouHc"
+    "youtube_id": ""
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -28030,18 +28030,18 @@
         "rate": ".67"
       },
       {
+        "name": "Booth,Jalonn",
+        "school": "Cal Poly",
+        "value": "25",
+        "secondary": "",
+        "rate": ".64"
+      },
+      {
         "name": "Brock,Seth",
         "school": "Montana State",
         "value": "17",
         "secondary": "",
         "rate": ".60"
-      },
-      {
-        "name": "Connors,Porter",
-        "school": "UC Davis",
-        "value": "7",
-        "secondary": "",
-        "rate": ".58"
       }
     ]
   },
@@ -28277,6 +28277,6 @@
       "news": "https://govandals.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-13T16:00:42.235537+00:00"
+    "updated": "2026-10-13T21:16:17.062711+00:00"
   }
 }
