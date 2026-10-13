@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13T01:53:07.252995+00:00",
+  "updated": "2026-10-13T08:41:53.733786+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,21 +10,6 @@
     "Skyline Sports"
   ],
   "stories": [
-    {
-      "title": "First look: No. 7 Montana Grizzlies vs. Idaho Vandals",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_cfdd5757-4030-5570-9226-5d1433eb1cb8.html",
-      "date": "Oct. 12, 2026",
-      "published_at": "2026-10-12T22:15:00+00:00",
-      "description": "The Grizzlies prepare to face Idaho in the battle for the Little Brown Stein in their final game before their bye week.",
-      "source": "Missoulian",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/94/49450e1c-577e-5ee5-b57c-4cc143f26731/6acc57e522eb8.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/94/49450e1c-577e-5ee5-b57c-4cc143f26731/6acc57e522eb8.image.jpg?resize=300%2C200"
-    },
     {
       "title": "First look: No. 7 Montana Grizzlies vs. Idaho Vandals",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-7-montana-grizzlies-vs-idaho-vandals/article_d9862d0a-49b0-4ed5-ad18-45b6098e549c.html",
@@ -39,6 +24,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/98/d9862d0a-49b0-4ed5-ad18-45b6098e549c/6acd55b0c21ee.preview.jpg?crop=1760%2C924%2C3%2C54&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "First look: No. 7 Montana Grizzlies vs. Idaho Vandals",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_cfdd5757-4030-5570-9226-5d1433eb1cb8.html",
+      "date": "Oct. 12, 2026",
+      "published_at": "2026-10-12T22:15:00+00:00",
+      "description": "The Grizzlies prepare to face Idaho in the battle for the Little Brown Stein in their final game before their bye week.",
+      "source": "Missoulian",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/94/49450e1c-577e-5ee5-b57c-4cc143f26731/6acc57e522eb8.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/94/49450e1c-577e-5ee5-b57c-4cc143f26731/6acc57e522eb8.image.jpg?resize=300%2C200"
     },
     {
       "title": "Griz press conference – Kennedy, Finch, Huff on Battle for the Little Brown Stein against Idaho",
@@ -84,6 +84,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/10/UM-VS-NAU-BREAKDOWN-THUMBNAIL.png"
+    },
+    {
+      "title": "Week 6: No. 2 Montana Grizzlies upset at No. 13 Northern Arizona",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-6-no-2-montana-grizzlies-upset-at-no-13-northern-arizona/collection_f7ee0845-6365-49ee-8717-3c50da61e26c.html",
+      "date": "Oct. 11, 2026",
+      "published_at": "2026-10-11T21:30:00+00:00",
+      "description": "Week 6: No. 2 Montana Grizzlies upset at No. 13 Northern Arizona",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/7e/f7ee0845-6365-49ee-8717-3c50da61e26c/6acd376518e50.preview.jpg?crop=1763%2C926%2C0%2C126&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/7e/f7ee0845-6365-49ee-8717-3c50da61e26c/6acd376518e50.preview.jpg?crop=1763%2C926%2C0%2C126&resize=1200%2C630&order=crop%2Cresize"
     },
     {
       "title": "Week 6: No. 3 Montana Grizzlies upset at No. 13 Northern Arizona",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/9/ce/9ce27bc1-44c1-5c95-a92e-368285f9373b/6ab67b49e3f81.image.jpg?resize=300%2C235"
-    },
-    {
-      "title": "092426-ir-spt-hockey-Griz-9.jpg",
-      "url": "https://missoulian.com/sports/hockey/image_2644efbd-bb6f-531c-bb73-df312735182e.html",
-      "date": "Sep. 25, 2026",
-      "published_at": "2026-09-25T13:28:16+00:00",
-      "description": "University of Montana lands in Helena to take on the University of Colorado Thursday night at Steed Arena.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/2/64/2644efbd-bb6f-531c-bb73-df312735182e/6ab67b498d2ca.image.jpg?resize=300%2C201",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/2/64/2644efbd-bb6f-531c-bb73-df312735182e/6ab67b498d2ca.image.jpg?resize=300%2C201"
     }
   ]
 }
