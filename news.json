@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14T15:06:07.121454+00:00",
+  "updated": "2026-10-14T19:20:58.211226+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -65,9 +65,9 @@
       "badge": "GRIZ NEWS",
       "short": "GRIZ N",
       "image": "https://skylinesportsmt.com/wp-content/uploads/2026/06/Cussin--scaled.png",
-      "is_video": false,
+      "is_video": true,
       "youtube_id": "",
-      "video_url": "",
+      "video_url": "https://skylinesportsmt.com/cussin-discussin-former-griz-dl-pat-foster-ol-larry-clarkson/",
       "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/06/Cussin--scaled.png"
     },
     {
