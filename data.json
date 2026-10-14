@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13T21:16:03.179451+00:00",
+  "updated": "2026-10-14T00:21:28.473548+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-2",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-13T21:16:59.551255+00:00"
+    "checked_at": "2026-10-14T00:22:17.943211+00:00"
   },
   "resources": [
     {
@@ -2943,7 +2943,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-13T21:16:11.364105+00:00",
+    "source_checked_at": "2026-10-14T00:21:35.467450+00:00",
     "team_summary": [
       {
         "value": "5–2",
@@ -27644,10 +27644,9 @@
     ]
   },
   "latest_press_conference": {
-    "title": "Griz press conference – Kennedy, Finch, Huff on Battle for the Little Brown Stein against Idaho",
-    "date": "Mon, 12 Oct 2026 21:52:39 +0000",
-    "url": "https://skylinesportsmt.com/griz-press-conference-kennedy-finch-huff-on-battle-for-the-little-brown-stein-against-idaho/",
-    "youtube_id": ""
+    "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker",
+    "date": "September 5, 2026",
+    "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/"
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -28277,6 +28276,6 @@
       "news": "https://govandals.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-13T21:16:17.062711+00:00"
+    "updated": "2026-10-14T00:21:43.011665+00:00"
   }
 }
