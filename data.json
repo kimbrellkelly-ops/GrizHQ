@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14T00:21:28.473548+00:00",
+  "updated": "2026-10-14T06:10:04.250606+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-2",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Little Brown Stein on the line as Griz host Vandals",
+      "url": "https://gogriz.com/news/2026/10/13/football-little-brown-stein-on-the-line-as-griz-host-vandals",
+      "date": "Tue, 13 Oct 2026 18:22:00 MST",
+      "description": "It's a matchup more than a century in the making this week as the Montana Grizzlies look to rebound from a road loss with the Idaho Vandals traveling to Missoula for the 91st meeti"
+    },
+    {
       "title": "575 Miles to Missoula: Football Super Fans Never Miss a Griz Game",
       "url": "https://gogriz.com/news/2026/10/13/575-miles-to-missoula-football-super-fans-never-miss-a-griz-game",
       "date": "Tue, 13 Oct 2026 11:41:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/9/30/football-griz-to-host-winter-flag-football-league-for-kids",
       "date": "Wed, 30 Sep 2026 17:05:00 MST",
       "description": "MISSOULA - Montana football coach Bobby Kennedy and the Grizzly staff are expanding their youth camp offerings with the addition of a winter flag football league to be held at the "
-    },
-    {
-      "title": "Griz to host Bears on Homecoming",
-      "url": "https://gogriz.com/news/2026/9/29/football-griz-to-host-bears-on-homecoming",
-      "date": "Tue, 29 Sep 2026 16:24:00 MST",
-      "description": "It's the Grizzlies versus the Bears this week as Montana returns home from a two-game road swing to face Northern Colorado on Homecoming Weekend at the University of Montana."
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-14T00:22:17.943211+00:00"
+    "checked_at": "2026-10-14T06:10:42.850926+00:00"
   },
   "resources": [
     {
@@ -2943,7 +2943,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-14T00:21:35.467450+00:00",
+    "source_checked_at": "2026-10-14T06:10:10.847206+00:00",
     "team_summary": [
       {
         "value": "5–2",
@@ -27644,9 +27644,10 @@
     ]
   },
   "latest_press_conference": {
-    "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker",
-    "date": "September 5, 2026",
-    "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/"
+    "title": "Griz press conference – Kennedy, Finch, Huff on Battle for the Little Brown Stein against Idaho",
+    "date": "Mon, 12 Oct 2026 21:52:39 +0000",
+    "url": "https://skylinesportsmt.com/griz-press-conference-kennedy-finch-huff-on-battle-for-the-little-brown-stein-against-idaho/",
+    "youtube_id": ""
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -28276,6 +28277,6 @@
       "news": "https://govandals.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-14T00:21:43.011665+00:00"
+    "updated": "2026-10-14T06:10:16.056441+00:00"
   }
 }
