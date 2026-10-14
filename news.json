@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14T10:09:19.409645+00:00",
+  "updated": "2026-10-14T15:06:07.121454+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Why Montana Grizzlies are hosting Idaho Vandals for 2nd consecutive season",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/why-montana-grizzlies-are-hosting-idaho-vandals-for-2nd-consecutive-season/article_99885d37-35d9-43fa-90ea-e6569ebe9e07.html",
+      "date": "Oct. 14, 2026",
+      "published_at": "2026-10-14T13:00:00+00:00",
+      "description": "Why Montana Grizzlies are hosting Idaho Vandals for 2nd consecutive season",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/9/98/99885d37-35d9-43fa-90ea-e6569ebe9e07/6acdba8348346.preview.jpg?crop=1761%2C925%2C0%2C33&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/9/98/99885d37-35d9-43fa-90ea-e6569ebe9e07/6acdba8348346.preview.jpg?crop=1761%2C925%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Little Brown Stein on the line as Griz host Vandals",
       "url": "https://gogriz.com/news/2026/10/13/football-little-brown-stein-on-the-line-as-griz-host-vandals",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/72/67247519-1a3d-5310-9281-d4d9912d40c9/6aa5dd4dbc8ac.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Big Sky Breakdown",
-      "url": "https://skylinesportsmt.com/big-sky-breakdown-with-analyst-jordan-tripp-previewing-no-5-montana-at-no-10-uc-davis/",
-      "date": "Sep. 25, 2026",
-      "published_at": "2026-09-25T15:20:16+00:00",
-      "description": "Big Sky Breakdown September 25, 2026 Big Sky Breakdown with analyst Jordan Tripp previewing No. 5 Montana at No. 10 UC Davis Former NFL linebacker Jordan Tripp joins Colter Nuanez for the latest deep dive into what ails the Griz defense, th",
-      "source": "Skyline Sports",
-      "badge": "ANALYSIS",
-      "short": "ANALYS",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Brooks-Davis-nasty-catch-on-the-sideline-with-Griz-team-behind.jpeg",
-      "is_video": true,
-      "youtube_id": "DTYzx9xFP0c",
-      "video_url": "https://www.youtube.com/watch?v=DTYzx9xFP0c",
-      "video_thumbnail": "https://i.ytimg.com/vi/DTYzx9xFP0c/hqdefault.jpg"
     }
   ]
 }
