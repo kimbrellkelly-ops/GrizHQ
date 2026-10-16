@@ -1,6 +1,32 @@
 {
-  "updated": "2026-10-16T02:37:58.986331+00:00",
+  "updated": "2026-10-16T07:31:10.477709+00:00",
   "posts": [
+    {
+      "title": "Jordan Tripp: The Big Sky finally has a middle | Big Sky Breakdown",
+      "url": "https://www.youtube.com/watch?v=R8QF0nO9cgw",
+      "image": "https://i.ytimg.com/vi/R8QF0nO9cgw/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 16, 2026",
+      "platform": "youtube",
+      "youtube_id": "R8QF0nO9cgw",
+      "published_at": "2026-10-16T00:00:00+00:00"
+    },
+    {
+      "title": "Jordan Tripp on Montana's defensive breakdowns at NAU | Big Sky Breakdown",
+      "url": "https://www.youtube.com/watch?v=j9Jx5dcnCso",
+      "image": "https://i.ytimg.com/vi/j9Jx5dcnCso/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 16, 2026",
+      "platform": "youtube",
+      "youtube_id": "j9Jx5dcnCso",
+      "published_at": "2026-10-16T00:00:00+00:00"
+    },
     {
       "title": "Big Sky Breakdown: Jordan Tripp on Big Sky parity, Montana's defensive breakdowns at NAU & the Littl",
       "url": "https://www.youtube.com/watch?v=2dvfZceZlaw",
