@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16T16:59:01.973198+00:00",
+  "updated": "2026-10-16T19:48:47.153457+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "3 questions: No. 7 Grizzlies seek rebound hosting Idaho Vandals",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-7-grizzlies-seek-rebound-hosting-idaho-vandals/article_7a0368bd-5b02-4871-9b8e-2b26568a311e.html",
+      "date": "Oct. 16, 2026",
+      "published_at": "2026-10-16T18:00:00+00:00",
+      "description": "3 questions: No. 7 Grizzlies seek rebound hosting Idaho Vandals",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/a0/7a0368bd-5b02-4871-9b8e-2b26568a311e/6acefe659519e.preview.jpg?crop=1760%2C924%2C0%2C33&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/a0/7a0368bd-5b02-4871-9b8e-2b26568a311e/6acefe659519e.preview.jpg?crop=1760%2C924%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "STEIN SATURDAY: Griz, Vandals renew historic rivalry as Washington-Grizzly Stadium turns 40",
       "url": "https://skylinesportsmt.com/stein-saturday-griz-vandals-renew-historic-rivalry-as-washington-grizzly-stadium-turns-40/",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/f6/7f6194df-5f9e-56f4-99f6-b99fbf434029/6ab878f9c64f2.image.jpg?resize=300%2C225"
-    },
-    {
-      "title": "Gillman, Griz overrun Aggies",
-      "url": "https://dailyinterlake.com/news/2026/sep/26/gillman-griz-overrun-aggies/",
-      "date": "Sep. 26, 2026",
-      "published_at": "2026-09-26T10:45:00+00:00",
-      "description": "Updated 18 minutes ago Gillman, Griz overrun Aggies Eli Gillman, have another record. Cooper Kupp, watch your 6 o’clock.",
-      "source": "Daily Inter Lake",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://hagadone.media.clients.ellingtoncms.com/static-4/dailyinterlake/images/default-social.jpg?v=2",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/static-4/dailyinterlake/images/default-social.jpg?v=2"
     }
   ]
 }
