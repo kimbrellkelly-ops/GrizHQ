@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15T23:58:22.939454+00:00",
+  "updated": "2026-10-16T02:56:31.953508+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "3 things to know about Grizzlies QB commit Royce Vanacore of Arizona",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-things-to-know-about-grizzlies-qb-commit-royce-vanacore-of-arizona/article_a18f60f8-404e-44be-aded-f4e92fe01eb4.html",
+      "date": "Oct. 16, 2026",
+      "published_at": "2026-10-16T00:00:00+00:00",
+      "description": "3 things to know about Grizzlies QB commit Royce Vanacore of Arizona",
+      "source": "406 MT Sports",
+      "badge": "RECRUITING",
+      "short": "RECRUI",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/18/a18f60f8-404e-44be-aded-f4e92fe01eb4/6ad162d75bb97.preview.jpg?crop=900%2C473%2C0%2C115",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/18/a18f60f8-404e-44be-aded-f4e92fe01eb4/6ad162d75bb97.preview.jpg?crop=900%2C473%2C0%2C115"
+    },
     {
       "title": "Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on NAU loss, Little Brown Stein",
       "url": "https://skylinesportsmt.com/brawl-of-the-wild-coaches-corner-montana-head-coach-bobby-kennedy-on-nau-loss-little-brown-stein/",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/63/46311cb3-92cd-57a4-86e2-32d346c37fe1/6ab79df1c97ab.image.jpg?resize=300%2C249"
-    },
-    {
-      "title": "Griz commit Eli Kasberg throws for four TDs, runs for two in Missoula Big Sky win over Flathead",
-      "url": "https://missoulian.com/sports/high-school/football/article_b8932662-a674-54ea-9802-15e35193d463.html",
-      "date": "Sep. 26, 2026",
-      "published_at": "2026-09-26T06:00:00+00:00",
-      "description": "Missoula Big Sky quarterback Eli Kasberg threw for four touchdown passes in the first half as the Eagles remained undefeated.",
-      "source": "Missoulian",
-      "badge": "RECRUITING",
-      "short": "RECRUI",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/ee/fee10eef-80d4-5461-a6e2-a445fa8188d8/6ab73911a3f8a.image.jpg?resize=300%2C450",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/ee/fee10eef-80d4-5461-a6e2-a445fa8188d8/6ab73911a3f8a.image.jpg?resize=300%2C450"
     }
   ]
 }
