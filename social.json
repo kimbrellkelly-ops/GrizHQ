@@ -1,6 +1,19 @@
 {
-  "updated": "2026-10-15T23:51:39.470390+00:00",
+  "updated": "2026-10-16T02:37:58.986331+00:00",
   "posts": [
+    {
+      "title": "Big Sky Breakdown: Jordan Tripp on Big Sky parity, Montana's defensive breakdowns at NAU & the Littl",
+      "url": "https://www.youtube.com/watch?v=2dvfZceZlaw",
+      "image": "https://i.ytimg.com/vi/2dvfZceZlaw/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 15, 2026",
+      "platform": "youtube",
+      "youtube_id": "2dvfZceZlaw",
+      "published_at": "2026-10-15T00:00:00+00:00"
+    },
     {
       "title": "Brawl of the Wild Coaches' Corner - Montana State head coach Brent Vigen on bye, EWU matchup",
       "url": "https://www.youtube.com/watch?v=KnttV11mIGI",
@@ -169,19 +182,6 @@
       "platform": "youtube",
       "youtube_id": "HZuTFVTEcC8",
       "published_at": "2026-10-10T00:00:00+00:00"
-    },
-    {
-      "title": "Tim Plough (Vintage Plough) is one of the most interesting #FCS head coaches to talk ball with.",
-      "url": "https://www.youtube.com/watch?v=ar1mjR0L7g8",
-      "image": "https://i.ytimg.com/vi/ar1mjR0L7g8/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 9, 2026",
-      "platform": "youtube",
-      "youtube_id": "ar1mjR0L7g8",
-      "published_at": "2026-10-09T00:00:00+00:00"
     }
   ],
   "profiles": [
