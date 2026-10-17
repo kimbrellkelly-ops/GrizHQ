@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-10-17T18:40:45.036212+00:00",
+  "generatedAt": "2026-10-17T18:43:06.996478+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -9237,15 +9237,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "10:39 - 4th Quarter",
-            "shortDetail": "10:39 - 4th",
+            "detail": "9:17 - 4th Quarter",
+            "shortDetail": "9:17 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "10:39"
+            "clock": "9:17"
           },
           "completed": false,
           "period": 4,
-          "clock": "10:39",
+          "clock": "9:17",
           "statusText": "Q4",
           "broadcasts": [
             "ESPN+"
@@ -9328,17 +9328,17 @@
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_HALFTIME",
-            "detail": "Halftime",
-            "shortDetail": "Halftime",
-            "label": "HALFTIME",
-            "period": 2,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "15:00 - 3rd Quarter",
+            "shortDetail": "15:00 - 3rd",
+            "label": "Q3",
+            "period": 3,
+            "clock": "15:00"
           },
           "completed": false,
-          "period": 2,
-          "clock": "0:00",
-          "statusText": "HALFTIME",
+          "period": 3,
+          "clock": "15:00",
+          "statusText": "Q3",
           "broadcasts": [
             "ESPN+"
           ]
@@ -9421,15 +9421,15 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "15:00 - 2nd Quarter",
-            "shortDetail": "15:00 - 2nd",
+            "detail": "13:18 - 2nd Quarter",
+            "shortDetail": "13:18 - 2nd",
             "label": "Q2",
             "period": 2,
-            "clock": "15:00"
+            "clock": "13:18"
           },
           "completed": false,
           "period": 2,
-          "clock": "15:00",
+          "clock": "13:18",
           "statusText": "Q2",
           "broadcasts": [
             "ESPN+",
@@ -9514,16 +9514,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "End of 1st Quarter",
-            "shortDetail": "End of 1st",
-            "label": "Q1",
-            "period": 1,
-            "clock": "0:00"
+            "detail": "15:00 - 2nd Quarter",
+            "shortDetail": "15:00 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "15:00"
           },
           "completed": false,
-          "period": 1,
-          "clock": "0:00",
-          "statusText": "Q1",
+          "period": 2,
+          "clock": "15:00",
+          "statusText": "Q2",
           "broadcasts": [
             "ESPN+"
           ]
