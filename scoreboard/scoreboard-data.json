@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-10-17T13:12:08.580005+00:00",
+  "generatedAt": "2026-10-17T16:24:12.981562+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -9212,7 +9212,7 @@
           "shortName": "URI @ YALE",
           "venue": "Yale Bowl",
           "city": "New Haven",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "43",
@@ -9234,19 +9234,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 12:00 PM EDT",
-            "shortDetail": "10/17 - 12:00 PM EDT",
-            "label": "10/17 - 12:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "7:20 - 1st Quarter",
+            "shortDetail": "7:20 - 1st",
+            "label": "Q1",
+            "period": 1,
+            "clock": "7:20"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/17 - 12:00 PM EDT",
+          "period": 1,
+          "clock": "7:20",
+          "statusText": "Q1",
           "broadcasts": []
         },
         {
