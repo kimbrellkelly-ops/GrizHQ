@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-10-17T16:24:12.981562+00:00",
+  "generatedAt": "2026-10-17T18:38:20.170898+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -9237,16 +9237,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "7:20 - 1st Quarter",
-            "shortDetail": "7:20 - 1st",
-            "label": "Q1",
-            "period": 1,
-            "clock": "7:20"
+            "detail": "11:39 - 4th Quarter",
+            "shortDetail": "11:39 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "11:39"
           },
           "completed": false,
-          "period": 1,
-          "clock": "7:20",
-          "statusText": "Q1",
+          "period": 4,
+          "clock": "11:39",
+          "statusText": "Q4",
           "broadcasts": []
         },
         {
@@ -9256,7 +9256,7 @@
           "shortName": "HC @ HARV",
           "venue": "Harvard Stadium",
           "city": "Cambridge",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "108",
@@ -9264,7 +9264,7 @@
               "short": "Harvard",
               "abbreviation": "HARV",
               "homeAway": "home",
-              "score": "",
+              "score": "13",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/108.png"
             },
             {
@@ -9273,24 +9273,24 @@
               "short": "Holy Cross",
               "abbreviation": "HC",
               "homeAway": "away",
-              "score": "",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/107.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 1:00 PM EDT",
-            "shortDetail": "10/17 - 1:00 PM EDT",
-            "label": "10/17 - 1:00 PM EDT",
-            "period": null,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "10/17 - 1:00 PM EDT",
+          "statusText": "HALFTIME",
           "broadcasts": []
         },
         {
@@ -9300,7 +9300,7 @@
           "shortName": "GTWN @ COLG",
           "venue": "Andy Kerr Stadium",
           "city": "Hamilton",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2142",
@@ -9308,7 +9308,7 @@
               "short": "Colgate",
               "abbreviation": "COLG",
               "homeAway": "home",
-              "score": "",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2142.png"
             },
             {
@@ -9317,24 +9317,24 @@
               "short": "Georgetown",
               "abbreviation": "GTWN",
               "homeAway": "away",
-              "score": "",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/46.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 1:00 PM EDT",
-            "shortDetail": "10/17 - 1:00 PM EDT",
-            "label": "10/17 - 1:00 PM EDT",
-            "period": null,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "10/17 - 1:00 PM EDT",
+          "statusText": "HALFTIME",
           "broadcasts": []
         },
         {
@@ -9344,7 +9344,7 @@
           "shortName": "MONM @ UNH",
           "venue": "Wildcat Stadium (NH)",
           "city": "Durham",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "160",
@@ -9366,19 +9366,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 1:00 PM EDT",
-            "shortDetail": "10/17 - 1:00 PM EDT",
-            "label": "10/17 - 1:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "6:20 - 2nd Quarter",
+            "shortDetail": "6:20 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "6:20"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/17 - 1:00 PM EDT",
+          "period": 2,
+          "clock": "6:20",
+          "statusText": "Q2",
           "broadcasts": []
         },
         {
@@ -9388,7 +9388,7 @@
           "shortName": "SDST @ UND",
           "venue": "Alerus Center",
           "city": "Grand Forks",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "155",
@@ -9410,19 +9410,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 2:00 PM EDT",
-            "shortDetail": "10/17 - 2:00 PM EDT",
-            "label": "10/17 - 2:00 PM EDT",
-            "period": null,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "End of 1st Quarter",
+            "shortDetail": "End of 1st",
+            "label": "Q1",
+            "period": 1,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 1,
           "clock": "0:00",
-          "statusText": "10/17 - 2:00 PM EDT",
+          "statusText": "Q1",
           "broadcasts": []
         },
         {
@@ -9432,7 +9432,7 @@
           "shortName": "LEH @ COR",
           "venue": "Schoellkopf Field",
           "city": "Ithaca",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "172",
@@ -9454,19 +9454,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 2:00 PM EDT",
-            "shortDetail": "10/17 - 2:00 PM EDT",
-            "label": "10/17 - 2:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "0:51 - 1st Quarter",
+            "shortDetail": "0:51 - 1st",
+            "label": "Q1",
+            "period": 1,
+            "clock": "0:51"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/17 - 2:00 PM EDT",
+          "period": 1,
+          "clock": "0:51",
+          "statusText": "Q1",
           "broadcasts": []
         },
         {
@@ -9476,7 +9476,7 @@
           "shortName": "APSU @ WES",
           "venue": "University Stadium (GA)",
           "city": "Carrollton",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2698",
@@ -9498,19 +9498,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 2:00 PM EDT",
-            "shortDetail": "10/17 - 2:00 PM EDT",
-            "label": "10/17 - 2:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "1:00 - 1st Quarter",
+            "shortDetail": "1:00 - 1st",
+            "label": "Q1",
+            "period": 1,
+            "clock": "1:00"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/17 - 2:00 PM EDT",
+          "period": 1,
+          "clock": "1:00",
+          "statusText": "Q1",
           "broadcasts": []
         },
         {
@@ -9520,7 +9520,7 @@
           "shortName": "EKU @ TNTC",
           "venue": "Tucker Stadium",
           "city": "Cookeville",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2635",
@@ -9542,19 +9542,19 @@
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 2:30 PM EDT",
-            "shortDetail": "10/17 - 2:30 PM EDT",
-            "label": "10/17 - 2:30 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "12:38 - 1st Quarter",
+            "shortDetail": "12:38 - 1st",
+            "label": "Q1",
+            "period": 1,
+            "clock": "12:38"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/17 - 2:30 PM EDT",
+          "period": 1,
+          "clock": "12:38",
+          "statusText": "Q1",
           "broadcasts": []
         },
         {
