@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-10-17T18:38:20.170898+00:00",
+  "generatedAt": "2026-10-17T18:40:18.687020+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -9220,7 +9220,7 @@
               "short": "Yale",
               "abbreviation": "YALE",
               "homeAway": "home",
-              "score": "",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/43.png"
             },
             {
@@ -9229,7 +9229,7 @@
               "short": "Rhode Island",
               "abbreviation": "URI",
               "homeAway": "away",
-              "score": "",
+              "score": "27",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/227.png"
             }
           ],
@@ -9237,17 +9237,19 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "11:39 - 4th Quarter",
-            "shortDetail": "11:39 - 4th",
+            "detail": "10:39 - 4th Quarter",
+            "shortDetail": "10:39 - 4th",
             "label": "Q4",
             "period": 4,
-            "clock": "11:39"
+            "clock": "10:39"
           },
           "completed": false,
           "period": 4,
-          "clock": "11:39",
+          "clock": "10:39",
           "statusText": "Q4",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401867841",
@@ -9291,7 +9293,9 @@
           "period": 2,
           "clock": "0:00",
           "statusText": "HALFTIME",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868002",
@@ -9335,7 +9339,9 @@
           "period": 2,
           "clock": "0:00",
           "statusText": "HALFTIME",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401866665",
@@ -9352,7 +9358,7 @@
               "short": "New Hampshire",
               "abbreviation": "UNH",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/160.png"
             },
             {
@@ -9361,25 +9367,27 @@
               "short": "Monmouth",
               "abbreviation": "MONM",
               "homeAway": "away",
-              "score": "",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2405.png"
             }
           ],
           "status": {
             "state": "in",
             "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "6:20 - 2nd Quarter",
-            "shortDetail": "6:20 - 2nd",
-            "label": "Q2",
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
             "period": 2,
-            "clock": "6:20"
+            "clock": "0:00"
           },
           "completed": false,
           "period": 2,
-          "clock": "6:20",
-          "statusText": "Q2",
-          "broadcasts": []
+          "clock": "0:00",
+          "statusText": "HALFTIME",
+          "broadcasts": [
+            "FloSports"
+          ]
         },
         {
           "id": "401867878",
@@ -9396,7 +9404,7 @@
               "short": "North Dakota",
               "abbreviation": "UND",
               "homeAway": "home",
-              "score": "",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png"
             },
             {
@@ -9405,7 +9413,7 @@
               "short": "S Dakota St",
               "abbreviation": "SDST",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png"
             }
           ],
@@ -9413,17 +9421,20 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "End of 1st Quarter",
-            "shortDetail": "End of 1st",
-            "label": "Q1",
-            "period": 1,
-            "clock": "0:00"
+            "detail": "15:00 - 2nd Quarter",
+            "shortDetail": "15:00 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "15:00"
           },
           "completed": false,
-          "period": 1,
-          "clock": "0:00",
-          "statusText": "Q1",
-          "broadcasts": []
+          "period": 2,
+          "clock": "15:00",
+          "statusText": "Q2",
+          "broadcasts": [
+            "ESPN+",
+            "Midco Sports Plus"
+          ]
         },
         {
           "id": "401867830",
@@ -9440,7 +9451,7 @@
               "short": "Cornell",
               "abbreviation": "COR",
               "homeAway": "home",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/172.png"
             },
             {
@@ -9449,7 +9460,7 @@
               "short": "Lehigh",
               "abbreviation": "LEH",
               "homeAway": "away",
-              "score": "",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2329.png"
             }
           ],
@@ -9467,7 +9478,9 @@
           "period": 1,
           "clock": "0:51",
           "statusText": "Q1",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868066",
@@ -9484,7 +9497,7 @@
               "short": "West Georgia",
               "abbreviation": "WES",
               "homeAway": "home",
-              "score": "",
+              "score": "10",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2698.png"
             },
             {
@@ -9493,7 +9506,7 @@
               "short": "Austin Peay",
               "abbreviation": "APSU",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
             }
           ],
@@ -9501,17 +9514,19 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "1:00 - 1st Quarter",
-            "shortDetail": "1:00 - 1st",
+            "detail": "End of 1st Quarter",
+            "shortDetail": "End of 1st",
             "label": "Q1",
             "period": 1,
-            "clock": "1:00"
+            "clock": "0:00"
           },
           "completed": false,
           "period": 1,
-          "clock": "1:00",
+          "clock": "0:00",
           "statusText": "Q1",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868145",
@@ -9528,7 +9543,7 @@
               "short": "Tennessee Tech",
               "abbreviation": "TNTC",
               "homeAway": "home",
-              "score": "",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2635.png"
             },
             {
@@ -9537,7 +9552,7 @@
               "short": "E Kentucky",
               "abbreviation": "EKU",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png"
             }
           ],
@@ -9555,7 +9570,9 @@
           "period": 1,
           "clock": "12:38",
           "statusText": "Q1",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868096",
@@ -9572,7 +9589,7 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             },
             {
@@ -9581,7 +9598,7 @@
               "short": "Idaho",
               "abbreviation": "IDHO",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
             }
           ],
@@ -9599,7 +9616,10 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 3:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports"
+          ]
         },
         {
           "id": "401868105",
@@ -9616,7 +9636,7 @@
               "short": "Weber St",
               "abbreviation": "WEB",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
             },
             {
@@ -9625,7 +9645,7 @@
               "short": "Idaho St",
               "abbreviation": "IDST",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png"
             }
           ],
@@ -9643,7 +9663,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 3:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401866667",
@@ -9660,7 +9682,7 @@
               "short": "Campbell",
               "abbreviation": "CAM",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2097.png"
             },
             {
@@ -9669,7 +9691,7 @@
               "short": "Towson",
               "abbreviation": "TOW",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/119.png"
             }
           ],
@@ -9687,7 +9709,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 3:30 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "FloSports"
+          ]
         },
         {
           "id": "401868310",
@@ -9704,7 +9728,7 @@
               "short": "Nicholls",
               "abbreviation": "NICH",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2447.png"
             },
             {
@@ -9713,7 +9737,7 @@
               "short": "SF Austin",
               "abbreviation": "SFA",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2617.png"
             }
           ],
@@ -9731,7 +9755,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 4:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401867849",
@@ -9748,7 +9774,7 @@
               "short": "S Illinois",
               "abbreviation": "SIU",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png"
             },
             {
@@ -9757,7 +9783,7 @@
               "short": "Illinois St",
               "abbreviation": "ILST",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png"
             }
           ],
@@ -9775,7 +9801,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 4:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPNU"
+          ]
         },
         {
           "id": "401867870",
@@ -9792,7 +9820,7 @@
               "short": "Murray St",
               "abbreviation": "MUR",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/93.png"
             },
             {
@@ -9801,7 +9829,7 @@
               "short": "South Dakota",
               "abbreviation": "SDAK",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/233.png"
             }
           ],
@@ -9819,7 +9847,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 5:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868319",
@@ -9836,7 +9866,7 @@
               "short": "SE Louisiana",
               "abbreviation": "SELA",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2545.png"
             },
             {
@@ -9845,7 +9875,7 @@
               "short": "Lamar",
               "abbreviation": "LAM",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png"
             }
           ],
@@ -9863,7 +9893,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 5:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401867897",
@@ -9880,7 +9912,7 @@
               "short": "Youngstown St",
               "abbreviation": "YSU",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png"
             },
             {
@@ -9889,7 +9921,7 @@
               "short": "Northern Iowa",
               "abbreviation": "UNI",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2460.png"
             }
           ],
@@ -9907,7 +9939,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 6:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401867968",
@@ -9924,7 +9958,7 @@
               "short": "Tennessee St",
               "abbreviation": "TNST",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2634.png"
             },
             {
@@ -9933,7 +9967,7 @@
               "short": "Morgan St",
               "abbreviation": "MORG",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2415.png"
             }
           ],
@@ -9951,7 +9985,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 6:30 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868134",
@@ -9968,7 +10004,7 @@
               "short": "Tarleton St",
               "abbreviation": "TAR",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2627.png"
             },
             {
@@ -9977,7 +10013,7 @@
               "short": "C Arkansas",
               "abbreviation": "CARK",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2110.png"
             }
           ],
@@ -9995,7 +10031,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 7:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868088",
@@ -10012,7 +10050,7 @@
               "short": "E Washington",
               "abbreviation": "EWU",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png"
             },
             {
@@ -10021,7 +10059,7 @@
               "short": "Montana St",
               "abbreviation": "MTST",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
             }
           ],
@@ -10039,7 +10077,10 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 7:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports"
+          ]
         },
         {
           "id": "401868125",
@@ -10056,7 +10097,7 @@
               "short": "N Arizona",
               "abbreviation": "NAU",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
             },
             {
@@ -10065,7 +10106,7 @@
               "short": "Portland St",
               "abbreviation": "PRST",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2502.png"
             }
           ],
@@ -10083,7 +10124,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 7:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868383",
@@ -10100,7 +10143,7 @@
               "short": "Samford",
               "abbreviation": "SAM",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png"
             },
             {
@@ -10109,7 +10152,7 @@
               "short": "Mercer",
               "abbreviation": "MER",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2382.png"
             }
           ],
@@ -10127,7 +10170,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 7:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868161",
@@ -10144,7 +10189,7 @@
               "short": "Southern Utah",
               "abbreviation": "SUU",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/253.png"
             },
             {
@@ -10153,7 +10198,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             }
           ],
@@ -10171,7 +10216,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 8:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         }
       ],
       "fcsTop25Byes": [
@@ -10197,7 +10244,7 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             },
             {
@@ -10206,7 +10253,7 @@
               "short": "Idaho",
               "abbreviation": "IDHO",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
             }
           ],
@@ -10224,7 +10271,10 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 3:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports"
+          ]
         },
         {
           "id": "401868105",
@@ -10241,7 +10291,7 @@
               "short": "Weber St",
               "abbreviation": "WEB",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
             },
             {
@@ -10250,7 +10300,7 @@
               "short": "Idaho St",
               "abbreviation": "IDST",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png"
             }
           ],
@@ -10268,7 +10318,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 3:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868088",
@@ -10285,7 +10337,7 @@
               "short": "E Washington",
               "abbreviation": "EWU",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png"
             },
             {
@@ -10294,7 +10346,7 @@
               "short": "Montana St",
               "abbreviation": "MTST",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
             }
           ],
@@ -10312,7 +10364,10 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 7:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports"
+          ]
         },
         {
           "id": "401868125",
@@ -10329,7 +10384,7 @@
               "short": "N Arizona",
               "abbreviation": "NAU",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
             },
             {
@@ -10338,7 +10393,7 @@
               "short": "Portland St",
               "abbreviation": "PRST",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2502.png"
             }
           ],
@@ -10356,7 +10411,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 7:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868079",
@@ -10373,7 +10430,7 @@
               "short": "N Colorado",
               "abbreviation": "UNCO",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png"
             },
             {
@@ -10382,7 +10439,7 @@
               "short": "Cal Poly",
               "abbreviation": "CP",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png"
             }
           ],
@@ -10400,7 +10457,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 8:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868161",
@@ -10417,7 +10476,7 @@
               "short": "Southern Utah",
               "abbreviation": "SUU",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/253.png"
             },
             {
@@ -10426,7 +10485,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             }
           ],
@@ -10444,7 +10503,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/17 - 8:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         }
       ]
     },
