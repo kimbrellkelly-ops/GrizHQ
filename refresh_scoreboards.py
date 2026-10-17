@@ -90,6 +90,34 @@ def compact(e):
  b=[]
  for br in c.get('broadcasts',[]) or []:b.extend(br.get('names') or [])
  state=st.get('state') or ''; completed=bool(st.get('completed')) or state=='post'; status_label='FINAL' if completed else ('HALFTIME' if state=='half' or st.get('name') in ('STATUS_HALFTIME','STATUS_HALFTIME_FINAL') else (f"OT" if period is not None and int(period)>=5 else (f"Q{int(period)}" if period is not None else ('LIVE' if state=='in' else (st.get('shortDetail') or st.get('detail') or 'SCHEDULED'))))); return {'id':str(e.get('id') or ''),'date':e.get('date') or '','name':e.get('name') or '','shortName':e.get('shortName') or '','venue':v.get('fullName') or '','city':addr.get('city') or '','state':addr.get('state') or '','teams':teams,'status':{'state':state,'completed':completed,'name':st.get('name') or '','detail':st.get('detail') or '','shortDetail':st.get('shortDetail') or '','label':status_label,'period':period,'clock':clock},'state':state,'completed':completed,'period':period,'clock':clock,'statusText':status_label,'broadcasts':b[:4]}
+def fetch_current_scoreboard_events():
+ # Team schedule endpoints are snapshots and can lag behind in-progress games.
+ # Overlay today's live scoreboard payload on every refresh so state, period,
+ # clock, and scores come from ESPN's current scoreboard feed.
+ today=date.today().strftime('%Y%m%d')
+ events={}
+ errors=[]
+ for group in ('81','20'):  # all FCS, then Big Sky conference
+  try:
+   payload=request_json('/scoreboard',{'dates':today,'groups':group,'limit':500})
+   rows=payload.get('events')
+   if not isinstance(rows,list):
+    raise RuntimeError('scoreboard response missing events')
+   for event in rows:
+    if event.get('id'):
+     events[str(event['id'])]=compact(event)
+  except Exception as exc:
+   errors.append(f'group {group}: {exc}')
+ if not events:
+  raise RuntimeError('Live ESPN scoreboard unavailable for today ('+'; '.join(errors)+')')
+ print(f'Live scoreboard overlay: {len(events)} events for {today}')
+ return events
+
+def overlay_current_scores(events,live_events):
+ # Replace stale snapshots by ESPN event ID; never fuzzy-match Montana and
+ # Montana State by name.
+ return [live_events.get(str(event.get('id') or ''),event) for event in events]
+
 def canonical(s):
  n=norm(s)
  aliases={
@@ -137,7 +165,7 @@ def big_sky_expected(data,start,end):
   if start<=d<=end and r.get('team') and r.get('opponent'):out.add('|'.join(sorted([canonical(r['team']),canonical(r['opponent'])])))
  return out
 def build():
- data=json.loads(DATA.read_text(encoding='utf-8'));rankings,rank_date=load_rankings();catalog=team_catalog();ranked_events=fetch_named_team_events([r['team'] for r in rankings],catalog);big_sky_events=fetch_named_team_events(BIG_SKY,catalog);result={'season':2026,'generatedAt':datetime.now(timezone.utc).isoformat(),'source':'ESPN team schedules (Top 25 + Big Sky)','rankings':rankings,'rankingsDate':rank_date,'bigSkyTeams':BIG_SKY,'weeks':[]}
+ data=json.loads(DATA.read_text(encoding='utf-8'));rankings,rank_date=load_rankings();catalog=team_catalog();ranked_events=fetch_named_team_events([r['team'] for r in rankings],catalog);big_sky_events=fetch_named_team_events(BIG_SKY,catalog);live_events=fetch_current_scoreboard_events();ranked_events=overlay_current_scores(ranked_events,live_events);big_sky_events=overlay_current_scores(big_sky_events,live_events);result={'season':2026,'generatedAt':datetime.now(timezone.utc).isoformat(),'source':'ESPN team schedules (Top 25 + Big Sky)','rankings':rankings,'rankingsDate':rank_date,'bigSkyTeams':BIG_SKY,'weeks':[]}
  for i,(start,end,label) in enumerate(WEEKS):
   top=[];seen=set();played_ranks=set();bs=[];bs_seen=set()
   for e in ranked_events:
