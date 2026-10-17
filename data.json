@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17T19:25:34.037238+00:00",
+  "updated": "2026-10-17T22:20:29.499220+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-2",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-17T19:26:34.559580+00:00"
+    "checked_at": "2026-10-17T22:21:26.681270+00:00"
   },
   "resources": [
     {
@@ -2943,7 +2943,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-17T19:25:43.026572+00:00",
+    "source_checked_at": "2026-10-17T22:20:37.158059+00:00",
     "team_summary": [
       {
         "value": "5–2",
@@ -27647,12 +27647,25 @@
     "title": "Griz press conference – Kennedy, Finch, Huff on Battle for the Little Brown Stein against Idaho",
     "date": "Mon, 12 Oct 2026 21:52:39 +0000",
     "url": "https://skylinesportsmt.com/griz-press-conference-kennedy-finch-huff-on-battle-for-the-little-brown-stein-against-idaho/",
-    "youtube_id": "pxD_r-fouHc"
+    "youtube_id": ""
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
     {
       "rank": 1,
+      "team": "Weber State",
+      "conference_record": "4-1",
+      "overall_record": "5-3",
+      "home": "3-1",
+      "away": "2-2",
+      "conference_points": "178-154",
+      "points": "290-273",
+      "conference_streak": "W3",
+      "overall_streak": "W3",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2546"
+    },
+    {
+      "rank": 2,
       "team": "Montana",
       "conference_record": "3-1",
       "overall_record": "5-2",
@@ -27665,7 +27678,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2538"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "team": "Northern Arizona",
       "conference_record": "3-1",
       "overall_record": "5-2",
@@ -27678,7 +27691,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2540"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "team": "Cal Poly",
       "conference_record": "3-1",
       "overall_record": "4-3",
@@ -27689,19 +27702,6 @@
       "conference_streak": "W1",
       "overall_streak": "W1",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2535"
-    },
-    {
-      "rank": 4,
-      "team": "Weber State",
-      "conference_record": "3-1",
-      "overall_record": "4-3",
-      "home": "2-1",
-      "away": "2-2",
-      "conference_points": "151-134",
-      "points": "263-253",
-      "conference_streak": "W2",
-      "overall_streak": "W2",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2546"
     },
     {
       "rank": 5,
@@ -27744,19 +27744,6 @@
     },
     {
       "rank": 8,
-      "team": "Idaho State",
-      "conference_record": "1-2",
-      "overall_record": "4-2",
-      "home": "2-2",
-      "away": "2-0",
-      "conference_points": "83-87",
-      "points": "209-131",
-      "conference_streak": "L2",
-      "overall_streak": "L2",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2537"
-    },
-    {
-      "rank": 9,
       "team": "Southern Utah",
       "conference_record": "1-2",
       "overall_record": "2-4",
@@ -27769,7 +27756,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2543"
     },
     {
-      "rank": 10,
+      "rank": 9,
       "team": "Idaho",
       "conference_record": "1-2",
       "overall_record": "1-5",
@@ -27780,6 +27767,19 @@
       "conference_streak": "L1",
       "overall_streak": "L1",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2536"
+    },
+    {
+      "rank": 10,
+      "team": "Idaho State",
+      "conference_record": "1-3",
+      "overall_record": "4-3",
+      "home": "2-2",
+      "away": "2-1",
+      "conference_points": "103-114",
+      "points": "229-158",
+      "conference_streak": "L3",
+      "overall_streak": "L3",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2537"
     },
     {
       "rank": 11,
@@ -28092,7 +28092,7 @@
   "big_sky_players_of_week_updated": "2026-09-20T19:00:00Z",
   "next_opponent": {
     "opponent": "Idaho",
-    "record": "4–2",
+    "record": "1–5",
     "conferenceRecord": "1–2",
     "location": "Idaho",
     "capacity": "",
@@ -28113,14 +28113,14 @@
       [
         "Idaho",
         "L",
-        "24–25",
-        "Cal Poly"
+        "27–38",
+        "at Weber State"
       ],
       [
         "Idaho",
-        "L",
-        "31–38",
-        "Northern Arizona"
+        "W",
+        "35–34",
+        "Montana State"
       ]
     ],
     "players": [
@@ -28145,10 +28145,10 @@
         "Idaho Defensive leader"
       ]
     ],
-    "intel": "Idaho is 4–2 through 6 completed games and 1–2 in Big Sky play.",
+    "intel": "Idaho is 1–5 through 6 completed games and 1–2 in Big Sky play.",
     "facts": [
       [
-        "4–2",
+        "1–5",
         "Current record"
       ],
       [
@@ -28257,15 +28257,15 @@
       ],
       [
         "RECENT GAME",
-        "Idaho L vs. Cal Poly",
+        "Idaho L vs. at Weber State",
         "Full-game, recap and highlight video",
-        "https://www.youtube.com/results?search_query=Idaho%20Cal%20Poly%202026%20football"
+        "https://www.youtube.com/results?search_query=Idaho%20at%20Weber%20State%202026%20football"
       ],
       [
         "RECENT GAME",
-        "Idaho L vs. Northern Arizona",
+        "Idaho W vs. Montana State",
         "Full-game, recap and highlight video",
-        "https://www.youtube.com/results?search_query=Idaho%20Northern%20Arizona%202026%20football"
+        "https://www.youtube.com/results?search_query=Idaho%20Montana%20State%202026%20football"
       ]
     ],
     "resources": {
@@ -28277,6 +28277,6 @@
       "news": "https://govandals.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-17T19:25:54.942822+00:00"
+    "updated": "2026-10-17T22:20:46.256396+00:00"
   }
 }
