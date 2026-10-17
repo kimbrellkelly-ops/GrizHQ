@@ -6,7 +6,8 @@ on:
       - scoreboard/scoreboard-data.json
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *"
+    # Offset from common five-minute boundaries to reduce scheduler contention.
+    - cron: "2-59/5 * * * *"
 permissions:
   contents: write
 concurrency:
