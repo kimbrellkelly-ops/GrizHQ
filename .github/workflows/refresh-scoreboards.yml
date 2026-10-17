@@ -38,6 +38,12 @@ jobs:
               for section in ('fcsTop25Games','bigSkyGames'):
                   ids=[str(g['id']) for g in w.get(section,[]) if g.get('id') is not None]
                   assert len(ids) == len(set(ids)), f'duplicate game IDs in {section} for {w.get("label")}'
+                  for g in w.get(section,[]):
+                      state=(g.get('state') or (g.get('status') or {}).get('state') or '')
+                      if state in ('in','half'):
+                          teams=g.get('teams') or []
+                          assert len(teams) >= 2, f'Live game missing competitors: {g.get("name")}'
+                          assert all(str(t.get('score','')).strip().isdigit() for t in teams), f'Live game missing numeric scores: {g.get("name")} ({g.get("id")})'
 
           now=datetime.now(timezone.utc)
           today=now.date().isoformat()
