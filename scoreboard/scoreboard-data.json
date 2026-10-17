@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-10-17T18:56:47.442065+00:00",
+  "generatedAt": "2026-10-17T20:56:56.379451+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -9212,7 +9212,7 @@
           "shortName": "URI @ YALE",
           "venue": "Yale Bowl",
           "city": "New Haven",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "43",
@@ -9220,7 +9220,7 @@
               "short": "Yale",
               "abbreviation": "YALE",
               "homeAway": "home",
-              "score": "17",
+              "score": "23",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/43.png"
             },
             {
@@ -9229,24 +9229,24 @@
               "short": "Rhode Island",
               "abbreviation": "URI",
               "homeAway": "away",
-              "score": "34",
+              "score": "41",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/227.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "7:35 - 4th Quarter",
-            "shortDetail": "7:35 - 4th",
-            "label": "Q4",
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
             "period": 4,
-            "clock": "7:35"
+            "clock": "0:00"
           },
-          "completed": false,
+          "completed": true,
           "period": 4,
-          "clock": "7:35",
-          "statusText": "Q4",
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": [
             "ESPN+"
           ]
@@ -9258,7 +9258,7 @@
           "shortName": "HC @ HARV",
           "venue": "Harvard Stadium",
           "city": "Cambridge",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "108",
@@ -9266,7 +9266,7 @@
               "short": "Harvard",
               "abbreviation": "HARV",
               "homeAway": "home",
-              "score": "13",
+              "score": "30",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/108.png"
             },
             {
@@ -9280,19 +9280,19 @@
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "13:22 - 3rd Quarter",
-            "shortDetail": "13:22 - 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "13:22"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 3,
-          "clock": "13:22",
-          "statusText": "Q3",
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": [
             "ESPN+"
           ]
@@ -9304,7 +9304,7 @@
           "shortName": "GTWN @ COLG",
           "venue": "Andy Kerr Stadium",
           "city": "Hamilton",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2142",
@@ -9321,24 +9321,24 @@
               "short": "Georgetown",
               "abbreviation": "GTWN",
               "homeAway": "away",
-              "score": "14",
+              "score": "27",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/46.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "8:37 - 3rd Quarter",
-            "shortDetail": "8:37 - 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "8:37"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 3,
-          "clock": "8:37",
-          "statusText": "Q3",
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": [
             "ESPN+"
           ]
@@ -9350,7 +9350,7 @@
           "shortName": "MONM @ UNH",
           "venue": "Wildcat Stadium (NH)",
           "city": "Durham",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "160",
@@ -9358,7 +9358,7 @@
               "short": "New Hampshire",
               "abbreviation": "UNH",
               "homeAway": "home",
-              "score": "7",
+              "score": "21",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/160.png"
             },
             {
@@ -9367,24 +9367,24 @@
               "short": "Monmouth",
               "abbreviation": "MONM",
               "homeAway": "away",
-              "score": "35",
+              "score": "42",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2405.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "8:08 - 3rd Quarter",
-            "shortDetail": "8:08 - 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "8:08"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 3,
-          "clock": "8:08",
-          "statusText": "Q3",
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
           "broadcasts": [
             "FloSports"
           ]
@@ -9404,7 +9404,7 @@
               "short": "North Dakota",
               "abbreviation": "UND",
               "homeAway": "home",
-              "score": "14",
+              "score": "21",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png"
             },
             {
@@ -9413,7 +9413,7 @@
               "short": "S Dakota St",
               "abbreviation": "SDST",
               "homeAway": "away",
-              "score": "0",
+              "score": "10",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png"
             }
           ],
@@ -9421,16 +9421,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "11:21 - 2nd Quarter",
-            "shortDetail": "11:21 - 2nd",
-            "label": "Q2",
-            "period": 2,
-            "clock": "11:21"
+            "detail": "2:22 - 4th Quarter",
+            "shortDetail": "2:22 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "2:22"
           },
           "completed": false,
-          "period": 2,
-          "clock": "11:21",
-          "statusText": "Q2",
+          "period": 4,
+          "clock": "2:22",
+          "statusText": "Q4",
           "broadcasts": [
             "ESPN+",
             "Midco Sports Plus"
@@ -9451,7 +9451,7 @@
               "short": "Cornell",
               "abbreviation": "COR",
               "homeAway": "home",
-              "score": "21",
+              "score": "45",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/172.png"
             },
             {
@@ -9460,7 +9460,7 @@
               "short": "Lehigh",
               "abbreviation": "LEH",
               "homeAway": "away",
-              "score": "7",
+              "score": "38",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2329.png"
             }
           ],
@@ -9468,16 +9468,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "12:32 - 2nd Quarter",
-            "shortDetail": "12:32 - 2nd",
-            "label": "Q2",
-            "period": 2,
-            "clock": "12:32"
+            "detail": "0:51 - 4th Quarter",
+            "shortDetail": "0:51 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "0:51"
           },
           "completed": false,
-          "period": 2,
-          "clock": "12:32",
-          "statusText": "Q2",
+          "period": 4,
+          "clock": "0:51",
+          "statusText": "Q4",
           "broadcasts": [
             "ESPN+"
           ]
@@ -9506,7 +9506,7 @@
               "short": "Austin Peay",
               "abbreviation": "APSU",
               "homeAway": "away",
-              "score": "0",
+              "score": "24",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
             }
           ],
@@ -9514,16 +9514,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "11:12 - 2nd Quarter",
-            "shortDetail": "11:12 - 2nd",
-            "label": "Q2",
-            "period": 2,
-            "clock": "11:12"
+            "detail": "4:39 - 4th Quarter",
+            "shortDetail": "4:39 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "4:39"
           },
           "completed": false,
-          "period": 2,
-          "clock": "11:12",
-          "statusText": "Q2",
+          "period": 4,
+          "clock": "4:39",
+          "statusText": "Q4",
           "broadcasts": [
             "ESPN+"
           ]
@@ -9543,7 +9543,7 @@
               "short": "Tennessee Tech",
               "abbreviation": "TNTC",
               "homeAway": "home",
-              "score": "7",
+              "score": "42",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2635.png"
             },
             {
@@ -9552,7 +9552,7 @@
               "short": "E Kentucky",
               "abbreviation": "EKU",
               "homeAway": "away",
-              "score": "6",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png"
             }
           ],
@@ -9560,16 +9560,16 @@
             "state": "in",
             "completed": false,
             "name": "STATUS_IN_PROGRESS",
-            "detail": "2:24 - 1st Quarter",
-            "shortDetail": "2:24 - 1st",
-            "label": "Q1",
-            "period": 1,
-            "clock": "2:24"
+            "detail": "15:00 - 4th Quarter",
+            "shortDetail": "15:00 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "15:00"
           },
           "completed": false,
-          "period": 1,
-          "clock": "2:24",
-          "statusText": "Q1",
+          "period": 4,
+          "clock": "15:00",
+          "statusText": "Q4",
           "broadcasts": [
             "ESPN+"
           ]
@@ -9581,7 +9581,7 @@
           "shortName": "IDHO @ MONT",
           "venue": "Washington-Grizzly Stadium",
           "city": "Missoula",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "149",
@@ -9589,7 +9589,7 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "home",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             },
             {
@@ -9598,24 +9598,24 @@
               "short": "Idaho",
               "abbreviation": "IDHO",
               "homeAway": "away",
-              "score": "",
+              "score": "21",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 3:00 PM EDT",
-            "shortDetail": "10/17 - 3:00 PM EDT",
-            "label": "10/17 - 3:00 PM EDT",
-            "period": null,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "10/17 - 3:00 PM EDT",
+          "statusText": "HALFTIME",
           "broadcasts": [
             "ESPN+",
             "Scripps Sports"
@@ -9628,7 +9628,7 @@
           "shortName": "IDST @ WEB",
           "venue": "Stewart Stadium",
           "city": "Ogden",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2692",
@@ -9636,7 +9636,7 @@
               "short": "Weber St",
               "abbreviation": "WEB",
               "homeAway": "home",
-              "score": "",
+              "score": "6",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
             },
             {
@@ -9645,24 +9645,24 @@
               "short": "Idaho St",
               "abbreviation": "IDST",
               "homeAway": "away",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 3:00 PM EDT",
-            "shortDetail": "10/17 - 3:00 PM EDT",
-            "label": "10/17 - 3:00 PM EDT",
-            "period": null,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "10/17 - 3:00 PM EDT",
+          "statusText": "HALFTIME",
           "broadcasts": [
             "ESPN+"
           ]
@@ -9674,7 +9674,7 @@
           "shortName": "TOW @ CAM",
           "venue": "Barker-Lane Stadium",
           "city": "Buies Creek",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2097",
@@ -9682,7 +9682,7 @@
               "short": "Campbell",
               "abbreviation": "CAM",
               "homeAway": "home",
-              "score": "",
+              "score": "10",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2097.png"
             },
             {
@@ -9691,24 +9691,24 @@
               "short": "Towson",
               "abbreviation": "TOW",
               "homeAway": "away",
-              "score": "",
+              "score": "13",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/119.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 3:30 PM EDT",
-            "shortDetail": "10/17 - 3:30 PM EDT",
-            "label": "10/17 - 3:30 PM EDT",
-            "period": null,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "10/17 - 3:30 PM EDT",
+          "statusText": "HALFTIME",
           "broadcasts": [
             "FloSports"
           ]
@@ -9720,7 +9720,7 @@
           "shortName": "SFA @ NICH",
           "venue": "John L. Guidry Stadium",
           "city": "Thibodaux",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2447",
@@ -9728,7 +9728,7 @@
               "short": "Nicholls",
               "abbreviation": "NICH",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2447.png"
             },
             {
@@ -9737,24 +9737,24 @@
               "short": "SF Austin",
               "abbreviation": "SFA",
               "homeAway": "away",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2617.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 4:00 PM EDT",
-            "shortDetail": "10/17 - 4:00 PM EDT",
-            "label": "10/17 - 4:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "12:32 - 2nd Quarter",
+            "shortDetail": "12:32 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "12:32"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/17 - 4:00 PM EDT",
+          "period": 2,
+          "clock": "12:32",
+          "statusText": "Q2",
           "broadcasts": [
             "ESPN+"
           ]
@@ -9766,7 +9766,7 @@
           "shortName": "ILST @ SIU",
           "venue": "Saluki Stadium",
           "city": "Carbondale",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "79",
@@ -9774,7 +9774,7 @@
               "short": "S Illinois",
               "abbreviation": "SIU",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png"
             },
             {
@@ -9783,24 +9783,24 @@
               "short": "Illinois St",
               "abbreviation": "ILST",
               "homeAway": "away",
-              "score": "",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 4:00 PM EDT",
-            "shortDetail": "10/17 - 4:00 PM EDT",
-            "label": "10/17 - 4:00 PM EDT",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "9:02 - 2nd Quarter",
+            "shortDetail": "9:02 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "9:02"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "10/17 - 4:00 PM EDT",
+          "period": 2,
+          "clock": "9:02",
+          "statusText": "Q2",
           "broadcasts": [
             "ESPNU"
           ]
@@ -10236,7 +10236,7 @@
           "shortName": "IDHO @ MONT",
           "venue": "Washington-Grizzly Stadium",
           "city": "Missoula",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "149",
@@ -10244,7 +10244,7 @@
               "short": "Montana",
               "abbreviation": "MONT",
               "homeAway": "home",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             },
             {
@@ -10253,24 +10253,24 @@
               "short": "Idaho",
               "abbreviation": "IDHO",
               "homeAway": "away",
-              "score": "",
+              "score": "21",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 3:00 PM EDT",
-            "shortDetail": "10/17 - 3:00 PM EDT",
-            "label": "10/17 - 3:00 PM EDT",
-            "period": null,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "10/17 - 3:00 PM EDT",
+          "statusText": "HALFTIME",
           "broadcasts": [
             "ESPN+",
             "Scripps Sports"
@@ -10283,7 +10283,7 @@
           "shortName": "IDST @ WEB",
           "venue": "Stewart Stadium",
           "city": "Ogden",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2692",
@@ -10291,7 +10291,7 @@
               "short": "Weber St",
               "abbreviation": "WEB",
               "homeAway": "home",
-              "score": "",
+              "score": "6",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
             },
             {
@@ -10300,24 +10300,24 @@
               "short": "Idaho St",
               "abbreviation": "IDST",
               "homeAway": "away",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, October 17th at 3:00 PM EDT",
-            "shortDetail": "10/17 - 3:00 PM EDT",
-            "label": "10/17 - 3:00 PM EDT",
-            "period": null,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "10/17 - 3:00 PM EDT",
+          "statusText": "HALFTIME",
           "broadcasts": [
             "ESPN+"
           ]
