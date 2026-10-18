@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18T00:30:03.918476+00:00",
+  "updated": "2026-10-18T04:56:48.610631+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "After Idaho loss, Griz head coach Bobby Kennedy takes blame, stands by staff",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/after-idaho-loss-griz-head-coach-bobby-kennedy-takes-blame-stands-by-staff/article_9484ea29-aa3c-4cb0-b224-749bd6ef0216.html",
+      "date": "Oct. 18, 2026",
+      "published_at": "2026-10-18T03:00:00+00:00",
+      "description": "After Idaho loss, Griz head coach Bobby Kennedy takes blame, stands by staff",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/9/48/9484ea29-aa3c-4cb0-b224-749bd6ef0216/6ad42504157fa.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/9/48/9484ea29-aa3c-4cb0-b224-749bd6ef0216/6ad42504157fa.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Shorthanded Griz fall to Idaho",
       "url": "https://gogriz.com/news/2026/10/17/football-shorthanded-griz-fall-to-idaho",
@@ -54,6 +69,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/b1/bb193975-a5f1-4bf6-92df-dd7403111651/6ad3e041e96c2.preview.jpg?crop=1726%2C906%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "PHOTOS: Vandals reclaim Little Brown Stein with 42-35 win over Griz",
+      "url": "https://dailyinterlake.com/news/2026/oct/17/photos-vandals-reclaim-little-brown-stein-with-42-35-win-over-griz/",
+      "date": "Oct. 17, 2026",
+      "published_at": "2026-10-17T08:30:00+00:00",
+      "description": "Updated 1 hour, 26 minutes ago PHOTOS: Vandals reclaim Little Brown Stein with 42-35 win over Griz The Montana Grizzlies fell to the Idaho Vandals 42-35 in a battle for the Little Brown Stein at Washington-Grizzly…",
+      "source": "Daily Inter Lake",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/10/17/1018_SPO_DIL_football_Grizzlies_vs_Idaho-1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/10/17/1018_SPO_DIL_football_Grizzlies_vs_Idaho-1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698"
     },
     {
       "title": "Washington-Grizzly Stadium at 40",
@@ -1479,36 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/de/7de9373c-323f-4c09-8099-110036fce5f5/6ab874ebf3cab.preview.jpg?crop=1661%2C872%2C1%2C139&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Recap: No. 5 Montana Grizzlies rout No. 10 UC Davis Aggies on road",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_8f3d0c30-80d1-570f-9f16-5564d3603193.html",
-      "date": "Sep. 27, 2026",
-      "published_at": "2026-09-27T05:15:00+00:00",
-      "description": "The Griz ran for 366 yards, their most since 2024, against UC Davis and outgained the Aggies 607-392 in total yards.",
-      "source": "Missoulian",
-      "badge": "GAME STORY",
-      "short": "GAME S",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/f6/7f6194df-5f9e-56f4-99f6-b99fbf434029/6ab878f9c64f2.image.jpg?resize=300%2C225",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/f6/7f6194df-5f9e-56f4-99f6-b99fbf434029/6ab878f9c64f2.image.jpg?resize=300%2C225"
-    },
-    {
-      "title": "Hauck out as Illinois DC after 4 games",
-      "url": "https://dailyinterlake.com/news/2026/sep/27/hauck-out-as-illinois-dc-after-4-games/",
-      "date": "Sep. 27, 2026",
-      "published_at": "2026-09-27T04:40:00+00:00",
-      "description": "Updated 2 minutes ago Hauck out as Illinois DC after 4 games Former Montana Grizzlies coach Bobby Hauck has parted ways with Illinois just four games into his stint as defensive coordinator, Illini coach Bret Bielema announced Sunday.",
-      "source": "Daily Inter Lake",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://hagadone.media.clients.ellingtoncms.com/static-4/dailyinterlake/images/default-social.jpg?v=2",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/static-4/dailyinterlake/images/default-social.jpg?v=2"
     }
   ]
 }
