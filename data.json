@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18T05:55:26.581586+00:00",
+  "updated": "2026-10-18T11:08:16.453969+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-3",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-18T05:56:28.053195+00:00"
+    "checked_at": "2026-10-18T11:09:14.203883+00:00"
   },
   "resources": [
     {
@@ -2944,7 +2944,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-18T05:55:34.163651+00:00",
+    "source_checked_at": "2026-10-18T11:08:24.950799+00:00",
     "team_summary": [
       {
         "value": "5–3",
@@ -28284,6 +28284,6 @@
       "news": "https://goeags.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-18T05:55:39.513328+00:00"
+    "updated": "2026-10-18T11:08:30.287442+00:00"
   }
 }
