@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18T21:11:13.832048+00:00",
+  "updated": "2026-10-18T23:08:00.787939+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -24,6 +24,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/2a/b2a5ed65-665c-4a82-b5de-836dba9bdf00/6ad454542fef5.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Photos: UM photojournalism students document Griz vs. Idaho",
+      "url": "https://missoulian.com/news/local/collection_e07bc229-652b-4332-a220-012047570cd3.html",
+      "date": "Oct. 18, 2026",
+      "published_at": "2026-10-18T19:00:00+00:00",
+      "description": "Students from Tailyr Irvine's intermediate photojournalism class at the University of Montana photographed the Montana Grizzlies take on the Idaho Vandals at Washington-Grizzly Stadium in Missoula on Saturday, Oct. 17, 2026.",
+      "source": "Missoulian",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/b/67/b67c41b9-c90f-4a18-a8b9-1011d52ce98d/6ad4430b23a3c.image.jpg?resize=300%2C214",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/b/67/b67c41b9-c90f-4a18-a8b9-1011d52ce98d/6ad4430b23a3c.image.jpg?resize=300%2C214"
     },
     {
       "title": "3 takeaways: No. 7 Grizzlies enter bye week on rare 2-game skid",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/0f/d0f9a4d0-7aa1-58ae-b6cb-b7c727707d1b/6ab959b5991ff.image.jpg?resize=300%2C240"
-    },
-    {
-      "title": "Montana at UC Davis Mariano Birdno",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/image_e1945c32-17b3-5de9-b994-82f54edc0750.html",
-      "date": "Sep. 27, 2026",
-      "published_at": "2026-09-27T17:45:00+00:00",
-      "description": "Montana tight end Mariano Birdno motions for a first down during the college football game against UC Davis on Sept. 27 at UC Davis Health Stadium in Davis, California. The Grizzlies put up 607 yards of total offense in the…",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/19/e1945c32-17b3-5de9-b994-82f54edc0750/6ab959b56220d.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/19/e1945c32-17b3-5de9-b994-82f54edc0750/6ab959b56220d.image.jpg?resize=300%2C200"
     }
   ]
 }
