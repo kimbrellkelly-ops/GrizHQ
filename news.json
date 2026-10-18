@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18T18:56:04.377548+00:00",
+  "updated": "2026-10-18T21:11:13.832048+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Week 7: No. 7 Montana Grizzlies fall to Idaho",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-7-no-7-montana-grizzlies-fall-to-idaho/collection_b2a5ed65-665c-4a82-b5de-836dba9bdf00.html",
+      "date": "Oct. 18, 2026",
+      "published_at": "2026-10-18T20:00:00+00:00",
+      "description": "Week 7: No. 7 Montana Grizzlies fall to Idaho",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/2a/b2a5ed65-665c-4a82-b5de-836dba9bdf00/6ad454542fef5.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/2a/b2a5ed65-665c-4a82-b5de-836dba9bdf00/6ad454542fef5.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "3 takeaways: No. 7 Grizzlies enter bye week on rare 2-game skid",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_ea459b17-38ca-5d30-af04-cc13f1c94751.html",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/19/e1945c32-17b3-5de9-b994-82f54edc0750/6ab959b56220d.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Montana at UC Davis Keali'i Ah Yat",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/image_ff3e5612-42e2-5c68-a3cd-db5635bb6a47.html",
-      "date": "Sep. 27, 2026",
-      "published_at": "2026-09-27T17:44:00+00:00",
-      "description": "Montana quarterback Keali'i Ah Yat rushes for a touchdown during the college football game against UC Davis on Sept. 27 at UC Davis Health Stadium in Davis, California.Ah Yat ran for two touchdowns and threw two more in the 62-22…",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/f3/ff3e5612-42e2-5c68-a3cd-db5635bb6a47/6ab959b5256f0.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/f3/ff3e5612-42e2-5c68-a3cd-db5635bb6a47/6ab959b5256f0.image.jpg?resize=300%2C200"
     }
   ]
 }
