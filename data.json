@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19T07:48:25.077484+00:00",
+  "updated": "2026-10-19T15:37:37.422074+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-3",
@@ -112,58 +112,58 @@
     }
   ],
   "coaches_poll": [
-    "South Dakota St. (23)",
-    "Tarleton St. (3)",
-    "Stephen F. Austin",
-    "Lehigh",
+    "Tarleton St. (24)",
+    "Stephen F. Austin (2)",
     "Montana St.",
     "Youngstown St.",
-    "Montana",
-    "Lamar",
+    "South Dakota St.",
     "South Dakota",
     "Northern Arizona",
+    "North Dakota",
     "Austin Peay",
-    "UC Davis",
     "Illinois St.",
     "Tennessee Tech",
-    "North Dakota",
+    "Lehigh",
     "Mercer",
-    "Harvard",
+    "Montana",
+    "Lamar",
     "Campbell",
-    "Colgate",
+    "Harvard",
     "Monmouth (N.J.)",
-    "Idaho St.",
     "Richmond",
-    "Yale",
-    "East Tennessee St.",
-    "Northern Iowa"
+    "ETSU",
+    "UC Davis",
+    "Jackson St.",
+    "West Florida",
+    "Southeastern Louisiana",
+    "South Carolina St."
   ],
   "media_poll": [
-    "South Dakota State (52)",
-    "Tarleton State (5)",
-    "Stephen F. Austin",
-    "Lehigh",
-    "Montana State",
-    "Youngstown State",
-    "Montana",
+    "Tarleton State (49)",
+    "Stephen F. Austin (4)",
+    "Montana State (3)",
+    "Youngstown State (1)",
+    "South Dakota State",
+    "North Dakota",
     "Northern Arizona",
     "South Dakota",
-    "Lamar",
-    "North Dakota",
     "Austin Peay",
     "Illinois State",
-    "UC Davis",
+    "Lehigh",
     "Tennessee Tech",
     "Campbell",
+    "Montana",
     "Harvard",
+    "Lamar",
     "Mercer",
-    "Northern Iowa",
     "ETSU",
-    "Idaho State",
-    "Colgate",
     "Monmouth",
-    "Morgan State",
-    "Yale"
+    "UC Davis",
+    "Northern Iowa",
+    "Weber State",
+    "Southeastern Louisiana",
+    "Jackson State",
+    "Richmond"
   ],
   "news": [
     {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-19T07:49:29.764614+00:00"
+    "checked_at": "2026-10-19T15:38:29.307774+00:00"
   },
   "resources": [
     {
@@ -2696,233 +2696,233 @@
     }
   ],
   "fcs_rankings_source": "Stats Perform FCS Top 25 — Aug. 31, 2026",
-  "fcs_rankings_date": "Oct 12, 2026",
+  "fcs_rankings_date": "Oct 19, 2026",
   "fcs_top20": [
     {
       "rank": 1,
-      "team": "South Dakota State (52)",
+      "team": "Tarleton State (49)",
       "record": ""
     },
     {
       "rank": 2,
-      "team": "Tarleton State (5)",
+      "team": "Stephen F. Austin (4)",
       "record": ""
     },
     {
       "rank": 3,
-      "team": "Stephen F. Austin",
-      "record": "1-0"
+      "team": "Montana State (3)",
+      "record": ""
     },
     {
       "rank": 4,
-      "team": "Lehigh",
-      "record": "1-0"
+      "team": "Youngstown State (1)",
+      "record": ""
     },
     {
       "rank": 5,
-      "team": "Montana State",
+      "team": "South Dakota State",
       "record": ""
     },
     {
       "rank": 6,
-      "team": "Youngstown State",
-      "record": "1-0"
-    },
-    {
-      "rank": 7,
-      "team": "Montana",
-      "record": ""
-    },
-    {
-      "rank": 8,
-      "team": "Northern Arizona",
-      "record": "1-0"
-    },
-    {
-      "rank": 9,
-      "team": "South Dakota",
-      "record": "1-0"
-    },
-    {
-      "rank": 10,
-      "team": "Lamar",
-      "record": "1-0"
-    },
-    {
-      "rank": 11,
       "team": "North Dakota",
       "record": "1-0"
     },
     {
-      "rank": 12,
+      "rank": 7,
+      "team": "Northern Arizona",
+      "record": "1-0"
+    },
+    {
+      "rank": 8,
+      "team": "South Dakota",
+      "record": "1-0"
+    },
+    {
+      "rank": 9,
       "team": "Austin Peay",
       "record": "1-0"
     },
     {
-      "rank": 13,
+      "rank": 10,
       "team": "Illinois State",
       "record": ""
     },
     {
-      "rank": 14,
-      "team": "UC Davis",
+      "rank": 11,
+      "team": "Lehigh",
       "record": "1-0"
     },
     {
-      "rank": 15,
+      "rank": 12,
       "team": "Tennessee Tech",
       "record": "1-0"
     },
     {
-      "rank": 16,
+      "rank": 13,
       "team": "Campbell",
       "record": ""
     },
     {
-      "rank": 17,
+      "rank": 14,
+      "team": "Montana",
+      "record": ""
+    },
+    {
+      "rank": 15,
       "team": "Harvard",
       "record": ""
     },
     {
-      "rank": 18,
+      "rank": 16,
+      "team": "Lamar",
+      "record": "1-0"
+    },
+    {
+      "rank": 17,
       "team": "Mercer",
       "record": "1-0"
     },
     {
+      "rank": 18,
+      "team": "ETSU",
+      "record": ""
+    },
+    {
       "rank": 19,
-      "team": "Northern Iowa",
+      "team": "Monmouth",
       "record": ""
     },
     {
       "rank": 20,
-      "team": "ETSU",
-      "record": ""
+      "team": "UC Davis",
+      "record": "1-0"
     }
   ],
   "fcs_top25": [
     {
       "rank": 1,
-      "team": "South Dakota State (52)",
+      "team": "Tarleton State (49)",
       "record": ""
     },
     {
       "rank": 2,
-      "team": "Tarleton State (5)",
+      "team": "Stephen F. Austin (4)",
       "record": ""
     },
     {
       "rank": 3,
-      "team": "Stephen F. Austin",
-      "record": "1-0"
+      "team": "Montana State (3)",
+      "record": ""
     },
     {
       "rank": 4,
-      "team": "Lehigh",
-      "record": "1-0"
+      "team": "Youngstown State (1)",
+      "record": ""
     },
     {
       "rank": 5,
-      "team": "Montana State",
+      "team": "South Dakota State",
       "record": ""
     },
     {
       "rank": 6,
-      "team": "Youngstown State",
-      "record": "1-0"
-    },
-    {
-      "rank": 7,
-      "team": "Montana",
-      "record": ""
-    },
-    {
-      "rank": 8,
-      "team": "Northern Arizona",
-      "record": "1-0"
-    },
-    {
-      "rank": 9,
-      "team": "South Dakota",
-      "record": "1-0"
-    },
-    {
-      "rank": 10,
-      "team": "Lamar",
-      "record": "1-0"
-    },
-    {
-      "rank": 11,
       "team": "North Dakota",
       "record": "1-0"
     },
     {
-      "rank": 12,
+      "rank": 7,
+      "team": "Northern Arizona",
+      "record": "1-0"
+    },
+    {
+      "rank": 8,
+      "team": "South Dakota",
+      "record": "1-0"
+    },
+    {
+      "rank": 9,
       "team": "Austin Peay",
       "record": "1-0"
     },
     {
-      "rank": 13,
+      "rank": 10,
       "team": "Illinois State",
       "record": ""
     },
     {
-      "rank": 14,
-      "team": "UC Davis",
+      "rank": 11,
+      "team": "Lehigh",
       "record": "1-0"
     },
     {
-      "rank": 15,
+      "rank": 12,
       "team": "Tennessee Tech",
       "record": "1-0"
     },
     {
-      "rank": 16,
+      "rank": 13,
       "team": "Campbell",
       "record": ""
     },
     {
-      "rank": 17,
+      "rank": 14,
+      "team": "Montana",
+      "record": ""
+    },
+    {
+      "rank": 15,
       "team": "Harvard",
       "record": ""
     },
     {
-      "rank": 18,
+      "rank": 16,
+      "team": "Lamar",
+      "record": "1-0"
+    },
+    {
+      "rank": 17,
       "team": "Mercer",
       "record": "1-0"
     },
     {
-      "rank": 19,
-      "team": "Northern Iowa",
-      "record": ""
-    },
-    {
-      "rank": 20,
+      "rank": 18,
       "team": "ETSU",
       "record": ""
     },
     {
-      "rank": 21,
-      "team": "Idaho State",
-      "record": "1-0"
-    },
-    {
-      "rank": 22,
-      "team": "Colgate",
-      "record": ""
-    },
-    {
-      "rank": 23,
+      "rank": 19,
       "team": "Monmouth",
       "record": ""
     },
     {
+      "rank": 20,
+      "team": "UC Davis",
+      "record": "1-0"
+    },
+    {
+      "rank": 21,
+      "team": "Northern Iowa",
+      "record": ""
+    },
+    {
+      "rank": 22,
+      "team": "Weber State",
+      "record": ""
+    },
+    {
+      "rank": 23,
+      "team": "Southeastern Louisiana",
+      "record": ""
+    },
+    {
       "rank": 24,
-      "team": "Morgan State",
+      "team": "Jackson State",
       "record": ""
     },
     {
       "rank": 25,
-      "team": "Yale",
+      "team": "Richmond",
       "record": ""
     }
   ],
@@ -2944,7 +2944,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-19T07:48:34.272910+00:00",
+    "source_checked_at": "2026-10-19T15:37:43.508882+00:00",
     "team_summary": [
       {
         "value": "5–3",
@@ -3263,7 +3263,7 @@
       "special"
     ]
   },
-  "rankings_date": "Oct 12, 2026",
+  "rankings_date": "Oct 19, 2026",
   "fcs_scores": {
     "2026-08-27": [
       {
@@ -28284,6 +28284,6 @@
       "news": "https://goeags.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-19T07:48:38.696251+00:00"
+    "updated": "2026-10-19T15:37:48.180951+00:00"
   }
 }
