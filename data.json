@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20T20:36:33.651716+00:00",
+  "updated": "2026-10-20T23:53:52.687201+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-3",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-20T20:37:43.331454+00:00"
+    "checked_at": "2026-10-20T23:55:08.790169+00:00"
   },
   "resources": [
     {
@@ -2944,7 +2944,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-20T20:36:40.816990+00:00",
+    "source_checked_at": "2026-10-20T23:54:01.054994+00:00",
     "team_summary": [
       {
         "value": "5–3",
@@ -28030,13 +28030,6 @@
         "rate": ".71"
       },
       {
-        "name": "Small,Porter",
-        "school": "Weber State",
-        "value": "37",
-        "secondary": "",
-        "rate": ".63"
-      },
-      {
         "name": "Murphy,Devin",
         "school": "Northern Arizona",
         "value": "35",
@@ -28049,6 +28042,13 @@
         "value": "16",
         "secondary": "",
         "rate": ".60"
+      },
+      {
+        "name": "Pleis,Kaleb",
+        "school": "Cal Poly",
+        "value": "30",
+        "secondary": "",
+        "rate": ".57"
       }
     ]
   },
@@ -28284,6 +28284,6 @@
       "news": "https://goeags.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-20T20:36:46.733241+00:00"
+    "updated": "2026-10-20T23:54:07.953623+00:00"
   }
 }
