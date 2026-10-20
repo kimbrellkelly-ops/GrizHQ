@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19T21:04:26.697551+00:00",
+  "updated": "2026-10-20T00:21:46.594489+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-3",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-19T21:05:16.724756+00:00"
+    "checked_at": "2026-10-20T00:22:43.576401+00:00"
   },
   "resources": [
     {
@@ -2944,7 +2944,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-19T21:04:32.202968+00:00",
+    "source_checked_at": "2026-10-20T00:21:53.710633+00:00",
     "team_summary": [
       {
         "value": "5–3",
@@ -27654,7 +27654,7 @@
     "title": "Griz press conference – Kennedy, Finch, Huff on Battle for the Little Brown Stein against Idaho",
     "date": "Mon, 12 Oct 2026 21:52:39 +0000",
     "url": "https://skylinesportsmt.com/griz-press-conference-kennedy-finch-huff-on-battle-for-the-little-brown-stein-against-idaho/",
-    "youtube_id": ""
+    "youtube_id": "pxD_r-fouHc"
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -28284,6 +28284,6 @@
       "news": "https://goeags.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-19T21:04:38.417176+00:00"
+    "updated": "2026-10-20T00:21:58.528701+00:00"
   }
 }
