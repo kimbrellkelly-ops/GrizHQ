@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20T01:31:16.124140+00:00",
+  "updated": "2026-10-20T06:35:40.394505+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Cussin’ & Discussin’ – Former Griz linebacker Adam Boomer",
+      "url": "https://skylinesportsmt.com/cussin-discussin-former-griz-linebacker-adam-boomer/",
+      "date": "Oct. 20, 2026",
+      "published_at": "2026-10-20T02:43:43+00:00",
+      "description": "October 19, 2026 Cussin’ & Discussin’ – Former Griz linebacker Adam Boomer",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/06/Cussin--scaled.png",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/06/Cussin--scaled.png"
+    },
     {
       "title": "Week 7: No. 7 Montana Grizzlies fall to Idaho",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-7-no-7-montana-grizzlies-fall-to-idaho/collection_b2a5ed65-665c-4a82-b5de-836dba9bdf00.html",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/a/5c/a5c03c2e-1655-53d1-be38-2e6e3ca19493/6ab959b5cbecc.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Montana at UC Davis Landon Ransom-Goelz",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/image_d0f9a4d0-7aa1-58ae-b6cb-b7c727707d1b.html",
-      "date": "Sep. 27, 2026",
-      "published_at": "2026-09-27T17:48:00+00:00",
-      "description": "Montana wide receiver Landon Ransom-Goelz runs with the ball after making a catch during the college football game against UC Davis on Sept. 27 at UC Davis Health Stadium in Davis, California. Ransom-Goelz caught his first touchdown in a Gr",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/0f/d0f9a4d0-7aa1-58ae-b6cb-b7c727707d1b/6ab959b5991ff.image.jpg?resize=300%2C240",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/0f/d0f9a4d0-7aa1-58ae-b6cb-b7c727707d1b/6ab959b5991ff.image.jpg?resize=300%2C240"
     }
   ]
 }
