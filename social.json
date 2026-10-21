@@ -1,6 +1,19 @@
 {
-  "updated": "2026-10-20T23:34:21.825242+00:00",
+  "updated": "2026-10-21T02:01:37.816699+00:00",
   "posts": [
+    {
+      "title": "Brawl of the Wild Coaches' Corner - Montana State head coach Brent Vigen",
+      "url": "https://www.youtube.com/watch?v=6WtHUvHHKZ0",
+      "image": "https://i.ytimg.com/vi/6WtHUvHHKZ0/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 20, 2026",
+      "platform": "youtube",
+      "youtube_id": "6WtHUvHHKZ0",
+      "published_at": "2026-10-20T00:00:00+00:00"
+    },
     {
       "title": "“Montana to me is in a world of hurt.”",
       "url": "https://www.youtube.com/watch?v=eDIxrtuJQ70",
@@ -221,71 +234,6 @@
       "platform": "youtube",
       "youtube_id": "1WPihx9kRmE",
       "published_at": "2026-10-15T00:00:00+00:00"
-    },
-    {
-      "title": "Is Montana State still a contender? Sam Herder says yes #Shorts",
-      "url": "https://www.youtube.com/watch?v=_hmwLrkbfyQ",
-      "image": "https://i.ytimg.com/vi/_hmwLrkbfyQ/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 14, 2026",
-      "platform": "youtube",
-      "youtube_id": "_hmwLrkbfyQ",
-      "published_at": "2026-10-14T00:00:00+00:00"
-    },
-    {
-      "title": "FCS Herd with Sam Herder - Midseason parity, UNI's playoff case & can the Griz and Cats bounce back?",
-      "url": "https://www.youtube.com/watch?v=4ywQQpN9Jxo",
-      "image": "https://i.ytimg.com/vi/4ywQQpN9Jxo/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 14, 2026",
-      "platform": "youtube",
-      "youtube_id": "4ywQQpN9Jxo",
-      "published_at": "2026-10-14T00:00:00+00:00"
-    },
-    {
-      "title": "Vandals Weekly: Thomas Ford Jr., Cruz Hepburn, Samuel Akem & Jerek Wolcott on Idaho-Montana",
-      "url": "https://www.youtube.com/watch?v=XnFzWw4wzb8",
-      "image": "https://i.ytimg.com/vi/XnFzWw4wzb8/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 14, 2026",
-      "platform": "youtube",
-      "youtube_id": "XnFzWw4wzb8",
-      "published_at": "2026-10-14T00:00:00+00:00"
-    },
-    {
-      "title": "Big Sky Breakdown: Tom Stuber on the Idaho stunner, grading the 'Cats & the EWU preview",
-      "url": "https://www.youtube.com/watch?v=szCo0z2S7io",
-      "image": "https://i.ytimg.com/vi/szCo0z2S7io/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 14, 2026",
-      "platform": "youtube",
-      "youtube_id": "szCo0z2S7io",
-      "published_at": "2026-10-14T00:00:00+00:00"
-    },
-    {
-      "title": "\"Championship defenses don't give up 49\" - Samuel Akem on the Griz defense #Shorts",
-      "url": "https://www.youtube.com/watch?v=mm5HIiUnzjY",
-      "image": "https://i.ytimg.com/vi/mm5HIiUnzjY/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 14, 2026",
-      "platform": "youtube",
-      "youtube_id": "mm5HIiUnzjY",
-      "published_at": "2026-10-14T00:00:00+00:00"
     }
   ],
   "profiles": [
