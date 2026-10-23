@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23T18:32:23.052430+00:00",
+  "updated": "2026-10-23T21:40:06.799004+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -320,9 +320,9 @@
       "badge": "GRIZ NEWS",
       "short": "GRIZ N",
       "image": "https://skylinesportsmt.com/wp-content/uploads/2025/08/Brian-Ah-Yat.webp",
-      "is_video": false,
+      "is_video": true,
       "youtube_id": "",
-      "video_url": "",
+      "video_url": "https://skylinesportsmt.com/cussin-discussin-former-all-american-quarterback-brian-ah-yat/",
       "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2025/08/Brian-Ah-Yat.webp"
     },
     {
