@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24T05:55:16.656811+00:00",
+  "updated": "2026-10-24T11:03:37.648077+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-3",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-24T05:56:01.947644+00:00"
+    "checked_at": "2026-10-24T11:04:38.765106+00:00"
   },
   "resources": [
     {
@@ -2944,7 +2944,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-24T05:55:23.270223+00:00",
+    "source_checked_at": "2026-10-24T11:03:45.514695+00:00",
     "team_summary": [
       {
         "value": "5–3",
@@ -27654,7 +27654,7 @@
     "title": "WATCH – Montana State head coach Brent Vigen press conference on No. 22 Weber State",
     "date": "Tue, 20 Oct 2026 01:36:19 +0000",
     "url": "https://skylinesportsmt.com/watch-montana-state-head-coach-brent-vigen-press-conference-on-no-22-weber-state/",
-    "youtube_id": ""
+    "youtube_id": "KBMm32Gg2i0"
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -28284,6 +28284,6 @@
       "news": "https://goeags.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-24T05:55:28.691407+00:00"
+    "updated": "2026-10-24T11:03:50.643143+00:00"
   }
 }
