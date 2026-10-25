@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T01:17:11.203860+00:00",
+  "updated": "2026-10-25T06:15:47.730167+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-3",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-25T01:18:13.243221+00:00"
+    "checked_at": "2026-10-25T06:16:46.733712+00:00"
   },
   "resources": [
     {
@@ -2944,7 +2944,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-25T01:17:19.013198+00:00",
+    "source_checked_at": "2026-10-25T06:15:55.379616+00:00",
     "team_summary": [
       {
         "value": "5–3",
@@ -27712,16 +27712,16 @@
     },
     {
       "rank": 5,
-      "team": "Cal Poly",
+      "team": "UC Davis",
       "conference_record": "3-2",
-      "overall_record": "4-4",
-      "home": "2-2",
+      "overall_record": "5-3",
+      "home": "3-1",
       "away": "2-2",
-      "conference_points": "146-155",
-      "points": "225-240",
-      "conference_streak": "L1",
-      "overall_streak": "L1",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2535"
+      "conference_points": "152-168",
+      "points": "256-248",
+      "conference_streak": "W1",
+      "overall_streak": "W1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2544"
     },
     {
       "rank": 6,
@@ -27738,45 +27738,32 @@
     },
     {
       "rank": 7,
-      "team": "UC Davis",
-      "conference_record": "2-2",
-      "overall_record": "4-3",
-      "home": "2-1",
+      "team": "Cal Poly",
+      "conference_record": "3-3",
+      "overall_record": "4-5",
+      "home": "2-3",
       "away": "2-2",
-      "conference_points": "119-162",
-      "points": "223-242",
-      "conference_streak": "L1",
-      "overall_streak": "L1",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2544"
+      "conference_points": "172-198",
+      "points": "251-283",
+      "conference_streak": "L2",
+      "overall_streak": "L2",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2535"
     },
     {
       "rank": 8,
-      "team": "Portland State",
-      "conference_record": "2-2",
-      "overall_record": "2-5",
-      "home": "1-2",
-      "away": "1-3",
-      "conference_points": "123-124",
-      "points": "166-308",
-      "conference_streak": "L1",
-      "overall_streak": "L1",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2542"
+      "team": "Idaho State",
+      "conference_record": "2-3",
+      "overall_record": "5-3",
+      "home": "3-2",
+      "away": "2-1",
+      "conference_points": "141-122",
+      "points": "267-166",
+      "conference_streak": "W1",
+      "overall_streak": "W1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2537"
     },
     {
       "rank": 9,
-      "team": "Northern Colorado",
-      "conference_record": "2-3",
-      "overall_record": "3-5",
-      "home": "3-2",
-      "away": "0-3",
-      "conference_points": "130-128",
-      "points": "189-204",
-      "conference_streak": "W1",
-      "overall_streak": "W1",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2541"
-    },
-    {
-      "rank": 10,
       "team": "Southern Utah",
       "conference_record": "2-3",
       "overall_record": "3-5",
@@ -27789,17 +27776,30 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2543"
     },
     {
+      "rank": 10,
+      "team": "Portland State",
+      "conference_record": "2-3",
+      "overall_record": "2-6",
+      "home": "1-2",
+      "away": "1-4",
+      "conference_points": "131-162",
+      "points": "174-346",
+      "conference_streak": "L2",
+      "overall_streak": "L2",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2542"
+    },
+    {
       "rank": 11,
-      "team": "Idaho State",
-      "conference_record": "1-3",
-      "overall_record": "4-3",
-      "home": "2-2",
-      "away": "2-1",
-      "conference_points": "103-114",
-      "points": "229-158",
-      "conference_streak": "L3",
-      "overall_streak": "L3",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2537"
+      "team": "Northern Colorado",
+      "conference_record": "2-4",
+      "overall_record": "3-6",
+      "home": "3-2",
+      "away": "0-4",
+      "conference_points": "136-161",
+      "points": "195-237",
+      "conference_streak": "L1",
+      "overall_streak": "L1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2541"
     },
     {
       "rank": 12,
@@ -27817,14 +27817,14 @@
     {
       "rank": 13,
       "team": "Utah Tech",
-      "conference_record": "0-4",
-      "overall_record": "0-7",
+      "conference_record": "1-4",
+      "overall_record": "1-7",
       "home": "0-3",
-      "away": "0-4",
-      "conference_points": "60-167",
-      "points": "104-300",
-      "conference_streak": "L4",
-      "overall_streak": "L7",
+      "away": "1-4",
+      "conference_points": "103-193",
+      "points": "147-326",
+      "conference_streak": "W1",
+      "overall_streak": "W1",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2561"
     }
   ],
@@ -27854,9 +27854,9 @@
       {
         "name": "Fisher,Jordan",
         "school": "UC Davis",
-        "value": "750",
-        "secondary": "8",
-        "rate": "107.1"
+        "value": "847",
+        "secondary": "10",
+        "rate": "105.9"
       },
       {
         "name": "Burns,Will",
@@ -27889,18 +27889,18 @@
         "rate": "273.6"
       },
       {
-        "name": "Cleeland,Treynor",
-        "school": "UC Davis",
-        "value": "1715",
-        "secondary": "14",
-        "rate": "245.0"
-      },
-      {
         "name": "Cooke,Jordan",
         "school": "Idaho State",
-        "value": "1687",
-        "secondary": "15",
-        "rate": "241.0"
+        "value": "2021",
+        "secondary": "16",
+        "rate": "252.6"
+      },
+      {
+        "name": "Cleeland,Treynor",
+        "school": "UC Davis",
+        "value": "1981",
+        "secondary": "16",
+        "rate": "247.6"
       }
     ],
     "receiving": [
@@ -27914,9 +27914,9 @@
       {
         "name": "Gbatu, Jr.,Samuel",
         "school": "UC Davis",
-        "value": "713",
+        "value": "830",
         "secondary": "5",
-        "rate": "101.9"
+        "rate": "103.8"
       },
       {
         "name": "Kjar,Noah",
@@ -27926,18 +27926,18 @@
         "rate": "92.8"
       },
       {
-        "name": "McCoy,Tayvion",
-        "school": "Cal Poly",
-        "value": "696",
-        "secondary": "4",
-        "rate": "87.0"
-      },
-      {
         "name": "Harste,Tony",
         "school": "Idaho",
         "value": "607",
         "secondary": "5",
         "rate": "86.7"
+      },
+      {
+        "name": "McCoy,Tayvion",
+        "school": "Cal Poly",
+        "value": "749",
+        "secondary": "4",
+        "rate": "83.2"
       }
     ],
     "scoring": [
@@ -27951,16 +27951,16 @@
       {
         "name": "Lindberg,Mason",
         "school": "Idaho State",
-        "value": "65",
+        "value": "73",
         "secondary": "0",
-        "rate": "9.3"
+        "rate": "9.1"
       },
       {
-        "name": "Chatman,Ace",
-        "school": "Utah Tech",
-        "value": "48",
-        "secondary": "8",
-        "rate": "8.0"
+        "name": "Fisher,Jordan",
+        "school": "UC Davis",
+        "value": "66",
+        "secondary": "11",
+        "rate": "8.3"
       },
       {
         "name": "Sansted,Myles",
@@ -27986,18 +27986,18 @@
         "rate": "12.0"
       },
       {
-        "name": "Olson,Kenny",
-        "school": "Cal Poly",
-        "value": "5",
-        "secondary": "1",
-        "rate": "9.3"
-      },
-      {
         "name": "Reynolds,Nathan",
         "school": "Idaho State",
         "value": "9",
         "secondary": "0",
         "rate": "9.1"
+      },
+      {
+        "name": "Olson,Kenny",
+        "school": "Cal Poly",
+        "value": "9",
+        "secondary": "1",
+        "rate": "9.0"
       },
       {
         "name": "Smith,Bryce",
@@ -28023,9 +28023,23 @@
         "rate": ".81"
       },
       {
+        "name": "Ducsik,Avery",
+        "school": "Portland State",
+        "value": "32",
+        "secondary": "",
+        "rate": ".75"
+      },
+      {
         "name": "Murphy,Devin",
         "school": "Northern Arizona",
         "value": "35",
+        "secondary": "",
+        "rate": ".63"
+      },
+      {
+        "name": "Fesili,Trehsyn",
+        "school": "Idaho State",
+        "value": "34",
         "secondary": "",
         "rate": ".63"
       },
@@ -28035,20 +28049,6 @@
         "value": "27",
         "secondary": "",
         "rate": ".63"
-      },
-      {
-        "name": "Abbott,Nathan",
-        "school": "Idaho State",
-        "value": "16",
-        "secondary": "",
-        "rate": ".60"
-      },
-      {
-        "name": "Pleis,Kaleb",
-        "school": "Cal Poly",
-        "value": "30",
-        "secondary": "",
-        "rate": ".57"
       }
     ]
   },
@@ -28284,6 +28284,6 @@
       "news": "https://goeags.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-25T01:17:25.031054+00:00"
+    "updated": "2026-10-25T06:16:00.102493+00:00"
   }
 }
