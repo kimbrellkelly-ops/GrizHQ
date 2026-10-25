@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T01:24:33.955409+00:00",
+  "updated": "2026-10-25T06:24:19.975904+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "History of the wrong kind: Inside the Griz defense’s historic slide",
+      "url": "https://skylinesportsmt.com/history-of-the-wrong-kind-inside-the-griz-defenses-historic-slide/",
+      "date": "Oct. 25, 2026",
+      "published_at": "2026-10-25T02:12:00+00:00",
+      "description": "October 24, 2026 History of the wrong kind: Inside the Griz defense’s historic slide",
+      "source": "Skyline Sports",
+      "badge": "ANALYSIS",
+      "short": "ANALYS",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Superales-leaps-over-Griz-tackler-Brooks-Nuanez-scaled.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Superales-leaps-over-Griz-tackler-Brooks-Nuanez-scaled.jpg"
+    },
     {
       "title": "Talkin’ Schmidt: Monologue of the century after Griz lose to Idaho on 40th anniversary of WA-Griz",
       "url": "https://skylinesportsmt.com/talkin-schmidt-monologue-of-the-century-after-griz-lose-to-idaho-on-40th-anniversary-of-wa-griz/",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/42/14243f86-b9dc-5793-aa6c-0dc84133729c/6ab95d3812ffe.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Montana at UC Davis Tanner Huff",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/image_39bda2d9-98db-5e2c-b42f-39f9be5cd410.html",
-      "date": "Sep. 27, 2026",
-      "published_at": "2026-09-27T17:54:00+00:00",
-      "description": "Montana safety Tanner Huff celebrates with the ball during the college football game against UC Davis on Sept. 27 at UC Davis Health Stadium in Davis, California. Huff recovered a fumble as the Griz finished 2-0 in the turnover margin…",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/3/9b/39bda2d9-98db-5e2c-b42f-39f9be5cd410/6ab95d37d800c.image.jpg?resize=300%2C214",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/3/9b/39bda2d9-98db-5e2c-b42f-39f9be5cd410/6ab95d37d800c.image.jpg?resize=300%2C214"
     }
   ]
 }
