@@ -1,6 +1,32 @@
 {
-  "updated": "2026-10-26T23:59:28.579507+00:00",
+  "updated": "2026-10-27T04:27:48.100277+00:00",
   "posts": [
+    {
+      "title": "Montana State head coach Brent Vigen weekly press conference on Cal Poly matchup",
+      "url": "https://www.youtube.com/watch?v=iN9kpi2u7Us",
+      "image": "https://i.ytimg.com/vi/iN9kpi2u7Us/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 27, 2026",
+      "platform": "youtube",
+      "youtube_id": "iN9kpi2u7Us",
+      "published_at": "2026-10-27T00:00:00+00:00"
+    },
+    {
+      "title": "Montana's Bobby Kennedy, Dylan Paine & Tanner Williams on bye week, EWU matchup",
+      "url": "https://www.youtube.com/watch?v=5SbnO_3rqTU",
+      "image": "https://i.ytimg.com/vi/5SbnO_3rqTU/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 27, 2026",
+      "platform": "youtube",
+      "youtube_id": "5SbnO_3rqTU",
+      "published_at": "2026-10-27T00:00:00+00:00"
+    },
     {
       "title": "Montana State press conference - Bobcats beat Weber State - Vigen, White, Crews + Kjar post game",
       "url": "https://www.youtube.com/watch?v=DvHPocVbaeg",
@@ -156,71 +182,6 @@
       "platform": "youtube",
       "youtube_id": "6VcE6A_yp4Q",
       "published_at": "2026-10-21T00:00:00+00:00"
-    },
-    {
-      "title": "Brawl of the Wild Coaches' Corner - Montana State head coach Brent Vigen",
-      "url": "https://www.youtube.com/watch?v=6WtHUvHHKZ0",
-      "image": "https://i.ytimg.com/vi/6WtHUvHHKZ0/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 20, 2026",
-      "platform": "youtube",
-      "youtube_id": "6WtHUvHHKZ0",
-      "published_at": "2026-10-20T00:00:00+00:00"
-    },
-    {
-      "title": "“Montana to me is in a world of hurt.”",
-      "url": "https://www.youtube.com/watch?v=eDIxrtuJQ70",
-      "image": "https://i.ytimg.com/vi/eDIxrtuJQ70/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 20, 2026",
-      "platform": "youtube",
-      "youtube_id": "eDIxrtuJQ70",
-      "published_at": "2026-10-20T00:00:00+00:00"
-    },
-    {
-      "title": "Caden Dowler on returning from injury - #MSUBobcatsFB #BigSkyFB #FCS",
-      "url": "https://www.youtube.com/watch?v=ZlvaMmr2Yko",
-      "image": "https://i.ytimg.com/vi/ZlvaMmr2Yko/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 20, 2026",
-      "platform": "youtube",
-      "youtube_id": "ZlvaMmr2Yko",
-      "published_at": "2026-10-20T00:00:00+00:00"
-    },
-    {
-      "title": "Big Sky Breakdown: Brooks & Colter on Montana's loss to Idaho, what's ailing the Griz defense & Mont",
-      "url": "https://www.youtube.com/watch?v=FssSDmjLnuc",
-      "image": "https://i.ytimg.com/vi/FssSDmjLnuc/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 20, 2026",
-      "platform": "youtube",
-      "youtube_id": "FssSDmjLnuc",
-      "published_at": "2026-10-20T00:00:00+00:00"
-    },
-    {
-      "title": "Montana State head coach Brent Vigen press conference on Weber State",
-      "url": "https://www.youtube.com/watch?v=KBMm32Gg2i0",
-      "image": "https://i.ytimg.com/vi/KBMm32Gg2i0/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 20, 2026",
-      "platform": "youtube",
-      "youtube_id": "KBMm32Gg2i0",
-      "published_at": "2026-10-20T00:00:00+00:00"
     }
   ],
   "profiles": [
