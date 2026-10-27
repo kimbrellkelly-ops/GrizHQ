@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T16:40:44.434982+00:00",
+  "updated": "2026-10-27T21:20:38.569474+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "5-3",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "2027 Griz Football Schedule Finalized",
+      "url": "https://gogriz.com/news/2026/10/27/2027-griz-football-schedule-finalized",
+      "date": "Tue, 27 Oct 2026 12:19:00 MST",
+      "description": "MISSOULA - Montana's 2027 football schedule has now been finalized with the Big Sky Conference announcing its league matrix for all 13 member programs on Tuesday."
+    },
+    {
       "title": "Shorthanded Griz fall to Idaho",
       "url": "https://gogriz.com/news/2026/10/17/football-shorthanded-griz-fall-to-idaho",
       "date": "Sat, 17 Oct 2026 18:17:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/10/5/griz-football-week-7-press-conference",
       "date": "Mon, 5 Oct 2026 16:22:00 MST",
       "description": "Weekly Griz Football Press Conference featuring Coach Bobby Kennedy, quarterback Keali'i Ah Yat and linebacker Justin Eklund as UM looks ahead to a road test at Northern Arizona."
-    },
-    {
-      "title": "Explosive offense carries Griz to Homecoming win over Bears",
-      "url": "https://gogriz.com/news/2026/10/3/football-explosive-offense-carries-griz-to-homecoming-win-over-bears",
-      "date": "Sat, 3 Oct 2026 19:10:00 MST",
-      "description": "MISSOULA – Historic performances continued to pile up for the Montana Grizzlies on Homecoming."
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-10-27T16:41:27.886404+00:00"
+    "checked_at": "2026-10-27T21:21:29.171261+00:00"
   },
   "resources": [
     {
@@ -2944,7 +2944,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-10-27T16:40:50.076291+00:00",
+    "source_checked_at": "2026-10-27T21:20:45.448394+00:00",
     "team_summary": [
       {
         "value": "5–3",
@@ -28284,6 +28284,6 @@
       "news": "https://goeags.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-10-27T16:40:54.141941+00:00"
+    "updated": "2026-10-27T21:20:50.537839+00:00"
   }
 }
