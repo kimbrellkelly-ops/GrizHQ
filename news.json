@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26T22:58:15.026538+00:00",
+  "updated": "2026-10-27T01:45:39.607224+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,36 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "WATCH – Montana’s Bobby Kennedy, Dylan Paine & Tanner Williams on bye week, EWU matchup",
+      "url": "https://skylinesportsmt.com/watch-montanas-bobby-kennedy-dylan-paine-tanner-williams-on-bye-week-ewu-matchup/",
+      "date": "Oct. 27, 2026",
+      "published_at": "2026-10-27T01:07:13+00:00",
+      "description": "Colter Nuanez October 26, 2026 WATCH – Montana’s Bobby Kennedy, Dylan Paine & Tanner Williams on bye week, EWU matchup Montana head coach Bobby Kennedy, running back Dylan Paine and linebacker Tanner Williams met the media coming out of the",
+      "source": "Skyline Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Bobby-Kennedy-walks-the-Griz-sideline-Brooks-Nuanez.jpg",
+      "is_video": true,
+      "youtube_id": "5SbnO_3rqTU",
+      "video_url": "https://www.youtube.com/watch?v=5SbnO_3rqTU",
+      "video_thumbnail": "https://i.ytimg.com/vi/5SbnO_3rqTU/hqdefault.jpg"
+    },
+    {
+      "title": "First look: No. 14 Montana Grizzlies at Eastern Washington Eagles",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-14-montana-grizzlies-at-eastern-washington-eagles/article_7efb7992-b9ad-44a4-9380-935cda12f3fb.html",
+      "date": "Oct. 26, 2026",
+      "published_at": "2026-10-26T22:30:00+00:00",
+      "description": "First look: No. 14 Montana Grizzlies at Eastern Washington Eagles",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/ef/7efb7992-b9ad-44a4-9380-935cda12f3fb/6adc1f4d85c47.preview.jpg?crop=1761%2C925%2C2%2C96&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/ef/7efb7992-b9ad-44a4-9380-935cda12f3fb/6adc1f4d85c47.preview.jpg?crop=1761%2C925%2C2%2C96&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "First look: No. 14 Montana Grizzlies at Eastern Washington Eagles",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_872376d8-55a2-54e2-8186-70b41f0cf143.html",
@@ -1479,36 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/14/c141e911-2c5e-431d-97d3-b2a12d02ef58/6abaaa2491171.preview.jpg?crop=1113%2C584%2C312%2C25"
-    },
-    {
-      "title": "Gillman sweeps weekly awards after record-breaking performance",
-      "url": "https://gogriz.com/news/2026/9/28/football-gillman-sweeps-weekly-awards-after-record-breaking-performance",
-      "date": "Sep. 28, 2026",
-      "published_at": "2026-09-28T15:45:00+00:00",
-      "description": "Not even halfway through his senior season, Eli Gillman put an exclamation mark of a game on a career whose legend continues to grow by the day.",
-      "source": "GoGriz",
-      "badge": "HONOR",
-      "short": "HONOR",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/28/Gillman_OPOW_Web.png",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/9/28/Gillman_OPOW_Web.png"
-    },
-    {
-      "title": "Former Grizzlies head coach Bobby Hauck out at Illinois after 4 games",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/former-grizzlies-head-coach-bobby-hauck-out-at-illinois-after-4-games/article_711bf909-523d-4dfc-8b2f-0dfa4e1bc196.html",
-      "date": "Sep. 27, 2026",
-      "published_at": "2026-09-27T22:45:00+00:00",
-      "description": "Former Grizzlies head coach Bobby Hauck out at Illinois after 4 games",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/11/711bf909-523d-4dfc-8b2f-0dfa4e1bc196/6ab99c4501c18.preview.jpg?crop=1762%2C925%2C0%2C34&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": true,
-      "youtube_id": "qrmMPOnSHGI",
-      "video_url": "https://www.youtube.com/watch?v=qrmMPOnSHGI",
-      "video_thumbnail": "https://i.ytimg.com/vi/qrmMPOnSHGI/hqdefault.jpg"
     }
   ]
 }
