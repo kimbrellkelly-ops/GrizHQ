@@ -1,6 +1,32 @@
 {
-  "updated": "2026-10-28T03:27:57.233841+00:00",
+  "updated": "2026-10-28T09:56:06.683497+00:00",
   "posts": [
+    {
+      "title": "Sam Herder On Griz Playoff Scenarios",
+      "url": "https://www.youtube.com/watch?v=B3Obpe0-0FE",
+      "image": "https://i.ytimg.com/vi/B3Obpe0-0FE/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 28, 2026",
+      "platform": "youtube",
+      "youtube_id": "B3Obpe0-0FE",
+      "published_at": "2026-10-28T00:00:00+00:00"
+    },
+    {
+      "title": "Sam Herder The Pressure On Montana State",
+      "url": "https://www.youtube.com/watch?v=9UTh0QMoxE8",
+      "image": "https://i.ytimg.com/vi/9UTh0QMoxE8/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 28, 2026",
+      "platform": "youtube",
+      "youtube_id": "9UTh0QMoxE8",
+      "published_at": "2026-10-28T00:00:00+00:00"
+    },
     {
       "title": "Big Sky Breakdown: Brooks & Colter on MSU's win over Weber State, special teams woes & Griz at EWU",
       "url": "https://www.youtube.com/watch?v=ZD5towTudsY",
