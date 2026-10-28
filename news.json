@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T22:29:13.145800+00:00",
+  "updated": "2026-10-28T01:32:54.672226+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,66 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz return to action at Eastern Washington",
+      "url": "https://gogriz.com/news/2026/10/27/football-griz-return-to-action-at-eastern-washington",
+      "date": "Oct. 28, 2026",
+      "published_at": "2026-10-28T01:20:00+00:00",
+      "description": "With rested bodies and renewed urgency following the bye week, the Montana Grizzlies return to action on Saturday looking to break back into the win column after dropping a pair of Big Sky games.",
+      "source": "GoGriz",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/17/20261017_montanafbvsidaho_179.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/17/20261017_montanafbvsidaho_179.jpg"
+    },
+    {
+      "title": "Billings West's Tyreke Jones commits to Montana football",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_2c3c53b0-5e8f-5e62-bd17-1d5664566399.html",
+      "date": "Oct. 28, 2026",
+      "published_at": "2026-10-28T00:30:00+00:00",
+      "description": "Jones is the third Billings West football player in the 2027 recruiting class to commit to the Griz.",
+      "source": "Missoulian",
+      "badge": "RECRUITING",
+      "short": "RECRUI",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/ff/effecb5e-8e20-5685-969e-56fb7c5ca92e/6ae1493b73593.image.jpg?resize=300%2C229",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/ff/effecb5e-8e20-5685-969e-56fb7c5ca92e/6ae1493b73593.image.jpg?resize=300%2C229"
+    },
+    {
+      "title": "Billings West's Tyreke Jones commits to Montana football",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/billings-wests-tyreke-jones-commits-to-montana-football/article_df054713-f01e-42b5-a50c-5fbef28eff3c.html",
+      "date": "Oct. 28, 2026",
+      "published_at": "2026-10-28T00:30:00+00:00",
+      "description": "Billings West's Tyreke Jones commits to Montana football",
+      "source": "406 MT Sports",
+      "badge": "RECRUITING",
+      "short": "RECRUI",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/f0/df054713-f01e-42b5-a50c-5fbef28eff3c/6ae13570ca8b2.preview.jpg?crop=1618%2C850%2C0%2C43&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/f0/df054713-f01e-42b5-a50c-5fbef28eff3c/6ae13570ca8b2.preview.jpg?crop=1618%2C850%2C0%2C43&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Billings West's Tyreke Jones discusses commitment to Montana football",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/billings-wests-tyreke-jones-discusses-commitment-to-montana-football/video_a30a0a5c-3ced-5978-9b62-3c474e156d6b.html",
+      "date": "Oct. 27, 2026",
+      "published_at": "2026-10-27T23:53:00+00:00",
+      "description": "Billings West's Tyreke Jones discusses commitment to Montana football",
+      "source": "406 MT Sports",
+      "badge": "RECRUITING",
+      "short": "RECRUI",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/30/a30a0a5c-3ced-5978-9b62-3c474e156d6b/6ae13bf0ac4e5.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": true,
+      "youtube_id": "",
+      "video_url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/billings-wests-tyreke-jones-discusses-commitment-to-montana-football/video_a30a0a5c-3ced-5978-9b62-3c474e156d6b.html",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/30/a30a0a5c-3ced-5978-9b62-3c474e156d6b/6ae13bf0ac4e5.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "2027 Griz Football Schedule Finalized",
       "url": "https://gogriz.com/news/2026/10/27/2027-griz-football-schedule-finalized",
@@ -1449,66 +1509,6 @@
       "youtube_id": "qrmMPOnSHGI",
       "video_url": "https://www.youtube.com/watch?v=qrmMPOnSHGI",
       "video_thumbnail": "https://i.ytimg.com/vi/qrmMPOnSHGI/hqdefault.jpg"
-    },
-    {
-      "title": "Montana cornerback Chris Johnson appreciative of opportunity with Griz",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-cornerback-chris-johnson-appreciative-of-opportunity-with-griz/article_ebe16d4f-989b-4017-84b7-35646d70d564.html",
-      "date": "Sep. 29, 2026",
-      "published_at": "2026-09-29T15:00:00+00:00",
-      "description": "Montana cornerback Chris Johnson appreciative of opportunity with Griz",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/e/be/ebe16d4f-989b-4017-84b7-35646d70d564/6aba104bd6e28.preview.jpg?crop=1535%2C806%2C127%2C335&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/e/be/ebe16d4f-989b-4017-84b7-35646d70d564/6aba104bd6e28.preview.jpg?crop=1535%2C806%2C127%2C335&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Montana cornerback Chris Johnson appreciative of opportunity with Griz",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_f0eb5cad-c820-5add-bdca-a5b36568ba20.html",
-      "date": "Sep. 29, 2026",
-      "published_at": "2026-09-29T15:00:00+00:00",
-      "description": "Johnson has been a starting cornerback for Montana since transferring from Arizona State.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/1a/c1a1c88f-633d-5a98-8557-a9d7e6ae4f77/6a93e52d54d48.image.jpg?resize=300%2C451",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/1a/c1a1c88f-633d-5a98-8557-a9d7e6ae4f77/6a93e52d54d48.image.jpg?resize=300%2C451"
-    },
-    {
-      "title": "Montana Griz presser – Bobby Kennedy, OL Austin Buehler & DL Zeke Seumalo on Northern Colorado",
-      "url": "https://skylinesportsmt.com/montana-griz-presser-bobby-kennedy-ol-austin-buehler-dl-zeke-seumalo-on-northern-colorado/",
-      "date": "Sep. 29, 2026",
-      "published_at": "2026-09-29T01:39:29+00:00",
-      "description": "Colter Nuanez September 28, 2026 Montana Griz presser – Bobby Kennedy, OL Austin Buehler & DL Zeke Seumalo on Northern Colorado Montana head coach Bobby Kennedy, offensive tackle Austin Buehler & DT Zeke Seumalo on UM’s upcoming homecoming",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Austin-Buehler-stanced-at-tackle.jpeg",
-      "is_video": true,
-      "youtube_id": "np9jf62Vflo",
-      "video_url": "https://www.youtube.com/watch?v=np9jf62Vflo",
-      "video_thumbnail": "https://i.ytimg.com/vi/np9jf62Vflo/hqdefault.jpg"
-    },
-    {
-      "title": "First look: No. 3 Montana Grizzlies vs. Northern Colorado Bears",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-3-montana-grizzlies-vs-northern-colorado-bears/article_c50c9a0c-9ec1-4e1c-8a9a-6c0da79b5c09.html",
-      "date": "Sep. 28, 2026",
-      "published_at": "2026-09-28T22:15:00+00:00",
-      "description": "First look: No. 3 Montana Grizzlies vs. Northern Colorado Bears",
-      "source": "406 MT Sports",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/50/c50c9a0c-9ec1-4e1c-8a9a-6c0da79b5c09/6abae63458a56.preview.jpg?crop=1759%2C923%2C0%2C33&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/50/c50c9a0c-9ec1-4e1c-8a9a-6c0da79b5c09/6abae63458a56.preview.jpg?crop=1759%2C923%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
