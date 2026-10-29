@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28T23:31:16.753898+00:00",
+  "updated": "2026-10-29T02:51:15.620298+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,19 +11,19 @@
   ],
   "stories": [
     {
-      "title": "How the Montana Grizzlies spent pivotal bye week",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_0f68ff7c-d171-5b18-b744-a53010f6c860.html",
+      "title": "Big Sky Breakdown: Eastern Washington coach Aaron Best on Nate Bell, a brutal schedule & hosting the Griz",
+      "url": "https://skylinesportsmt.com/big-sky-breakdown-eastern-washington-coach-aaron-best-on-nate-bell-a-brutal-schedule-hosting-the-griz/",
       "date": "Oct. 28, 2026",
-      "published_at": "2026-10-28T13:00:00+00:00",
-      "description": "\"I think we got a lot of fire in us right now to go out and just play our best football this next weekend.\" —Griz RB Dylan Paine",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/31/8319bb36-b88a-59fa-8b41-98fcd2979aae/6ad41a941fbe3.image.jpg?resize=300%2C240",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/31/8319bb36-b88a-59fa-8b41-98fcd2979aae/6ad41a941fbe3.image.jpg?resize=300%2C240"
+      "published_at": "2026-10-28T23:00:44+00:00",
+      "description": "October 28, 2026 Big Sky Breakdown: Eastern Washington coach Aaron Best on Nate Bell, a brutal schedule & hosting the Griz",
+      "source": "Skyline Sports",
+      "badge": "ANALYSIS",
+      "short": "ANALYS",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2022/11/Aaron-Best-looks-on-scaled.jpeg",
+      "is_video": true,
+      "youtube_id": "tKcMuxoyy9c",
+      "video_url": "https://www.youtube.com/watch?v=tKcMuxoyy9c",
+      "video_thumbnail": "https://i.ytimg.com/vi/tKcMuxoyy9c/hqdefault.jpg"
     },
     {
       "title": "How the Montana Grizzlies spent pivotal bye week",
@@ -39,6 +39,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/db/4db6dfe6-5eec-4fd5-8b04-1e9e242057b4/6ae0191b6c623.preview.jpg?crop=1607%2C844%2C0%2C30&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "How the Montana Grizzlies spent pivotal bye week",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_0f68ff7c-d171-5b18-b744-a53010f6c860.html",
+      "date": "Oct. 28, 2026",
+      "published_at": "2026-10-28T13:00:00+00:00",
+      "description": "\"I think we got a lot of fire in us right now to go out and just play our best football this next weekend.\" —Griz RB Dylan Paine",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/31/8319bb36-b88a-59fa-8b41-98fcd2979aae/6ad41a941fbe3.image.jpg?resize=300%2C240",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/31/8319bb36-b88a-59fa-8b41-98fcd2979aae/6ad41a941fbe3.image.jpg?resize=300%2C240"
     },
     {
       "title": "The FCS Herd with Sam Herder – Parity or the rich getting richer, Idaho’s playoff path & can the Griz win out?",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/c8/1c8a0bb4-80e0-5688-a28a-67d1690e71b8/6abc66394ad08.preview.jpg?crop=1265%2C664%2C0%2C486&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Cat-Griz Insider Podcast: Montana teams resume Big Sky play with big wins",
-      "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/cat-griz-insider-podcast-montana-teams-resume-big-sky-play-with-big-wins/article_397601f3-54c9-42a8-ba13-99a2294ce3f4.html",
-      "date": "Sep. 30, 2026",
-      "published_at": "2026-09-30T00:15:00+00:00",
-      "description": "Cat-Griz Insider Podcast: Montana teams resume Big Sky play with big wins",
-      "source": "406 MT Sports",
-      "badge": "INSIDER",
-      "short": "INSIDE",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/97/397601f3-54c9-42a8-ba13-99a2294ce3f4/6abc550ea0127.preview.png?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/cat-griz-insider-podcast-montana-teams-resume-big-sky-play-with-big-wins/article_397601f3-54c9-42a8-ba13-99a2294ce3f4.html",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/97/397601f3-54c9-42a8-ba13-99a2294ce3f4/6abc550ea0127.preview.png?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
