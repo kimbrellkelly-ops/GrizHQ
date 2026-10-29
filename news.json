@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T16:04:18.412846+00:00",
+  "updated": "2026-10-29T21:05:28.937264+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "WATCH – Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on the bye, Griz defense & Eastern Washington",
+      "url": "https://skylinesportsmt.com/watch-brawl-of-the-wild-coaches-corner-montana-head-coach-bobby-kennedy-on-the-bye-griz-defense-eastern-washington/",
+      "date": "Oct. 29, 2026",
+      "published_at": "2026-10-29T15:00:00+00:00",
+      "description": "October 29, 2026 WATCH – Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on the bye, Griz defense & Eastern Washington",
+      "source": "Skyline Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Bobby-Kennedy-watches-from-the-Griz-sideline-Brooks-Nuanez-scaled.jpg",
+      "is_video": true,
+      "youtube_id": "6vOnPurgvrc",
+      "video_url": "https://www.youtube.com/watch?v=6vOnPurgvrc",
+      "video_thumbnail": "https://i.ytimg.com/vi/6vOnPurgvrc/hqdefault.jpg"
+    },
     {
       "title": "Well Dunn: Fighter's mentality powers Grizzlies safety Devin Dunn",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/well-dunn-fighters-mentality-powers-grizzlies-safety-devin-dunn/article_a295fef8-b200-457a-9d06-c03dae500db0.html",
@@ -1494,21 +1509,6 @@
       "youtube_id": "6KOkprwzpXo",
       "video_url": "https://www.youtube.com/watch?v=6KOkprwzpXo",
       "video_thumbnail": "https://i.ytimg.com/vi/6KOkprwzpXo/hqdefault.jpg"
-    },
-    {
-      "title": "Griz to host winter flag football league for kids",
-      "url": "https://gogriz.com/news/2026/9/30/football-griz-to-host-winter-flag-football-league-for-kids",
-      "date": "Oct. 1, 2026",
-      "published_at": "2026-10-01T00:05:00+00:00",
-      "description": "MISSOULA - Montana football coach Bobby Kennedy and the Grizzly staff are expanding their youth camp offerings with the addition of a winter flag football league to be held at the Grizzly Indoor Practice Facility in January and February 202",
-      "source": "GoGriz",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/6/24/06242026_fb_camp_1616_ce.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/6/24/06242026_fb_camp_1616_ce.jpg"
     }
   ]
 }
