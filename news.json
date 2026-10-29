@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T02:51:15.620298+00:00",
+  "updated": "2026-10-29T09:05:37.246677+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,51 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz Game Day 10-29-26",
+      "url": "https://missoulian.com/special-section/pdf_d3983eef-8e07-48aa-95cb-536f1ba164f1.html",
+      "date": "Oct. 29, 2026",
+      "published_at": "2026-10-29T06:00:00+00:00",
+      "description": "Latest Montana football coverage.",
+      "source": "Missoulian",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/39/d3983eef-8e07-48aa-95cb-536f1ba164f1/6ae21b01ea6cc.preview.jpg?resize=300%2C303",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/39/d3983eef-8e07-48aa-95cb-536f1ba164f1/6ae21b01ea6cc.preview.jpg?resize=300%2C303"
+    },
+    {
+      "title": "Griz Game Day 10-29-26",
+      "url": "https://missoulian.com/image_df676351-8e1a-4006-8158-409b0680d20a.html",
+      "date": "Oct. 29, 2026",
+      "published_at": "2026-10-29T06:00:00+00:00",
+      "description": "Latest Montana football coverage.",
+      "source": "Missoulian",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/f6/df676351-8e1a-4006-8158-409b0680d20a/6ae21b4ae8c30.image.jpg?resize=300%2C303",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/f6/df676351-8e1a-4006-8158-409b0680d20a/6ae21b4ae8c30.image.jpg?resize=300%2C303"
+    },
+    {
+      "title": "Griz Game Day 10-29-26",
+      "url": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/39/d3983eef-8e07-48aa-95cb-536f1ba164f1/6ae21b0218ef2.pdf.pdf",
+      "date": "Oct. 29, 2026",
+      "published_at": "2026-10-29T06:00:00+00:00",
+      "description": "Latest Montana football coverage.",
+      "source": "Missoulian",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/f6/df676351-8e1a-4006-8158-409b0680d20a/6ae21b4ae8c30.image.jpg?resize=300%2C303",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/f6/df676351-8e1a-4006-8158-409b0680d20a/6ae21b4ae8c30.image.jpg?resize=300%2C303"
+    },
     {
       "title": "Big Sky Breakdown: Eastern Washington coach Aaron Best on Nate Bell, a brutal schedule & hosting the Griz",
       "url": "https://skylinesportsmt.com/big-sky-breakdown-eastern-washington-coach-aaron-best-on-nate-bell-a-brutal-schedule-hosting-the-griz/",
@@ -1464,51 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/21/421e5e58-0c10-4c73-90b7-3857f5996f5d/6abb21c18d7e7.preview.jpg?crop=882%2C463%2C239%2C73"
-    },
-    {
-      "title": "Grizzlies look to avoid 'rat poison' coming off season-altering win",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_38fa16d9-8f6a-5e6f-bcd7-b9ad54d2d00d.html",
-      "date": "Sep. 30, 2026",
-      "published_at": "2026-09-30T13:00:00+00:00",
-      "description": "\"We can't buy into the rat poison with everybody patting us on the back, including me.\" —Grizzlies coach Bobby Kennedy",
-      "source": "Missoulian",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/f3/ff3e5612-42e2-5c68-a3cd-db5635bb6a47/6ab959b5256f0.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/f/f3/ff3e5612-42e2-5c68-a3cd-db5635bb6a47/6ab959b5256f0.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Montana Grizzlies Week 5 depth chart",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/pdf_1c8a0bb4-80e0-5688-a28a-67d1690e71b8.html",
-      "date": "Sep. 30, 2026",
-      "published_at": "2026-09-30T01:19:00+00:00",
-      "description": "Latest Montana football coverage.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/c8/1c8a0bb4-80e0-5688-a28a-67d1690e71b8/6abc66394ad08.preview.jpg?resize=300%2C388",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/c8/1c8a0bb4-80e0-5688-a28a-67d1690e71b8/6abc66394ad08.preview.jpg?resize=300%2C388"
-    },
-    {
-      "title": "Montana Grizzlies Week 5 depth chart",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_614d3e9a-0f36-5da5-a8cd-01f3f293b119.html",
-      "date": "Sep. 30, 2026",
-      "published_at": "2026-09-30T01:18:00+00:00",
-      "description": "Latest Montana football coverage.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/c8/1c8a0bb4-80e0-5688-a28a-67d1690e71b8/6abc66394ad08.preview.jpg?crop=1265%2C664%2C0%2C486&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/c8/1c8a0bb4-80e0-5688-a28a-67d1690e71b8/6abc66394ad08.preview.jpg?crop=1265%2C664%2C0%2C486&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
