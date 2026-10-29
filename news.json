@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T09:05:37.246677+00:00",
+  "updated": "2026-10-29T16:04:18.412846+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Well Dunn: Fighter's mentality powers Grizzlies safety Devin Dunn",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/well-dunn-fighters-mentality-powers-grizzlies-safety-devin-dunn/article_a295fef8-b200-457a-9d06-c03dae500db0.html",
+      "date": "Oct. 29, 2026",
+      "published_at": "2026-10-29T13:00:00+00:00",
+      "description": "Well Dunn: Fighter's mentality powers Grizzlies safety Devin Dunn",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/29/a295fef8-b200-457a-9d06-c03dae500db0/6ae2d7b7aef0e.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/29/a295fef8-b200-457a-9d06-c03dae500db0/6ae2d7b7aef0e.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Griz Game Day 10-29-26",
       "url": "https://missoulian.com/special-section/pdf_d3983eef-8e07-48aa-95cb-536f1ba164f1.html",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/6/24/06242026_fb_camp_1616_ce.jpg"
-    },
-    {
-      "title": "Grizzlies look to avoid 'rat poison' coming off season-altering win",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-look-to-avoid-rat-poison-coming-off-season-altering-win/article_421e5e58-0c10-4c73-90b7-3857f5996f5d.html",
-      "date": "Sep. 30, 2026",
-      "published_at": "2026-09-30T13:00:00+00:00",
-      "description": "Grizzlies look to avoid 'rat poison' coming off season-altering win",
-      "source": "406 MT Sports",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/21/421e5e58-0c10-4c73-90b7-3857f5996f5d/6abb21c18d7e7.preview.jpg?crop=882%2C463%2C239%2C73",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/21/421e5e58-0c10-4c73-90b7-3857f5996f5d/6abb21c18d7e7.preview.jpg?crop=882%2C463%2C239%2C73"
     }
   ]
 }
