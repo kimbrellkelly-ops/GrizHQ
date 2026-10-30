@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T00:56:15.227376+00:00",
+  "updated": "2026-10-30T06:37:56.805466+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,66 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Montana Grizzlies AD Kent Haslam signs new 1-year contract",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-ad-kent-haslam-signs-new-1-year-contract/article_f53df8eb-96a3-4f79-a7cc-0708be9e09b4.html",
+      "date": "Oct. 30, 2026",
+      "published_at": "2026-10-30T04:10:00+00:00",
+      "description": "Montana Grizzlies AD Kent Haslam signs new 1-year contract",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/53/f53df8eb-96a3-4f79-a7cc-0708be9e09b4/6ae4181b66f6d.preview.jpg?crop=1764%2C926%2C0%2C33&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/53/f53df8eb-96a3-4f79-a7cc-0708be9e09b4/6ae4181b66f6d.preview.jpg?crop=1764%2C926%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Big Sky Breakdown: Jordan Tripp on the Griz turning the page, slowing Nate Bell at Eastern",
+      "url": "https://skylinesportsmt.com/big-sky-breakdown-jordan-tripp-on-the-griz-turning-the-page-slowing-nate-bell-at-eastern/",
+      "date": "Oct. 30, 2026",
+      "published_at": "2026-10-30T03:56:02+00:00",
+      "description": "October 29, 2026 Big Sky Breakdown: Jordan Tripp on the Griz turning the page, slowing Nate Bell at Eastern",
+      "source": "Skyline Sports",
+      "badge": "ANALYSIS",
+      "short": "ANALYS",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/04/Brooks-Nuanez-Cat-Griz-2025-Eli-Gillman-solo-scaled.jpeg",
+      "is_video": true,
+      "youtube_id": "S1pUhf8iO1s",
+      "video_url": "https://www.youtube.com/watch?v=S1pUhf8iO1s",
+      "video_thumbnail": "https://i.ytimg.com/vi/S1pUhf8iO1s/hqdefault.jpg"
+    },
+    {
+      "title": "Talkin’ Schmidt: UM’s budget mess, over-coaching & can the Griz surge down the stretch?",
+      "url": "https://skylinesportsmt.com/talkin-schmidt-ums-budget-mess-over-coaching-can-the-griz-surge-down-the-stretch/",
+      "date": "Oct. 29, 2026",
+      "published_at": "2026-10-29T23:08:49+00:00",
+      "description": "October 29, 2026 Talkin’ Schmidt: UM’s budget mess, over-coaching & can the Griz surge down the stretch?",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Eli-Gillman-stiff-arms-Aaron-Kinsey-Brooks-Nuanez.jpg",
+      "is_video": true,
+      "youtube_id": "QwF-JorZtMA",
+      "video_url": "https://www.youtube.com/watch?v=QwF-JorZtMA",
+      "video_thumbnail": "https://i.ytimg.com/vi/QwF-JorZtMA/hqdefault.jpg"
+    },
+    {
+      "title": "Griz Stars of the Week: Montana safety Brady Beaner & wide receiver LeKeldrick Bridges",
+      "url": "https://skylinesportsmt.com/griz-stars-of-the-week-montana-safety-brady-beaner-wide-receiver-lekeldrick-bridges/",
+      "date": "Oct. 29, 2026",
+      "published_at": "2026-10-29T23:00:00+00:00",
+      "description": "October 29, 2026 Griz Stars of the Week: Montana safety Brady Beaner & wide receiver LeKeldrick Bridges",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Griz-No-25-runs-out-through-the-smoke-Brooks-Nuanez-scaled.jpg",
+      "is_video": true,
+      "youtube_id": "HtFWIy9FAZM",
+      "video_url": "https://www.youtube.com/watch?v=HtFWIy9FAZM",
+      "video_thumbnail": "https://i.ytimg.com/vi/HtFWIy9FAZM/hqdefault.jpg"
+    },
     {
       "title": "WATCH – Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on the bye, Griz defense & Eastern Washington",
       "url": "https://skylinesportsmt.com/watch-brawl-of-the-wild-coaches-corner-montana-head-coach-bobby-kennedy-on-the-bye-griz-defense-eastern-washington/",
@@ -1449,66 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/c3/0c37f412-ba80-5f94-9eba-5f4f41a3cbe7/6aa5dd4cc8f15.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Brawl of the Wild Coaches’ Corner – Griz head coach Bobby Kennedy on Davis win, UM Homecoming",
-      "url": "https://skylinesportsmt.com/brawl-of-the-wild-coaches-corner-griz-head-coach-bobby-kennedy-on-davis-win-um-homecoming/",
-      "date": "Oct. 1, 2026",
-      "published_at": "2026-10-01T15:57:38+00:00",
-      "description": "October 1, 2026 Brawl of the Wild Coaches’ Corner – Griz head coach Bobby Kennedy on Davis win, UM Homecoming",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Bobby-Kennedy-tunnel-run.jpeg",
-      "is_video": true,
-      "youtube_id": "x3KONIft7bw",
-      "video_url": "https://www.youtube.com/watch?v=x3KONIft7bw",
-      "video_thumbnail": "https://i.ytimg.com/vi/x3KONIft7bw/hqdefault.jpg"
-    },
-    {
-      "title": "Big Sky Conference football picks: 406 MT Sports panel forecasts games for Griz, Cats",
-      "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/big-sky-conference-football-picks-406-mt-sports-panel-forecasts-games-for-griz-cats/article_d8dbb5f2-d962-42ed-833d-955063f1ea12.html",
-      "date": "Oct. 1, 2026",
-      "published_at": "2026-10-01T14:00:00+00:00",
-      "description": "Big Sky Conference football picks: 406 MT Sports panel forecasts games for Griz, Cats",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/8d/d8dbb5f2-d962-42ed-833d-955063f1ea12/6abaabdc15227.preview.jpg?crop=1199%2C629%2C9%2C149",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/8d/d8dbb5f2-d962-42ed-833d-955063f1ea12/6abaabdc15227.preview.jpg?crop=1199%2C629%2C9%2C149"
-    },
-    {
-      "title": "Talkin’ Schmidt: Griz OL ascent, defensive improvements, good news, bad news, TOP SOUPS & a cameo!",
-      "url": "https://skylinesportsmt.com/talkin-schmidt-griz-ol-ascent-defensive-improvements-good-news-bad-news-top-soups-a-cameo/",
-      "date": "Oct. 1, 2026",
-      "published_at": "2026-10-01T12:59:44+00:00",
-      "description": "October 1, 2026 Talkin’ Schmidt: Griz OL ascent, defensive improvements, good news, bad news, TOP SOUPS & a cameo!",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Montana-Griz-offense-live-presnap-Dyllan-Drummond-Jack-DAmbra-Lucas-Freitas-Torin-Jeske-and-Titus-Rohrer-.jpeg",
-      "is_video": true,
-      "youtube_id": "m6U2Ra6DWAU",
-      "video_url": "https://www.youtube.com/watch?v=m6U2Ra6DWAU",
-      "video_thumbnail": "https://i.ytimg.com/vi/m6U2Ra6DWAU/hqdefault.jpg"
-    },
-    {
-      "title": "Driven D'Ambra: Grizzlies OL Jack D'Ambra inspired by late father",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/driven-dambra-grizzlies-ol-jack-dambra-inspired-by-late-father/article_3410e332-4663-4b2f-83b2-83e2c73965c1.html",
-      "date": "Oct. 1, 2026",
-      "published_at": "2026-10-01T12:00:00+00:00",
-      "description": "Driven D'Ambra: Grizzlies OL Jack D'Ambra inspired by late father",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/41/3410e332-4663-4b2f-83b2-83e2c73965c1/6ab5c793f1e8f.preview.jpg?crop=1761%2C925%2C2%2C78&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/41/3410e332-4663-4b2f-83b2-83e2c73965c1/6ab5c793f1e8f.preview.jpg?crop=1761%2C925%2C2%2C78&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
