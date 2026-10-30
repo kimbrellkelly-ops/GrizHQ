@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T21:05:28.937264+00:00",
+  "updated": "2026-10-30T00:56:15.227376+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -24,6 +24,21 @@
       "youtube_id": "6vOnPurgvrc",
       "video_url": "https://www.youtube.com/watch?v=6vOnPurgvrc",
       "video_thumbnail": "https://i.ytimg.com/vi/6vOnPurgvrc/hqdefault.jpg"
+    },
+    {
+      "title": "Big Sky Conference football picks: 406 MT Sports panel forecasts games for Griz, Cats",
+      "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/big-sky-conference-football-picks-406-mt-sports-panel-forecasts-games-for-griz-cats/article_f44e5ff1-5c19-46fb-b50a-675d476bb6ff.html",
+      "date": "Oct. 29, 2026",
+      "published_at": "2026-10-29T14:00:00+00:00",
+      "description": "Big Sky Conference football picks: 406 MT Sports panel forecasts games for Griz, Cats",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/44/f44e5ff1-5c19-46fb-b50a-675d476bb6ff/6ade20a41cfce.preview.jpg?crop=918%2C482%2C548%2C164",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/44/f44e5ff1-5c19-46fb-b50a-675d476bb6ff/6ade20a41cfce.preview.jpg?crop=918%2C482%2C548%2C164"
     },
     {
       "title": "Well Dunn: Fighter's mentality powers Grizzlies safety Devin Dunn",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/41/3410e332-4663-4b2f-83b2-83e2c73965c1/6ab5c793f1e8f.preview.jpg?crop=1761%2C925%2C2%2C78&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Big Sky Now: Week 4 recap, Montana explodes for 62, Idaho State stays unbeaten, and week 5 preview",
-      "url": "https://dailyinterlake.com/news/2026/oct/01/big-sky-now-week-4-recap-montana-explodes-for-62-idaho-state-stays-unbeaten-and-week-5-preview/",
-      "date": "Oct. 1, 2026",
-      "published_at": "2026-10-01T01:35:00+00:00",
-      "description": "Updated 2 hours, 9 minutes ago Big Sky Now: Week 4 recap, Montana explodes for 62, Idaho State stays unbeaten, and week 5 preview Week four delivered a statement from the Montana Grizzlies and another nail-biter for Idaho State, and Week fi",
-      "source": "Daily Inter Lake",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/10/01/bsn_youtube_cover_0923_1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698",
-      "is_video": true,
-      "youtube_id": "6KOkprwzpXo",
-      "video_url": "https://www.youtube.com/watch?v=6KOkprwzpXo",
-      "video_thumbnail": "https://i.ytimg.com/vi/6KOkprwzpXo/hqdefault.jpg"
     }
   ]
 }
