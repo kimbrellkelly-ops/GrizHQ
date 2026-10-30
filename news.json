@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T18:51:22.527735+00:00",
+  "updated": "2026-10-30T22:43:42.075217+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "3 questions: No. 14 Grizzlies look to right the ship at Eastern Washington",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-14-grizzlies-look-to-right-the-ship-at-eastern-washington/article_d7125bd3-834d-4bf2-ad28-d8fe3dbf4f41.html",
+      "date": "Oct. 30, 2026",
+      "published_at": "2026-10-30T19:00:00+00:00",
+      "description": "3 questions: No. 14 Grizzlies look to right the ship at Eastern Washington",
+      "source": "406 MT Sports",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/71/d7125bd3-834d-4bf2-ad28-d8fe3dbf4f41/6ae0417988437.preview.jpg?crop=1607%2C844%2C0%2C30&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/71/d7125bd3-834d-4bf2-ad28-d8fe3dbf4f41/6ae0417988437.preview.jpg?crop=1607%2C844%2C0%2C30&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Big Sky man injured in 2023 grizzly attack cited for illegal snowmobile guiding, lying to feds",
       "url": "https://missoulian.com/outdoors/article_869579f9-ff87-507f-bdc0-865b5fecf3eb.html",
@@ -29,7 +44,7 @@
       "title": "Montana Grizzlies AD Kent Haslam signs new 1-year contract",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-ad-kent-haslam-signs-new-1-year-contract/article_f53df8eb-96a3-4f79-a7cc-0708be9e09b4.html",
       "date": "Oct. 30, 2026",
-      "published_at": "2026-10-30T04:10:00+00:00",
+      "published_at": "2026-10-30T04:11:00+00:00",
       "description": "Montana Grizzlies AD Kent Haslam signs new 1-year contract",
       "source": "406 MT Sports",
       "badge": "GRIZ NEWS",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/10/03/1004_SPO_DIL_Grizzlies_vs_Northern_Colorado-1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698"
-    },
-    {
-      "title": "3 questions: No. 3 Grizzlies seek homecoming win vs. Northern Colorado",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-3-grizzlies-seek-homecoming-win-vs-northern-colorado/article_17d68ce5-a515-4d0f-b017-e637b7716e51.html",
-      "date": "Oct. 2, 2026",
-      "published_at": "2026-10-02T18:00:00+00:00",
-      "description": "3 questions: No. 3 Grizzlies seek homecoming win vs. Northern Colorado",
-      "source": "406 MT Sports",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/7d/17d68ce5-a515-4d0f-b017-e637b7716e51/6abb24794003d.preview.jpg?crop=1759%2C924%2C4%2C82&resize=1200%2C631&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/7d/17d68ce5-a515-4d0f-b017-e637b7716e51/6abb24794003d.preview.jpg?crop=1759%2C924%2C4%2C82&resize=1200%2C631&order=crop%2Cresize"
     }
   ]
 }
