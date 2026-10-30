@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-10-29T20:55:22.963355+00:00",
+  "generatedAt": "2026-10-30T06:30:11.324469+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -11716,7 +11716,7 @@
           "shortName": "SCST @ MORG",
           "venue": "Hughes Stadium (MD)",
           "city": "Baltimore",
-          "state": "pre",
+          "state": "post",
           "teams": [
             {
               "id": "2415",
@@ -11724,7 +11724,7 @@
               "short": "Morgan St",
               "abbreviation": "MORG",
               "homeAway": "home",
-              "score": "",
+              "score": "10",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2415.png"
             },
             {
@@ -11733,27 +11733,25 @@
               "short": "SC State",
               "abbreviation": "SCST",
               "homeAway": "away",
-              "score": "",
+              "score": "51",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2569.png"
             }
           ],
           "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Thu, October 29th at 7:00 PM EDT",
-            "shortDetail": "10/29 - 7:00 PM EDT",
-            "label": "10/29 - 7:00 PM EDT",
-            "period": null,
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
             "clock": "0:00"
           },
-          "completed": false,
-          "period": null,
+          "completed": true,
+          "period": 4,
           "clock": "0:00",
-          "statusText": "10/29 - 7:00 PM EDT",
-          "broadcasts": [
-            "ESPNU"
-          ]
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401867838",
@@ -11797,7 +11795,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/30 - 7:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPNU"
+          ]
         },
         {
           "id": "401867880",
