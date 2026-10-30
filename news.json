@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T13:33:08.968018+00:00",
+  "updated": "2026-10-30T18:51:22.527735+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Big Sky man injured in 2023 grizzly attack cited for illegal snowmobile guiding, lying to feds",
+      "url": "https://missoulian.com/outdoors/article_869579f9-ff87-507f-bdc0-865b5fecf3eb.html",
+      "date": "Oct. 30, 2026",
+      "published_at": "2026-10-30T17:50:00+00:00",
+      "description": "According to charges filed on Oct. 23, before and after being mauled by a grizzly bear, Rudy Noorlander allegedly lied to Forest Service officials saying he was not guiding snowmobilers.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/2/bf/2bf0c06d-14ac-5807-9540-ef8a15cc7dcd/6ae4d7af67a22.image.jpg?resize=300%2C353",
+      "is_video": true,
+      "youtube_id": "hvaKWIF_f-I",
+      "video_url": "https://www.youtube.com/watch?v=hvaKWIF_f-I",
+      "video_thumbnail": "https://i.ytimg.com/vi/hvaKWIF_f-I/hqdefault.jpg"
+    },
     {
       "title": "Montana Grizzlies AD Kent Haslam signs new 1-year contract",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-ad-kent-haslam-signs-new-1-year-contract/article_f53df8eb-96a3-4f79-a7cc-0708be9e09b4.html",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/7d/17d68ce5-a515-4d0f-b017-e637b7716e51/6abb24794003d.preview.jpg?crop=1759%2C924%2C4%2C82&resize=1200%2C631&order=crop%2Cresize"
-    },
-    {
-      "title": "Driven D'Ambra: Grizzlies OL Jack D'Ambra inspired by late father",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_abf4426e-6669-53ad-81d0-4e39c1452807.html",
-      "date": "Oct. 1, 2026",
-      "published_at": "2026-10-01T17:30:00+00:00",
-      "description": "\"This whole season for me is really dedicated to him.\" —Grizzlies offensive lineman Jack D'Ambra on his late father",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/c3/0c37f412-ba80-5f94-9eba-5f4f41a3cbe7/6aa5dd4cc8f15.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/c3/0c37f412-ba80-5f94-9eba-5f4f41a3cbe7/6aa5dd4cc8f15.image.jpg?resize=300%2C200"
     }
   ]
 }
