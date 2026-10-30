@@ -1,6 +1,45 @@
 {
-  "updated": "2026-10-29T23:27:24.148719+00:00",
+  "updated": "2026-10-30T02:47:11.262747+00:00",
   "posts": [
+    {
+      "title": "\"The Expectation Is High \" Montana State OL Coach Matt Smith",
+      "url": "https://www.youtube.com/watch?v=kofzid7cWCs",
+      "image": "https://i.ytimg.com/vi/kofzid7cWCs/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 30, 2026",
+      "platform": "youtube",
+      "youtube_id": "kofzid7cWCs",
+      "published_at": "2026-10-30T00:00:00+00:00"
+    },
+    {
+      "title": "Montana State offensive line coach Matt Smith",
+      "url": "https://www.youtube.com/watch?v=W2G_9O_zSd8",
+      "image": "https://i.ytimg.com/vi/W2G_9O_zSd8/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 29, 2026",
+      "platform": "youtube",
+      "youtube_id": "W2G_9O_zSd8",
+      "published_at": "2026-10-29T00:00:00+00:00"
+    },
+    {
+      "title": "Talkin' Schmidt: UM's budget mess, over-coaching & can the Griz surge down the stretch?",
+      "url": "https://www.youtube.com/watch?v=QwF-JorZtMA",
+      "image": "https://i.ytimg.com/vi/QwF-JorZtMA/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Oct. 29, 2026",
+      "platform": "youtube",
+      "youtube_id": "QwF-JorZtMA",
+      "published_at": "2026-10-29T00:00:00+00:00"
+    },
     {
       "title": "Booch Films on Montana State win over Weber State",
       "url": "https://www.youtube.com/watch?v=Dvx5d_rSb5U",
@@ -182,32 +221,6 @@
       "platform": "youtube",
       "youtube_id": "DvHPocVbaeg",
       "published_at": "2026-10-25T00:00:00+00:00"
-    },
-    {
-      "title": "\"The Pride of the Montana Grizzlies will not be entrusted to the timid or the weak\"",
-      "url": "https://www.youtube.com/watch?v=iJj5NLlHDSo",
-      "image": "https://i.ytimg.com/vi/iJj5NLlHDSo/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 23, 2026",
-      "platform": "youtube",
-      "youtube_id": "iJj5NLlHDSo",
-      "published_at": "2026-10-23T00:00:00+00:00"
-    },
-    {
-      "title": "Big Sky Breakdown: Weber State's Eric Kjar & James Cowser on the Wildcats' rise and the trip to Mont",
-      "url": "https://www.youtube.com/watch?v=yhzwar2pgfc",
-      "image": "https://i.ytimg.com/vi/yhzwar2pgfc/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 23, 2026",
-      "platform": "youtube",
-      "youtube_id": "yhzwar2pgfc",
-      "published_at": "2026-10-23T00:00:00+00:00"
     }
   ],
   "profiles": [
