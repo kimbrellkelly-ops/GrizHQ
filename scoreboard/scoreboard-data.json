@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-10-30T22:42:09.153338+00:00",
+  "generatedAt": "2026-10-31T07:56:06.521028+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -11760,7 +11760,7 @@
           "shortName": "HARV @ DART",
           "venue": "Memorial Field (Dartmouth)",
           "city": "Hanover",
-          "state": "pre",
+          "state": "post",
           "teams": [
             {
               "id": "159",
@@ -11768,7 +11768,7 @@
               "short": "Dartmouth",
               "abbreviation": "DART",
               "homeAway": "home",
-              "score": "",
+              "score": "24",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/159.png"
             },
             {
@@ -11777,27 +11777,25 @@
               "short": "Harvard",
               "abbreviation": "HARV",
               "homeAway": "away",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/108.png"
             }
           ],
           "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Fri, October 30th at 7:00 PM EDT",
-            "shortDetail": "10/30 - 7:00 PM EDT",
-            "label": "10/30 - 7:00 PM EDT",
-            "period": null,
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
             "clock": "0:00"
           },
-          "completed": false,
-          "period": null,
+          "completed": true,
+          "period": 4,
           "clock": "0:00",
-          "statusText": "10/30 - 7:00 PM EDT",
-          "broadcasts": [
-            "ESPNU"
-          ]
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401867880",
@@ -11841,7 +11839,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 12:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401866675",
@@ -11885,7 +11885,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 12:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "FloSports"
+          ]
         },
         {
           "id": "401867995",
@@ -11929,7 +11931,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 12:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401866678",
@@ -11973,7 +11977,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 1:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "FloSports"
+          ]
         },
         {
           "id": "401868026",
@@ -12017,7 +12023,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 1:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401867851",
@@ -12061,7 +12069,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 2:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868312",
@@ -12105,7 +12115,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 3:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868081",
@@ -12149,7 +12161,10 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 3:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports"
+          ]
         },
         {
           "id": "401868126",
@@ -12193,7 +12208,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 3:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868384",
@@ -12237,7 +12254,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 3:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868165",
@@ -12281,7 +12300,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 3:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868107",
@@ -12325,7 +12346,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 3:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868349",
@@ -12369,7 +12392,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 3:30 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401867887",
@@ -12413,7 +12438,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 4:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPNU"
+          ]
         },
         {
           "id": "401868089",
@@ -12457,7 +12484,10 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 4:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports"
+          ]
         },
         {
           "id": "401868056",
@@ -12501,7 +12531,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 4:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868147",
@@ -12545,7 +12577,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 7:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868251",
@@ -12589,7 +12623,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 8:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         }
       ],
       "fcsTop25Byes": [
@@ -12647,7 +12683,10 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 3:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports"
+          ]
         },
         {
           "id": "401868107",
@@ -12691,7 +12730,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 3:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868126",
@@ -12735,7 +12776,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 3:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868165",
@@ -12779,7 +12822,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 3:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868089",
@@ -12823,7 +12868,10 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 4:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports"
+          ]
         },
         {
           "id": "401868098",
@@ -12867,7 +12915,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "10/31 - 4:00 PM EDT",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         }
       ]
     },
