@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01T07:34:04.850991+00:00",
+  "updated": "2026-11-01T15:11:23.110119+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "6-3",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-01T07:34:57.984006+00:00"
+    "checked_at": "2026-11-01T15:12:23.100702+00:00"
   },
   "resources": [
     {
@@ -2945,7 +2945,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-01T07:34:12.755117+00:00",
+    "source_checked_at": "2026-11-01T15:11:30.291626+00:00",
     "team_summary": [
       {
         "value": "6–3",
@@ -27658,9 +27658,10 @@
     ]
   },
   "latest_press_conference": {
-    "title": "WATCH – Griz press conference – Bobby Kennedy, Eli Gillman & Tyler King + Drake’s Matt Walker",
-    "date": "September 5, 2026",
-    "url": "https://skylinesportsmt.com/watch-griz-press-conference-bobby-kennedy-eli-gillman-tyler-king-drakes-matt-walker/"
+    "title": "WATCH – Montana State head coach Brent Vigen weekly press conference on Cal Poly matchup",
+    "date": "Tue, 27 Oct 2026 00:27:56 +0000",
+    "url": "https://skylinesportsmt.com/watch-montana-state-head-coach-brent-vigen-weekly-press-conference-on-cal-poly-matchup/",
+    "youtube_id": ""
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -28290,6 +28291,6 @@
       "news": "https://goviks.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-11-01T07:34:17.967342+00:00"
+    "updated": "2026-11-01T15:11:35.628119+00:00"
   }
 }
