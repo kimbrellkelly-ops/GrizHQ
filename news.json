@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31T21:29:29.085699+00:00",
+  "updated": "2026-11-01T00:18:18.715398+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,14 +11,14 @@
   ],
   "stories": [
     {
-      "title": "Live updates: No. 14 Montana Grizzlies at Eastern Washington",
+      "title": "Recap: No. 14 Grizzlies outduel Eastern Washington behind big plays",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-football-at-eastern-washington-recap/article_005184ec-108a-4044-9c68-7fb6082096ca.html",
       "date": "Oct. 31, 2026",
-      "published_at": "2026-10-31T19:55:00+00:00",
-      "description": "Live updates: No. 14 Montana Grizzlies at Eastern Washington",
+      "published_at": "2026-10-31T23:15:00+00:00",
+      "description": "Recap: No. 14 Grizzlies outduel Eastern Washington behind big plays",
       "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
+      "badge": "GAME STORY",
+      "short": "GAME S",
       "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/05/005184ec-108a-4044-9c68-7fb6082096ca/6ae653b5ca24d.preview.jpg?crop=1733%2C910%2C2%2C175&resize=1200%2C630&order=crop%2Cresize",
       "is_video": false,
       "youtube_id": "",
