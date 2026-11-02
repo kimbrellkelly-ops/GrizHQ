@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T15:56:46.478199+00:00",
+  "updated": "2026-11-02T23:32:00.897430+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "6-3",
@@ -112,60 +112,66 @@
     }
   ],
   "coaches_poll": [
-    "Tarleton St. (25)",
-    "Stephen F. Austin (1)",
-    "Montana St.",
-    "Youngstown St.",
-    "South Dakota St.",
-    "South Dakota",
-    "Northern Arizona",
-    "Austin Peay",
-    "Illinois St.",
-    "Tennessee Tech",
-    "North Dakota",
-    "Mercer",
-    "Lamar",
-    "Montana",
-    "Campbell",
-    "Harvard",
-    "Monmouth (N.J.)",
-    "East Tennessee St.",
-    "Richmond",
-    "Lehigh",
-    "UC Davis",
-    "South Carolina St.",
-    "Idaho St.",
-    "ACU",
-    "UAlbany"
-  ],
-  "media_poll": [
-    "Tarleton State (47)",
-    "Stephen F. Austin (5)",
-    "Montana State (3)",
-    "Youngstown State (2)",
+    "Tarleton State (23)",
+    "Stephen F. Austin (3)",
+    "Montana State",
+    "Youngstown State",
     "South Dakota State",
-    "South Dakota",
     "Northern Arizona",
     "Austin Peay",
-    "North Dakota",
     "Illinois State",
     "Tennessee Tech",
+    "South Dakota",
+    "Mercer",
+    "Lamar",
+    "Montana",
+    "Monmouth",
+    "North Dakota",
+    "Lehigh",
+    "South Carolina State",
+    "Idaho State",
     "Campbell",
+    "UAlbany",
+    "East Tennessee State",
+    "Abilene Christian",
     "Harvard",
+    "Alabama A&M",
+    "Weber State"
+  ],
+  "media_poll": [
+    "Tarleton State (39)",
+    "Stephen F. Austin (7)",
+    "Montana State (7)",
+    "Youngstown State (3)",
+    "South Dakota State (1)",
+    "Northern Arizona",
+    "Austin Peay",
+    "South Dakota",
+    "Tennessee Tech",
+    "Illinois State",
+    "North Dakota",
     "Montana",
     "Lamar",
     "Mercer",
-    "ETSU",
     "Monmouth",
+    "Campbell",
     "Lehigh",
-    "UC Davis",
-    "Richmond",
     "Weber State",
+    "ETSU",
+    "Harvard",
+    "UAlbany",
     "Idaho State",
     "Abilene Christian",
-    "South Carolina State"
+    "South Carolina State",
+    "Chattanooga"
   ],
   "news": [
+    {
+      "title": "Davis sweeps weekly awards",
+      "url": "https://gogriz.com/news/2026/11/2/football-davis-sweeps-weekly-awards",
+      "date": "Mon, 2 Nov 2026 08:31:00 MST",
+      "description": "MISSOULA – Montana receiver Brooks Davis showcased his big-play prowess against Eastern Washington in Cheney on Saturday with a career-high 231 yards and three touchdowns on nine c"
+    },
     {
       "title": "Griz ground Eagles 42-33 in Cheney",
       "url": "https://gogriz.com/news/2026/10/31/football-griz-ground-eagles-42-33-in-cheney",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/10/10/football-griz-drop-ranked-shootout-at-nau",
       "date": "Sat, 10 Oct 2026 19:49:00 MST",
       "description": "FLAGSTAFF, Ariz. – The No. 2 Montana Grizzlies traded blows with No. 13 Northern Arizona throughout the afternoon but fell to the Lumberjacks 49-44 in a ranked Big Sky Conference s"
-    },
-    {
-      "title": "Montana finalizes 2027 Nonconference schedule",
-      "url": "https://gogriz.com/news/2026/10/8/football-montana-finalizes-2027-nonconference-schedule",
-      "date": "Thu, 8 Oct 2026 18:01:00 MST",
-      "description": "MISSOULA - The Montana Grizzlies have finalized the nonconference portion of the 2027 football schedule, Director of Athletics Kent Haslam announced Thursday."
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-02T15:57:48.415996+00:00"
+    "checked_at": "2026-11-02T23:33:05.181519+00:00"
   },
   "resources": [
     {
@@ -2696,51 +2696,51 @@
     }
   ],
   "fcs_rankings_source": "Stats Perform FCS Top 25 — Aug. 31, 2026",
-  "fcs_rankings_date": "Oct 26, 2026",
+  "fcs_rankings_date": "Nov 2, 2026",
   "fcs_top20": [
     {
       "rank": 1,
-      "team": "Tarleton State (47)",
+      "team": "Tarleton State (39)",
       "record": ""
     },
     {
       "rank": 2,
-      "team": "Stephen F. Austin (5)",
+      "team": "Stephen F. Austin (7)",
       "record": ""
     },
     {
       "rank": 3,
-      "team": "Montana State (3)",
+      "team": "Montana State (7)",
       "record": ""
     },
     {
       "rank": 4,
-      "team": "Youngstown State (2)",
+      "team": "Youngstown State (3)",
       "record": ""
     },
     {
       "rank": 5,
-      "team": "South Dakota State",
+      "team": "South Dakota State (1)",
       "record": ""
     },
     {
       "rank": 6,
-      "team": "South Dakota",
-      "record": "1-0"
-    },
-    {
-      "rank": 7,
       "team": "Northern Arizona",
       "record": "1-0"
     },
     {
-      "rank": 8,
+      "rank": 7,
       "team": "Austin Peay",
       "record": "1-0"
     },
     {
+      "rank": 8,
+      "team": "South Dakota",
+      "record": "1-0"
+    },
+    {
       "rank": 9,
-      "team": "North Dakota",
+      "team": "Tennessee Tech",
       "record": "1-0"
     },
     {
@@ -2750,99 +2750,99 @@
     },
     {
       "rank": 11,
-      "team": "Tennessee Tech",
+      "team": "North Dakota",
       "record": "1-0"
     },
     {
       "rank": 12,
-      "team": "Campbell",
-      "record": ""
-    },
-    {
-      "rank": 13,
-      "team": "Harvard",
-      "record": ""
-    },
-    {
-      "rank": 14,
       "team": "Montana",
       "record": ""
     },
     {
-      "rank": 15,
+      "rank": 13,
       "team": "Lamar",
       "record": "1-0"
     },
     {
-      "rank": 16,
+      "rank": 14,
       "team": "Mercer",
       "record": "1-0"
     },
     {
-      "rank": 17,
-      "team": "ETSU",
-      "record": ""
-    },
-    {
-      "rank": 18,
+      "rank": 15,
       "team": "Monmouth",
       "record": ""
     },
     {
-      "rank": 19,
+      "rank": 16,
+      "team": "Campbell",
+      "record": ""
+    },
+    {
+      "rank": 17,
       "team": "Lehigh",
       "record": "1-0"
     },
     {
+      "rank": 18,
+      "team": "Weber State",
+      "record": ""
+    },
+    {
+      "rank": 19,
+      "team": "ETSU",
+      "record": ""
+    },
+    {
       "rank": 20,
-      "team": "UC Davis",
-      "record": "1-0"
+      "team": "Harvard",
+      "record": ""
     }
   ],
   "fcs_top25": [
     {
       "rank": 1,
-      "team": "Tarleton State (47)",
+      "team": "Tarleton State (39)",
       "record": ""
     },
     {
       "rank": 2,
-      "team": "Stephen F. Austin (5)",
+      "team": "Stephen F. Austin (7)",
       "record": ""
     },
     {
       "rank": 3,
-      "team": "Montana State (3)",
+      "team": "Montana State (7)",
       "record": ""
     },
     {
       "rank": 4,
-      "team": "Youngstown State (2)",
+      "team": "Youngstown State (3)",
       "record": ""
     },
     {
       "rank": 5,
-      "team": "South Dakota State",
+      "team": "South Dakota State (1)",
       "record": ""
     },
     {
       "rank": 6,
-      "team": "South Dakota",
-      "record": "1-0"
-    },
-    {
-      "rank": 7,
       "team": "Northern Arizona",
       "record": "1-0"
     },
     {
-      "rank": 8,
+      "rank": 7,
       "team": "Austin Peay",
       "record": "1-0"
     },
     {
+      "rank": 8,
+      "team": "South Dakota",
+      "record": "1-0"
+    },
+    {
       "rank": 9,
-      "team": "North Dakota",
+      "team": "Tennessee Tech",
       "record": "1-0"
     },
     {
@@ -2852,77 +2852,77 @@
     },
     {
       "rank": 11,
-      "team": "Tennessee Tech",
+      "team": "North Dakota",
       "record": "1-0"
     },
     {
       "rank": 12,
-      "team": "Campbell",
-      "record": ""
-    },
-    {
-      "rank": 13,
-      "team": "Harvard",
-      "record": ""
-    },
-    {
-      "rank": 14,
       "team": "Montana",
       "record": ""
     },
     {
-      "rank": 15,
+      "rank": 13,
       "team": "Lamar",
       "record": "1-0"
     },
     {
-      "rank": 16,
+      "rank": 14,
       "team": "Mercer",
       "record": "1-0"
     },
     {
-      "rank": 17,
-      "team": "ETSU",
-      "record": ""
-    },
-    {
-      "rank": 18,
+      "rank": 15,
       "team": "Monmouth",
       "record": ""
     },
     {
-      "rank": 19,
+      "rank": 16,
+      "team": "Campbell",
+      "record": ""
+    },
+    {
+      "rank": 17,
       "team": "Lehigh",
       "record": "1-0"
     },
     {
-      "rank": 20,
-      "team": "UC Davis",
-      "record": "1-0"
-    },
-    {
-      "rank": 21,
-      "team": "Richmond",
-      "record": ""
-    },
-    {
-      "rank": 22,
+      "rank": 18,
       "team": "Weber State",
       "record": ""
     },
     {
-      "rank": 23,
+      "rank": 19,
+      "team": "ETSU",
+      "record": ""
+    },
+    {
+      "rank": 20,
+      "team": "Harvard",
+      "record": ""
+    },
+    {
+      "rank": 21,
+      "team": "UAlbany",
+      "record": ""
+    },
+    {
+      "rank": 22,
       "team": "Idaho State",
       "record": ""
     },
     {
-      "rank": 24,
+      "rank": 23,
       "team": "Abilene Christian",
       "record": ""
     },
     {
-      "rank": 25,
+      "rank": 24,
       "team": "South Carolina State",
+      "record": ""
+    },
+    {
+      "rank": 25,
+      "team": "Chattanooga",
       "record": ""
     }
   ],
@@ -2945,7 +2945,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-02T15:56:53.639914+00:00",
+    "source_checked_at": "2026-11-02T23:32:09.063497+00:00",
     "team_summary": [
       {
         "value": "6–3",
@@ -3270,7 +3270,7 @@
       "special"
     ]
   },
-  "rankings_date": "Oct 26, 2026",
+  "rankings_date": "Nov 2, 2026",
   "fcs_scores": {
     "2026-08-27": [
       {
@@ -27658,10 +27658,10 @@
     ]
   },
   "latest_press_conference": {
-    "title": "WATCH – Montana State head coach Brent Vigen weekly press conference on Cal Poly matchup",
-    "date": "Tue, 27 Oct 2026 00:27:56 +0000",
-    "url": "https://skylinesportsmt.com/watch-montana-state-head-coach-brent-vigen-weekly-press-conference-on-cal-poly-matchup/",
-    "youtube_id": "iN9kpi2u7Us"
+    "title": "WATCH – Montana State head coach Brent Vigen weekly press conference on Idaho State matchup",
+    "date": "Mon, 02 Nov 2026 18:48:16 +0000",
+    "url": "https://skylinesportsmt.com/listen-montana-state-head-coach-brent-vigen-weekly-press-conference-on-idaho-state-matchup/",
+    "youtube_id": ""
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -28291,6 +28291,6 @@
       "news": "https://goviks.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-11-02T15:56:59.285162+00:00"
+    "updated": "2026-11-02T23:32:13.814911+00:00"
   }
 }
