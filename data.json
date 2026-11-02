@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01T23:36:58.505413+00:00",
+  "updated": "2026-11-02T06:06:42.437734+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "6-3",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-01T23:38:09.971650+00:00"
+    "checked_at": "2026-11-02T06:07:31.245973+00:00"
   },
   "resources": [
     {
@@ -2945,7 +2945,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-01T23:37:06.667711+00:00",
+    "source_checked_at": "2026-11-02T06:06:49.398283+00:00",
     "team_summary": [
       {
         "value": "6–3",
@@ -27661,7 +27661,7 @@
     "title": "WATCH – Montana State head coach Brent Vigen weekly press conference on Cal Poly matchup",
     "date": "Tue, 27 Oct 2026 00:27:56 +0000",
     "url": "https://skylinesportsmt.com/watch-montana-state-head-coach-brent-vigen-weekly-press-conference-on-cal-poly-matchup/",
-    "youtube_id": "iN9kpi2u7Us"
+    "youtube_id": ""
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -28291,6 +28291,6 @@
       "news": "https://goviks.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-11-01T23:37:16.408477+00:00"
+    "updated": "2026-11-02T06:06:54.730848+00:00"
   }
 }
