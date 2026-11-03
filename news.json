@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T15:37:52.667672+00:00",
+  "updated": "2026-11-03T21:15:57.934332+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz WR Landon Ransom-Goelz enjoying Wa-Griz atmosphere in first year at Montana",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/griz-wr-landon-ransom-goelz-enjoying-wa-griz-atmosphere-in-first-year-at-montana/article_8221a72e-6535-4284-955a-af2194779d38.html",
+      "date": "Nov. 3, 2026",
+      "published_at": "2026-11-03T16:00:00+00:00",
+      "description": "Griz WR Landon Ransom-Goelz enjoying Wa-Griz atmosphere in first year at Montana",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/22/8221a72e-6535-4284-955a-af2194779d38/6ae831b448039.preview.jpg?crop=1668%2C876%2C45%2C116&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/22/8221a72e-6535-4284-955a-af2194779d38/6ae831b448039.preview.jpg?crop=1668%2C876%2C45%2C116&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Montana hangs around, falls late against Oregon Ducks in season opener",
       "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_ca18966e-4785-5ea7-8bb9-23f62cf7de2a.html",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/d2/bd2b4211-be74-4b21-9bb5-66d6746bbec0/6ac449a3472ee.preview.jpg?crop=1761%2C925%2C0%2C32&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Kalispell Glacier's Hunter Daniels commits to Grizzlies in 2027 recruiting class",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_da30fa28-10d0-554c-9eb3-c24c0ce9e329.html",
-      "date": "Oct. 6, 2026",
-      "published_at": "2026-10-06T01:15:00+00:00",
-      "description": "Hunter Daniels committed to the Grizzlies as an \"athlete\" and has played tight end and defensive end for Kalispell Glacier.",
-      "source": "Missoulian",
-      "badge": "RECRUITING",
-      "short": "RECRUI",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/2f/d2f037aa-fab2-50d0-97c5-a15c28dbaf2d/6ac44be0cac60.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/2f/d2f037aa-fab2-50d0-97c5-a15c28dbaf2d/6ac44be0cac60.image.jpg?resize=300%2C200"
     }
   ]
 }
