@@ -1,6 +1,19 @@
 {
-  "updated": "2026-11-02T11:55:10.418846+00:00",
+  "updated": "2026-11-03T02:55:56.372735+00:00",
   "posts": [
+    {
+      "title": "Montana State head coach Brent Vigen weekly press conference - previewing Idaho State",
+      "url": "https://www.youtube.com/watch?v=KKl3op9PCXo",
+      "image": "https://i.ytimg.com/vi/KKl3op9PCXo/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Nov. 2, 2026",
+      "platform": "youtube",
+      "youtube_id": "KKl3op9PCXo",
+      "published_at": "2026-11-02T00:00:00+00:00"
+    },
     {
       "title": "Brooks Nuanez said to Bring the heat! And the Griz did",
       "url": "https://www.youtube.com/watch?v=7dj-Q1xz1zg",
@@ -195,58 +208,6 @@
       "platform": "youtube",
       "youtube_id": "9UTh0QMoxE8",
       "published_at": "2026-10-28T00:00:00+00:00"
-    },
-    {
-      "title": "Big Sky Breakdown: Brooks & Colter on MSU's win over Weber State, special teams woes & Griz at EWU",
-      "url": "https://www.youtube.com/watch?v=ZD5towTudsY",
-      "image": "https://i.ytimg.com/vi/ZD5towTudsY/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 27, 2026",
-      "platform": "youtube",
-      "youtube_id": "ZD5towTudsY",
-      "published_at": "2026-10-27T00:00:00+00:00"
-    },
-    {
-      "title": "Brawl of the Wild Coaches' Corner - Montana State head coach Brent Vigen on Weber State, Cal Poly",
-      "url": "https://www.youtube.com/watch?v=XGvz2J69ziU",
-      "image": "https://i.ytimg.com/vi/XGvz2J69ziU/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 27, 2026",
-      "platform": "youtube",
-      "youtube_id": "XGvz2J69ziU",
-      "published_at": "2026-10-27T00:00:00+00:00"
-    },
-    {
-      "title": "Montana State head coach Brent Vigen weekly press conference on Cal Poly matchup",
-      "url": "https://www.youtube.com/watch?v=iN9kpi2u7Us",
-      "image": "https://i.ytimg.com/vi/iN9kpi2u7Us/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 27, 2026",
-      "platform": "youtube",
-      "youtube_id": "iN9kpi2u7Us",
-      "published_at": "2026-10-27T00:00:00+00:00"
-    },
-    {
-      "title": "Montana's Bobby Kennedy, Dylan Paine & Tanner Williams on bye week, EWU matchup",
-      "url": "https://www.youtube.com/watch?v=5SbnO_3rqTU",
-      "image": "https://i.ytimg.com/vi/5SbnO_3rqTU/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Oct. 27, 2026",
-      "platform": "youtube",
-      "youtube_id": "5SbnO_3rqTU",
-      "published_at": "2026-10-27T00:00:00+00:00"
     }
   ],
   "profiles": [
