@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T01:15:43.626261+00:00",
+  "updated": "2026-11-03T07:56:22.806188+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Montana hangs around, falls late against Oregon Ducks in season opener",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_ca18966e-4785-5ea7-8bb9-23f62cf7de2a.html",
+      "date": "Nov. 3, 2026",
+      "published_at": "2026-11-03T05:00:00+00:00",
+      "description": "The Grizzlies tied Oregon at 57 midway through the second half.",
+      "source": "Missoulian",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/07/0076a636-5d26-5f93-9c79-c594c0791ab9/6ae97c3cb825f.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/07/0076a636-5d26-5f93-9c79-c594c0791ab9/6ae97c3cb825f.image.jpg?resize=300%2C200"
+    },
     {
       "title": "WATCH – Montana’s Bobby Kennedy, Colton Lentz & Landon Ransom-Goelz on EWU win, Portland State",
       "url": "https://skylinesportsmt.com/watch-montanas-bobby-kennedy-colton-lentz-landon-ransom-goelz-on-ewu-win-portland-state/",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/2f/d2f037aa-fab2-50d0-97c5-a15c28dbaf2d/6ac44be0cac60.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Griz Football Week 7 Press Conference",
-      "url": "https://gogriz.com/news/2026/10/5/griz-football-week-7-press-conference",
-      "date": "Oct. 5, 2026",
-      "published_at": "2026-10-05T23:22:00+00:00",
-      "description": "Weekly Griz Football Press Conference featuring Coach Bobby Kennedy, quarterback Keali'i Ah Yat and linebacker Justin Eklund as UM looks ahead to a road test at Northern Arizona.",
-      "source": "GoGriz",
-      "badge": "INSIDER",
-      "short": "INSIDE",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/5/Kennedy_Press_Conference.png",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://gogriz.com/news/2026/10/5/griz-football-week-7-press-conference",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/5/Kennedy_Press_Conference.png"
     }
   ]
 }
