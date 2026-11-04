@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T21:00:00.953352+00:00",
+  "updated": "2026-11-04T01:22:54.005590+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "6-3",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Griz return home to face Portland State",
+      "url": "https://gogriz.com/news/2026/11/3/football-griz-return-home-to-face-portland-state",
+      "date": "Tue, 3 Nov 2026 17:26:00 MST",
+      "description": "MISSOULA - As the old saying goes: \"The games they remember are played in November.\""
+    },
+    {
       "title": "Davis sweeps weekly awards",
       "url": "https://gogriz.com/news/2026/11/2/football-davis-sweeps-weekly-awards",
       "date": "Mon, 2 Nov 2026 08:31:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/10/13/575-miles-to-missoula-football-super-fans-never-miss-a-griz-game",
       "date": "Tue, 13 Oct 2026 11:41:00 MST",
       "description": "MISSOULA – If Griz football fandom were measured in miles, few could match Brad and Carol Holm."
-    },
-    {
-      "title": "Griz drop ranked shootout at NAU",
-      "url": "https://gogriz.com/news/2026/10/10/football-griz-drop-ranked-shootout-at-nau",
-      "date": "Sat, 10 Oct 2026 19:49:00 MST",
-      "description": "FLAGSTAFF, Ariz. – The No. 2 Montana Grizzlies traded blows with No. 13 Northern Arizona throughout the afternoon but fell to the Lumberjacks 49-44 in a ranked Big Sky Conference s"
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-03T21:00:48.426299+00:00"
+    "checked_at": "2026-11-04T01:23:41.890201+00:00"
   },
   "resources": [
     {
@@ -2945,7 +2945,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-03T21:00:07.470008+00:00",
+    "source_checked_at": "2026-11-04T01:23:01.309888+00:00",
     "team_summary": [
       {
         "value": "6–3",
@@ -28291,6 +28291,6 @@
       "news": "https://goviks.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-11-03T21:00:12.834396+00:00"
+    "updated": "2026-11-04T01:23:07.456474+00:00"
   }
 }
