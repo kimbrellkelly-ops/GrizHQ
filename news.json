@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T15:46:16.159159+00:00",
+  "updated": "2026-11-04T21:37:57.003042+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Grizzlies welcome back LB Solomon Tuliaupupu 'with open arms'",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-welcome-back-lb-solomon-tuliaupupu-with-open-arms/article_3c60bd9c-6b45-4181-abf2-766d9b816e63.html",
+      "date": "Nov. 4, 2026",
+      "published_at": "2026-11-04T14:00:00+00:00",
+      "description": "Grizzlies welcome back LB Solomon Tuliaupupu 'with open arms'",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/c6/3c60bd9c-6b45-4181-abf2-766d9b816e63/6ae91e5d539a9.preview.jpg?crop=883%2C464%2C0%2C155",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/c6/3c60bd9c-6b45-4181-abf2-766d9b816e63/6ae91e5d539a9.preview.jpg?crop=883%2C464%2C0%2C155"
+    },
     {
       "title": "Montana Lady Griz open season with dominant second-half, win over Montana Western",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-lady-griz-open-season-with-dominant-second-half-win-over-montana-western/article_0e373353-e25f-4db8-82de-4f7609200ce7.html",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/9/a2/9a213165-0f97-443a-9aa8-a1896c828741/6ac486b1a7823.preview.jpg?crop=1111%2C583%2C342%2C85"
-    },
-    {
-      "title": "Griz back on road to face No. 13 Lumberjacks",
-      "url": "https://gogriz.com/news/2026/10/6/football-griz-back-on-road-to-face-no-13-lumberjacks",
-      "date": "Oct. 7, 2026",
-      "published_at": "2026-10-07T00:05:00+00:00",
-      "description": "The Montana Grizzlies return to the road this week for another top 25 showdown against a Big Sky Conference opponent as the No. 2/3 Griz travel south to Flagstaff to face the No. 13/14 Northern Arizona Lumberjacks at the Walkup Skydome on S",
-      "source": "GoGriz",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/3/10032026_fb_11105__ce.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/3/10032026_fb_11105__ce.jpg"
     }
   ]
 }
