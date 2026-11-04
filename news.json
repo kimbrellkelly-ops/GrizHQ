@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T21:15:57.934332+00:00",
+  "updated": "2026-11-04T01:24:39.875179+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz return home to face Portland State",
+      "url": "https://gogriz.com/news/2026/11/3/football-griz-return-home-to-face-portland-state",
+      "date": "Nov. 4, 2026",
+      "published_at": "2026-11-04T00:26:00+00:00",
+      "description": "MISSOULA - As the old saying goes: \"The games they remember are played in November.\"",
+      "source": "GoGriz",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/31/20261031_fbvseasternwa_128.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/31/20261031_fbvseasternwa_128.jpg"
+    },
     {
       "title": "Griz WR Landon Ransom-Goelz enjoying Wa-Griz atmosphere in first year at Montana",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/griz-wr-landon-ransom-goelz-enjoying-wa-griz-atmosphere-in-first-year-at-montana/article_8221a72e-6535-4284-955a-af2194779d38.html",
@@ -59,7 +74,7 @@
       "title": "First look: No. 12 Montana Grizzlies vs. Portland State Vikings",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-12-montana-grizzlies-vs-portland-state-vikings/article_431b5ddd-73c9-49f8-af66-8ac646b614a6.html",
       "date": "Nov. 2, 2026",
-      "published_at": "2026-11-02T23:05:00+00:00",
+      "published_at": "2026-11-02T23:06:00+00:00",
       "description": "First look: No. 12 Montana Grizzlies vs. Portland State Vikings",
       "source": "406 MT Sports",
       "badge": "GAME DAY",
@@ -1494,21 +1509,6 @@
       "youtube_id": "Dh2Kqm3TEn8",
       "video_url": "https://www.youtube.com/watch?v=Dh2Kqm3TEn8",
       "video_thumbnail": "https://i.ytimg.com/vi/Dh2Kqm3TEn8/hqdefault.jpg"
-    },
-    {
-      "title": "Kalispell Glacier's Hunter Daniels commits to Grizzlies in 2027 recruiting class",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/kalispell-glaciers-hunter-daniels-commits-to-grizzlies-in-2027-recruiting-class/article_bd2b4211-be74-4b21-9bb5-66d6746bbec0.html",
-      "date": "Oct. 6, 2026",
-      "published_at": "2026-10-06T01:15:00+00:00",
-      "description": "Kalispell Glacier's Hunter Daniels commits to Grizzlies in 2027 recruiting class",
-      "source": "406 MT Sports",
-      "badge": "RECRUITING",
-      "short": "RECRUI",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/d2/bd2b4211-be74-4b21-9bb5-66d6746bbec0/6ac449a3472ee.preview.jpg?crop=1761%2C925%2C0%2C32&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/d2/bd2b4211-be74-4b21-9bb5-66d6746bbec0/6ac449a3472ee.preview.jpg?crop=1761%2C925%2C0%2C32&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
