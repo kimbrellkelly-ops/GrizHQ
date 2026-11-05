@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-11-05T09:38:16.193115+00:00",
+  "generatedAt": "2026-11-05T17:39:31.157549+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -2794,7 +2794,7 @@
           "id": "401868074",
           "date": "2026-09-06T00:00Z",
           "name": "Central Washington Wildcats at Cal Poly Mustangs",
-          "shortName": "CEN @ CP",
+          "shortName": "CWAU @ CP",
           "venue": "Mustang Memorial Field at Spanos Stadium",
           "city": "San Luis Obispo",
           "state": "post",
@@ -2812,7 +2812,7 @@
               "id": "2120",
               "name": "Central Washington Wildcats",
               "short": "C Washington",
-              "abbreviation": "CEN",
+              "abbreviation": "CWAU",
               "homeAway": "away",
               "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2120.png"
@@ -3597,7 +3597,7 @@
           "id": "401867983",
           "date": "2026-09-12T22:00Z",
           "name": "Virginia State Trojans at South Carolina State Bulldogs",
-          "shortName": "VIR @ SCST",
+          "shortName": "VSU @ SCST",
           "venue": "Oliver C. Dawson Stadium",
           "city": "Orangeburg",
           "state": "post",
@@ -3615,7 +3615,7 @@
               "id": "330",
               "name": "Virginia State Trojans",
               "short": "Virginia St",
-              "abbreviation": "VIR",
+              "abbreviation": "VSU",
               "homeAway": "away",
               "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/330.png"
@@ -5758,7 +5758,7 @@
           "id": "401868130",
           "date": "2026-09-20T00:00Z",
           "name": "Northeastern State RiverHawks at Northern Colorado Bears",
-          "shortName": "NEOS @ UNCO",
+          "shortName": "NESU @ UNCO",
           "venue": "Nottingham Field",
           "city": "Greeley",
           "state": "post",
@@ -5776,7 +5776,7 @@
               "id": "196",
               "name": "Northeastern State RiverHawks",
               "short": "NE State",
-              "abbreviation": "NEOS",
+              "abbreviation": "NESU",
               "homeAway": "away",
               "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/196.png"
@@ -6517,7 +6517,7 @@
           "id": "401868308",
           "date": "2026-09-26T22:00Z",
           "name": "Northeastern State RiverHawks at Stephen F. Austin Lumberjacks",
-          "shortName": "NEOS @ SFA",
+          "shortName": "NESU @ SFA",
           "venue": "Homer Bryce Stadium",
           "city": "Nacogdoches",
           "state": "post",
@@ -6535,7 +6535,7 @@
               "id": "196",
               "name": "Northeastern State RiverHawks",
               "short": "NE State",
-              "abbreviation": "NEOS",
+              "abbreviation": "NESU",
               "homeAway": "away",
               "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/196.png"
