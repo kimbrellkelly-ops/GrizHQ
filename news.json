@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T08:42:39.497761+00:00",
+  "updated": "2026-11-05T16:51:20.061057+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,36 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Big Sky Conference football picks: 406 MT Sports panel forecasts games for Griz, Cats",
+      "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/big-sky-conference-football-picks-406-mt-sports-panel-forecasts-games-for-griz-cats/article_0be55868-76ef-4908-9499-cc0e50d73031.html",
+      "date": "Nov. 5, 2026",
+      "published_at": "2026-11-05T15:00:00+00:00",
+      "description": "Big Sky Conference football picks: 406 MT Sports panel forecasts games for Griz, Cats",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/be/0be55868-76ef-4908-9499-cc0e50d73031/6ae75a1d2432c.preview.jpg?crop=981%2C515%2C308%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/be/0be55868-76ef-4908-9499-cc0e50d73031/6ae75a1d2432c.preview.jpg?crop=981%2C515%2C308%2C200"
+    },
+    {
+      "title": "Talkin’ Schmidt: Thank God for me, the Griz blitz & how far can Montana go?",
+      "url": "https://skylinesportsmt.com/talkin-schmidt-thank-god-for-me-the-griz-blitz-how-far-can-montana-go/",
+      "date": "Nov. 5, 2026",
+      "published_at": "2026-11-05T12:19:03+00:00",
+      "description": "November 5, 2026 Talkin’ Schmidt: Thank God for me, the Griz blitz & how far can Montana go?",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2025/12/Brooks-Nuanez-Cat-Griz-2025-Brooks-Davis-solo-1.jpeg",
+      "is_video": true,
+      "youtube_id": "8lLOqkI8XKI",
+      "video_url": "https://www.youtube.com/watch?v=8lLOqkI8XKI",
+      "video_thumbnail": "https://i.ytimg.com/vi/8lLOqkI8XKI/hqdefault.jpg"
+    },
     {
       "title": "Grizzlies welcome back LB Solomon Tuliaupupu 'with open arms'",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-welcome-back-lb-solomon-tuliaupupu-with-open-arms/article_3c60bd9c-6b45-4181-abf2-766d9b816e63.html",
@@ -1479,36 +1509,6 @@
       "youtube_id": "cMVC_qkvKLE",
       "video_url": "https://www.youtube.com/watch?v=cMVC_qkvKLE",
       "video_thumbnail": "https://i.ytimg.com/vi/cMVC_qkvKLE/hqdefault.jpg"
-    },
-    {
-      "title": "Eklund emerges: Grizzlies LB Justin Eklund triumphs through tragedy, transfer",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/eklund-emerges-grizzlies-lb-justin-eklund-triumphs-through-tragedy-transfer/article_65589ee5-0b5e-45a8-b798-4c84075ea45d.html",
-      "date": "Oct. 8, 2026",
-      "published_at": "2026-10-08T13:00:00+00:00",
-      "description": "Eklund emerges: Grizzlies LB Justin Eklund triumphs through tragedy, transfer",
-      "source": "406 MT Sports",
-      "badge": "RECRUITING",
-      "short": "RECRUI",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/55/65589ee5-0b5e-45a8-b798-4c84075ea45d/6ac41bd28c2df.preview.jpg?crop=883%2C464%2C486%2C112",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/55/65589ee5-0b5e-45a8-b798-4c84075ea45d/6ac41bd28c2df.preview.jpg?crop=883%2C464%2C486%2C112"
-    },
-    {
-      "title": "Bobby Kennedy settling in as 1st-time head coach as Grizzlies reach midpoint",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/bobby-kennedy-settling-in-as-1st-time-head-coach-as-grizzlies-reach-midpoint/article_9a213165-0f97-443a-9aa8-a1896c828741.html",
-      "date": "Oct. 7, 2026",
-      "published_at": "2026-10-07T13:00:00+00:00",
-      "description": "Bobby Kennedy settling in as 1st-time head coach as Grizzlies reach midpoint",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/9/a2/9a213165-0f97-443a-9aa8-a1896c828741/6ac486b1a7823.preview.jpg?crop=1111%2C583%2C342%2C85",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/9/a2/9a213165-0f97-443a-9aa8-a1896c828741/6ac486b1a7823.preview.jpg?crop=1111%2C583%2C342%2C85"
     }
   ]
 }
