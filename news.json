@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T16:51:20.061057+00:00",
+  "updated": "2026-11-05T22:27:17.455420+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -24,6 +24,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/be/0be55868-76ef-4908-9499-cc0e50d73031/6ae75a1d2432c.preview.jpg?crop=981%2C515%2C308%2C200"
+    },
+    {
+      "title": "Adamant Adams: Grizzlies WR Weston Adams is playing for more than himself",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/adamant-adams-grizzlies-wr-weston-adams-is-playing-for-more-than-himself/article_128848a4-76b6-49a4-91b2-1daf93b72000.html",
+      "date": "Nov. 5, 2026",
+      "published_at": "2026-11-05T14:00:00+00:00",
+      "description": "Adamant Adams: Grizzlies WR Weston Adams is playing for more than himself",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/28/128848a4-76b6-49a4-91b2-1daf93b72000/6ae90da01cdb8.preview.jpg?crop=1760%2C924%2C0%2C33&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/28/128848a4-76b6-49a4-91b2-1daf93b72000/6ae90da01cdb8.preview.jpg?crop=1760%2C924%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
     },
     {
       "title": "Talkin’ Schmidt: Thank God for me, the Griz blitz & how far can Montana go?",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/36/4362711f-6388-430b-8af2-84b211ee1be4/6ac3f45117a11.preview.jpg?crop=1555%2C816%2C118%2C166&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "AKEM’S ANALYSIS: GRIZ TAKE ON NAU IN FLAGSTAFF, AUSTIN PEAY VS TARLETON, SOUTH DAKOTA VS SIU",
-      "url": "https://skylinesportsmt.com/akems-analysis-griz-take-on-nau-in-flagstaff-austin-peay-vs-tarleton-south-dakota-vs-siu/",
-      "date": "Oct. 8, 2026",
-      "published_at": "2026-10-08T13:39:36+00:00",
-      "description": "October 8, 2026 AKEM’S ANALYSIS: GRIZ TAKE ON NAU IN FLAGSTAFF, AUSTIN PEAY VS TARLETON, SOUTH DAKOTA VS SIU",
-      "source": "Skyline Sports",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/SAS-EP.-39-THUMBNAIL.png",
-      "is_video": true,
-      "youtube_id": "cMVC_qkvKLE",
-      "video_url": "https://www.youtube.com/watch?v=cMVC_qkvKLE",
-      "video_thumbnail": "https://i.ytimg.com/vi/cMVC_qkvKLE/hqdefault.jpg"
     }
   ]
 }
