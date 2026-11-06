@@ -1,6 +1,19 @@
 {
-  "updated": "2026-11-06T19:56:34.426183+00:00",
+  "updated": "2026-11-06T23:56:18.205220+00:00",
   "posts": [
+    {
+      "title": "Highlights from Montana State's 61-7 win over Cal Poly",
+      "url": "https://www.youtube.com/watch?v=XjToqiPPRx8",
+      "image": "https://i.ytimg.com/vi/XjToqiPPRx8/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Nov. 6, 2026",
+      "platform": "youtube",
+      "youtube_id": "XjToqiPPRx8",
+      "published_at": "2026-11-06T00:00:00+00:00"
+    },
     {
       "title": "Montana State put up 61 points last week and rolls into November as the No. 1 team in the latest #FC",
       "url": "https://www.youtube.com/watch?v=-957FSAw_No",
