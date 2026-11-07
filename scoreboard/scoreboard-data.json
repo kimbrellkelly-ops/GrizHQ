@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-11-05T22:53:18.226861+00:00",
+  "generatedAt": "2026-11-07T02:16:10.444501+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -12797,7 +12797,7 @@
           "shortName": "SCST @ HOW",
           "venue": "Greene Stadium",
           "city": "Washington",
-          "state": "pre",
+          "state": "post",
           "teams": [
             {
               "id": "47",
@@ -12805,7 +12805,7 @@
               "short": "Howard",
               "abbreviation": "HOW",
               "homeAway": "home",
-              "score": "",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/47.png"
             },
             {
@@ -12814,27 +12814,25 @@
               "short": "SC State",
               "abbreviation": "SCST",
               "homeAway": "away",
-              "score": "",
+              "score": "35",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2569.png"
             }
           ],
           "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Thu, November 5th at 7:30 PM EST",
-            "shortDetail": "11/5 - 7:30 PM EST",
-            "label": "11/5 - 7:30 PM EST",
-            "period": null,
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
             "clock": "0:00"
           },
-          "completed": false,
-          "period": null,
+          "completed": true,
+          "period": 4,
           "clock": "0:00",
-          "statusText": "11/5 - 7:30 PM EST",
-          "broadcasts": [
-            "ESPNU"
-          ]
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401866681",
@@ -12878,7 +12876,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 12:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "FloSports"
+          ]
         },
         {
           "id": "401868005",
@@ -12922,7 +12922,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 12:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868343",
@@ -12966,7 +12968,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 1:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401866684",
@@ -13010,7 +13014,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 1:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "FloSports"
+          ]
         },
         {
           "id": "401868350",
@@ -13054,7 +13060,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 1:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401867824",
@@ -13098,7 +13106,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 1:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401866683",
@@ -13142,7 +13152,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 1:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "FloSports"
+          ]
         },
         {
           "id": "401867872",
@@ -13186,7 +13198,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 2:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401872617",
@@ -13230,7 +13244,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 2:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401867852",
@@ -13274,7 +13290,10 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 2:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+",
+            "Midco Sports Plus"
+          ]
         },
         {
           "id": "401868393",
@@ -13318,7 +13337,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 2:30 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868116",
@@ -13362,7 +13383,10 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 3:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports"
+          ]
         },
         {
           "id": "401868313",
@@ -13406,7 +13430,55 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 4:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
+        },
+        {
+          "id": "401868068",
+          "date": "2026-11-07T21:00Z",
+          "name": "Eastern Kentucky Colonels at Austin Peay Governors",
+          "shortName": "EKU @ APSU",
+          "venue": "Fortera Stadium",
+          "city": "Clarksville",
+          "state": "pre",
+          "teams": [
+            {
+              "id": "2046",
+              "name": "Austin Peay Governors",
+              "short": "Austin Peay",
+              "abbreviation": "APSU",
+              "homeAway": "home",
+              "score": "",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
+            },
+            {
+              "id": "2198",
+              "name": "Eastern Kentucky Colonels",
+              "short": "E Kentucky",
+              "abbreviation": "EKU",
+              "homeAway": "away",
+              "score": "",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png"
+            }
+          ],
+          "status": {
+            "state": "pre",
+            "completed": false,
+            "name": "STATUS_SCHEDULED",
+            "detail": "Sat, November 7th at 4:00 PM EST",
+            "shortDetail": "11/7 - 4:00 PM EST",
+            "label": "11/7 - 4:00 PM EST",
+            "period": null,
+            "clock": "0:00"
+          },
+          "completed": false,
+          "period": null,
+          "clock": "0:00",
+          "statusText": "11/7 - 4:00 PM EST",
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868082",
@@ -13450,51 +13522,10 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 5:00 PM EST",
-          "broadcasts": []
-        },
-        {
-          "id": "401868068",
-          "date": "2026-11-07T22:00Z",
-          "name": "Eastern Kentucky Colonels at Austin Peay Governors",
-          "shortName": "EKU @ APSU",
-          "venue": "Fortera Stadium",
-          "city": "Clarksville",
-          "state": "pre",
-          "teams": [
-            {
-              "id": "2046",
-              "name": "Austin Peay Governors",
-              "short": "Austin Peay",
-              "abbreviation": "APSU",
-              "homeAway": "home",
-              "score": "",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
-            },
-            {
-              "id": "2198",
-              "name": "Eastern Kentucky Colonels",
-              "short": "E Kentucky",
-              "abbreviation": "EKU",
-              "homeAway": "away",
-              "score": "",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png"
-            }
-          ],
-          "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, November 7th at 5:00 PM EST",
-            "shortDetail": "11/7 - 5:00 PM EST",
-            "label": "11/7 - 5:00 PM EST",
-            "period": null,
-            "clock": "0:00"
-          },
-          "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "11/7 - 5:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports"
+          ]
         },
         {
           "id": "401868108",
@@ -13538,7 +13569,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 6:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868057",
@@ -13582,7 +13615,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 7:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         }
       ],
       "fcsTop25Byes": [
@@ -13645,7 +13680,10 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 3:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports"
+          ]
         },
         {
           "id": "401868153",
@@ -13689,7 +13727,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 3:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868090",
@@ -13733,7 +13773,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 5:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868082",
@@ -13777,7 +13819,10 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 5:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+",
+            "Scripps Sports"
+          ]
         },
         {
           "id": "401868108",
@@ -13821,7 +13866,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 6:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         },
         {
           "id": "401868166",
@@ -13865,7 +13912,9 @@
           "period": null,
           "clock": "0:00",
           "statusText": "11/7 - 7:00 PM EST",
-          "broadcasts": []
+          "broadcasts": [
+            "ESPN+"
+          ]
         }
       ]
     },
