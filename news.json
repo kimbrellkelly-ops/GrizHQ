@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07T14:30:23.034820+00:00",
+  "updated": "2026-11-07T18:59:59.531431+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,51 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "WATCH – Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on Brooks Davis, Solomon Tuliaupupu & Portland State",
+      "url": "https://skylinesportsmt.com/watch-brawl-of-the-wild-coaches-corner-montana-head-coach-bobby-kennedy-on-brooks-davis-solomon-tuliaupupu-portland-state/",
+      "date": "Nov. 7, 2026",
+      "published_at": "2026-11-07T14:34:18+00:00",
+      "description": "November 7, 2026 WATCH – Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on Brooks Davis, Solomon Tuliaupupu & Portland State",
+      "source": "Skyline Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Brooks-Davis-runs-after-the-catch-Brooks-Nuanez.jpg",
+      "is_video": true,
+      "youtube_id": "Ky6xmnqN-2s",
+      "video_url": "https://www.youtube.com/watch?v=Ky6xmnqN-2s",
+      "video_thumbnail": "https://i.ytimg.com/vi/Ky6xmnqN-2s/hqdefault.jpg"
+    },
+    {
+      "title": "Big Sky Breakdown: Jordan Tripp on Montana’s new-look defense, Portland State & the Griz playoff picture",
+      "url": "https://skylinesportsmt.com/big-sky-breakdown-jordan-tripp-on-montanas-new-look-defense-portland-state-the-griz-playoff-picture/",
+      "date": "Nov. 7, 2026",
+      "published_at": "2026-11-07T14:31:47+00:00",
+      "description": "November 7, 2026 Big Sky Breakdown: Jordan Tripp on Montana’s new-look defense, Portland State & the Griz playoff picture",
+      "source": "Skyline Sports",
+      "badge": "ANALYSIS",
+      "short": "ANALYS",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Clay-Oven-and-Griz-defense-gang-tackle-Brooks-Nuanez-scaled.jpg",
+      "is_video": true,
+      "youtube_id": "9FNiRdGUs_Y",
+      "video_url": "https://www.youtube.com/watch?v=9FNiRdGUs_Y",
+      "video_thumbnail": "https://i.ytimg.com/vi/9FNiRdGUs_Y/hqdefault.jpg"
+    },
+    {
+      "title": "Big Sky Breakdown: Brooks & Colter on the Griz win at Eastern, Brooks Davis & the Cats’ rout of Cal Poly",
+      "url": "https://skylinesportsmt.com/big-sky-breakdown-brooks-colter-on-the-griz-win-at-eastern-brooks-davis-the-cats-rout-of-cal-poly/",
+      "date": "Nov. 7, 2026",
+      "published_at": "2026-11-07T14:31:46+00:00",
+      "description": "November 7, 2026 Big Sky Breakdown: Brooks & Colter on the Griz win at Eastern, Brooks Davis & the Cats’ rout of Cal Poly",
+      "source": "Skyline Sports",
+      "badge": "ANALYSIS",
+      "short": "ANALYS",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Brooks-Davis-touchdown-catch-over-Vandals-defender-Brooks-Nuanez-scaled.jpg",
+      "is_video": true,
+      "youtube_id": "JwcIe4X1i1g",
+      "video_url": "https://www.youtube.com/watch?v=JwcIe4X1i1g",
+      "video_thumbnail": "https://i.ytimg.com/vi/JwcIe4X1i1g/hqdefault.jpg"
+    },
     {
       "title": "3 questions: No. 12 Grizzlies look to keep rolling against Portland State",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-12-grizzlies-look-to-keep-rolling-against-portland-state/article_9db7e3bc-6015-472d-9689-aad16027f805.html",
@@ -71,6 +116,21 @@
       "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2017/10/coach-2595.jpg"
     },
     {
+      "title": "Nuanez Now November 5, 2026 – Hour 2 – All Football All the Time, Brent Vigen & Griz Star Kade Boyd",
+      "url": "https://skylinesportsmt.com/nuanez-now-november-5-2026-hour-2-all-football-all-the-time-brent-vigen-griz-star-kade-boyd/",
+      "date": "Nov. 6, 2026",
+      "published_at": "2026-11-06T00:00:00+00:00",
+      "description": "November 5, 2026 Nuanez Now November 5, 2026 – Hour 2 – All Football All the Time, Brent Vigen & Griz Star Kade Boyd",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/MSU-Weber-Brooks-IMG_4939.jpg",
+      "is_video": true,
+      "youtube_id": "KgVTKdihYDQ",
+      "video_url": "https://www.youtube.com/watch?v=KgVTKdihYDQ",
+      "video_thumbnail": "https://i.ytimg.com/vi/KgVTKdihYDQ/hqdefault.jpg"
+    },
+    {
       "title": "Big Sky Conference football picks: 406 MT Sports panel forecasts games for Griz, Cats",
       "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/big-sky-conference-football-picks-406-mt-sports-panel-forecasts-games-for-griz-cats/article_0be55868-76ef-4908-9499-cc0e50d73031.html",
       "date": "Nov. 5, 2026",
@@ -114,6 +174,21 @@
       "youtube_id": "8lLOqkI8XKI",
       "video_url": "https://www.youtube.com/watch?v=8lLOqkI8XKI",
       "video_thumbnail": "https://i.ytimg.com/vi/8lLOqkI8XKI/hqdefault.jpg"
+    },
+    {
+      "title": "Nuanez Now November 4, 2026 – Hour 2 – ESPN Roundtable previewing UM & MSU men’s & women’s hoops",
+      "url": "https://skylinesportsmt.com/nuanez-now-november-4-2026-hour-2-espn-roundtable-previewing-um-msu-mens-womens-hoops/",
+      "date": "Nov. 5, 2026",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "description": "November 4, 2026 Nuanez Now November 4, 2026 – Hour 2 – ESPN Roundtable previewing UM & MSU men’s & women’s hoops The ESPN Roundtable previews the 2026-27 seasons for the Montana Grizzlies and Montana State Bobcats men’s and women’s basketb",
+      "source": "Skyline Sports",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Ian-Finch-celebrates-on-the-Griz-sideline-Brooks-Nuanez-scaled.jpg",
+      "is_video": true,
+      "youtube_id": "cZhlwHEF24Y",
+      "video_url": "https://www.youtube.com/watch?v=cZhlwHEF24Y",
+      "video_thumbnail": "https://i.ytimg.com/vi/cZhlwHEF24Y/hqdefault.jpg"
     },
     {
       "title": "Grizzlies welcome back LB Solomon Tuliaupupu 'with open arms'",
@@ -1434,81 +1509,6 @@
       "youtube_id": "",
       "video_url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-coach-bobby-kennedy-on-49-44-loss-at-northern-arizona/video_10e0b06a-d25f-57ab-8857-948b765389b9.html",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/0e/10e0b06a-d25f-57ab-8857-948b765389b9/6acae6b6cc263.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Grizzlies coach Bobby Kennedy on 49-44 loss at Northern Arizona",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/video_c0d78166-2089-54e8-ab07-f0ebe3c08fde.html",
-      "date": "Oct. 11, 2026",
-      "published_at": "2026-10-11T01:24:00+00:00",
-      "description": "Latest Montana football coverage.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/0d/c0d78166-2089-54e8-ab07-f0ebe3c08fde/6acaf839d76fa.image.jpg?resize=300%2C169",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/video_c0d78166-2089-54e8-ab07-f0ebe3c08fde.html",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/0d/c0d78166-2089-54e8-ab07-f0ebe3c08fde/6acaf839d76fa.image.jpg?resize=300%2C169"
-    },
-    {
-      "title": "Recap: No. 2 Grizzlies lose shootout at No. 13 Northern Arizona",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-football-visit-nau-recap/article_73a8adc8-4fa7-400c-b0ed-6b0865d583ca.html",
-      "date": "Oct. 11, 2026",
-      "published_at": "2026-10-11T00:30:00+00:00",
-      "description": "Recap: No. 2 Grizzlies lose shootout at No. 13 Northern Arizona",
-      "source": "406 MT Sports",
-      "badge": "GAME STORY",
-      "short": "GAME S",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/3a/73a8adc8-4fa7-400c-b0ed-6b0865d583ca/6acad0d243ec5.preview.jpg?crop=1761%2C925%2C2%2C195&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/3a/73a8adc8-4fa7-400c-b0ed-6b0865d583ca/6acad0d243ec5.preview.jpg?crop=1761%2C925%2C2%2C195&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Live updates: No. 2 Montana Grizzlies visit No. 13 Northern Arizona",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-football-visit-nau-live-updates/article_73a8adc8-4fa7-400c-b0ed-6b0865d583ca.html",
-      "date": "Oct. 10, 2026",
-      "published_at": "2026-10-10T20:50:00+00:00",
-      "description": "Live updates: No. 2 Montana Grizzlies visit No. 13 Northern Arizona",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/3a/73a8adc8-4fa7-400c-b0ed-6b0865d583ca/6acad0d243ec5.preview.jpg?crop=1761%2C925%2C2%2C195&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/3a/73a8adc8-4fa7-400c-b0ed-6b0865d583ca/6acad0d243ec5.preview.jpg?crop=1761%2C925%2C2%2C195&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Lumberjacks cut down No. 2 Griz, 49-44",
-      "url": "https://dailyinterlake.com/news/2026/oct/10/lumberjacks-cut-down-no-2-griz-49-44/",
-      "date": "Oct. 10, 2026",
-      "published_at": "2026-10-10T08:10:00+00:00",
-      "description": "Updated 20 minutes ago Lumberjacks cut down No. 2 Griz, 49-44 The Montana Grizzlies scored big but couldn’t stop Ty Pennington and the Northern Arizona Lumberjacks, who took a wild 49-44 victory in Big Sky Conference football Saturday.",
-      "source": "Daily Inter Lake",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://hagadone.media.clients.ellingtoncms.com/static-4/dailyinterlake/images/default-social.jpg?v=2",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/static-4/dailyinterlake/images/default-social.jpg?v=2"
-    },
-    {
-      "title": "3 questions: No. 2 Grizzlies eye Top 25 win at Northern Arizona",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-2-grizzlies-eye-top-25-win-at-northern-arizona/article_a7443915-f42d-4dc3-bed8-39f8176d8306.html",
-      "date": "Oct. 9, 2026",
-      "published_at": "2026-10-09T18:00:00+00:00",
-      "description": "3 questions: No. 2 Grizzlies eye Top 25 win at Northern Arizona",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/74/a7443915-f42d-4dc3-bed8-39f8176d8306/6ac6f0209733e.preview.jpg?crop=1764%2C926%2C0%2C49&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/74/a7443915-f42d-4dc3-bed8-39f8176d8306/6ac6f0209733e.preview.jpg?crop=1764%2C926%2C0%2C49&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
