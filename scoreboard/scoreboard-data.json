@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generatedAt": "2026-11-07T15:36:41.212881+00:00",
+  "generatedAt": "2026-11-07T19:37:04.050649+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
@@ -12841,7 +12841,7 @@
           "shortName": "NCAT @ MONM",
           "venue": "Kessler Stadium",
           "city": "West Long Branch",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2405",
@@ -12849,7 +12849,7 @@
               "short": "Monmouth",
               "abbreviation": "MONM",
               "homeAway": "home",
-              "score": "",
+              "score": "21",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2405.png"
             },
             {
@@ -12858,24 +12858,24 @@
               "short": "NC A&T",
               "abbreviation": "NCAT",
               "homeAway": "away",
-              "score": "",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2448.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, November 7th at 12:00 PM EST",
-            "shortDetail": "11/7 - 12:00 PM EST",
-            "label": "11/7 - 12:00 PM EST",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "10:56 - 4th Quarter",
+            "shortDetail": "10:56 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "10:56"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "11/7 - 12:00 PM EST",
+          "period": 4,
+          "clock": "10:56",
+          "statusText": "Q4",
           "broadcasts": [
             "FloSports"
           ]
@@ -12887,7 +12887,7 @@
           "shortName": "COLG @ LEH",
           "venue": "Goodman Stadium",
           "city": "Bethlehem",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2329",
@@ -12895,7 +12895,7 @@
               "short": "Lehigh",
               "abbreviation": "LEH",
               "homeAway": "home",
-              "score": "",
+              "score": "33",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2329.png"
             },
             {
@@ -12904,24 +12904,24 @@
               "short": "Colgate",
               "abbreviation": "COLG",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2142.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, November 7th at 12:00 PM EST",
-            "shortDetail": "11/7 - 12:00 PM EST",
-            "label": "11/7 - 12:00 PM EST",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "9:04 - 4th Quarter",
+            "shortDetail": "9:04 - 4th",
+            "label": "Q4",
+            "period": 4,
+            "clock": "9:04"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "11/7 - 12:00 PM EST",
+          "period": 4,
+          "clock": "9:04",
+          "statusText": "Q4",
           "broadcasts": [
             "ESPN+"
           ]
@@ -12933,7 +12933,7 @@
           "shortName": "MER @ UTC",
           "venue": "Finley Stadium",
           "city": "Chattanooga",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "236",
@@ -12941,7 +12941,7 @@
               "short": "Chattanooga",
               "abbreviation": "UTC",
               "homeAway": "home",
-              "score": "",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/236.png"
             },
             {
@@ -12950,24 +12950,24 @@
               "short": "Mercer",
               "abbreviation": "MER",
               "homeAway": "away",
-              "score": "",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2382.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, November 7th at 1:00 PM EST",
-            "shortDetail": "11/7 - 1:00 PM EST",
-            "label": "11/7 - 1:00 PM EST",
-            "period": null,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "11/7 - 1:00 PM EST",
+          "statusText": "HALFTIME",
           "broadcasts": [
             "ESPN+"
           ]
@@ -12979,7 +12979,7 @@
           "shortName": "STBK @ CAM",
           "venue": "Barker-Lane Stadium",
           "city": "Buies Creek",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2097",
@@ -12987,7 +12987,7 @@
               "short": "Campbell",
               "abbreviation": "CAM",
               "homeAway": "home",
-              "score": "",
+              "score": "21",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2097.png"
             },
             {
@@ -12996,24 +12996,24 @@
               "short": "Stony Brook",
               "abbreviation": "STBK",
               "homeAway": "away",
-              "score": "",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2619.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, November 7th at 1:00 PM EST",
-            "shortDetail": "11/7 - 1:00 PM EST",
-            "label": "11/7 - 1:00 PM EST",
-            "period": null,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "11/7 - 1:00 PM EST",
+          "statusText": "HALFTIME",
           "broadcasts": [
             "FloSports"
           ]
@@ -13025,7 +13025,7 @@
           "shortName": "SAM @ ETSU",
           "venue": "William B. Greene Jr. Stadium",
           "city": "Johnson City",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2193",
@@ -13033,7 +13033,7 @@
               "short": "ETSU",
               "abbreviation": "ETSU",
               "homeAway": "home",
-              "score": "",
+              "score": "21",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2193.png"
             },
             {
@@ -13042,24 +13042,24 @@
               "short": "Samford",
               "abbreviation": "SAM",
               "homeAway": "away",
-              "score": "",
+              "score": "13",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, November 7th at 1:00 PM EST",
-            "shortDetail": "11/7 - 1:00 PM EST",
-            "label": "11/7 - 1:00 PM EST",
-            "period": null,
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "End of 2nd Quarter",
+            "shortDetail": "End of 2nd",
+            "label": "Q2",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "11/7 - 1:00 PM EST",
+          "statusText": "Q2",
           "broadcasts": [
             "ESPN+"
           ]
@@ -13071,7 +13071,7 @@
           "shortName": "COLU @ HARV",
           "venue": "Harvard Stadium",
           "city": "Cambridge",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "108",
@@ -13079,7 +13079,7 @@
               "short": "Harvard",
               "abbreviation": "HARV",
               "homeAway": "home",
-              "score": "",
+              "score": "37",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/108.png"
             },
             {
@@ -13088,24 +13088,24 @@
               "short": "Columbia",
               "abbreviation": "COLU",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/171.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, November 7th at 1:00 PM EST",
-            "shortDetail": "11/7 - 1:00 PM EST",
-            "label": "11/7 - 1:00 PM EST",
-            "period": null,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "11/7 - 1:00 PM EST",
+          "statusText": "HALFTIME",
           "broadcasts": [
             "ESPN+"
           ]
@@ -13117,7 +13117,7 @@
           "shortName": "ALB @ BRY",
           "venue": "Beirne Stadium",
           "city": "Smithfield",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2803",
@@ -13125,7 +13125,7 @@
               "short": "Bryant",
               "abbreviation": "BRY",
               "homeAway": "home",
-              "score": "",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2803.png"
             },
             {
@@ -13134,24 +13134,24 @@
               "short": "UAlbany",
               "abbreviation": "ALB",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/399.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, November 7th at 1:00 PM EST",
-            "shortDetail": "11/7 - 1:00 PM EST",
-            "label": "11/7 - 1:00 PM EST",
-            "period": null,
+            "name": "STATUS_HALFTIME",
+            "detail": "Halftime",
+            "shortDetail": "Halftime",
+            "label": "HALFTIME",
+            "period": 2,
             "clock": "0:00"
           },
           "completed": false,
-          "period": null,
+          "period": 2,
           "clock": "0:00",
-          "statusText": "11/7 - 1:00 PM EST",
+          "statusText": "HALFTIME",
           "broadcasts": [
             "FloSports"
           ]
@@ -13163,7 +13163,7 @@
           "shortName": "YSU @ MUR",
           "venue": "Roy Stewart Stadium",
           "city": "Murray",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "93",
@@ -13171,7 +13171,7 @@
               "short": "Murray St",
               "abbreviation": "MUR",
               "homeAway": "home",
-              "score": "",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/93.png"
             },
             {
@@ -13180,24 +13180,24 @@
               "short": "Youngstown St",
               "abbreviation": "YSU",
               "homeAway": "away",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, November 7th at 2:00 PM EST",
-            "shortDetail": "11/7 - 2:00 PM EST",
-            "label": "11/7 - 2:00 PM EST",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "1:41 - 1st Quarter",
+            "shortDetail": "1:41 - 1st",
+            "label": "Q1",
+            "period": 1,
+            "clock": "1:41"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "11/7 - 2:00 PM EST",
+          "period": 1,
+          "clock": "1:41",
+          "statusText": "Q1",
           "broadcasts": [
             "ESPN+"
           ]
@@ -13209,7 +13209,7 @@
           "shortName": "SDST @ UNI",
           "venue": "UNI-Dome",
           "city": "Cedar Falls",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2460",
@@ -13217,7 +13217,7 @@
               "short": "Northern Iowa",
               "abbreviation": "UNI",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2460.png"
             },
             {
@@ -13226,24 +13226,24 @@
               "short": "S Dakota St",
               "abbreviation": "SDST",
               "homeAway": "away",
-              "score": "",
+              "score": "10",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, November 7th at 2:00 PM EST",
-            "shortDetail": "11/7 - 2:00 PM EST",
-            "label": "11/7 - 2:00 PM EST",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "15:00 - 2nd Quarter",
+            "shortDetail": "15:00 - 2nd",
+            "label": "Q2",
+            "period": 2,
+            "clock": "15:00"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "11/7 - 2:00 PM EST",
+          "period": 2,
+          "clock": "15:00",
+          "statusText": "Q2",
           "broadcasts": [
             "ESPN+"
           ]
@@ -13255,7 +13255,7 @@
           "shortName": "ILST @ UND",
           "venue": "Alerus Center",
           "city": "Grand Forks",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "155",
@@ -13263,7 +13263,7 @@
               "short": "North Dakota",
               "abbreviation": "UND",
               "homeAway": "home",
-              "score": "",
+              "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png"
             },
             {
@@ -13272,24 +13272,24 @@
               "short": "Illinois St",
               "abbreviation": "ILST",
               "homeAway": "away",
-              "score": "",
+              "score": "7",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, November 7th at 2:00 PM EST",
-            "shortDetail": "11/7 - 2:00 PM EST",
-            "label": "11/7 - 2:00 PM EST",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "1:49 - 1st Quarter",
+            "shortDetail": "1:49 - 1st",
+            "label": "Q1",
+            "period": 1,
+            "clock": "1:49"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "11/7 - 2:00 PM EST",
+          "period": 1,
+          "clock": "1:49",
+          "statusText": "Q1",
           "broadcasts": [
             "ESPN+",
             "Midco Sports Plus"
@@ -13302,7 +13302,7 @@
           "shortName": "VMI @ TNTC",
           "venue": "Tucker Stadium",
           "city": "Cookeville",
-          "state": "pre",
+          "state": "in",
           "teams": [
             {
               "id": "2635",
@@ -13310,7 +13310,7 @@
               "short": "Tennessee Tech",
               "abbreviation": "TNTC",
               "homeAway": "home",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2635.png"
             },
             {
@@ -13319,24 +13319,24 @@
               "short": "VMI",
               "abbreviation": "VMI",
               "homeAway": "away",
-              "score": "",
+              "score": "0",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2678.png"
             }
           ],
           "status": {
-            "state": "pre",
+            "state": "in",
             "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, November 7th at 2:30 PM EST",
-            "shortDetail": "11/7 - 2:30 PM EST",
-            "label": "11/7 - 2:30 PM EST",
-            "period": null,
-            "clock": "0:00"
+            "name": "STATUS_IN_PROGRESS",
+            "detail": "14:03 - 1st Quarter",
+            "shortDetail": "14:03 - 1st",
+            "label": "Q1",
+            "period": 1,
+            "clock": "14:03"
           },
           "completed": false,
-          "period": null,
-          "clock": "0:00",
-          "statusText": "11/7 - 2:30 PM EST",
+          "period": 1,
+          "clock": "14:03",
+          "statusText": "Q1",
           "broadcasts": [
             "ESPN+"
           ]
