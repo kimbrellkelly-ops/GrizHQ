@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T07:23:17.383412+00:00",
+  "updated": "2026-11-08T15:13:52.951912+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "7-3",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-08T07:24:21.496168+00:00"
+    "checked_at": "2026-11-08T15:14:50.636719+00:00"
   },
   "resources": [
     {
@@ -2946,7 +2946,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-08T07:23:25.994408+00:00",
+    "source_checked_at": "2026-11-08T15:13:59.280023+00:00",
     "team_summary": [
       {
         "value": "7–3",
@@ -27674,6 +27674,19 @@
   "big_sky_standings": [
     {
       "rank": 1,
+      "team": "Montana State",
+      "conference_record": "6-1",
+      "overall_record": "9-1",
+      "home": "5-0",
+      "away": "4-1",
+      "conference_points": "299-135",
+      "points": "405-196",
+      "conference_streak": "W4",
+      "overall_streak": "W4",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2539"
+    },
+    {
+      "rank": 2,
       "team": "Northern Arizona",
       "conference_record": "6-1",
       "overall_record": "8-2",
@@ -27684,19 +27697,6 @@
       "conference_streak": "W5",
       "overall_streak": "W5",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2540"
-    },
-    {
-      "rank": 2,
-      "team": "Montana State",
-      "conference_record": "5-1",
-      "overall_record": "8-1",
-      "home": "5-0",
-      "away": "3-1",
-      "conference_points": "271-109",
-      "points": "377-170",
-      "conference_streak": "W3",
-      "overall_streak": "W3",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2539"
     },
     {
       "rank": 3,
@@ -27753,14 +27753,14 @@
     {
       "rank": 7,
       "team": "Idaho State",
-      "conference_record": "3-3",
-      "overall_record": "6-3",
-      "home": "3-2",
+      "conference_record": "3-4",
+      "overall_record": "6-4",
+      "home": "3-3",
       "away": "3-1",
-      "conference_points": "175-149",
-      "points": "301-193",
-      "conference_streak": "W2",
-      "overall_streak": "W2",
+      "conference_points": "201-177",
+      "points": "327-221",
+      "conference_streak": "L1",
+      "overall_streak": "L1",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2537"
     },
     {
@@ -28113,8 +28113,8 @@
   "big_sky_players_of_week_updated": "2026-09-20T19:00:00Z",
   "next_opponent": {
     "opponent": "Idaho State",
-    "record": "6–3",
-    "conferenceRecord": "3–3",
+    "record": "6–4",
+    "conferenceRecord": "3–4",
     "location": "Idaho State",
     "capacity": "",
     "coach": "",
@@ -28133,15 +28133,15 @@
     "recent": [
       [
         "Idaho State",
-        "W",
-        "34–27",
-        "at Utah Tech"
+        "L",
+        "26–28",
+        "Montana State"
       ],
       [
         "Idaho State",
         "W",
-        "38–8",
-        "Portland State"
+        "34–27",
+        "at Utah Tech"
       ]
     ],
     "players": [
@@ -28166,14 +28166,14 @@
         "Idaho State Defensive leader"
       ]
     ],
-    "intel": "Idaho State is 6–3 through 9 completed games and 3–3 in Big Sky play.",
+    "intel": "Idaho State is 6–4 through 10 completed games and 3–4 in Big Sky play.",
     "facts": [
       [
-        "6–3",
+        "6–4",
         "Current record"
       ],
       [
-        "3–3",
+        "3–4",
         "Big Sky record"
       ],
       [
@@ -28278,15 +28278,15 @@
       ],
       [
         "RECENT GAME",
-        "Idaho State W vs. at Utah Tech",
+        "Idaho State L vs. Montana State",
         "Full-game, recap and highlight video",
-        "https://www.youtube.com/results?search_query=Idaho%20State%20at%20Utah%20Tech%202026%20football"
+        "https://www.youtube.com/results?search_query=Idaho%20State%20Montana%20State%202026%20football"
       ],
       [
         "RECENT GAME",
-        "Idaho State W vs. Portland State",
+        "Idaho State W vs. at Utah Tech",
         "Full-game, recap and highlight video",
-        "https://www.youtube.com/results?search_query=Idaho%20State%20Portland%20State%202026%20football"
+        "https://www.youtube.com/results?search_query=Idaho%20State%20at%20Utah%20Tech%202026%20football"
       ]
     ],
     "resources": {
@@ -28298,6 +28298,6 @@
       "news": "https://isubengals.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-11-08T07:23:30.398423+00:00"
+    "updated": "2026-11-08T15:14:04.236547+00:00"
   }
 }
