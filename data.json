@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T19:43:40.880542+00:00",
+  "updated": "2026-11-08T23:43:55.178236+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "7-3",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-08T19:44:30.336760+00:00"
+    "checked_at": "2026-11-08T23:44:46.854781+00:00"
   },
   "resources": [
     {
@@ -2946,7 +2946,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-08T19:43:47.336657+00:00",
+    "source_checked_at": "2026-11-08T23:44:03.075347+00:00",
     "team_summary": [
       {
         "value": "7–3",
@@ -27668,7 +27668,7 @@
     "title": "WATCH – Montana State head coach Brent Vigen weekly press conference on Idaho State matchup",
     "date": "Mon, 02 Nov 2026 18:48:16 +0000",
     "url": "https://skylinesportsmt.com/listen-montana-state-head-coach-brent-vigen-weekly-press-conference-on-idaho-state-matchup/",
-    "youtube_id": ""
+    "youtube_id": "KKl3op9PCXo"
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -28298,6 +28298,6 @@
       "news": "https://isubengals.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-11-08T19:43:51.253414+00:00"
+    "updated": "2026-11-08T23:44:08.815531+00:00"
   }
 }
