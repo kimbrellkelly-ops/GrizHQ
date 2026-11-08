@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07T22:30:46.174168+00:00",
+  "updated": "2026-11-08T01:43:42.047622+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,51 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Eklund, Kennedy, Gillman recap UM's win",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/eklund-kennedy-gillman-recap-ums-win/video_8b8b5149-4761-5327-a03e-d103528d3fc4.html",
+      "date": "Nov. 8, 2026",
+      "published_at": "2026-11-08T00:26:00+00:00",
+      "description": "Eklund, Kennedy, Gillman recap UM's win",
+      "source": "406 MT Sports",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/b8/8b8b5149-4761-5327-a03e-d103528d3fc4/6aefc2d82c406.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": true,
+      "youtube_id": "",
+      "video_url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/eklund-kennedy-gillman-recap-ums-win/video_8b8b5149-4761-5327-a03e-d103528d3fc4.html",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/b8/8b8b5149-4761-5327-a03e-d103528d3fc4/6aefc2d82c406.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Despite career day by Huntley Project's Paige Lofing, Montana Lady Griz bounced at BYU",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/despite-career-day-by-huntley-projects-paige-lofing-montana-lady-griz-bounced-at-byu/article_4e0de1cb-b225-489a-9eaa-f954bf52c733.html",
+      "date": "Nov. 8, 2026",
+      "published_at": "2026-11-08T00:00:00+00:00",
+      "description": "Despite career day by Huntley Project's Paige Lofing, Montana Lady Griz bounced at BYU",
+      "source": "406 MT Sports",
+      "badge": "OPPONENT",
+      "short": "OPPONE",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/e0/4e0de1cb-b225-489a-9eaa-f954bf52c733/6aee523c0ffdc.preview.jpg?crop=350%2C350%2C753%2C57&resize=200%2C200&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/e0/4e0de1cb-b225-489a-9eaa-f954bf52c733/6aee523c0ffdc.preview.jpg?crop=350%2C350%2C753%2C57&resize=200%2C200&order=crop%2Cresize"
+    },
+    {
+      "title": "Recap: Eli Gillman breaks Big Sky record as No. 12 Grizzlies rout Portland State",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-football-vs-portland-state-recap/article_52643400-4780-4a4c-8373-15baa9d370cb.html",
+      "date": "Nov. 7, 2026",
+      "published_at": "2026-11-07T23:15:00+00:00",
+      "description": "Recap: Eli Gillman breaks Big Sky record as No. 12 Grizzlies rout Portland State",
+      "source": "406 MT Sports",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/26/52643400-4780-4a4c-8373-15baa9d370cb/6aef887060f22.preview.jpg?crop=1765%2C927%2C0%2C123&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/26/52643400-4780-4a4c-8373-15baa9d370cb/6aef887060f22.preview.jpg?crop=1765%2C927%2C0%2C123&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Live updates: No. 12 Montana Grizzlies host Portland State",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-football-vs-portland-state-live/article_52643400-4780-4a4c-8373-15baa9d370cb.html",
@@ -234,6 +279,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/e3/0e373353-e25f-4db8-82de-4f7609200ce7/6aeab7f068298.preview.jpg?crop=1643%2C863%2C48%2C72&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Lady Griz open season against Western",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/lady-griz-open-season-against-western/video_0415b173-d121-56f2-845a-ea8a20f10c3f.html",
+      "date": "Nov. 4, 2026",
+      "published_at": "2026-11-04T03:52:00+00:00",
+      "description": "Lady Griz open season against Western",
+      "source": "406 MT Sports",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/41/0415b173-d121-56f2-845a-ea8a20f10c3f/6aeaaea578989.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": true,
+      "youtube_id": "",
+      "video_url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/lady-griz-open-season-against-western/video_0415b173-d121-56f2-845a-ea8a20f10c3f.html",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/41/0415b173-d121-56f2-845a-ea8a20f10c3f/6aeaaea578989.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
     },
     {
       "title": "Photos: Lady Griz vs. Montana Western women's basketball",
@@ -1449,66 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/8d/f8d1d4a9-281b-4215-8c5e-74851be934a5/6acb55d1098cf.preview.jpg?crop=1763%2C926%2C0%2C216&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "3 takeaways: No. 2 Grizzlies knocked off at No. 13 NAU",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_c2766fbc-cccd-5ef6-aff1-2fc96bb48810.html",
-      "date": "Oct. 11, 2026",
-      "published_at": "2026-10-11T12:00:00+00:00",
-      "description": "\"We have a whole lot of potential and we got a whole lot of season left.\" —Grizzlies running back Eli Gillman",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/27/c2766fbc-cccd-5ef6-aff1-2fc96bb48810/6acb5759a7f9b.preview.jpg?crop=1763%2C926%2C0%2C216&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/c/27/c2766fbc-cccd-5ef6-aff1-2fc96bb48810/6acb5759a7f9b.preview.jpg?crop=1763%2C926%2C0%2C216&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Griz drop ranked shootout at NAU",
-      "url": "https://gogriz.com/news/2026/10/10/football-griz-drop-ranked-shootout-at-nau",
-      "date": "Oct. 11, 2026",
-      "published_at": "2026-10-11T02:49:00+00:00",
-      "description": "FLAGSTAFF, Ariz. – The No. 2 Montana Grizzlies traded blows with No. 13 Northern Arizona throughout the afternoon but fell to the Lumberjacks 49-44 in a ranked Big Sky Conference shootout at the Walkup Skydome on Saturday.",
-      "source": "GoGriz",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/10/20261010_fbvsnau_028.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/10/20261010_fbvsnau_028.jpg"
-    },
-    {
-      "title": "Montana running back Eli Gillman on 49-44 loss at Northern Arizona",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-running-back-eli-gillman-on-49-44-loss-at-northern-arizona/video_0c07618c-e7ec-5b37-ab13-0ba34a8d2b9f.html",
-      "date": "Oct. 11, 2026",
-      "published_at": "2026-10-11T01:27:00+00:00",
-      "description": "Montana running back Eli Gillman on 49-44 loss at Northern Arizona",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/c0/0c07618c-e7ec-5b37-ab13-0ba34a8d2b9f/6acae6b45da5a.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-running-back-eli-gillman-on-49-44-loss-at-northern-arizona/video_0c07618c-e7ec-5b37-ab13-0ba34a8d2b9f.html",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/c0/0c07618c-e7ec-5b37-ab13-0ba34a8d2b9f/6acae6b45da5a.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Montana running back Eli Gillman on 49-44 loss at Northern Arizona",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/video_36e3a414-ff21-5693-8223-9372041c485b.html",
-      "date": "Oct. 11, 2026",
-      "published_at": "2026-10-11T01:27:00+00:00",
-      "description": "Latest Montana football coverage.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/3/6e/36e3a414-ff21-5693-8223-9372041c485b/6acaf839b964f.image.jpg?resize=300%2C169",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/video_36e3a414-ff21-5693-8223-9372041c485b.html",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/3/6e/36e3a414-ff21-5693-8223-9372041c485b/6acaf839b964f.image.jpg?resize=300%2C169"
     }
   ]
 }
