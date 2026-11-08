@@ -1,15 +1,15 @@
 {
-  "updated": "2026-11-07T20:53:58.570921+00:00",
+  "updated": "2026-11-08T00:37:59.017840+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
-    "record": "6-3",
-    "conference_record": "4-2",
-    "streak": "W9"
+    "record": "7-3",
+    "conference_record": "5-2",
+    "streak": "W10"
   },
   "next_game": {
-    "opponent": "Portland State",
-    "date": "Nov 7 (Sat)",
-    "time": "1 PM",
+    "opponent": "Idaho State",
+    "date": "Nov 14 (Sat)",
+    "time": "8:30 PM",
     "venue": "Washington-Grizzly Stadium, Missoula, Mont.",
     "url": "https://gogriz.com/sports/football/schedule"
   },
@@ -90,7 +90,7 @@
       "date": "Nov 7 (Sat)",
       "opponent": "Portland State",
       "location": "Home",
-      "result": "",
+      "result": "W 57-24",
       "time": "1 PM",
       "conference": true
     },
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-07T20:54:44.626842+00:00"
+    "checked_at": "2026-11-08T00:38:59.243086+00:00"
   },
   "resources": [
     {
@@ -2927,9 +2927,9 @@
     }
   ],
   "stats": {
-    "through": "Official cumulative source: https://gogriz.com/sports/football/stats/2026; pending box-score verification for 9 completed game(s)",
+    "through": "Official cumulative source: https://gogriz.com/sports/football/stats/2026; pending box-score verification for 10 completed game(s)",
     "coverage": {
-      "completed_games": 9,
+      "completed_games": 10,
       "verified_boxscores": 0,
       "source_of_truth": "https://gogriz.com/sports/football/stats/2026",
       "pending": [
@@ -2941,14 +2941,15 @@
         "Northern Colorado",
         "#13 Northern Arizona",
         "Idaho",
-        "Eastern Washington"
+        "Eastern Washington",
+        "Portland State"
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-07T20:54:05.612058+00:00",
+    "source_checked_at": "2026-11-08T00:38:05.948429+00:00",
     "team_summary": [
       {
-        "value": "6–3",
+        "value": "7–3",
         "label": "RECORD",
         "note": "Official GoGriz 2026 schedule"
       },
@@ -3218,6 +3219,12 @@
         "week": "Wk 9",
         "opponent": "Eastern Washington",
         "result": "W 42-33",
+        "notes": "Official GoGriz schedule result"
+      },
+      {
+        "week": "Wk 10",
+        "opponent": "Portland State",
+        "result": "W 57-24",
         "notes": "Official GoGriz schedule result"
       }
     ],
@@ -27661,7 +27668,7 @@
     "title": "WATCH – Montana State head coach Brent Vigen weekly press conference on Idaho State matchup",
     "date": "Mon, 02 Nov 2026 18:48:16 +0000",
     "url": "https://skylinesportsmt.com/listen-montana-state-head-coach-brent-vigen-weekly-press-conference-on-idaho-state-matchup/",
-    "youtube_id": "KKl3op9PCXo"
+    "youtube_id": ""
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -27693,6 +27700,19 @@
     },
     {
       "rank": 3,
+      "team": "Montana",
+      "conference_record": "5-2",
+      "overall_record": "7-3",
+      "home": "5-1",
+      "away": "2-2",
+      "conference_points": "304-205",
+      "points": "401-281",
+      "conference_streak": "W2",
+      "overall_streak": "W2",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2538"
+    },
+    {
+      "rank": 4,
       "team": "Weber State",
       "conference_record": "5-2",
       "overall_record": "6-4",
@@ -27703,19 +27723,6 @@
       "conference_streak": "W1",
       "overall_streak": "W1",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2546"
-    },
-    {
-      "rank": 4,
-      "team": "Montana",
-      "conference_record": "4-2",
-      "overall_record": "6-3",
-      "home": "4-1",
-      "away": "2-2",
-      "conference_points": "247-181",
-      "points": "344-257",
-      "conference_streak": "W1",
-      "overall_streak": "W1",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2538"
     },
     {
       "rank": 5,
@@ -27771,41 +27778,41 @@
     },
     {
       "rank": 9,
-      "team": "Northern Colorado",
-      "conference_record": "2-4",
-      "overall_record": "3-6",
+      "team": "Southern Utah",
+      "conference_record": "3-4",
+      "overall_record": "4-6",
       "home": "3-2",
-      "away": "0-4",
-      "conference_points": "136-161",
-      "points": "195-237",
-      "conference_streak": "L1",
-      "overall_streak": "L1",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2541"
+      "away": "1-4",
+      "conference_points": "215-195",
+      "points": "312-323",
+      "conference_streak": "W1",
+      "overall_streak": "W1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2543"
     },
     {
       "rank": 10,
-      "team": "Southern Utah",
-      "conference_record": "2-4",
-      "overall_record": "3-6",
-      "home": "2-2",
-      "away": "1-4",
-      "conference_points": "184-171",
-      "points": "281-299",
+      "team": "Northern Colorado",
+      "conference_record": "2-5",
+      "overall_record": "3-7",
+      "home": "3-2",
+      "away": "0-5",
+      "conference_points": "160-192",
+      "points": "219-268",
       "conference_streak": "L2",
       "overall_streak": "L2",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2543"
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2541"
     },
     {
       "rank": 11,
       "team": "Portland State",
-      "conference_record": "2-4",
-      "overall_record": "2-7",
+      "conference_record": "2-5",
+      "overall_record": "2-8",
       "home": "1-3",
-      "away": "1-4",
-      "conference_points": "145-200",
-      "points": "188-384",
-      "conference_streak": "L3",
-      "overall_streak": "L3",
+      "away": "1-5",
+      "conference_points": "169-257",
+      "points": "212-441",
+      "conference_streak": "L4",
+      "overall_streak": "L4",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2542"
     },
     {
@@ -27838,18 +27845,18 @@
   "big_sky_leaders": {
     "rushing": [
       {
-        "name": "Chalk,Floyd",
-        "school": "Southern Utah",
-        "value": "1223",
-        "secondary": "12",
-        "rate": "135.9"
-      },
-      {
         "name": "Gillman,Eli",
         "school": "Montana",
-        "value": "1161",
-        "secondary": "15",
-        "rate": "129.0"
+        "value": "1357",
+        "secondary": "19",
+        "rate": "135.7"
+      },
+      {
+        "name": "Chalk,Floyd",
+        "school": "Southern Utah",
+        "value": "1289",
+        "secondary": "12",
+        "rate": "128.9"
       },
       {
         "name": "Green,Jaden",
@@ -27868,18 +27875,18 @@
       {
         "name": "Burns,Will",
         "school": "Southern Utah",
-        "value": "884",
-        "secondary": "10",
-        "rate": "98.2"
+        "value": "948",
+        "secondary": "11",
+        "rate": "94.8"
       }
     ],
     "passing": [
       {
         "name": "Ah Yat,Keali'i",
         "school": "Montana",
-        "value": "2607",
-        "secondary": "26",
-        "rate": "289.7"
+        "value": "2866",
+        "secondary": "27",
+        "rate": "286.6"
       },
       {
         "name": "Wood,Joshua",
@@ -27914,9 +27921,9 @@
       {
         "name": "Davis,Brooks",
         "school": "Montana",
-        "value": "1145",
+        "value": "1233",
         "secondary": "12",
-        "rate": "127.2"
+        "rate": "123.3"
       },
       {
         "name": "Gbatu, Jr.,Samuel",
@@ -27951,9 +27958,9 @@
       {
         "name": "Gillman,Eli",
         "school": "Montana",
-        "value": "126",
-        "secondary": "21",
-        "rate": "14.0"
+        "value": "150",
+        "secondary": "25",
+        "rate": "15.0"
       },
       {
         "name": "Lindberg,Mason",
@@ -27963,25 +27970,25 @@
         "rate": "9.2"
       },
       {
-        "name": "Davis,Brooks",
-        "school": "Montana",
-        "value": "74",
-        "secondary": "12",
-        "rate": "8.2"
-      },
-      {
-        "name": "Chalk,Floyd",
-        "school": "Southern Utah",
-        "value": "72",
-        "secondary": "12",
-        "rate": "8.0"
-      },
-      {
         "name": "Sansted,Myles",
         "school": "Montana State",
         "value": "71",
         "secondary": "0",
         "rate": "7.9"
+      },
+      {
+        "name": "McKee,Soren",
+        "school": "Eastern Washington",
+        "value": "69",
+        "secondary": "0",
+        "rate": "7.7"
+      },
+      {
+        "name": "Davis,Brooks",
+        "school": "Montana",
+        "value": "76",
+        "secondary": "12",
+        "rate": "7.6"
       }
     ],
     "tackles": [
@@ -28014,10 +28021,10 @@
         "rate": "8.7"
       },
       {
-        "name": "Smith,Bryce",
-        "school": "Eastern Washington",
-        "value": "0",
-        "secondary": "0",
+        "name": "Helmstetler,Jaxton",
+        "school": "Portland State",
+        "value": "28",
+        "secondary": "2",
         "rate": "8.6"
       }
     ],
@@ -28027,14 +28034,7 @@
         "school": "Montana",
         "value": "63",
         "secondary": "",
-        "rate": ".94"
-      },
-      {
-        "name": "Ducsik,Avery",
-        "school": "Portland State",
-        "value": "32",
-        "secondary": "",
-        "rate": ".67"
+        "rate": ".85"
       },
       {
         "name": "Fesili,Trehsyn",
@@ -28056,6 +28056,13 @@
         "value": "37",
         "secondary": "",
         "rate": ".61"
+      },
+      {
+        "name": "Ducsik,Avery",
+        "school": "Portland State",
+        "value": "32",
+        "secondary": "",
+        "rate": ".60"
       }
     ]
   },
@@ -28105,68 +28112,68 @@
   ],
   "big_sky_players_of_week_updated": "2026-09-20T19:00:00Z",
   "next_opponent": {
-    "opponent": "Portland State",
-    "record": "2–7",
-    "conferenceRecord": "2–4",
-    "location": "Pacific",
+    "opponent": "Idaho State",
+    "record": "6–3",
+    "conferenceRecord": "3–3",
+    "location": "Idaho State",
     "capacity": "",
     "coach": "",
     "coachLine": "Current ESPN team listing",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/279.png",
+    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
     "stats": {
-      "points": "20.89",
+      "points": "33.44",
       "offense": "",
       "passing": "",
       "rushing": "",
-      "allowed": "42.67",
+      "allowed": "21.44",
       "defense": "",
       "third": "—",
       "turnovers": "—"
     },
     "recent": [
       [
-        "Portland State",
-        "L",
-        "14–38",
-        "Idaho"
+        "Idaho State",
+        "W",
+        "34–27",
+        "at Utah Tech"
       ],
       [
-        "Portland State",
-        "L",
-        "8–38",
-        "at Idaho State"
+        "Idaho State",
+        "W",
+        "38–8",
+        "Portland State"
       ]
     ],
     "players": [
       [
-        "PO",
-        "Thompson  Delon",
-        "Portland State Rushing leader"
+        "ID",
+        "Mason  Tytan",
+        "Idaho State Rushing leader"
       ],
       [
-        "PO",
-        "Downing  Gabe",
-        "Portland State Passing leader"
+        "ID",
+        "Cooke  Jordan",
+        "Idaho State Passing leader"
       ],
       [
-        "PO",
-        "Loville  Terence",
-        "Portland State Receiving leader"
+        "ID",
+        "Mason  Julian",
+        "Idaho State Receiving leader"
       ],
       [
-        "PO",
-        "Helmstetler  Jaxton",
-        "Portland State Defensive leader"
+        "ID",
+        "Reynolds  Nathan",
+        "Idaho State Defensive leader"
       ]
     ],
-    "intel": "Portland State is 2–7 through 9 completed games and 2–4 in Big Sky play.",
+    "intel": "Idaho State is 6–3 through 9 completed games and 3–3 in Big Sky play.",
     "facts": [
       [
-        "2–7",
+        "6–3",
         "Current record"
       ],
       [
-        "2–4",
+        "3–3",
         "Big Sky record"
       ],
       [
@@ -28174,11 +28181,11 @@
         "Total offense / game"
       ],
       [
-        "Pacific",
+        "Idaho State",
         "Program"
       ]
     ],
-    "historyTitle": "MONTANA VS. PORTLAND STATE",
+    "historyTitle": "MONTANA VS. IDAHO STATE",
     "historyText": "Official matchup history is available through the Griz game center for the current meeting.",
     "historyRecord": "",
     "historyRecordLabel": "Series history",
@@ -28188,17 +28195,17 @@
       [
         "2026",
         "NEXT CHAPTER",
-        "Cheney, Wash."
+        "Pocatello, Idaho"
       ]
     ],
-    "historyUrl": "https://gogriz.com/game-center/5255",
+    "historyUrl": "https://gogriz.com/game-center/6484",
     "watch": [
       [
-        "Can Montana handle Portland State's offense?",
-        "Portland State is averaging — total yards per game."
+        "Can Montana handle Idaho State's offense?",
+        "Idaho State is averaging — total yards per game."
       ],
       [
-        "Where is Portland State most productive?",
+        "Where is Idaho State most productive?",
         "Current passing and rushing production: — pass / — rush yards per game."
       ],
       [
@@ -28209,15 +28216,15 @@
     "checklist": [
       [
         "Quarterback play",
-        "Review Portland State's current passing production and recent game film."
+        "Review Idaho State's current passing production and recent game film."
       ],
       [
         "Explosive offense",
-        "Track Portland State's longest plays and scoring drives in the latest games."
+        "Track Idaho State's longest plays and scoring drives in the latest games."
       ],
       [
         "Run defense",
-        "Account for Portland State's current rushing production."
+        "Account for Idaho State's current rushing production."
       ],
       [
         "Takeaways",
@@ -28228,69 +28235,69 @@
       [
         "PASSING",
         "—",
-        "Portland State passing yards per game"
+        "Idaho State passing yards per game"
       ],
       [
         "TOTAL OFFENSE",
         "—",
-        "Portland State total yards per game"
+        "Idaho State total yards per game"
       ],
       [
         "RUSHING",
         "—",
-        "Portland State rushing yards per game"
+        "Idaho State rushing yards per game"
       ],
       [
         "POINTS",
-        "20.89",
-        "Portland State points per game"
+        "33.44",
+        "Idaho State points per game"
       ],
       [
         "POINTS ALLOWED",
-        "42.67",
-        "Portland State opponent points per game"
+        "21.44",
+        "Idaho State opponent points per game"
       ],
       [
         "3RD DOWN",
         "—",
-        "Portland State third-down conversion rate"
+        "Idaho State third-down conversion rate"
       ]
     ],
     "media": [
       [
         "HIGHLIGHTS",
-        "Portland State 2026 Highlights",
+        "Idaho State 2026 Highlights",
         "Recent game clips and team highlights",
-        "https://www.youtube.com/results?search_query=Portland%20State%20football%202026%20highlights"
+        "https://www.youtube.com/results?search_query=Idaho%20State%20football%202026%20highlights"
       ],
       [
         "COACH TALK",
-        "Portland State Press Conferences",
+        "Idaho State Press Conferences",
         "Hear the opponent's coaches directly",
-        "https://www.youtube.com/results?search_query=Portland%20State%20football%202026%20press%20conference"
+        "https://www.youtube.com/results?search_query=Idaho%20State%20football%202026%20press%20conference"
       ],
       [
         "RECENT GAME",
-        "Portland State L vs. Idaho",
+        "Idaho State W vs. at Utah Tech",
         "Full-game, recap and highlight video",
-        "https://www.youtube.com/results?search_query=Portland%20State%20Idaho%202026%20football"
+        "https://www.youtube.com/results?search_query=Idaho%20State%20at%20Utah%20Tech%202026%20football"
       ],
       [
         "RECENT GAME",
-        "Portland State L vs. at Idaho State",
+        "Idaho State W vs. Portland State",
         "Full-game, recap and highlight video",
-        "https://www.youtube.com/results?search_query=Portland%20State%20at%20Idaho%20State%202026%20football"
+        "https://www.youtube.com/results?search_query=Idaho%20State%20Portland%20State%202026%20football"
       ]
     ],
     "resources": {
-      "official": "https://goviks.com/sports/football",
-      "roster": "https://goviks.com/sports/football/roster",
-      "stats": "https://goviks.com/sports/football/stats/2026",
-      "schedule": "https://goviks.com/sports/football/schedule/2026",
-      "coaches": "https://goviks.com/sports/football/coaches",
-      "news": "https://goviks.com/sports/football/news"
+      "official": "https://isubengals.com/sports/football",
+      "roster": "https://isubengals.com/sports/football/roster",
+      "stats": "https://isubengals.com/sports/football/stats/2026",
+      "schedule": "https://isubengals.com/sports/football/schedule/2026",
+      "coaches": "https://isubengals.com/sports/football/coaches",
+      "news": "https://isubengals.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-11-07T20:54:09.539508+00:00"
+    "updated": "2026-11-08T00:38:11.364218+00:00"
   }
 }
