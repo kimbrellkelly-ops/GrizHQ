@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T07:59:22.870798+00:00",
+  "updated": "2026-11-08T14:47:04.926938+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,36 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Legendary: Eli Gillman passes Cooper Kupp for Big Sky touchdown record as Griz roll Portland State",
+      "url": "https://skylinesportsmt.com/legendary-eli-gillman-passes-cooper-kupp-for-big-sky-touchdown-record-as-griz-roll-portland-state-2/",
+      "date": "Nov. 8, 2026",
+      "published_at": "2026-11-08T14:40:26+00:00",
+      "description": "November 8, 2026 Legendary: Eli Gillman passes Cooper Kupp for Big Sky touchdown record as Griz roll Portland State",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/Eli-Gillman-touchdown-with-a-flailing-defender-Portland-State-at-Montana-Brooks-Nuanez.jpg",
+      "is_video": true,
+      "youtube_id": "-nc1dW0VeVg",
+      "video_url": "https://www.youtube.com/watch?v=-nc1dW0VeVg",
+      "video_thumbnail": "https://i.ytimg.com/vi/-nc1dW0VeVg/hqdefault.jpg"
+    },
+    {
+      "title": "3 takeaways: No. 12 Grizzlies smash Portland State as bigger games loom",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-12-grizzlies-smash-portland-state-as-bigger-games-loom/article_c154598e-1e2d-4abc-ac87-7596fa2e0274.html",
+      "date": "Nov. 8, 2026",
+      "published_at": "2026-11-08T13:00:00+00:00",
+      "description": "3 takeaways: No. 12 Grizzlies smash Portland State as bigger games loom",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/15/c154598e-1e2d-4abc-ac87-7596fa2e0274/6aefe99617b63.preview.jpg?crop=1764%2C926%2C0%2C88&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/15/c154598e-1e2d-4abc-ac87-7596fa2e0274/6aefe99617b63.preview.jpg?crop=1764%2C926%2C0%2C88&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Legendary: Eli Gillman passes Cooper Kupp for Big Sky touchdown record as Griz roll Portland State",
       "url": "https://skylinesportsmt.com/legendary-eli-gillman-passes-cooper-kupp-for-big-sky-touchdown-record-as-griz-roll-portland-state/",
@@ -174,6 +204,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/11/07/1108_SPO_DIL_college_football_Grizzlies_vs_Portland_State-1_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698"
+    },
+    {
+      "title": "Nuanez Now November 6, 2026 – Hour 1 – Chick Who Doesn’t Know Sports, Ian Finch & Prep Hot Ticket",
+      "url": "https://skylinesportsmt.com/nuanez-now-november-6-2026-hour-1-chick-who-doesnt-know-sports-ian-finch-prep-hot-ticket/",
+      "date": "Nov. 6, 2026",
+      "published_at": "2026-11-06T23:28:04+00:00",
+      "description": "November 6, 2026 Nuanez Now November 6, 2026 – Hour 1 – Chick Who Doesn’t Know Sports, Ian Finch & Prep Hot Ticket Carolyn Buchta joins Colter Nuanez for Chick Who Doesn’t Know Sports on Nuanez Now, plus Montana head coach Bobby Kennedy…",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Griz-No-17-closes-on-Damonte-Bias-Brooks-Nuanez.jpg",
+      "is_video": true,
+      "youtube_id": "Vz2XoYJw-hg",
+      "video_url": "https://www.youtube.com/watch?v=Vz2XoYJw-hg",
+      "video_thumbnail": "https://i.ytimg.com/vi/Vz2XoYJw-hg/hqdefault.jpg"
     },
     {
       "title": "3 questions: No. 12 Grizzlies look to keep rolling against Portland State",
@@ -461,6 +506,21 @@
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/31/431b5ddd-73c9-49f8-af66-8ac646b614a6/6ae9152397d5e.preview.jpg?crop=1173%2C616%2C2%2C137"
     },
     {
+      "title": "Nuanez Now November 2, 2026 – Hour 1 – Montana Football Hour with Vigen, BK, Tootell & Brooks Davis",
+      "url": "https://skylinesportsmt.com/nuanez-now-november-2-2026-hour-1-montana-football-hour-with-vigen-bk-tootell-brooks-davis/",
+      "date": "Nov. 2, 2026",
+      "published_at": "2026-11-02T23:00:00+00:00",
+      "description": "Nuanez Now November 2, 2026 – Hour 1 – Montana Football Hour with Vigen, BK, Tootell & Brooks Davis November 2, 2026",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Montana-Til-I-Die-flag-leads-the-Griz-out-Brooks-Nuanez-scaled.jpg",
+      "is_video": true,
+      "youtube_id": "gr770Wzkksg",
+      "video_url": "https://www.youtube.com/watch?v=gr770Wzkksg",
+      "video_thumbnail": "https://i.ytimg.com/vi/gr770Wzkksg/hqdefault.jpg"
+    },
+    {
       "title": "Grizzlies WR Brooks Davis sweeps Big Sky, FCS weekly awards",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-wr-brooks-davis-sweeps-big-sky-fcs-weekly-awards/article_898f544f-df7b-471a-bfd0-453726bff38a.html",
       "date": "Nov. 2, 2026",
@@ -624,6 +684,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/static-4/dailyinterlake/images/default-social.jpg?v=2"
+    },
+    {
+      "title": "Nuanez Now October 30, 2026 – Aaron Best, Griz Hockey with Geoff Safford & Hayden Smith",
+      "url": "https://skylinesportsmt.com/nuanez-now-october-30-2026-aaron-best-griz-hockey-with-geoff-safford-hayden-smith/",
+      "date": "Oct. 31, 2026",
+      "published_at": "2026-10-31T00:41:23+00:00",
+      "description": "Nuanez Now October 30, 2026 – Aaron Best, Griz Hockey with Geoff Safford & Hayden Smith October 30, 2026",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Griz-No-17-closes-on-Damonte-Bias-Brooks-Nuanez.jpg",
+      "is_video": true,
+      "youtube_id": "yXMciClWQ_k",
+      "video_url": "https://www.youtube.com/watch?v=yXMciClWQ_k",
+      "video_thumbnail": "https://i.ytimg.com/vi/yXMciClWQ_k/hqdefault.jpg"
     },
     {
       "title": "3 questions: No. 14 Grizzlies look to right the ship at Eastern Washington",
@@ -1434,81 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/e/d4/ed46bd70-6f8d-4702-bb6f-4414b38ae336/6acbf2f9167b6.preview.jpg?crop=1735%2C911%2C30%2C92&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "First look: No. 7 Montana Grizzlies vs. Idaho Vandals",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-7-montana-grizzlies-vs-idaho-vandals/article_d9862d0a-49b0-4ed5-ad18-45b6098e549c.html",
-      "date": "Oct. 12, 2026",
-      "published_at": "2026-10-12T22:15:00+00:00",
-      "description": "First look: No. 7 Montana Grizzlies vs. Idaho Vandals",
-      "source": "406 MT Sports",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/98/d9862d0a-49b0-4ed5-ad18-45b6098e549c/6acd55b0c21ee.preview.jpg?crop=1760%2C924%2C3%2C54&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/98/d9862d0a-49b0-4ed5-ad18-45b6098e549c/6acd55b0c21ee.preview.jpg?crop=1760%2C924%2C3%2C54&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "First look: No. 7 Montana Grizzlies vs. Idaho Vandals",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_cfdd5757-4030-5570-9226-5d1433eb1cb8.html",
-      "date": "Oct. 12, 2026",
-      "published_at": "2026-10-12T22:15:00+00:00",
-      "description": "The Grizzlies prepare to face Idaho in the battle for the Little Brown Stein in their final game before their bye week.",
-      "source": "Missoulian",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/94/49450e1c-577e-5ee5-b57c-4cc143f26731/6acc57e522eb8.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/4/94/49450e1c-577e-5ee5-b57c-4cc143f26731/6acc57e522eb8.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Griz press conference – Kennedy, Finch, Huff on Battle for the Little Brown Stein against Idaho",
-      "url": "https://skylinesportsmt.com/griz-press-conference-kennedy-finch-huff-on-battle-for-the-little-brown-stein-against-idaho/",
-      "date": "Oct. 12, 2026",
-      "published_at": "2026-10-12T21:52:39+00:00",
-      "description": "Colter Nuanez October 12, 2026 Griz press conference – Kennedy, Finch, Huff on Battle for the Little Brown Stein against Idaho Montana head coach Bobby Kennedy, senior wide receiver Ian Finch and senior safety Tanner Huff held a press confe",
-      "source": "Skyline Sports",
-      "badge": "INSIDER",
-      "short": "INSIDE",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/08/Ian-Finch-Hammer-Zaiden-Wallace-America-Flag-and-Tanner-Huff-Montana-flag-tunnel-run.jpeg",
-      "is_video": true,
-      "youtube_id": "pxD_r-fouHc",
-      "video_url": "https://www.youtube.com/watch?v=pxD_r-fouHc",
-      "video_thumbnail": "https://i.ytimg.com/vi/pxD_r-fouHc/hqdefault.jpg"
-    },
-    {
-      "title": "Montana's Nui Tovey at NAU",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/montana-state-university/image_931a80d8-fe83-5bc1-9a40-39d35e8da383.html",
-      "date": "Oct. 12, 2026",
-      "published_at": "2026-10-12T21:18:00+00:00",
-      "description": "Montana defensive end Nui Tovey (right) pressures Northern Arizona quarterback Ty Pennington during Saturday's game in Flagstaff, Arizona. The seventh-ranked Grizzlies will host upset-minded Idaho this Saturday.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/9/31/931a80d8-fe83-5bc1-9a40-39d35e8da383/6acd51ce472bb.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/9/31/931a80d8-fe83-5bc1-9a40-39d35e8da383/6acd51ce472bb.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "TY PENNINGTON PUTS NAU ON HIS BACK TO DEFEAT THE GRIZZLIES IN FLAGSTAFF (BREAKDOWN MONDAY)",
-      "url": "https://skylinesportsmt.com/ty-pennington-puts-nau-on-his-back-to-defeat-the-grizzlies-in-flagstaff-breakdown-monday/",
-      "date": "Oct. 12, 2026",
-      "published_at": "2026-10-12T18:49:30+00:00",
-      "description": "October 12, 2026 TY PENNINGTON PUTS NAU ON HIS BACK TO DEFEAT THE GRIZZLIES IN FLAGSTAFF (BREAKDOWN MONDAY)",
-      "source": "Skyline Sports",
-      "badge": "GAME STORY",
-      "short": "GAME S",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/UM-VS-NAU-BREAKDOWN-THUMBNAIL.png",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/10/UM-VS-NAU-BREAKDOWN-THUMBNAIL.png"
     }
   ]
 }
