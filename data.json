@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T15:13:52.951912+00:00",
+  "updated": "2026-11-08T19:43:40.880542+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "7-3",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-08T15:14:50.636719+00:00"
+    "checked_at": "2026-11-08T19:44:30.336760+00:00"
   },
   "resources": [
     {
@@ -2946,7 +2946,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-08T15:13:59.280023+00:00",
+    "source_checked_at": "2026-11-08T19:43:47.336657+00:00",
     "team_summary": [
       {
         "value": "7–3",
@@ -28113,8 +28113,8 @@
   "big_sky_players_of_week_updated": "2026-09-20T19:00:00Z",
   "next_opponent": {
     "opponent": "Idaho State",
-    "record": "6–4",
-    "conferenceRecord": "3–4",
+    "record": "6–3",
+    "conferenceRecord": "3–3",
     "location": "Idaho State",
     "capacity": "",
     "coach": "",
@@ -28133,15 +28133,15 @@
     "recent": [
       [
         "Idaho State",
-        "L",
-        "26–28",
-        "Montana State"
+        "W",
+        "34–27",
+        "at Utah Tech"
       ],
       [
         "Idaho State",
         "W",
-        "34–27",
-        "at Utah Tech"
+        "38–8",
+        "Portland State"
       ]
     ],
     "players": [
@@ -28166,14 +28166,14 @@
         "Idaho State Defensive leader"
       ]
     ],
-    "intel": "Idaho State is 6–4 through 10 completed games and 3–4 in Big Sky play.",
+    "intel": "Idaho State is 6–3 through 9 completed games and 3–3 in Big Sky play.",
     "facts": [
       [
-        "6–4",
+        "6–3",
         "Current record"
       ],
       [
-        "3–4",
+        "3–3",
         "Big Sky record"
       ],
       [
@@ -28278,15 +28278,15 @@
       ],
       [
         "RECENT GAME",
-        "Idaho State L vs. Montana State",
-        "Full-game, recap and highlight video",
-        "https://www.youtube.com/results?search_query=Idaho%20State%20Montana%20State%202026%20football"
-      ],
-      [
-        "RECENT GAME",
         "Idaho State W vs. at Utah Tech",
         "Full-game, recap and highlight video",
         "https://www.youtube.com/results?search_query=Idaho%20State%20at%20Utah%20Tech%202026%20football"
+      ],
+      [
+        "RECENT GAME",
+        "Idaho State W vs. Portland State",
+        "Full-game, recap and highlight video",
+        "https://www.youtube.com/results?search_query=Idaho%20State%20Portland%20State%202026%20football"
       ]
     ],
     "resources": {
@@ -28298,6 +28298,6 @@
       "news": "https://isubengals.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-11-08T15:14:04.236547+00:00"
+    "updated": "2026-11-08T19:43:51.253414+00:00"
   }
 }
