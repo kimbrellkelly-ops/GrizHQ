@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T19:14:46.490344+00:00",
+  "updated": "2026-11-08T22:54:05.990565+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Week 10: No. 12 Montana Grizzlies take down Portland State",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-10-no-12-montana-grizzlies-take-down-portland-state/collection_1e5134c6-5876-4517-baff-07d46a5b2927.html",
+      "date": "Nov. 8, 2026",
+      "published_at": "2026-11-08T21:00:00+00:00",
+      "description": "Week 10: No. 12 Montana Grizzlies take down Portland State",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/e5/1e5134c6-5876-4517-baff-07d46a5b2927/6af007cde1948.preview.jpg?crop=1765%2C927%2C0%2C123&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/e5/1e5134c6-5876-4517-baff-07d46a5b2927/6af007cde1948.preview.jpg?crop=1765%2C927%2C0%2C123&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Legendary: Eli Gillman passes Cooper Kupp for Big Sky touchdown record as Griz roll Portland State",
       "url": "https://skylinesportsmt.com/legendary-eli-gillman-passes-cooper-kupp-for-big-sky-touchdown-record-as-griz-roll-portland-state-2/",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/13/Brad_and_Carol_Holm.jpg"
-    },
-    {
-      "title": "Cussin’ & Discussin’ – Former Griz DL Pat Foster & OL Larry Clarkson",
-      "url": "https://skylinesportsmt.com/cussin-discussin-former-griz-dl-pat-foster-ol-larry-clarkson/",
-      "date": "Oct. 13, 2026",
-      "published_at": "2026-10-13T15:09:40+00:00",
-      "description": "October 13, 2026 Cussin’ & Discussin’ – Former Griz DL Pat Foster & OL Larry Clarkson",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/06/Cussin--scaled.png",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://skylinesportsmt.com/cussin-discussin-former-griz-dl-pat-foster-ol-larry-clarkson/",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/06/Cussin--scaled.png"
     }
   ]
 }
