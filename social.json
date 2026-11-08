@@ -1,6 +1,32 @@
 {
-  "updated": "2026-11-07T23:57:17.923036+00:00",
+  "updated": "2026-11-08T04:37:09.996350+00:00",
   "posts": [
+    {
+      "title": "Portland State's Chris Fisk & Terence Loville after 57-24 loss at Montana",
+      "url": "https://www.youtube.com/watch?v=Kl-XcpIw8y0",
+      "image": "https://i.ytimg.com/vi/Kl-XcpIw8y0/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Nov. 8, 2026",
+      "platform": "youtube",
+      "youtube_id": "Kl-XcpIw8y0",
+      "published_at": "2026-11-08T00:00:00+00:00"
+    },
+    {
+      "title": "Montana's Bobby Kennedy, Eli Gillman & Justin Eklund after 57-24 win over Portland State",
+      "url": "https://www.youtube.com/watch?v=-nc1dW0VeVg",
+      "image": "https://i.ytimg.com/vi/-nc1dW0VeVg/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Nov. 8, 2026",
+      "platform": "youtube",
+      "youtube_id": "-nc1dW0VeVg",
+      "published_at": "2026-11-08T00:00:00+00:00"
+    },
     {
       "title": "Portland State head coach Chris Fisk has played Montana two seasons in a row even though this is his",
       "url": "https://www.youtube.com/watch?v=w66YbC6sTB8",
