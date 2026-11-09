@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09T06:33:29.354381+00:00",
+  "updated": "2026-11-09T17:31:27.132459+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "7-3",
@@ -112,60 +112,64 @@
     }
   ],
   "coaches_poll": [
-    "Tarleton State (23)",
-    "Stephen F. Austin (3)",
+    "Tarleton State (26)",
     "Montana State",
     "Youngstown State",
     "South Dakota State",
     "Northern Arizona",
     "Austin Peay",
-    "Illinois State",
+    "Stephen F. Austin",
+    "Lamar",
     "Tennessee Tech",
     "South Dakota",
     "Mercer",
-    "Lamar",
-    "Montana",
     "Monmouth",
-    "North Dakota",
     "Lehigh",
-    "South Carolina State",
-    "Idaho State",
     "Campbell",
-    "UAlbany",
-    "East Tennessee State",
-    "Abilene Christian",
+    "Illinois State",
+    "South Carolina State",
     "Harvard",
-    "Alabama A&M",
-    "Weber State"
+    "Weber State",
+    "Idaho State",
+    "Jackson State",
+    "Princeton",
+    "Abilene Christian",
+    "UAlbany"
   ],
   "media_poll": [
-    "Tarleton State (39)",
-    "Stephen F. Austin (7)",
-    "Montana State (7)",
-    "Youngstown State (3)",
+    "Tarleton State (48)",
+    "Montana State (6)",
+    "Youngstown State (2)",
     "South Dakota State (1)",
     "Northern Arizona",
     "Austin Peay",
-    "South Dakota",
+    "Lamar",
+    "Stephen F. Austin",
     "Tennessee Tech",
-    "Illinois State",
+    "South Dakota",
     "North Dakota",
     "Montana",
-    "Lamar",
     "Mercer",
     "Monmouth",
+    "Illinois State",
     "Campbell",
     "Lehigh",
     "Weber State",
-    "ETSU",
     "Harvard",
-    "UAlbany",
-    "Idaho State",
-    "Abilene Christian",
     "South Carolina State",
-    "Chattanooga"
+    "Idaho State",
+    "UIW",
+    "UC Davis",
+    "Abilene Christian",
+    "Princeton"
   ],
   "news": [
+    {
+      "title": "Gillman’s record-setting day leads to sweep of weekly awards",
+      "url": "https://gogriz.com/news/2026/11/9/football-gillmans-record-setting-day-leads-to-sweep-of-weekly-awards",
+      "date": "Mon, 9 Nov 2026 09:59:00 MST",
+      "description": "MISSOULA – Another chapter in the legendary book of Eli was written at Washington-Grizzly Stadium on Saturday, and the accolades have poured in accordingly."
+    },
     {
       "title": "Gillman makes more history, Griz roll Vikings 57-24",
       "url": "https://gogriz.com/news/2026/11/7/football-gillman-makes-more-history-griz-roll-vikings-57-24",
@@ -207,12 +211,6 @@
       "url": "https://gogriz.com/news/2026/10/17/football-shorthanded-griz-fall-to-idaho",
       "date": "Sat, 17 Oct 2026 18:17:00 MST",
       "description": "MISSOULA – The Montana Grizzlies traded blows with the Idaho Vandals throughout the afternoon but came up short in a 42-35 loss at Washington-Grizzly Stadium on Saturday."
-    },
-    {
-      "title": "Little Brown Stein on the line as Griz host Vandals",
-      "url": "https://gogriz.com/news/2026/10/13/football-little-brown-stein-on-the-line-as-griz-host-vandals",
-      "date": "Tue, 13 Oct 2026 18:22:00 MST",
-      "description": "It's a matchup more than a century in the making this week as the Montana Grizzlies look to rebound from a road loss with the Idaho Vandals traveling to Missoula for the 91st meeti"
     }
   ],
   "depth_chart": {
@@ -366,7 +364,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-09T06:34:10.067930+00:00"
+    "checked_at": "2026-11-09T17:32:19.107988+00:00"
   },
   "resources": [
     {
@@ -2696,47 +2694,47 @@
     }
   ],
   "fcs_rankings_source": "Stats Perform FCS Top 25 — Aug. 31, 2026",
-  "fcs_rankings_date": "Nov 2, 2026",
+  "fcs_rankings_date": "Nov 9, 2026",
   "fcs_top20": [
     {
       "rank": 1,
-      "team": "Tarleton State (39)",
+      "team": "Tarleton State (48)",
       "record": ""
     },
     {
       "rank": 2,
-      "team": "Stephen F. Austin (7)",
+      "team": "Montana State (6)",
       "record": ""
     },
     {
       "rank": 3,
-      "team": "Montana State (7)",
+      "team": "Youngstown State (2)",
       "record": ""
     },
     {
       "rank": 4,
-      "team": "Youngstown State (3)",
-      "record": ""
-    },
-    {
-      "rank": 5,
       "team": "South Dakota State (1)",
       "record": ""
     },
     {
-      "rank": 6,
+      "rank": 5,
       "team": "Northern Arizona",
       "record": "1-0"
     },
     {
-      "rank": 7,
+      "rank": 6,
       "team": "Austin Peay",
       "record": "1-0"
     },
     {
-      "rank": 8,
-      "team": "South Dakota",
+      "rank": 7,
+      "team": "Lamar",
       "record": "1-0"
+    },
+    {
+      "rank": 8,
+      "team": "Stephen F. Austin",
+      "record": ""
     },
     {
       "rank": 9,
@@ -2745,8 +2743,8 @@
     },
     {
       "rank": 10,
-      "team": "Illinois State",
-      "record": ""
+      "team": "South Dakota",
+      "record": "1-0"
     },
     {
       "rank": 11,
@@ -2760,17 +2758,17 @@
     },
     {
       "rank": 13,
-      "team": "Lamar",
-      "record": "1-0"
-    },
-    {
-      "rank": 14,
       "team": "Mercer",
       "record": "1-0"
     },
     {
-      "rank": 15,
+      "rank": 14,
       "team": "Monmouth",
+      "record": ""
+    },
+    {
+      "rank": 15,
+      "team": "Illinois State",
       "record": ""
     },
     {
@@ -2790,55 +2788,55 @@
     },
     {
       "rank": 19,
-      "team": "ETSU",
+      "team": "Harvard",
       "record": ""
     },
     {
       "rank": 20,
-      "team": "Harvard",
+      "team": "South Carolina State",
       "record": ""
     }
   ],
   "fcs_top25": [
     {
       "rank": 1,
-      "team": "Tarleton State (39)",
+      "team": "Tarleton State (48)",
       "record": ""
     },
     {
       "rank": 2,
-      "team": "Stephen F. Austin (7)",
+      "team": "Montana State (6)",
       "record": ""
     },
     {
       "rank": 3,
-      "team": "Montana State (7)",
+      "team": "Youngstown State (2)",
       "record": ""
     },
     {
       "rank": 4,
-      "team": "Youngstown State (3)",
-      "record": ""
-    },
-    {
-      "rank": 5,
       "team": "South Dakota State (1)",
       "record": ""
     },
     {
-      "rank": 6,
+      "rank": 5,
       "team": "Northern Arizona",
       "record": "1-0"
     },
     {
-      "rank": 7,
+      "rank": 6,
       "team": "Austin Peay",
       "record": "1-0"
     },
     {
-      "rank": 8,
-      "team": "South Dakota",
+      "rank": 7,
+      "team": "Lamar",
       "record": "1-0"
+    },
+    {
+      "rank": 8,
+      "team": "Stephen F. Austin",
+      "record": ""
     },
     {
       "rank": 9,
@@ -2847,8 +2845,8 @@
     },
     {
       "rank": 10,
-      "team": "Illinois State",
-      "record": ""
+      "team": "South Dakota",
+      "record": "1-0"
     },
     {
       "rank": 11,
@@ -2862,17 +2860,17 @@
     },
     {
       "rank": 13,
-      "team": "Lamar",
-      "record": "1-0"
-    },
-    {
-      "rank": 14,
       "team": "Mercer",
       "record": "1-0"
     },
     {
-      "rank": 15,
+      "rank": 14,
       "team": "Monmouth",
+      "record": ""
+    },
+    {
+      "rank": 15,
+      "team": "Illinois State",
       "record": ""
     },
     {
@@ -2892,37 +2890,37 @@
     },
     {
       "rank": 19,
-      "team": "ETSU",
-      "record": ""
-    },
-    {
-      "rank": 20,
       "team": "Harvard",
       "record": ""
     },
     {
-      "rank": 21,
-      "team": "UAlbany",
-      "record": ""
-    },
-    {
-      "rank": 22,
-      "team": "Idaho State",
-      "record": ""
-    },
-    {
-      "rank": 23,
-      "team": "Abilene Christian",
-      "record": ""
-    },
-    {
-      "rank": 24,
+      "rank": 20,
       "team": "South Carolina State",
       "record": ""
     },
     {
+      "rank": 21,
+      "team": "Idaho State",
+      "record": ""
+    },
+    {
+      "rank": 22,
+      "team": "UIW",
+      "record": ""
+    },
+    {
+      "rank": 23,
+      "team": "UC Davis",
+      "record": ""
+    },
+    {
+      "rank": 24,
+      "team": "Abilene Christian",
+      "record": ""
+    },
+    {
       "rank": 25,
-      "team": "Chattanooga",
+      "team": "Princeton",
       "record": ""
     }
   ],
@@ -2946,7 +2944,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-09T06:33:34.169338+00:00",
+    "source_checked_at": "2026-11-09T17:31:34.752058+00:00",
     "team_summary": [
       {
         "value": "7–3",
@@ -3277,7 +3275,7 @@
       "special"
     ]
   },
-  "rankings_date": "Nov 2, 2026",
+  "rankings_date": "Nov 9, 2026",
   "fcs_scores": {
     "2026-08-27": [
       {
@@ -27668,7 +27666,7 @@
     "title": "WATCH – Montana State head coach Brent Vigen weekly press conference on Idaho State matchup",
     "date": "Mon, 02 Nov 2026 18:48:16 +0000",
     "url": "https://skylinesportsmt.com/listen-montana-state-head-coach-brent-vigen-weekly-press-conference-on-idaho-state-matchup/",
-    "youtube_id": "KKl3op9PCXo"
+    "youtube_id": ""
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -28298,6 +28296,6 @@
       "news": "https://isubengals.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-11-09T06:33:37.543100+00:00"
+    "updated": "2026-11-09T17:31:40.363283+00:00"
   }
 }
