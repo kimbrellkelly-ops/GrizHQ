@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09T09:46:45.942471+00:00",
+  "updated": "2026-11-09T20:17:04.750468+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,51 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Montana Grizzlies RB Eli Gillman sweeps trio of weekly awards",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-rb-eli-gillman-sweeps-trio-of-weekly-awards/article_4fb43780-a0dc-41db-9377-5557f8dd855e.html",
+      "date": "Nov. 9, 2026",
+      "published_at": "2026-11-09T18:45:00+00:00",
+      "description": "Montana Grizzlies RB Eli Gillman sweeps trio of weekly awards",
+      "source": "406 MT Sports",
+      "badge": "HONOR",
+      "short": "HONOR",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/fb/4fb43780-a0dc-41db-9377-5557f8dd855e/6af21442930ee.preview.jpg?crop=1171%2C615%2C0%2C123",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/fb/4fb43780-a0dc-41db-9377-5557f8dd855e/6af21442930ee.preview.jpg?crop=1171%2C615%2C0%2C123"
+    },
+    {
+      "title": "Gillman’s record-setting day leads to sweep of weekly awards",
+      "url": "https://gogriz.com/news/2026/11/9/football-gillmans-record-setting-day-leads-to-sweep-of-weekly-awards",
+      "date": "Nov. 9, 2026",
+      "published_at": "2026-11-09T16:59:00+00:00",
+      "description": "MISSOULA – Another chapter in the legendary book of Eli was written at Washington-Grizzly Stadium on Saturday, and the accolades have poured in accordingly.",
+      "source": "GoGriz",
+      "badge": "HONOR",
+      "short": "HONOR",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/9/PoW_WEB_2.png",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/9/PoW_WEB_2.png"
+    },
+    {
+      "title": "AKEM’S ANALYSIS: GILLMAN OR BRUNGARD, IDAHO STATE GETTING CLOSE, & TIGHT CONFERENCE RACES",
+      "url": "https://skylinesportsmt.com/akems-analysis-gillman-or-brungard-idaho-state-getting-close-tight-conference-races/",
+      "date": "Nov. 9, 2026",
+      "published_at": "2026-11-09T14:37:21+00:00",
+      "description": "November 9, 2026 AKEM’S ANALYSIS: GILLMAN OR BRUNGARD, IDAHO STATE GETTING CLOSE, & TIGHT CONFERENCE RACES",
+      "source": "Skyline Sports",
+      "badge": "ANALYSIS",
+      "short": "ANALYS",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/SAS-EP.-61-THUMBNAIL.png",
+      "is_video": true,
+      "youtube_id": "XTwLmGdKMbE",
+      "video_url": "https://www.youtube.com/watch?v=XTwLmGdKMbE",
+      "video_thumbnail": "https://i.ytimg.com/vi/XTwLmGdKMbE/hqdefault.jpg"
+    },
     {
       "title": "Week 10: No. 12 Montana Grizzlies take down Portland State",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-10-no-12-montana-grizzlies-take-down-portland-state/collection_1e5134c6-5876-4517-baff-07d46a5b2927.html",
@@ -1464,51 +1509,6 @@
       "youtube_id": "",
       "video_url": "https://skylinesportsmt.com/cussin-discussin-former-all-american-quarterback-brian-ah-yat/",
       "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2025/08/Brian-Ah-Yat.webp"
-    },
-    {
-      "title": "Why Montana Grizzlies are hosting Idaho Vandals for 2nd consecutive season",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/why-montana-grizzlies-are-hosting-idaho-vandals-for-2nd-consecutive-season/article_99885d37-35d9-43fa-90ea-e6569ebe9e07.html",
-      "date": "Oct. 14, 2026",
-      "published_at": "2026-10-14T13:00:00+00:00",
-      "description": "Why Montana Grizzlies are hosting Idaho Vandals for 2nd consecutive season",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/9/98/99885d37-35d9-43fa-90ea-e6569ebe9e07/6acdba8348346.preview.jpg?crop=1761%2C925%2C0%2C33&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/9/98/99885d37-35d9-43fa-90ea-e6569ebe9e07/6acdba8348346.preview.jpg?crop=1761%2C925%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Little Brown Stein on the line as Griz host Vandals",
-      "url": "https://gogriz.com/news/2026/10/13/football-little-brown-stein-on-the-line-as-griz-host-vandals",
-      "date": "Oct. 14, 2026",
-      "published_at": "2026-10-14T01:22:00+00:00",
-      "description": "It's a matchup more than a century in the making this week as the Montana Grizzlies look to rebound from a road loss with the Idaho Vandals traveling to Missoula for the 91st meeting between the two old foes.",
-      "source": "GoGriz",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/11/20261010_fb_vs-nau_9848_rbA.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/11/20261010_fb_vs-nau_9848_rbA.jpg"
-    },
-    {
-      "title": "575 Miles to Missoula: Football Super Fans Never Miss a Griz Game",
-      "url": "https://gogriz.com/news/2026/10/13/575-miles-to-missoula-football-super-fans-never-miss-a-griz-game",
-      "date": "Oct. 13, 2026",
-      "published_at": "2026-10-13T18:41:00+00:00",
-      "description": "MISSOULA – If Griz football fandom were measured in miles, few could match Brad and Carol Holm.",
-      "source": "GoGriz",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/13/Brad_and_Carol_Holm.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/13/Brad_and_Carol_Holm.jpg"
     }
   ]
 }
