@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T01:33:19.420238+00:00",
+  "updated": "2026-11-10T09:52:25.376109+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "7-3",
@@ -364,7 +364,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-10T01:33:58.505338+00:00"
+    "checked_at": "2026-11-10T09:52:58.955314+00:00"
   },
   "resources": [
     {
@@ -2944,7 +2944,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-10T01:33:25.902174+00:00",
+    "source_checked_at": "2026-11-10T09:52:31.087095+00:00",
     "team_summary": [
       {
         "value": "7–3",
@@ -27663,9 +27663,9 @@
     ]
   },
   "latest_press_conference": {
-    "title": "WATCH – Montana State head coach Brent Vigen weekly press conference on Idaho State matchup",
-    "date": "Mon, 02 Nov 2026 18:48:16 +0000",
-    "url": "https://skylinesportsmt.com/listen-montana-state-head-coach-brent-vigen-weekly-press-conference-on-idaho-state-matchup/",
+    "title": "WATCH – Montana State head coach Brent Vigen weekly press conference previewing Northern Colorado",
+    "date": "Tue, 10 Nov 2026 01:49:53 +0000",
+    "url": "https://skylinesportsmt.com/watch-montana-state-head-coach-brent-vigen-weekly-press-conference-previewing-northern-colorado/",
     "youtube_id": ""
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
@@ -28197,6 +28197,6 @@
       "news": "https://www.google.com/search?q=%2321%20Idaho%20State%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-11-10T01:33:25.902241+00:00"
+    "updated": "2026-11-10T09:52:31.087185+00:00"
   }
 }
