@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T17:51:40.418642+00:00",
+  "updated": "2026-11-10T23:24:25.808872+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "7-3",
@@ -364,7 +364,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-10T17:52:22.454927+00:00"
+    "checked_at": "2026-11-10T23:25:09.318057+00:00"
   },
   "resources": [
     {
@@ -2944,7 +2944,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-10T17:51:47.381045+00:00",
+    "source_checked_at": "2026-11-10T23:24:32.549092+00:00",
     "team_summary": [
       {
         "value": "7–3",
@@ -28039,7 +28039,7 @@
         "school": "Northern Arizona",
         "value": "49",
         "secondary": "",
-        "rate": ".70"
+        "rate": ".75"
       },
       {
         "name": "Alovao,Will",
@@ -28197,6 +28197,6 @@
       "news": "https://www.google.com/search?q=%2321%20Idaho%20State%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-11-10T17:51:47.381130+00:00"
+    "updated": "2026-11-10T23:24:32.549181+00:00"
   }
 }
