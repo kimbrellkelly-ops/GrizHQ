@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09T17:31:27.132459+00:00",
+  "updated": "2026-11-10T01:33:19.420238+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "7-3",
@@ -7,7 +7,7 @@
     "streak": "W10"
   },
   "next_game": {
-    "opponent": "Idaho State",
+    "opponent": "#21 Idaho State",
     "date": "Nov 14 (Sat)",
     "time": "8:30 PM",
     "venue": "Washington-Grizzly Stadium, Missoula, Mont.",
@@ -96,7 +96,7 @@
     },
     {
       "date": "Nov 14 (Sat)",
-      "opponent": "Idaho State",
+      "opponent": "#21 Idaho State",
       "location": "Home",
       "result": "",
       "time": "8:30 PM",
@@ -364,7 +364,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-09T17:32:19.107988+00:00"
+    "checked_at": "2026-11-10T01:33:58.505338+00:00"
   },
   "resources": [
     {
@@ -2944,7 +2944,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-09T17:31:34.752058+00:00",
+    "source_checked_at": "2026-11-10T01:33:25.902174+00:00",
     "team_summary": [
       {
         "value": "7–3",
@@ -28110,192 +28110,93 @@
   ],
   "big_sky_players_of_week_updated": "2026-09-20T19:00:00Z",
   "next_opponent": {
-    "opponent": "Idaho State",
-    "record": "6–3",
-    "conferenceRecord": "3–3",
-    "location": "Idaho State",
+    "opponent": "#21 Idaho State",
+    "record": "",
+    "conferenceRecord": "",
+    "location": "",
     "capacity": "",
     "coach": "",
-    "coachLine": "Current ESPN team listing",
-    "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png",
-    "stats": {
-      "points": "32.7",
-      "offense": "",
-      "passing": "",
-      "rushing": "",
-      "allowed": "22.1",
-      "defense": "",
-      "third": "—",
-      "turnovers": "—"
-    },
-    "recent": [
-      [
-        "Idaho State",
-        "W",
-        "34–27",
-        "at Utah Tech"
-      ],
-      [
-        "Idaho State",
-        "W",
-        "38–8",
-        "Portland State"
-      ]
-    ],
-    "players": [
-      [
-        "ID",
-        "Mason  Tytan",
-        "Idaho State Rushing leader"
-      ],
-      [
-        "ID",
-        "Cooke  Jordan",
-        "Idaho State Passing leader"
-      ],
-      [
-        "ID",
-        "Poe  Tommy",
-        "Idaho State Receiving leader"
-      ],
-      [
-        "ID",
-        "Reynolds  Nathan",
-        "Idaho State Defensive leader"
-      ]
-    ],
-    "intel": "Idaho State is 6–3 through 9 completed games and 3–3 in Big Sky play.",
+    "coachLine": "",
+    "stats": {},
+    "recent": [],
+    "players": [],
+    "intel": "#21 Idaho State is Montana's next scheduled opponent.",
     "facts": [
       [
-        "6–3",
-        "Current record"
+        "UPCOMING",
+        "Next opponent"
       ],
       [
-        "3–3",
-        "Big Sky record"
+        "OFFICIAL",
+        "Team information"
       ],
       [
-        "—",
-        "Total offense / game"
+        "SCHEDULE",
+        "2026 schedule"
       ],
       [
-        "Idaho State",
-        "Program"
+        "NEWS",
+        "Latest coverage"
       ]
     ],
-    "historyTitle": "MONTANA VS. IDAHO STATE",
-    "historyText": "Official matchup history is available through the Griz game center for the current meeting.",
+    "historyTitle": "MONTANA VS. #21 IDAHO STATE",
+    "historyText": "Official matchup history is available through the Griz game center.",
     "historyRecord": "",
     "historyRecordLabel": "Series history",
     "historyLast": "",
     "historyLastScore": "",
-    "historyGames": [
-      [
-        "2026",
-        "NEXT CHAPTER",
-        "Pocatello, Idaho"
-      ]
-    ],
-    "historyUrl": "https://gogriz.com/game-center/6484",
+    "historyGames": [],
     "watch": [
       [
-        "Can Montana handle Idaho State's offense?",
-        "Idaho State is averaging — total yards per game."
-      ],
-      [
-        "Where is Idaho State most productive?",
-        "Current passing and rushing production: — pass / — rush yards per game."
-      ],
-      [
-        "Can Montana win the situational battle?",
-        "Current third-down figure: —; turnover margin: —."
+        "What should Montana watch against #21 Idaho State?",
+        "Use the latest official opponent schedule, stats and game film."
       ]
     ],
     "checklist": [
       [
-        "Quarterback play",
-        "Review Idaho State's current passing production and recent game film."
+        "Quarterback tendencies",
+        "Review #21 Idaho State's recent quarterback and offensive production."
       ],
       [
-        "Explosive offense",
-        "Track Idaho State's longest plays and scoring drives in the latest games."
+        "Explosive plays",
+        "Track #21 Idaho State's recent explosive runs and passes."
       ],
       [
-        "Run defense",
-        "Account for Idaho State's current rushing production."
+        "Third down",
+        "Check #21 Idaho State's current third-down profile."
       ],
       [
-        "Takeaways",
-        "Track the current turnover margin: —."
+        "Special teams",
+        "Review the opponent's latest special-teams results."
       ]
     ],
     "moreNumbers": [
       [
-        "PASSING",
-        "—",
-        "Idaho State passing yards per game"
+        "STATUS",
+        "UPDATING",
+        "Opponent data not yet available from ESPN"
       ],
       [
-        "TOTAL OFFENSE",
-        "—",
-        "Idaho State total yards per game"
+        "SCHEDULE",
+        "CURRENT",
+        "Official 2026 schedule"
       ],
       [
-        "RUSHING",
-        "—",
-        "Idaho State rushing yards per game"
-      ],
-      [
-        "POINTS",
-        "32.7",
-        "Idaho State points per game"
-      ],
-      [
-        "POINTS ALLOWED",
-        "22.1",
-        "Idaho State opponent points per game"
-      ],
-      [
-        "3RD DOWN",
-        "—",
-        "Idaho State third-down conversion rate"
+        "NEWS",
+        "LIVE",
+        "Latest opponent coverage"
       ]
     ],
-    "media": [
-      [
-        "HIGHLIGHTS",
-        "Idaho State 2026 Highlights",
-        "Recent game clips and team highlights",
-        "https://www.youtube.com/results?search_query=Idaho%20State%20football%202026%20highlights"
-      ],
-      [
-        "COACH TALK",
-        "Idaho State Press Conferences",
-        "Hear the opponent's coaches directly",
-        "https://www.youtube.com/results?search_query=Idaho%20State%20football%202026%20press%20conference"
-      ],
-      [
-        "RECENT GAME",
-        "Idaho State W vs. at Utah Tech",
-        "Full-game, recap and highlight video",
-        "https://www.youtube.com/results?search_query=Idaho%20State%20at%20Utah%20Tech%202026%20football"
-      ],
-      [
-        "RECENT GAME",
-        "Idaho State W vs. Portland State",
-        "Full-game, recap and highlight video",
-        "https://www.youtube.com/results?search_query=Idaho%20State%20Portland%20State%202026%20football"
-      ]
-    ],
+    "media": [],
     "resources": {
-      "official": "https://isubengals.com/sports/football",
-      "roster": "https://isubengals.com/sports/football/roster",
-      "stats": "https://isubengals.com/sports/football/stats/2026",
-      "schedule": "https://isubengals.com/sports/football/schedule/2026",
-      "coaches": "https://isubengals.com/sports/football/coaches",
-      "news": "https://isubengals.com/sports/football/news"
+      "official": "https://www.google.com/search?q=%2321%20Idaho%20State%20football",
+      "roster": "https://www.google.com/search?q=%2321%20Idaho%20State%20football/roster",
+      "stats": "https://www.google.com/search?q=%2321%20Idaho%20State%20football/stats/2026",
+      "schedule": "https://www.google.com/search?q=%2321%20Idaho%20State%20football/schedule/2026",
+      "coaches": "https://www.google.com/search?q=%2321%20Idaho%20State%20football/coaches",
+      "news": "https://www.google.com/search?q=%2321%20Idaho%20State%20football/news"
     },
-    "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-11-09T17:31:40.363283+00:00"
+    "source": "ESPN team feed / official opponent athletics site",
+    "updated": "2026-11-10T01:33:25.902241+00:00"
   }
 }
