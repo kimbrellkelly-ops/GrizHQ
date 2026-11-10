@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T02:49:47.731284+00:00",
+  "updated": "2026-11-10T10:36:32.750952+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -42,21 +42,6 @@
     },
     {
       "title": "First look: No. 12 Montana Grizzlies vs. No. 21 Idaho State Bengals",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_95f752c8-418e-58c1-98fc-ad467a62eb9f.html",
-      "date": "Nov. 9, 2026",
-      "published_at": "2026-11-09T23:30:00+00:00",
-      "description": "Montana will look to push its winning streak to three games when it welcomes in Idaho State for a Top 25 showdown.",
-      "source": "Missoulian",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/f8/6f8be076-5169-5165-9c41-c6edf5d802f8/6af2312641a3e.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/f8/6f8be076-5169-5165-9c41-c6edf5d802f8/6af2312641a3e.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "First look: No. 12 Montana Grizzlies vs. No. 21 Idaho State Bengals",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-12-montana-grizzlies-vs-no-21-idaho-state-bengals/article_5083f7d0-710e-4bdc-8f93-62ac32686852.html",
       "date": "Nov. 9, 2026",
       "published_at": "2026-11-09T23:30:00+00:00",
@@ -69,6 +54,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/08/5083f7d0-710e-4bdc-8f93-62ac32686852/6af1428daea2e.preview.jpg?crop=1762%2C925%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "First look: No. 12 Montana Grizzlies vs. No. 21 Idaho State Bengals",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_95f752c8-418e-58c1-98fc-ad467a62eb9f.html",
+      "date": "Nov. 9, 2026",
+      "published_at": "2026-11-09T23:30:00+00:00",
+      "description": "Montana will look to push its winning streak to three games when it welcomes in Idaho State for a Top 25 showdown.",
+      "source": "Missoulian",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/f8/6f8be076-5169-5165-9c41-c6edf5d802f8/6af2312641a3e.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/f8/6f8be076-5169-5165-9c41-c6edf5d802f8/6af2312641a3e.image.jpg?resize=300%2C200"
     },
     {
       "title": "Montana Grizzlies RB Eli Gillman sweeps trio of weekly awards",
