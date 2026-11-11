@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T23:23:19.557473+00:00",
+  "updated": "2026-11-11T02:53:26.337737+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz host Bengals in pivotal top 25 showdown",
+      "url": "https://gogriz.com/news/2026/11/10/football-griz-host-bengals-in-pivotal-top-25-showdown",
+      "date": "Nov. 11, 2026",
+      "published_at": "2026-11-11T00:42:00+00:00",
+      "description": "Full of mojo following a historic day and a big beat-down of Portland State the Montana Grizzlies are back home for a second straight week looking to go on a run at the business end of the season as Idaho State pays a visit.",
+      "source": "GoGriz",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/7/20261107_montanavsportlandstate_189.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/7/20261107_montanavsportlandstate_189.jpg"
+    },
     {
       "title": "Griz OL Dyllan Drummond adjusting to Montana winter, enjoying season",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/griz-ol-dyllan-drummond-adjusting-to-montana-winter-enjoying-season/article_a0c819db-d992-4b26-95f7-69843988bd9e.html",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/21/32110b57-1a4d-463d-98ae-c55f986d01e5/6a4ed26645163.preview.jpg?crop=1849%2C971%2C0%2C74&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "3 questions: No. 7 Grizzlies seek rebound hosting Idaho Vandals",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-7-grizzlies-seek-rebound-hosting-idaho-vandals/article_7a0368bd-5b02-4871-9b8e-2b26568a311e.html",
-      "date": "Oct. 16, 2026",
-      "published_at": "2026-10-16T18:00:00+00:00",
-      "description": "3 questions: No. 7 Grizzlies seek rebound hosting Idaho Vandals",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/a0/7a0368bd-5b02-4871-9b8e-2b26568a311e/6acefe659519e.preview.jpg?crop=1760%2C924%2C0%2C33&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/a0/7a0368bd-5b02-4871-9b8e-2b26568a311e/6acefe659519e.preview.jpg?crop=1760%2C924%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
