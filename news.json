@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T13:00:57.787500+00:00",
+  "updated": "2026-11-12T20:42:06.470064+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,66 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "WATCH – Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on Eli Gillman, Idaho State & Senior Day",
+      "url": "https://skylinesportsmt.com/watch-brawl-of-the-wild-coaches-corner-montana-head-coach-bobby-kennedy-on-eli-gillman-idaho-state-senior-day/",
+      "date": "Nov. 12, 2026",
+      "published_at": "2026-11-12T16:00:00+00:00",
+      "description": "November 12, 2026 WATCH – Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on Eli Gillman, Idaho State & Senior Day",
+      "source": "Skyline Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/Eli-Gillman-carries-the-ball-wide-Brooks-Nuanez.jpg",
+      "is_video": true,
+      "youtube_id": "PANFjVt7q5k",
+      "video_url": "https://www.youtube.com/watch?v=PANFjVt7q5k",
+      "video_thumbnail": "https://i.ytimg.com/vi/PANFjVt7q5k/hqdefault.jpg"
+    },
+    {
+      "title": "Big Sky Conference football picks: 406 MT Sports panel forecasts big games for Griz, Cats",
+      "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/big-sky-conference-football-picks-406-mt-sports-panel-forecasts-big-games-for-griz-cats/article_f4891963-8682-4cbb-8061-7b14e395ff62.html",
+      "date": "Nov. 12, 2026",
+      "published_at": "2026-11-12T15:00:00+00:00",
+      "description": "Big Sky Conference football picks: 406 MT Sports panel forecasts big games for Griz, Cats",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/48/f4891963-8682-4cbb-8061-7b14e395ff62/6af081832ef28.preview.jpg?crop=1371%2C720%2C184%2C136&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/48/f4891963-8682-4cbb-8061-7b14e395ff62/6af081832ef28.preview.jpg?crop=1371%2C720%2C184%2C136&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Tenacious Titus: How Grizzlies TE Titus Rohrer went from small town to big time",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/tenacious-titus-how-grizzlies-te-titus-rohrer-went-from-small-town-to-big-time/article_a20ed795-12db-47a0-bea1-693e50edb1a5.html",
+      "date": "Nov. 12, 2026",
+      "published_at": "2026-11-12T14:00:00+00:00",
+      "description": "Tenacious Titus: How Grizzlies TE Titus Rohrer went from small town to big time",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/20/a20ed795-12db-47a0-bea1-693e50edb1a5/6af244266d830.preview.jpg?crop=1606%2C843%2C0%2C30&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/20/a20ed795-12db-47a0-bea1-693e50edb1a5/6af244266d830.preview.jpg?crop=1606%2C843%2C0%2C30&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Big Sky Now: Week 10 recap, Bobcats survive 3 OTs, Gillman breaks Kupp’s record, and Week 11 preview",
+      "url": "https://dailyinterlake.com/news/2026/nov/12/big-sky-now-week-10-recap-bobcats-survive-3-ots-gillman-breaks-kupps-record-and-week-11-preview/",
+      "date": "Nov. 12, 2026",
+      "published_at": "2026-11-12T10:30:00+00:00",
+      "description": "Updated 3 hours, 9 minutes ago Big Sky Now: Week 10 recap, Bobcats survive 3 OTs, Gillman breaks Kupp’s record, and Week 11 preview Montana State survives Idaho State in triple overtime, Eli Gillman breaks Cooper Kupp’s Big Sky record, and",
+      "source": "Daily Inter Lake",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/11/12/bsn_youtube_cover_1111_r1200x630.jpg?b7d505e466ff31ef2a911eceee85296b69915698",
+      "is_video": true,
+      "youtube_id": "1R56HRvd-y4",
+      "video_url": "https://www.youtube.com/watch?v=1R56HRvd-y4",
+      "video_thumbnail": "https://i.ytimg.com/vi/1R56HRvd-y4/hqdefault.jpg"
+    },
     {
       "title": "Talkin’ Schmidt: Eli Gillman deserves a statue, Griz vs. Idaho State & Oregon State sucks",
       "url": "https://skylinesportsmt.com/talkin-schmidt-eli-gillman-deserves-a-statue-griz-vs-idaho-state-oregon-state-sucks/",
@@ -1449,66 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/50/1500ee90-f931-523f-abb9-36d835f1ca1e/6ad41a9755e2e.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "After Idaho loss, Griz head coach Bobby Kennedy takes blame, stands by staff",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_23b2b1a1-c154-546e-9a54-f4354d87eec0.html",
-      "date": "Oct. 18, 2026",
-      "published_at": "2026-10-18T14:00:00+00:00",
-      "description": "The Grizzlies lost their second game in a row for the first time since 2022.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/f3/ef3a3bad-5276-509a-bf2c-5f4d29eba7dd/6ad41a8bc3bfc.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/f3/ef3a3bad-5276-509a-bf2c-5f4d29eba7dd/6ad41a8bc3bfc.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "3 takeaways: No. 7 Grizzlies enter bye week on rare 2-game skid",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-7-grizzlies-enter-bye-week-on-rare-2-game-skid/article_e01f1ff8-7ac7-41af-a0af-0b8f7db19406.html",
-      "date": "Oct. 18, 2026",
-      "published_at": "2026-10-18T12:00:00+00:00",
-      "description": "3 takeaways: No. 7 Grizzlies enter bye week on rare 2-game skid",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/e/01/e01f1ff8-7ac7-41af-a0af-0b8f7db19406/6ad447a8dd0f5.preview.jpg?crop=1606%2C843%2C0%2C30&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/e/01/e01f1ff8-7ac7-41af-a0af-0b8f7db19406/6ad447a8dd0f5.preview.jpg?crop=1606%2C843%2C0%2C30&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Idaho earns second Top 10 win in three weeks, thwarts Griz anniversary celebration with 42-35 victory",
-      "url": "https://skylinesportsmt.com/idaho-earns-second-top-10-win-in-three-weeks-thwarts-griz-anniversary-celebration-with-42-35-victory/",
-      "date": "Oct. 18, 2026",
-      "published_at": "2026-10-18T06:17:54+00:00",
-      "description": "October 18, 2026 Idaho earns second Top 10 win in three weeks, thwarts Griz anniversary celebration with 42-35 victory",
-      "source": "Skyline Sports",
-      "badge": "GAME STORY",
-      "short": "GAME S",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Idaho_Stein_celebration.jpg",
-      "is_video": true,
-      "youtube_id": "fgRJrf_kom0",
-      "video_url": "https://www.youtube.com/watch?v=fgRJrf_kom0",
-      "video_thumbnail": "https://i.ytimg.com/vi/fgRJrf_kom0/hqdefault.jpg"
-    },
-    {
-      "title": "Montana Football Hall of Fame: Kollar established MSU defensive line tradition early on",
-      "url": "https://skylinesportsmt.com/montana-football-hall-of-fame-kollar-established-msu-defensive-line-tradition-early-on/",
-      "date": "Oct. 18, 2026",
-      "published_at": "2026-10-18T04:59:00+00:00",
-      "description": "October 17, 2026 Montana Football Hall of Fame: Kollar established MSU defensive line tradition early on",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2018/03/Bill-Kollar-addresses-football-team.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2018/03/Bill-Kollar-addresses-football-team.jpg"
     }
   ]
 }
