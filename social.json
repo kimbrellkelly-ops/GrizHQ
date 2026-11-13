@@ -1,6 +1,71 @@
 {
-  "updated": "2026-11-13T00:36:37.951238+00:00",
+  "updated": "2026-11-13T07:17:34.728701+00:00",
   "posts": [
+    {
+      "title": "~ \"It's kind of like a broken record. Every quarterback's best games are seemingly against the Griz.",
+      "url": "https://www.youtube.com/watch?v=r3FiRk-aWJM",
+      "image": "https://i.ytimg.com/vi/r3FiRk-aWJM/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Nov. 13, 2026",
+      "platform": "youtube",
+      "youtube_id": "r3FiRk-aWJM",
+      "published_at": "2026-11-13T00:00:00+00:00"
+    },
+    {
+      "title": "Ridin' with Rider - Montana State's triple-OT escape, the 2-point gamble & the road to Cat-Griz",
+      "url": "https://www.youtube.com/watch?v=jMkciRYA4xk",
+      "image": "https://i.ytimg.com/vi/jMkciRYA4xk/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Nov. 13, 2026",
+      "platform": "youtube",
+      "youtube_id": "jMkciRYA4xk",
+      "published_at": "2026-11-13T00:00:00+00:00"
+    },
+    {
+      "title": "Griz Star of the Week: Montana RB Eli Gillman | Tootell & Nuanez on ESPN Montana",
+      "url": "https://www.youtube.com/watch?v=0lAdmG8GH6E",
+      "image": "https://i.ytimg.com/vi/0lAdmG8GH6E/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Nov. 12, 2026",
+      "platform": "youtube",
+      "youtube_id": "0lAdmG8GH6E",
+      "published_at": "2026-11-12T00:00:00+00:00"
+    },
+    {
+      "title": "Big Sky Breakdown: UC Davis coach Tim Plough on the Idaho showdown in the Kibbie Dome & the Big Sky",
+      "url": "https://www.youtube.com/watch?v=GrDncctqK1s",
+      "image": "https://i.ytimg.com/vi/GrDncctqK1s/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Nov. 12, 2026",
+      "platform": "youtube",
+      "youtube_id": "GrDncctqK1s",
+      "published_at": "2026-11-12T00:00:00+00:00"
+    },
+    {
+      "title": "Northern Colorado HC Ed Lamb previews Montana State | Tootell & Nuanez on ESPN Montana",
+      "url": "https://www.youtube.com/watch?v=A_zK615Dm9w",
+      "image": "https://i.ytimg.com/vi/A_zK615Dm9w/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Nov. 12, 2026",
+      "platform": "youtube",
+      "youtube_id": "A_zK615Dm9w",
+      "published_at": "2026-11-12T00:00:00+00:00"
+    },
     {
       "title": "The FCS Herd with Sam Herder - Playoff committee top 10, Eli Gillman's Payton case & the Big Sky bub",
       "url": "https://www.youtube.com/watch?v=Edv7rrBgvKc",
