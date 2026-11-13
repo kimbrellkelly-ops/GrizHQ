@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13T01:29:05.214229+00:00",
+  "updated": "2026-11-13T08:29:16.951061+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Big Sky Breakdown: Idaho State head coach Cody Hawkins on the triple-OT loss to Montana State, Eli Gillman & Saturday at Montana",
+      "url": "https://skylinesportsmt.com/big-sky-breakdown-idaho-state-head-coach-cody-hawkins-on-the-triple-ot-loss-to-montana-state-eli-gillman-saturday-at-montana/",
+      "date": "Nov. 13, 2026",
+      "published_at": "2026-11-13T05:47:14+00:00",
+      "description": "November 12, 2026 Big Sky Breakdown: Idaho State head coach Cody Hawkins on the triple-OT loss to Montana State, Eli Gillman & Saturday at Montana",
+      "source": "Skyline Sports",
+      "badge": "ANALYSIS",
+      "short": "ANALYS",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/Eli-Gillman-carries-the-ball-wide-Brooks-Nuanez.jpg",
+      "is_video": true,
+      "youtube_id": "-hJTCcSVbwc",
+      "video_url": "https://www.youtube.com/watch?v=-hJTCcSVbwc",
+      "video_thumbnail": "https://i.ytimg.com/vi/-hJTCcSVbwc/hqdefault.jpg"
+    },
     {
       "title": "WATCH – Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on Eli Gillman, Idaho State & Senior Day",
       "url": "https://skylinesportsmt.com/watch-brawl-of-the-wild-coaches-corner-montana-head-coach-bobby-kennedy-on-eli-gillman-idaho-state-senior-day/",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/b/67/b67c41b9-c90f-4a18-a8b9-1011d52ce98d/6ad4430b23a3c.image.jpg?resize=300%2C214"
-    },
-    {
-      "title": "3 takeaways: No. 7 Grizzlies enter bye week on rare 2-game skid",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_ea459b17-38ca-5d30-af04-cc13f1c94751.html",
-      "date": "Oct. 18, 2026",
-      "published_at": "2026-10-18T15:00:00+00:00",
-      "description": "\"We have to stay together as a team and we can't moan and complain.\" —Grizzlies head coach Bobby Kennedy after back-to-back losses",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/50/1500ee90-f931-523f-abb9-36d835f1ca1e/6ad41a9755e2e.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/1/50/1500ee90-f931-523f-abb9-36d835f1ca1e/6ad41a9755e2e.image.jpg?resize=300%2C200"
     }
   ]
 }
