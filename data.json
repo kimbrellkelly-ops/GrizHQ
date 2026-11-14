@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14T18:03:53.781607+00:00",
+  "updated": "2026-11-14T22:26:09.409430+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "7-3",
@@ -364,7 +364,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-14T18:04:36.908099+00:00"
+    "checked_at": "2026-11-14T22:27:01.239956+00:00"
   },
   "resources": [
     {
@@ -2944,7 +2944,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-14T18:03:59.840161+00:00",
+    "source_checked_at": "2026-11-14T22:26:16.012460+00:00",
     "team_summary": [
       {
         "value": "7–3",
@@ -28197,6 +28197,6 @@
       "news": "https://www.google.com/search?q=%2321%20Idaho%20State%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-11-14T18:03:59.840237+00:00"
+    "updated": "2026-11-14T22:26:16.012541+00:00"
   }
 }
