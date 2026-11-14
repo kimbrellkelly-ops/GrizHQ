@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14T02:22:55.230103+00:00",
+  "updated": "2026-11-14T09:11:35.874592+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,36 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Montana Lady Griz grounded by Houston, lose 3rd in a row",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-lady-griz-grounded-by-houston-lose-3rd-in-a-row/article_65e45fe3-1ef0-415a-85b8-7e01f7c68946.html",
+      "date": "Nov. 14, 2026",
+      "published_at": "2026-11-14T05:00:00+00:00",
+      "description": "Montana Lady Griz grounded by Houston, lose 3rd in a row",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/5e/65e45fe3-1ef0-415a-85b8-7e01f7c68946/6af7e86580246.preview.jpg?crop=657%2C345%2C0%2C10",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/5e/65e45fe3-1ef0-415a-85b8-7e01f7c68946/6af7e86580246.preview.jpg?crop=657%2C345%2C0%2C10"
+    },
+    {
+      "title": "ETERNAL ELI: Gillman’s loyalty makes him a Griz legend forever",
+      "url": "https://skylinesportsmt.com/eternal-eli-gillmans-loyalty-makes-him-a-griz-legend-forever/",
+      "date": "Nov. 14, 2026",
+      "published_at": "2026-11-14T00:45:00+00:00",
+      "description": "November 13, 2026 ETERNAL ELI: Gillman’s loyalty makes him a Griz legend forever",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/Eli-Gillman-Senior-Spotlight-feature-1560x940-full-body.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/11/Eli-Gillman-Senior-Spotlight-feature-1560x940-full-body.jpg"
+    },
     {
       "title": "3 questions: No. 12 Grizzlies host No. 21 Idaho State in massive showdown",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-12-grizzlies-host-no-21-idaho-state-in-massive-showdown/article_30761a97-5deb-44ad-a9e6-78ef057b6da0.html",
@@ -1479,36 +1509,6 @@
       "youtube_id": "C9dkyy--qkU",
       "video_url": "https://www.youtube.com/watch?v=C9dkyy--qkU",
       "video_thumbnail": "https://i.ytimg.com/vi/C9dkyy--qkU/hqdefault.jpg"
-    },
-    {
-      "title": "Cussin’ & Discussin’ – Former Griz linebacker Adam Boomer",
-      "url": "https://skylinesportsmt.com/cussin-discussin-former-griz-linebacker-adam-boomer/",
-      "date": "Oct. 20, 2026",
-      "published_at": "2026-10-20T02:43:43+00:00",
-      "description": "October 19, 2026 Cussin’ & Discussin’ – Former Griz linebacker Adam Boomer",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/06/Cussin--scaled.png",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/06/Cussin--scaled.png"
-    },
-    {
-      "title": "Week 7: No. 7 Montana Grizzlies fall to Idaho",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-7-no-7-montana-grizzlies-fall-to-idaho/collection_b2a5ed65-665c-4a82-b5de-836dba9bdf00.html",
-      "date": "Oct. 18, 2026",
-      "published_at": "2026-10-18T20:00:00+00:00",
-      "description": "Week 7: No. 7 Montana Grizzlies fall to Idaho",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/2a/b2a5ed65-665c-4a82-b5de-836dba9bdf00/6ad454542fef5.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/2a/b2a5ed65-665c-4a82-b5de-836dba9bdf00/6ad454542fef5.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
