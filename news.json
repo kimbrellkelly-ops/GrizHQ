@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14T20:14:15.827619+00:00",
+  "updated": "2026-11-14T23:55:21.573662+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz Star of the Week: Montana running back Eli Gillman",
+      "url": "https://skylinesportsmt.com/griz-star-of-the-week-montana-running-back-eli-gillman/",
+      "date": "Nov. 14, 2026",
+      "published_at": "2026-11-14T20:04:42+00:00",
+      "description": "November 14, 2026 Griz Star of the Week: Montana running back Eli Gillman",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Eli-Gillman-carries-the-ball-Brooks-Nuanez.jpg",
+      "is_video": true,
+      "youtube_id": "0lAdmG8GH6E",
+      "video_url": "https://www.youtube.com/watch?v=0lAdmG8GH6E",
+      "video_thumbnail": "https://i.ytimg.com/vi/0lAdmG8GH6E/hqdefault.jpg"
+    },
     {
       "title": "Montana Lady Griz grounded by Houston, lose 3rd in a row",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-lady-griz-grounded-by-houston-lose-3rd-in-a-row/article_65e45fe3-1ef0-415a-85b8-7e01f7c68946.html",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Superales-leaps-over-Griz-tackler-Brooks-Nuanez-scaled.jpg"
-    },
-    {
-      "title": "Talkin’ Schmidt: Monologue of the century after Griz lose to Idaho on 40th anniversary of WA-Griz",
-      "url": "https://skylinesportsmt.com/talkin-schmidt-monologue-of-the-century-after-griz-lose-to-idaho-on-40th-anniversary-of-wa-griz/",
-      "date": "Oct. 21, 2026",
-      "published_at": "2026-10-21T23:03:46+00:00",
-      "description": "October 21, 2026 Talkin’ Schmidt: Monologue of the century after Griz lose to Idaho on 40th anniversary of WA-Griz",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/IMG_0162-1-scaled.png",
-      "is_video": true,
-      "youtube_id": "C9dkyy--qkU",
-      "video_url": "https://www.youtube.com/watch?v=C9dkyy--qkU",
-      "video_thumbnail": "https://i.ytimg.com/vi/C9dkyy--qkU/hqdefault.jpg"
     }
   ]
 }
