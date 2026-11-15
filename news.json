@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T03:43:33.696648+00:00",
+  "updated": "2026-11-15T11:30:53.449921+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,66 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz score in all three phases to beat Bengals 38-30",
+      "url": "https://gogriz.com/news/2026/11/15/football-griz-score-in-all-three-phases-to-beat-bengals-38-30",
+      "date": "Nov. 15, 2026",
+      "published_at": "2026-11-15T09:40:00+00:00",
+      "description": "MISSOULA - The Montana Grizzlies earned a hard-fought victory over Idaho State in front of an effervescent crowd at Washington-Grizzly Stadium on Saturday night, scoring on offense, defense and special teams to beat the Bengals 38-30.",
+      "source": "GoGriz",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/15/20261114_montanavsidahostate_250.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/15/20261114_montanavsidahostate_250.jpg"
+    },
+    {
+      "title": "Recap: Return TDs help No. 12 Grizzlies outduel No. 21 Idaho State",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-football-vs-idaho-state-recap/article_1f7f091c-75ce-45f0-8692-5ed3783d3929.html",
+      "date": "Nov. 15, 2026",
+      "published_at": "2026-11-15T06:58:00+00:00",
+      "description": "Recap: Return TDs help No. 12 Grizzlies outduel No. 21 Idaho State",
+      "source": "406 MT Sports",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/f7/1f7f091c-75ce-45f0-8692-5ed3783d3929/6af96dacdf620.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/f7/1f7f091c-75ce-45f0-8692-5ed3783d3929/6af96dacdf620.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Grizzlies take the field for Top 25 showdown vs. Idaho State",
+      "url": "https://406mtsports.com/video/grizzlies-take-the-field-for-top-25-showdown-vs-idaho-state/video_a86851a2-2d7b-5067-8915-438c3af82eb1.html",
+      "date": "Nov. 15, 2026",
+      "published_at": "2026-11-15T03:37:00+00:00",
+      "description": "Grizzlies take the field for Top 25 showdown vs. Idaho State",
+      "source": "406 MT Sports",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/86/a86851a2-2d7b-5067-8915-438c3af82eb1/6af92af1cd9ae.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": true,
+      "youtube_id": "",
+      "video_url": "https://406mtsports.com/video/grizzlies-take-the-field-for-top-25-showdown-vs-idaho-state/video_a86851a2-2d7b-5067-8915-438c3af82eb1.html",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/86/a86851a2-2d7b-5067-8915-438c3af82eb1/6af92af1cd9ae.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Former Grizzlies WR Keelan White raises No. 37 legacy flag",
+      "url": "https://406mtsports.com/video/former-grizzlies-wr-keelan-white-raises-no-37-legacy-flag/video_a1b09fab-97a9-5cd2-9a3f-c2ee5c67828f.html",
+      "date": "Nov. 15, 2026",
+      "published_at": "2026-11-15T03:33:00+00:00",
+      "description": "Former Grizzlies WR Keelan White raises No. 37 legacy flag",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/1b/a1b09fab-97a9-5cd2-9a3f-c2ee5c67828f/6af92af42c278.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": true,
+      "youtube_id": "",
+      "video_url": "https://406mtsports.com/video/former-grizzlies-wr-keelan-white-raises-no-37-legacy-flag/video_a1b09fab-97a9-5cd2-9a3f-c2ee5c67828f.html",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/1b/a1b09fab-97a9-5cd2-9a3f-c2ee5c67828f/6af92af42c278.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Griz Star of the Week: Montana running back Eli Gillman",
       "url": "https://skylinesportsmt.com/griz-star-of-the-week-montana-running-back-eli-gillman/",
@@ -1449,66 +1509,6 @@
       "youtube_id": "5SbnO_3rqTU",
       "video_url": "https://www.youtube.com/watch?v=5SbnO_3rqTU",
       "video_thumbnail": "https://i.ytimg.com/vi/5SbnO_3rqTU/hqdefault.jpg"
-    },
-    {
-      "title": "Cussin’ & Discussin’ – Former Griz All-American OL and NFL veteran Cory Procter",
-      "url": "https://skylinesportsmt.com/cussin-discussin-former-griz-all-american-ol-and-nfl-veteran-cory-procter/",
-      "date": "Oct. 27, 2026",
-      "published_at": "2026-10-27T00:00:00+00:00",
-      "description": "October 26, 2026 Cussin’ & Discussin’ – Former Griz All-American OL and NFL veteran Cory Procter",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/06/Cussin--scaled.png",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/06/Cussin--scaled.png"
-    },
-    {
-      "title": "First look: No. 14 Montana Grizzlies at Eastern Washington Eagles",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-14-montana-grizzlies-at-eastern-washington-eagles/article_7efb7992-b9ad-44a4-9380-935cda12f3fb.html",
-      "date": "Oct. 26, 2026",
-      "published_at": "2026-10-26T22:30:00+00:00",
-      "description": "First look: No. 14 Montana Grizzlies at Eastern Washington Eagles",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/ef/7efb7992-b9ad-44a4-9380-935cda12f3fb/6adc1f4d85c47.preview.jpg?crop=1761%2C925%2C2%2C96&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/7/ef/7efb7992-b9ad-44a4-9380-935cda12f3fb/6adc1f4d85c47.preview.jpg?crop=1761%2C925%2C2%2C96&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Montana's Paine, Kennedy, Williams preview Eastern Washington",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/video_896fc234-f866-5fd2-b1e9-c347ec8a03f3.html",
-      "date": "Oct. 26, 2026",
-      "published_at": "2026-10-26T21:18:00+00:00",
-      "description": "Montana running back Dylan Paine (left), head coach Bobby Kennedy (center) and linebacker Tanner Williams (right) look back on the bye week and preview the upcoming game against Eastern Washington during the Grizzlies' weekly press conferen",
-      "source": "Missoulian",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/96/896fc234-f866-5fd2-b1e9-c347ec8a03f3/6adfd7f8e5a00.image.jpg?resize=300%2C169",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/video_896fc234-f866-5fd2-b1e9-c347ec8a03f3.html",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/8/96/896fc234-f866-5fd2-b1e9-c347ec8a03f3/6adfd7f8e5a00.image.jpg?resize=300%2C169"
-    },
-    {
-      "title": "History of the wrong kind: Inside the Griz defense’s historic slide",
-      "url": "https://skylinesportsmt.com/history-of-the-wrong-kind-inside-the-griz-defenses-historic-slide/",
-      "date": "Oct. 25, 2026",
-      "published_at": "2026-10-25T15:00:40+00:00",
-      "description": "October 25, 2026 History of the wrong kind: Inside the Griz defense’s historic slide",
-      "source": "Skyline Sports",
-      "badge": "ANALYSIS",
-      "short": "ANALYS",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Superales-leaps-over-Griz-tackler-Brooks-Nuanez-scaled.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Superales-leaps-over-Griz-tackler-Brooks-Nuanez-scaled.jpg"
     }
   ]
 }
