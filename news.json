@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T17:56:45.860183+00:00",
+  "updated": "2026-11-15T22:19:06.569829+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz survive Idaho State slugfest 38-30, turn eyes toward Brawl with title on the line",
+      "url": "https://skylinesportsmt.com/griz-survive-idaho-state-slugfest-38-30-turn-eyes-toward-brawl-with-title-on-the-line/",
+      "date": "Nov. 15, 2026",
+      "published_at": "2026-11-15T18:59:16+00:00",
+      "description": "November 15, 2026 Griz survive Idaho State slugfest 38-30, turn eyes toward Brawl with title on the line",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/IMG_5914.jpeg",
+      "is_video": true,
+      "youtube_id": "vxwaod0seKQ",
+      "video_url": "https://www.youtube.com/watch?v=vxwaod0seKQ",
+      "video_thumbnail": "https://i.ytimg.com/vi/vxwaod0seKQ/hqdefault.jpg"
+    },
     {
       "title": "WATCH – Montana postgame press conference – Bobby Kennedy, Landon Ransom-Goelz & Devin Dunn after 38-30 win over Idaho State",
       "url": "https://skylinesportsmt.com/watch-montana-postgame-press-conference-bobby-kennedy-landon-ransom-goelz-devin-dunn-after-38-30-win-over-idaho-state/",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/27/2027_Football_Schedule_-_Web.jpg"
-    },
-    {
-      "title": "First look: No. 14 Montana Grizzlies at Eastern Washington Eagles",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_872376d8-55a2-54e2-8186-70b41f0cf143.html",
-      "date": "Oct. 27, 2026",
-      "published_at": "2026-10-27T17:15:00+00:00",
-      "description": "The Grizzlies head to Eastern Washington as they return from their bye week looking to snap a two-game losing streak.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/a/c8/ac871b19-487d-5c3c-92aa-9be5b080ab44/6ad41a91eb73c.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/a/c8/ac871b19-487d-5c3c-92aa-9be5b080ab44/6ad41a91eb73c.image.jpg?resize=300%2C200"
     }
   ]
 }
