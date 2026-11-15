@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T10:56:02.416652+00:00",
+  "updated": "2026-11-15T17:43:14.013777+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "8-3",
@@ -364,7 +364,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-15T10:56:40.722045+00:00"
+    "checked_at": "2026-11-15T17:44:11.612053+00:00"
   },
   "resources": [
     {
@@ -2945,7 +2945,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-15T10:56:08.475958+00:00",
+    "source_checked_at": "2026-11-15T17:43:20.428026+00:00",
     "team_summary": [
       {
         "value": "8–3",
@@ -27670,10 +27670,10 @@
     ]
   },
   "latest_press_conference": {
-    "title": "WATCH – Montana State head coach Brent Vigen weekly press conference previewing Northern Colorado",
-    "date": "Tue, 10 Nov 2026 01:49:53 +0000",
-    "url": "https://skylinesportsmt.com/watch-montana-state-head-coach-brent-vigen-weekly-press-conference-previewing-northern-colorado/",
-    "youtube_id": "QIr_EGdwyYY"
+    "title": "LISTEN – Montana State postgame press conference – Brent Vigen & Justin Lamson after 31-21 win at Northern Colorado",
+    "date": "Sun, 15 Nov 2026 15:47:52 +0000",
+    "url": "https://skylinesportsmt.com/listen-montana-state-postgame-press-conference-brent-vigen-justin-lamson-after-31-21-win-at-northern-colorado/",
+    "youtube_id": ""
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -28288,6 +28288,6 @@
       "news": "https://msubobcats.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-11-15T10:56:12.104310+00:00"
+    "updated": "2026-11-15T17:43:25.520795+00:00"
   }
 }
