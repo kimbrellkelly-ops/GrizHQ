@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T22:19:06.569829+00:00",
+  "updated": "2026-11-16T02:17:28.465122+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,36 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "For Grizzlies coach Bobby Kennedy, the Brawl 'rivals any game that I've been in'",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/for-grizzlies-coach-bobby-kennedy-the-brawl-rivals-any-game-that-ive-been-in/article_f9cfe89a-9c5c-457d-8ef1-f51438f801d3.html",
+      "date": "Nov. 15, 2026",
+      "published_at": "2026-11-15T23:00:00+00:00",
+      "description": "For Grizzlies coach Bobby Kennedy, the Brawl 'rivals any game that I've been in'",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/9c/f9cfe89a-9c5c-457d-8ef1-f51438f801d3/6af96b648e12c.preview.jpg?crop=1475%2C775%2C105%2C285&resize=1200%2C631&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/9c/f9cfe89a-9c5c-457d-8ef1-f51438f801d3/6af96b648e12c.preview.jpg?crop=1475%2C775%2C105%2C285&resize=1200%2C631&order=crop%2Cresize"
+    },
+    {
+      "title": "Week 11: No. 12 Montana Grizzlies outduel No. 21 Idaho State",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-11-no-12-montana-grizzlies-outduel-no-21-idaho-state/collection_828f9693-4a98-4745-9d61-556bd474d17c.html",
+      "date": "Nov. 15, 2026",
+      "published_at": "2026-11-15T22:00:00+00:00",
+      "description": "Week 11: No. 12 Montana Grizzlies outduel No. 21 Idaho State",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/28/828f9693-4a98-4745-9d61-556bd474d17c/6af96be3997b9.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/28/828f9693-4a98-4745-9d61-556bd474d17c/6af96be3997b9.preview.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Griz survive Idaho State slugfest 38-30, turn eyes toward Brawl with title on the line",
       "url": "https://skylinesportsmt.com/griz-survive-idaho-state-slugfest-38-30-turn-eyes-toward-brawl-with-title-on-the-line/",
@@ -54,6 +84,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/a7/6a771cf3-69c9-488f-baf6-976d58f403f9/6af999a18c870.preview.jpg?crop=1171%2C615%2C352%2C22"
+    },
+    {
+      "title": "Versatility, well-rounded skill set helped Boddie go from Bremerton to Bozeman to the Broncos",
+      "url": "https://skylinesportsmt.com/versatility-well-rounded-skill-set-helped-boddie-go-from-bremerton-to-bozeman-to-the-broncos/",
+      "date": "Nov. 15, 2026",
+      "published_at": "2026-11-15T12:00:00+00:00",
+      "description": "Montana Football Hall of Fame Versatility, well-rounded skill set helped Boddie go from Bremerton to Bozeman to the Broncos November 15, 2026",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/Tony-Boddie-featured.jpg",
+      "is_video": true,
+      "youtube_id": "GutU-UbbOYw",
+      "video_url": "https://www.youtube.com/watch?v=GutU-UbbOYw",
+      "video_thumbnail": "https://i.ytimg.com/vi/GutU-UbbOYw/hqdefault.jpg"
     },
     {
       "title": "Griz score in all three phases to beat Bengals 38-30",
@@ -1464,51 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/f0/df054713-f01e-42b5-a50c-5fbef28eff3c/6ae13570ca8b2.preview.jpg?crop=1618%2C850%2C0%2C43&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Billings West's Tyreke Jones commits to Montana football",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_2c3c53b0-5e8f-5e62-bd17-1d5664566399.html",
-      "date": "Oct. 28, 2026",
-      "published_at": "2026-10-28T00:30:00+00:00",
-      "description": "Jones is the third Billings West football player in the 2027 recruiting class to commit to the Griz.",
-      "source": "Missoulian",
-      "badge": "RECRUITING",
-      "short": "RECRUI",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/ff/effecb5e-8e20-5685-969e-56fb7c5ca92e/6ae1493b73593.image.jpg?resize=300%2C229",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/e/ff/effecb5e-8e20-5685-969e-56fb7c5ca92e/6ae1493b73593.image.jpg?resize=300%2C229"
-    },
-    {
-      "title": "Billings West's Tyreke Jones discusses commitment to Montana football",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/billings-wests-tyreke-jones-discusses-commitment-to-montana-football/video_a30a0a5c-3ced-5978-9b62-3c474e156d6b.html",
-      "date": "Oct. 27, 2026",
-      "published_at": "2026-10-27T23:53:00+00:00",
-      "description": "Billings West's Tyreke Jones discusses commitment to Montana football",
-      "source": "406 MT Sports",
-      "badge": "RECRUITING",
-      "short": "RECRUI",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/30/a30a0a5c-3ced-5978-9b62-3c474e156d6b/6ae13bf0ac4e5.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/billings-wests-tyreke-jones-discusses-commitment-to-montana-football/video_a30a0a5c-3ced-5978-9b62-3c474e156d6b.html",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/30/a30a0a5c-3ced-5978-9b62-3c474e156d6b/6ae13bf0ac4e5.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "2027 Griz Football Schedule Finalized",
-      "url": "https://gogriz.com/news/2026/10/27/2027-griz-football-schedule-finalized",
-      "date": "Oct. 27, 2026",
-      "published_at": "2026-10-27T19:19:00+00:00",
-      "description": "MISSOULA - Montana's 2027 football schedule has now been finalized with the Big Sky Conference announcing its league matrix for all 13 member programs on Tuesday.",
-      "source": "GoGriz",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/27/2027_Football_Schedule_-_Web.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/27/2027_Football_Schedule_-_Web.jpg"
     }
   ]
 }
