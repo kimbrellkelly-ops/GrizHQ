@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T19:59:50.871090+00:00",
+  "updated": "2026-11-17T02:47:37.033243+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,51 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "First look: No. 8 Grizzlies travel for 126th Brawl of the Wild",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-8-grizzlies-travel-for-126th-brawl-of-the-wild/article_ee72820f-5699-4de1-8efb-0019fae46000.html",
+      "date": "Nov. 17, 2026",
+      "published_at": "2026-11-17T00:20:00+00:00",
+      "description": "First look: No. 8 Grizzlies travel for 126th Brawl of the Wild",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/e/e7/ee72820f-5699-4de1-8efb-0019fae46000/6afaba767808a.preview.jpg?crop=1215%2C638%2C0%2C117&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/e/e7/ee72820f-5699-4de1-8efb-0019fae46000/6afaba767808a.preview.jpg?crop=1215%2C638%2C0%2C117&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "WATCH – Montana’s Bobby Kennedy, Peyton Wing, Tanner Huff & Keali’i Ah Yat preview the Brawl of the Wild",
+      "url": "https://skylinesportsmt.com/watch-montanas-bobby-kennedy-peyton-wing-tanner-huff-kealii-ah-yat-preview-the-brawl-of-the-wild/",
+      "date": "Nov. 17, 2026",
+      "published_at": "2026-11-17T00:14:20+00:00",
+      "description": "Colter Nuanez November 16, 2026 WATCH – Montana’s Bobby Kennedy, Peyton Wing, Tanner Huff & Keali’i Ah Yat preview the Brawl of the Wild Montana head coach Bobby Kennedy, Peyton Wing, Tanner Huff and Keali’i Ah Yat met the media at the Griz",
+      "source": "Skyline Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Bobby-Kennedy-yells-from-the-sideline-Brooks-Nuanez.jpg",
+      "is_video": true,
+      "youtube_id": "-VbnY0QsPGg",
+      "video_url": "https://www.youtube.com/watch?v=-VbnY0QsPGg",
+      "video_thumbnail": "https://i.ytimg.com/vi/-VbnY0QsPGg/hqdefault.jpg"
+    },
+    {
+      "title": "Nuanez Now November 16, 2026 – Hour 1 – Montana Football Hour with Bobby Kennedy, Brent Vigen & Justin Lamson",
+      "url": "https://skylinesportsmt.com/nuanez-now-november-16-2026-hour-1-montana-football-hour-with-bobby-kennedy-brent-vigen-justin-lamson/",
+      "date": "Nov. 16, 2026",
+      "published_at": "2026-11-16T23:00:00+00:00",
+      "description": "November 16, 2026 Nuanez Now November 16, 2026 – Hour 1 – Montana Football Hour with Bobby Kennedy, Brent Vigen & Justin Lamson",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/Landon-Ransom-Goelz-sprints-in-open-field-looking-jacked.jpeg",
+      "is_video": true,
+      "youtube_id": "4rhGXW0-9cQ",
+      "video_url": "https://www.youtube.com/watch?v=4rhGXW0-9cQ",
+      "video_thumbnail": "https://i.ytimg.com/vi/4rhGXW0-9cQ/hqdefault.jpg"
+    },
     {
       "title": "For Grizzlies coach Bobby Kennedy, the Brawl 'rivals any game that I've been in'",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/for-grizzlies-coach-bobby-kennedy-the-brawl-rivals-any-game-that-ive-been-in/article_f9cfe89a-9c5c-457d-8ef1-f51438f801d3.html",
@@ -1464,51 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/09/Griz-Helmet-scaled.jpg"
-    },
-    {
-      "title": "The FCS Herd with Sam Herder – Parity or the rich getting richer, Idaho’s playoff path & can the Griz win out?",
-      "url": "https://skylinesportsmt.com/the-fcs-herd-with-sam-herder-parity-or-the-rich-getting-richer-idahos-playoff-path-can-the-griz-win-out/",
-      "date": "Oct. 28, 2026",
-      "published_at": "2026-10-28T03:46:17+00:00",
-      "description": "October 27, 2026 The FCS Herd with Sam Herder – Parity or the rich getting richer, Idaho’s playoff path & can the Griz win out?",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Joshua-Wood-throws-past-Griz-No-38-Brooks-Nuanez.jpg",
-      "is_video": true,
-      "youtube_id": "2Jah_U26vUU",
-      "video_url": "https://www.youtube.com/watch?v=2Jah_U26vUU",
-      "video_thumbnail": "https://i.ytimg.com/vi/2Jah_U26vUU/hqdefault.jpg"
-    },
-    {
-      "title": "Griz return to action at Eastern Washington",
-      "url": "https://gogriz.com/news/2026/10/27/football-griz-return-to-action-at-eastern-washington",
-      "date": "Oct. 28, 2026",
-      "published_at": "2026-10-28T01:20:00+00:00",
-      "description": "With rested bodies and renewed urgency following the bye week, the Montana Grizzlies return to action on Saturday looking to break back into the win column after dropping a pair of Big Sky games.",
-      "source": "GoGriz",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/17/20261017_montanafbvsidaho_179.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/17/20261017_montanafbvsidaho_179.jpg"
-    },
-    {
-      "title": "Billings West's Tyreke Jones commits to Montana football",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/billings-wests-tyreke-jones-commits-to-montana-football/article_df054713-f01e-42b5-a50c-5fbef28eff3c.html",
-      "date": "Oct. 28, 2026",
-      "published_at": "2026-10-28T00:31:00+00:00",
-      "description": "Billings West's Tyreke Jones commits to Montana football",
-      "source": "406 MT Sports",
-      "badge": "RECRUITING",
-      "short": "RECRUI",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/f0/df054713-f01e-42b5-a50c-5fbef28eff3c/6ae13570ca8b2.preview.jpg?crop=1618%2C850%2C0%2C43&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/f0/df054713-f01e-42b5-a50c-5fbef28eff3c/6ae13570ca8b2.preview.jpg?crop=1618%2C850%2C0%2C43&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
