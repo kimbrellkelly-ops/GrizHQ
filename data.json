@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T22:04:12.733266+00:00",
+  "updated": "2026-11-17T04:29:35.271845+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "8-3",
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-16T22:05:08.207814+00:00"
+    "checked_at": "2026-11-17T04:30:20.529191+00:00"
   },
   "resources": [
     {
@@ -2947,7 +2947,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-16T22:04:19.754085+00:00",
+    "source_checked_at": "2026-11-17T04:29:42.416086+00:00",
     "team_summary": [
       {
         "value": "8–3",
@@ -27672,9 +27672,9 @@
     ]
   },
   "latest_press_conference": {
-    "title": "LISTEN – Montana State postgame press conference – Brent Vigen & Justin Lamson after 31-21 win at Northern Colorado",
-    "date": "Sun, 15 Nov 2026 15:47:52 +0000",
-    "url": "https://skylinesportsmt.com/listen-montana-state-postgame-press-conference-brent-vigen-justin-lamson-after-31-21-win-at-northern-colorado/",
+    "title": "WATCH – Montana State head coach Brent Vigen weekly press conference previewing Montana in the Brawl of the Wild",
+    "date": "Tue, 17 Nov 2026 00:14:18 +0000",
+    "url": "https://skylinesportsmt.com/watch-montana-state-head-coach-brent-vigen-weekly-press-conference-previewing-montana-in-the-brawl-of-the-wild/",
     "youtube_id": ""
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
@@ -28290,6 +28290,6 @@
       "news": "https://msubobcats.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-11-16T22:04:24.192565+00:00"
+    "updated": "2026-11-17T04:29:46.278892+00:00"
   }
 }
