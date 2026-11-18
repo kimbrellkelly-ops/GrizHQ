@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T01:59:29.525037+00:00",
+  "updated": "2026-11-18T09:46:01.869831+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Cat-Griz Insider Podcast: Montana teams precede Brawl of the Wild with interesting wins",
+      "url": "https://406mtsports.com/podcasts/cat-griz/cat-griz-insider-podcast-montana-teams-precede-brawl-of-the-wild-with-interesting-wins/article_61fab0d8-4bcb-4192-9146-53d65c182568.html",
+      "date": "Nov. 18, 2026",
+      "published_at": "2026-11-18T04:10:00+00:00",
+      "description": "Cat-Griz Insider Podcast: Montana teams precede Brawl of the Wild with interesting wins",
+      "source": "406 MT Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/1f/61fab0d8-4bcb-4192-9146-53d65c182568/6afd2587534a3.preview.png?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": true,
+      "youtube_id": "",
+      "video_url": "https://406mtsports.com/podcasts/cat-griz/cat-griz-insider-podcast-montana-teams-precede-brawl-of-the-wild-with-interesting-wins/article_61fab0d8-4bcb-4192-9146-53d65c182568.html",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/1f/61fab0d8-4bcb-4192-9146-53d65c182568/6afd2587534a3.preview.png?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Griz set to renew rivalry against Cats",
       "url": "https://gogriz.com/news/2026/11/17/football-griz-set-to-renew-rivalry-against-cats",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/f6/df676351-8e1a-4006-8158-409b0680d20a/6ae21b4ae8c30.image.jpg?resize=300%2C303"
-    },
-    {
-      "title": "Big Sky Breakdown: Eastern Washington coach Aaron Best on Nate Bell, a brutal schedule & hosting the Griz",
-      "url": "https://skylinesportsmt.com/big-sky-breakdown-eastern-washington-coach-aaron-best-on-nate-bell-a-brutal-schedule-hosting-the-griz/",
-      "date": "Oct. 28, 2026",
-      "published_at": "2026-10-28T23:00:44+00:00",
-      "description": "October 28, 2026 Big Sky Breakdown: Eastern Washington coach Aaron Best on Nate Bell, a brutal schedule & hosting the Griz",
-      "source": "Skyline Sports",
-      "badge": "ANALYSIS",
-      "short": "ANALYS",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2022/11/Aaron-Best-looks-on-scaled.jpeg",
-      "is_video": true,
-      "youtube_id": "tKcMuxoyy9c",
-      "video_url": "https://www.youtube.com/watch?v=tKcMuxoyy9c",
-      "video_thumbnail": "https://i.ytimg.com/vi/tKcMuxoyy9c/hqdefault.jpg"
     }
   ]
 }
