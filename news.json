@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T19:57:21.299065+00:00",
+  "updated": "2026-11-18T01:59:29.525037+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz set to renew rivalry against Cats",
+      "url": "https://gogriz.com/news/2026/11/17/football-griz-set-to-renew-rivalry-against-cats",
+      "date": "Nov. 18, 2026",
+      "published_at": "2026-11-18T01:51:00+00:00",
+      "description": "MISSOULA - It's been a long time coming. The game that needs no introduction to any man, woman, or child in the Treasure State.",
+      "source": "GoGriz",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/15/20261114_montanavsidahostate_210.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/15/20261114_montanavsidahostate_210.jpg"
+    },
     {
       "title": "MONTANA MADE: 30 Treasure State natives for the Grizzlies in 2026 rivalry game",
       "url": "https://skylinesportsmt.com/montana-made-30-treasure-state-natives-for-the-grizzlies-in-2026-rivalry-game/",
@@ -1494,21 +1509,6 @@
       "youtube_id": "tKcMuxoyy9c",
       "video_url": "https://www.youtube.com/watch?v=tKcMuxoyy9c",
       "video_thumbnail": "https://i.ytimg.com/vi/tKcMuxoyy9c/hqdefault.jpg"
-    },
-    {
-      "title": "How the Montana Grizzlies spent pivotal bye week",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/how-the-montana-grizzlies-spent-pivotal-bye-week/article_4db6dfe6-5eec-4fd5-8b04-1e9e242057b4.html",
-      "date": "Oct. 28, 2026",
-      "published_at": "2026-10-28T13:00:00+00:00",
-      "description": "How the Montana Grizzlies spent pivotal bye week",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/db/4db6dfe6-5eec-4fd5-8b04-1e9e242057b4/6ae0191b6c623.preview.jpg?crop=1607%2C844%2C0%2C30&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/db/4db6dfe6-5eec-4fd5-8b04-1e9e242057b4/6ae0191b6c623.preview.jpg?crop=1607%2C844%2C0%2C30&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
