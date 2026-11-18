@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T22:53:10.121592+00:00",
+  "updated": "2026-11-18T04:23:20.722945+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "8-3",
@@ -139,33 +139,39 @@
     "Idaho St."
   ],
   "media_poll": [
-    "Tarleton State (46)",
-    "Montana State (5)",
-    "South Dakota State (6)",
-    "Lamar",
+    "Tarleton St. (26)",
+    "Montana St.",
+    "South Dakota St.",
     "Stephen F. Austin",
-    "Youngstown State",
+    "Lamar",
     "South Dakota",
-    "Montana",
     "Mercer",
-    "North Dakota",
-    "Illinois State",
+    "Youngstown St.",
+    "Montana",
     "Northern Arizona",
+    "North Dakota",
     "Tennessee Tech",
+    "Illinois St.",
     "Austin Peay",
-    "Weber State",
     "Lehigh",
+    "Weber St.",
     "Harvard",
-    "Monmouth",
+    "South Carolina St.",
     "Abilene Christian",
-    "South Carolina State",
-    "UIW",
+    "Monmouth (N.J.)",
     "Campbell",
+    "UAlbany",
     "UC Davis",
-    "Dayton",
-    "Idaho State"
+    "UIW",
+    "Idaho St."
   ],
   "news": [
+    {
+      "title": "Griz set to renew rivalry against Cats",
+      "url": "https://gogriz.com/news/2026/11/17/football-griz-set-to-renew-rivalry-against-cats",
+      "date": "Tue, 17 Nov 2026 18:51:00 MST",
+      "description": "MISSOULA - It's been a long time coming. The game that needs no introduction to any man, woman, or child in the Treasure State."
+    },
     {
       "title": "Griz score in all three phases to beat Bengals 38-30",
       "url": "https://gogriz.com/news/2026/11/15/football-griz-score-in-all-three-phases-to-beat-bengals-38-30",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/11/2/football-davis-sweeps-weekly-awards",
       "date": "Mon, 2 Nov 2026 08:31:00 MST",
       "description": "MISSOULA – Montana receiver Brooks Davis showcased his big-play prowess against Eastern Washington in Cheney on Saturday with a career-high 231 yards and three touchdowns on nine c"
-    },
-    {
-      "title": "Griz ground Eagles 42-33 in Cheney",
-      "url": "https://gogriz.com/news/2026/10/31/football-griz-ground-eagles-42-33-in-cheney",
-      "date": "Sat, 31 Oct 2026 18:52:00 MST",
-      "description": "CHENEY, Wash. – The Montana Grizzlies made a statement coming off the bye week, setting a new program record with 11 sacks while leaning on explosive offensive performances from Br"
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-17T22:54:08.842819+00:00"
+    "checked_at": "2026-11-18T04:24:21.384090+00:00"
   },
   "resources": [
     {
@@ -2696,72 +2696,72 @@
     }
   ],
   "fcs_rankings_source": "Stats Perform FCS Top 25 — Aug. 31, 2026",
-  "fcs_rankings_date": "Nov 16, 2026",
+  "fcs_rankings_date": "Nov 18, 2026",
   "fcs_top20": [
     {
       "rank": 1,
-      "team": "Tarleton State (46)",
+      "team": "Tarleton St. (26)",
       "record": ""
     },
     {
       "rank": 2,
-      "team": "Montana State (5)",
+      "team": "Montana St.",
       "record": ""
     },
     {
       "rank": 3,
-      "team": "South Dakota State (6)",
+      "team": "South Dakota St.",
       "record": ""
     },
     {
       "rank": 4,
-      "team": "Lamar",
-      "record": "1-0"
-    },
-    {
-      "rank": 5,
       "team": "Stephen F. Austin",
       "record": ""
     },
     {
-      "rank": 6,
-      "team": "Youngstown State",
-      "record": ""
+      "rank": 5,
+      "team": "Lamar",
+      "record": "1-0"
     },
     {
-      "rank": 7,
+      "rank": 6,
       "team": "South Dakota",
       "record": "1-0"
     },
     {
-      "rank": 8,
-      "team": "Montana",
-      "record": ""
-    },
-    {
-      "rank": 9,
+      "rank": 7,
       "team": "Mercer",
       "record": "1-0"
     },
     {
-      "rank": 10,
-      "team": "North Dakota",
-      "record": "1-0"
-    },
-    {
-      "rank": 11,
-      "team": "Illinois State",
+      "rank": 8,
+      "team": "Youngstown St.",
       "record": ""
     },
     {
-      "rank": 12,
+      "rank": 9,
+      "team": "Montana",
+      "record": ""
+    },
+    {
+      "rank": 10,
       "team": "Northern Arizona",
       "record": "1-0"
     },
     {
-      "rank": 13,
+      "rank": 11,
+      "team": "North Dakota",
+      "record": "1-0"
+    },
+    {
+      "rank": 12,
       "team": "Tennessee Tech",
       "record": "1-0"
+    },
+    {
+      "rank": 13,
+      "team": "Illinois St.",
+      "record": ""
     },
     {
       "rank": 14,
@@ -2770,13 +2770,13 @@
     },
     {
       "rank": 15,
-      "team": "Weber State",
-      "record": ""
+      "team": "Lehigh",
+      "record": "1-0"
     },
     {
       "rank": 16,
-      "team": "Lehigh",
-      "record": "1-0"
+      "team": "Weber St.",
+      "record": ""
     },
     {
       "rank": 17,
@@ -2785,7 +2785,7 @@
     },
     {
       "rank": 18,
-      "team": "Monmouth",
+      "team": "South Carolina St.",
       "record": ""
     },
     {
@@ -2795,75 +2795,75 @@
     },
     {
       "rank": 20,
-      "team": "South Carolina State",
+      "team": "Monmouth (N.J.)",
       "record": ""
     }
   ],
   "fcs_top25": [
     {
       "rank": 1,
-      "team": "Tarleton State (46)",
+      "team": "Tarleton St. (26)",
       "record": ""
     },
     {
       "rank": 2,
-      "team": "Montana State (5)",
+      "team": "Montana St.",
       "record": ""
     },
     {
       "rank": 3,
-      "team": "South Dakota State (6)",
+      "team": "South Dakota St.",
       "record": ""
     },
     {
       "rank": 4,
-      "team": "Lamar",
-      "record": "1-0"
-    },
-    {
-      "rank": 5,
       "team": "Stephen F. Austin",
       "record": ""
     },
     {
-      "rank": 6,
-      "team": "Youngstown State",
-      "record": ""
+      "rank": 5,
+      "team": "Lamar",
+      "record": "1-0"
     },
     {
-      "rank": 7,
+      "rank": 6,
       "team": "South Dakota",
       "record": "1-0"
     },
     {
-      "rank": 8,
-      "team": "Montana",
-      "record": ""
-    },
-    {
-      "rank": 9,
+      "rank": 7,
       "team": "Mercer",
       "record": "1-0"
     },
     {
-      "rank": 10,
-      "team": "North Dakota",
-      "record": "1-0"
-    },
-    {
-      "rank": 11,
-      "team": "Illinois State",
+      "rank": 8,
+      "team": "Youngstown St.",
       "record": ""
     },
     {
-      "rank": 12,
+      "rank": 9,
+      "team": "Montana",
+      "record": ""
+    },
+    {
+      "rank": 10,
       "team": "Northern Arizona",
       "record": "1-0"
     },
     {
-      "rank": 13,
+      "rank": 11,
+      "team": "North Dakota",
+      "record": "1-0"
+    },
+    {
+      "rank": 12,
       "team": "Tennessee Tech",
       "record": "1-0"
+    },
+    {
+      "rank": 13,
+      "team": "Illinois St.",
+      "record": ""
     },
     {
       "rank": 14,
@@ -2872,13 +2872,13 @@
     },
     {
       "rank": 15,
-      "team": "Weber State",
-      "record": ""
+      "team": "Lehigh",
+      "record": "1-0"
     },
     {
       "rank": 16,
-      "team": "Lehigh",
-      "record": "1-0"
+      "team": "Weber St.",
+      "record": ""
     },
     {
       "rank": 17,
@@ -2887,7 +2887,7 @@
     },
     {
       "rank": 18,
-      "team": "Monmouth",
+      "team": "South Carolina St.",
       "record": ""
     },
     {
@@ -2897,17 +2897,17 @@
     },
     {
       "rank": 20,
-      "team": "South Carolina State",
+      "team": "Monmouth (N.J.)",
       "record": ""
     },
     {
       "rank": 21,
-      "team": "UIW",
+      "team": "Campbell",
       "record": ""
     },
     {
       "rank": 22,
-      "team": "Campbell",
+      "team": "UAlbany",
       "record": ""
     },
     {
@@ -2917,12 +2917,12 @@
     },
     {
       "rank": 24,
-      "team": "Dayton",
+      "team": "UIW",
       "record": ""
     },
     {
       "rank": 25,
-      "team": "Idaho State",
+      "team": "Idaho St.",
       "record": ""
     }
   ],
@@ -2947,7 +2947,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-17T22:53:16.509471+00:00",
+    "source_checked_at": "2026-11-18T04:23:27.835018+00:00",
     "team_summary": [
       {
         "value": "8–3",
@@ -3284,7 +3284,7 @@
       "special"
     ]
   },
-  "rankings_date": "Nov 16, 2026",
+  "rankings_date": "Nov 18, 2026",
   "fcs_scores": {
     "2026-08-27": [
       {
@@ -28290,6 +28290,6 @@
       "news": "https://msubobcats.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-11-17T22:53:21.177614+00:00"
+    "updated": "2026-11-18T04:23:31.959654+00:00"
   }
 }
