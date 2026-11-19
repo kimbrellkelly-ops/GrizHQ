@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19T16:55:55.886142+00:00",
+  "updated": "2026-11-19T23:21:02.032726+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -11,10 +11,25 @@
   ],
   "stories": [
     {
+      "title": "Grizzly Athletics launches the 406 Fund to support Montana-born athletes",
+      "url": "https://gogriz.com/news/2026/11/19/football-grizzly-athletics-launches-the-406-fund-to-support-montana-born-athletes",
+      "date": "Nov. 19, 2026",
+      "published_at": "2026-11-19T17:38:00+00:00",
+      "description": "MISSOULA – Grizzly Athletics has launched the 406 Fund, a new giving campaign to invest in student-athletes from the state of Montana, helping keep Montana talent in-state.",
+      "source": "GoGriz",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/19/406_Fund_Generic_-_web.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/19/406_Fund_Generic_-_web.jpg"
+    },
+    {
       "title": "Built Sandford Tough: Grizzlies OL Wyatt Sandford beats flesh-eating bacteria",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/built-sandford-tough-grizzlies-ol-wyatt-sandford-beats-flesh-eating-bacteria/article_b48dc58c-2aaa-4761-ba0e-8585262a449d.html",
       "date": "Nov. 19, 2026",
-      "published_at": "2026-11-19T14:00:00+00:00",
+      "published_at": "2026-11-19T14:05:00+00:00",
       "description": "Built Sandford Tough: Grizzlies OL Wyatt Sandford beats flesh-eating bacteria",
       "source": "406 MT Sports",
       "badge": "GAME STORY",
@@ -114,6 +129,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/7/29/7293beb7-e7d5-464e-bcf8-dbec41b310c1/6afcda03e0a65.image.jpg?resize=300%2C303"
+    },
+    {
+      "title": "Lady Griz drop road contest against Gonzaga, fall to 1-4",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/lady-griz-drop-road-contest-against-gonzaga-fall-to-1-4/article_896b3de6-1a52-43c6-a6fc-4c8076029560.html",
+      "date": "Nov. 19, 2026",
+      "published_at": "2026-11-19T04:30:00+00:00",
+      "description": "Lady Griz drop road contest against Gonzaga, fall to 1-4",
+      "source": "406 MT Sports",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/96/896b3de6-1a52-43c6-a6fc-4c8076029560/6afe7a519c976.preview.jpg?crop=657%2C345%2C0%2C10",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/96/896b3de6-1a52-43c6-a6fc-4c8076029560/6afe7a519c976.preview.jpg?crop=657%2C345%2C0%2C10"
     },
     {
       "title": "Lady Griz drop road contest against Gonzaga, drop to 1-4",
@@ -1479,36 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/0a/d0a6e1d2-6f34-4be3-8c21-123cb4e3d8f5/6ae6d60788519.preview.jpg?crop=1763%2C926%2C0%2C67&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Big Sky man injured in 2023 grizzly attack cited for illegal snowmobile guiding, lying to feds",
-      "url": "https://missoulian.com/outdoors/article_869579f9-ff87-507f-bdc0-865b5fecf3eb.html",
-      "date": "Nov. 1, 2026",
-      "published_at": "2026-11-01T19:45:00+00:00",
-      "description": "According to charges filed on Oct. 23, before and after being mauled by a grizzly bear, Rudy Noorlander allegedly lied to Forest Service officials saying he was not guiding snowmobilers.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/2/bf/2bf0c06d-14ac-5807-9540-ef8a15cc7dcd/6ae4d7af67a22.image.jpg?resize=300%2C353",
-      "is_video": true,
-      "youtube_id": "hvaKWIF_f-I",
-      "video_url": "https://www.youtube.com/watch?v=hvaKWIF_f-I",
-      "video_thumbnail": "https://i.ytimg.com/vi/hvaKWIF_f-I/hqdefault.jpg"
-    },
-    {
-      "title": "3 takeaways: No. 14 Grizzlies get back on track beating Eastern Washington",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-14-grizzlies-get-back-on-track-beating-eastern-washington/article_4952a6e2-1424-492f-bd27-fb05aa6b8c22.html",
-      "date": "Nov. 1, 2026",
-      "published_at": "2026-11-01T13:00:00+00:00",
-      "description": "3 takeaways: No. 14 Grizzlies get back on track beating Eastern Washington",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/95/4952a6e2-1424-492f-bd27-fb05aa6b8c22/6ae6d10abef4a.preview.jpg?crop=1284%2C674%2C1%2C74&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/95/4952a6e2-1424-492f-bd27-fb05aa6b8c22/6ae6d10abef4a.preview.jpg?crop=1284%2C674%2C1%2C74&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
