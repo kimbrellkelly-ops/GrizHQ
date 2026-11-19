@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T18:25:03.637095+00:00",
+  "updated": "2026-11-19T00:36:04.828025+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,51 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Grizzlies to honor longtime strength coach Bruce Wallwork with new team award",
+      "url": "https://gogriz.com/news/2026/11/18/football-grizzlies-to-honor-longtime-strength-coach-bruce-wallwork-with-new-team-award",
+      "date": "Nov. 18, 2026",
+      "published_at": "2026-11-18T23:40:00+00:00",
+      "description": "MISSOULA - Montana head football coach Bobby Kennedy has announced a new annual award honoring Bruce Wallwork, a former Grizzly player, the University of Montana's first strength and conditioning coach and a staple of the Missoula community",
+      "source": "GoGriz",
+      "badge": "HONOR",
+      "short": "HONOR",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/18/Bruce_Wallwork_Award_-_web.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/18/Bruce_Wallwork_Award_-_web.jpg"
+    },
+    {
+      "title": "WATCH – Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on Brawl week in Bozeman",
+      "url": "https://skylinesportsmt.com/watch-brawl-of-the-wild-coaches-corner-montana-head-coach-bobby-kennedy-on-brawl-week-in-bozeman/",
+      "date": "Nov. 18, 2026",
+      "published_at": "2026-11-18T20:31:33+00:00",
+      "description": "November 18, 2026 WATCH – Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on Brawl week in Bozeman",
+      "source": "Skyline Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/Bobby-Kennedy-looks-on-the-field-with-fierce-eyes.jpeg",
+      "is_video": true,
+      "youtube_id": "MIHRPW-ujmk",
+      "video_url": "https://www.youtube.com/watch?v=MIHRPW-ujmk",
+      "video_thumbnail": "https://i.ytimg.com/vi/MIHRPW-ujmk/hqdefault.jpg"
+    },
+    {
+      "title": "THE MATCHUPS: Eli Gillman vs. Montana State’s league-best run defense",
+      "url": "https://skylinesportsmt.com/the-matchups-eli-gillman-vs-montana-states-league-best-run-defense/",
+      "date": "Nov. 18, 2026",
+      "published_at": "2026-11-18T16:27:56+00:00",
+      "description": "Colter Nuanez November 18, 2026 THE MATCHUPS: Eli Gillman vs. Montana State’s league-best run defense Eli Gillman has been a headline-making machine this season. He’s gobbled up yards like PacMan and he’s been scoring touchdowns… Read More",
+      "source": "Skyline Sports",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/THE-MATCHUPS-Gillman-vs-spine-of-Bobcat-defense-light-v4-scaled.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/11/THE-MATCHUPS-Gillman-vs-spine-of-Bobcat-defense-light-v4-scaled.jpg"
+    },
     {
       "title": "A GAME IN PHOTOS – Blake Hempstead on the 124th rivalry between ‘Cats & Griz",
       "url": "https://skylinesportsmt.com/a-game-in-photos-blake-hempstead-on-the-124th-rivalry-between-cats-griz/",
@@ -56,19 +101,19 @@
       "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2025/11/Caleb-Otlewski-Cade-Cutler-absoluetly-smash-Dane-Steele-scaled.jpeg"
     },
     {
-      "title": "THE MATCHUPS: Eli Gillman vs. Montana State’s league-best run defense",
-      "url": "https://skylinesportsmt.com/the-matchups-eli-gillman-vs-montana-states-league-best-run-defense/",
+      "title": "Former Belgrade standout Josie Blazina has stepped up both physically and mentally this fall for the Griz",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/former-belgrade-standout-josie-blazina-has-stepped-up-both-physically-and-mentally-this-fall-for/article_ba5478c6-f8c5-540d-b5a7-6b91d6c5109a.html",
       "date": "Nov. 18, 2026",
-      "published_at": "2026-11-18T16:03:11+00:00",
-      "description": "Colter Nuanez November 18, 2026 THE MATCHUPS: Eli Gillman vs. Montana State’s league-best run defense Eli Gillman has been a headline-making machine this season. He’s gobbled up yards like PacMan and he’s been scoring touchdowns… Read More",
-      "source": "Skyline Sports",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/THE-MATCHUPS-Gillman-vs-spine-of-Bobcat-defense-light-v4-scaled.jpg",
+      "published_at": "2026-11-18T14:16:00+00:00",
+      "description": "Former Belgrade standout Josie Blazina has stepped up both physically and mentally this fall for the Griz",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/a5/ba5478c6-f8c5-540d-b5a7-6b91d6c5109a/6afe41c071f9c.preview.jpg?crop=1703%2C894%2C0%2C160&resize=1200%2C630&order=crop%2Cresize",
       "is_video": false,
       "youtube_id": "",
       "video_url": "",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/11/THE-MATCHUPS-Gillman-vs-spine-of-Bobcat-defense-light-v4-scaled.jpg"
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/b/a5/ba5478c6-f8c5-540d-b5a7-6b91d6c5109a/6afe41c071f9c.preview.jpg?crop=1703%2C894%2C0%2C160&resize=1200%2C630&order=crop%2Cresize"
     },
     {
       "title": "Cat-Griz Insider Podcast: Montana teams precede Brawl of the Wild with interesting wins",
@@ -1464,51 +1509,6 @@
       "youtube_id": "QwF-JorZtMA",
       "video_url": "https://www.youtube.com/watch?v=QwF-JorZtMA",
       "video_thumbnail": "https://i.ytimg.com/vi/QwF-JorZtMA/hqdefault.jpg"
-    },
-    {
-      "title": "Griz Stars of the Week: Montana safety Brady Beaner & wide receiver LeKeldrick Bridges",
-      "url": "https://skylinesportsmt.com/griz-stars-of-the-week-montana-safety-brady-beaner-wide-receiver-lekeldrick-bridges/",
-      "date": "Oct. 29, 2026",
-      "published_at": "2026-10-29T23:00:00+00:00",
-      "description": "October 29, 2026 Griz Stars of the Week: Montana safety Brady Beaner & wide receiver LeKeldrick Bridges",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Griz-No-25-runs-out-through-the-smoke-Brooks-Nuanez-scaled.jpg",
-      "is_video": true,
-      "youtube_id": "HtFWIy9FAZM",
-      "video_url": "https://www.youtube.com/watch?v=HtFWIy9FAZM",
-      "video_thumbnail": "https://i.ytimg.com/vi/HtFWIy9FAZM/hqdefault.jpg"
-    },
-    {
-      "title": "WATCH – Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on the bye, Griz defense & Eastern Washington",
-      "url": "https://skylinesportsmt.com/watch-brawl-of-the-wild-coaches-corner-montana-head-coach-bobby-kennedy-on-the-bye-griz-defense-eastern-washington/",
-      "date": "Oct. 29, 2026",
-      "published_at": "2026-10-29T15:00:00+00:00",
-      "description": "October 29, 2026 WATCH – Brawl of the Wild Coaches’ Corner – Montana head coach Bobby Kennedy on the bye, Griz defense & Eastern Washington",
-      "source": "Skyline Sports",
-      "badge": "INSIDER",
-      "short": "INSIDE",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Bobby-Kennedy-watches-from-the-Griz-sideline-Brooks-Nuanez-scaled.jpg",
-      "is_video": true,
-      "youtube_id": "6vOnPurgvrc",
-      "video_url": "https://www.youtube.com/watch?v=6vOnPurgvrc",
-      "video_thumbnail": "https://i.ytimg.com/vi/6vOnPurgvrc/hqdefault.jpg"
-    },
-    {
-      "title": "Big Sky Conference football picks: 406 MT Sports panel forecasts games for Griz, Cats",
-      "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/big-sky-conference-football-picks-406-mt-sports-panel-forecasts-games-for-griz-cats/article_f44e5ff1-5c19-46fb-b50a-675d476bb6ff.html",
-      "date": "Oct. 29, 2026",
-      "published_at": "2026-10-29T14:00:00+00:00",
-      "description": "Big Sky Conference football picks: 406 MT Sports panel forecasts games for Griz, Cats",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/44/f44e5ff1-5c19-46fb-b50a-675d476bb6ff/6ade20a41cfce.preview.jpg?crop=918%2C482%2C548%2C164",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/f/44/f44e5ff1-5c19-46fb-b50a-675d476bb6ff/6ade20a41cfce.preview.jpg?crop=918%2C482%2C548%2C164"
     }
   ]
 }
