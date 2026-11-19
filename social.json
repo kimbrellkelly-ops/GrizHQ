@@ -1,6 +1,32 @@
 {
-  "updated": "2026-11-19T00:43:47.818412+00:00",
+  "updated": "2026-11-19T07:57:51.077311+00:00",
   "posts": [
+    {
+      "title": "Talkin' Schmidt: The Bobcats' rev share report, Brawl of the Wild stakes & how the Griz pull it off",
+      "url": "https://www.youtube.com/watch?v=djf-J_PlKbM",
+      "image": "https://i.ytimg.com/vi/djf-J_PlKbM/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Nov. 19, 2026",
+      "platform": "youtube",
+      "youtube_id": "djf-J_PlKbM",
+      "published_at": "2026-11-19T00:00:00+00:00"
+    },
+    {
+      "title": "Big Sky Breakdown: JP Flynn, Samuel Akem & Keenan Curran on the Brawl of the Wild - Part I",
+      "url": "https://www.youtube.com/watch?v=VhS8ZYIrhGU",
+      "image": "https://i.ytimg.com/vi/VhS8ZYIrhGU/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Nov. 18, 2026",
+      "platform": "youtube",
+      "youtube_id": "VhS8ZYIrhGU",
+      "published_at": "2026-11-18T00:00:00+00:00"
+    },
     {
       "title": "Brawl of the Wild Coaches' Corner - Montana head coach Bobby Kennedy on Brawl week in Bozeman",
       "url": "https://www.youtube.com/watch?v=MIHRPW-ujmk",
