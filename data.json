@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19T13:10:58.594565+00:00",
+  "updated": "2026-11-19T21:36:25.228460+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "8-3",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Grizzly Athletics launches the 406 Fund to support Montana-born athletes",
+      "url": "https://gogriz.com/news/2026/11/19/football-grizzly-athletics-launches-the-406-fund-to-support-montana-born-athletes",
+      "date": "Thu, 19 Nov 2026 10:38:00 MST",
+      "description": "MISSOULA – Grizzly Athletics has launched the 406 Fund, a new giving campaign to invest in student-athletes from the state of Montana, helping keep Montana talent in-state."
+    },
+    {
       "title": "Grizzlies to honor longtime strength coach Bruce Wallwork with new team award",
       "url": "https://gogriz.com/news/2026/11/18/football-grizzlies-to-honor-longtime-strength-coach-bruce-wallwork-with-new-team-award",
       "date": "Wed, 18 Nov 2026 16:40:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/11/7/football-gillman-makes-more-history-griz-roll-vikings-57-24",
       "date": "Sat, 7 Nov 2026 19:02:00 MST",
       "description": "MISSOULA - In a season of historic moments even more was written on Saturday at Washington-Grizzly Stadium as the Montana Grizzlies rolled past Portland State 57-24 behind a record"
-    },
-    {
-      "title": "Griz return home to face Portland State",
-      "url": "https://gogriz.com/news/2026/11/3/football-griz-return-home-to-face-portland-state",
-      "date": "Tue, 3 Nov 2026 17:26:00 MST",
-      "description": "MISSOULA - As the old saying goes: \"The games they remember are played in November.\""
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-19T13:11:37.146591+00:00"
+    "checked_at": "2026-11-19T21:37:04.361431+00:00"
   },
   "resources": [
     {
@@ -2947,7 +2947,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-19T13:11:04.609205+00:00",
+    "source_checked_at": "2026-11-19T21:36:31.588062+00:00",
     "team_summary": [
       {
         "value": "8–3",
@@ -27681,7 +27681,7 @@
   "big_sky_standings": [
     {
       "rank": 1,
-      "team": "Montana State",
+      "team": "Montana State ^",
       "conference_record": "7-1",
       "overall_record": "10-1",
       "home": "5-0",
@@ -27694,16 +27694,16 @@
     },
     {
       "rank": 2,
-      "team": "Montana",
+      "team": "Weber State",
       "conference_record": "6-2",
-      "overall_record": "8-3",
-      "home": "6-1",
-      "away": "2-2",
-      "conference_points": "342-235",
-      "points": "439-311",
-      "conference_streak": "W3",
-      "overall_streak": "W3",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2538"
+      "overall_record": "7-4",
+      "home": "4-1",
+      "away": "3-3",
+      "conference_points": "274-227",
+      "points": "386-346",
+      "conference_streak": "W2",
+      "overall_streak": "W2",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2546"
     },
     {
       "rank": 3,
@@ -27720,16 +27720,16 @@
     },
     {
       "rank": 4,
-      "team": "Weber State",
+      "team": "Montana",
       "conference_record": "6-2",
-      "overall_record": "7-4",
-      "home": "4-1",
-      "away": "3-3",
-      "conference_points": "274-227",
-      "points": "386-346",
-      "conference_streak": "W2",
-      "overall_streak": "W2",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2546"
+      "overall_record": "8-3",
+      "home": "6-1",
+      "away": "2-2",
+      "conference_points": "342-235",
+      "points": "439-311",
+      "conference_streak": "W3",
+      "overall_streak": "W3",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2538"
     },
     {
       "rank": 5,
@@ -27772,19 +27772,6 @@
     },
     {
       "rank": 8,
-      "team": "Idaho State",
-      "conference_record": "3-5",
-      "overall_record": "6-5",
-      "home": "3-3",
-      "away": "3-2",
-      "conference_points": "231-215",
-      "points": "357-259",
-      "conference_streak": "L2",
-      "overall_streak": "L2",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2537"
-    },
-    {
-      "rank": 9,
       "team": "Cal Poly",
       "conference_record": "3-5",
       "overall_record": "4-7",
@@ -27795,6 +27782,19 @@
       "conference_streak": "L4",
       "overall_streak": "L4",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2535"
+    },
+    {
+      "rank": 9,
+      "team": "Idaho State",
+      "conference_record": "3-5",
+      "overall_record": "6-5",
+      "home": "3-3",
+      "away": "3-2",
+      "conference_points": "231-215",
+      "points": "357-259",
+      "conference_streak": "L2",
+      "overall_streak": "L2",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2537"
     },
     {
       "rank": 10,
@@ -28290,6 +28290,6 @@
       "news": "https://msubobcats.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-11-19T13:11:08.389234+00:00"
+    "updated": "2026-11-19T21:36:35.707899+00:00"
   }
 }
