@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T21:57:57.226176+00:00",
+  "updated": "2026-11-19T03:29:36.056312+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "8-3",
@@ -167,6 +167,12 @@
   ],
   "news": [
     {
+      "title": "Grizzlies to honor longtime strength coach Bruce Wallwork with new team award",
+      "url": "https://gogriz.com/news/2026/11/18/football-grizzlies-to-honor-longtime-strength-coach-bruce-wallwork-with-new-team-award",
+      "date": "Wed, 18 Nov 2026 16:40:00 MST",
+      "description": "MISSOULA - Montana head football coach Bobby Kennedy has announced a new annual award honoring Bruce Wallwork, a former Grizzly player, the University of Montana's first strength a"
+    },
+    {
       "title": "Griz set to renew rivalry against Cats",
       "url": "https://gogriz.com/news/2026/11/17/football-griz-set-to-renew-rivalry-against-cats",
       "date": "Tue, 17 Nov 2026 18:51:00 MST",
@@ -207,12 +213,6 @@
       "url": "https://gogriz.com/news/2026/11/3/football-griz-return-home-to-face-portland-state",
       "date": "Tue, 3 Nov 2026 17:26:00 MST",
       "description": "MISSOULA - As the old saying goes: \"The games they remember are played in November.\""
-    },
-    {
-      "title": "Davis sweeps weekly awards",
-      "url": "https://gogriz.com/news/2026/11/2/football-davis-sweeps-weekly-awards",
-      "date": "Mon, 2 Nov 2026 08:31:00 MST",
-      "description": "MISSOULA – Montana receiver Brooks Davis showcased his big-play prowess against Eastern Washington in Cheney on Saturday with a career-high 231 yards and three touchdowns on nine c"
     }
   ],
   "depth_chart": {
@@ -366,7 +366,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-18T21:58:57.217191+00:00"
+    "checked_at": "2026-11-19T03:30:42.578157+00:00"
   },
   "resources": [
     {
@@ -2947,7 +2947,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-18T21:58:04.728773+00:00",
+    "source_checked_at": "2026-11-19T03:29:44.058737+00:00",
     "team_summary": [
       {
         "value": "8–3",
@@ -28290,6 +28290,6 @@
       "news": "https://msubobcats.com/sports/football/news"
     },
     "source": "ESPN team/schedule/statistics/leaders feeds + official opponent athletics site",
-    "updated": "2026-11-18T21:58:09.270390+00:00"
+    "updated": "2026-11-19T03:29:49.375545+00:00"
   }
 }
