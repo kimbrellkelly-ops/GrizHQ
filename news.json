@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T04:06:43.561093+00:00",
+  "updated": "2026-11-20T12:49:25.456410+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Cussin’ & Discussin’ – Former Griz All-American tackle and NFL veteran Levi Horn",
+      "url": "https://skylinesportsmt.com/cussin-discussin-former-griz-all-american-tackle-and-nfl-veteran-levi-horn/",
+      "date": "Nov. 20, 2026",
+      "published_at": "2026-11-20T05:16:53+00:00",
+      "description": "November 19, 2026 Cussin’ & Discussin’ – Former Griz All-American tackle and NFL veteran Levi Horn",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/levi-horn-photo.webp",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/11/levi-horn-photo.webp"
+    },
     {
       "title": "Grizzly Athletics launches the 406 Fund to support Montana-born athletes",
       "url": "https://gogriz.com/news/2026/11/19/football-grizzly-athletics-launches-the-406-fund-to-support-montana-born-athletes",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/2/POW_Web.png"
-    },
-    {
-      "title": "Week 9: No. 14 Montana Grizzlies bounce back after bye vs Eastern Washington",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-9-no-14-montana-grizzlies-bounce-back-after-bye-vs-eastern-washington/collection_d0a6e1d2-6f34-4be3-8c21-123cb4e3d8f5.html",
-      "date": "Nov. 1, 2026",
-      "published_at": "2026-11-01T22:00:00+00:00",
-      "description": "Week 9: No. 14 Montana Grizzlies bounce back after bye vs Eastern Washington",
-      "source": "406 MT Sports",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/0a/d0a6e1d2-6f34-4be3-8c21-123cb4e3d8f5/6ae6d60788519.preview.jpg?crop=1763%2C926%2C0%2C67&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/0a/d0a6e1d2-6f34-4be3-8c21-123cb4e3d8f5/6ae6d60788519.preview.jpg?crop=1763%2C926%2C0%2C67&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
