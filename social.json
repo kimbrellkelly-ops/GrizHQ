@@ -1,6 +1,19 @@
 {
-  "updated": "2026-11-19T23:33:30.878480+00:00",
+  "updated": "2026-11-20T04:17:30.806906+00:00",
   "posts": [
+    {
+      "title": "Big Sky Breakdown: Idaho State head coach Cody Hawkins on rivalry week vs. Idaho, Big Sky parity & s",
+      "url": "https://www.youtube.com/watch?v=Pc06mtZr9Vg",
+      "image": "https://i.ytimg.com/vi/Pc06mtZr9Vg/mqdefault.jpg",
+      "source": "Skyline Sports YouTube",
+      "type": "YOUTUBE",
+      "video": true,
+      "description": "Verified Montana/Big Sky video from Skyline Sports.",
+      "date": "Nov. 20, 2026",
+      "platform": "youtube",
+      "youtube_id": "Pc06mtZr9Vg",
+      "published_at": "2026-11-20T00:00:00+00:00"
+    },
     {
       "title": "Talkin' Schmidt: The Bobcats' rev share report, Brawl of the Wild stakes & how the Griz pull it off",
       "url": "https://www.youtube.com/watch?v=axeZfn8dbA0",
@@ -234,45 +247,6 @@
       "platform": "youtube",
       "youtube_id": "N1Q0x1M7Ex0",
       "published_at": "2026-11-14T00:00:00+00:00"
-    },
-    {
-      "title": "Big Sky Breakdown: Idaho State HC Cody Hawkins on triple-OT loss to MSU, Eli Gillman & the Griz",
-      "url": "https://www.youtube.com/watch?v=-hJTCcSVbwc",
-      "image": "https://i.ytimg.com/vi/-hJTCcSVbwc/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Nov. 13, 2026",
-      "platform": "youtube",
-      "youtube_id": "-hJTCcSVbwc",
-      "published_at": "2026-11-13T00:00:00+00:00"
-    },
-    {
-      "title": "~ \"It's kind of like a broken record. Every quarterback's best games are seemingly against the Griz.",
-      "url": "https://www.youtube.com/watch?v=r3FiRk-aWJM",
-      "image": "https://i.ytimg.com/vi/r3FiRk-aWJM/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Nov. 13, 2026",
-      "platform": "youtube",
-      "youtube_id": "r3FiRk-aWJM",
-      "published_at": "2026-11-13T00:00:00+00:00"
-    },
-    {
-      "title": "Ridin' with Rider - Montana State's triple-OT escape, the 2-point gamble & the road to Cat-Griz",
-      "url": "https://www.youtube.com/watch?v=jMkciRYA4xk",
-      "image": "https://i.ytimg.com/vi/jMkciRYA4xk/mqdefault.jpg",
-      "source": "Skyline Sports YouTube",
-      "type": "YOUTUBE",
-      "video": true,
-      "description": "Verified Montana/Big Sky video from Skyline Sports.",
-      "date": "Nov. 13, 2026",
-      "platform": "youtube",
-      "youtube_id": "jMkciRYA4xk",
-      "published_at": "2026-11-13T00:00:00+00:00"
     }
   ],
   "profiles": [
