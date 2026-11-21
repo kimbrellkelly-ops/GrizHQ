@@ -121,6 +121,7 @@ def overlay_current_scores(events,live_events):
 def canonical(s):
  n=norm(s)
  aliases={
+  'uiw':'incarnateword',
   'montanast':'montanastate',
   'montanastateuniversity':'montanastate',
   'southernutahthunderbirds':'southernutah',
