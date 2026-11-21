@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T01:53:03.870011+00:00",
+  "updated": "2026-11-21T08:57:56.739896+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Highlights: Montana Grizzlies beat Montana State Bobcats in Bozeman",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/highlights-montana-grizzlies-beat-montana-state-bobcats-in-bozeman/video_021d2597-8341-4ad4-8654-e4583e0d46ae.html",
+      "date": "Nov. 21, 2026",
+      "published_at": "2026-11-21T05:19:00+00:00",
+      "description": "Highlights: Montana Grizzlies beat Montana State Bobcats in Bozeman",
+      "source": "406 MT Sports",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/21/021d2597-8341-4ad4-8654-e4583e0d46ae/6b012ac4e69a2.preview.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": true,
+      "youtube_id": "",
+      "video_url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/highlights-montana-grizzlies-beat-montana-state-bobcats-in-bozeman/video_021d2597-8341-4ad4-8654-e4583e0d46ae.html",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/21/021d2597-8341-4ad4-8654-e4583e0d46ae/6b012ac4e69a2.preview.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "3 questions: No. 8 Grizzlies seek title-clinching upset in Brawl of the Wild",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-questions-no-8-grizzlies-seek-title-clinching-upset-in-brawl-of-the-wild/article_73a7c331-3d3c-4f98-888e-7d6d544280a9.html",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/31/431b5ddd-73c9-49f8-af66-8ac646b614a6/6ae9152397d5e.preview.jpg?crop=1173%2C616%2C2%2C137"
-    },
-    {
-      "title": "Nuanez Now November 2, 2026 – Hour 1 – Montana Football Hour with Vigen, BK, Tootell & Brooks Davis",
-      "url": "https://skylinesportsmt.com/nuanez-now-november-2-2026-hour-1-montana-football-hour-with-vigen-bk-tootell-brooks-davis/",
-      "date": "Nov. 2, 2026",
-      "published_at": "2026-11-02T23:00:00+00:00",
-      "description": "Nuanez Now November 2, 2026 – Hour 1 – Montana Football Hour with Vigen, BK, Tootell & Brooks Davis November 2, 2026",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Montana-Til-I-Die-flag-leads-the-Griz-out-Brooks-Nuanez-scaled.jpg",
-      "is_video": true,
-      "youtube_id": "gr770Wzkksg",
-      "video_url": "https://www.youtube.com/watch?v=gr770Wzkksg",
-      "video_thumbnail": "https://i.ytimg.com/vi/gr770Wzkksg/hqdefault.jpg"
     }
   ]
 }
