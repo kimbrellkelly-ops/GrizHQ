@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T16:34:05.393951+00:00",
+  "updated": "2026-11-21T21:53:24.136679+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,36 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "126th Brawl of the Wild",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/montana-state-university/image_dd38015f-cfe7-5860-ad51-7dab5a17f107.html",
+      "date": "Nov. 21, 2026",
+      "published_at": "2026-11-21T20:43:00+00:00",
+      "description": "Montana's Eli Gillman carries the ball as Montana State's Gianni Edwards (15) and another Bobcat try to tackle him and Brooks Davis (3) blocks in the 126th Brawl of the Wild on Saturday, Nov. 21 at Bobcat Stadium in Bozeman.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/d3/dd38015f-cfe7-5860-ad51-7dab5a17f107/6b0206eda3632.image.jpg?resize=300%2C234",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/d/d3/dd38015f-cfe7-5860-ad51-7dab5a17f107/6b0206eda3632.image.jpg?resize=300%2C234"
+    },
+    {
+      "title": "Live updates: Montana State Bobcats host Montana Grizzlies in 126th Brawl of the Wild",
+      "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/live-updates-montana-state-bobcats-host-montana-grizzlies-in-126th-brawl-of-the-wild/article_69f12940-8c62-4c1b-9f64-2a1252e53b54.html",
+      "date": "Nov. 21, 2026",
+      "published_at": "2026-11-21T18:45:00+00:00",
+      "description": "Live updates: Montana State Bobcats host Montana Grizzlies in 126th Brawl of the Wild",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/9f/69f12940-8c62-4c1b-9f64-2a1252e53b54/6b0110ada8a8d.preview.jpg?crop=1746%2C917%2C0%2C34&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/9f/69f12940-8c62-4c1b-9f64-2a1252e53b54/6b0110ada8a8d.preview.jpg?crop=1746%2C917%2C0%2C34&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Highlights: Montana Grizzlies beat Montana State Bobcats in Bozeman",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/highlights-montana-grizzlies-beat-montana-state-bobcats-in-bozeman/video_021d2597-8341-4ad4-8654-e4583e0d46ae.html",
@@ -1479,36 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/0/07/0076a636-5d26-5f93-9c79-c594c0791ab9/6ae97c3cb825f.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "WATCH – Montana’s Bobby Kennedy, Colton Lentz & Landon Ransom-Goelz on EWU win, Portland State",
-      "url": "https://skylinesportsmt.com/watch-montanas-bobby-kennedy-colton-lentz-landon-ransom-goelz-on-ewu-win-portland-state/",
-      "date": "Nov. 3, 2026",
-      "published_at": "2026-11-03T00:03:49+00:00",
-      "description": "Colter Nuanez November 2, 2026 WATCH – Montana’s Bobby Kennedy, Colton Lentz & Landon Ransom-Goelz on EWU win, Portland State Montana head coach Bobby Kennedy, linebacker Colton Lentz and wide receiver Landon Ransom-Goelz met the media afte",
-      "source": "Skyline Sports",
-      "badge": "INSIDER",
-      "short": "INSIDE",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Bobby-Kennedy-watches-from-the-Griz-sideline-Brooks-Nuanez-scaled.jpg",
-      "is_video": true,
-      "youtube_id": "vQonyHU67-A",
-      "video_url": "https://www.youtube.com/watch?v=vQonyHU67-A",
-      "video_thumbnail": "https://i.ytimg.com/vi/vQonyHU67-A/hqdefault.jpg"
-    },
-    {
-      "title": "First look: No. 12 Montana Grizzlies vs. Portland State Vikings",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-12-montana-grizzlies-vs-portland-state-vikings/article_431b5ddd-73c9-49f8-af66-8ac646b614a6.html",
-      "date": "Nov. 2, 2026",
-      "published_at": "2026-11-02T23:06:00+00:00",
-      "description": "First look: No. 12 Montana Grizzlies vs. Portland State Vikings",
-      "source": "406 MT Sports",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/31/431b5ddd-73c9-49f8-af66-8ac646b614a6/6ae9152397d5e.preview.jpg?crop=1173%2C616%2C2%2C137",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/31/431b5ddd-73c9-49f8-af66-8ac646b614a6/6ae9152397d5e.preview.jpg?crop=1173%2C616%2C2%2C137"
     }
   ]
 }
