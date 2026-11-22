@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T09:00:40.687462+00:00",
+  "updated": "2026-11-22T16:57:37.505548+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Week 12: No. 8 Montana Grizzlies fall at No. 2 Montana State Bobcats in 126th Brawl of the Wild",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-12-no-8-montana-grizzlies-fall-at-no-2-montana-state-bobcats-in-126th/collection_817796f6-d7dc-4dea-ae77-f987479a0674.html",
+      "date": "Nov. 22, 2026",
+      "published_at": "2026-11-22T16:00:00+00:00",
+      "description": "Week 12: No. 8 Montana Grizzlies fall at No. 2 Montana State Bobcats in 126th Brawl of the Wild",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/17/817796f6-d7dc-4dea-ae77-f987479a0674/6b0272a84c220.preview.jpg?crop=1763%2C926%2C0%2C91&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/17/817796f6-d7dc-4dea-ae77-f987479a0674/6b0272a84c220.preview.jpg?crop=1763%2C926%2C0%2C91&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "126th Brawl of the Wild",
       "url": "https://missoulian.com/sports/college/big-sky-conference/montana-state-university/image_dd38015f-cfe7-5860-ad51-7dab5a17f107.html",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/22/8221a72e-6535-4284-955a-af2194779d38/6ae831b448039.preview.jpg?crop=1668%2C876%2C45%2C116&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Moore scores 10, Lady Griz overpower Western",
-      "url": "https://dailyinterlake.com/news/2026/nov/03/moore-scores-10-lady-griz-overpower-western/",
-      "date": "Nov. 3, 2026",
-      "published_at": "2026-11-03T09:35:00+00:00",
-      "description": "Updated 3 hours ago Moore scores 10, Lady Griz overpower Western Kennedy Moore scored 10 points and the Montana Lady Griz put five players in double figures in a 91-45 win over Montana Western in their season opener Tuesday.",
-      "source": "Daily Inter Lake",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://hagadone.media.clients.ellingtoncms.com/static-4/dailyinterlake/images/default-social.jpg?v=2",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://hagadone.media.clients.ellingtoncms.com/static-4/dailyinterlake/images/default-social.jpg?v=2"
     }
   ]
 }
