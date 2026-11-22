@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T16:57:37.505548+00:00",
+  "updated": "2026-11-22T22:16:47.312128+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,36 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz to host UIW in first round of FCS Playoffs",
+      "url": "https://gogriz.com/news/2026/11/22/football-griz-to-host-uiw-in-first-round-of-fcs-playoffs",
+      "date": "Nov. 22, 2026",
+      "published_at": "2026-11-22T18:33:00+00:00",
+      "description": "MISSOULA - The Montana Grizzlies earned a postseason home game as the No. 15 seed in the 2026 FCS football playoff bracket, the NCAA announced Sunday during the annual selection show on ESPNU. The berth extends Montana's FCS record for play",
+      "source": "GoGriz",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/22/Playoff_graphic_website.png",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/22/Playoff_graphic_website.png"
+    },
+    {
+      "title": "Montana Grizzlies earn No. 15 seed in FCS playoffs, first-round home game",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-earn-no-15-seed-in-fcs-playoffs-first-round-home-game/article_676b007f-97fb-46e7-bca4-10d54a13a9e7.html",
+      "date": "Nov. 22, 2026",
+      "published_at": "2026-11-22T17:45:00+00:00",
+      "description": "Montana Grizzlies earn No. 15 seed in FCS playoffs, first-round home game",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/76/676b007f-97fb-46e7-bca4-10d54a13a9e7/6b028c3c4480a.preview.jpg?crop=1760%2C924%2C1%2C33&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/76/676b007f-97fb-46e7-bca4-10d54a13a9e7/6b028c3c4480a.preview.jpg?crop=1760%2C924%2C1%2C33&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Week 12: No. 8 Montana Grizzlies fall at No. 2 Montana State Bobcats in 126th Brawl of the Wild",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/week-12-no-8-montana-grizzlies-fall-at-no-2-montana-state-bobcats-in-126th/collection_817796f6-d7dc-4dea-ae77-f987479a0674.html",
@@ -1479,36 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/93/a935db50-7b3e-4954-94dd-af342ae57614/6aeaa7d554c8a.image.jpg?crop=1703%2C894%2C0%2C161&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Griz return home to face Portland State",
-      "url": "https://gogriz.com/news/2026/11/3/football-griz-return-home-to-face-portland-state",
-      "date": "Nov. 4, 2026",
-      "published_at": "2026-11-04T00:26:00+00:00",
-      "description": "MISSOULA - As the old saying goes: \"The games they remember are played in November.\"",
-      "source": "GoGriz",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/31/20261031_fbvseasternwa_128.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/10/31/20261031_fbvseasternwa_128.jpg"
-    },
-    {
-      "title": "Griz WR Landon Ransom-Goelz enjoying Wa-Griz atmosphere in first year at Montana",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/griz-wr-landon-ransom-goelz-enjoying-wa-griz-atmosphere-in-first-year-at-montana/article_8221a72e-6535-4284-955a-af2194779d38.html",
-      "date": "Nov. 3, 2026",
-      "published_at": "2026-11-03T16:00:00+00:00",
-      "description": "Griz WR Landon Ransom-Goelz enjoying Wa-Griz atmosphere in first year at Montana",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/22/8221a72e-6535-4284-955a-af2194779d38/6ae831b448039.preview.jpg?crop=1668%2C876%2C45%2C116&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/22/8221a72e-6535-4284-955a-af2194779d38/6ae831b448039.preview.jpg?crop=1668%2C876%2C45%2C116&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
