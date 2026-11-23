@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T21:47:20.251046+00:00",
+  "updated": "2026-11-23T02:46:46.805947+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "8-4",
@@ -374,7 +374,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-22T21:47:57.250361+00:00"
+    "checked_at": "2026-11-23T02:47:38.416686+00:00"
   },
   "resources": [
     {
@@ -2956,7 +2956,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-22T21:47:26.460276+00:00",
+    "source_checked_at": "2026-11-23T02:46:52.701048+00:00",
     "team_summary": [
       {
         "value": "8–4",
@@ -27696,7 +27696,7 @@
   "big_sky_standings": [
     {
       "rank": 1,
-      "team": "Montana State ^",
+      "team": "Montana State $*",
       "conference_record": "8-1",
       "overall_record": "11-1",
       "home": "6-0",
@@ -27709,7 +27709,7 @@
     },
     {
       "rank": 2,
-      "team": "Weber State",
+      "team": "Weber State *",
       "conference_record": "7-2",
       "overall_record": "8-4",
       "home": "5-1",
@@ -27722,7 +27722,7 @@
     },
     {
       "rank": 3,
-      "team": "Northern Arizona",
+      "team": "Northern Arizona *",
       "conference_record": "7-2",
       "overall_record": "9-3",
       "home": "5-1",
@@ -27735,7 +27735,7 @@
     },
     {
       "rank": 4,
-      "team": "Montana",
+      "team": "Montana *",
       "conference_record": "6-3",
       "overall_record": "8-4",
       "home": "6-1",
@@ -27800,7 +27800,7 @@
     },
     {
       "rank": 9,
-      "team": "Idaho State",
+      "team": "Idaho State *",
       "conference_record": "4-5",
       "overall_record": "7-5",
       "home": "4-3",
@@ -28221,6 +28221,6 @@
       "news": "https://www.google.com/search?q=Incarnate%20Word%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-11-22T21:47:26.460347+00:00"
+    "updated": "2026-11-23T02:46:52.701122+00:00"
   }
 }
