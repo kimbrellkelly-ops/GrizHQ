@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T02:56:13.175659+00:00",
+  "updated": "2026-11-23T11:29:39.018004+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,21 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Montana’s Bobby Kennedy, Peyton Wing & Brooks Davis after Brawl of the Wild at Montana State",
+      "url": "https://skylinesportsmt.com/montanas-bobby-kennedy-peyton-wing-brooks-davis-after-brawl-of-the-wild-at-montana-state/",
+      "date": "Nov. 22, 2026",
+      "published_at": "2026-11-22T20:26:00+00:00",
+      "description": "Colter Nuanez November 22, 2026 Montana’s Bobby Kennedy, Peyton Wing & Brooks Davis after Brawl of the Wild at Montana State Montana head coach Bobby Kennedy, Peyton Wing and Brooks Davis meet the media after the 2026 Brawl of the Wild… Rea",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/Bobby-Kennedy-celebrates-a-penalty-on-The-Cats.jpeg",
+      "is_video": true,
+      "youtube_id": "HLTgkuZ6cNI",
+      "video_url": "https://www.youtube.com/watch?v=HLTgkuZ6cNI",
+      "video_thumbnail": "https://i.ytimg.com/vi/HLTgkuZ6cNI/hqdefault.jpg"
+    },
     {
       "title": "Griz to host UIW in first round of FCS Playoffs",
       "url": "https://gogriz.com/news/2026/11/22/football-griz-to-host-uiw-in-first-round-of-fcs-playoffs",
@@ -504,6 +519,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/15/20261114_montanavsidahostate_210.jpg"
+    },
+    {
+      "title": "Cat-Griz Football",
+      "url": "https://skylinesportsmt.com/kemp-guest-column-the-brawl-by-the-numbers/",
+      "date": "Nov. 17, 2026",
+      "published_at": "2026-11-17T14:18:45+00:00",
+      "description": "Cat-Griz Football November 17, 2026 KEMP GUEST COLUMN – The Brawl by the Numbers Jesse Kemp lets the numbers have their say ahead of the Brawl of the Wild, digging into Big Sky-only stats… Read More »",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2025/12/Taco-Dowler-runs-for-long-touchdown-with-TJ-Rausch-in-pursuit-scaled.jpeg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2025/12/Taco-Dowler-runs-for-long-touchdown-with-TJ-Rausch-in-pursuit-scaled.jpeg"
     },
     {
       "title": "MONTANA MADE: 30 Treasure State natives for the Grizzlies in 2026 rivalry game",
@@ -1479,36 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/c6/3c60bd9c-6b45-4181-abf2-766d9b816e63/6ae91e5d539a9.preview.jpg?crop=883%2C464%2C0%2C155"
-    },
-    {
-      "title": "Montana Lady Griz open season with dominant second-half, win over Montana Western",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-lady-griz-open-season-with-dominant-second-half-win-over-montana-western/article_0e373353-e25f-4db8-82de-4f7609200ce7.html",
-      "date": "Nov. 4, 2026",
-      "published_at": "2026-11-04T04:45:00+00:00",
-      "description": "Montana Lady Griz open season with dominant second-half, win over Montana Western",
-      "source": "406 MT Sports",
-      "badge": "GAME STORY",
-      "short": "GAME S",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/e3/0e373353-e25f-4db8-82de-4f7609200ce7/6aeab7f068298.preview.jpg?crop=1643%2C863%2C48%2C72&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/e3/0e373353-e25f-4db8-82de-4f7609200ce7/6aeab7f068298.preview.jpg?crop=1643%2C863%2C48%2C72&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Lady Griz open season against Western",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/lady-griz-open-season-against-western/video_0415b173-d121-56f2-845a-ea8a20f10c3f.html",
-      "date": "Nov. 4, 2026",
-      "published_at": "2026-11-04T03:52:00+00:00",
-      "description": "Lady Griz open season against Western",
-      "source": "406 MT Sports",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/41/0415b173-d121-56f2-845a-ea8a20f10c3f/6aeaaea578989.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/lady-griz-open-season-against-western/video_0415b173-d121-56f2-845a-ea8a20f10c3f.html",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/41/0415b173-d121-56f2-845a-ea8a20f10c3f/6aeaaea578989.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
