@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T22:16:47.312128+00:00",
+  "updated": "2026-11-23T02:56:13.175659+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -39,6 +39,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/6/76/676b007f-97fb-46e7-bca4-10d54a13a9e7/6b028c3c4480a.preview.jpg?crop=1760%2C924%2C1%2C33&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Week 12: No. 2 Montana State wins 126th Brawl of the Wild vs Montana Grizzlies",
+      "url": "https://406mtsports.com/college/big-sky-conference/montana-state-university/week-12-no-2-montana-state-wins-126th-brawl-of-the-wild-vs-montana-grizzlies/collection_86290666-b630-4f72-a3b9-23c4fe11c03c.html",
+      "date": "Nov. 22, 2026",
+      "published_at": "2026-11-22T17:00:00+00:00",
+      "description": "Week 12: No. 2 Montana State wins 126th Brawl of the Wild vs Montana Grizzlies",
+      "source": "406 MT Sports",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/62/86290666-b630-4f72-a3b9-23c4fe11c03c/6b03256526abf.preview.jpg?crop=1439%2C755%2C246%2C121&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/62/86290666-b630-4f72-a3b9-23c4fe11c03c/6b03256526abf.preview.jpg?crop=1439%2C755%2C246%2C121&resize=1200%2C630&order=crop%2Cresize"
     },
     {
       "title": "Week 12: No. 8 Montana Grizzlies fall at No. 2 Montana State Bobcats in 126th Brawl of the Wild",
@@ -1494,21 +1509,6 @@
       "youtube_id": "",
       "video_url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/lady-griz-open-season-against-western/video_0415b173-d121-56f2-845a-ea8a20f10c3f.html",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/41/0415b173-d121-56f2-845a-ea8a20f10c3f/6aeaaea578989.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Photos: Lady Griz vs. Montana Western women's basketball",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/photos-lady-griz-vs-montana-western-womens-basketball/collection_687ee138-e088-4d6e-ad3a-e2d188c06c88.html",
-      "date": "Nov. 4, 2026",
-      "published_at": "2026-11-04T03:33:00+00:00",
-      "description": "Photos: Lady Griz vs. Montana Western women's basketball",
-      "source": "406 MT Sports",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/93/a935db50-7b3e-4954-94dd-af342ae57614/6aeaa7d554c8a.image.jpg?crop=1703%2C894%2C0%2C161&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/93/a935db50-7b3e-4954-94dd-af342ae57614/6aeaa7d554c8a.image.jpg?crop=1703%2C894%2C0%2C161&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
