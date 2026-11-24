@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T22:51:02.042436+00:00",
+  "updated": "2026-11-24T06:35:36.149284+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,51 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Montana secures dominant win over Carroll College 10 days out from Big Sky opener",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_59a566b0-4605-5eef-b144-7073cd113841.html",
+      "date": "Nov. 24, 2026",
+      "published_at": "2026-11-24T04:45:00+00:00",
+      "description": "The Grizzlies improved to 3-3 with the win.",
+      "source": "Missoulian",
+      "badge": "GAME STORY",
+      "short": "GAME S",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/9/ec/9ec90420-af6c-5adf-8edd-3ffba481ee1a/6b0501828e9dd.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/9/ec/9ec90420-af6c-5adf-8edd-3ffba481ee1a/6b0501828e9dd.image.jpg?resize=300%2C200"
+    },
+    {
+      "title": "WATCH – Montana’s Bobby Kennedy, Dyllan Drummond & Nai Mose preview FCS Playoffs opener vs. Incarnate Word",
+      "url": "https://skylinesportsmt.com/watch-montanas-bobby-kennedy-dyllan-drummond-nai-mose-preview-fcs-playoffs-opener-vs-incarnate-word/",
+      "date": "Nov. 24, 2026",
+      "published_at": "2026-11-24T01:19:34+00:00",
+      "description": "Colter Nuanez November 23, 2026 WATCH – Montana’s Bobby Kennedy, Dyllan Drummond & Nai Mose preview FCS Playoffs opener vs. Incarnate Word Montana head coach Bobby Kennedy, offensive lineman Dyllan Drummond and linebacker Nai Mose met the m",
+      "source": "Skyline Sports",
+      "badge": "INSIDER",
+      "short": "INSIDE",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Bobby-Kennedy-walks-the-Griz-sideline-Brooks-Nuanez.jpg",
+      "is_video": true,
+      "youtube_id": "Sc09djEveHs",
+      "video_url": "https://www.youtube.com/watch?v=Sc09djEveHs",
+      "video_thumbnail": "https://i.ytimg.com/vi/Sc09djEveHs/hqdefault.jpg"
+    },
+    {
+      "title": "First look: No. 11 Montana Grizzlies vs. No. 17 Incarnate Word Cardinals",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-11-montana-grizzlies-vs-no-17-incarnate-word-cardinals/article_d16d20dd-0700-4d29-b214-c7961205f458.html",
+      "date": "Nov. 23, 2026",
+      "published_at": "2026-11-23T23:15:00+00:00",
+      "description": "First look: No. 11 Montana Grizzlies vs. No. 17 Incarnate Word Cardinals",
+      "source": "406 MT Sports",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/16/d16d20dd-0700-4d29-b214-c7961205f458/6b04c767d1f8e.preview.jpg?crop=1760%2C924%2C3%2C180&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/d/16/d16d20dd-0700-4d29-b214-c7961205f458/6b04c767d1f8e.preview.jpg?crop=1760%2C924%2C3%2C180&resize=1200%2C630&order=crop%2Cresize"
+    },
     {
       "title": "Montana’s Bobby Kennedy, Peyton Wing & Brooks Davis after Brawl of the Wild at Montana State",
       "url": "https://skylinesportsmt.com/montanas-bobby-kennedy-peyton-wing-brooks-davis-after-brawl-of-the-wild-at-montana-state/",
@@ -1464,51 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/28/128848a4-76b6-49a4-91b2-1daf93b72000/6ae90da01cdb8.preview.jpg?crop=1760%2C924%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Talkin’ Schmidt: Thank God for me, the Griz blitz & how far can Montana go?",
-      "url": "https://skylinesportsmt.com/talkin-schmidt-thank-god-for-me-the-griz-blitz-how-far-can-montana-go/",
-      "date": "Nov. 5, 2026",
-      "published_at": "2026-11-05T12:19:03+00:00",
-      "description": "November 5, 2026 Talkin’ Schmidt: Thank God for me, the Griz blitz & how far can Montana go?",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2025/12/Brooks-Nuanez-Cat-Griz-2025-Brooks-Davis-solo-1.jpeg",
-      "is_video": true,
-      "youtube_id": "8lLOqkI8XKI",
-      "video_url": "https://www.youtube.com/watch?v=8lLOqkI8XKI",
-      "video_thumbnail": "https://i.ytimg.com/vi/8lLOqkI8XKI/hqdefault.jpg"
-    },
-    {
-      "title": "Nuanez Now November 4, 2026 – Hour 2 – ESPN Roundtable previewing UM & MSU men’s & women’s hoops",
-      "url": "https://skylinesportsmt.com/nuanez-now-november-4-2026-hour-2-espn-roundtable-previewing-um-msu-mens-womens-hoops/",
-      "date": "Nov. 5, 2026",
-      "published_at": "2026-11-05T00:00:00+00:00",
-      "description": "November 4, 2026 Nuanez Now November 4, 2026 – Hour 2 – ESPN Roundtable previewing UM & MSU men’s & women’s hoops The ESPN Roundtable previews the 2026-27 seasons for the Montana Grizzlies and Montana State Bobcats men’s and women’s basketb",
-      "source": "Skyline Sports",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Ian-Finch-celebrates-on-the-Griz-sideline-Brooks-Nuanez-scaled.jpg",
-      "is_video": true,
-      "youtube_id": "cZhlwHEF24Y",
-      "video_url": "https://www.youtube.com/watch?v=cZhlwHEF24Y",
-      "video_thumbnail": "https://i.ytimg.com/vi/cZhlwHEF24Y/hqdefault.jpg"
-    },
-    {
-      "title": "Grizzlies welcome back LB Solomon Tuliaupupu 'with open arms'",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-welcome-back-lb-solomon-tuliaupupu-with-open-arms/article_3c60bd9c-6b45-4181-abf2-766d9b816e63.html",
-      "date": "Nov. 4, 2026",
-      "published_at": "2026-11-04T14:00:00+00:00",
-      "description": "Grizzlies welcome back LB Solomon Tuliaupupu 'with open arms'",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/c6/3c60bd9c-6b45-4181-abf2-766d9b816e63/6ae91e5d539a9.preview.jpg?crop=883%2C464%2C0%2C155",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/3/c6/3c60bd9c-6b45-4181-abf2-766d9b816e63/6ae91e5d539a9.preview.jpg?crop=883%2C464%2C0%2C155"
     }
   ]
 }
