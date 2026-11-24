@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T12:45:59.444777+00:00",
+  "updated": "2026-11-24T00:52:25.597363+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "8-4",
@@ -120,58 +120,58 @@
     }
   ],
   "coaches_poll": [
-    "Tarleton St. (26)",
-    "Montana St.",
-    "South Dakota St.",
+    "Tarleton State (24)",
+    "Montana State (1)",
+    "South Dakota State",
     "Stephen F. Austin",
-    "Lamar",
     "South Dakota",
+    "Lamar",
     "Mercer",
-    "Youngstown St.",
-    "Montana",
-    "Northern Arizona",
+    "Youngstown State",
     "North Dakota",
-    "Tennessee Tech",
-    "Illinois St.",
-    "Austin Peay",
+    "Northern Arizona",
+    "Montana",
     "Lehigh",
-    "Weber St.",
-    "Harvard",
-    "South Carolina St.",
-    "Abilene Christian",
-    "Monmouth (N.J.)",
-    "Campbell",
-    "UAlbany",
+    "Tennessee Tech",
+    "Weber State",
+    "Illinois State",
+    "Monmouth",
+    "South Carolina State",
+    "Austin Peay",
     "UC Davis",
+    "UAlbany",
     "UIW",
-    "Idaho St."
+    "Harvard",
+    "Campbell",
+    "Idaho State",
+    "Dayton"
   ],
   "media_poll": [
-    "Tarleton St. (26)",
-    "Montana St.",
-    "South Dakota St.",
+    "Tarleton State (24)",
+    "Montana State (1)",
+    "South Dakota State",
     "Stephen F. Austin",
-    "Lamar",
     "South Dakota",
+    "Lamar",
     "Mercer",
-    "Youngstown St.",
-    "Montana",
-    "Northern Arizona",
+    "Youngstown State",
     "North Dakota",
-    "Tennessee Tech",
-    "Illinois St.",
-    "Austin Peay",
+    "Northern Arizona",
+    "Montana",
     "Lehigh",
-    "Weber St.",
-    "Harvard",
-    "South Carolina St.",
-    "Abilene Christian",
-    "Monmouth (N.J.)",
-    "Campbell",
-    "UAlbany",
+    "Tennessee Tech",
+    "Weber State",
+    "Illinois State",
+    "Monmouth",
+    "South Carolina State",
+    "Austin Peay",
     "UC Davis",
+    "UAlbany",
     "UIW",
-    "Idaho St."
+    "Harvard",
+    "Campbell",
+    "Idaho State",
+    "Dayton"
   ],
   "news": [
     {
@@ -374,7 +374,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-23T12:46:44.672304+00:00"
+    "checked_at": "2026-11-24T00:53:13.733972+00:00"
   },
   "resources": [
     {
@@ -2704,21 +2704,21 @@
     }
   ],
   "fcs_rankings_source": "Stats Perform FCS Top 25 — Aug. 31, 2026",
-  "fcs_rankings_date": "Nov 18, 2026",
+  "fcs_rankings_date": "Nov 24, 2026",
   "fcs_top20": [
     {
       "rank": 1,
-      "team": "Tarleton St. (26)",
+      "team": "Tarleton State (24)",
       "record": ""
     },
     {
       "rank": 2,
-      "team": "Montana St.",
+      "team": "Montana State (1)",
       "record": ""
     },
     {
       "rank": 3,
-      "team": "South Dakota St.",
+      "team": "South Dakota State",
       "record": ""
     },
     {
@@ -2728,12 +2728,12 @@
     },
     {
       "rank": 5,
-      "team": "Lamar",
+      "team": "South Dakota",
       "record": "1-0"
     },
     {
       "rank": 6,
-      "team": "South Dakota",
+      "team": "Lamar",
       "record": "1-0"
     },
     {
@@ -2743,13 +2743,13 @@
     },
     {
       "rank": 8,
-      "team": "Youngstown St.",
+      "team": "Youngstown State",
       "record": ""
     },
     {
       "rank": 9,
-      "team": "Montana",
-      "record": ""
+      "team": "North Dakota",
+      "record": "1-0"
     },
     {
       "rank": 10,
@@ -2758,69 +2758,69 @@
     },
     {
       "rank": 11,
-      "team": "North Dakota",
-      "record": "1-0"
-    },
-    {
-      "rank": 12,
-      "team": "Tennessee Tech",
-      "record": "1-0"
-    },
-    {
-      "rank": 13,
-      "team": "Illinois St.",
+      "team": "Montana",
       "record": ""
     },
     {
-      "rank": 14,
-      "team": "Austin Peay",
-      "record": "1-0"
-    },
-    {
-      "rank": 15,
+      "rank": 12,
       "team": "Lehigh",
       "record": "1-0"
     },
     {
+      "rank": 13,
+      "team": "Tennessee Tech",
+      "record": "1-0"
+    },
+    {
+      "rank": 14,
+      "team": "Weber State",
+      "record": ""
+    },
+    {
+      "rank": 15,
+      "team": "Illinois State",
+      "record": ""
+    },
+    {
       "rank": 16,
-      "team": "Weber St.",
+      "team": "Monmouth",
       "record": ""
     },
     {
       "rank": 17,
-      "team": "Harvard",
+      "team": "South Carolina State",
       "record": ""
     },
     {
       "rank": 18,
-      "team": "South Carolina St.",
-      "record": ""
+      "team": "Austin Peay",
+      "record": "1-0"
     },
     {
       "rank": 19,
-      "team": "Abilene Christian",
+      "team": "UC Davis",
       "record": ""
     },
     {
       "rank": 20,
-      "team": "Monmouth (N.J.)",
+      "team": "UAlbany",
       "record": ""
     }
   ],
   "fcs_top25": [
     {
       "rank": 1,
-      "team": "Tarleton St. (26)",
+      "team": "Tarleton State (24)",
       "record": ""
     },
     {
       "rank": 2,
-      "team": "Montana St.",
+      "team": "Montana State (1)",
       "record": ""
     },
     {
       "rank": 3,
-      "team": "South Dakota St.",
+      "team": "South Dakota State",
       "record": ""
     },
     {
@@ -2830,12 +2830,12 @@
     },
     {
       "rank": 5,
-      "team": "Lamar",
+      "team": "South Dakota",
       "record": "1-0"
     },
     {
       "rank": 6,
-      "team": "South Dakota",
+      "team": "Lamar",
       "record": "1-0"
     },
     {
@@ -2845,13 +2845,13 @@
     },
     {
       "rank": 8,
-      "team": "Youngstown St.",
+      "team": "Youngstown State",
       "record": ""
     },
     {
       "rank": 9,
-      "team": "Montana",
-      "record": ""
+      "team": "North Dakota",
+      "record": "1-0"
     },
     {
       "rank": 10,
@@ -2860,77 +2860,77 @@
     },
     {
       "rank": 11,
-      "team": "North Dakota",
-      "record": "1-0"
-    },
-    {
-      "rank": 12,
-      "team": "Tennessee Tech",
-      "record": "1-0"
-    },
-    {
-      "rank": 13,
-      "team": "Illinois St.",
+      "team": "Montana",
       "record": ""
     },
     {
-      "rank": 14,
-      "team": "Austin Peay",
-      "record": "1-0"
-    },
-    {
-      "rank": 15,
+      "rank": 12,
       "team": "Lehigh",
       "record": "1-0"
     },
     {
+      "rank": 13,
+      "team": "Tennessee Tech",
+      "record": "1-0"
+    },
+    {
+      "rank": 14,
+      "team": "Weber State",
+      "record": ""
+    },
+    {
+      "rank": 15,
+      "team": "Illinois State",
+      "record": ""
+    },
+    {
       "rank": 16,
-      "team": "Weber St.",
+      "team": "Monmouth",
       "record": ""
     },
     {
       "rank": 17,
-      "team": "Harvard",
+      "team": "South Carolina State",
       "record": ""
     },
     {
       "rank": 18,
-      "team": "South Carolina St.",
-      "record": ""
+      "team": "Austin Peay",
+      "record": "1-0"
     },
     {
       "rank": 19,
-      "team": "Abilene Christian",
-      "record": ""
-    },
-    {
-      "rank": 20,
-      "team": "Monmouth (N.J.)",
-      "record": ""
-    },
-    {
-      "rank": 21,
-      "team": "Campbell",
-      "record": ""
-    },
-    {
-      "rank": 22,
-      "team": "UAlbany",
-      "record": ""
-    },
-    {
-      "rank": 23,
       "team": "UC Davis",
       "record": ""
     },
     {
-      "rank": 24,
+      "rank": 20,
+      "team": "UAlbany",
+      "record": ""
+    },
+    {
+      "rank": 21,
       "team": "UIW",
       "record": ""
     },
     {
+      "rank": 22,
+      "team": "Harvard",
+      "record": ""
+    },
+    {
+      "rank": 23,
+      "team": "Campbell",
+      "record": ""
+    },
+    {
+      "rank": 24,
+      "team": "Idaho State",
+      "record": ""
+    },
+    {
       "rank": 25,
-      "team": "Idaho St.",
+      "team": "Dayton",
       "record": ""
     }
   ],
@@ -2956,7 +2956,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-23T12:46:07.197776+00:00",
+    "source_checked_at": "2026-11-24T00:52:32.015347+00:00",
     "team_summary": [
       {
         "value": "8–4",
@@ -3299,7 +3299,7 @@
       "special"
     ]
   },
-  "rankings_date": "Nov 18, 2026",
+  "rankings_date": "Nov 24, 2026",
   "fcs_scores": {
     "2026-08-27": [
       {
@@ -27690,7 +27690,7 @@
     "title": "WATCH – Montana State head coach Brent Vigen weekly press conference previewing Montana in the Brawl of the Wild",
     "date": "Tue, 17 Nov 2026 00:14:18 +0000",
     "url": "https://skylinesportsmt.com/watch-montana-state-head-coach-brent-vigen-weekly-press-conference-previewing-montana-in-the-brawl-of-the-wild/",
-    "youtube_id": ""
+    "youtube_id": "jKosj3ZAow4"
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -28221,6 +28221,6 @@
       "news": "https://www.google.com/search?q=Incarnate%20Word%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-11-23T12:46:07.197855+00:00"
+    "updated": "2026-11-24T00:52:32.015424+00:00"
   }
 }
