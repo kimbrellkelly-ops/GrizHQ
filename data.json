@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T10:56:30.074599+00:00",
+  "updated": "2026-11-24T21:12:18.598284+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "8-4",
@@ -48,7 +48,7 @@
     },
     {
       "date": "Sep 26 (Sat)",
-      "opponent": "#9/10 UC Davis",
+      "opponent": "#9 UC Davis",
       "location": "Away",
       "result": "W 62-22",
       "time": "8 PM (MT)",
@@ -175,6 +175,18 @@
   ],
   "news": [
     {
+      "title": "Ah Yat, Davis and Gillman named finalists for Walter Payton Award",
+      "url": "https://gogriz.com/news/2026/11/24/football-ah-yat-davis-and-gillman-named-finalists-for-walter-payton-award",
+      "date": "Tue, 24 Nov 2026 11:53:00 MST",
+      "description": "MISSOULA – Montana's record-setting, \"three-headed monster\" offensive trio of quarterback Keali'i Ah Yat, receiver Brooks Davis and running back Eli Gillman have all been named fin"
+    },
+    {
+      "title": "King a finalist for the Buck Buchanan Award",
+      "url": "https://gogriz.com/news/2026/11/24/football-king-a-finalist-for-the-buck-buchanan-award",
+      "date": "Tue, 24 Nov 2026 09:53:00 MST",
+      "description": "MISSOULA - Grizzly senior defensive end Tyler King has been named a finalist for the 2026 Buck Buchanan Award, given annually to the top defender in the Football Championship Subdi"
+    },
+    {
       "title": "Griz to host UIW in first round of FCS Playoffs",
       "url": "https://gogriz.com/news/2026/11/22/football-griz-to-host-uiw-in-first-round-of-fcs-playoffs",
       "date": "Sun, 22 Nov 2026 11:33:00 MST",
@@ -209,18 +221,6 @@
       "url": "https://gogriz.com/news/2026/11/17/football-griz-set-to-renew-rivalry-against-cats",
       "date": "Tue, 17 Nov 2026 18:51:00 MST",
       "description": "MISSOULA - It's been a long time coming. The game that needs no introduction to any man, woman, or child in the Treasure State."
-    },
-    {
-      "title": "Griz score in all three phases to beat Bengals 38-30",
-      "url": "https://gogriz.com/news/2026/11/15/football-griz-score-in-all-three-phases-to-beat-bengals-38-30",
-      "date": "Sun, 15 Nov 2026 02:40:00 MST",
-      "description": "MISSOULA - The Montana Grizzlies earned a hard-fought victory over Idaho State in front of an effervescent crowd at Washington-Grizzly Stadium on Saturday night, scoring on offense"
-    },
-    {
-      "title": "Limited number of Native Griz helmet decals on sale now",
-      "url": "https://gogriz.com/news/2026/11/11/football-limited-number-of-native-griz-helmet-decals-on-sale-now",
-      "date": "Wed, 11 Nov 2026 15:07:00 MST",
-      "description": "Own a piece of Griz history!"
     }
   ],
   "depth_chart": {
@@ -374,7 +374,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-24T10:57:03.958479+00:00"
+    "checked_at": "2026-11-24T21:12:57.526396+00:00"
   },
   "resources": [
     {
@@ -2945,7 +2945,7 @@
         "Drake",
         "Utah Tech",
         "Oregon State",
-        "#9/10 UC Davis",
+        "#9 UC Davis",
         "Northern Colorado",
         "#13 Northern Arizona",
         "Idaho",
@@ -2956,7 +2956,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-24T10:56:36.865681+00:00",
+    "source_checked_at": "2026-11-24T21:12:25.318190+00:00",
     "team_summary": [
       {
         "value": "8–4",
@@ -3203,7 +3203,7 @@
       },
       {
         "week": "Wk 5",
-        "opponent": "#9/10 UC Davis",
+        "opponent": "#9 UC Davis",
         "result": "W 62-22",
         "notes": "Official GoGriz schedule result"
       },
@@ -28221,6 +28221,6 @@
       "news": "https://www.google.com/search?q=Incarnate%20Word%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-11-24T10:56:36.865768+00:00"
+    "updated": "2026-11-24T21:12:25.318253+00:00"
   }
 }
