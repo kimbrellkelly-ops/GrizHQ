@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T14:26:00.742253+00:00",
+  "updated": "2026-11-25T23:37:52.208894+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "8-4",
@@ -175,6 +175,12 @@
   ],
   "news": [
     {
+      "title": "Gillman, King named league MVPs as 15 Grizzlies earn All-Big Sky honors",
+      "url": "https://gogriz.com/news/2026/11/25/football-gillman-king-named-league-mvps-as-15-grizzlies-earn-all-big-sky-honors",
+      "date": "Wed, 25 Nov 2026 12:44:00 MST",
+      "description": "MISSOULA - The Montana Grizzlies earned Most Valuable Player awards on offense and defense for the first time in a quarter century, and a league-high 10 players earned first team a"
+    },
+    {
       "title": "Griz to host Cardinals in first round playoff dual",
       "url": "https://gogriz.com/news/2026/11/24/football-griz-to-host-cardinals-in-first-round-playoff-dual",
       "date": "Tue, 24 Nov 2026 18:22:00 MST",
@@ -215,12 +221,6 @@
       "url": "https://gogriz.com/news/2026/11/19/football-grizzly-athletics-launches-the-406-fund-to-support-montana-born-athletes",
       "date": "Thu, 19 Nov 2026 10:38:00 MST",
       "description": "MISSOULA – Grizzly Athletics has launched the 406 Fund, a new giving campaign to invest in student-athletes from the state of Montana, helping keep Montana talent in-state."
-    },
-    {
-      "title": "Grizzlies to honor longtime strength coach Bruce Wallwork with new team award",
-      "url": "https://gogriz.com/news/2026/11/18/football-grizzlies-to-honor-longtime-strength-coach-bruce-wallwork-with-new-team-award",
-      "date": "Wed, 18 Nov 2026 16:40:00 MST",
-      "description": "MISSOULA - Montana head football coach Bobby Kennedy has announced a new annual award honoring Bruce Wallwork, a former Grizzly player, the University of Montana's first strength a"
     }
   ],
   "depth_chart": {
@@ -374,7 +374,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-25T14:26:41.343253+00:00"
+    "checked_at": "2026-11-25T23:38:30.881695+00:00"
   },
   "resources": [
     {
@@ -2956,7 +2956,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-25T14:26:07.601275+00:00",
+    "source_checked_at": "2026-11-25T23:37:58.728800+00:00",
     "team_summary": [
       {
         "value": "8–4",
@@ -27690,7 +27690,7 @@
     "title": "WATCH – Montana State head coach Brent Vigen weekly press conference previewing Montana in the Brawl of the Wild",
     "date": "Tue, 17 Nov 2026 00:14:18 +0000",
     "url": "https://skylinesportsmt.com/watch-montana-state-head-coach-brent-vigen-weekly-press-conference-previewing-montana-in-the-brawl-of-the-wild/",
-    "youtube_id": ""
+    "youtube_id": "jKosj3ZAow4"
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -27787,19 +27787,6 @@
     },
     {
       "rank": 8,
-      "team": "Cal Poly",
-      "conference_record": "3-6",
-      "overall_record": "4-8",
-      "home": "2-4",
-      "away": "2-4",
-      "conference_points": "232-341",
-      "points": "311-426",
-      "conference_streak": "L5",
-      "overall_streak": "L5",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2535"
-    },
-    {
-      "rank": 9,
       "team": "Idaho State *",
       "conference_record": "4-5",
       "overall_record": "7-5",
@@ -27812,7 +27799,33 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2537"
     },
     {
+      "rank": 9,
+      "team": "Portland State",
+      "conference_record": "3-6",
+      "overall_record": "3-9",
+      "home": "1-4",
+      "away": "2-5",
+      "conference_points": "230-318",
+      "points": "273-502",
+      "conference_streak": "W1",
+      "overall_streak": "W1",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2542"
+    },
+    {
       "rank": 10,
+      "team": "Cal Poly",
+      "conference_record": "3-6",
+      "overall_record": "4-8",
+      "home": "2-4",
+      "away": "2-4",
+      "conference_points": "232-341",
+      "points": "311-426",
+      "conference_streak": "L5",
+      "overall_streak": "L5",
+      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2535"
+    },
+    {
+      "rank": 11,
       "team": "Eastern Washington",
       "conference_record": "2-7",
       "overall_record": "3-9",
@@ -27825,7 +27838,7 @@
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2534"
     },
     {
-      "rank": 11,
+      "rank": 12,
       "team": "Northern Colorado",
       "conference_record": "2-7",
       "overall_record": "3-9",
@@ -27836,19 +27849,6 @@
       "conference_streak": "L4",
       "overall_streak": "L4",
       "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2541"
-    },
-    {
-      "rank": 12,
-      "team": "Portland State",
-      "conference_record": "3-6",
-      "overall_record": "3-9",
-      "home": "1-4",
-      "away": "2-5",
-      "conference_points": "230-318",
-      "points": "273-502",
-      "conference_streak": "W1",
-      "overall_streak": "W1",
-      "schedule_url": "https://bigskyconf.com/schedule.aspx?schedule=2542"
     },
     {
       "rank": 13,
@@ -28221,6 +28221,6 @@
       "news": "https://www.google.com/search?q=Incarnate%20Word%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-11-25T14:26:07.601354+00:00"
+    "updated": "2026-11-25T23:37:58.728874+00:00"
   }
 }
