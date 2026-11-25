@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T11:43:29.779830+00:00",
+  "updated": "2026-11-25T20:40:20.454562+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,66 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Photos: Montana Lady Griz vs. Carroll College basketball",
+      "url": "https://406mtsports.com/college/photos-montana-lady-griz-vs-carroll-college-basketball/collection_f2595c59-9e9e-47ed-b031-59d764bacbc2.html",
+      "date": "Nov. 25, 2026",
+      "published_at": "2026-11-25T20:13:00+00:00",
+      "description": "Photos: Montana Lady Griz vs. Carroll College basketball",
+      "source": "406 MT Sports",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/2/c1/2c1b7278-3e76-45a0-9cfa-241227e0015b/6b0741cdc573c.image.jpg?crop=1765%2C927%2C0%2C123&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/2/c1/2c1b7278-3e76-45a0-9cfa-241227e0015b/6b0741cdc573c.image.jpg?crop=1765%2C927%2C0%2C123&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Grizzlies RB Eli Gillman repeats as Big Sky offensive MVP",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-rb-eli-gillman-repeats-as-big-sky-offensive-mvp/article_a423edbe-c9b3-4cf9-99ca-f7b90a077f8b.html",
+      "date": "Nov. 25, 2026",
+      "published_at": "2026-11-25T20:00:00+00:00",
+      "description": "Grizzlies RB Eli Gillman repeats as Big Sky offensive MVP",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/42/a423edbe-c9b3-4cf9-99ca-f7b90a077f8b/6b073e1434495.preview.jpg?crop=1174%2C616%2C0%2C73",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/a/42/a423edbe-c9b3-4cf9-99ca-f7b90a077f8b/6b073e1434495.preview.jpg?crop=1174%2C616%2C0%2C73"
+    },
+    {
+      "title": "Gillman, King named league MVPs as 15 Grizzlies earn All-Big Sky honors",
+      "url": "https://gogriz.com/news/2026/11/25/football-gillman-king-named-league-mvps-as-15-grizzlies-earn-all-big-sky-honors",
+      "date": "Nov. 25, 2026",
+      "published_at": "2026-11-25T19:44:00+00:00",
+      "description": "MISSOULA - The Montana Grizzlies earned Most Valuable Player awards on offense and defense for the first time in a quarter century, and a league-high 10 players earned first team all-conference honors as the Big Sky announced its annual awa",
+      "source": "GoGriz",
+      "badge": "HONOR",
+      "short": "HONOR",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/25/Generic_Web_FB_All-Big_Sky.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/25/Generic_Web_FB_All-Big_Sky.jpg"
+    },
+    {
+      "title": "Grizzlies get chance to rewrite story of their season in FCS playoffs",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/grizzlies-get-chance-to-rewrite-story-of-their-season-in-fcs-playoffs/article_569724fc-3779-477f-85b2-e216c2726d88.html",
+      "date": "Nov. 25, 2026",
+      "published_at": "2026-11-25T14:00:00+00:00",
+      "description": "Grizzlies get chance to rewrite story of their season in FCS playoffs",
+      "source": "406 MT Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/69/569724fc-3779-477f-85b2-e216c2726d88/6b0544390a15b.preview.jpg?crop=1173%2C616%2C2%2C397",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/69/569724fc-3779-477f-85b2-e216c2726d88/6b0544390a15b.preview.jpg?crop=1173%2C616%2C2%2C397"
+    },
     {
       "title": "Griz Game Day 11-25-26",
       "url": "https://missoulian.com/special-section/pdf_ec01cd4e-f1d4-4a2f-af89-7596b4606a38.html",
@@ -87,21 +147,6 @@
     },
     {
       "title": "Montana Lady Griz hold off gritty Carroll College for second-straight win",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_683aa03b-c4c2-5459-b4f8-56672b252d61.html",
-      "date": "Nov. 25, 2026",
-      "published_at": "2026-11-25T04:00:00+00:00",
-      "description": "Avery Waddington led the Lady Griz with a season-high 22 points on 10-for-12 shooting from the floor.",
-      "source": "Missoulian",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/3/b6/3b6c7a16-1b28-5e7b-931b-d50cd7c7ec67/6b06611182828.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/3/b6/3b6c7a16-1b28-5e7b-931b-d50cd7c7ec67/6b06611182828.image.jpg?resize=300%2C200"
-    },
-    {
-      "title": "Montana Lady Griz hold off gritty Carroll College for second-straight win",
       "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-lady-griz-hold-off-gritty-carroll-college-for-second-straight-win/article_55b70c12-0fe7-46c5-987e-fd4f0c4dcc61.html",
       "date": "Nov. 25, 2026",
       "published_at": "2026-11-25T04:00:00+00:00",
@@ -114,6 +159,21 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/5b/55b70c12-0fe7-46c5-987e-fd4f0c4dcc61/6b06592b48d9c.preview.jpg?crop=924%2C485%2C200%2C11"
+    },
+    {
+      "title": "Montana Lady Griz hold off gritty Carroll College for second-straight win",
+      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_683aa03b-c4c2-5459-b4f8-56672b252d61.html",
+      "date": "Nov. 25, 2026",
+      "published_at": "2026-11-25T04:00:00+00:00",
+      "description": "Avery Waddington led the Lady Griz with a season-high 22 points on 10-for-12 shooting from the floor.",
+      "source": "Missoulian",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/3/b6/3b6c7a16-1b28-5e7b-931b-d50cd7c7ec67/6b06611182828.image.jpg?resize=300%2C200",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/3/b6/3b6c7a16-1b28-5e7b-931b-d50cd7c7ec67/6b06611182828.image.jpg?resize=300%2C200"
     },
     {
       "title": "Big Sky Breakdown: Jordan Tripp on the Brawl of the Wild atmosphere, Montana’s defense & the Griz playoff run vs. Incarnate Word",
@@ -1449,66 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/0/37/037b751b-ef03-475e-ab4b-c8b61c7725a9/6aefc87b8dfc8.preview.jpg?crop=1734%2C910%2C30%2C100&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "WATCH – Montana’s Bobby Kennedy, Eli Gillman & Justin Eklund after 57-24 win over Portland State",
-      "url": "https://skylinesportsmt.com/watch-montanas-bobby-kennedy-eli-gillman-justin-eklund-after-57-24-win-over-portland-state/",
-      "date": "Nov. 8, 2026",
-      "published_at": "2026-11-08T02:41:49+00:00",
-      "description": "Colter Nuanez November 7, 2026 WATCH – Montana’s Bobby Kennedy, Eli Gillman & Justin Eklund after 57-24 win over Portland State Montana head coach Bobby Kennedy, Eli Gillman and Justin Eklund meet the media after the Grizzlies' 57-24 win ov",
-      "source": "Skyline Sports",
-      "badge": "INSIDER",
-      "short": "INSIDE",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/Eli-Gillman-touchdown-with-a-flailing-defender-Portland-State-at-Montana-Brooks-Nuanez.jpg",
-      "is_video": true,
-      "youtube_id": "-nc1dW0VeVg",
-      "video_url": "https://www.youtube.com/watch?v=-nc1dW0VeVg",
-      "video_thumbnail": "https://i.ytimg.com/vi/-nc1dW0VeVg/hqdefault.jpg"
-    },
-    {
-      "title": "Gillman makes more history, Griz roll Vikings 57-24",
-      "url": "https://gogriz.com/news/2026/11/7/football-gillman-makes-more-history-griz-roll-vikings-57-24",
-      "date": "Nov. 8, 2026",
-      "published_at": "2026-11-08T02:02:00+00:00",
-      "description": "MISSOULA - In a season of historic moments even more was written on Saturday at Washington-Grizzly Stadium as the Montana Grizzlies rolled past Portland State 57-24 behind a record-breaking performance from senior running back Eli Gillman.",
-      "source": "GoGriz",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/7/20261107_montanavsportlandstate_164.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/7/20261107_montanavsportlandstate_164.jpg"
-    },
-    {
-      "title": "Eklund, Kennedy, Gillman recap UM's win",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/eklund-kennedy-gillman-recap-ums-win/video_8b8b5149-4761-5327-a03e-d103528d3fc4.html",
-      "date": "Nov. 8, 2026",
-      "published_at": "2026-11-08T00:26:00+00:00",
-      "description": "Eklund, Kennedy, Gillman recap UM's win",
-      "source": "406 MT Sports",
-      "badge": "GAME STORY",
-      "short": "GAME S",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/b8/8b8b5149-4761-5327-a03e-d103528d3fc4/6aefc2d82c406.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": true,
-      "youtube_id": "",
-      "video_url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/eklund-kennedy-gillman-recap-ums-win/video_8b8b5149-4761-5327-a03e-d103528d3fc4.html",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/8/b8/8b8b5149-4761-5327-a03e-d103528d3fc4/6aefc2d82c406.image.jpg?crop=1280%2C672%2C0%2C23&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Recap: Eli Gillman breaks Big Sky record as No. 12 Grizzlies rout Portland State",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/montana-grizzlies-football-vs-portland-state-recap/article_52643400-4780-4a4c-8373-15baa9d370cb.html",
-      "date": "Nov. 7, 2026",
-      "published_at": "2026-11-07T23:15:00+00:00",
-      "description": "Recap: Eli Gillman breaks Big Sky record as No. 12 Grizzlies rout Portland State",
-      "source": "406 MT Sports",
-      "badge": "GAME STORY",
-      "short": "GAME S",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/26/52643400-4780-4a4c-8373-15baa9d370cb/6aef887060f22.preview.jpg?crop=1765%2C927%2C0%2C123&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/26/52643400-4780-4a4c-8373-15baa9d370cb/6aef887060f22.preview.jpg?crop=1765%2C927%2C0%2C123&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
