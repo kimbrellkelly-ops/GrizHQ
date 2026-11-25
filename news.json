@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T18:18:29.943670+00:00",
+  "updated": "2026-11-25T02:40:37.310633+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,51 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "Griz to host Cardinals in first round playoff dual",
+      "url": "https://gogriz.com/news/2026/11/24/football-griz-to-host-cardinals-in-first-round-playoff-dual",
+      "date": "Nov. 25, 2026",
+      "published_at": "2026-11-25T01:22:00+00:00",
+      "description": "MISSOULA - The second season has arrived and for the record 30th time in program history Montana has advanced to the FCS playoffs as the No. 15 Grizzlies host the University of the Incarnate Word Cardinals in a first-round showdown on Satur",
+      "source": "GoGriz",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/15/20261114_montanavsidahostate_232.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/15/20261114_montanavsidahostate_232.jpg"
+    },
+    {
+      "title": "Four Montana Grizzlies named finalists for FCS national awards",
+      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/four-montana-grizzlies-named-finalists-for-fcs-national-awards/article_472865a9-a03b-4f42-a6e1-1e2d2ed2fda1.html",
+      "date": "Nov. 24, 2026",
+      "published_at": "2026-11-24T20:00:00+00:00",
+      "description": "Four Montana Grizzlies named finalists for FCS national awards",
+      "source": "406 MT Sports",
+      "badge": "HONOR",
+      "short": "HONOR",
+      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/72/472865a9-a03b-4f42-a6e1-1e2d2ed2fda1/6b05e9e6c536d.preview.jpg?crop=1626%2C854%2C0%2C30&resize=1200%2C630&order=crop%2Cresize",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/4/72/472865a9-a03b-4f42-a6e1-1e2d2ed2fda1/6b05e9e6c536d.preview.jpg?crop=1626%2C854%2C0%2C30&resize=1200%2C630&order=crop%2Cresize"
+    },
+    {
+      "title": "Ah Yat, Davis and Gillman named finalists for Walter Payton Award",
+      "url": "https://gogriz.com/news/2026/11/24/football-ah-yat-davis-and-gillman-named-finalists-for-walter-payton-award",
+      "date": "Nov. 24, 2026",
+      "published_at": "2026-11-24T18:53:00+00:00",
+      "description": "MISSOULA – Montana's record-setting, \"three-headed monster\" offensive trio of quarterback Keali'i Ah Yat, receiver Brooks Davis and running back Eli Gillman have all been named finalists for the 2026 Walter Payton Award, Stats Perform annou",
+      "source": "GoGriz",
+      "badge": "HONOR",
+      "short": "HONOR",
+      "image": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/24/Walter_Payton_Finalists_-_Web.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://gogriz.com/common/controls/image_handler.aspx?thumb_prefix=rp_system&image_path=/images/2026/11/24/Walter_Payton_Finalists_-_Web.jpg"
+    },
     {
       "title": "King a finalist for the Buck Buchanan Award",
       "url": "https://gogriz.com/news/2026/11/24/football-king-a-finalist-for-the-buck-buchanan-award",
@@ -1464,51 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/2/2a/22aef458-5503-41e9-8577-a6c97dcd33f7/6aed74c0b628b.preview.jpg?crop=899%2C472%2C0%2C116"
-    },
-    {
-      "title": "From Griz fandom to game captain: Former walk-on Boyd thriving as Montana dials up the pressure",
-      "url": "https://skylinesportsmt.com/from-griz-pillow-to-rotating-captain-former-walk-on-kade-boyd-thriving-as-montana-dials-up-the-pressure/",
-      "date": "Nov. 6, 2026",
-      "published_at": "2026-11-06T17:01:25+00:00",
-      "description": "November 6, 2026 From Griz fandom to game captain: Former walk-on Boyd thriving as Montana dials up the pressure",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Griz-No-17-closes-on-Damonte-Bias-Brooks-Nuanez.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/10/Griz-No-17-closes-on-Damonte-Bias-Brooks-Nuanez.jpg"
-    },
-    {
-      "title": "Cussin’ & Discussin’ – Former Griz standout, NFL veteran and Mary head coach Shann Schillinger",
-      "url": "https://skylinesportsmt.com/cussin-discussin-former-griz-standout-nfl-veteran-and-mary-head-coach-shann-schillinger/",
-      "date": "Nov. 6, 2026",
-      "published_at": "2026-11-06T16:27:02+00:00",
-      "description": "November 6, 2026 Cussin’ & Discussin’ – Former Griz standout, NFL veteran and Mary head coach Shann Schillinger",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2017/10/coach-2595.jpg",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2017/10/coach-2595.jpg"
-    },
-    {
-      "title": "Nuanez Now November 5, 2026 – Hour 2 – All Football All the Time, Brent Vigen & Griz Star Kade Boyd",
-      "url": "https://skylinesportsmt.com/nuanez-now-november-5-2026-hour-2-all-football-all-the-time-brent-vigen-griz-star-kade-boyd/",
-      "date": "Nov. 6, 2026",
-      "published_at": "2026-11-06T00:00:00+00:00",
-      "description": "November 5, 2026 Nuanez Now November 5, 2026 – Hour 2 – All Football All the Time, Brent Vigen & Griz Star Kade Boyd",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/10/MSU-Weber-Brooks-IMG_4939.jpg",
-      "is_video": true,
-      "youtube_id": "KgVTKdihYDQ",
-      "video_url": "https://www.youtube.com/watch?v=KgVTKdihYDQ",
-      "video_thumbnail": "https://i.ytimg.com/vi/KgVTKdihYDQ/hqdefault.jpg"
     }
   ]
 }
