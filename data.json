@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T21:12:18.598284+00:00",
+  "updated": "2026-11-25T04:12:57.741137+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "8-4",
@@ -175,6 +175,12 @@
   ],
   "news": [
     {
+      "title": "Griz to host Cardinals in first round playoff dual",
+      "url": "https://gogriz.com/news/2026/11/24/football-griz-to-host-cardinals-in-first-round-playoff-dual",
+      "date": "Tue, 24 Nov 2026 18:22:00 MST",
+      "description": "MISSOULA - The second season has arrived and for the record 30th time in program history Montana has advanced to the FCS playoffs as the No. 15 Grizzlies host the University of the"
+    },
+    {
       "title": "Ah Yat, Davis and Gillman named finalists for Walter Payton Award",
       "url": "https://gogriz.com/news/2026/11/24/football-ah-yat-davis-and-gillman-named-finalists-for-walter-payton-award",
       "date": "Tue, 24 Nov 2026 11:53:00 MST",
@@ -215,12 +221,6 @@
       "url": "https://gogriz.com/news/2026/11/18/football-grizzlies-to-honor-longtime-strength-coach-bruce-wallwork-with-new-team-award",
       "date": "Wed, 18 Nov 2026 16:40:00 MST",
       "description": "MISSOULA - Montana head football coach Bobby Kennedy has announced a new annual award honoring Bruce Wallwork, a former Grizzly player, the University of Montana's first strength a"
-    },
-    {
-      "title": "Griz set to renew rivalry against Cats",
-      "url": "https://gogriz.com/news/2026/11/17/football-griz-set-to-renew-rivalry-against-cats",
-      "date": "Tue, 17 Nov 2026 18:51:00 MST",
-      "description": "MISSOULA - It's been a long time coming. The game that needs no introduction to any man, woman, or child in the Treasure State."
     }
   ],
   "depth_chart": {
@@ -374,7 +374,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-24T21:12:57.526396+00:00"
+    "checked_at": "2026-11-25T04:13:28.973923+00:00"
   },
   "resources": [
     {
@@ -2956,7 +2956,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-24T21:12:25.318190+00:00",
+    "source_checked_at": "2026-11-25T04:13:04.238610+00:00",
     "team_summary": [
       {
         "value": "8–4",
@@ -27690,7 +27690,7 @@
     "title": "WATCH – Montana State head coach Brent Vigen weekly press conference previewing Montana in the Brawl of the Wild",
     "date": "Tue, 17 Nov 2026 00:14:18 +0000",
     "url": "https://skylinesportsmt.com/watch-montana-state-head-coach-brent-vigen-weekly-press-conference-previewing-montana-in-the-brawl-of-the-wild/",
-    "youtube_id": "jKosj3ZAow4"
+    "youtube_id": ""
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -28221,6 +28221,6 @@
       "news": "https://www.google.com/search?q=Incarnate%20Word%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-11-24T21:12:25.318253+00:00"
+    "updated": "2026-11-25T04:13:04.238675+00:00"
   }
 }
