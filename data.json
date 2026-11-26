@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T23:37:52.208894+00:00",
+  "updated": "2026-11-26T08:20:31.904230+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "8-4",
@@ -374,7 +374,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-25T23:38:30.881695+00:00"
+    "checked_at": "2026-11-26T08:21:16.367948+00:00"
   },
   "resources": [
     {
@@ -2956,7 +2956,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-25T23:37:58.728800+00:00",
+    "source_checked_at": "2026-11-26T08:20:38.802229+00:00",
     "team_summary": [
       {
         "value": "8–4",
@@ -28221,6 +28221,6 @@
       "news": "https://www.google.com/search?q=Incarnate%20Word%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-11-25T23:37:58.728874+00:00"
+    "updated": "2026-11-26T08:20:38.802313+00:00"
   }
 }
