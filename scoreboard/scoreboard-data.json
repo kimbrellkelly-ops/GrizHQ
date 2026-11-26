@@ -1,21 +1,21 @@
 {
   "season": 2026,
-  "generatedAt": "2026-11-21T22:26:03.433687+00:00",
+  "generatedAt": "2026-11-26T05:03:24.092437+00:00",
   "source": "ESPN team schedules (Top 25 + Big Sky)",
   "rankings": [
     {
       "rank": 1,
-      "team": "Tarleton St.",
+      "team": "Tarleton State",
       "record": ""
     },
     {
       "rank": 2,
-      "team": "Montana St.",
+      "team": "Montana State",
       "record": ""
     },
     {
       "rank": 3,
-      "team": "South Dakota St.",
+      "team": "South Dakota State",
       "record": ""
     },
     {
@@ -25,12 +25,12 @@
     },
     {
       "rank": 5,
-      "team": "Lamar",
+      "team": "South Dakota",
       "record": "1-0"
     },
     {
       "rank": 6,
-      "team": "South Dakota",
+      "team": "Lamar",
       "record": "1-0"
     },
     {
@@ -40,13 +40,13 @@
     },
     {
       "rank": 8,
-      "team": "Youngstown St.",
+      "team": "Youngstown State",
       "record": ""
     },
     {
       "rank": 9,
-      "team": "Montana",
-      "record": ""
+      "team": "North Dakota",
+      "record": "1-0"
     },
     {
       "rank": 10,
@@ -55,81 +55,81 @@
     },
     {
       "rank": 11,
-      "team": "North Dakota",
-      "record": "1-0"
-    },
-    {
-      "rank": 12,
-      "team": "Tennessee Tech",
-      "record": "1-0"
-    },
-    {
-      "rank": 13,
-      "team": "Illinois St.",
+      "team": "Montana",
       "record": ""
     },
     {
-      "rank": 14,
-      "team": "Austin Peay",
-      "record": "1-0"
-    },
-    {
-      "rank": 15,
+      "rank": 12,
       "team": "Lehigh",
       "record": "1-0"
     },
     {
+      "rank": 13,
+      "team": "Tennessee Tech",
+      "record": "1-0"
+    },
+    {
+      "rank": 14,
+      "team": "Weber State",
+      "record": ""
+    },
+    {
+      "rank": 15,
+      "team": "Illinois State",
+      "record": ""
+    },
+    {
       "rank": 16,
-      "team": "Weber St.",
-      "record": ""
-    },
-    {
-      "rank": 17,
-      "team": "Harvard",
-      "record": ""
-    },
-    {
-      "rank": 18,
-      "team": "South Carolina St.",
-      "record": ""
-    },
-    {
-      "rank": 19,
-      "team": "Abilene Christian",
-      "record": ""
-    },
-    {
-      "rank": 20,
       "team": "Monmouth",
       "record": ""
     },
     {
-      "rank": 21,
-      "team": "Campbell",
+      "rank": 17,
+      "team": "South Carolina State",
       "record": ""
     },
     {
-      "rank": 22,
-      "team": "UAlbany",
-      "record": ""
+      "rank": 18,
+      "team": "Austin Peay",
+      "record": "1-0"
     },
     {
-      "rank": 23,
+      "rank": 19,
       "team": "UC Davis",
       "record": ""
     },
     {
-      "rank": 24,
+      "rank": 20,
+      "team": "UAlbany",
+      "record": ""
+    },
+    {
+      "rank": 21,
       "team": "UIW",
       "record": ""
     },
     {
+      "rank": 22,
+      "team": "Harvard",
+      "record": ""
+    },
+    {
+      "rank": 23,
+      "team": "Campbell",
+      "record": ""
+    },
+    {
+      "rank": 24,
+      "team": "Idaho State",
+      "record": ""
+    },
+    {
       "rank": 25,
-      "team": "Idaho St.",
+      "team": "Dayton",
       "record": ""
     }
   ],
-  "rankingsDate": "Nov 18, 2026",
+  "rankingsDate": "Nov 24, 2026",
   "bigSkyTeams": [
     "Montana",
     "Montana State",
@@ -152,7 +152,7 @@
       "end": "2026-08-30",
       "label": "WEEK 0 • AUG 27–30",
       "complete": true,
-      "fcsEventCount": 22,
+      "fcsEventCount": 23,
       "bigSkyEventCount": 7,
       "fcsTop25Games": [
         {
@@ -357,6 +357,50 @@
               "homeAway": "away",
               "score": "30",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
+          "id": "401868792",
+          "date": "2026-08-29T16:00Z",
+          "name": "Fairmont State Falcons at Dayton Flyers",
+          "shortName": "FMSU @ DAY",
+          "venue": "Welcome Stadium",
+          "city": "Dayton",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2168",
+              "name": "Dayton Flyers",
+              "short": "Dayton",
+              "abbreviation": "DAY",
+              "homeAway": "home",
+              "score": "43",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png"
+            },
+            {
+              "id": "2986",
+              "name": "Fairmont State Falcons",
+              "short": "Fairmont St",
+              "abbreviation": "FMSU",
+              "homeAway": "away",
+              "score": "20",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2986.png"
             }
           ],
           "status": {
@@ -1126,7 +1170,7 @@
       ],
       "fcsTop25Byes": [
         {
-          "rank": 17,
+          "rank": 22,
           "team": "Harvard",
           "record": ""
         }
@@ -1448,7 +1492,7 @@
       "end": "2026-09-06",
       "label": "WEEK 1 • SEP 3–6",
       "complete": true,
-      "fcsEventCount": 24,
+      "fcsEventCount": 23,
       "bigSkyEventCount": 12,
       "fcsTop25Games": [
         {
@@ -1936,50 +1980,6 @@
           "broadcasts": []
         },
         {
-          "id": "401856770",
-          "date": "2026-09-05T23:00Z",
-          "name": "Abilene Christian Wildcats at Texas Tech Red Raiders",
-          "shortName": "ACU @ TTU",
-          "venue": "Galaxy Stadium",
-          "city": "Lubbock",
-          "state": "post",
-          "teams": [
-            {
-              "id": "2641",
-              "name": "Texas Tech Red Raiders",
-              "short": "Texas Tech",
-              "abbreviation": "TTU",
-              "homeAway": "home",
-              "score": "33",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png"
-            },
-            {
-              "id": "2000",
-              "name": "Abilene Christian Wildcats",
-              "short": "Abilene Chrstn",
-              "abbreviation": "ACU",
-              "homeAway": "away",
-              "score": "10",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final",
-            "label": "FINAL",
-            "period": 4,
-            "clock": "0:00"
-          },
-          "completed": true,
-          "period": 4,
-          "clock": "0:00",
-          "statusText": "FINAL",
-          "broadcasts": []
-        },
-        {
           "id": "401860880",
           "date": "2026-09-05T23:00Z",
           "name": "Idaho State Bengals at Utah State Aggies",
@@ -2112,50 +2112,6 @@
           "broadcasts": []
         },
         {
-          "id": "401869142",
-          "date": "2026-09-06T00:00Z",
-          "name": "Lamar Cardinals at Louisiana Ragin' Cajuns",
-          "shortName": "LAM @ UL",
-          "venue": "Our Lady of Lourdes Stadium",
-          "city": "Lafayette",
-          "state": "post",
-          "teams": [
-            {
-              "id": "309",
-              "name": "Louisiana Ragin' Cajuns",
-              "short": "Louisiana",
-              "abbreviation": "UL",
-              "homeAway": "home",
-              "score": "38",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png"
-            },
-            {
-              "id": "2320",
-              "name": "Lamar Cardinals",
-              "short": "Lamar",
-              "abbreviation": "LAM",
-              "homeAway": "away",
-              "score": "7",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final",
-            "label": "FINAL",
-            "period": 4,
-            "clock": "0:00"
-          },
-          "completed": true,
-          "period": 4,
-          "clock": "0:00",
-          "statusText": "FINAL",
-          "broadcasts": []
-        },
-        {
           "id": "401867883",
           "date": "2026-09-06T00:00Z",
           "name": "South Dakota Coyotes at Northern Colorado Bears",
@@ -2200,31 +2156,31 @@
           "broadcasts": []
         },
         {
-          "id": "401867845",
+          "id": "401869142",
           "date": "2026-09-06T00:00Z",
-          "name": "Illinois State Redbirds at Western Illinois Leathernecks",
-          "shortName": "ILST @ WIU",
-          "venue": "Hanson Field",
-          "city": "Macomb",
+          "name": "Lamar Cardinals at Louisiana Ragin' Cajuns",
+          "shortName": "LAM @ UL",
+          "venue": "Our Lady of Lourdes Stadium",
+          "city": "Lafayette",
           "state": "post",
           "teams": [
             {
-              "id": "2710",
-              "name": "Western Illinois Leathernecks",
-              "short": "W Illinois",
-              "abbreviation": "WIU",
+              "id": "309",
+              "name": "Louisiana Ragin' Cajuns",
+              "short": "Louisiana",
+              "abbreviation": "UL",
               "homeAway": "home",
-              "score": "10",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2710.png"
+              "score": "38",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png"
             },
             {
-              "id": "2287",
-              "name": "Illinois State Redbirds",
-              "short": "Illinois St",
-              "abbreviation": "ILST",
+              "id": "2320",
+              "name": "Lamar Cardinals",
+              "short": "Lamar",
+              "abbreviation": "LAM",
               "homeAway": "away",
-              "score": "41",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png"
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png"
             }
           ],
           "status": {
@@ -2269,6 +2225,50 @@
               "homeAway": "away",
               "score": "42",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
+          "id": "401867845",
+          "date": "2026-09-06T00:00Z",
+          "name": "Illinois State Redbirds at Western Illinois Leathernecks",
+          "shortName": "ILST @ WIU",
+          "venue": "Hanson Field",
+          "city": "Macomb",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2710",
+              "name": "Western Illinois Leathernecks",
+              "short": "W Illinois",
+              "abbreviation": "WIU",
+              "homeAway": "home",
+              "score": "10",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2710.png"
+            },
+            {
+              "id": "2287",
+              "name": "Illinois State Redbirds",
+              "short": "Illinois St",
+              "abbreviation": "ILST",
+              "homeAway": "away",
+              "score": "41",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png"
             }
           ],
           "status": {
@@ -2510,13 +2510,18 @@
       ],
       "fcsTop25Byes": [
         {
-          "rank": 17,
+          "rank": 21,
+          "team": "UIW",
+          "record": ""
+        },
+        {
+          "rank": 22,
           "team": "Harvard",
           "record": ""
         },
         {
-          "rank": 24,
-          "team": "UIW",
+          "rank": 25,
+          "team": "Dayton",
           "record": ""
         }
       ],
@@ -3057,7 +3062,7 @@
       "end": "2026-09-13",
       "label": "WEEK 2 • SEP 10–13",
       "complete": true,
-      "fcsEventCount": 22,
+      "fcsEventCount": 23,
       "bigSkyEventCount": 12,
       "fcsTop25Games": [
         {
@@ -3086,6 +3091,50 @@
               "homeAway": "away",
               "score": "35",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/399.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
+          "id": "401868227",
+          "date": "2026-09-12T16:00Z",
+          "name": "Thomas More Saints at Dayton Flyers",
+          "shortName": "TMOR @ DAY",
+          "venue": "Welcome Stadium",
+          "city": "Dayton",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2168",
+              "name": "Dayton Flyers",
+              "short": "Dayton",
+              "abbreviation": "DAY",
+              "homeAway": "home",
+              "score": "30",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png"
+            },
+            {
+              "id": "2646",
+              "name": "Thomas More Saints",
+              "short": "Thomas More",
+              "abbreviation": "TMOR",
+              "homeAway": "away",
+              "score": "7",
+              "logo": ""
             }
           ],
           "status": {
@@ -4031,7 +4080,7 @@
       ],
       "fcsTop25Byes": [
         {
-          "rank": 17,
+          "rank": 22,
           "team": "Harvard",
           "record": ""
         }
@@ -4841,50 +4890,6 @@
           "broadcasts": []
         },
         {
-          "id": "401868051",
-          "date": "2026-09-19T20:00Z",
-          "name": "Abilene Christian Wildcats at Idaho Vandals",
-          "shortName": "ACU @ IDHO",
-          "venue": "Kibbie Dome",
-          "city": "Moscow",
-          "state": "post",
-          "teams": [
-            {
-              "id": "70",
-              "name": "Idaho Vandals",
-              "short": "Idaho",
-              "abbreviation": "IDHO",
-              "homeAway": "home",
-              "score": "39",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
-            },
-            {
-              "id": "2000",
-              "name": "Abilene Christian Wildcats",
-              "short": "Abilene Chrstn",
-              "abbreviation": "ACU",
-              "homeAway": "away",
-              "score": "41",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final",
-            "label": "FINAL",
-            "period": 4,
-            "clock": "0:00"
-          },
-          "completed": true,
-          "period": 4,
-          "clock": "0:00",
-          "statusText": "FINAL",
-          "broadcasts": []
-        },
-        {
           "id": "401866636",
           "date": "2026-09-19T22:00Z",
           "name": "North Carolina A&T Aggies at Campbell Fighting Camels",
@@ -4910,6 +4915,50 @@
               "homeAway": "away",
               "score": "14",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2448.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
+          "id": "401868142",
+          "date": "2026-09-19T22:00Z",
+          "name": "Dayton Flyers at Eastern Kentucky Colonels",
+          "shortName": "DAY @ EKU",
+          "venue": "Roy Kidd Stadium",
+          "city": "Richmond",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2198",
+              "name": "Eastern Kentucky Colonels",
+              "short": "E Kentucky",
+              "abbreviation": "EKU",
+              "homeAway": "home",
+              "score": "14",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png"
+            },
+            {
+              "id": "2168",
+              "name": "Dayton Flyers",
+              "short": "Dayton",
+              "abbreviation": "DAY",
+              "homeAway": "away",
+              "score": "17",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png"
             }
           ],
           "status": {
@@ -5459,18 +5508,18 @@
       ],
       "fcsTop25Byes": [
         {
-          "rank": 5,
+          "rank": 6,
           "team": "Lamar",
           "record": "1-0"
         },
         {
-          "rank": 12,
+          "rank": 13,
           "team": "Tennessee Tech",
           "record": "1-0"
         },
         {
-          "rank": 25,
-          "team": "Idaho St.",
+          "rank": 24,
+          "team": "Idaho State",
           "record": ""
         }
       ],
@@ -6455,50 +6504,6 @@
           "broadcasts": []
         },
         {
-          "id": "401866645",
-          "date": "2026-09-26T22:00Z",
-          "name": "Campbell Fighting Camels at Hampton Pirates",
-          "shortName": "CAM @ HAMP",
-          "venue": "Armstrong Stadium",
-          "city": "Hampton",
-          "state": "post",
-          "teams": [
-            {
-              "id": "2261",
-              "name": "Hampton Pirates",
-              "short": "Hampton",
-              "abbreviation": "HAMP",
-              "homeAway": "home",
-              "score": "20",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2261.png"
-            },
-            {
-              "id": "2097",
-              "name": "Campbell Fighting Camels",
-              "short": "Campbell",
-              "abbreviation": "CAM",
-              "homeAway": "away",
-              "score": "44",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2097.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final",
-            "label": "FINAL",
-            "period": 4,
-            "clock": "0:00"
-          },
-          "completed": true,
-          "period": 4,
-          "clock": "0:00",
-          "statusText": "FINAL",
-          "broadcasts": []
-        },
-        {
           "id": "401860892",
           "date": "2026-09-26T22:00Z",
           "name": "Incarnate Word Cardinals at Texas State Bobcats",
@@ -6524,6 +6529,50 @@
               "homeAway": "away",
               "score": "10",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2916.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
+          "id": "401866645",
+          "date": "2026-09-26T22:00Z",
+          "name": "Campbell Fighting Camels at Hampton Pirates",
+          "shortName": "CAM @ HAMP",
+          "venue": "Armstrong Stadium",
+          "city": "Hampton",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2261",
+              "name": "Hampton Pirates",
+              "short": "Hampton",
+              "abbreviation": "HAMP",
+              "homeAway": "home",
+              "score": "20",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2261.png"
+            },
+            {
+              "id": "2097",
+              "name": "Campbell Fighting Camels",
+              "short": "Campbell",
+              "abbreviation": "CAM",
+              "homeAway": "away",
+              "score": "44",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2097.png"
             }
           ],
           "status": {
@@ -6854,7 +6903,12 @@
       "fcsTop25Byes": [
         {
           "rank": 1,
-          "team": "Tarleton St.",
+          "team": "Tarleton State",
+          "record": ""
+        },
+        {
+          "rank": 25,
+          "team": "Dayton",
           "record": ""
         }
       ],
@@ -7248,6 +7302,50 @@
               "homeAway": "away",
               "score": "40",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/119.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
+          "id": "401868228",
+          "date": "2026-10-03T17:00Z",
+          "name": "Dayton Flyers at Drake Bulldogs",
+          "shortName": "DAY @ DRKE",
+          "venue": "Drake Stadium (IA)",
+          "city": "Des Moines",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2181",
+              "name": "Drake Bulldogs",
+              "short": "Drake",
+              "abbreviation": "DRKE",
+              "homeAway": "home",
+              "score": "30",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2181.png"
+            },
+            {
+              "id": "2168",
+              "name": "Dayton Flyers",
+              "short": "Dayton",
+              "abbreviation": "DAY",
+              "homeAway": "away",
+              "score": "22",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png"
             }
           ],
           "status": {
@@ -8015,50 +8113,6 @@
           "broadcasts": []
         },
         {
-          "id": "401868053",
-          "date": "2026-10-04T00:00Z",
-          "name": "West Florida Argonauts at Abilene Christian Wildcats",
-          "shortName": "UWF @ ACU",
-          "venue": "Wildcat Stadium (TX)",
-          "city": "Abilene",
-          "state": "post",
-          "teams": [
-            {
-              "id": "2000",
-              "name": "Abilene Christian Wildcats",
-              "short": "Abilene Chrstn",
-              "abbreviation": "ACU",
-              "homeAway": "home",
-              "score": "35",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
-            },
-            {
-              "id": "110242",
-              "name": "West Florida Argonauts",
-              "short": "West Florida",
-              "abbreviation": "UWF",
-              "homeAway": "away",
-              "score": "7",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/110242.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final",
-            "label": "FINAL",
-            "period": 4,
-            "clock": "0:00"
-          },
-          "completed": true,
-          "period": 4,
-          "clock": "0:00",
-          "statusText": "FINAL",
-          "broadcasts": []
-        },
-        {
           "id": "401868086",
           "date": "2026-10-04T02:30Z",
           "name": "Eastern Washington Eagles at UC Davis Aggies",
@@ -8381,6 +8435,50 @@
       "bigSkyEventCount": 5,
       "fcsTop25Games": [
         {
+          "id": "401868229",
+          "date": "2026-10-10T16:00Z",
+          "name": "Morehead State Eagles at Dayton Flyers",
+          "shortName": "MORE @ DAY",
+          "venue": "Welcome Stadium",
+          "city": "Dayton",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2168",
+              "name": "Dayton Flyers",
+              "short": "Dayton",
+              "abbreviation": "DAY",
+              "homeAway": "home",
+              "score": "56",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png"
+            },
+            {
+              "id": "2413",
+              "name": "Morehead State Eagles",
+              "short": "Morehead St",
+              "abbreviation": "MORE",
+              "homeAway": "away",
+              "score": "28",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2413.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
           "id": "401867860",
           "date": "2026-10-10T17:00Z",
           "name": "Youngstown State Penguins at Indiana State Sycamores",
@@ -8425,50 +8523,6 @@
           "broadcasts": []
         },
         {
-          "id": "401867829",
-          "date": "2026-10-10T17:00Z",
-          "name": "Harvard Crimson at Cornell Big Red",
-          "shortName": "HARV @ COR",
-          "venue": "Schoellkopf Field",
-          "city": "Ithaca",
-          "state": "post",
-          "teams": [
-            {
-              "id": "172",
-              "name": "Cornell Big Red",
-              "short": "Cornell",
-              "abbreviation": "COR",
-              "homeAway": "home",
-              "score": "29",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/172.png"
-            },
-            {
-              "id": "108",
-              "name": "Harvard Crimson",
-              "short": "Harvard",
-              "abbreviation": "HARV",
-              "homeAway": "away",
-              "score": "41",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/108.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final",
-            "label": "FINAL",
-            "period": 4,
-            "clock": "0:00"
-          },
-          "completed": true,
-          "period": 4,
-          "clock": "0:00",
-          "statusText": "FINAL",
-          "broadcasts": []
-        },
-        {
           "id": "401867987",
           "date": "2026-10-10T17:00Z",
           "name": "South Carolina State Bulldogs at Charleston Southern Buccaneers",
@@ -8494,6 +8548,50 @@
               "homeAway": "away",
               "score": "39",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2569.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
+          "id": "401867829",
+          "date": "2026-10-10T17:00Z",
+          "name": "Harvard Crimson at Cornell Big Red",
+          "shortName": "HARV @ COR",
+          "venue": "Schoellkopf Field",
+          "city": "Ithaca",
+          "state": "post",
+          "teams": [
+            {
+              "id": "172",
+              "name": "Cornell Big Red",
+              "short": "Cornell",
+              "abbreviation": "COR",
+              "homeAway": "home",
+              "score": "29",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/172.png"
+            },
+            {
+              "id": "108",
+              "name": "Harvard Crimson",
+              "short": "Harvard",
+              "abbreviation": "HARV",
+              "homeAway": "away",
+              "score": "41",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/108.png"
             }
           ],
           "status": {
@@ -8733,50 +8831,6 @@
           "broadcasts": []
         },
         {
-          "id": "401868115",
-          "date": "2026-10-10T21:00Z",
-          "name": "Montana Grizzlies at Northern Arizona Lumberjacks",
-          "shortName": "MONT @ NAU",
-          "venue": "J. Lawrence Walkup Skydome",
-          "city": "Flagstaff",
-          "state": "post",
-          "teams": [
-            {
-              "id": "2464",
-              "name": "Northern Arizona Lumberjacks",
-              "short": "N Arizona",
-              "abbreviation": "NAU",
-              "homeAway": "home",
-              "score": "49",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
-            },
-            {
-              "id": "149",
-              "name": "Montana Grizzlies",
-              "short": "Montana",
-              "abbreviation": "MONT",
-              "homeAway": "away",
-              "score": "44",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final",
-            "label": "FINAL",
-            "period": 4,
-            "clock": "0:00"
-          },
-          "completed": true,
-          "period": 4,
-          "clock": "0:00",
-          "statusText": "FINAL",
-          "broadcasts": []
-        },
-        {
           "id": "401867877",
           "date": "2026-10-10T21:00Z",
           "name": "North Dakota Fighting Hawks at Northern Iowa Panthers",
@@ -8802,6 +8856,50 @@
               "homeAway": "away",
               "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
+          "id": "401868115",
+          "date": "2026-10-10T21:00Z",
+          "name": "Montana Grizzlies at Northern Arizona Lumberjacks",
+          "shortName": "MONT @ NAU",
+          "venue": "J. Lawrence Walkup Skydome",
+          "city": "Flagstaff",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2464",
+              "name": "Northern Arizona Lumberjacks",
+              "short": "N Arizona",
+              "abbreviation": "NAU",
+              "homeAway": "home",
+              "score": "49",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
+            },
+            {
+              "id": "149",
+              "name": "Montana Grizzlies",
+              "short": "Montana",
+              "abbreviation": "MONT",
+              "homeAway": "away",
+              "score": "44",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
             }
           ],
           "status": {
@@ -8907,61 +9005,17 @@
           "clock": "0:00",
           "statusText": "FINAL",
           "broadcasts": []
-        },
-        {
-          "id": "401868054",
-          "date": "2026-10-11T00:00Z",
-          "name": "Central Arkansas Bears at Abilene Christian Wildcats",
-          "shortName": "CARK @ ACU",
-          "venue": "Wildcat Stadium (TX)",
-          "city": "Abilene",
-          "state": "post",
-          "teams": [
-            {
-              "id": "2000",
-              "name": "Abilene Christian Wildcats",
-              "short": "Abilene Chrstn",
-              "abbreviation": "ACU",
-              "homeAway": "home",
-              "score": "20",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
-            },
-            {
-              "id": "2110",
-              "name": "Central Arkansas Bears",
-              "short": "C Arkansas",
-              "abbreviation": "CARK",
-              "homeAway": "away",
-              "score": "14",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2110.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final",
-            "label": "FINAL",
-            "period": 4,
-            "clock": "0:00"
-          },
-          "completed": true,
-          "period": 4,
-          "clock": "0:00",
-          "statusText": "FINAL",
-          "broadcasts": []
         }
       ],
       "fcsTop25Byes": [
         {
           "rank": 2,
-          "team": "Montana St.",
+          "team": "Montana State",
           "record": ""
         },
         {
           "rank": 3,
-          "team": "South Dakota St.",
+          "team": "South Dakota State",
           "record": ""
         },
         {
@@ -8970,33 +9024,33 @@
           "record": ""
         },
         {
-          "rank": 13,
-          "team": "Illinois St.",
-          "record": ""
-        },
-        {
-          "rank": 15,
+          "rank": 12,
           "team": "Lehigh",
           "record": "1-0"
         },
         {
-          "rank": 20,
+          "rank": 15,
+          "team": "Illinois State",
+          "record": ""
+        },
+        {
+          "rank": 16,
           "team": "Monmouth",
           "record": ""
         },
         {
-          "rank": 21,
-          "team": "Campbell",
+          "rank": 19,
+          "team": "UC Davis",
           "record": ""
         },
         {
-          "rank": 22,
+          "rank": 20,
           "team": "UAlbany",
           "record": ""
         },
         {
           "rank": 23,
-          "team": "UC Davis",
+          "team": "Campbell",
           "record": ""
         }
       ],
@@ -9233,6 +9287,50 @@
       "bigSkyEventCount": 6,
       "fcsTop25Games": [
         {
+          "id": "401866665",
+          "date": "2026-10-17T17:00Z",
+          "name": "Monmouth Hawks at New Hampshire Wildcats",
+          "shortName": "MONM @ UNH",
+          "venue": "Wildcat Stadium (NH)",
+          "city": "Durham",
+          "state": "post",
+          "teams": [
+            {
+              "id": "160",
+              "name": "New Hampshire Wildcats",
+              "short": "New Hampshire",
+              "abbreviation": "UNH",
+              "homeAway": "home",
+              "score": "21",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/160.png"
+            },
+            {
+              "id": "2405",
+              "name": "Monmouth Hawks",
+              "short": "Monmouth",
+              "abbreviation": "MONM",
+              "homeAway": "away",
+              "score": "42",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2405.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
           "id": "401867841",
           "date": "2026-10-17T17:00Z",
           "name": "Holy Cross Crusaders at Harvard Crimson",
@@ -9277,31 +9375,31 @@
           "broadcasts": []
         },
         {
-          "id": "401866665",
+          "id": "401868213",
           "date": "2026-10-17T17:00Z",
-          "name": "Monmouth Hawks at New Hampshire Wildcats",
-          "shortName": "MONM @ UNH",
-          "venue": "Wildcat Stadium (NH)",
-          "city": "Durham",
+          "name": "Dayton Flyers at Butler Bulldogs",
+          "shortName": "DAY @ BTLR",
+          "venue": "Bud and Jackie Sellick Bowl",
+          "city": "Indianapolis",
           "state": "post",
           "teams": [
             {
-              "id": "160",
-              "name": "New Hampshire Wildcats",
-              "short": "New Hampshire",
-              "abbreviation": "UNH",
+              "id": "2086",
+              "name": "Butler Bulldogs",
+              "short": "Butler",
+              "abbreviation": "BTLR",
               "homeAway": "home",
-              "score": "21",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/160.png"
+              "score": "9",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2086.png"
             },
             {
-              "id": "2405",
-              "name": "Monmouth Hawks",
-              "short": "Monmouth",
-              "abbreviation": "MONM",
+              "id": "2168",
+              "name": "Dayton Flyers",
+              "short": "Dayton",
+              "abbreviation": "DAY",
               "homeAway": "away",
-              "score": "42",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2405.png"
+              "score": "19",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png"
             }
           ],
           "status": {
@@ -9365,50 +9463,6 @@
           "broadcasts": []
         },
         {
-          "id": "401868066",
-          "date": "2026-10-17T18:00Z",
-          "name": "Austin Peay Governors at West Georgia Wolves",
-          "shortName": "APSU @ WES",
-          "venue": "University Stadium (GA)",
-          "city": "Carrollton",
-          "state": "post",
-          "teams": [
-            {
-              "id": "2698",
-              "name": "West Georgia Wolves",
-              "short": "West Georgia",
-              "abbreviation": "WES",
-              "homeAway": "home",
-              "score": "10",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2698.png"
-            },
-            {
-              "id": "2046",
-              "name": "Austin Peay Governors",
-              "short": "Austin Peay",
-              "abbreviation": "APSU",
-              "homeAway": "away",
-              "score": "24",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final",
-            "label": "FINAL",
-            "period": 4,
-            "clock": "0:00"
-          },
-          "completed": true,
-          "period": 4,
-          "clock": "0:00",
-          "statusText": "FINAL",
-          "broadcasts": []
-        },
-        {
           "id": "401867830",
           "date": "2026-10-17T18:00Z",
           "name": "Lehigh Mountain Hawks at Cornell Big Red",
@@ -9434,6 +9488,50 @@
               "homeAway": "away",
               "score": "38",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2329.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
+          "id": "401868066",
+          "date": "2026-10-17T18:00Z",
+          "name": "Austin Peay Governors at West Georgia Wolves",
+          "shortName": "APSU @ WES",
+          "venue": "University Stadium (GA)",
+          "city": "Carrollton",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2698",
+              "name": "West Georgia Wolves",
+              "short": "West Georgia",
+              "abbreviation": "WES",
+              "homeAway": "home",
+              "score": "10",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2698.png"
+            },
+            {
+              "id": "2046",
+              "name": "Austin Peay Governors",
+              "short": "Austin Peay",
+              "abbreviation": "APSU",
+              "homeAway": "away",
+              "score": "24",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
             }
           ],
           "status": {
@@ -9761,50 +9859,6 @@
           "broadcasts": []
         },
         {
-          "id": "401868319",
-          "date": "2026-10-17T21:00Z",
-          "name": "Lamar Cardinals at SE Louisiana Lions",
-          "shortName": "LAM @ SELA",
-          "venue": "Strawberry Stadium",
-          "city": "Hammond",
-          "state": "post",
-          "teams": [
-            {
-              "id": "2545",
-              "name": "SE Louisiana Lions",
-              "short": "SE Louisiana",
-              "abbreviation": "SELA",
-              "homeAway": "home",
-              "score": "34",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2545.png"
-            },
-            {
-              "id": "2320",
-              "name": "Lamar Cardinals",
-              "short": "Lamar",
-              "abbreviation": "LAM",
-              "homeAway": "away",
-              "score": "31",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final",
-            "label": "FINAL",
-            "period": 4,
-            "clock": "0:00"
-          },
-          "completed": true,
-          "period": 4,
-          "clock": "0:00",
-          "statusText": "FINAL",
-          "broadcasts": []
-        },
-        {
           "id": "401867870",
           "date": "2026-10-17T21:00Z",
           "name": "South Dakota Coyotes at Murray State Racers",
@@ -9830,6 +9884,50 @@
               "homeAway": "away",
               "score": "48",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/233.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
+          "id": "401868319",
+          "date": "2026-10-17T21:00Z",
+          "name": "Lamar Cardinals at SE Louisiana Lions",
+          "shortName": "LAM @ SELA",
+          "venue": "Strawberry Stadium",
+          "city": "Hammond",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2545",
+              "name": "SE Louisiana Lions",
+              "short": "SE Louisiana",
+              "abbreviation": "SELA",
+              "homeAway": "home",
+              "score": "34",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2545.png"
+            },
+            {
+              "id": "2320",
+              "name": "Lamar Cardinals",
+              "short": "Lamar",
+              "abbreviation": "LAM",
+              "homeAway": "away",
+              "score": "31",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png"
             }
           ],
           "status": {
@@ -10069,50 +10167,6 @@
           "broadcasts": []
         },
         {
-          "id": "401868055",
-          "date": "2026-10-17T23:00Z",
-          "name": "Abilene Christian Wildcats at North Alabama Lions",
-          "shortName": "ACU @ UNA",
-          "venue": "Braly Stadium",
-          "city": "Florence",
-          "state": "post",
-          "teams": [
-            {
-              "id": "2453",
-              "name": "North Alabama Lions",
-              "short": "North Alabama",
-              "abbreviation": "UNA",
-              "homeAway": "home",
-              "score": "28",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2453.png"
-            },
-            {
-              "id": "2000",
-              "name": "Abilene Christian Wildcats",
-              "short": "Abilene Chrstn",
-              "abbreviation": "ACU",
-              "homeAway": "away",
-              "score": "31",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final",
-            "label": "FINAL",
-            "period": 4,
-            "clock": "0:00"
-          },
-          "completed": true,
-          "period": 4,
-          "clock": "0:00",
-          "statusText": "FINAL",
-          "broadcasts": []
-        },
-        {
           "id": "401868250",
           "date": "2026-10-17T23:00Z",
           "name": "UT Rio Grande Valley Vaqueros at Incarnate Word Cardinals",
@@ -10203,8 +10257,8 @@
       ],
       "fcsTop25Byes": [
         {
-          "rank": 18,
-          "team": "South Carolina St.",
+          "rank": 17,
+          "team": "South Carolina State",
           "record": ""
         }
       ],
@@ -10481,7 +10535,7 @@
       "end": "2026-10-25",
       "label": "WEEK 8 • OCT 22–25",
       "complete": true,
-      "fcsEventCount": 18,
+      "fcsEventCount": 19,
       "bigSkyEventCount": 5,
       "fcsTop25Games": [
         {
@@ -10510,6 +10564,50 @@
               "homeAway": "away",
               "score": "38",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/399.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
+          "id": "401868230",
+          "date": "2026-10-24T16:00Z",
+          "name": "San Diego Toreros at Dayton Flyers",
+          "shortName": "USD @ DAY",
+          "venue": "Welcome Stadium",
+          "city": "Dayton",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2168",
+              "name": "Dayton Flyers",
+              "short": "Dayton",
+              "abbreviation": "DAY",
+              "homeAway": "home",
+              "score": "37",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png"
+            },
+            {
+              "id": "301",
+              "name": "San Diego Toreros",
+              "short": "San Diego",
+              "abbreviation": "USD",
+              "homeAway": "away",
+              "score": "32",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/301.png"
             }
           ],
           "status": {
@@ -11193,7 +11291,7 @@
           "date": "2026-10-24T23:00Z",
           "name": "Austin Peay Governors at North Alabama Lions",
           "shortName": "APSU @ UNA",
-          "venue": "Braly Stadium",
+          "venue": "Bank Independent Stadium",
           "city": "Florence",
           "state": "post",
           "teams": [
@@ -11285,12 +11383,7 @@
         },
         {
           "rank": 8,
-          "team": "Youngstown St.",
-          "record": ""
-        },
-        {
-          "rank": 9,
-          "team": "Montana",
+          "team": "Youngstown State",
           "record": ""
         },
         {
@@ -11299,8 +11392,8 @@
           "record": "1-0"
         },
         {
-          "rank": 19,
-          "team": "Abilene Christian",
+          "rank": 11,
+          "team": "Montana",
           "record": ""
         }
       ],
@@ -11782,6 +11875,50 @@
               "homeAway": "away",
               "score": "21",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2803.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
+          "id": "401868231",
+          "date": "2026-10-31T17:00Z",
+          "name": "Dayton Flyers at Stetson Hatters",
+          "shortName": "DAY @ STET",
+          "venue": "Spec Martin Memorial Stadium",
+          "city": "DeLand",
+          "state": "post",
+          "teams": [
+            {
+              "id": "56",
+              "name": "Stetson Hatters",
+              "short": "Stetson",
+              "abbreviation": "STET",
+              "homeAway": "home",
+              "score": "34",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png"
+            },
+            {
+              "id": "2168",
+              "name": "Dayton Flyers",
+              "short": "Dayton",
+              "abbreviation": "DAY",
+              "homeAway": "away",
+              "score": "44",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png"
             }
           ],
           "status": {
@@ -12285,50 +12422,6 @@
           "broadcasts": []
         },
         {
-          "id": "401868056",
-          "date": "2026-10-31T20:00Z",
-          "name": "West Georgia Wolves at Abilene Christian Wildcats",
-          "shortName": "WES @ ACU",
-          "venue": "Wildcat Stadium (TX)",
-          "city": "Abilene",
-          "state": "post",
-          "teams": [
-            {
-              "id": "2000",
-              "name": "Abilene Christian Wildcats",
-              "short": "Abilene Chrstn",
-              "abbreviation": "ACU",
-              "homeAway": "home",
-              "score": "59",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
-            },
-            {
-              "id": "2698",
-              "name": "West Georgia Wolves",
-              "short": "West Georgia",
-              "abbreviation": "WES",
-              "homeAway": "away",
-              "score": "0",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2698.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final",
-            "label": "FINAL",
-            "period": 4,
-            "clock": "0:00"
-          },
-          "completed": true,
-          "period": 4,
-          "clock": "0:00",
-          "statusText": "FINAL",
-          "broadcasts": []
-        },
-        {
           "id": "401868147",
           "date": "2026-10-31T23:00Z",
           "name": "Eastern Kentucky Colonels at Tarleton State Texans",
@@ -12419,7 +12512,7 @@
       ],
       "fcsTop25Byes": [
         {
-          "rank": 14,
+          "rank": 18,
           "team": "Austin Peay",
           "record": "1-0"
         }
@@ -12697,7 +12790,7 @@
       "end": "2026-11-08",
       "label": "WEEK 10 • NOV 5–8",
       "complete": true,
-      "fcsEventCount": 19,
+      "fcsEventCount": 20,
       "bigSkyEventCount": 6,
       "fcsTop25Games": [
         {
@@ -12833,6 +12926,50 @@
           "broadcasts": []
         },
         {
+          "id": "401868232",
+          "date": "2026-11-07T17:00Z",
+          "name": "Valparaiso Beacons at Dayton Flyers",
+          "shortName": "VAL @ DAY",
+          "venue": "Welcome Stadium",
+          "city": "Dayton",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2168",
+              "name": "Dayton Flyers",
+              "short": "Dayton",
+              "abbreviation": "DAY",
+              "homeAway": "home",
+              "score": "31",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png"
+            },
+            {
+              "id": "2674",
+              "name": "Valparaiso Beacons",
+              "short": "Valparaiso",
+              "abbreviation": "VAL",
+              "homeAway": "away",
+              "score": "20",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2674.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
           "id": "401868343",
           "date": "2026-11-07T18:00Z",
           "name": "Mercer Bears at Chattanooga Mocs",
@@ -12872,6 +13009,50 @@
           },
           "completed": true,
           "period": 5,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
+          "id": "401866683",
+          "date": "2026-11-07T18:00Z",
+          "name": "UAlbany Great Danes at Bryant Bulldogs",
+          "shortName": "ALB @ BRY",
+          "venue": "Beirne Stadium",
+          "city": "Smithfield",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2803",
+              "name": "Bryant Bulldogs",
+              "short": "Bryant",
+              "abbreviation": "BRY",
+              "homeAway": "home",
+              "score": "31",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2803.png"
+            },
+            {
+              "id": "399",
+              "name": "UAlbany Great Danes",
+              "short": "UAlbany",
+              "abbreviation": "ALB",
+              "homeAway": "away",
+              "score": "7",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/399.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
           "clock": "0:00",
           "statusText": "FINAL",
           "broadcasts": []
@@ -12946,50 +13127,6 @@
               "homeAway": "away",
               "score": "35",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2619.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final",
-            "label": "FINAL",
-            "period": 4,
-            "clock": "0:00"
-          },
-          "completed": true,
-          "period": 4,
-          "clock": "0:00",
-          "statusText": "FINAL",
-          "broadcasts": []
-        },
-        {
-          "id": "401866683",
-          "date": "2026-11-07T18:00Z",
-          "name": "UAlbany Great Danes at Bryant Bulldogs",
-          "shortName": "ALB @ BRY",
-          "venue": "Beirne Stadium",
-          "city": "Smithfield",
-          "state": "post",
-          "teams": [
-            {
-              "id": "2803",
-              "name": "Bryant Bulldogs",
-              "short": "Bryant",
-              "abbreviation": "BRY",
-              "homeAway": "home",
-              "score": "31",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2803.png"
-            },
-            {
-              "id": "399",
-              "name": "UAlbany Great Danes",
-              "short": "UAlbany",
-              "abbreviation": "ALB",
-              "homeAway": "away",
-              "score": "7",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/399.png"
             }
           ],
           "status": {
@@ -13539,13 +13676,13 @@
       ],
       "fcsTop25Byes": [
         {
-          "rank": 6,
+          "rank": 5,
           "team": "South Dakota",
           "record": "1-0"
         },
         {
-          "rank": 16,
-          "team": "Weber St.",
+          "rank": 14,
+          "team": "Weber State",
           "record": ""
         }
       ],
@@ -13822,7 +13959,7 @@
       "end": "2026-11-15",
       "label": "WEEK 11 • NOV 12–15",
       "complete": true,
-      "fcsEventCount": 19,
+      "fcsEventCount": 20,
       "bigSkyEventCount": 6,
       "fcsTop25Games": [
         {
@@ -13895,6 +14032,50 @@
               "homeAway": "away",
               "score": "3",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/311.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
+          "id": "401868225",
+          "date": "2026-11-14T17:00Z",
+          "name": "Davidson Wildcats at Dayton Flyers",
+          "shortName": "DAV @ DAY",
+          "venue": "Welcome Stadium",
+          "city": "Dayton",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2168",
+              "name": "Dayton Flyers",
+              "short": "Dayton",
+              "abbreviation": "DAY",
+              "homeAway": "home",
+              "score": "34",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png"
+            },
+            {
+              "id": "2166",
+              "name": "Davidson Wildcats",
+              "short": "Davidson",
+              "abbreviation": "DAV",
+              "homeAway": "away",
+              "score": "3",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2166.png"
             }
           ],
           "status": {
@@ -14090,50 +14271,6 @@
           "broadcasts": []
         },
         {
-          "id": "401868058",
-          "date": "2026-11-14T19:00Z",
-          "name": "Abilene Christian Wildcats at Austin Peay Governors",
-          "shortName": "ACU @ APSU",
-          "venue": "Fortera Stadium",
-          "city": "Clarksville",
-          "state": "post",
-          "teams": [
-            {
-              "id": "2046",
-              "name": "Austin Peay Governors",
-              "short": "Austin Peay",
-              "abbreviation": "APSU",
-              "homeAway": "home",
-              "score": "31",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
-            },
-            {
-              "id": "2000",
-              "name": "Abilene Christian Wildcats",
-              "short": "Abilene Chrstn",
-              "abbreviation": "ACU",
-              "homeAway": "away",
-              "score": "34",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
-            }
-          ],
-          "status": {
-            "state": "post",
-            "completed": true,
-            "name": "STATUS_FINAL",
-            "detail": "Final",
-            "shortDetail": "Final",
-            "label": "FINAL",
-            "period": 4,
-            "clock": "0:00"
-          },
-          "completed": true,
-          "period": 4,
-          "clock": "0:00",
-          "statusText": "FINAL",
-          "broadcasts": []
-        },
-        {
           "id": "401868036",
           "date": "2026-11-14T19:00Z",
           "name": "Lehigh Mountain Hawks at Richmond Spiders",
@@ -14159,6 +14296,50 @@
               "homeAway": "away",
               "score": "21",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2329.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
+        },
+        {
+          "id": "401868058",
+          "date": "2026-11-14T19:00Z",
+          "name": "Abilene Christian Wildcats at Austin Peay Governors",
+          "shortName": "ACU @ APSU",
+          "venue": "Fortera Stadium",
+          "city": "Clarksville",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2046",
+              "name": "Austin Peay Governors",
+              "short": "Austin Peay",
+              "abbreviation": "APSU",
+              "homeAway": "home",
+              "score": "31",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
+            },
+            {
+              "id": "2000",
+              "name": "Abilene Christian Wildcats",
+              "short": "Abilene Chrstn",
+              "abbreviation": "ACU",
+              "homeAway": "away",
+              "score": "34",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
             }
           ],
           "status": {
@@ -14664,7 +14845,7 @@
       ],
       "fcsTop25Byes": [
         {
-          "rank": 11,
+          "rank": 9,
           "team": "North Dakota",
           "record": "1-0"
         }
@@ -15031,9 +15212,7 @@
           "period": 4,
           "clock": "0:00",
           "statusText": "FINAL",
-          "broadcasts": [
-            "FloSports"
-          ]
+          "broadcasts": []
         },
         {
           "id": "401866694",
@@ -15077,9 +15256,7 @@
           "period": 4,
           "clock": "0:00",
           "statusText": "FINAL",
-          "broadcasts": [
-            "FloSports"
-          ]
+          "broadcasts": []
         },
         {
           "id": "401868032",
@@ -15123,9 +15300,7 @@
           "period": 5,
           "clock": "0:00",
           "statusText": "FINAL",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "broadcasts": []
         },
         {
           "id": "401867854",
@@ -15169,9 +15344,7 @@
           "period": 4,
           "clock": "0:00",
           "statusText": "FINAL",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "broadcasts": []
         },
         {
           "id": "401856750",
@@ -15215,9 +15388,51 @@
           "period": 4,
           "clock": "0:00",
           "statusText": "FINAL",
-          "broadcasts": [
-            "SECN+"
-          ]
+          "broadcasts": []
+        },
+        {
+          "id": "401868253",
+          "date": "2026-11-21T18:00Z",
+          "name": "Dayton Flyers at Presbyterian Blue Hose",
+          "shortName": "DAY @ PRES",
+          "venue": "Bailey Memorial Stadium",
+          "city": "Clinton",
+          "state": "post",
+          "teams": [
+            {
+              "id": "2506",
+              "name": "Presbyterian Blue Hose",
+              "short": "Presbyterian",
+              "abbreviation": "PRES",
+              "homeAway": "home",
+              "score": "11",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2506.png"
+            },
+            {
+              "id": "2168",
+              "name": "Dayton Flyers",
+              "short": "Dayton",
+              "abbreviation": "DAY",
+              "homeAway": "away",
+              "score": "27",
+              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png"
+            }
+          ],
+          "status": {
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
+          },
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401867959",
@@ -15261,9 +15476,7 @@
           "period": 4,
           "clock": "0:00",
           "statusText": "FINAL",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "broadcasts": []
         },
         {
           "id": "401868117",
@@ -15307,10 +15520,7 @@
           "period": 4,
           "clock": "0:00",
           "statusText": "FINAL",
-          "broadcasts": [
-            "ESPN+",
-            "Scripps Sports"
-          ]
+          "broadcasts": []
         },
         {
           "id": "401867881",
@@ -15354,56 +15564,7 @@
           "period": 4,
           "clock": "0:00",
           "statusText": "FINAL",
-          "broadcasts": [
-            "ESPN+",
-            "Midco Sports Plus"
-          ]
-        },
-        {
-          "id": "401868059",
-          "date": "2026-11-21T19:00Z",
-          "name": "Eastern Kentucky Colonels at Abilene Christian Wildcats",
-          "shortName": "EKU @ ACU",
-          "venue": "Wildcat Stadium (TX)",
-          "city": "Abilene",
-          "state": "in",
-          "teams": [
-            {
-              "id": "2000",
-              "name": "Abilene Christian Wildcats",
-              "short": "Abilene Chrstn",
-              "abbreviation": "ACU",
-              "homeAway": "home",
-              "score": "10",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
-            },
-            {
-              "id": "2198",
-              "name": "Eastern Kentucky Colonels",
-              "short": "E Kentucky",
-              "abbreviation": "EKU",
-              "homeAway": "away",
-              "score": "37",
-              "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png"
-            }
-          ],
-          "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "9:08 - 3rd Quarter",
-            "shortDetail": "9:08 - 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "9:08"
-          },
-          "completed": false,
-          "period": 3,
-          "clock": "9:08",
-          "statusText": "Q3",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "broadcasts": []
         },
         {
           "id": "401867864",
@@ -15412,7 +15573,7 @@
           "shortName": "INST @ SDST",
           "venue": "Dana J. Dykhouse Stadium",
           "city": "Brookings",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2571",
@@ -15420,7 +15581,7 @@
               "short": "S Dakota St",
               "abbreviation": "SDST",
               "homeAway": "home",
-              "score": "35",
+              "score": "52",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png"
             },
             {
@@ -15434,22 +15595,20 @@
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "7:37 - 3rd Quarter",
-            "shortDetail": "7:37 - 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "7:37"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 3,
-          "clock": "7:37",
-          "statusText": "Q3",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401868352",
@@ -15458,7 +15617,7 @@
           "shortName": "ETSU @ MER",
           "venue": "Five Star Stadium",
           "city": "Macon",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2382",
@@ -15466,7 +15625,7 @@
               "short": "Mercer",
               "abbreviation": "MER",
               "homeAway": "home",
-              "score": "12",
+              "score": "28",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2382.png"
             },
             {
@@ -15475,27 +15634,25 @@
               "short": "ETSU",
               "abbreviation": "ETSU",
               "homeAway": "away",
-              "score": "14",
+              "score": "25",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2193.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "15:00 - 3rd Quarter",
-            "shortDetail": "15:00 - 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "15:00"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final/OT",
+            "shortDetail": "Final/OT",
+            "label": "FINAL",
+            "period": 5,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 3,
-          "clock": "15:00",
-          "statusText": "Q3",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "completed": true,
+          "period": 5,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401868167",
@@ -15504,7 +15661,7 @@
           "shortName": "UTU @ WEB",
           "venue": "Stewart Stadium",
           "city": "Ogden",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2692",
@@ -15512,7 +15669,7 @@
               "short": "Weber St",
               "abbreviation": "WEB",
               "homeAway": "home",
-              "score": "24",
+              "score": "31",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
             },
             {
@@ -15521,28 +15678,25 @@
               "short": "Utah Tech",
               "abbreviation": "UTU",
               "homeAway": "away",
-              "score": "17",
+              "score": "24",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "14:45 - 4th Quarter",
-            "shortDetail": "14:45 - 4th",
-            "label": "Q4",
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
             "period": 4,
-            "clock": "14:45"
+            "clock": "0:00"
           },
-          "completed": false,
+          "completed": true,
           "period": 4,
-          "clock": "14:45",
-          "statusText": "Q4",
-          "broadcasts": [
-            "ESPN+",
-            "KJZZ-TV"
-          ]
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401867844",
@@ -15551,7 +15705,7 @@
           "shortName": "YALE VS HARV",
           "venue": "Fenway Park",
           "city": "Boston",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "108",
@@ -15559,7 +15713,7 @@
               "short": "Harvard",
               "abbreviation": "HARV",
               "homeAway": "home",
-              "score": "10",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/108.png"
             },
             {
@@ -15568,36 +15722,34 @@
               "short": "Yale",
               "abbreviation": "YALE",
               "homeAway": "away",
-              "score": "13",
+              "score": "20",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/43.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "14:54 - 3rd Quarter",
-            "shortDetail": "14:54 - 3rd",
-            "label": "Q3",
-            "period": 3,
-            "clock": "14:54"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 3,
-          "clock": "14:54",
-          "statusText": "Q3",
-          "broadcasts": [
-            "ESPNU"
-          ]
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401868234",
           "date": "2026-11-21T21:00Z",
           "name": "Tarleton State Texans at North Alabama Lions",
           "shortName": "TAR @ UNA",
-          "venue": "Braly Stadium",
+          "venue": "Bank Independent Stadium",
           "city": "Florence",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2453",
@@ -15605,7 +15757,7 @@
               "short": "North Alabama",
               "abbreviation": "UNA",
               "homeAway": "home",
-              "score": "7",
+              "score": "24",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2453.png"
             },
             {
@@ -15614,27 +15766,25 @@
               "short": "Tarleton St",
               "abbreviation": "TAR",
               "homeAway": "away",
-              "score": "21",
+              "score": "31",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2627.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "1:38 - 2nd Quarter",
-            "shortDetail": "1:38 - 2nd",
-            "label": "Q2",
-            "period": 2,
-            "clock": "1:38"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 2,
-          "clock": "1:38",
-          "statusText": "Q2",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401868128",
@@ -15643,7 +15793,7 @@
           "shortName": "UNCO @ NAU",
           "venue": "J. Lawrence Walkup Skydome",
           "city": "Flagstaff",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2464",
@@ -15651,7 +15801,7 @@
               "short": "N Arizona",
               "abbreviation": "NAU",
               "homeAway": "home",
-              "score": "21",
+              "score": "35",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
             },
             {
@@ -15660,27 +15810,25 @@
               "short": "N Colorado",
               "abbreviation": "UNCO",
               "homeAway": "away",
-              "score": "13",
+              "score": "26",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_HALFTIME",
-            "detail": "Halftime",
-            "shortDetail": "Halftime",
-            "label": "HALFTIME",
-            "period": 2,
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
             "clock": "0:00"
           },
-          "completed": false,
-          "period": 2,
+          "completed": true,
+          "period": 4,
           "clock": "0:00",
-          "statusText": "HALFTIME",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401868083",
@@ -15689,7 +15837,7 @@
           "shortName": "CP @ UCD",
           "venue": "UC Davis Health Stadium",
           "city": "Davis",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "302",
@@ -15697,7 +15845,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "home",
-              "score": "14",
+              "score": "44",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             },
             {
@@ -15706,27 +15854,25 @@
               "short": "Cal Poly",
               "abbreviation": "CP",
               "homeAway": "away",
-              "score": "22",
+              "score": "43",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "7:35 - 2nd Quarter",
-            "shortDetail": "7:35 - 2nd",
-            "label": "Q2",
-            "period": 2,
-            "clock": "7:35"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 2,
-          "clock": "7:35",
-          "statusText": "Q2",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401869149",
@@ -15735,7 +15881,7 @@
           "shortName": "UIW @ ETAM",
           "venue": "Memorial Stadium (Commerce, TX)",
           "city": "Commerce",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2837",
@@ -15743,7 +15889,7 @@
               "short": "East Texas A&M",
               "abbreviation": "ETAM",
               "homeAway": "home",
-              "score": "0",
+              "score": "3",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2837.png"
             },
             {
@@ -15752,27 +15898,25 @@
               "short": "Incarnate Word",
               "abbreviation": "UIW",
               "homeAway": "away",
-              "score": "31",
+              "score": "66",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2916.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "2:00 - 2nd Quarter",
-            "shortDetail": "2:00 - 2nd",
-            "label": "Q2",
-            "period": 2,
-            "clock": "2:00"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 2,
-          "clock": "2:00",
-          "statusText": "Q2",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401868069",
@@ -15781,7 +15925,7 @@
           "shortName": "APSU @ CARK",
           "venue": "Estes Stadium",
           "city": "Conway",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2110",
@@ -15789,7 +15933,7 @@
               "short": "C Arkansas",
               "abbreviation": "CARK",
               "homeAway": "home",
-              "score": "7",
+              "score": "24",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2110.png"
             },
             {
@@ -15798,27 +15942,25 @@
               "short": "Austin Peay",
               "abbreviation": "APSU",
               "homeAway": "away",
-              "score": "0",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "5:38 - 1st Quarter",
-            "shortDetail": "5:38 - 1st",
-            "label": "Q1",
-            "period": 1,
-            "clock": "5:38"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 1,
-          "clock": "5:38",
-          "statusText": "Q1",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401868100",
@@ -15827,7 +15969,7 @@
           "shortName": "IDHO @ IDST",
           "venue": "ICCU Dome",
           "city": "Pocatello",
-          "state": "pre",
+          "state": "post",
           "teams": [
             {
               "id": "304",
@@ -15835,7 +15977,7 @@
               "short": "Idaho St",
               "abbreviation": "IDST",
               "homeAway": "home",
-              "score": "",
+              "score": "19",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png"
             },
             {
@@ -15844,27 +15986,25 @@
               "short": "Idaho",
               "abbreviation": "IDHO",
               "homeAway": "away",
-              "score": "",
+              "score": "5",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
             }
           ],
           "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, November 21st at 6:00 PM EST",
-            "shortDetail": "11/21 - 6:00 PM EST",
-            "label": "11/21 - 6:00 PM EST",
-            "period": null,
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
             "clock": "0:00"
           },
-          "completed": false,
-          "period": null,
+          "completed": true,
+          "period": 4,
           "clock": "0:00",
-          "statusText": "11/21 - 6:00 PM EST",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401869141",
@@ -15873,7 +16013,7 @@
           "shortName": "LAM @ MCN",
           "venue": "Navarre Stadium",
           "city": "Lake Charles",
-          "state": "pre",
+          "state": "post",
           "teams": [
             {
               "id": "2377",
@@ -15881,7 +16021,7 @@
               "short": "McNeese",
               "abbreviation": "MCN",
               "homeAway": "home",
-              "score": "",
+              "score": "17",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2377.png"
             },
             {
@@ -15890,33 +16030,31 @@
               "short": "Lamar",
               "abbreviation": "LAM",
               "homeAway": "away",
-              "score": "",
+              "score": "19",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png"
             }
           ],
           "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, November 21st at 7:00 PM EST",
-            "shortDetail": "11/21 - 7:00 PM EST",
-            "label": "11/21 - 7:00 PM EST",
-            "period": null,
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
             "clock": "0:00"
           },
-          "completed": false,
-          "period": null,
+          "completed": true,
+          "period": 4,
           "clock": "0:00",
-          "statusText": "11/21 - 7:00 PM EST",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "statusText": "FINAL",
+          "broadcasts": []
         }
       ],
       "fcsTop25Byes": [
         {
           "rank": 8,
-          "team": "Youngstown St.",
+          "team": "Youngstown State",
           "record": ""
         }
       ],
@@ -15963,10 +16101,7 @@
           "period": 4,
           "clock": "0:00",
           "statusText": "FINAL",
-          "broadcasts": [
-            "ESPN+",
-            "Scripps Sports"
-          ]
+          "broadcasts": []
         },
         {
           "id": "401868167",
@@ -15975,7 +16110,7 @@
           "shortName": "UTU @ WEB",
           "venue": "Stewart Stadium",
           "city": "Ogden",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2692",
@@ -15983,7 +16118,7 @@
               "short": "Weber St",
               "abbreviation": "WEB",
               "homeAway": "home",
-              "score": "24",
+              "score": "31",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
             },
             {
@@ -15992,28 +16127,25 @@
               "short": "Utah Tech",
               "abbreviation": "UTU",
               "homeAway": "away",
-              "score": "17",
+              "score": "24",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "14:45 - 4th Quarter",
-            "shortDetail": "14:45 - 4th",
-            "label": "Q4",
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
             "period": 4,
-            "clock": "14:45"
+            "clock": "0:00"
           },
-          "completed": false,
+          "completed": true,
           "period": 4,
-          "clock": "14:45",
-          "statusText": "Q4",
-          "broadcasts": [
-            "ESPN+",
-            "KJZZ-TV"
-          ]
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401868092",
@@ -16022,7 +16154,7 @@
           "shortName": "PRST @ EWU",
           "venue": "Roos Field",
           "city": "Cheney",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "331",
@@ -16030,7 +16162,7 @@
               "short": "E Washington",
               "abbreviation": "EWU",
               "homeAway": "home",
-              "score": "14",
+              "score": "38",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png"
             },
             {
@@ -16039,27 +16171,25 @@
               "short": "Portland St",
               "abbreviation": "PRST",
               "homeAway": "away",
-              "score": "14",
+              "score": "40",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2502.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_HALFTIME",
-            "detail": "Halftime",
-            "shortDetail": "Halftime",
-            "label": "HALFTIME",
-            "period": 2,
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
             "clock": "0:00"
           },
-          "completed": false,
-          "period": 2,
+          "completed": true,
+          "period": 4,
           "clock": "0:00",
-          "statusText": "HALFTIME",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401868128",
@@ -16068,7 +16198,7 @@
           "shortName": "UNCO @ NAU",
           "venue": "J. Lawrence Walkup Skydome",
           "city": "Flagstaff",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "2464",
@@ -16076,7 +16206,7 @@
               "short": "N Arizona",
               "abbreviation": "NAU",
               "homeAway": "home",
-              "score": "21",
+              "score": "35",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
             },
             {
@@ -16085,27 +16215,25 @@
               "short": "N Colorado",
               "abbreviation": "UNCO",
               "homeAway": "away",
-              "score": "13",
+              "score": "26",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_HALFTIME",
-            "detail": "Halftime",
-            "shortDetail": "Halftime",
-            "label": "HALFTIME",
-            "period": 2,
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
             "clock": "0:00"
           },
-          "completed": false,
-          "period": 2,
+          "completed": true,
+          "period": 4,
           "clock": "0:00",
-          "statusText": "HALFTIME",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401868083",
@@ -16114,7 +16242,7 @@
           "shortName": "CP @ UCD",
           "venue": "UC Davis Health Stadium",
           "city": "Davis",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "302",
@@ -16122,7 +16250,7 @@
               "short": "UC Davis",
               "abbreviation": "UCD",
               "homeAway": "home",
-              "score": "14",
+              "score": "44",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
             },
             {
@@ -16131,27 +16259,25 @@
               "short": "Cal Poly",
               "abbreviation": "CP",
               "homeAway": "away",
-              "score": "22",
+              "score": "43",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "7:35 - 2nd Quarter",
-            "shortDetail": "7:35 - 2nd",
-            "label": "Q2",
-            "period": 2,
-            "clock": "7:35"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 2,
-          "clock": "7:35",
-          "statusText": "Q2",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401891330",
@@ -16160,7 +16286,7 @@
           "shortName": "CHST @ SUU",
           "venue": "Eccles Coliseum",
           "city": "Cedar City",
-          "state": "in",
+          "state": "post",
           "teams": [
             {
               "id": "253",
@@ -16168,7 +16294,7 @@
               "short": "Southern Utah",
               "abbreviation": "SUU",
               "homeAway": "home",
-              "score": "21",
+              "score": "65",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/253.png"
             },
             {
@@ -16177,27 +16303,25 @@
               "short": "Chicago St",
               "abbreviation": "CHST",
               "homeAway": "away",
-              "score": "0",
+              "score": "3",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2130.png"
             }
           ],
           "status": {
-            "state": "in",
-            "completed": false,
-            "name": "STATUS_IN_PROGRESS",
-            "detail": "8:13 - 1st Quarter",
-            "shortDetail": "8:13 - 1st",
-            "label": "Q1",
-            "period": 1,
-            "clock": "8:13"
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
+            "clock": "0:00"
           },
-          "completed": false,
-          "period": 1,
-          "clock": "8:13",
-          "statusText": "Q1",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "completed": true,
+          "period": 4,
+          "clock": "0:00",
+          "statusText": "FINAL",
+          "broadcasts": []
         },
         {
           "id": "401868100",
@@ -16206,7 +16330,7 @@
           "shortName": "IDHO @ IDST",
           "venue": "ICCU Dome",
           "city": "Pocatello",
-          "state": "pre",
+          "state": "post",
           "teams": [
             {
               "id": "304",
@@ -16214,7 +16338,7 @@
               "short": "Idaho St",
               "abbreviation": "IDST",
               "homeAway": "home",
-              "score": "",
+              "score": "19",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png"
             },
             {
@@ -16223,27 +16347,25 @@
               "short": "Idaho",
               "abbreviation": "IDHO",
               "homeAway": "away",
-              "score": "",
+              "score": "5",
               "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
             }
           ],
           "status": {
-            "state": "pre",
-            "completed": false,
-            "name": "STATUS_SCHEDULED",
-            "detail": "Sat, November 21st at 6:00 PM EST",
-            "shortDetail": "11/21 - 6:00 PM EST",
-            "label": "11/21 - 6:00 PM EST",
-            "period": null,
+            "state": "post",
+            "completed": true,
+            "name": "STATUS_FINAL",
+            "detail": "Final",
+            "shortDetail": "Final",
+            "label": "FINAL",
+            "period": 4,
             "clock": "0:00"
           },
-          "completed": false,
-          "period": null,
+          "completed": true,
+          "period": 4,
           "clock": "0:00",
-          "statusText": "11/21 - 6:00 PM EST",
-          "broadcasts": [
-            "ESPN+"
-          ]
+          "statusText": "FINAL",
+          "broadcasts": []
         }
       ]
     }
