@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T03:06:08.731967+00:00",
+  "updated": "2026-11-26T12:20:42.665494+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,36 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "LIKE THE HI-LINE WIND: Mariani runs his way into Montana Football Hall of Fame",
+      "url": "https://skylinesportsmt.com/like-the-hi-line-wind-mariani-runs-his-way-into-montana-football-hall-of-fame/",
+      "date": "Nov. 26, 2026",
+      "published_at": "2026-11-26T05:37:48+00:00",
+      "description": "Montana LIKE THE HI-LINE WIND: Mariani runs his way into Montana Football Hall of Fame November 25, 2026",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2023/10/Marc-Mariani-waves-to-crowd-as-a-hall-of-famer-scaled.jpeg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2023/10/Marc-Mariani-waves-to-crowd-as-a-hall-of-famer-scaled.jpeg"
+    },
+    {
+      "title": "MONTANA FOOTBALL HALL OF FAME: Stenerud’s path from MSU to NFL HOF is unique",
+      "url": "https://skylinesportsmt.com/montana-football-hall-of-fame-steneruds-path-from-msu-to-nfl-hof-is-unique/",
+      "date": "Nov. 26, 2026",
+      "published_at": "2026-11-26T05:36:49+00:00",
+      "description": "November 25, 2026 MONTANA FOOTBALL HALL OF FAME: Stenerud’s path from MSU to NFL HOF is unique",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2020/04/jan-stenerud.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2020/04/jan-stenerud.jpg"
+    },
     {
       "title": "Gillman goes back-to-back as Big Sky Offensive MVP; King, Crews share Defensive Player of the Year",
       "url": "https://skylinesportsmt.com/gillman-goes-back-to-back-as-big-sky-offensive-mvp-king-crews-share-defensive-player-of-the-year/",
@@ -1479,36 +1509,6 @@
       "youtube_id": "",
       "video_url": "",
       "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/1/e5/1e5134c6-5876-4517-baff-07d46a5b2927/6af007cde1948.preview.jpg?crop=1765%2C927%2C0%2C123&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "Legendary: Eli Gillman passes Cooper Kupp for Big Sky touchdown record as Griz roll Portland State",
-      "url": "https://skylinesportsmt.com/legendary-eli-gillman-passes-cooper-kupp-for-big-sky-touchdown-record-as-griz-roll-portland-state-2/",
-      "date": "Nov. 8, 2026",
-      "published_at": "2026-11-08T14:40:26+00:00",
-      "description": "November 8, 2026 Legendary: Eli Gillman passes Cooper Kupp for Big Sky touchdown record as Griz roll Portland State",
-      "source": "Skyline Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/Eli-Gillman-touchdown-with-a-flailing-defender-Portland-State-at-Montana-Brooks-Nuanez.jpg",
-      "is_video": true,
-      "youtube_id": "-nc1dW0VeVg",
-      "video_url": "https://www.youtube.com/watch?v=-nc1dW0VeVg",
-      "video_thumbnail": "https://i.ytimg.com/vi/-nc1dW0VeVg/hqdefault.jpg"
-    },
-    {
-      "title": "3 takeaways: No. 12 Grizzlies smash Portland State as bigger games loom",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/3-takeaways-no-12-grizzlies-smash-portland-state-as-bigger-games-loom/article_c154598e-1e2d-4abc-ac87-7596fa2e0274.html",
-      "date": "Nov. 8, 2026",
-      "published_at": "2026-11-08T13:00:00+00:00",
-      "description": "3 takeaways: No. 12 Grizzlies smash Portland State as bigger games loom",
-      "source": "406 MT Sports",
-      "badge": "GRIZ NEWS",
-      "short": "GRIZ N",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/15/c154598e-1e2d-4abc-ac87-7596fa2e0274/6aefe99617b63.preview.jpg?crop=1764%2C926%2C0%2C88&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/c/15/c154598e-1e2d-4abc-ac87-7596fa2e0274/6aefe99617b63.preview.jpg?crop=1764%2C926%2C0%2C88&resize=1200%2C630&order=crop%2Cresize"
     }
   ]
 }
