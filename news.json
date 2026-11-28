@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-28T03:53:50.226728+00:00",
+  "updated": "2026-11-28T12:34:09.869266+00:00",
   "source": "Automated Griz HQ news hub",
   "story_count": 100,
   "sources": [
@@ -10,6 +10,36 @@
     "Skyline Sports"
   ],
   "stories": [
+    {
+      "title": "NO TIME FOR THE REARVIEW: Griz flush the Brawl, open playoffs against red-hot Incarnate Word",
+      "url": "https://skylinesportsmt.com/no-time-for-the-rearview-griz-flush-the-brawl-open-playoffs-against-red-hot-incarnate-word/",
+      "date": "Nov. 28, 2026",
+      "published_at": "2026-11-28T05:35:17+00:00",
+      "description": "November 27, 2026 NO TIME FOR THE REARVIEW: Griz flush the Brawl, open playoffs against red-hot Incarnate Word",
+      "source": "Skyline Sports",
+      "badge": "GAME DAY",
+      "short": "GAME D",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/Bobby-Kennedy-high-fives-players-wide.jpg",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/11/Bobby-Kennedy-high-fives-players-wide.jpg"
+    },
+    {
+      "title": "FOR HIS FATHER: After the hardest loss of his life, D’Ambra found his calling in the middle of the Griz",
+      "url": "https://skylinesportsmt.com/for-his-father-after-the-hardest-loss-of-his-life-dambra-found-his-calling-in-the-middle-of-the-griz/",
+      "date": "Nov. 28, 2026",
+      "published_at": "2026-11-28T03:51:41+00:00",
+      "description": "November 27, 2026 FOR HIS FATHER: After the hardest loss of his life, D’Ambra found his calling in the middle of the Griz",
+      "source": "Skyline Sports",
+      "badge": "GRIZ NEWS",
+      "short": "GRIZ N",
+      "image": "https://skylinesportsmt.com/wp-content/uploads/2026/11/Senior-Spotlight-Jack-DAmbra.webp",
+      "is_video": false,
+      "youtube_id": "",
+      "video_url": "",
+      "video_thumbnail": "https://skylinesportsmt.com/wp-content/uploads/2026/11/Senior-Spotlight-Jack-DAmbra.webp"
+    },
     {
       "title": "Griz fifth-year, graduate seniors set for final game at Washington-Grizzly Stadium",
       "url": "https://skylinesportsmt.com/griz-fifth-year-graduate-seniors-set-for-final-game-at-washington-grizzly-stadium/",
@@ -1479,36 +1509,6 @@
       "youtube_id": "cPDwwHkrpBA",
       "video_url": "https://www.youtube.com/watch?v=cPDwwHkrpBA",
       "video_thumbnail": "https://i.ytimg.com/vi/cPDwwHkrpBA/hqdefault.jpg"
-    },
-    {
-      "title": "First look: No. 12 Montana Grizzlies vs. No. 21 Idaho State Bengals",
-      "url": "https://406mtsports.com/college/big-sky-conference/university-of-montana/first-look-no-12-montana-grizzlies-vs-no-21-idaho-state-bengals/article_5083f7d0-710e-4bdc-8f93-62ac32686852.html",
-      "date": "Nov. 9, 2026",
-      "published_at": "2026-11-09T23:30:00+00:00",
-      "description": "First look: No. 12 Montana Grizzlies vs. No. 21 Idaho State Bengals",
-      "source": "406 MT Sports",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/08/5083f7d0-710e-4bdc-8f93-62ac32686852/6af1428daea2e.preview.jpg?crop=1762%2C925%2C0%2C33&resize=1200%2C630&order=crop%2Cresize",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/406mtsports.com/content/tncms/assets/v3/editorial/5/08/5083f7d0-710e-4bdc-8f93-62ac32686852/6af1428daea2e.preview.jpg?crop=1762%2C925%2C0%2C33&resize=1200%2C630&order=crop%2Cresize"
-    },
-    {
-      "title": "First look: No. 12 Montana Grizzlies vs. No. 21 Idaho State Bengals",
-      "url": "https://missoulian.com/sports/college/big-sky-conference/university-of-montana/article_95f752c8-418e-58c1-98fc-ad467a62eb9f.html",
-      "date": "Nov. 9, 2026",
-      "published_at": "2026-11-09T23:30:00+00:00",
-      "description": "Montana will look to push its winning streak to three games when it welcomes in Idaho State for a Top 25 showdown.",
-      "source": "Missoulian",
-      "badge": "GAME DAY",
-      "short": "GAME D",
-      "image": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/f8/6f8be076-5169-5165-9c41-c6edf5d802f8/6af2312641a3e.image.jpg?resize=300%2C200",
-      "is_video": false,
-      "youtube_id": "",
-      "video_url": "",
-      "video_thumbnail": "https://bloximages.chicago2.vip.townnews.com/missoulian.com/content/tncms/assets/v3/editorial/6/f8/6f8be076-5169-5165-9c41-c6edf5d802f8/6af2312641a3e.image.jpg?resize=300%2C200"
     }
   ]
 }
