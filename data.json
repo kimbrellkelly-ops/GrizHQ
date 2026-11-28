@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T19:58:00.657339+00:00",
+  "updated": "2026-11-28T02:42:24.083196+00:00",
   "source": "Automatically refreshed from official/public sources.",
   "team": {
     "record": "8-4",
@@ -374,7 +374,7 @@
         "second": "—"
       }
     ],
-    "checked_at": "2026-11-27T19:58:39.927094+00:00"
+    "checked_at": "2026-11-28T02:42:52.240811+00:00"
   },
   "resources": [
     {
@@ -2956,7 +2956,7 @@
       ]
     },
     "source": "Official GoGriz 2026 cumulative statistics",
-    "source_checked_at": "2026-11-27T19:58:07.953190+00:00",
+    "source_checked_at": "2026-11-28T02:42:30.196162+00:00",
     "team_summary": [
       {
         "value": "8–4",
@@ -27690,7 +27690,7 @@
     "title": "WATCH – Montana State head coach Brent Vigen weekly press conference previewing Montana in the Brawl of the Wild",
     "date": "Tue, 17 Nov 2026 00:14:18 +0000",
     "url": "https://skylinesportsmt.com/watch-montana-state-head-coach-brent-vigen-weekly-press-conference-previewing-montana-in-the-brawl-of-the-wild/",
-    "youtube_id": "jKosj3ZAow4"
+    "youtube_id": ""
   },
   "fcs_scores_updated": "2026-09-16T06:34:43.966639+00:00",
   "big_sky_standings": [
@@ -28221,6 +28221,6 @@
       "news": "https://www.google.com/search?q=Incarnate%20Word%20football/news"
     },
     "source": "ESPN team feed / official opponent athletics site",
-    "updated": "2026-11-27T19:58:07.953265+00:00"
+    "updated": "2026-11-28T02:42:30.196262+00:00"
   }
 }
